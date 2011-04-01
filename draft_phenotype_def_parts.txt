@@ -1,21 +1,12 @@
-
-	'defective' related synonym PATO:0000460 'abnormal' & PATO:0001511 'non-functional'; most likely want 460
-
+general questions:
+	1. 'defective' related synonym PATO:0000460 'abnormal' & PATO:0001511 'non-functional'; most likely want 460
+		also consider decreased functionality?
+	2. everything that has 'inheres_in CL:0000000 cell' - should there be a connection to PATO:0001396 ! cellular quality?
+	3. for everything that has 
 
 ! ***
 DNA content increased
 	increased accumulation PATO:0002270?
-
-name: DNA damage checkpoint defects
-namespace: fission_yeast_phenotype
-intersection_of: inheres_in GO:0000077 ! DNA damage checkpoint
-intersection_of: qualifier PATO:0000460 ! abnormal
-! from worm_phenotype_xp.obo
-
-name: DNA damage checkpoint defects, S-phase
-namespace: fission_yeast_phenotype
-GO:0031573 ! intra-S DNA damage checkpoint
-intersection_of: qualifier PATO:0000460 ! abnormal
 
 ! ***
 name: DNA fragmentation
@@ -43,9 +34,10 @@ namespace: fission_yeast_phenotype
 	PATO:0002051 increased occurrence
 ! see https://sourceforge.net/tracker/index.php?func=detail&aid=2585169&group_id=36855&atid=440764
 
+! ***
 name: DNA recombination defects, meiotic
 namespace: fission_yeast_phenotype
-GO:0007131 ! reciprocal meiotic recombination
+intersection_of: inheres_in GO:0007131 ! reciprocal meiotic recombination
 ! (if 7131 not correct, use GO:0006310 ! DNA recombination)
 intersection_of: qualifier PATO:0000460 ! abnormal
 
@@ -82,466 +74,391 @@ namespace: fission_yeast_phenotype
 name: adaptive expression responses
 namespace: fission_yeast_phenotype
 
-name: adhesion defects
-namespace: fission_yeast_phenotype
-GO:0007155 ! cell adhesion
-intersection_of: qualifier PATO:0000460 ! abnormal
-
-name: adhesion defects, cell-substrate adhesion, abolished
-namespace: fission_yeast_phenotype
-intersection_of: qualifier PATO:0001508 ! abolished
-GO:0031589 ! cell-substrate adhesion
-
-name: aerobic growth defects
-namespace: fission_yeast_phenotype
-intersection_of: qualifier PATO:0000460 ! abnormal
-
-name: cell cycle defects
-namespace: fission_yeast_phenotype
-GO:0007049 ! cell cycle
-intersection_of: qualifier PATO:0000460 ! abnormal
-
-name: cell cycle, G2 delay
-namespace: fission_yeast_phenotype
-GO:0051319 ! G2 phase
-intersection_of: qualifier PATO:0001542 ! delayed phase
 
 ! ***
 name: cell morphology, T shaped
 namespace: fission_yeast_phenotype
-! request descendant of PATO:0000052 ! shape
+intersection_of: qualifier PATO:0001200 ! T-shaped
+intersection_of: inheres_in CL:0000000 ! cell
+! included in xp-drafts; request synonym of PATO:0001200 ! T-shaped ?
 
 ! ***
 name: cell morphology, bottle/skittle
 namespace: fission_yeast_phenotype
-! request descendant of PATO:0000052 ! shape
-
-name: cell morphology, branched
-namespace: fission_yeast_phenotype
-
-name: cell morphology, branched cells
-namespace: fission_yeast_phenotype
-
-name: cell morphology, curved
-namespace: fission_yeast_phenotype
-intersection_of: qualifier PATO:0000406 ! curved
+intersection_of: qualifier PATO:0002213 ! obclavate
+intersection_of: inheres_in CL:0000000 ! cell
+! or could request descendant of PATO:0000052 ! shape
+!  but not sure how def would differ from clavate, except that
+!   'clavate' and 'obclavate' seem to imply one end can be defined as
+!   proximal and the other as distal
+!   want superclass to group clavate PATO:0001883 + obclavate PATO:0002213?
+! have included def using obclavate in xp-drafts
 
 ! ***
 name: cell morphology, elongated and multiseptate
 namespace: fission_yeast_phenotype
 ! build intersection of two terms
+! options for multiseptate:
+!  request elevating 'septate' to a term; now is narrow synonym of PATO:0001786 ! split
+!  and request child 'multiseptate'
+! use qualifier PATO:0002000 ! has extra parts of type GO:0030428 ! cell septum (or GO:0000935 barrier septum?)
+! see next one for q about elongated vs. increased length
 
 ! ***
 name: cell morphology, elongated cells
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000573 ! increased length
 	PATO:0001154 'elongated' (is_a size) or PATO:0000573 ! increased length (is_a morphology)?
-	need 'cell' or 'cell shape'
+intersection_of: inheres_in CL:0000000 ! cell
+! put increased length in xp-drafts for now (2011-04-01)
 
 name: cell morphology, elongated dumbbell
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0001876 ! dumbbell-shaped
+intersection_of: qualifier PATO:0000573 ! increased length
+	PATO:0001154 'elongated' (is_a size) or PATO:0000573 ! increased length (is_a morphology)?
+intersection_of: inheres_in CL:0000000 ! cell
+! put increased length in xp-drafts for now (2011-04-01)
 
 name: cell morphology, lemon shaped
 namespace: fission_yeast_phenotype
-
-name: cell morphology, misshapen cells
-namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+intersection_of: inheres_in CL:0000000 ! cell
+! request descendant of PATO:0000052 ! shape
+! maybe under PATO:0001866 prolate, or PATO:0001891 ovate? or not under PATO:0001865 spheroid at all?
+! def: "A convex 3-D shape quality inhering in a bearer by virtue of the bearer's g short and wide and tapered distally towards both ends"?
+! ask G about parentage & def for this one
 
 name: cell morphology, pear shaped
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0002240 ! teardrop-shaped
+intersection_of: inheres_in CL:0000000 ! cell
+! included in xp-drafts; request synonym in PATO
 
-name: cell morphology, round cells
-namespace: fission_yeast_phenotype
-
-name: cell morphology, rounded cells
-namespace: fission_yeast_phenotype
+!name: cell morphology, rounded cells
+!namespace: fission_yeast_phenotype
+!intersection_of: qualifier PATO:
+!intersection_of: inheres_in CL:0000000 ! cell
+! looks same as 'round cells' so have taken liberty of merging
 
 name: cell morphology, shmoos with long tips
 namespace: fission_yeast_phenotype
-
-name: cell morphology, small cells
-namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000573 ! increased length
+intersection_of: inheres_in GO:0043332 ! mating projection tip
+! same 'elongated' vs. 'increased length' q as above
+! put increased length in xp-drafts for now (2011-04-01)
 
 name: cell morphology, snowman during sporulation
 namespace: fission_yeast_phenotype
-
-name: cell morphology, stubby cells
-namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+intersection_of: inheres_in CL:0000000 ! cell
+intersection_of: during GO:0030437 ! ascospore formation
+! request descendant of PATO:0000052 ! shape
+! def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's having two connected parts, roughly spherical, of different sizes."
+!  maybe alse edit def PATO:0001876 'dumbbell-shaped' to specify similar size parts?
 
 name: cell morphology, swollen cells
 namespace: fission_yeast_phenotype
-
-name: cell morpology, small cells
-namespace: fission_yeast_phenotype
-
-name: cell polarity defects
-namespace: fission_yeast_phenotype
-
-name: cell wall defects
-namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000595 ! increased volume
+intersection_of: inheres_in CL:0000000 ! cell
+! note: PATO term is best guess
+!  PATO:00018510 swollen doesn't work because of its 'protruding' parent
 
 name: centromere function defective
 namespace: fission_yeast_phenotype
-
-name: chromosome condensation defects
-namespace: fission_yeast_phenotype
-
-name: chromosome segregation defects
-namespace: fission_yeast_phenotype
-
-name: chromosome segregation defects, chromosome congression
-namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000460 ! abnormal
+! need to define 'centromere function'
 
 name: chromosome segregation defects, chromosome loss
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia
 
 name: chromosome segregation defects, lagging chromosomes
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia
 
 name: colony morphology defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000460 ! abnormal
+! need differentia(e)
 
 name: colony morphology, clumped cells
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia(e)
 
 name: colony morphology, flocculation
 namespace: fission_yeast_phenotype
-
-name: conjugation defects
-namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia(e); maybe involve GO:0000128 ! flocculation
 
 name: cut
 namespace: fission_yeast_phenotype
-
-name: cytokinesis defects
-namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia(e)
 
 name: cytokinesis defects, contractile ring actin, absent
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia(e)
 
 name: cytokinesis defects, contractile ring myosin distribution, defective
 namespace: fission_yeast_phenotype
-
-name: cytokinesis defects, misplaced contractile ring
-namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000460 ! abnormal
+! need differentia(e)
 
 name: cytokinesis defects, splitting of the actinomyosin ring
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia(e)
 
 name: cytoskeletal defect, long cytoplasmic microtubules
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia(e)
 
 name: cytoskeletal defects, cytoplasmic microtubule nucleation defects, Non-SPB
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000460 ! abnormal
+! need differentia(e)
 
 name: cytoskeletal defects, long cytoplasmic microtubules
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia(e)
 
 name: defective in recovery of translation after hyperosmotic shock
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! argh
 
 name: defective in recovery of translation after oxidative stress
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! argh 
 
 name: defective in recovery of translation during nitrogen starvation
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! argh
 
 name: die in G0 with an apoptotic-like phenotype
 namespace: fission_yeast_phenotype
-
-name: endocytosis defects
-namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia(e)
 
 name: expression of MBF target genes increased
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
+! need differentia(e)
 
 name: filament morphology aberrant
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000460 ! abnormal
+! need differentia(e)
 
 name: genome stability defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000460 ! abnormal
+! need differentia(e)
+
+!!! got this far 2011-04-01 !!!
 
 name: glucan synthesis defective
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000460 ! abnormal
 
 name: glucose repression defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:0000460 ! abnormal
 
-name: growth auxotrophic for arginine
-namespace: fission_yeast_phenotype
-
-name: growth auxotrophic for asparagine
-namespace: fission_yeast_phenotype
-
-name: growth auxotrophic for carginine
-namespace: fission_yeast_phenotype
-
-name: growth auxotrophic for cysteine
-namespace: fission_yeast_phenotype
-
-name: growth auxotrophic for ethanolamine
-namespace: fission_yeast_phenotype
-
-name: growth auxotrophic for lysine
-namespace: fission_yeast_phenotype
-
-name: growth auxotrophic for methionine
-namespace: fission_yeast_phenotype
-
-name: growth auxotrophic for phenylalanine
-namespace: fission_yeast_phenotype
-
-name: growth auxotrophic for sulfite
-namespace: fission_yeast_phenotype
 
 name: growth defect
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defect, normal growth with ammonia nitrogen source
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defect, normal growth with proline nitrogen source
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defect, required during nutrient depletion
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defect, required for stationary phase
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defect, requires antioxidant for growth
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defect, slow growth
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defect, slow growth at high temperatures
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defect, slow growth in minimal media
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defect, slow growth with ammonia nitrogen source
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defect, slow growth with proline nitrogen source
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth defects, growth inhibition in galactose-based medium
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: growth normal
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: high-frequency diploidization in heterothallic strains
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: increased HMG-CoA reductase activity
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: increased Sre1 cleavage
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: invasive growth, abolished
 namespace: fission_yeast_phenotype
 	abolished PATO:0001508
 	for S.p. probably want GO:0007124 ! pseudohyphal growth (but confirm)
 
-name: inviable
-namespace: fission_yeast_phenotype
-	PATO:0000718 lethal (sensu genetics)
-
 name: kinetochore defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: localization defective, cytoplasmic
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: localization defects, nuclear accumulation of Pap1 and Sty1
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: localization defects, sterol distribution defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: meiosis defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: meiotic cell cycle defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: microtubule cytoskeleton defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 	GO:0015630 ! microtubule cytoskeleton
 
 name: microtubule organization defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 	MT org GO:0000226
 	'defective' related synonym PATO:0000460 'abnormal' & PATO:0001511 'non-functional'; most likely want 460
 	can probably get quite a few more specific descendants
 
 name: microtubule organization defects, long microtubules
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 	increased length PATO:0000573
 	microtubule GO:0005874
 
 name: mitochondria fused
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: mitochondrial nucleoid enlarged
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: mitochondrial nucleoid reduced number
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: mitotic cell cycle defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: mononucleate
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 	is PATO:0001407
 
 name: multinucleate
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 	is PATO:0001908
 
 name: mutator
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: no obvious phenotype
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: no phenotype in exponential phase
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: nuclear morphology defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: periodic cell-cycle expression, abolished
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 	abolished PATO:0001508
 
 name: pleiotropic effects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: protects against physiological oxidative damage in G0
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: protein synthesis after stress, defective
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: recombination defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 ! ask why 'resistant' phenotypes have 'intersection_of: inheres_in GO:0042493 ! response to drug' line but 'sensitive' ones don't - worm_phenotype_xp.obo
 
-name: resistance to 2-deoxyglucose
-namespace: fission_yeast_phenotype
-synonym: "resistant to 2-deoxy-D-glucose" EXACT [PomBase:mah, CHEBI:15866]
-synonym: "resistant to 2-DOG" EXACT [PomBase:mah]
-synonym: "resistance to 2-DOG" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:15866 ! 2-deoxy-D-glucose
-
-name: resistance to 5-azacytidine
-namespace: fission_yeast_phenotype
-synonym: "resistant to 5-azacytidine" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:2038
-
-name: resistance to L-azetidine-2-carboxylic acid
-namespace: fission_yeast_phenotype
-synonym: "resistance to AZC" BROAD [PomBase:mah]
-synonym: "resistant to L-azetidine-2-carboxylic acid" EXACT [PomBase:mah]
-synonym: "resistance to (S)-azetidine-2-carboxylic acid" EXACT [PomBase:mah, CHEBI:6198]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:6198
-
-name: resistance to brefeldin A
-namespace: fission_yeast_phenotype
-synonym: "resistance to BFA" EXACT [PomBase:mah]
-synonym: "resistant to Brefeldin A" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:48080
-
-name: resistance to K-252a
-namespace: fission_yeast_phenotype
-synonym: "resistant to K-252a" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:[submit]
-
-name: resistance to thiabendazole
-namespace: fission_yeast_phenotype
-synonym: "resistant to TBZ" EXACT [PomBase:mah, CHEBI:45979]
-synonym: "resistance to TBZ" EXACT [PomBase:mah]
-synonym: "resistance to thiabendazole" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:45979
-
-name: resistance to amiloride
-namespace: fission_yeast_phenotype
-synonym: "resistant to amiloride" EXACT [PomBase:mah]
-comment: was misspelled amorilide
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:2639
-
-name: resistance to amphotericin B
-namespace: fission_yeast_phenotype
-synonym: "resistant to amphotericin" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:2682
-
-name: resistance to aureobasidin A
-namespace: fission_yeast_phenotype
-synonym: "resistance to AbA" EXACT [PMID:9472078]
-synonym: "resistant to aureobasidin A" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:[submit]
-
-name: resistance to benomyl
-namespace: fission_yeast_phenotype
-synonym: "resistant to benomyl" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:3015
-
-name: resistance to caffeine
-namespace: fission_yeast_phenotype
-synonym: "resistant to caffeine" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:27732
-
-name: resistance to drug
-namespace: fission_yeast_phenotype
-synonym: "drug resistant" EXACT [PomBase:mah]
-synonym: "drug resistance" EXACT [PomBase:mah]
-synonym: "resistant to drugs" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:23888 ! drug
-
-name: resistance to lovastatin
-namespace: fission_yeast_phenotype
-synonym: "resistant to lovastatin" EXACT [PomBase:mah]
-comment: was misspelled lavostatin
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:40303
 
 ! ***
-! name: resistance to microtubule depolymerizing drugs
-! namespace: fission_yeast_phenotype
-! synonym: "resistant to microtubule depolymerizing drugs" EXACT [PomBase:mah]
-! intersection_of: PATO:0001650 ! increased resistance to
-! intersection_of: towards CHEBI:
+name: resistance to microtubule depolymerizing drugs
+namespace: fission_yeast_phenotype
+synonym: "resistant to microtubule depolymerizing drugs" EXACT [PomBase:mah]
+intersection_of: PATO:0001650 ! increased resistance to
+intersection_of: towards CHEBI:
 ! request new chebi role?
-
-name: resistance to nystatin
-namespace: fission_yeast_phenotype
-synonym: "resistant to nystatin" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:7660
-
-name: resistance to rapamycin
-namespace: fission_yeast_phenotype
-synonym: "resistant to rapamycin" EXACT [PomBase:mah]
-intersection_of: PATO:0001650 ! increased resistance to
-intersection_of: towards CHEBI:9168
 
 ! ***
 ! name: resistance to thiabendazole, abolished
@@ -555,17 +472,9 @@ intersection_of: towards CHEBI:9168
 
 name: respiration defective
 namespace: fission_yeast_phenotype
-
-name: sensitive to 6-azauracil
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:
-
-name: sensitive to CPT
-namespace: fission_yeast_phenotype
-synonym: "sensitive to camptothecin" EXACT [PomBase:mah, CHEBI:27656]
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:27656
+intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: inheres_in GO:0045333 ! cellular respiration
+! see abnormal etc. q at top; abnormal in xp-drafts
 
 ! ***
 ! name: sensitive to DNA damage
@@ -578,7 +487,9 @@ intersection_of: towards CHEBI:27656
 ! intersection_of: PATO:0001549 ! increased sensitivity toward
 ! intersection_of: towards CHEBI:
 ! new role?
+!  if so, look up which chemicals & put in rels with request
 
+! stanza minus comment copied to xp-drafts, but also kept here because of 61057 vs 61049 q
 name: sensitive to tacrolimus
 namespace: fission_yeast_phenotype
 synonym: "sensitive to FK506" EXACT [PomBase:mah, CHEBI:61057]
@@ -587,129 +498,32 @@ intersection_of: PATO:0001549 ! increased sensitivity toward
 intersection_of: towards CHEBI:61057
 ! note: CHEBI:61057 is tacrolimus hydrate; there's also CHEBI:61049 tacrolimus (anhydrous)
 
-name: sensitive to H202
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:16240
-
-name: sensitive to hydroxyurea
-synonym: "sensitive to HU" EXACT [PomBase:mah]
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:44423
-
 ! ***
-! name: sensitive to IR
-! namespace: fission_yeast_phenotype
-! intersection_of: PATO:0001549 ! increased sensitivity toward
-! intersection_of: towards CHEBI:
+name: sensitive to IR
+namespace: fission_yeast_phenotype
+intersection_of: PATO:0001549 ! increased sensitivity toward
+intersection_of: towards 
 ! need ontology for ionizing radiation 'IR' - also see 'UV' below
 
-name: sensitive to methyl methanesulfonate
-synonym: "sensitive to MMS" EXACT [PomBase:mah, CHEBI:25255]
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:25255
-
-name: sensitive to N-ethylmaleimide
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:44485
-
-name: sensitive to thiabendazole
-namespace: fission_yeast_phenotype
-synonym: "sensitive to TBZ" EXACT [PomBase:mah, CHEBI:45979]
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:45979
-! note: also annotate sde2
-
 ! ***
-! name: sensitive to UV
-! namespace: fission_yeast_phenotype
-! intersection_of: PATO:0001549 ! increased sensitivity toward
-! intersection_of: towards CHEBI:
+name: sensitive to UV
+namespace: fission_yeast_phenotype
+intersection_of: PATO:0001549 ! increased sensitivity toward
+intersection_of: towards 
 !	PATO:0000516 or PATO:00015494 as in #3 above
 !	ask Chris, Marcus, etc. which ontology has 'UV'
 
-name: sensitive to amiodarone
+name: sensitive to cold
 namespace: fission_yeast_phenotype
 intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:2663
-
-name: sensitive to arsenic
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:22632 ! arsenic molecular entity
-
-name: sensitive to benomyl
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:3015
-
-name: sensitive to bleomycin
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:22907
-
-name: sensitive to cadmium
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:22978
-
-name: sensitive to caffeine
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:27732
-
-name: sensitive to calcium
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:29108
-
-name: sensitive to canavanine
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:609827
-
-name: sensitive to chloramphenicol
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:17698
-
-name: sensitive to cisplatin
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:27899
-
-! name: sensitive to cold
-! namespace: fission_yeast_phenotype
-! intersection_of: PATO:0001549 ! increased sensitivity toward
-
-
-name: sensitive to copper ions
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:23378
-
-name: sensitive to cycloheximide
-namespace: fission_yeast_phenotype
-comment: was misspelled cycloheamide
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:27641
-
-name: sensitive to cyclosporin A
-synonym: "sensitive to cyclosporine" EXACT [PomBase:mah, CHEBI:4031]
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:4031
-! note: bgs1 annotation looks correct; erg2, erg5, erg6, erg31, erg32,
-!  sts1 possibly wrong because paper (PMID:18310029) doesn't mention
-!  cyclosporin
+intersection_of: towards 
 
 ! name: sensitive to glucan synthate inhibitor
 ! namespace: fission_yeast_phenotype
 ! intersection_of: PATO:0001549 ! increased sensitivity toward
 ! intersection_of: towards CHEBI:
 ! want new role? or just separate into two terms - PMID:19237545 Caspofungin and Enfumafungin
+!  for now (2011-04-01), have put separate stanzas below into xp collection
 !
 ! name: sensitive to caspofungin
 ! namespace: fission_yeast_phenotype
@@ -719,7 +533,7 @@ intersection_of: towards CHEBI:4031
 ! name: sensitive to enfumafungin
 ! namespace: fission_yeast_phenotype
 ! intersection_of: PATO:0001549 ! increased sensitivity toward
-! intersection_of: towards CHEBI:[submit]
+! intersection_of: towards CHEBI:61749
 
 
 
@@ -735,32 +549,11 @@ name: sensitive to high temperature
 namespace: fission_yeast_phenotype
 intersection_of: PATO:0001549 ! increased sensitivity toward
 
-name: sensitive to hygromycin B
-namespace: fission_yeast_phenotype
-comment: was mistyped hygromycin 4
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:16976
-
-name: sensitive to latrunculin A
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:43626
-
 !name: sensitive to magnesium
 !namespace: fission_yeast_phenotype
 !intersection_of: PATO:0001549 ! increased sensitivity toward
 !intersection_of: towards CHEBI:
 ! only annotation, cta5, wrong? paper doesn't mention magnesium PMID:19168988
-
-name: sensitive to menadione
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:
-
-!name: sensitive to micritubule depolymerizing drugs
-!namespace: fission_yeast_phenotype
-!intersection_of: PATO:0001549 ! increased sensitivity toward
-!intersection_of: towards CHEBI:
 
 !name: sensitive to microtubule depolymerizing drugs
 !namespace: fission_yeast_phenotype
@@ -769,122 +562,100 @@ intersection_of: towards CHEBI:
 ! new role?
 ! note: also annotate hip4 - was annotated to misspelled variant
 
-!name: sensitive to osmotic stress
-!namespace: fission_yeast_phenotype
-!intersection_of: PATO:0001549 ! increased sensitivity toward
-
-
-name: sensitive to papulacandin B
+name: sensitive to osmotic stress
 namespace: fission_yeast_phenotype
 intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:569624
 
-!name: sensitive to pravastatin
-!namespace: fission_yeast_phenotype
-!intersection_of: PATO:0001549 ! increased sensitivity toward
-!intersection_of: towards CHEBI:[SF request]
-
-name: sensitive to rapamycin
+name: sensitive to salt stress
 namespace: fission_yeast_phenotype
 intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:9168
-
-!name: sensitive to salt stress
-!namespace: fission_yeast_phenotype
-!intersection_of: PATO:0001549 ! increased sensitivity toward
-
-
-name: sensitive to sorbitol
-namespace: fission_yeast_phenotype
-synonym: "sensitive to glucitol" EXACT [PomBase:mah, CHEBI:30911]
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:30911
-
-name: sensitive to spindle poison (isopropyl N-3-chlorophenyl carbamate)
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:[submit chlorpropham]
-
-name: sensitive to staurosporine
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:
-
-name: sensitive to valproic acid
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:39867
-
-name: sensitive to zinc
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0001549 ! increased sensitivity toward
-intersection_of: towards CHEBI:
 
 name: septation defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: septation defects, multiple septa
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: septum initiation defective
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 	existing or new descendant of GO:0000917 'barrier septum formation'?
 
 name: siRNAs homologous to outer repeats undetectable
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: spindle assembly abnormal
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: spindle checkpoint activated
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: spindle checkpoint, required
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: spindle defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: spindle defects, monopolar spindle
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: spindle defects, short spindles
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: spindle elongation defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: spindle polarity defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: spores produced smaller colonies
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: sporulation defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: sporulation defects, azygotic asci
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: sterile
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: telomere maintenance defects
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: vacoule organization defects, fragmented vacuoles
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: vacoule organization defects, large vacuoles
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 name: viable
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 	is PATO:0000719, so just [fyp that has_quality pato:719]?
 	inheres_in cell
 
 name: viable at high temperature
 namespace: fission_yeast_phenotype
+intersection_of: qualifier PATO:
 
 [Typedef]
 id: in_response_to
