@@ -1,0 +1,221 @@
+Terms in BioGRID
+
+BioGrid: Physical Interactions	APO:0000187	ECO:0000021 ! physical interaction
+
+BioGrid: Affinity Capture-Luminescence	APO:0000318	ECO: [see notes]
+An interaction is inferred when a bait protein, tagged with luciferase, is enzymatically detected in immunoprecipitates of the prey protein as light emission. The prey protein is affinity captured from cell extracts by either polyclonal antibody or epitope tag.
+	request new subtype of ECO:0000070 ! co-immunoprecipitation experiment
+
+BioGrid: Affinity Capture-MS	APO:0000162	ECO: [see notes]
+An interaction is inferred when a “bait” protein is affinity captured from cell extracts by either polyclonal antibody or epitope tag and the associated interaction partner is identified by mass spectrometric methods.
+	request new subtype of ECO:0000070 ! co-immunoprecipitation experiment
+	also request new subtype of ECO:0000021 ! physical interaction, for mass spectrometry assay
+
+BioGrid: Affinity Capture-RNA	APO:0000163	ECO: [see notes]
+An interaction is inferred when a bait protein is affinity captured from cell extracts by either polyclonal antibody or epitope tag and associated RNA species identified by Northern blot, RT-PCR, affinity labeling, sequencing, or microarray analysis.
+	request new subtype of ECO:0000070 ! co-immunoprecipitation experiment
+
+BioGrid: Affinity Capture-Western	APO:0000165	ECO: [see notes]
+An interaction is inferred when a Bait protein affinity captured from cell extracts by either polyclonal antibody or epitope tag and the associated interaction partner identified by Western blot with a specific polyclonal antibody or second epitope tag. This category is also used if an interacting protein is visualized directly by dye stain or radioactivity. Note that this differs from any co-purification experiment involving affinity capture in that the co-purification experiment involves at least one extra purification step to get rid of potential contaminating proteins.
+	request new subtype of ECO:0000070 ! co-immunoprecipitation experiment
+	also link to ECO:0000112 ! Western blot assay
+
+BioGrid: Biochemical Activity	APO:0000166	ECO:0000005 ! enzyme assay data
+An interaction is inferred from the biochemical effect of one protein upon another, for example, GTP-GDP exchange activity or phosphorylation of a substrate by a kinase. The “bait” protein executes the activity on the substrate “hit” protein. A Modification value is recorded for interactions of this type with the possible values Phosphorylation, Ubiquitination, Sumoylation, Dephosphorylation, Methylation, Prenylation, Acetylation, Deubiquitination, Proteolytic Processing, Glucosylation, Nedd(Rub1)ylation, Deacetylation, No Modification, Demethylation.
+	add synonym to ECO:0000005?
+
+BioGrid: Co-crystal Structure	APO:0000167	ECO: [see notes]
+Interaction directly demonstrated at the atomic level by X-ray crystallography. Also used for NMR or Electron Microscopy (EM) structures. If a structure is demonstrated between 3 or more proteins, one is chosen as the bait and binary interactions are recorded between that protein and the others.
+	probably need new high-level ECO term for structure determination, perhaps under ECO:0000002 ! direct assay result
+	plus new child for co-crystallization
+
+BioGrid: Co-fractionation	APO:0000168	ECO:0000102 ! co-fractionation data
+Interaction inferred from the presence of two or more protein subunits in a partially purified protein preparation. If co-fractionation is demonstrated between 3 or more proteins, one is chosen as the bait and binary interactions are recorded between that protein and the others.
+
+BioGrid: Co-localization	APO:0000169	ECO: [see notes]
+An interaction is inferred from co-localization of two proteins in the cell, including co-dependent association of proteins with promoter DNA in chromatin immunoprecipitation experiments.
+	request new subtype of ECO:0000122 ! protein localization experiment
+
+BioGrid: Co-purification	APO:0000170	ECO:0000022 ! co-purification experiment
+An interaction is inferred from the identification of two or more protein subunits in a purified protein complex, as obtained by classical biochemical fractionation or affinity purification and one or more additional fractionation steps.
+
+BioGrid: Far Western	APO:0000176	ECO:0000076 ! far-Western assay
+An interaction is detected between a protein immobilized on a membrane and a purified protein probe.
+	request synonym for ECO:0000076
+
+BioGrid: FRET	APO:0000175	ECO: [see notes]
+An interaction is inferred when close proximity of interaction partners is detected by fluorescence resonance energy transfer between pairs of fluorophore-labeled molecules, such as occurs between CFP (donor) and YFP (acceptor) fusion proteins.
+	request new term, perhaps subtype of ECO:0000002 ! direct assay result
+
+BioGrid: PCA	APO:0000244	ECO: [see notes]
+A Protein-Fragment Complementation Assay (PCA) is a protein-protein interaction assay in which a bait protein is expressed as fusion to one of the either N- or C- terminal peptide fragments of a reporter protein and prey protein is expressed as fusion to the complementary N- or C- terminal fragment of the same reporter protein. Interaction of bait and prey proteins bring together complementary fragments, which can then fold into an active reporter, e.g. the split-ubiquitin assay.
+	request new subtype of ECO:0000025 ! hybrid interaction experiment
+
+BioGrid: Protein-peptide	APO:0000180	ECO: [see notes]
+An interaction is detected between a protein and a peptide derived from an interaction partner. This includes phage display experiments.
+	request new subtype of ECO:0000024 ! protein binding experiment
+
+BioGrid: Protein-RNA	APO:0000179	ECO: [see notes]
+An interaction is detected between and protein and an RNA.
+	request new subtype of ECO:0000136 ! nucleic acid binding assay
+	existing ECO:0000146 ! Northwestern analysis would be a child of the new term; I think ECO:0000138 ! ribohomopolymer binding assay would be as well
+
+BioGrid: Reconstituted Complex	APO:0000181	ECO: [see notes]
+An interaction is detected between purified proteins in vitro.
+	request new subtype ECO:0000003 ! reconstitution assay
+	also path to ECO:0000021 ! physical interaction ?
+
+BioGrid: Two-hybrid	APO:0000185	ECO:0000068 ! yeast 2-hybrid assay
+Bait protein expressed as a DNA binding domain (DBD) fusion and prey expressed as a transcriptional activation domain (TAD) fusion and interaction measured by reporter gene activation.
+	are two-hybrid experiments always done in yeast? if so, ECO:0000068 ! yeast 2-hybrid assay is fine and a synonym would be nice
+
+
+BioGrid: Genetic Interactions	APO:0000186	ECO:0000011 ! genetic interaction experiment
+
+BioGrid: Dosage Growth Defect	APO:0000171	ECO: [see notes]
+A genetic interaction is inferred when over expression or increased dosage of one gene causes a growth defect in a strain that is mutated or deleted for another gene.
+	request new subtype of ECO:0000011 ! genetic interaction experiment
+	not sure whether it fits under ECO:0000054 ! double mutant analysis or ECO:0000056 ! epistatic interaction analysis
+	also relate to ECO:0000052 ! suppressor/enhancer interaction experiment?
+
+BioGrid: Dosage Lethality	APO:0000172	ECO: [see notes]
+A genetic interaction is inferred when over expression or increased dosage of one gene causes lethality in a strain that is mutated or deleted for another gene.
+	request new subtype of ECO:0000011 ! genetic interaction experiment
+	not sure whether it fits under ECO:0000054 ! double mutant analysis or ECO:0000056 ! epistatic interaction analysis
+	also relate to ECO:0000052 ! suppressor/enhancer interaction experiment?
+
+BioGrid: Dosage Rescue	APO:0000173	ECO: [see notes]
+A genetic interaction is inferred when over expression or increased dosage of one gene rescues the lethality or growth defect of a strain that is mutated or deleted for another gene.
+	request new subtype of ECO:0000011 ! genetic interaction experiment
+	not sure whether it fits under ECO:0000054 ! double mutant analysis or ECO:0000056 ! epistatic interaction analysis
+	also relate to ECO:0000052 ! suppressor/enhancer interaction experiment?
+
+BioGrid: Negative Genetic	APO:0000322	ECO: [see notes]
+Mutations/deletions in separate genes, each of which alone causes a minimal phenotype, but when combined in the same cell results in a more severe fitness defect or lethality under a given condition.
+	ECO:0000054 ! double mutant analysis or new subtype? not sure it's good to encode outcome in ECO; maybe narrow synonym rather than new term
+	also relate to ECO:0000052 ! suppressor/enhancer interaction experiment
+
+BioGrid: Phenotypic Enhancement	APO:0000177	ECO: [see notes]
+A genetic interaction is inferred when mutation or overexpression of one gene results in enhancement of any phenotype (other than lethality/growth defect) associated with mutation or over expression of another gene.
+	new subtype of ECO:0000052 ! suppressor/enhancer interaction experiment?
+	relate to ECO:0000054 ! double mutant analysis or ECO:0000056 ! epistatic interaction analysis?
+
+BioGrid: Phenotypic Suppression	APO:0000178	ECO: [see notes]
+A genetic interaction is inferred when mutation or over expression of one gene results in suppression of any phenotype (other than lethality/growth defect) associated with mutation or over expression of another gene.
+	new subtype of ECO:0000052 ! suppressor/enhancer interaction experiment?
+	relate to ECO:0000054 ! double mutant analysis or ECO:0000056 ! epistatic interaction analysis?
+
+BioGrid: Positive Genetic	APO:0000323	ECO: [see notes]
+Mutations/deletions in separate genes, each of which alone causes a minimal phenotype, but when combined in the same cell results in a less severe fitness defect than expected under a given condition.
+	new subtype of ECO:0000052 ! suppressor/enhancer interaction experiment?
+	relate to ECO:0000054 ! double mutant analysis or ECO:0000056 ! epistatic interaction analysis?
+
+BioGrid: Synthetic Growth Defect	APO:0000182	ECO: [see notes]
+A genetic interaction is inferred when mutations in separate genes, each of which alone causes a minimal phenotype, result in a significant growth defect under a given condition when combined in the same cell.
+	new subtype of ECO:0000052 ! suppressor/enhancer interaction experiment
+	relate to ECO:0000054 ! double mutant analysis or ECO:0000056 ! epistatic interaction analysis?
+
+BioGrid: Synthetic Haploinsufficiency	APO:0000272	ECO: [see notes]
+A genetic interaction is inferred when mutations or deletions in separate genes, at least one of which is hemizygous, cause a minimal phenotype alone but result in lethality when combined in the same cell under a given condition.
+	new subtype of ECO:0000052 ! suppressor/enhancer interaction experiment
+	relate to ECO:0000054 ! double mutant analysis or ECO:0000056 ! epistatic interaction analysis?
+
+BioGrid: Synthetic Lethality	APO:0000183	ECO: [see notes]
+A genetic interaction is inferred when mutations or deletions in separate genes, each of which alone causes a minimal phenotype, result in lethality when combined in the same cell under a given condition.
+	new subtype of ECO:0000052 ! suppressor/enhancer interaction experiment
+	relate to ECO:0000054 ! double mutant analysis or ECO:0000056 ! epistatic interaction analysis?
+
+BioGrid: Synthetic Rescue	APO:0000184	ECO: [see notes]
+A genetic interaction is inferred when mutations or deletions of one gene rescues the lethality or growth defect of a strain mutated or deleted for another gene.
+	new subtype of ECO:0000052 ! suppressor/enhancer interaction experiment
+	relate to ECO:0000054 ! double mutant analysis or ECO:0000056 ! epistatic interaction analysis?
+
+
+2. Additional APO terms not in BioGRID (descendants of APO:0000018 experiment_type)
+
+APO:0000164 ! interactions	ECO: [no term - request?]
+
+APO:0000188 ! Affinity Chromatography	ECO:0000079 ! affinity chromatography assay
+
+APO:0000189 ! Affinity Precipitation	ECO: [no term - request?]
+
+APO:0000190 ! Biochemical Assay
+	what's the difference between APO:0000166 and APO:0000190? (they're siblings, and neither has a text definition)
+
+APO:0000174 ! Epistatic MiniArray Profile	ECO: [no term - request?]
+
+APO:0000192 ! phenotype assays	ECO:0000059 ! experimental phenotypic evidence
+
+
+APO:0000020 ! classical genetics	ECO: [no term - request?]
+	approximately equivalent to "small scale"; ECO doesn't have much on large- vs. small-scale experiments at present
+
+APO:0000114 ! large-scale survey	ECO: [no term - request?]
+	ECO doesn't have much on large- vs. small-scale experiments at present
+
+APO:0000235 ! systematic mutation set	ECO: [no term - request?]
+	ECO doesn't have much on large- vs. small-scale experiments at present
+
+APO:0000021 ! competitive growth	ECO: [no term - request?]
+	nothing in ECO about growth assays
+
+
+APO:0000282 ! aneuploid, classical genetics	ECO: [no term - request?]
+	PATO:0001385 ! aneuploid
+
+APO:0000279 ! haploid, classical genetics	ECO: [no term - request?]
+	PATO:0001375 ! haploid
+
+APO:0000230 ! heterozygous diploid	ECO: [no term - request?]
+	PATO:0001394 ! diploid
+
+APO:0000304 ! heterozygous diploid, classical genetics	ECO: [no term - request?]
+	PATO:0001394 ! diploid
+
+APO:0000229 ! homozygous diploid	ECO: [no term - request?]
+	PATO:0001394 ! diploid
+
+APO:0000305 ! homozygous diploid, classical genetics	ECO: [no term - request?]
+	PATO:0001394 ! diploid
+
+APO:0000328 ! unknown ploidy, classical genetics	ECO: [no term - request?]
+APO:0000283 ! aneuploid, large-scale survey	ECO: [no term - request?]
+	PATO:0001385 ! aneuploid
+
+APO:0000284 ! aneuploid, competitive growth	ECO: [no term - request?]
+	PATO:0001385 ! aneuploid
+
+APO:0000280 ! haploid, competitive growth	ECO: [no term - request?]
+	PATO:0001375 ! haploid
+
+APO:0000234 ! heterozygous diploid, competitive growth	ECO: [no term - request?]
+	PATO:0001394 ! diploid
+
+APO:0000233 ! homozygous diploid, competitive growth	ECO: [no term - request?]
+	PATO:0001394 ! diploid
+
+APO:0000281 ! haploid, large-scale survey	ECO: [no term - request?]
+	PATO:0001375 ! haploid
+
+APO:0000232 ! heterozygous diploid, large-scale survey	ECO: [no term - request?]
+	PATO:0001394 ! diploid
+
+APO:0000231 ! homozygous diploid, large-scale survey	ECO: [no term - request?]
+	PATO:0001394 ! diploid
+
+APO:0000286 ! aneuploid, systematic mutation set	ECO: [no term - request?]
+	PATO:0001385 ! aneuploid
+
+APO:0000285 ! haploid, systematic mutation set	ECO: [no term - request?]
+	PATO:0001375 ! haploid
+
+APO:0000237 ! heterozygous diploid, systematic mutation set	ECO: [no term - request?]
+	PATO:0001394 ! diploid
+
+APO:0000236 ! homozygous diploid, systematic mutation set	ECO: [no term - request?]
+	PATO:0001394 ! diploid
+
+
+ECO has nothing about ploidy just now; would want xps with PATO ploidy terms as noted
+request PATO terms for zygosity?
+
