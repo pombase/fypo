@@ -1,0 +1,37 @@
+format-version: 1.2
+date: 25:03:2011 11:40
+saved-by: midori
+auto-generated-by: OBO-Edit 2.0
+default-namespace: fission_yeast_phenotype
+remark: svn version: $Revision: $
+ontology: fypo
+
+[Term]
+id: FYPO:0000001
+name: phenotype
+def: "Any of the set of observable characteristics of an organism resulting from the interaction of its genotype with the environment." [PomBase:mah]
+creation_date: 2011-03-16T03:59:25Z
+
+[Term]
+id: FYPO:0000002
+name: cell phenotype
+def: "A phenotype that is relevant at the level of an individual cell." [PomBase:mah]
+comment: ask G or C how to relate to PATO:0001396 cellular quality and CL:0000000 cell
+is_a: FYPO:0000001 ! phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in CL:0000000 ! cell
+created_by: midori
+creation_date: 2011-03-16T04:25:28Z
+
+[Term]
+id: FYPO:0000003
+name: cell population phenotype
+def: "A phenotype that is relevant at the level of a population of cells." [PomBase:mah]
+comment: ask G or C how to relate to PATO:0002003 population quality and CL:0000000 cell
+is_a: FYPO:0000001 ! phenotype
+intersection_of: FYPO:0000001 ! phenotype
+! comment: note to self: differentium is population level, and may reflect observation conditions
+! intersection_of: inheres_in 
+! how to represent population of cells?
+created_by: midori
+creation_date: 2011-03-16T04:26:35Z
