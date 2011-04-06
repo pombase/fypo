@@ -1,7 +1,6 @@
 general questions:
 	1. 'defective' related synonym PATO:0000460 'abnormal' & PATO:0001511 'non-functional'; most likely want 460
 		also consider decreased functionality?
-	2. everything that has 'inheres_in CL:0000000 cell' - should there be a connection to PATO:0001396 ! cellular quality?
 	3. for everything that has 
 
 ! ***
@@ -80,13 +79,6 @@ namespace: fission_yeast_phenotype
 intersection_of: qualifier PATO:0000460 ! abnormal
 
 ! ***
-name: cell morphology, T shaped
-namespace: fission_yeast_phenotype
-intersection_of: qualifier PATO:0001200 ! T-shaped
-intersection_of: inheres_in CL:0000000 ! cell
-! included in xp-drafts; request synonym of PATO:0001200 ! T-shaped ?
-
-! ***
 name: cell morphology, bottle/skittle
 namespace: fission_yeast_phenotype
 intersection_of: qualifier PATO:0002213 ! obclavate
@@ -115,6 +107,7 @@ intersection_of: qualifier PATO:0000573 ! increased length
 	PATO:0001154 'elongated' (is_a size) or PATO:0000573 ! increased length (is_a morphology)?
 intersection_of: inheres_in CL:0000000 ! cell
 ! put increased length in xp-drafts for now (2011-04-01)
+! changed to elongated 2011-04-06
 
 name: cell morphology, elongated dumbbell
 namespace: fission_yeast_phenotype
@@ -123,7 +116,8 @@ intersection_of: qualifier PATO:0000573 ! increased length
 	PATO:0001154 'elongated' (is_a size) or PATO:0000573 ! increased length (is_a morphology)?
 intersection_of: inheres_in CL:0000000 ! cell
 ! put increased length in xp-drafts for now (2011-04-01)
-
+! changed to elongated 2011-04-06
+0
 name: cell morphology, lemon shaped
 namespace: fission_yeast_phenotype
 intersection_of: qualifier PATO:
@@ -132,6 +126,7 @@ intersection_of: inheres_in CL:0000000 ! cell
 ! maybe under PATO:0001866 prolate, or PATO:0001891 ovate? or not under PATO:0001865 spheroid at all?
 ! def: "A convex 3-D shape quality inhering in a bearer by virtue of the bearer's g short and wide and tapered distally towards both ends"?
 ! ask G about parentage & def for this one
+!  pato SF 3277578
 
 name: cell morphology, pear shaped
 namespace: fission_yeast_phenotype
@@ -151,6 +146,7 @@ intersection_of: qualifier PATO:0000573 ! increased length
 intersection_of: inheres_in GO:0043332 ! mating projection tip
 ! same 'elongated' vs. 'increased length' q as above
 ! put increased length in xp-drafts for now (2011-04-01)
+! left as is 2011-04-06
 
 name: cell morphology, snowman during sporulation
 namespace: fission_yeast_phenotype
@@ -160,6 +156,7 @@ intersection_of: during GO:0030437 ! ascospore formation
 ! request descendant of PATO:0000052 ! shape
 ! def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's having two connected parts, roughly spherical, of different sizes."
 !  maybe alse edit def PATO:0001876 'dumbbell-shaped' to specify similar size parts?
+!  pato SF 3277572
 
 name: cell morphology, swollen cells
 namespace: fission_yeast_phenotype
@@ -334,12 +331,15 @@ namespace: fission_yeast_phenotype
 intersection_of: PATO:0002051 ! increased occurrence
 ! need differentia(e)
 
-name: localization defective, cytoplasmic
+name: nuclear localization abnormal
 namespace: fission_yeast_phenotype
+synonym: "GO:0034504 ! protein localization to nucleus" RELATED [PomBase:mah]
 intersection_of: PATO:0000001 ! quality
 intersection_of: qualifier PATO:0000460 ! abnormal
+GO:0034504 ! protein localization to nucleus
 ! need differentia(e)
 ! argh too damn general ... localizing what??
+! 2011-04-06: found it: loc to nucleus has gone awry, so rename
 
 name: localization defects, nuclear accumulation of Pap1 and Sty1
 namespace: fission_yeast_phenotype
@@ -531,18 +531,7 @@ namespace: fission_yeast_phenotype
 intersection_of: qualifier PATO:
 ! argh
 
-name: spindle defects, short spindles
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0000574 ! decreased length
-intersection_of: inheres_in GO:0005819 ! spindle
-! may want mitotic spindle
 
-name: spindle elongation defects
-namespace: fission_yeast_phenotype
-intersection_of: PATO:0000001 ! quality
-intersection_of: qualifier PATO:0000460 ! abnormal
-intersection_of: inheres_in GO:0051231 ! spindle elongation
-! may want mitotic spindle
 
 name: spindle polarity defects
 namespace: fission_yeast_phenotype
