@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:04:2011 14:29
+date: 12:04:2011 18:01
 saved-by: mah79
 auto-generated-by: OBO-Edit 2.1-beta12
 default-namespace: file:/Users/mah79/pombase/phenotype_ontology/fypo.obo
@@ -303,8 +303,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000029
-name: chromosome segregation defects
+name: abnormal chromosome segregation
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which chromosome segregation is abnormal." [PomBase:mah]
+synonym: "chromosome segregation defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007059
@@ -314,9 +316,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000030
-name: chromosome segregation defects, chromosome congression
+name: abnormal chromosome congression
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000029 ! chromosome segregation defects
+def: "A cellular process phenotype in which chromosome congression is abnormal." []
+synonym: "chromosome segregation defects, chromosome congression" EXACT [PomBase:mah]
+is_a: FYPO:0000029 ! abnormal chromosome segregation
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051310
 intersection_of: qualifier PATO:0000460
@@ -1280,8 +1284,9 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000121
-name: sporulation defects
+name: abnormal sporulation
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which ascospore formation is abnormal." [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030437
@@ -1459,7 +1464,7 @@ name: cellular structure phenotype
 namespace: fission_yeast_phenotype
 def: "A phenotype that affects the structure of a cell or a cellular component." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
-intersection_of: FYPO:0000002
+intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0005575
 created_by: mah79
 creation_date: 2011-04-12T12:01:21Z
@@ -1470,7 +1475,7 @@ name: cell cycle checkpoint phenotype
 namespace: fission_yeast_phenotype
 def: "A cell phenotype that affects any cell cycle checkpoint." [PomBase:mah]
 is_a: FYPO:0000011 ! cell cycle defects
-intersection_of: FYPO:0000002
+intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0000075
 created_by: mah79
 creation_date: 2011-04-12T12:55:38Z
@@ -1481,8 +1486,8 @@ name: localization phenotype
 namespace: fission_yeast_phenotype
 def: "A cell phenotype that affects the localization of a structure or substance in a cell." []
 is_a: FYPO:0000114 ! cellular process phenotype
-intersection_of: FYPO:0000002
-intersection_of: inheres_in GO:0051641 ! cellular localization
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0051641
 created_by: mah79
 creation_date: 2011-04-12T02:16:04Z
 
@@ -1492,8 +1497,8 @@ name: cell growth phenotype
 namespace: fission_yeast_phenotype
 def: "A cell phenotype that affects the rate or extent of cell growth." []
 is_a: FYPO:0000114 ! cellular process phenotype
-intersection_of: FYPO:0000002
-intersection_of: inheres_in GO:0016049 ! cell growth
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0016049
 created_by: mah79
 creation_date: 2011-04-12T02:22:51Z
 
@@ -1503,10 +1508,65 @@ name: cellular metabolism phenotype
 namespace: fission_yeast_phenotype
 def: "A phenotype that affects metabolism in the cell." [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
-intersection_of: FYPO:0000002
-intersection_of: inheres_in GO:0044237 ! cellular metabolic process
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0044237
 created_by: mah79
 creation_date: 2011-04-12T02:23:26Z
+
+[Term]
+id: FYPO:0000141
+name: abnormal mitotic sister chromatid segregation
+namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which mitotic sister chromatid segregation is abnormal." [PomBase:mah]
+is_a: FYPO:0000029 ! abnormal chromosome segregation
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0000070 ! mitotic sister chromatid segregation
+created_by: mah79
+creation_date: 2011-04-12T05:41:15Z
+
+[Term]
+id: FYPO:0000142
+name: gene expression phenotype
+namespace: fission_yeast_phenotype
+def: "A cellular process phenotype that affects gene expression." [PomBase:mah]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0010467 ! gene expression
+created_by: mah79
+creation_date: 2011-04-12T05:46:51Z
+
+[Term]
+id: FYPO:0000143
+name: transcription regulation phenotype
+namespace: fission_yeast_phenotype
+def: "A gene expression phenotype that affects the regulation of DNA-dependent transcription." [PomBase:mah]
+is_a: FYPO:0000142 ! gene expression phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006355 ! regulation of transcription, DNA-dependent
+created_by: mah79
+creation_date: 2011-04-12T05:47:38Z
+
+[Term]
+id: FYPO:0000144
+name: abnormal chromatin silencing
+namespace: fission_yeast_phenotype
+def: "A transcription regulation phenotype in which chromatin silencing is abnormal." [PomBase:mah]
+is_a: FYPO:0000143 ! transcription regulation phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006342 ! chromatin silencing
+created_by: mah79
+creation_date: 2011-04-12T05:48:37Z
+
+[Term]
+id: FYPO:0000145
+name: regulation phenotype
+namespace: fission_yeast_phenotype
+def: "A cellular process phenotype that affects the regulation of a molecular function, biological process, or biological quality." [PomBase:mah]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0065007 ! biological regulation
+created_by: mah79
+creation_date: 2011-04-12T06:00:44Z
 
 [Typedef]
 id: during
