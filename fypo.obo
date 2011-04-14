@@ -1,5 +1,5 @@
-<format-version: 1.2
-date: 12:04:2011 18:01
+format-version: 1.2
+date: 14:04:2011 17:44
 saved-by: mah79
 auto-generated-by: OBO-Edit 2.1-beta12
 default-namespace: file:/Users/mah79/pombase/phenotype_ontology/fypo.obo
@@ -47,6 +47,7 @@ creation_date: 2011-03-16T04:26:35Z
 id: FYPO:0000004
 name: viability
 namespace: fission_yeast_phenotype
+def: "A cell phenotype that consists of the cell's disposition to survive and develop normally." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0000169
 intersection_of: inheres_in CL:0000000 ! cell
@@ -59,7 +60,7 @@ name: abnormal cell morphology
 namespace: fission_yeast_phenotype
 alt_id: FYPO:0000019
 def: "A cell phenotype characterized by altered cell morphology." [PomBase:mah]
-synonym: "cell morphology, misshapen cells" EXACT []
+synonym: "cell morphology, misshapen cells" EXACT [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0000051
 intersection_of: inheres_in CL:0000000 ! cell
@@ -68,8 +69,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000006
-name: DNA damage checkpoint defects
+name: abnormal DNA damage checkpoint
 namespace: fission_yeast_phenotype
+def: "A cell cycle checkpoint phenotype that affects the DNA damage checkpoint." [PomBase:mah]
+synonym: "DNA damage checkpoint defects" EXACT [PomBase:mah]
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000077
@@ -79,9 +82,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000007
-name: DNA damage checkpoint defects, S-phase
+name: abnormal S-phase DNA damage checkpoint
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000006 ! DNA damage checkpoint defects
+def: "A cell cycle checkpoint phenotype that affects the S phase DNA damage checkpoint." [PomBase:mah]
+synonym: "DNA damage checkpoint defects, S-phase" EXACT [PomBase:mah]
+is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0031573
 intersection_of: qualifier PATO:0000460
@@ -90,8 +95,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000008
-name: DNA recombination defects, meiotic
+name: abnormal meiotic DNA recombination
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which meiotic recombination is abnormal." [PomBase:mah]
+synonym: "abnormal reciprocal meiotic recombination" EXACT [PomBase:mah]
+synonym: "DNA recombination defects, meiotic" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007131
@@ -101,8 +109,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000009
-name: adhesion defects
+name: abnormal cell adhesion
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which adhesion of a cell to a substrate or another cell is abnormal." [PomBase:mah]
+synonym: "adhesion defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007155
@@ -114,7 +124,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000010
 name: cell-substrate adhesion abolished
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000009 ! adhesion defects
+def: "A cell adhesion phenotype in which cells fail to adhere to a substrate." [PomBase:mah]
+is_a: FYPO:0000009 ! abnormal cell adhesion
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0031589
 intersection_of: qualifier PATO:0001508
@@ -123,8 +134,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000011
-name: cell cycle defects
+name: abnormal cell cycle progression
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which a cell does not proceed normally through a cell cycle." [PomBase:mah]
+synonym: "cell cycle defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007049
@@ -134,12 +147,16 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000012
-name: cell cycle, G2 delay
+name: G2 delay
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000011 ! cell cycle defects
+def: "A cell cycle phenotype in which the duration of G2 phase is longer than normal." [PomBase:mah]
+synonym: "cell cycle, G2 delay" EXACT [PomBase:mah]
+synonym: "delayed G2/M transition" EXACT [PomBase:mah]
+synonym: "increased G2 duration" EXACT [PomBase:mah]
+is_a: FYPO:0000011 ! abnormal cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051319
-intersection_of: qualifier PATO:0001542
+intersection_of: qualifier PATO:0000498
 created_by: mah79
 creation_date: 2011-03-29T05:53:56Z
 
@@ -147,7 +164,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000013
 name: T-shaped cells
 namespace: fission_yeast_phenotype
-synonym: "cell morphology, T shaped" EXACT []
+def: "A cell morphology phenotype in which a single cell grows in the form of the letter T. The cell usually septates perpendicular to the normal septation axis, and divides to form normal-shaped daughter cells." [PomBase:mah, PomBase:vw]
+synonym: "cell morphology, T shaped" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0001200
 intersection_of: inheres_in CL:0000000 ! cell
@@ -158,7 +176,9 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000014
 name: bottle-shaped cells
 namespace: fission_yeast_phenotype
+def: "A cell morphology phenotype in which the cell tapers at one end to a diameter smaller than the other." [PomBase:mah]
 synonym: "cell morphology, bottle/skittle" EXACT [PomBase:mah]
+synonym: "skittle-shaped cells" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0002213
 intersection_of: inheres_in CL:0000000 ! cell
@@ -169,6 +189,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000015
 name: branched cells
 namespace: fission_yeast_phenotype
+def: "A cell morphology phenotype in which a daughter cell grows from near, and at approximately a right angle to, the septum of the mother cell, resulting in the formation of a branched, septated cell. Cell division may give rise to branched or unbranched daughter cells." [PomBase:jh, PomBase:mah]
 synonym: "cell morphology, branched" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000402
@@ -180,7 +201,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000016
 name: curved cells
 namespace: fission_yeast_phenotype
-synonym: "cell morphology, curved" EXACT []
+def: "A cell morphology phenotype in which cells are curved along the long axis." [PomBase:mah]
+synonym: "cell morphology, curved" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000406
 intersection_of: inheres_in CL:0000000 ! cell
@@ -191,7 +213,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000017
 name: elongated cells
 namespace: fission_yeast_phenotype
-synonym: "cell morphology, elongated cells" EXACT []
+def: "A cell morphology phenotype in which cells are longer than normal." [PomBase:mah]
+synonym: "cell morphology, elongated cells" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000573
 intersection_of: inheres_in CL:0000000 ! cell
@@ -202,7 +225,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000018
 name: elongated dumbbell morphology
 namespace: fission_yeast_phenotype
-synonym: "cell morphology, elongated dumbbell" EXACT []
+def: "A cell morphology phenotype in which a cell is shaped in the form of a dumbbell, i.e. having two connected, roughly spherical parts of approximately equal size." [PomBase:mah]
+synonym: "cell morphology, elongated dumbbell" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000051
 intersection_of: inheres_in CL:0000000 ! cell
@@ -215,8 +239,9 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000020
 name: pear-shaped cells
 namespace: fission_yeast_phenotype
+def: "A cell morphology phenotype in which a cell is shaped in the form of a pear." [PomBase:mah]
 comment: Discussing what this means; may rename.
-synonym: "cell morphology, pear shaped" EXACT []
+synonym: "cell morphology, pear shaped" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0002240
 intersection_of: inheres_in CL:0000000 ! cell
@@ -227,6 +252,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000021
 name: spheroid cells
 namespace: fission_yeast_phenotype
+def: "A cell morphology phenotype in which a cell is shaped in the form of a spheroid. Spheroid cells are shorter than normal, and have approximately the same diameter as normal." [PomBase:mah]
 synonym: "cell morphology, round cells" RELATED [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0001865
@@ -238,7 +264,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000022
 name: shmoos with long tips
 namespace: fission_yeast_phenotype
-synonym: "cell morphology, shmoos with long tips" EXACT []
+def: "A cell morphology phenotype in which a cell forms a mating projection with a longer tip than normal." [PomBase:mah]
+synonym: "cell morphology, shmoos with long tips" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000573
 intersection_of: inheres_in GO:0043332
@@ -261,7 +288,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000024
 name: stubby cells
 namespace: fission_yeast_phenotype
-synonym: "cell morphology, stubby cells" EXACT []
+def: "A cell morphology phenotype in which the cell diameter is larger than normal and the cell length is shorter than normal." [PomBase:mah]
+synonym: "cell morphology, stubby cells" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0001653
 intersection_of: inheres_in CL:0000000 ! cell
@@ -272,7 +300,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000025
 name: swollen cells
 namespace: fission_yeast_phenotype
-synonym: "cell morphology, swollen cells" EXACT []
+def: "A cell morphology phenotype in which a cell has a larger volume than normal." [PomBase:mah]
+synonym: "cell morphology, swollen cells" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000595
 intersection_of: inheres_in CL:0000000 ! cell
@@ -281,9 +310,12 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000026
-name: cell polarity defects
+name: abnormal cell polarity
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000002 ! cell phenotype
+def: "A cellular process phenotype in which the establishment or maintenance of cell polarity is abnormal." [PomBase:mah]
+synonym: "abnormal establishment or maintenance of cell polarity" EXACT [PomBase:mah]
+synonym: "cell polarity defects" EXACT [PomBase:mah]
+is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007163
 intersection_of: qualifier PATO:0000460
@@ -292,8 +324,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000027
-name: cell wall defects
+name: abnormal cell wall
 namespace: fission_yeast_phenotype
+def: "A cellular structure phenotype in which the cell wall is abnormal." [PomBase:mah]
+synonym: "cell wall defects" EXACT [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0009277
@@ -318,7 +352,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000030
 name: abnormal chromosome congression
 namespace: fission_yeast_phenotype
-def: "A cellular process phenotype in which chromosome congression is abnormal." []
+def: "A cellular process phenotype in which chromosome congression is abnormal." [PomBase:mah]
 synonym: "chromosome segregation defects, chromosome congression" EXACT [PomBase:mah]
 is_a: FYPO:0000029 ! abnormal chromosome segregation
 intersection_of: PATO:0000001
@@ -329,8 +363,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000031
-name: conjugation defects
+name: abnormal conjugation
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which conjugation is abnormal." [PomBase:mah]
+synonym: "abnormal conjugation with cellular fusion" EXACT [PomBase:mah]
+synonym: "conjugation defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000747
@@ -340,8 +377,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000032
-name: cytokinesis defects
+name: abnormal cytokinesis
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which cytokinesis is abnormal." [PomBase:mah]
+synonym: "abnormal cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "cytokinesis defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0033205
@@ -351,9 +391,12 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000033
-name: cytokinesis defects, misplaced contractile ring
+name: abnormal contractile ring localization
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000032 ! cytokinesis defects
+def: "A cellular process phenotype in which contractile ring localization is abnormal." [PomBase:mah]
+synonym: "abnormal contractile ring localization involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "cytokinesis defects, misplaced contractile ring" EXACT [PomBase:mah]
+is_a: FYPO:0000032 ! abnormal cytokinesis
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0032187
 intersection_of: qualifier PATO:0000460
@@ -362,8 +405,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000034
-name: endocytosis defects
+name: abnormal endocytosis
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which endocytosis is abnormal." [PomBase:mah]
+synonym: "endocytosis defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006897
@@ -461,8 +506,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000043
-name: glucan synthesis defective
+name: abnormal glucan synthesis
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which glucan biosynthesis is abnormal." [PomBase:mah]
+synonym: "abnormal glucan biosynthetic process" EXACT [PomBase:mah]
+synonym: "glucan synthesis defective" EXACT [PomBase:mah]
 is_a: FYPO:0000140 ! cellular metabolism phenotype
 intersection_of: PATO:0000001
 intersection_of: qualifier PATO:0000460
@@ -472,8 +520,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000044
-name: glucose repression defects
+name: abnormal glucose repression
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which negative regulation of transcription by glucose is abnormal." [PomBase:mah]
+synonym: "abnormal negative regulation of transcription by glucose" EXACT [PomBase:mah]
+synonym: "glucose repression defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0045014
@@ -483,8 +534,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000045
-name: growth defect
+name: abnormal cell growth
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which cell growth is abnormal." [PomBase:mah]
+synonym: "growth defect" EXACT [PomBase:mah]
 is_a: FYPO:0000139 ! cell growth phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0016049
@@ -494,9 +547,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000046
-name: growth defect, slow growth
+name: slow cell growth
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000045 ! growth defect
+def: "A cellular process phenotype in which cell growth is slower than normal." [PomBase:mah]
+synonym: "growth defect, slow growth" EXACT [PomBase:mah]
+is_a: FYPO:0000045 ! abnormal cell growth
 intersection_of: PATO:0000911
 intersection_of: inheres_in GO:0016049
 created_by: mah79
@@ -504,8 +559,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000047
-name: growth normal
+name: normal cell growth
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which cells grow at a normal rate." [PomBase:mah]
+synonym: "growth normal." EXACT [PomBase:mah]
 is_a: FYPO:0000139 ! cell growth phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0016049
@@ -515,9 +572,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000048
-name: invasive growth, abolished
+name: invasive growth abolished
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000114 ! cellular process phenotype
+def: "A cellular process phenotype in which invasive growth does not occur." [PomBase:mah]
+is_a: FYPO:0000045 ! abnormal cell growth
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0007124
 created_by: mah79
@@ -527,6 +585,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000049
 name: inviable
 namespace: fission_yeast_phenotype
+def: "A viability phenotype in which cells are unable to survive under normal conditions." [PomBase:mah]
 is_a: FYPO:0000004 ! viability
 intersection_of: inheres_in CL:0000000 ! cell
 intersection_of: qualifier PATO:0000718
@@ -535,8 +594,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000050
-name: kinetochore defects
+name: abnormal kinetochore structure
 namespace: fission_yeast_phenotype
+def: "A cellular structure phenotype in which the structure of the kinetochore is abnormal." [PomBase:mah]
+synonym: "kinetochore defects" EXACT [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000776
@@ -546,8 +607,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000051
-name: meiosis defects
+name: abnormal meiosis
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which meiosis is abnormal." [PomBase:mah]
+synonym: "meiosis defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007126
@@ -557,9 +620,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000052
-name: meiotic cell cycle defects
+name: abnormal meiotic cell cycle progression
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000011 ! cell cycle defects
+def: "A cellular process phenotype in which a cell does not proceed normally through a meiotic cell cycle." [PomBase:mah]
+synonym: "meiotic cell cycle defects" EXACT [PomBase:mah]
+is_a: FYPO:0000011 ! abnormal cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051321
 intersection_of: qualifier PATO:0000460
@@ -568,11 +633,13 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000054
-name: microtubule organization defects
+name: abnormal microtubule organization
 namespace: fission_yeast_phenotype
 alt_id: FYPO:0000053
-def: "A phenotype that affects the organization of the microtubule cytoskeleton." []
-synonym: "microtubule cytoskeleton defects" EXACT []
+def: "A phenotype that affects the organization of the microtubule cytoskeleton." [PomBase:mah]
+synonym: "abnormal microtubule cytoskeleton organization" EXACT [PomBase:mah]
+synonym: "microtubule cytoskeleton defects" EXACT [PomBase:mah]
+synonym: "microtubule organization defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000226
@@ -582,9 +649,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000055
-name: microtubule organization defects, long microtubules
+name: long microtubules
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000054 ! microtubule organization defects
+def: "A microtubule organization phenotype in which cells contain microtubules that are longer than normal." [PomBase:mah]
+synonym: "microtubule organization defects, long microtubules" EXACT [PomBase:mah]
+is_a: FYPO:0000054 ! abnormal microtubule organization
 intersection_of: PATO:0000573
 created_by: mah79
 creation_date: 2011-03-29T05:53:56Z
@@ -593,6 +662,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000056
 name: mitochondria fused
 namespace: fission_yeast_phenotype
+def: "A cellular structure phenotype in which mitochondria have fused into fewer and larger structures than normal." [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0000642
 intersection_of: inheres_in GO:0005739
@@ -604,6 +674,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000057
 name: mitochondrial nucleoid enlarged
 namespace: fission_yeast_phenotype
+def: "A cellular structure phenotype in which the mitochondrial nucleoid is larger than normal." [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0000586
 intersection_of: inheres_in GO:0042645
@@ -614,6 +685,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000058
 name: mitochondrial nucleoid reduced number
 namespace: fission_yeast_phenotype
+def: "A cellular structure phenotype in which a cell contains fewer mitochondrial nucleoids than normal." [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0001997
 intersection_of: inheres_in GO:0042645
@@ -622,9 +694,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000059
-name: mitotic cell cycle defects
+name: abnormal mitotic cell cycle progression
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000011 ! cell cycle defects
+def: "A cellular process phenotype in which a cell does not proceed normally through a mitotic cell cycle." [PomBase:mah]
+synonym: "mitotic cell cycle defects" EXACT [PomBase:mah]
+is_a: FYPO:0000011 ! abnormal cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000278
 intersection_of: qualifier PATO:0000460
@@ -635,6 +709,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000060
 name: mononucleate
 namespace: fission_yeast_phenotype
+def: "A cellular structure phenotype in which a cell contains a single nucleus." [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0001407
 intersection_of: inheres_in CL:0000000 ! cell
@@ -645,6 +720,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000061
 name: multinucleate
 namespace: fission_yeast_phenotype
+def: "A cellular structure phenotype in which a cell contains more than one nucleus." [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0001908
 intersection_of: inheres_in CL:0000000 ! cell
@@ -653,8 +729,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000062
-name: nuclear morphology defects
+name: abnormal nuclear morphology
 namespace: fission_yeast_phenotype
+def: "A cellular structure phenotype in which the morphology of the nucleus is abnormal." [PomBase:mah]
+synonym: "nuclear morphology defects" EXACT [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0000051
 intersection_of: inheres_in GO:0005634
@@ -664,8 +742,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000063
-name: recombination defects
+name: abnormal DNA recombination
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which DNA recombination is abnormal." [PomBase:mah]
+synonym: "recombination defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: inheres_in GO:0006310
 intersection_of: qualifier PATO:0000460
@@ -676,6 +756,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000064
 name: resistance to 2-deoxyglucose
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of 2-deoxyglucose than normal." [PomBase:mah]
 synonym: "resistance to 2-DOG" EXACT [PomBase:mah]
 synonym: "resistant to 2-deoxy-D-glucose" EXACT [CHEBI:15866, PomBase:mah]
 synonym: "resistant to 2-DOG" EXACT [PomBase:mah]
@@ -689,6 +770,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000065
 name: resistance to 5-azacytidine
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of 5-azacytidine than normal." [PomBase:mah]
 synonym: "resistant to 5-azacytidine" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001650
@@ -700,6 +782,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000066
 name: resistance to L-azetidine-2-carboxylic acid
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of L-azetidine-2-carboxylic acid than normal." [PomBase:mah]
 synonym: "resistance to (S)-azetidine-2-carboxylic acid" EXACT [CHEBI:6198, PomBase:mah]
 synonym: "resistance to AZC" BROAD [PomBase:mah]
 synonym: "resistant to L-azetidine-2-carboxylic acid" EXACT [PomBase:mah]
@@ -713,6 +796,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000067
 name: resistance to brefeldin A
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of brefeldin A than normal." [PomBase:mah]
 synonym: "resistance to BFA" EXACT [PomBase:mah]
 synonym: "resistant to Brefeldin A" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
@@ -725,6 +809,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000068
 name: resistance to K-252a
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of K-252a than normal." [PomBase:mah]
 synonym: "resistant to K-252a" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001650
@@ -736,6 +821,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000069
 name: resistance to thiabendazole
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of thiabendazole than normal." [PomBase:mah]
 synonym: "resistance to TBZ" EXACT [PomBase:mah]
 synonym: "resistance to thiabendazole" EXACT [PomBase:mah]
 synonym: "resistant to TBZ" EXACT [CHEBI:45979, PomBase:mah]
@@ -747,6 +833,7 @@ intersection_of: towards CHEBI:45979
 id: FYPO:0000070
 name: resistance to amphotericin B
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of amphotericin B than normal." [PomBase:mah]
 synonym: "resistant to amphotericin" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001650
@@ -758,6 +845,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000071
 name: resistance to aureobasidin A
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of aureobasidin A than normal." [PomBase:mah]
 synonym: "resistance to AbA" EXACT [PMID:9472078]
 synonym: "resistant to aureobasidin A" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
@@ -769,6 +857,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000072
 name: resistance to benomyl
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of benomyl than normal." [PomBase:mah]
 synonym: "resistant to benomyl" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001650
@@ -780,6 +869,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000073
 name: resistance to caffeine
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of caffeine than normal." [PomBase:mah]
 synonym: "resistant to caffeine" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001650
@@ -791,6 +881,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000074
 name: resistance to drug
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of a drug than normal." [PomBase:mah]
 synonym: "drug resistance" EXACT [PomBase:mah]
 synonym: "drug resistant" EXACT [PomBase:mah]
 synonym: "resistant to drugs" EXACT [PomBase:mah]
@@ -804,6 +895,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000075
 name: resistance to lovastatin
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of lovastatin than normal." [PomBase:mah]
 comment: was misspelled lavostatin
 synonym: "resistant to lovastatin" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
@@ -816,6 +908,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000076
 name: resistance to nystatin
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of nystatin than normal." [PomBase:mah]
 synonym: "resistant to nystatin" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001650
@@ -827,6 +920,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000077
 name: resistance to rapamycin
 namespace: fission_yeast_phenotype
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of rapamycin than normal." [PomBase:mah]
 synonym: "resistant to rapamycin" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001650
@@ -836,8 +930,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000078
-name: respiration defective
+name: abnormal respiration
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which cellular respiration is abnormal." [PomBase:mah]
+synonym: "abnormal cellular respiration" EXACT [PomBase:mah]
+synonym: "respiration defective" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0045333
@@ -849,6 +946,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000079
 name: sensitive to caspofungin
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to caspofungin." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:474180
@@ -859,6 +957,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000080
 name: sensitive to cold
 namespace: fission_yeast_phenotype
+def: "A cell phenotype in which cells show increased sensitivity to cold; cells fail to grow or grow more slowly than normal at low temperatures." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0001549
 intersection_of: towards PATO:0001306
@@ -869,6 +968,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000081
 name: sensitive to high osmolarity
 namespace: fission_yeast_phenotype
+def: "A cell phenotype in which cells show increased sensitivity to conditions of high osmolarity." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0001549
 intersection_of: inheres_in PATO:0001657
@@ -879,6 +979,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000082
 name: sensitive to high temperature
 namespace: fission_yeast_phenotype
+def: "A cell phenotype in which cells show increased sensitivity to heat; cells fail to grow or grow more slowly than normal at high temperatures." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0001549
 intersection_of: inheres_in PATO:0001305
@@ -889,6 +990,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000083
 name: sensitive to enfumafungin
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to enfumafungin." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 created_by: mah79
@@ -898,6 +1000,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000084
 name: sensitive to 6-azauracil
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to 6-azauracil." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 created_by: mah79
@@ -905,9 +1008,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000085
-name: sensitive to CPT
+name: sensitive to camptothecin
 namespace: fission_yeast_phenotype
-synonym: "sensitive to camptothecin" EXACT [CHEBI:27656, PomBase:mah]
+def: "A phenotype in which cells show increased sensitivity to camptothecin." [PomBase:mah]
+synonym: "sensitive to CPT" EXACT [CHEBI:27656, PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:27656
@@ -918,6 +1022,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000086
 name: sensitive to tacrolimus
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to tacrolimus." [PomBase:mah]
 comment: was mistyped FK605
 synonym: "sensitive to FK506" EXACT [CHEBI:61057, PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -930,6 +1035,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000087
 name: sensitive to hydrogen peroxide
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to hydrogen peroxide." [PomBase:mah]
 synonym: "sensitive to H2O2" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
@@ -941,6 +1047,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000088
 name: sensitive to hydroxyurea
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to hydroxyurea." [PomBase:mah]
 synonym: "sensitive to HU" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
@@ -952,6 +1059,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000089
 name: sensitive to methyl methanesulfonate
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to methyl methanesulfonate." [PomBase:mah]
 synonym: "sensitive to MMS" EXACT [CHEBI:25255, PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
@@ -963,6 +1071,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000090
 name: sensitive to N-ethylmaleimide
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to N-ethylmaleimide." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:44485
@@ -973,6 +1082,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000091
 name: sensitive to thiabendazole
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to thiabendazole." [PomBase:mah]
 synonym: "sensitive to TBZ" EXACT [CHEBI:45979, PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
@@ -984,6 +1094,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000092
 name: sensitive to amiodarone
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to amiodarone." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:2663
@@ -994,6 +1105,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000093
 name: sensitive to arsenic
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to arsenic." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:22632
@@ -1004,6 +1116,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000094
 name: sensitive to benomyl
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to benomyl." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:3015
@@ -1014,6 +1127,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000095
 name: sensitive to bleomycin
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to bleomycin." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:22907
@@ -1024,6 +1138,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000096
 name: sensitive to cadmium
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to cadmium." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:22978
@@ -1034,6 +1149,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000097
 name: sensitive to caffeine
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to caffeine." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:27732
@@ -1044,6 +1160,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000098
 name: sensitive to calcium
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to calcium." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:29108
@@ -1054,6 +1171,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000099
 name: sensitive to canavanine
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to canavanine." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:609827
@@ -1064,6 +1182,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000100
 name: sensitive to chloramphenicol
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to chloramphenicol." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:17698
@@ -1074,6 +1193,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000101
 name: sensitive to chlorpropham
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to chlorpropham." [PomBase:mah]
 synonym: "sensitive to isopropyl N-3-chlorophenyl carbamate" EXACT [PomBase:mah]
 synonym: "sensitive to spindle poison" BROAD [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1085,6 +1205,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000102
 name: sensitive to cisplatin
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to cisplatin." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:27899
@@ -1095,6 +1216,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000103
 name: sensitive to copper ions
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to copper ions." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:23378
@@ -1105,6 +1227,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000104
 name: sensitive to cycloheximide
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to cycloheximide." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:27641
@@ -1115,6 +1238,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000105
 name: sensitive to cyclosporin A
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to cyclosporin A." [PomBase:mah]
 synonym: "sensitive to cyclosporine" EXACT [CHEBI:4031, PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
@@ -1126,6 +1250,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000106
 name: sensitive to hygromycin B
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to hygromycin B." [PomBase:mah]
 comment: was mistyped hygromycin 4
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
@@ -1137,6 +1262,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000107
 name: sensitive to latrunculin A
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to latrunculin A." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:43626
@@ -1147,6 +1273,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000108
 name: sensitive to menadione
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to menadione." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 created_by: mah79
@@ -1156,6 +1283,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000109
 name: sensitive to papulacandin B
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to papulacandin B." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:569624
@@ -1166,6 +1294,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000110
 name: sensitive to pravastatin
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to pravastatin." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 created_by: mah79
@@ -1175,6 +1304,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000111
 name: sensitive to rapamycin
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to rapamycin." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:9168
@@ -1185,6 +1315,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000112
 name: sensitive to sorbitol
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to sorbitol." [PomBase:mah]
 synonym: "sensitive to glucitol" EXACT [CHEBI:30911, PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
@@ -1196,6 +1327,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000113
 name: sensitive to staurosporine
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to staurosporine." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:15738
@@ -1219,6 +1351,7 @@ creation_date: 2011-04-12T12:00:38Z
 id: FYPO:0000115
 name: sensitive to valproic acid
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to valproic acid." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:39867
@@ -1229,6 +1362,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000116
 name: sensitive to zinc
 namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to zinc." [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:27365
@@ -1237,9 +1371,10 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000117
-name: septation defects
+name: abnormal septation
 namespace: fission_yeast_phenotype
-def: "A cell phenotype characterized by abnormal septation." [PomBase:mah]
+def: "A cellular process phenotype in which septation is abnormal." [PomBase:mah]
+synonym: "septation defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: inheres_in GO:0071937
 intersection_of: qualifier PATO:0000460
@@ -1250,9 +1385,9 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000118
 name: multiseptate
 namespace: fission_yeast_phenotype
-def: "A septation defect that results in the presence of more than one septum in a cell." [PomBase:mah]
-synonym: "septation defects, multiple septa" EXACT []
-is_a: FYPO:0000117 ! septation defects
+def: "A septation phenotype characterized by the presence of more than one septum in a cell." [PomBase:mah]
+synonym: "septation defects, multiple septa" EXACT [PomBase:mah]
+is_a: FYPO:0000117 ! abnormal septation
 intersection_of: PATO:0000470
 intersection_of: inheres_in GO:0000935
 created_by: mah79
@@ -1260,9 +1395,10 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000119
-name: spindle assembly abnormal
+name: abnormal spindle assembly
 namespace: fission_yeast_phenotype
-is_a: FYPO:0000120 ! spindle defects
+def: "A cellular process phenotype in which spindle assembly is abnormal." [PomBase:mah]
+is_a: FYPO:0000120 ! abnormal spindle
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051225
 intersection_of: qualifier PATO:0000460
@@ -1271,9 +1407,10 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000120
-name: spindle defects
+name: abnormal spindle
 namespace: fission_yeast_phenotype
 def: "A cell phenotype that affects the mitotic or meiotic spindle. Includes effects on the spindle structure and processes involving the spindle." [PomBase:mah]
+synonym: "spindle defects" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0005819
@@ -1295,8 +1432,10 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000122
-name: telomere maintenance defects
+name: abnormal telomere maintenance
 namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which telomere maintenance is abnormal." [PomBase:mah]
+synonym: "telomere maintenance defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000723
@@ -1306,8 +1445,10 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000123
-name: vacuole organization defects, large vacuoles
+name: large vacuoles
 namespace: fission_yeast_phenotype
+def: "A cellular structure phenotype in which vacuoles are larger than normal." [PomBase:mah]
+synonym: "vacuole organization defects, large vacuoles" EXACT [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0000586
 intersection_of: inheres_in GO:0000324
@@ -1318,6 +1459,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000124
 name: viable
 namespace: fission_yeast_phenotype
+def: "A viability phenotype in which cells are able to survive under normal conditions." [PomBase:mah]
 is_a: FYPO:0000004 ! viability
 intersection_of: PATO:0000719
 intersection_of: inheres_in CL:0000000 ! cell
@@ -1328,7 +1470,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000125
 name: resistance to amiloride
 namespace: fission_yeast_phenotype
-comment: was misspelled amorilide
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of amiloride than normal." [PomBase:mah]
 synonym: "resistant to amiloride" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001650
@@ -1340,7 +1482,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000126
 name: increased resistance to chemical
 namespace: fission_yeast_phenotype
-def: "A phenotype in which a cell shows increased resistance to a chemical stimulus." [PomBase:mah]
+def: "A phenotype in which a cell shows increased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which cells grow and divide." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0001650
 intersection_of: towards CHEBI:24431
@@ -1351,7 +1493,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000127
 name: increased sensitivity to chemical
 namespace: fission_yeast_phenotype
-def: "A phenotype in which a cell shows decreased resistance to a chemical stimulus." [PomBase:mah]
+def: "A phenotype in which a cell shows decreased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which cells grow and divide." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0001549
 intersection_of: towards CHEBI:24431
@@ -1373,6 +1515,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000129
 name: spherical cells
 namespace: fission_yeast_phenotype
+def: "A cell morphology phenotype in which cells are formed in the shape of a sphere." [PomBase:mah]
 is_a: FYPO:0000021 ! spheroid cells
 intersection_of: PATO:0001499
 intersection_of: inheres_in CL:0000000 ! cell
@@ -1383,9 +1526,9 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000130
 name: short spindles
 namespace: fission_yeast_phenotype
-def: "A spindle defect in which the spindle is shorter than normal." [PomBase:mah]
-synonym: "spindle defects, short spindles" EXACT []
-is_a: FYPO:0000120 ! spindle defects
+def: "A spindle phenotype in which the spindle is shorter than normal." [PomBase:mah]
+synonym: "spindle defects, short spindles" EXACT [PomBase:mah]
+is_a: FYPO:0000120 ! abnormal spindle
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0000574
 intersection_of: inheres_in GO:0005819
@@ -1394,10 +1537,11 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000131
-name: spindle elongation defects
+name: abnormal spindle elongation
 namespace: fission_yeast_phenotype
-def: "A spindle defect in which the process of spindle elongation is abnormal." [PomBase:mah]
-is_a: FYPO:0000120 ! spindle defects
+def: "A spindle phenotype in which the process of spindle elongation is abnormal." [PomBase:mah]
+synonym: "spindle elongation defects" EXACT [PomBase:mah]
+is_a: FYPO:0000120 ! abnormal spindle
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000022
 intersection_of: qualifier PATO:0000460
@@ -1409,7 +1553,7 @@ id: FYPO:0000132
 name: abnormal septum disassembly
 namespace: fission_yeast_phenotype
 def: "A cell phenotype characterized by abnormal primary cell septum disassembly; may result in the formation of chains of attached cells." [PomBase:mah]
-synonym: "chained cells" RELATED []
+synonym: "chained cells" RELATED [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0005819
@@ -1448,8 +1592,10 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000135
-name: localization defects, sterol distribution defects
+name: abnormal plasma membrane sterol distribution
 namespace: fission_yeast_phenotype
+synonym: "abnormal regulation of plasma membrane sterol distribution" EXACT [PomBase:mah]
+synonym: "localization defects, sterol distribution defects" EXACT [PomBase:mah]
 is_a: FYPO:0000138 ! localization phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0097036
@@ -1473,7 +1619,7 @@ id: FYPO:0000137
 name: cell cycle checkpoint phenotype
 namespace: fission_yeast_phenotype
 def: "A cell phenotype that affects any cell cycle checkpoint." [PomBase:mah]
-is_a: FYPO:0000011 ! cell cycle defects
+is_a: FYPO:0000011 ! abnormal cell cycle progression
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0000075
 created_by: mah79
@@ -1483,7 +1629,7 @@ creation_date: 2011-04-12T12:55:38Z
 id: FYPO:0000138
 name: localization phenotype
 namespace: fission_yeast_phenotype
-def: "A cell phenotype that affects the localization of a structure or substance in a cell." []
+def: "A cell phenotype that affects the localization of a structure or substance in a cell." [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0051641
@@ -1494,7 +1640,7 @@ creation_date: 2011-04-12T02:16:04Z
 id: FYPO:0000139
 name: cell growth phenotype
 namespace: fission_yeast_phenotype
-def: "A cell phenotype that affects the rate or extent of cell growth." []
+def: "A cell phenotype that affects the rate or extent of cell growth." [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0016049
@@ -1519,7 +1665,7 @@ namespace: fission_yeast_phenotype
 def: "A cellular process phenotype in which mitotic sister chromatid segregation is abnormal." [PomBase:mah]
 is_a: FYPO:0000029 ! abnormal chromosome segregation
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: inheres_in GO:0000070 ! mitotic sister chromatid segregation
+intersection_of: inheres_in GO:0000070
 created_by: mah79
 creation_date: 2011-04-12T05:41:15Z
 
@@ -1530,7 +1676,7 @@ namespace: fission_yeast_phenotype
 def: "A cellular process phenotype that affects gene expression." [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: inheres_in GO:0010467 ! gene expression
+intersection_of: inheres_in GO:0010467
 created_by: mah79
 creation_date: 2011-04-12T05:46:51Z
 
@@ -1540,8 +1686,9 @@ name: transcription regulation phenotype
 namespace: fission_yeast_phenotype
 def: "A gene expression phenotype that affects the regulation of DNA-dependent transcription." [PomBase:mah]
 is_a: FYPO:0000142 ! gene expression phenotype
+is_a: FYPO:0000145 ! regulation phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: inheres_in GO:0006355 ! regulation of transcription, DNA-dependent
+intersection_of: inheres_in GO:0006355
 created_by: mah79
 creation_date: 2011-04-12T05:47:38Z
 
@@ -1552,7 +1699,7 @@ namespace: fission_yeast_phenotype
 def: "A transcription regulation phenotype in which chromatin silencing is abnormal." [PomBase:mah]
 is_a: FYPO:0000143 ! transcription regulation phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: inheres_in GO:0006342 ! chromatin silencing
+intersection_of: inheres_in GO:0006342
 created_by: mah79
 creation_date: 2011-04-12T05:48:37Z
 
@@ -1563,9 +1710,101 @@ namespace: fission_yeast_phenotype
 def: "A cellular process phenotype that affects the regulation of a molecular function, biological process, or biological quality." [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: inheres_in GO:0065007 ! biological regulation
+intersection_of: inheres_in GO:0065007
 created_by: mah79
 creation_date: 2011-04-12T06:00:44Z
+
+[Term]
+id: FYPO:0000146
+name: abnormal chromatin silencing at centromere
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000144 ! abnormal chromatin silencing
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0030702
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000147
+name: abnormal positive regulation of establishment of bipolar cell polarity resulting in cell shape
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0061161
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000148
+name: abnormal regulation of mitotic cell cycle
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000011 ! abnormal cell cycle progression
+is_a: FYPO:0000145 ! regulation phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0007346
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000149
+name: transport phenotype
+namespace: fission_yeast_phenotype
+def: "A cell process phenotype that affects a transport process." [PomBase:mah]
+is_a: FYPO:0000138 ! localization phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006810 ! transport
+created_by: mah79
+creation_date: 2011-04-14T05:43:20Z
+
+
+id: FYPO:0000151
+name: abnormal meiotic chromosome segregation
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000051 ! abnormal meiosis
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0045132
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000152
+name: abnormal cellular response to nitrogen starvation
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000162 ! abnormal cellular response to stress
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006995
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000154
+name: abnormal negative regulation of G0 to G1 transition
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0070317
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000156
+name: abnormal chromatin silencing at silent mating-type cassette
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000144 ! abnormal chromatin silencing
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0030466
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000157
+name: abnormal response to DNA damage stimulus
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006974
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
 
 [Term]
 id: FYPO:0000159
@@ -1580,6 +1819,503 @@ intersection_of: inheres_in GO:0030261
 intersection_of: qualifier PATO:0000460
 created_by: mah79
 creation_date: 2011-04-14T10:44:38Z
+
+[Term]
+id: FYPO:0000161
+name: abnormal actomyosin contractile ring assembly
+namespace: fission_yeast_phenotype
+synonym: "abnormal cytokinesis, actomyosin contractile ring assembly" EXACT [PomBase:mah]
+is_a: FYPO:0000032 ! abnormal cytokinesis
+intersection_of: FYPO:0000002 ! cell phenotype
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000162
+name: abnormal cellular response to stress
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000163
+name: abnormal autophagy
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006914
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000164
+name: abnormal cytokinetic cell separation
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0000920
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000165
+name: abnormal regulation of conjugation with cellular fusion
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000145 ! regulation phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0031137
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000166
+name: abnormal regulation of G2/M transition of mitotic cell cycle
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0010389
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+<
+[Term]
+id: FYPO:0000168
+name: abnormal mitotic cell cycle spindle assembly checkpoint
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0007094
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000169
+name: abnormal chromatin silencing at telomere
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000144 ! abnormal chromatin silencing
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006348
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000170
+name: abnormal barrier septum formation involved in cell cycle cytokinesis
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0071937
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000171
+name: abnormal late endosome to vacuole transport
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0045324
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000172
+name: abnormal meiotic telomere clustering
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000051 ! abnormal meiosis
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0045141
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000173
+name: abnormal mitotic cell cycle DNA replication checkpoint
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0033314
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000174
+name: abnormal fungal-type cell wall biogenesis
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0009272
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000175
+name: abnormal ascospore wall assembly
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0030476
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000176
+name: abnormal DNA-dependent DNA replication initiation
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000217
+intersection_of: FYPO:0000002 ! cell phenotype
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000177
+name: abnormal spindle assembly involved in mitosis
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0090307
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000178
+name: abnormal regulation of cell cycle cytokinesis
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000145 ! regulation phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0071775
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000179
+name: abnormal protein targeting to vacuole involved in ubiquitin-dependent protein catabolic process via the multivesicular body sorting pathway
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0043328
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000180
+name: abnormal cellular response to oxidative stress
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000162 ! abnormal cellular response to stress
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0034599
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000182
+name: abnormal fungal-type cell wall organization
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0031505
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000183
+name: abnormal poly(A)+ mRNA export from nucleus
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0016973
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000184
+name: abnormal regulation of filamentous growth
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000145 ! regulation phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0010570
+created_by: mah79
+creation_date: 2011-04-13T03:34:54Z
+
+[Term]
+id: FYPO:0000186
+name: abnormal cell division
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0051301
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000187
+name: abnormal chromatin silencing by small RNA
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000144 ! abnormal chromatin silencing
+intersection_of: FYPO:0000002 ! cell phenotype
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000188
+name: abnormal DNA repair
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006281
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000189
+name: abnormal nuclear mRNA splicing, via spliceosome
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0000398
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000190
+name: abnormal actin cortical patch localization
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0051666
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000191
+name: abnormal regulation of establishment or maintenance of cell polarity
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000145 ! regulation phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0032878
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000192
+name: abnormal regulation of S phase of mitotic cell cycle
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+intersection_of: inheres_in GO:0007090
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000193
+name: abnormal cellular response to osmotic stress
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000162 ! abnormal cellular response to stress
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0071470
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000194
+name: abnormal cellular response to hydrogen peroxide
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0070301
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000195
+name: abnormal intra-S DNA damage checkpoint
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0031573
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000196
+name: abnormal ascospore-type prospore formation
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0031321
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000197
+name: abnormal dynein-driven meiotic oscillatory nuclear movement
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0030989
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000198
+name: abnormal establishment or maintenance of actin cytoskeleton polarity
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0030950
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000200
+name: abnormal regulation of mitotic metaphase/anaphase transition
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0030071
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000201
+name: abnormal histone deacetylation
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0016575
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000202
+name: abnormal regulation of cytokinetic cell separation
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000145 ! regulation phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0010590
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000203
+name: abnormal ergosterol biosynthetic process
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006696
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000204
+name: abnormal mRNA export from nucleus
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006406
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000206
+name: abnormal chromatin silencing at rDNA
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000144 ! abnormal chromatin silencing
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0000183
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000207
+name: abnormal cellular response to caffeine
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0071313
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000208
+name: abnormal cellular response to cadmium ion
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0071276
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000209
+name: abnormal attachment of spindle microtubules to kinetochore involved in homologous chromosome segregation
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0051455
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000210
+name: abnormal negative regulation of transcription by glucose
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0045014
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000211
+name: abnormal response to drug
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0042493
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000212
+name: abnormal cellular response to heat
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0034605
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000213
+name: abnormal vesicle-mediated transport
+namespace: fission_yeast_phenotype
+def: "A transport phenotype in which vesicle-mediated transport is abnormal." [PomBase:mah]
+is_a: FYPO:0000149 ! transport phenotype
+intersection_of: inheres_in GO:0016192
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000214
+name: abnormal mitotic chromosome condensation
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0007076
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000215
+name: abnormal intracellular protein transport
+namespace: fission_yeast_phenotype
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006886
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
 
 [Typedef]
 id: during
