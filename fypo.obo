@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 15:04:2011 17:06
+date: 19:04:2011 14:22
 saved-by: mah79
-auto-generated-by: OBO-Edit 2.1-beta12
+auto-generated-by: OBO-Edit 2.1-beta10
 default-namespace: file:/Users/mah79/pombase/phenotype_ontology/fypo.obo
 remark: svn version: $Revision$
 ontology: fypo
@@ -90,7 +90,6 @@ def: "A cell cycle checkpoint phenotype that affects the S phase DNA damage chec
 synonym: "abnormal intra-S DNA damage checkpoint" EXACT []
 synonym: "DNA damage checkpoint defects, S-phase" EXACT [PomBase:mah]
 is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
-is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0031573
 intersection_of: qualifier PATO:0000460
@@ -105,7 +104,6 @@ def: "A cellular process phenotype in which meiotic recombination is abnormal." 
 synonym: "abnormal reciprocal meiotic recombination" EXACT [PomBase:mah]
 synonym: "DNA recombination defects, meiotic" EXACT [PomBase:mah]
 is_a: FYPO:0000063 ! abnormal DNA recombination
-is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007131
 intersection_of: qualifier PATO:0000460
@@ -415,7 +413,6 @@ name: abnormal endocytosis
 namespace: fission_yeast_phenotype
 def: "A cellular process phenotype in which endocytosis is abnormal." [PomBase:mah]
 synonym: "endocytosis defects" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000213 ! abnormal vesicle-mediated transport
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006897
@@ -546,7 +543,6 @@ name: abnormal cell growth
 namespace: fission_yeast_phenotype
 def: "A cellular process phenotype in which cell growth is abnormal." [PomBase:mah]
 synonym: "growth defect" EXACT [PomBase:mah]
-is_a: FYPO:0000139 ! cell growth phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0016049
 intersection_of: qualifier PATO:0000460
@@ -559,7 +555,6 @@ name: slow cell growth
 namespace: fission_yeast_phenotype
 def: "A cellular process phenotype in which cell growth is slower than normal." [PomBase:mah]
 synonym: "growth defect, slow growth" EXACT [PomBase:mah]
-is_a: FYPO:0000045 ! abnormal cell growth
 intersection_of: PATO:0000911
 intersection_of: inheres_in GO:0016049
 created_by: mah79
@@ -571,7 +566,6 @@ name: normal cell growth
 namespace: fission_yeast_phenotype
 def: "A cellular process phenotype in which cells grow at a normal rate." [PomBase:mah]
 synonym: "growth normal." EXACT [PomBase:mah]
-is_a: FYPO:0000139 ! cell growth phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0016049
 intersection_of: qualifier PATO:0000461
@@ -1350,6 +1344,7 @@ alt_id: FYPO:0000028
 def: "A phenotype that affects a cellular process." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0005819
 intersection_of: inheres_in GO:0009987
 intersection_of: qualifier PATO:0000460
 created_by: mah79
@@ -1425,7 +1420,6 @@ namespace: fission_yeast_phenotype
 def: "A cell phenotype that affects the mitotic or meiotic spindle. Includes effects on the spindle structure and processes involving the spindle." [PomBase:mah]
 synonym: "spindle defects" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
-is_a: FYPO:0000132 ! abnormal septum disassembly
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0005819
 intersection_of: qualifier PATO:0000460
@@ -1569,7 +1563,6 @@ namespace: fission_yeast_phenotype
 def: "A cell phenotype characterized by abnormal primary cell septum disassembly; may result in the formation of chains of attached cells." [PomBase:mah]
 synonym: "chained cells" RELATED [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
-is_a: FYPO:0000120 ! abnormal spindle
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0005819
 intersection_of: qualifier PATO:0000460
@@ -1657,8 +1650,6 @@ id: FYPO:0000139
 name: cell growth phenotype
 namespace: fission_yeast_phenotype
 def: "A cell phenotype that affects the rate or extent of cell growth." [PomBase:mah]
-is_a: FYPO:0000045 ! abnormal cell growth
-is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0016049
 created_by: mah79
@@ -1749,7 +1740,6 @@ namespace: fission_yeast_phenotype
 def: "A regulation phenotype in which positive regulation of establishment of bipolar cell polarity resulting in cell shape is abnormal; results in abnormal new-end takeoff." [PomBase:mah]
 synonym: "abnormal NETO" EXACT [PomBase:mah]
 synonym: "abnormal new-end takeoff" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000191 ! abnormal regulation of establishment or maintenance of cell polarity
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0061161
@@ -1833,7 +1823,6 @@ id: FYPO:0000157
 name: abnormal response to DNA damage stimulus
 namespace: fission_yeast_phenotype
 def: "A stress response phenotype in which the response to DNA damage is abnormal." [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000162 ! abnormal cellular response to stress
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0006974
@@ -1928,7 +1917,6 @@ id: FYPO:0000168
 name: abnormal mitotic cell cycle spindle assembly checkpoint
 namespace: fission_yeast_phenotype
 def: "A cell cycle checkpoint phenotype that affects the spindle assembly checkpoint of a mitotic cell cycle." [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 is_a: FYPO:0000200 ! abnormal regulation of mitotic metaphase/anaphase transition
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -1952,7 +1940,6 @@ id: FYPO:0000171
 name: abnormal late endosome to vacuole transport
 namespace: fission_yeast_phenotype
 def: "A transport phenotype in which late endosome to vacuole transport is abnormal." [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000213 ! abnormal vesicle-mediated transport
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0045324
@@ -1976,7 +1963,6 @@ id: FYPO:0000173
 name: abnormal mitotic cell cycle DNA replication checkpoint
 namespace: fission_yeast_phenotype
 def: "A cell cycle checkpoint phenotype that affects the DNA replication checkpoint in a mitotic cell cycle." [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -2013,9 +1999,9 @@ name: abnormal DNA replication initiation
 namespace: fission_yeast_phenotype
 def: "A cellular process phenotype in which the initiation of DNA replication is abnormal." [PomBase:mah]
 synonym: "abnormal DNA-dependent DNA replication initiation" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
-is_a: FYPO:0000217
+is_a: FYPO:0000217 ! abnormal DNA replication
 intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006270
 created_by: mah79
 creation_date: 2011-04-13T03:34:54Z
 
@@ -2048,7 +2034,6 @@ name: abnormal protein targeting via the multivesicular body sorting pathway
 namespace: fission_yeast_phenotype
 def: "A cellular process phenotype in which protein targeting to the vacuole via the multivesicular sorting pathway, leading to ubiquitin-dependent protein degradation, is abnormal." [PomBase:mah]
 synonym: "abnormal protein targeting to vacuole involved in ubiquitin-dependent protein catabolic process via the multivesicular body sorting pathway" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000171 ! abnormal late endosome to vacuole transport
 is_a: FYPO:0000215 ! abnormal intracellular protein transport
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -2084,7 +2069,6 @@ id: FYPO:0000183
 name: abnormal poly(A)+ mRNA export from nucleus
 namespace: fission_yeast_phenotype
 def: "A transport phenotype in which the export of polyadenylated mRNA from the nucleus is abnormal." [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000204 ! abnormal mRNA export from nucleus
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0016973
@@ -2384,6 +2368,18 @@ def: "A transport phenotype in which intracellular protein transport is abnormal
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0006886
+created_by: mah79
+creation_date: 2011-04-13T03:41:10Z
+
+[Term]
+id: FYPO:0000217
+name: abnormal DNA replication
+namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which DNA replication is abnormal." [PomBase:mah]
+synonym: "abnormal DNA-dependent DNA replication" EXACT [PomBase:mah]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0006261
 created_by: mah79
 creation_date: 2011-04-13T03:41:10Z
 
