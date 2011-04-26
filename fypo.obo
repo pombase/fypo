@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 21:04:2011 16:54
-saved-by: midori
-auto-generated-by: OBO-Edit 2.1-beta10
+date: 26:04:2011 17:17
+saved-by: mah79
+auto-generated-by: OBO-Edit 2.1-beta12
 default-namespace: file:/Users/midori/pombase/phenotype_ontology/fypo.obo
 remark: svn version: $Revision$
 ontology: fypo
@@ -341,7 +341,9 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000029
 name: abnormal chromosome segregation
 namespace: fission_yeast_phenotype
+alt_id: FYPO:0000226
 def: "A cellular process phenotype in which chromosome segregation is abnormal." [PomBase:mah]
+synonym: "centromere function defective" RELATED [PomBase:mah]
 synonym: "chromosome segregation defects" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000001
@@ -370,7 +372,7 @@ namespace: fission_yeast_phenotype
 def: "A cellular process phenotype in which conjugation is abnormal." [PomBase:mah]
 synonym: "abnormal conjugation with cellular fusion" EXACT [PomBase:mah]
 synonym: "conjugation defects" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000301 ! mating phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000747
 intersection_of: qualifier PATO:0000460
@@ -966,7 +968,7 @@ id: FYPO:0000080
 name: sensitive to cold
 namespace: fission_yeast_phenotype
 def: "A cell phenotype in which cells show increased sensitivity to cold; cells fail to grow or grow more slowly than normal at low temperatures." [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0000304 ! sensitive to stress
 intersection_of: PATO:0001549
 intersection_of: towards PATO:0001306
 created_by: midori
@@ -977,7 +979,7 @@ id: FYPO:0000081
 name: sensitive to high osmolarity
 namespace: fission_yeast_phenotype
 def: "A cell phenotype in which cells show increased sensitivity to conditions of high osmolarity." [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0000270 ! sensitive to osmotic stress
 intersection_of: PATO:0001549
 intersection_of: inheres_in PATO:0001657
 created_by: midori
@@ -988,7 +990,7 @@ id: FYPO:0000082
 name: sensitive to high temperature
 namespace: fission_yeast_phenotype
 def: "A cell phenotype in which cells show increased sensitivity to heat; cells fail to grow or grow more slowly than normal at high temperatures." [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0000304 ! sensitive to stress
 intersection_of: PATO:0001549
 intersection_of: inheres_in PATO:0001305
 created_by: midori
@@ -1350,6 +1352,7 @@ namespace: fission_yeast_phenotype
 alt_id: FYPO:0000028
 def: "A phenotype that affects a cellular process." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0000300 ! biological process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0005819
 intersection_of: inheres_in GO:0009987
@@ -1969,9 +1972,10 @@ creation_date: 2011-04-13T03:34:54Z
 
 [Term]
 id: FYPO:0000167
-name: DNA recombination defect, at mitotic DNA replication fork barriers, elevated
+name: increased DNA recombination at mitotic DNA replication fork barriers
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cellular process phenotype in which the frequency of DNA recombination at replication fork barriers is increased." [PomBase:mah]
+synonym: "DNA recombination defect, at mitotic DNA replication fork barriers, elevated" EXACT [PomBase:mah]
 is_a: FYPO:0000063 ! abnormal DNA recombination
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2118,9 +2122,10 @@ creation_date: 2011-04-13T03:34:54Z
 
 [Term]
 id: FYPO:0000181
-name: DNA recombination defects, crossover, abolished
+name: crossover abolished
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A DNA recombination phenotype in which reciprocal DNA recombination does not occur." [PomBase:mah]
+synonym: "DNA recombination defects, crossover, abolished" EXACT [PomBase:mah]
 is_a: FYPO:0000063 ! abnormal DNA recombination
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2161,9 +2166,10 @@ creation_date: 2011-04-13T03:34:54Z
 
 [Term]
 id: FYPO:0000185
-name: DNA recombination defects, gene conversion, reduced
+name: reduced gene conversion
 namespace: fission_yeast_phenotype
 def: "A DNA recombination phenotype in which the occurrence of gene conversion is reduced." [PomBase:mah]
+synonym: "DNA recombination defects, gene conversion, reduced" EXACT [PomBase:mah]
 is_a: FYPO:0000063 ! abnormal DNA recombination
 intersection_of: PATO:0002052
 creation_date: 2011-04-19T02:59:38Z
@@ -2302,9 +2308,10 @@ creation_date: 2011-04-13T03:41:10Z
 
 [Term]
 id: FYPO:0000199
-name: DNA recombination defects, long tract gene conversion, increased
+name: increased long tract gene conversion
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A DNA recombination phenotype in which the occurrence of long tract gene conversion is increased." [PomBase:mah]
+synonym: "DNA recombination defects, long tract gene conversion, increased" EXACT [PomBase:mah]
 is_a: FYPO:0000063 ! abnormal DNA recombination
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2367,9 +2374,9 @@ creation_date: 2011-04-13T03:41:10Z
 
 [Term]
 id: FYPO:0000205
-name: DNA replication checkpoint, activated
+name: DNA replication checkpoint activated
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell cycle phenotype in which the DNA replication checkpoint is activated, i.e. the cell cycle is delayed or halted before nuclear division to allow DNA replication to be completed." [PomBase:mah]
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2573,28 +2580,21 @@ created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
-id: FYPO:0000226
-name: centromere function defective
-namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
-created_by: midori
-creation_date: 2011-04-19T02:59:38Z
-
-[Term]
 id: FYPO:0000227
-name: chromosome segregation defects, chromosome loss
+name: chromosome loss upon segregation
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A chromosome segregation phenotype in which one or more chromosome or minichromosome is not correctly segregated to either daughter cells." [PMID:11809834, PMID:20211136, PomBase:mah]
+synonym: "chromosome segregation defects, chromosome loss" EXACT [PomBase:mah]
 is_a: FYPO:0000029 ! abnormal chromosome segregation
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000228
-name: chromosome segregation defects, lagging chromosomes
+name: lagging chromosomes
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A chromosome segregation phenotype in which chromosomes do not move towards the spindle poles at the same time, but instead one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has segregated." [PMID:11809834, PMID:20211136, PomBase:mah]
+synonym: "chromosome segregation defects, lagging chromosomes" EXACT [PomBase:mah]
 is_a: FYPO:0000029 ! abnormal chromosome segregation
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2931,8 +2931,8 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000265
 name: sensitive to DNA damage
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+def: "A cell phenotype in which cells show increased sensitivity to DNA damage." [PomBase:mah]
+is_a: FYPO:0000304 ! sensitive to stress
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2947,11 +2947,11 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000267
-name: sensitive to IR
+name: sensitive to ionizing radiation
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-synonym: "sensitive to ionizing radiation" EXACT [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+def: "A cell phenotype in which cells show increased sensitivity to ionizing radiation." [PomBase:mah]
+synonym: "sensitive to IR" EXACT [PomBase:mah]
+is_a: FYPO:0000304 ! sensitive to stress
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2959,9 +2959,9 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000268
 name: sensitive to UV
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell phenotype in which cells show increased sensitivity to ultraviolet light." [PomBase:mah]
 synonym: "sensitive to ultraviolet light" EXACT [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0000304 ! sensitive to stress
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2969,8 +2969,10 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000269
 name: sensitive to microtubule depolymerizing drugs
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+def: "A phenotype in which cells show increased sensitivity to a microtubule-destabilizing substance." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001549
+intersection_of: towards CHEBI:61951
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2978,8 +2980,8 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000270
 name: sensitive to osmotic stress
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+def: "A cell phenotype in which cells show increased sensitivity to osmotic stress." [PomBase:mah]
+is_a: FYPO:0000304 ! sensitive to stress
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -2987,8 +2989,8 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000271
 name: sensitive to salt stress
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+def: "A cell phenotype in which cells show increased sensitivity to a salt stress." [PomBase:mah]
+is_a: FYPO:0000304 ! sensitive to stress
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3006,10 +3008,11 @@ creation_date: 2011-04-19T04:37:01Z
 
 [Term]
 id: FYPO:0000273
-name: siRNAs homologous to outer repeats undetectable
+name: siRNAs homologous to outer repeats absent
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+def: "An RNA metabolism phenotype in which small interfering RNAs homologous to the outer repeat regions of the centromere are absent." [PMID:20211136, PomBase:mah]
+synonym: "siRNAs homologous to outer repeats undetectable" EXACT [PomBase:mah]
+is_a: FYPO:0000294 ! RNA metabolism phenotype
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3017,16 +3020,16 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000274
 name: spindle checkpoint activated
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell cycle phenotype in which a spindle checkpoint is activated, i.e. the metaphase/anaphase transition is delayed until the spindle is correctly assembled and oriented, and chromosomes are attached to the spindle." [PomBase:mah]
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
 [Term]
 id: FYPO:0000275
-name: spindle checkpoint, required
+name: spindle checkpoint required
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell cycle phenotype in which cells are viable only if a spindle checkpoint functions normally." [PMID:15483052, PomBase:mah]
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
@@ -3072,7 +3075,7 @@ id: FYPO:0000280
 name: sterile
 namespace: fission_yeast_phenotype
 def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0000301 ! mating phenotype
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3268,11 +3271,88 @@ is_a: FYPO:0000114 ! cellular process phenotype
 created_by: midori
 creation_date: 2011-04-21T04:47:15Z
 
+[Term]
+id: FYPO:0000299
+name: microcolony formation
+namespace: fission_yeast_phenotype
+def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few cells." [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable
+created_by: mah79
+creation_date: 2011-04-26T02:13:39Z
+
+[Term]
+id: FYPO:0000300
+name: biological process phenotype
+namespace: fission_yeast_phenotype
+def: "A phenotype that affects a biological process." [PomBase:mah]
+is_a: FYPO:0000001 ! phenotype
+created_by: mah79
+creation_date: 2011-04-26T02:25:13Z
+
+[Term]
+id: FYPO:0000301
+name: mating phenotype
+namespace: fission_yeast_phenotype
+def: "A biological process phenotype that affects conjugation." [PomBase:mah]
+synonym: "conjugation phenotype" EXACT [PomBase:mah]
+is_a: FYPO:0000300 ! biological process phenotype
+created_by: mah79
+creation_date: 2011-04-26T02:29:20Z
+
+[Term]
+id: FYPO:0000302
+name: abnormal response to pheromone
+namespace: fission_yeast_phenotype
+def: "A conjugation phenotype in which a cell's response to mating pheromone is abnormal." [PomBase:mah]
+synonym: "abnormal response to pheromone involved in conjugation with cellular fusion" EXACT [PomBase:mah]
+synonym: "defective response to pheromone" EXACT [PomBase:mah]
+is_a: FYPO:0000031 ! abnormal conjugation
+is_a: FYPO:0000298 ! cellular response phenotype
+created_by: mah79
+creation_date: 2011-04-26T02:36:20Z
+
+[Term]
+id: FYPO:0000303
+name: reduced conjugation frequency
+namespace: fission_yeast_phenotype
+def: "A conjugation phenotype in which conjugation occurs less frequently than normal." [PomBase:mah]
+synonym: "decreased occurrence of conjugation" EXACT [PomBase:mah]
+synonym: "reduced conjugation efficiency" EXACT [PomBase:mah]
+is_a: FYPO:0000031 ! abnormal conjugation
+created_by: mah79
+creation_date: 2011-04-26T02:40:00Z
+
+[Term]
+id: FYPO:0000304
+name: sensitive to stress
+namespace: fission_yeast_phenotype
+def: "A phenotype in which cells show increased sensitivity to a stress." [PomBase:mah]
+is_a: FYPO:0000002 ! cell phenotype
+created_by: mah79
+creation_date: 2011-04-26T03:10:44Z
+
+[Typedef]
+id: comprises_cells_with_phenotype
+name: comprises cells with phenotype
+def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in all of the individual cells in the population." [PomBase:mah]
+synonym: "includes only cells with phenotype" EXACT [PomBase:mah]
+is_a: includes_cells_with_phenotype ! includes cells with phenotype
+created_by: mah79
+creation_date: 2011-04-26T02:12:03Z
+
 [Typedef]
 id: during
 name: during
 namespace: fission_yeast_phenotype
 xref: OBO_REL:during
+
+[Typedef]
+id: includes_cells_with_phenotype
+name: includes cells with phenotype
+def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in some or all of the individual cells in the population." [PomBase:mah]
+created_by: mah79
+creation_date: 2011-04-26T02:10:32Z
 
 [Typedef]
 id: inheres_in
