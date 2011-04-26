@@ -1,10 +1,12 @@
 2011-04-04
 review high/levelterms, text defs, genera & differentiae
 
+===DONE===
 check whether any PATO:0000460 abnormal should instead use PATO:0001511 non-functional
 	have used abnormal for 'defective' or 'defects' throughout in first pass
 	* normal OK :)
 
+=== OUSTANDING ===
 what rel to use for phenotype exhibited/observed under $conditions?
 	e.g. name: growth defect, slow growth at high temperatures
 	the conditions can usually be expressed as PATO terms or xps using PATO, e.g.
@@ -12,6 +14,8 @@ what rel to use for phenotype exhibited/observed under $conditions?
 
 		intersection of: PATO:0001162 ! increased concentration
 		intersection of: inheres_in CHEBI:17234 ! glucose
+
+	analogous question - what to do about vegetative growth etc.?
 
 for everything that has 'inheres_in CL:0000000 cell' - should there be a connection to PATO:0001396 ! cellular quality?
 	also, would it be better|worse|no pref to use GO:0005623 'cell'?
@@ -24,7 +28,8 @@ this one feels silly: what to put in logical def for ones that correspond exactl
 	for now, have just plunked in as 'inheres_in CL:0000000 ! cell'
 	viable; lethal (sensu genetics); mononucleate; multinucleate
 
-ontology terms for radiation (UV, ionizing r, etc)
+need differentiae for 'sensitive to $stress' terms
+	e.g. ontology terms for radiation (UV, ionizing radiation, etc)
 
 need to clarify definitions and distinctions between some shape terms
 	bulbous (is_a spheroid) vs. teardrop-shaped (not under spheroid)
@@ -40,3 +45,8 @@ thinking of using "normal" as a high-level term
 	make sense?
 	is "normal growth" is_a viable? (everything that grows normally is by definition viable)
 
+is the population-phenotype approach to 'long low pen' etc. ok?
+	cell population phenotype that [description]
+	includes_cells_with_phenotype FYPO:nnn [some cell phenotype]
+
+what to do for viability-requires-process x terms (e.g. fypo:275)?
