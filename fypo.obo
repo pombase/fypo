@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 26:04:2011 17:17
+date: 27:04:2011 17:27
 saved-by: mah79
 auto-generated-by: OBO-Edit 2.1-beta12
 default-namespace: file:/Users/midori/pombase/phenotype_ontology/fypo.obo
@@ -89,7 +89,7 @@ def: "A cell cycle checkpoint phenotype that affects the S phase DNA damage chec
 synonym: "abnormal intra-S DNA damage checkpoint" EXACT []
 synonym: "DNA damage checkpoint defects, S-phase" EXACT [PomBase:mah]
 is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
-intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0031573
 intersection_of: qualifier PATO:0000460
 created_by: midori
@@ -594,8 +594,8 @@ name: inviable
 namespace: fission_yeast_phenotype
 def: "A viability phenotype in which cells are unable to survive under normal conditions." [PomBase:mah]
 is_a: FYPO:0000004 ! viability
+intersection_of: PATO:0000718
 intersection_of: inheres_in CL:0000000 ! cell
-intersection_of: qualifier PATO:0000718
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -1745,14 +1745,14 @@ creation_date: 2011-04-13T03:34:54Z
 
 [Term]
 id: FYPO:0000147
-name: abnormal positive regulation of establishment of bipolar cell polarity resulting in cell shape
+name: abnormal activation of bipolar cell growth
 namespace: fission_yeast_phenotype
-def: "A regulation phenotype in which positive regulation of establishment of bipolar cell polarity resulting in cell shape is abnormal; results in abnormal new-end takeoff." [PomBase:mah]
+def: "A regulation phenotype in which activation of bipolar cell growth is abnormal; results in abnormal new end take-off." [PomBase:mah]
 synonym: "abnormal NETO" EXACT [PomBase:mah]
-synonym: "abnormal new-end takeoff" EXACT [PomBase:mah]
+synonym: "abnormal new end take off" EXACT [PomBase:mah]
 is_a: FYPO:0000191 ! abnormal regulation of establishment or maintenance of cell polarity
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: inheres_in GO:0061161
+intersection_of: inheres_in GO:0051519
 created_by: midori
 creation_date: 2011-04-13T03:34:54Z
 
@@ -3031,6 +3031,8 @@ name: spindle checkpoint required
 namespace: fission_yeast_phenotype
 def: "A cell cycle phenotype in which cells are viable only if a spindle checkpoint functions normally." [PMID:15483052, PomBase:mah]
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+intersection_of: PATO:0001638
+intersection_of: inheres_in GO:0071174
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3268,6 +3270,8 @@ name: cellular response phenotype
 namespace: fission_yeast_phenotype
 def: "A cellular process phenotype that affects a response to a stimulus." [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0051716
 created_by: midori
 creation_date: 2011-04-21T04:47:15Z
 
@@ -3287,6 +3291,8 @@ name: biological process phenotype
 namespace: fission_yeast_phenotype
 def: "A phenotype that affects a biological process." [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0008150
 created_by: mah79
 creation_date: 2011-04-26T02:25:13Z
 
@@ -3297,6 +3303,8 @@ namespace: fission_yeast_phenotype
 def: "A biological process phenotype that affects conjugation." [PomBase:mah]
 synonym: "conjugation phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000300 ! biological process phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0000747
 created_by: mah79
 creation_date: 2011-04-26T02:29:20Z
 
@@ -3309,6 +3317,8 @@ synonym: "abnormal response to pheromone involved in conjugation with cellular f
 synonym: "defective response to pheromone" EXACT [PomBase:mah]
 is_a: FYPO:0000031 ! abnormal conjugation
 is_a: FYPO:0000298 ! cellular response phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0000749
 created_by: mah79
 creation_date: 2011-04-26T02:36:20Z
 
@@ -3320,6 +3330,8 @@ def: "A conjugation phenotype in which conjugation occurs less frequently than n
 synonym: "decreased occurrence of conjugation" EXACT [PomBase:mah]
 synonym: "reduced conjugation efficiency" EXACT [PomBase:mah]
 is_a: FYPO:0000031 ! abnormal conjugation
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0000747
 created_by: mah79
 creation_date: 2011-04-26T02:40:00Z
 
@@ -3331,6 +3343,207 @@ def: "A phenotype in which cells show increased sensitivity to a stress." [PomBa
 is_a: FYPO:0000002 ! cell phenotype
 created_by: mah79
 creation_date: 2011-04-26T03:10:44Z
+
+[Term]
+id: FYPO:0000305
+name: abnormal spore germination
+namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which spore germination is abnormal." [PomBase:mah]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0009847
+intersection_of: qualifier PATO:0000460
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000306
+name: spore germination abolished
+namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which spore germination does not occur." [PomBase:mah]
+is_a: FYPO:0000305 ! abnormal spore germination
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0009847
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000307
+name: spore germination abolished, small spores
+namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which spore germination does not occur, and spores are smaller than normal." [PomBase:mah]
+is_a: FYPO:0000306 ! spore germination abolished
+intersection_of: PATO:0000587
+intersection_of: PATO:0001508
+intersection_of: inheres_in CL:0000596
+intersection_of: inheres_in GO:0009847
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000308
+name: spore germination abolished, swollen spores
+namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which spore germination does not occur, and spores have a larger volume than normal." [PomBase:mah]
+is_a: FYPO:0000306 ! spore germination abolished
+intersection_of: PATO:0000595
+intersection_of: PATO:0001508
+intersection_of: inheres_in CL:0000596
+intersection_of: inheres_in GO:0009847
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000309
+name: spore germination abolished, abnormal spore morphology
+namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which spore germination does not occur, and spores have abnormal morphology." [PomBase:mah]
+synonym: "spore germination abolished, misshapen spores" EXACT [PomBase:mah]
+is_a: FYPO:0000306 ! spore germination abolished
+intersection_of: PATO:0001508
+intersection_of: PATO:0001617
+intersection_of: inheres_in CL:0000596
+intersection_of: inheres_in GO:0009847
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000310
+name: inviable germinating spore with normal germ tube morphology
+namespace: fission_yeast_phenotype
+def: "A phenotype in which a spore germinates to produce a normal germ tube, but does not go on to form a dividing cell." [PomBase:mah]
+is_a: FYPO:0000316 ! inviable germinating spore
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000311
+name: inviable germinating spore with normal, unseptated germ tube morphology
+namespace: fission_yeast_phenotype
+def: "A phenotype in which a spore germinates to produce a normal germ tube, but does not septate or go on to form a dividing cell." [PomBase:mah]
+is_a: FYPO:0000310 ! inviable germinating spore with normal germ tube morphology
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000312
+name: inviable germinating spore with normal, septated germ tube morphology
+namespace: fission_yeast_phenotype
+def: "A phenotype in which a spore germinates to produce a normal germ tube, and undergoes septation, but does not go on to form a dividing cell." [PomBase:mah]
+is_a: FYPO:0000310 ! inviable germinating spore with normal germ tube morphology
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000313
+name: inviable germinating spore with abnormal germ tube morphology
+namespace: fission_yeast_phenotype
+def: "A phenotype in which a spore germinates to produce a germ tube with abnormal morphology, and does not go on to form a dividing cell." [PomBase:mah]
+is_a: FYPO:0000316 ! inviable germinating spore
+intersection_of: PATO:0000051
+intersection_of: inheres_in GO:0032172
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000314
+name: inviable germinating spore with elongated germ tube
+namespace: fission_yeast_phenotype
+def: "A phenotype in which a spore germinates to produce an elongated germ tube, and does not go on to form a dividing cell." [PomBase:mah]
+is_a: FYPO:0000313 ! inviable germinating spore with abnormal germ tube morphology
+intersection_of: PATO:0000573
+intersection_of: inheres_in GO:0032172
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000315
+name: inviable germinating spore with elongated, septated germ tube
+namespace: fission_yeast_phenotype
+def: "A phenotype in which a spore germinates to produce an elongated germ tube, and undergeos septation, but does not go on to form a dividing cell." [PomBase:mah]
+is_a: FYPO:0000313 ! inviable germinating spore with abnormal germ tube morphology
+created_by: mah79
+creation_date: 2011-04-27T11:47:04Z
+
+[Term]
+id: FYPO:0000316
+name: inviable germinating spore
+namespace: fission_yeast_phenotype
+def: "A viability phenotype in which a spore germinates but fails to produce dividing cells that can survive under normal conditions." [PomBase:jh, PomBase:mah]
+is_a: FYPO:0000049 ! inviable
+created_by: mah79
+creation_date: 2011-04-27T01:13:41Z
+
+[Term]
+id: FYPO:0000317
+name: mixed population
+namespace: fission_yeast_phenotype
+def: "A cell population phenotype in which a population contains cells with more than one phenotype, usually different morphologies." [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+created_by: mah79
+creation_date: 2011-04-27T01:32:52Z
+
+[Term]
+id: FYPO:0000318
+name: inviable mixed population including long cells
+namespace: fission_yeast_phenotype
+def: "A mixed population phenotype in which a microcolony forms, and all cells in the population divide once upon spore germination but are inviable, and some cells are longer than normal." [PomBase:jh, PomBase:mah]
+synonym: "long low penetrance" EXACT [PomBase:jh, PomBase:vw]
+is_a: FYPO:0000299 ! microcolony formation
+is_a: FYPO:0000317 ! mixed population
+relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable
+relationship: includes_cells_with_phenotype FYPO:0000017 ! elongated cells
+created_by: mah79
+creation_date: 2011-04-27T04:18:16Z
+
+[Term]
+id: FYPO:0000319
+name: inviable mixed population including spores and divided germinated spores
+namespace: fission_yeast_phenotype
+def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of spores and germinated spores most of which go on to divide once or twice. Some germinated spores remain septated and do not complete cell division." [PomBase:jh, PomBase:mah]
+synonym: "put cut" RELATED [PomBase:jh]
+is_a: FYPO:0000317 ! mixed population
+relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable
+relationship: includes_cells_with_phenotype FYPO:0000306 ! spore germination abolished
+relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable germinating spore, single cell division
+created_by: mah79
+creation_date: 2011-04-27T04:20:40Z
+
+[Term]
+id: FYPO:0000320
+name: inviable germinating spore, single cell division
+namespace: fission_yeast_phenotype
+def: "A phenotype in which a spore germinates to produce a cell of normal morphology that undergoes a single round of cell division, and then dies." [PomBase:jh, PomBase:mah, PomBase:vw]
+is_a: FYPO:0000316 ! inviable germinating spore
+created_by: mah79
+creation_date: 2011-04-27T04:25:13Z
+
+[Term]
+id: FYPO:0000321
+name: inviable mixed population including spores and undivided germinated spores
+namespace: fission_yeast_phenotype
+def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores and germinated spores that fail to divide." [PomBase:jh, PomBase:mah]
+is_a: FYPO:0000317 ! mixed population
+created_by: mah79
+creation_date: 2011-04-27T04:32:25Z
+
+[Term]
+id: FYPO:0000322
+name: cut, septum dividing nucleus
+namespace: fission_yeast_phenotype
+def: "A cut phenotype in which the septum forms and physically divides the nucleus into two parts." [PomBase:mah, PomBase:vw]
+is_a: FYPO:0000229 ! cut
+created_by: mah79
+creation_date: 2011-04-27T05:16:50Z
+
+[Term]
+id: FYPO:0000323
+name: cut, binucleate cell formation
+namespace: fission_yeast_phenotype
+def: "A cut phenotype in which septum formation produces a cell containing two nuclei." [PomBase:mah, PomBase:vw]
+is_a: FYPO:0000229 ! cut
+created_by: mah79
+creation_date: 2011-04-27T05:20:29Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
