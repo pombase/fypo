@@ -1,65 +1,178 @@
 2011-04-04
 review high/levelterms, text defs, genera & differentiae
 
-===DONE===
+=== DONE (some to be implemented, but approach ok) ===
 check whether any PATO:0000460 abnormal should instead use PATO:0001511 non-functional
 	have used abnormal for 'defective' or 'defects' throughout in first pass
 	* normal OK :)
 
-=== OUSTANDING ===
+---
+for everything that has 'inheres_in CL:0000000 cell' - should there be a connection to PATO:0001396 ! cellular quality?
+	also, would it be better|worse|no pref to use GO:0005623 'cell'?
+	A: qualities inhere in things
+		GG uses CL now that it's actively developed
+	keep using CL, since I've started
+	A: request 'vegetative growth' in GO (then if that fails we'll revisit)
+
+---
+this one feels silly: what to put in logical def for ones that correspond exactly to a PATO entry?
+	for now, have just plunked in as 'inheres_in CL:0000000 ! cell'
+	viable; lethal (sensu genetics); mononucleate; multinucleate
+	A: in pombe case, always inheres in some yeast cell
+		could use equivalent_to: pato ID
+		but since pheno always inheres in a cell, use int_of tags & inheres_in CL:00000000
+
+---
+fypo:238
+	qualifier abnormal
+	inheres in cell death (GO)
+	during G0 phase (GO)
+
+---
+thinking of using "normal" as a high-level term
+	make sense?
+	is "normal growth" is_a viable? (everything that grows normally is by definition viable)
+
+
+---
+how to indicate which PATO quality applies to which other term, e.g. GO or CL?
+	e.g. FYPO:307 - spore germination (GO:0009847) abolished (PATO:0001508) and spores (CL:0000596) small (PATO:0000587)
+	
+A:
+manchester owl for phenotype
+phenotype (has_part some spore and has quality some small and participates_in some spore germination  and has quality some abolished
+	[note - not sure all parentheses shown, or in right place]
+
+phenotype  - bag of things
+
+in obo, can't do all of owl syntax
+can have unions or intersections
+ union_of: [E][Q]
+ union_of: [E][Q]
+
+terms using existing terms
+	ID:1 small spores
+	ID:2 spore germination abolished
+	ID:3 small spores and spore germination abolished
+		intersection_of: quality
+		intersection_of: has_part ID:1
+		intersection_of: has_part ID:2
+
+will usually create the "part" terms but if not ...
+create anonymous classes
+	id: _: small spore [anonymous class name here]
+	int_of: quality
+	int of: inheres_in 
+
+then use 
+
+=== DONE, pending further developments ===
+---
 what rel to use for phenotype exhibited/observed under $conditions?
 	e.g. name: growth defect, slow growth at high temperatures
 	the conditions can usually be expressed as PATO terms or xps using PATO, e.g.
 		PATO:0001305 increased temperature;
 
-		intersection of: PATO:0001162 ! increased concentration
-		intersection of: inheres_in CHEBI:17234 ! glucose
+	A: conditions are an oustanding problem that we won't solve today! 
+concentration - in pato, conc inheres_in solution (e.g. blood)
+and towards chemical
+no meaning to "towards" rel
 
-	analogous question - what to do about vegetative growth etc.?
+use this pattern - then it can be automatically converted when GG & Robert come up with better representation
+		intersection_of: PATO:0001162 ! increased concentration
+		intersection_of: towards CHEBI:17234 ! glucose
+		intersection_of: inheres_in growth medium
 
-for everything that has 'inheres_in CL:0000000 cell' - should there be a connection to PATO:0001396 ! cellular quality?
-	also, would it be better|worse|no pref to use GO:0005623 'cell'?
+this also looks relevant to this q:
+how to model phenotypes where features include which parts of a process (subprocesses) do and don't occur?
+	could use 'subprocess x abolished'; what about capturing 'subprocess y happens'?
+	e.g. Jacky's various spore germination phenotypes - some get further than others
+	A: see above - try to model same way
 
+---
 which PATO terms to use for increased/decreased catalytic activity?
 	PATO:0001414 catalytic activity
 	increased rate? increased occurrence?
+	A: use inc|dec rate terms for now, for consistency with GG work; probably ok
+	but also see note/M action item re: SGD annotations
 
-this one feels silly: what to put in logical def for ones that correspond exactly to a PATO entry?
-	for now, have just plunked in as 'inheres_in CL:0000000 ! cell'
-	viable; lethal (sensu genetics); mononucleate; multinucleate
+---
+is the population-phenotype approach to 'long low pen' etc. ok?
+	cell population phenotype that [description]
+	includes_cells_with_phenotype FYPO:nnn [some cell phenotype]
+		cf. has_part some vs has_part only
+		this plays nice with OWL
+	A: keep going, because (once again) anything consistent can be converted if necessary
+
+=== OUTSTANDING ===
+
+analogous question - what to do about vegetative growth etc.?
 
 need differentiae for 'sensitive to $stress' terms
 	e.g. ontology terms for radiation (UV, ionizing radiation, etc)
+	A: also connected with the Conditions Issue, plus additional need-ontology crunchiness
 
 need to clarify definitions and distinctions between some shape terms
 	bulbous (is_a spheroid) vs. teardrop-shaped (not under spheroid)
 	clavate & obclavate are concave -- is that the only distinction 
 	which to use for "bottle-shaped" pombe cells? (narrow bit tapers to smaller than wt diameter? confirm with Jacky)
 	which for "pear-shaped"? (narrower bit is wt diameter? confirm J)
+	A: GG says PATO shape terms need work anyway
+		try to arrange meeting with [find out who] in Rafael's group to hash out shape terms - mathematical defs?
+
+
+inspired by previous: what to do about totally abnormal process?
+	don't belong in GO or PATO
+	A for now: try to define in terms of GO process(es)
+
+population phenotypes
+	need to find or create a term for 'colony'; maybe also others (liq culture?)
+	ENVO has 'cell culture' but it's is_a tissue culture
+	might be something useful in BTO ... ask them for 'colony'?
+		they also have some culture condition terms
+
+what to do for viability-requires-process x terms (e.g. fypo:275)?
+	note: text def needs work - how is it different from normal checkpoint functioning?
+		e.g. does the checkpoint have to stop cycle?
+
+
+yeast phenotypes (SGD using APO) - looks like a lot of their 'decreased x' are actually 'decreased occurrence of process x', so dubious about the APO:0000003 xp using PATO:0001997
+	analogous q for increased APO:0000004/PATO:00004710
+	discussion: how are they using 'decreased [occurrence]' vs. 'decreased rate' vs. 'decreased duration'? may have to update xps
+	also check FYPO xps!
+
+
+always ok to use 'response to' GO terms for 'resistance' phenotypes? (ask both George and Val)
+	A: probably fine; make sure it makes sense to Val, lab people, etc. (and if not, get specific reasons & define what else they mean)
+
 
 what to do about "problem" terms from old CV (i.e. ones for which xp isn't obvious)?
 	include pending xp def? may have to obsolete some later
 	but other alternative is not having some available for curation tool launch (depending on timing)
+		have included terms without xp defs for now, so existing annotations can at least point to FYPO IDs
+	this is really a header for a series of specific questions
 
-thinking of using "normal" as a high-level term
-	make sense?
-	is "normal growth" is_a viable? (everything that grows normally is by definition viable)
 
-is the population-phenotype approach to 'long low pen' etc. ok?
-	cell population phenotype that [description]
-	includes_cells_with_phenotype FYPO:nnn [some cell phenotype]
+=== Additional things to do ===
+From MAH/GG meeting 2011-05-03
 
-what to do for viability-requires-process x terms (e.g. fypo:275)?
+1.
+look at 'sensitivity|resistance of process' 
+inheres in process (cell growth)
+towards chemical
+(another one where we fix all at once if pattern consistent)
+ACTION ITEM (M)
 
-yeast phenotypes (SGD using APO) - looks like a lot of their 'decreased x' are actually 'decreased occurrence of process x', so dubious about the APO:0000003 xp using PATO:0001997
-	analogous q for increased APO:0000004/PATO:00004710
+2.
+set up to do owl conversion & reasoning
+	after beerfest - install on themonster?
 
-how to model phenotypes where features include which parts of a process (subprocesses) do and don't occur?
-	could use 'subprocess x abolished'; what about capturing 'subprocess y happens'?
-	e.g. Jacky's various spore germination phenotypes - some get further than others
+3.
+organize mtg on shapes
 
-how to indicate which PATO quality applies to which other term, e.g. GO or CL?
-	e.g. FYPO:307 - spore germination (GO:0009847) abolished (PATO:0001508) and spores (CL:0000596) small (PATO:0000587)
+4.
+G & R will try incorporating into phenotype network
 
-always ok to use 'response to' GO terms for 'resistance' phenotypes? (ask both George and Val)
 
+m - follow up on response to & sensitivity/resistance
+m - look into occurrence vs rate
