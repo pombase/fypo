@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 27:04:2011 17:27
+date: 09:05:2011 16:37
 saved-by: mah79
 auto-generated-by: OBO-Edit 2.1-beta12
 default-namespace: file:/Users/midori/pombase/phenotype_ontology/fypo.obo
@@ -990,8 +990,8 @@ id: FYPO:0000082
 name: sensitive to high temperature
 namespace: fission_yeast_phenotype
 def: "A cell phenotype in which cells show increased sensitivity to heat; cells fail to grow or grow more slowly than normal at high temperatures." [PomBase:mah]
-synonym: "sensitive to heat" EXACT [PomBase:mah]
 synonym: "heat sensitive" EXACT [PomBase:mah]
+synonym: "sensitive to heat" EXACT [PomBase:mah]
 synonym: "temperature sensitive" RELATED [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress
 intersection_of: PATO:0001549
@@ -2694,10 +2694,15 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000238
-name: die in G0 with an apoptotic-like phenotype
+name: inviable upon G0 to G1 transition
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell phenotype in which cells fail to resume growth after several days in G0 phase. The inviable cells show some features characteristic of apoptosis, including loss of DNA." [PMID:19197239, PomBase:mah]
+synonym: "die in G0 with an apoptotic-like phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0000001
+intersection_of: during GO:0045023
+intersection_of: inheres_in GO:0008219
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2906,10 +2911,15 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000262
-name: protects against physiological oxidative damage in G0
+name: abnormal cellular response to reactive oxygen species during G0 phase
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell phenotype in which cells do not respond normally to reactive oxygen species, resulting in accumulation of oxidative damage including DNA damage, during G0 phase." [PMID:19197239, PomBase:mah]
+synonym: "protects against physiological oxidative damage in G0" RELATED [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0000001
+intersection_of: during GO:0045023
+intersection_of: inheres_in GO:0034614
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3552,6 +3562,17 @@ def: "A cut phenotype in which septum formation produces a cell containing two n
 is_a: FYPO:0000229 ! cut
 created_by: mah79
 creation_date: 2011-04-27T05:20:29Z
+
+[Term]
+id: FYPO:0000324
+name: mitotic metaphase/anaphase transition delay
+namespace: fission_yeast_phenotype
+def: "A cell cycle phenotype in which the onset of anaphase takes place later than normal." [PomBase:mah]
+is_a: FYPO:0000011 ! abnormal cell cycle progression
+intersection_of: PATO:0001542
+intersection_of: inheres_in GO:0007091
+created_by: mah79
+creation_date: 2011-05-09T04:36:10Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
