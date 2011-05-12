@@ -82,6 +82,7 @@ use this pattern - then it can be automatically converted when GG & Robert come 
 		intersection_of: towards CHEBI:17234 ! glucose
 		intersection_of: inheres_in growth medium
 
+
 this also looks relevant to this q:
 how to model phenotypes where features include which parts of a process (subprocesses) do and don't occur?
 	could use 'subprocess x abolished'; what about capturing 'subprocess y happens'?
@@ -124,6 +125,7 @@ need to clarify definitions and distinctions between some shape terms
 inspired by previous: what to do about totally abnormal process?
 	don't belong in GO or PATO
 	A for now: try to define in terms of GO process(es)
+	example 2011-05-12: used GO:0018158 (protein oxidation) for FYPO:0000219 xp, because carbonylation is abnormal
 
 population phenotypes
 	need to find or create a term for 'colony'; maybe also others (liq culture?)
@@ -182,3 +184,44 @@ G & R will try incorporating into phenotype network
 
 m - follow up on response to & sensitivity/resistance
 m - look into occurrence vs rate
+
+=============
+updates
+
+2011-05-12: have added this, but it still looks incomplete - need connection to cell growth
+	see conditions, concentration, & has_part xps above
+[Term]
+id: FYPO:0000286
+name: sensitive to manganese depletion
+namespace: fission_yeast_phenotype
+def: "A cellular process phenotype in which cells grow poorly in medium that has a low concentration of manganese (Mn2+)." [PMID:14723709, PomBase:mah]
+comment: use CHEBI:29035 in cross-product
+is_a: FYPO:0000045 ! abnormal cell growth
+intersection_of: PATO:0001163 ! decreased concentration
+intersection_of: towards CHEBI:29035
+intersection_of: inheres_in BTO:0000316 ! culture medium
+created_by: mah79
+creation_date: 2011-04-20T01:42:21Z
+
+
+2011-05-12: new question
+which PATO term(s) to use for "accumulation" in the sense both yeasts are using it? i.e. 
+	maybe higher concentration? but not necessarily in a solution
+	not sure 'has extra parts of type' or 'present in greater numbers in organism' quite fits either
+
+example term:
+[Term]
+id: FYPO:0000220
+name: accumulation of non-coding outer repeat transcripts
+namespace: fission_yeast_phenotype
+def: "A cellular metabolism phenotype in which small interfering RNA transcripts derived from the centromere outer repeat region are present at greater levels than normal." [PomBase:mah, PMID:20211136]
+is_a: FYPO:0000140 ! cellular metabolism phenotype
+created_by: midori
+creation_date: 2011-04-19T02:59:38Z
+
+for this one, will also need to link to something for the transcript or where it comes from ... maybe
+	GO:0034507 chromosome, centromeric outer repeat region
+	SO:0000577 centromere
+	SO:0000646 siRNA [descendant of transcript]
+	SO:0000657 repeat_region - or new descendant for centromere outer repeat?
+
