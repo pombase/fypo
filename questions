@@ -243,9 +243,47 @@ probably want xp to involve GO:0071931 positive regulation of transcription invo
 ---
 
 2011-06-03:
-I've now added some results_in_formation_of links between 'abnormal [structure] assembly' terms and 'abnormal [structure]' terms
+- I've now added some results_in_formation_of links between 'abnormal [structure] assembly' terms and 'abnormal [structure]' terms
  	e.g. abnormal spindle assembly results_in_formation_of FYPO:0000119 abnormal spindle FYPO:0000120
 	Is this a good approach?
 
-What relation to use between 'abnormal mitotic spindle elongation' and 'abnormal mitotic spindle'? seems there should be some link, but neither is_a nor results_in_formation_of seems to fit. (At the moment it's just is_a abnormal mitosis.)
+- What relation to use between 'abnormal mitotic spindle elongation' and 'abnormal mitotic spindle'? seems there should be some link, but neither is_a nor results_in_formation_of seems to fit. (At the moment it's just is_a abnormal mitosis.)
 
+
+2011-06-13:
+- have text def for 'mutator', but need XP. as stopgap, have used SO 'sequence_alteration', but that's a continuant (I think), and 'increased occurrence' really wants an occurrent
+
+[Term]
+id: FYPO:0000256
+name: mutator
+namespace: fission_yeast_phenotype
+def: "A cell phenotype in which mutations occur at a higher rate than normal." [PomBase:mah]
+is_a: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0002051
+intersection_of: inheres_in SO:0001059
+
+cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/obo/ontology/phenotype/worm_phenotype_xp.obo
+	id: WBPhenotype:0000228
+	name: spontaneous mutation rate increased
+
+
+- have added terms for haploinsufficient and haplosufficient (syn: haploproficient)
+	is a phenotype ontology the right place for these?
+	also, even if they do fit, I have no idea how to do xps for them
+
+- trying to adapt the 'conditions' pattern to various pombe situations
+	starting recommendation (also above), for concentration change
+		intersection_of: PATO:0001162 ! increased concentration
+		intersection_of: towards CHEBI:17234 ! glucose
+		intersection_of: inheres_in growth medium (using BTO:0000316)
+
+	case: different nitrogen sources
+		intersection_of: PATO:0000467 ! present
+		intersection_of: towards CHEBI:17203 ! L-proline
+		intersection_of: inheres_in growth medium (using BTO:0000316)
+
+		intersection_of: PATO:0000467 ! present
+		intersection_of: towards CHEBI:16134 ! ammonia
+		intersection_of: inheres_in growth medium (using BTO:0000316)
+
+	do these look sensible?
