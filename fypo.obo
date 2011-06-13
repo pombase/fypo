@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 03:06:2011 16:46
-saved-by: mah79
-auto-generated-by: OBO-Edit 2.1-beta12
+date: 13:06:2011 16:50
+saved-by: midori
+auto-generated-by: OBO-Edit 2.1-beta14
 default-namespace: file:/Users/mah79/pombase/phenotype_ontology/fypo.obo
 remark: svn version: $Revision$
 ontology: fypo
@@ -1439,6 +1439,7 @@ alt_id: FYPO:0000170
 def: "A cellular process phenotype in which septation is abnormal." [PomBase:mah]
 synonym: "abnormal barrier septum formation involved in cell cycle cytokinesis" EXACT [PomBase:mah]
 synonym: "septation defects" EXACT [PomBase:mah]
+is_a: FYPO:0000032 ! abnormal cytokinesis
 is_a: FYPO:0000336 ! abnormal cellular component assembly
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0071937
@@ -2835,19 +2836,21 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000242
-name: growth defect, normal growth with ammonia nitrogen source
+name: normal cell growth on ammonia nitrogen source
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000139 ! cell growth phenotype
+def: "A cell growth phenotype in which cells grow at a normal rate in a medium containing ammonia as the nitrogen source." [PomBase:mah]
+synonym: "growth defect, normal growth with ammonia nitrogen source" RELATED [PomBase:mah]
+is_a: FYPO:0000047 ! normal cell growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000243
-name: growth defect, normal growth with proline nitrogen source
+name: normal cell growth on proline nitrogen source
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000139 ! cell growth phenotype
+def: "A cell growth phenotype in which cells grow at a normal rate in a medium containing L-proline as the nitrogen source." [PomBase:mah]
+synonym: "growth defect, normal growth with proline nitrogen source" RELATED [PomBase:mah]
+is_a: FYPO:0000047 ! normal cell growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2898,18 +2901,20 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000249
-name: growth defect, slow growth with ammonia nitrogen source
+name: slow cell growth on ammonia nitrogen source
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell growth phenotype in which cells grow at a slower rate than normal in a medium containing ammonia as the nitrogen source." [PomBase:mah]
+synonym: "growth defect, slow growth with ammonia nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000250
-name: growth defect, slow growth with proline nitrogen source
+name: slow cell growth on proline nitrogen source
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell growth phenotype in which cells grow at a slower rate than normal in a medium containing L-proline as the nitrogen source." [PomBase:mah]
+synonym: "growth defect, slow growth with proline nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2963,8 +2968,10 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000256
 name: mutator
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell phenotype in which mutations occur at a higher rate than normal." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0002051
+intersection_of: inheres_in SO:0001059
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3141,8 +3148,8 @@ name: septum formation abolished
 namespace: fission_yeast_phenotype
 def: "A septation phenotype in which a cell fails to form a septum." [PMID:9649519, PomBase:mah]
 synonym: "septum initiation defective" RELATED [PomBase:mah]
+is_a: FYPO:0000117 ! abnormal septation
 is_a: FYPO:0000186 ! abnormal cell division
-is_a: FYPO:0000336 ! abnormal cellular component assembly
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0000917
 created_by: midori
@@ -3876,6 +3883,40 @@ intersection_of: inheres_in GO:0005819
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-06-03T01:43:41Z
+
+[Term]
+id: FYPO:0000339
+name: abnormal septum site selection
+namespace: fission_yeast_phenotype
+def: "A septation phenotype in which a cell forms a septum in an abnormal location." [PomBase:mah]
+synonym: "abnormal barrier septum site selection" EXACT [PomBase:mah]
+synonym: "abnormal septum localization" RELATED [PomBase:mah]
+synonym: "abnormal septum positioning" EXACT [PomBase:mah]
+is_a: FYPO:0000117 ! abnormal septation
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000918
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-06-13T02:57:21Z
+
+[Term]
+id: FYPO:0000340
+name: haploinsufficient
+namespace: fission_yeast_phenotype
+def: "A cell phenotype in which a single functional copy of a gene does not provide sufficient normal function in a diploid cell." [PomBase:mah]
+is_a: FYPO:0000002 ! cell phenotype
+created_by: midori
+creation_date: 2011-06-13T04:23:38Z
+
+[Term]
+id: FYPO:0000341
+name: haplosufficient
+namespace: fission_yeast_phenotype
+def: "A cell phenotype in which a single functional copy of a gene provides sufficient normal function in a diploid cell." [PomBase:mah]
+synonym: "haploproficient" EXACT [PomBase:mah]
+is_a: FYPO:0000002 ! cell phenotype
+created_by: midori
+creation_date: 2011-06-13T04:25:07Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
