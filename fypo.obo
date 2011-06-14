@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 13:06:2011 16:50
-saved-by: midori
+date: 14:06:2011 17:19
+saved-by: mah79
 auto-generated-by: OBO-Edit 2.1-beta14
 default-namespace: file:/Users/mah79/pombase/phenotype_ontology/fypo.obo
 remark: svn version: $Revision$
@@ -562,7 +562,7 @@ id: FYPO:0000047
 name: normal cell growth
 namespace: fission_yeast_phenotype
 def: "A cellular process phenotype in which cells grow at a normal rate." [PomBase:mah]
-synonym: "growth normal." EXACT [PomBase:mah]
+synonym: "growth normal" EXACT [PomBase:mah]
 is_a: FYPO:0000139 ! cell growth phenotype
 is_a: FYPO:0000257 ! normal phenotype
 intersection_of: PATO:0000001
@@ -1579,6 +1579,7 @@ namespace: fission_yeast_phenotype
 def: "A phenotype characterized by a cell's inability to synthesize a particular organic compound required for its growth." [PATO:0000422, PomBase:mah]
 is_a: FYPO:0000139 ! cell growth phenotype
 is_a: FYPO:0000140 ! cellular metabolism phenotype
+intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0000422
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
@@ -2253,7 +2254,9 @@ name: abnormal chromatin silencing by small RNA
 namespace: fission_yeast_phenotype
 def: "A transcription regulation phenotype in which chromatin silencing mediated by small RNA is abnormal." [PomBase:mah]
 is_a: FYPO:0000144 ! abnormal chromatin silencing
-intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0031048
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-13T03:41:10Z
 
@@ -2308,7 +2311,9 @@ name: abnormal regulation of S phase of mitotic cell cycle
 namespace: fission_yeast_phenotype
 def: "A regulation phenotype in which regulation of progression through S phase of the mitotic cell cycle is abnormal." [PomBase:mah]
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007090
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-13T03:41:10Z
 
@@ -2517,7 +2522,9 @@ name: abnormal vesicle-mediated transport
 namespace: fission_yeast_phenotype
 def: "A transport phenotype in which vesicle-mediated transport is abnormal." [PomBase:mah]
 is_a: FYPO:0000149 ! transport phenotype
+intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0016192
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-13T03:41:10Z
 
@@ -2619,6 +2626,9 @@ namespace: fission_yeast_phenotype
 def: "A cellular process phenotype in which cell growth is abnormal under aerobic conditions." [PomBase:mah]
 synonym: "aerobic growth defects" EXACT [PomBase:mah]
 is_a: FYPO:0000045 ! abnormal cell growth
+intersection_of: FYPO:0000046 ! slow cell growth
+intersection_of: PATO:0001459
+intersection_of: inheres_in GO:0016049
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2841,6 +2851,10 @@ namespace: fission_yeast_phenotype
 def: "A cell growth phenotype in which cells grow at a normal rate in a medium containing ammonia as the nitrogen source." [PomBase:mah]
 synonym: "growth defect, normal growth with ammonia nitrogen source" RELATED [PomBase:mah]
 is_a: FYPO:0000047 ! normal cell growth
+intersection_of: FYPO:0000047 ! normal cell growth
+intersection_of: PATO:0000467
+intersection_of: inheres_in BTO:0000316
+intersection_of: towards CHEBI:16134
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2851,51 +2865,57 @@ namespace: fission_yeast_phenotype
 def: "A cell growth phenotype in which cells grow at a normal rate in a medium containing L-proline as the nitrogen source." [PomBase:mah]
 synonym: "growth defect, normal growth with proline nitrogen source" RELATED [PomBase:mah]
 is_a: FYPO:0000047 ! normal cell growth
+intersection_of: FYPO:0000047 ! normal cell growth
+intersection_of: PATO:0000467
+intersection_of: inheres_in BTO:0000316
+intersection_of: towards CHEBI:17203
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000244
-name: growth defect, required during nutrient depletion
+name: loss of viability upon nutrient depletion
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000139 ! cell growth phenotype
+def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when cells are deprived of nutrients such as carbon or nitrogen." [PomBase:mah]
+synonym: "growth defect, required during nutrient depletion" RELATED [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000245
-name: growth defect, required for stationary phase
+name: loss of viability in stationary phase
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000139 ! cell growth phenotype
+def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable after entering stationary phase." [PomBase:mah]
+synonym: "growth defect, required for stationary phase" RELATED [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000246
-name: growth defect, requires antioxidant for growth
+name: antioxidant required for growth
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000139 ! cell growth phenotype
+def: "A cell growth phenotype in which a cell grows only in the presence of an antioxidant." [PomBase:mah]
+synonym: "growth defect, requires antioxidant for growth" EXACT [PomBase:mah]
+is_a: FYPO:0000045 ! abnormal cell growth
+intersection_of: FYPO:0000045 ! abnormal cell growth
+intersection_of: PATO:0000462
+intersection_of: inheres_in BTO:0000316
+intersection_of: towards CHEBI:22586
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000247
-name: growth defect, slow growth at high temperatures
+name: slow growth at high temperature
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell growth phenotype in which cells grow at a slower rate than normal at a high temperature." [PomBase:mah]
+synonym: "growth defect, slow growth at high temperatures" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
-created_by: midori
-creation_date: 2011-04-19T02:59:38Z
-
-[Term]
-id: FYPO:0000248
-name: growth defect, slow growth in minimal media
-namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000046 ! slow cell growth
+intersection_of: FYPO:0000046 ! slow cell growth
+intersection_of: PATO:0001305
+intersection_of: inheres_in BTO:0000316
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2903,9 +2923,15 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000249
 name: slow cell growth on ammonia nitrogen source
 namespace: fission_yeast_phenotype
+alt_id: FYPO:0000248
 def: "A cell growth phenotype in which cells grow at a slower rate than normal in a medium containing ammonia as the nitrogen source." [PomBase:mah]
+synonym: "growth defect, slow growth in minimal media" RELATED [PomBase:mah]
 synonym: "growth defect, slow growth with ammonia nitrogen source" EXACT [PomBase:mah]
+synonym: "slow cell growth in minimal medium" RELATED []
 is_a: FYPO:0000046 ! slow cell growth
+intersection_of: FYPO:0000046 ! slow cell growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: towards CHEBI:16134
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2916,15 +2942,24 @@ namespace: fission_yeast_phenotype
 def: "A cell growth phenotype in which cells grow at a slower rate than normal in a medium containing L-proline as the nitrogen source." [PomBase:mah]
 synonym: "growth defect, slow growth with proline nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
+intersection_of: FYPO:0000046 ! slow cell growth
+intersection_of: PATO:0000467
+intersection_of: inheres_in BTO:0000316
+intersection_of: towards CHEBI:17203
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000251
-name: growth defects, growth inhibition in galactose-based medium
+name: slow cell growth on galactose carbon source
 namespace: fission_yeast_phenotype
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000139 ! cell growth phenotype
+def: "A cell growth phenotype in which cells grow at a slower rate than normal in a medium containing galactose as the carbon source." [PomBase:mah]
+synonym: "growth defects, growth inhibition in galactose-based medium" RELATED [PomBase:mah]
+is_a: FYPO:0000046 ! slow cell growth
+intersection_of: FYPO:0000046 ! slow cell growth
+intersection_of: PATO:0000467
+intersection_of: inheres_in BTO:0000316
+intersection_of: towards CHEBI:12936
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3917,6 +3952,29 @@ synonym: "haploproficient" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 created_by: midori
 creation_date: 2011-06-13T04:25:07Z
+
+[Term]
+id: FYPO:0000342
+name: decreased respiration
+namespace: fission_yeast_phenotype
+def: "cellular process phenotype in which cellular respiration occurs to a lower extent than normal." [PomBase:mah]
+is_a: FYPO:0000078 ! abnormal respiration
+intersection_of: inheres_in GO:0045333
+intersection_of: qualifier PATO:0002052
+created_by: midori
+creation_date: 2011-06-14T04:25:19Z
+
+[Term]
+id: FYPO:0000343
+name: increased hydrogen sulfide biosynthesis
+namespace: fission_yeast_phenotype
+def: "A cellular metabolism phenotype in which the biosynthesis of hydrogen sulfide is increased." [PomBase:mah]
+synonym: "increased H2S biosynthesis " EXACT [PomBase:mah]
+is_a: FYPO:0000140 ! cellular metabolism phenotype
+intersection_of: inheres_in GO:0070814
+intersection_of: qualifier PATO:0002052
+created_by: midori
+creation_date: 2011-06-14T04:44:26Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
