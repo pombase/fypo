@@ -113,6 +113,8 @@ analogous question - what to do about vegetative growth etc.?
 need differentiae for 'sensitive to $stress' terms
 	e.g. ontology terms for radiation (UV, ionizing radiation, etc)
 	A: also connected with the Conditions Issue, plus additional need-ontology crunchiness
+	update 2011-05: most of these now use 'response to' process terms, so can punt
+
 
 need to clarify definitions and distinctions between some shape terms
 	bulbous (is_a spheroid) vs. teardrop-shaped (not under spheroid)
@@ -149,10 +151,14 @@ yeast phenotypes (SGD using APO) - looks like a lot of their 'decreased x' are a
 	analogous q for increased APO:0000004/PATO:00004710
 	discussion: how are they using 'decreased [occurrence]' vs. 'decreased rate' vs. 'decreased duration'? may have to update xps
 	also check FYPO xps!
-
+	update 2011-05: my tentative take on these
+		occurrence - number of times a process is started, and assumes it's finished every time it starts; also thinking about whether occurrence or rate is better fit for throughput/flux
+		rate - how fast a process goes once it's started
+		duration - how long a process takes from start to finish
 
 always ok to use 'response to' GO terms for 'resistance' phenotypes? (ask both George and Val)
 	A: probably fine; make sure it makes sense to Val, lab people, etc. (and if not, get specific reasons & define what else they mean)
+	update: done.
 
 
 what to do about "problem" terms from old CV (i.e. ones for which xp isn't obvious)?
@@ -160,6 +166,7 @@ what to do about "problem" terms from old CV (i.e. ones for which xp isn't obvio
 	but other alternative is not having some available for curation tool launch (depending on timing)
 		have included terms without xp defs for now, so existing annotations can at least point to FYPO IDs
 	this is really a header for a series of specific questions
+	update: filling in specific questions below
 
 
 === Additional things to do ===
@@ -170,7 +177,7 @@ look at 'sensitivity|resistance of process'
 inheres in process (cell growth)
 towards chemical
 (another one where we fix all at once if pattern consistent)
-ACTION ITEM (M)
+ACTION ITEM (M) - done
 
 2.
 set up to do owl conversion & reasoning
@@ -178,13 +185,14 @@ set up to do owl conversion & reasoning
 
 3.
 organize mtg on shapes
+	update: 1st meeting held 2011-06-09
 
 4.
 G & R will try incorporating into phenotype network
 
 
 m - follow up on response to & sensitivity/resistance [done May 2011]
-m - look into occurrence vs rate
+m - look into occurrence vs rate [1st pass may 2011]
 
 =============
 updates
@@ -225,6 +233,14 @@ for this one, will also need to link to something for the transcript or where it
 	SO:0000577 centromere
 	SO:0000646 siRNA [descendant of transcript]
 	SO:0000657 repeat_region - or new descendant for centromere outer repeat?
+
+another example (added 2011-06-15):
+id: FYPO:0000255
+name: localization defects, nuclear accumulation of Pap1 and Sty1
+def: "" [PomBase:mah, PMID:12896976]
+is_a: FYPO:0000138 ! localization phenotype
+
+presumably will need PRO IDs for Pap 1 and Sty1
 ---
 
 2011-05-16:
@@ -304,4 +320,10 @@ cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/
 - is there a quality for requirement, other than auxotrophy?
 	and review fypo:246 xp - any good?
 
+2011-06-15:
+- need xp for FYPO:0000252 increased spontaneous diploidization
+	def: A cell phenotype in which heterothallic haploid cells spontaneously form cells with diploid DNA content at a higher frequency than normal.
+	not sure whether there's a GO term that corresponds
+	(may be moot if we decide the diploidization is downstream of the other cell div defects)
 
+- added fypo:255 to question about 'accumulation' above
