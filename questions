@@ -327,3 +327,39 @@ cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/
 	(may be moot if we decide the diploidization is downstream of the other cell div defects)
 
 - added fypo:255 to question about 'accumulation' above
+	id: FYPO:0000255
+	name: nuclear accumulation of Pap1 and Sty1
+	namespace: fission_yeast_phenotype
+	def: "A localization phenotype in which the proteins Pap1 and Sty1 accumulate, and are constitutively located in, the nucleus." [PMID:12896976, PomBase:mah]
+	synonym: "localization defects, nuclear accumulation of Pap1 and Sty1" EXACT [PomBase:mah]
+
+2011-06-16
+- a couple more perplexing ones (i.e. how to do xp?)
+
+	id: FYPO:0000278
+	name: slow cell growth upon spore germination
+	namespace: fission_yeast_phenotype
+	def: "A cellular process phenotype in which cells grow slowly following spore germination, resulting in the formation of a smaller colony than normal in a given amount of time." [PomBase:mah]
+	synonym: "spores produced smaller colonies" RELATED [PomBase:mah]
+	is_a: FYPO:0000046 ! slow cell growth
+	is_a: FYPO:0000305 ! abnormal spore germination
+
+	id: FYPO:0000279
+	name: formation of azygotic asci upon sporulation
+	namespace: fission_yeast_phenotype
+	def: "A sporulation phenotype in which azygotic asci form following conjugation and subsequent sporulation." [PMID:16169489, PMID:18780734, PMID:20404563, PomBase:mah]
+	synonym: "sporulation defects, azygotic asci" EXACT [PomBase:mah]
+	is_a: FYPO:0000121 ! abnormal sporulation
+
+- I'm also unsure about this xp:
+	[Term]
+	id: FYPO:0000238
+	name: inviable upon G0 to G1 transition
+	namespace: fission_yeast_phenotype
+	def: "A cell phenotype in which cells fail to resume growth after several days in G0 phase. The inviable cells show some features characteristic of apoptosis, including loss of DNA." [PMID:19197239, PomBase:mah]
+	synonym: "die in G0 with an apoptotic-like phenotype" EXACT [PomBase:mah]
+	is_a: FYPO:0000002 ! cell phenotype
+	intersection_of: PATO:0000001
+	intersection_of: during GO:0045023
+	intersection_of: inheres_in GO:0008219
+	intersection_of: qualifier PATO:0000460
