@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 07:07:2011 15:36
+date: 13:07:2011 17:47
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1-beta15
 default-namespace: fission_yeast_phenotype
@@ -1348,6 +1348,7 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000119
 name: abnormal spindle assembly
+alt_id: FYPO:0000285
 def: "A cellular process phenotype in which spindle assembly is abnormal." [PomBase:mah]
 is_a: FYPO:0000054 ! abnormal microtubule organization
 is_a: FYPO:0000336 ! abnormal cellular component assembly
@@ -1523,9 +1524,9 @@ name: branched, elongated, multiseptate cells
 def: "A cell morphology phenotype in which cells form branches near the septum, are elongated, and have more than one septum per cell." [PomBase:mah]
 is_a: FYPO:0000015 ! branched cells
 is_a: FYPO:0000223 ! elongated, multiseptate cells
-intersection_of: has_part FYPO:0000015
-intersection_of: has_part FYPO:0000017
-intersection_of: has_part FYPO:0000118
+intersection_of: has_part FYPO:0000015 ! branched cells
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000118 ! multiseptate
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
 
@@ -2483,8 +2484,8 @@ name: elongated, multiseptate cells
 def: "A cell morphology phenotype in which cells are elongated and have more than one septum per cell." [PomBase:mah]
 is_a: FYPO:0000017 ! elongated cells
 is_a: FYPO:0000118 ! multiseptate
-intersection_of: has_part FYPO:0000017
-intersection_of: has_part FYPO:0000118
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000118 ! multiseptate
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2667,7 +2668,8 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000241
 name: genome stability defects
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cell phenotype in which chromosome organization is abnormal." [PomBase:mah]
+comment: Might change this to abnormal chromosome organization, with corresponding xp def.
 is_a: FYPO:0000002 ! cell phenotype
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -3063,8 +3065,10 @@ creation_date: 2011-04-19T04:37:01Z
 [Term]
 id: FYPO:0000280
 name: sterile
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A cellular process phenotype in which conjugation is abolished." [PomBase:mah]
 is_a: FYPO:0000301 ! mating phenotype
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0000747
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3082,8 +3086,11 @@ creation_date: 2011-04-19T04:37:01Z
 [Term]
 id: FYPO:0000282
 name: viable at high temperature
-def: "PLACEHOLDER" [PomBase:mah]
+def: "A viability phenotype in which cells are able to survive at a high temperature." [PomBase:mah]
 is_a: FYPO:0000124 ! viable
+intersection_of: FYPO:0000124 ! viable
+intersection_of: PATO:0001305
+intersection_of: inheres_in BTO:0000316
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3101,16 +3108,8 @@ creation_date: 2011-04-19T04:37:01Z
 [Term]
 id: FYPO:0000284
 name: large and small daughter nuclei
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
-created_by: midori
-creation_date: 2011-04-19T04:37:01Z
-
-[Term]
-id: FYPO:0000285
-name: localization defective, cytoplasmic
-def: "PLACEHOLDER" [PomBase:mah]
-is_a: FYPO:0000138 ! localization phenotype
+def: "A mitosis phenotype in which the nucleus divides unequally to produce one daughter nucleus that is larger than the other." [PMID:8769419, PomBase:mah]
+is_a: FYPO:0000337 ! abnormal mitosis
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3339,8 +3338,8 @@ id: FYPO:0000307
 name: spore germination abolished, small spores
 def: "A cellular process phenotype in which spore germination does not occur, and spores are smaller than normal." [PomBase:mah]
 is_a: FYPO:0000306 ! spore germination abolished
-intersection_of: has_part FYPO:0000306
-intersection_of: has_part FYPO:0000346
+intersection_of: has_part FYPO:0000306 ! spore germination abolished
+intersection_of: has_part FYPO:0000346 ! small spores
 created_by: mah79
 creation_date: 2011-04-27T11:47:04Z
 
@@ -3350,8 +3349,8 @@ name: spore germination abolished, swollen spores
 def: "A cellular process phenotype in which spore germination does not occur, and spores have a larger volume than normal." [PomBase:mah]
 is_a: FYPO:0000306 ! spore germination abolished
 is_a: FYPO:0000347 ! swollen spores
-intersection_of: has_part FYPO:0000306
-intersection_of: has_part FYPO:0000347
+intersection_of: has_part FYPO:0000306 ! spore germination abolished
+intersection_of: has_part FYPO:0000347 ! swollen spores
 created_by: mah79
 creation_date: 2011-04-27T11:47:04Z
 
@@ -3361,8 +3360,8 @@ name: spore germination abolished, abnormal spore morphology
 def: "A cellular process phenotype in which spore germination does not occur, and spores have abnormal morphology." [PomBase:mah]
 synonym: "spore germination abolished, misshapen spores" EXACT [PomBase:mah]
 is_a: FYPO:0000306 ! spore germination abolished
-intersection_of: has_part FYPO:0000306
-intersection_of: has_part FYPO:0000348
+intersection_of: has_part FYPO:0000306 ! spore germination abolished
+intersection_of: has_part FYPO:0000348 ! abnormal spore morphology
 created_by: mah79
 creation_date: 2011-04-27T11:47:04Z
 
