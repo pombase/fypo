@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 12:08:2011 16:03
-saved-by: mah79
+date: 12:08:2011 16:58
+saved-by: midori
 auto-generated-by: OBO-Edit 2.1-beta16
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
@@ -132,12 +132,15 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000012
 name: mitotic G2/M transition delay
+alt_id: FYPO:0000401
 def: "A cell cycle phenotype in which the G2/M transition of the mitotic cell cycle takes place later than normal. The duration of G2 phase is thus longer than normal." [PomBase:mah]
+synonym: "cell cycle progression through the G2/M phase transition: delayed" EXACT [SGD:phenotype_annotation]
 synonym: "cell cycle, G2 delay" EXACT [PomBase:mah]
+synonym: "delayed cell cycle progression through mitotic G2/M phase transition" EXACT []
 synonym: "G2 delay" EXACT [PomBase:mah]
 synonym: "increased G2 duration" EXACT [PomBase:mah]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
+is_a: FYPO:0000409 ! delayed cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000086
 intersection_of: qualifier PATO:0001542
@@ -243,8 +246,6 @@ id: FYPO:0000022
 name: shmoos with long tips
 def: "A cell morphology phenotype in which a cell forms a mating projection with a longer tip than normal." [PomBase:mah]
 synonym: "cell morphology, shmoos with long tips" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
-is_a: FYPO:0000017 ! elongated cells
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0000573
 intersection_of: inheres_in GO:0043332
@@ -1756,7 +1757,9 @@ creation_date: 2011-04-13T03:34:54Z
 [Term]
 id: FYPO:0000155
 name: flocculating cells
-def: "A cell population phenotype in which cells flocculate more than normal. Flocculation is the non-sexual aggregation of single cells." [GO:0000128, PomBase:mah]
+alt_id: FYPO:0000462
+def: "A cell population phenotype that reflects increased occurrence of flocculation. Flocculation is the non-sexual aggregation of single cells." [GO:0000128, PomBase:mah]
+synonym: "flocculation: increased" EXACT [SGD:phenotype_annotation]
 synonym: "increased flocculation" EXACT [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
 is_a: FYPO:0000300 ! biological process phenotype
@@ -3600,9 +3603,13 @@ creation_date: 2011-05-11T03:43:21Z
 [Term]
 id: FYPO:0000333
 name: mitotic G1/S transition delay
+alt_id: FYPO:0000396
 def: "A cell cycle phenotype in which the G1/S transition of the mitotic cell cycle takes place later than normal." [PomBase:mah]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+synonym: "cell cycle progression through the G1/S phase transition: delayed" EXACT [SGD:phenotype_annotation]
+synonym: "delayed cell cycle progression through mitotic G1/S phase transition" EXACT []
 is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
+is_a: FYPO:0000409 ! delayed cell cycle progression
+intersection_of: PATO:0000502
 intersection_of: inheres_in GO:0000082
 intersection_of: qualifier PATO:0001542
 created_by: mah79
@@ -4308,22 +4315,12 @@ created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
 [Term]
-id: FYPO:0000396
-name: delayed cell cycle progression through mitotic G1/S phase transition
-def: "A cellular process phenotype in which progression through the mitotic cell cycle is delayed at the G1/S transition." [PomBase:mah]
-synonym: "cell cycle progression through the G1/S phase transition: delayed" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
-intersection_of: PATO:0000502
-intersection_of: inheres_in GO:0000082
-created_by: midori
-creation_date: 2011-07-14T06:06:09Z
-
-[Term]
 id: FYPO:0000397
 name: increased rate of cell cycle progression through mitotic G1/S phase transition
 def: "A cellular process phenotype in which the rate of progression through the G1/S transition of the mitotic cell cycle is increased." [PomBase:mah]
 synonym: "cell cycle progression through the G1/S phase transition: increased rate" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
+is_a: FYPO:0000410 ! increased rate of cell cycle progression
 intersection_of: PATO:0000912
 intersection_of: inheres_in GO:0000082
 created_by: midori
@@ -4366,17 +4363,6 @@ created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
 [Term]
-id: FYPO:0000401
-name: delayed cell cycle progression through mitotic G2/M phase transition
-def: "A cellular process phenotype in which progression through the mitotic cell cycle is delayed at the G2/M transition." [PomBase:mah]
-synonym: "cell cycle progression through the G2/M phase transition: delayed" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
-intersection_of: PATO:0000502
-intersection_of: inheres_in GO:0000086
-created_by: midori
-creation_date: 2011-07-14T06:45:37Z
-
-[Term]
 id: FYPO:0000402
 name: increased cell cycle progression through mitotic G2/M phase transition
 def: "A cellular process phenotype in which the occurrence of progression through the G2/M transition of the mitotic cell cycle is increased." [PomBase:mah]
@@ -4404,6 +4390,7 @@ name: increased rate of cell cycle progression through mitotic G2/M phase transi
 def: "A cellular process phenotype in which the rate of progression through the G2/M transition of the mitotic cell cycle is increased." [PomBase:mah]
 synonym: "cell cycle progression through the G2/M phase transition: increased rate" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
+is_a: FYPO:0000410 ! increased rate of cell cycle progression
 intersection_of: PATO:0000912
 intersection_of: inheres_in GO:0000086
 created_by: midori
@@ -4414,8 +4401,7 @@ id: FYPO:0000405
 name: normal cell cycle progression through mitotic G2/M phase transition
 def: "A cellular process phenotype in which the G2/M transition of the mitotic cell cycle is normal." [PomBase:mah]
 synonym: "cell cycle progression through the G2/M phase transition: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
-is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000411 ! normal cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000086
 intersection_of: qualifier PATO:0000461
@@ -4475,6 +4461,7 @@ synonym: "cell cycle progression: normal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
 intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000086
 intersection_of: inheres_in GO:0007049
 intersection_of: qualifier PATO:0000461
 created_by: midori
@@ -4655,7 +4642,11 @@ creation_date: 2011-07-14T06:45:37Z
 id: FYPO:0000427
 name: abnormal G1 to G0 transition
 def: "A cellular process phenotype in which the G1 to G0 transition is abnormal." [PomBase:mah]
+synonym: "abnormal cell cycle quiescence" RELATED [GO:0070314, PomBase:mah]
 synonym: "abnormal entry into G0 (stationary phase)" EXACT [PomBase:mah]
+synonym: "abnormal establishment of cell quiescence" EXACT [GO:0070314, PomBase:mah]
+synonym: "abnormal G1/G0 transition" EXACT [GO:0070314, PomBase:mah]
+synonym: "abnormal stationary phase" RELATED [GO:0070314, PomBase:mah]
 synonym: "entry into G0 (stationary phase): abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000145 ! regulation phenotype
 intersection_of: PATO:0000001
@@ -4669,7 +4660,11 @@ id: FYPO:0000428
 name: entry into G0 abolished
 def: "A cellular process phenotype in which the G1 to G0 transition is abolished." [PomBase:mah]
 synonym: "absent entry into G0 (stationary phase)" EXACT [PomBase:mah]
+synonym: "cell cycle quiescence abolished" RELATED [GO:0070314, PomBase:mah]
 synonym: "entry into G0 (stationary phase): absent" EXACT [SGD:phenotype_annotation]
+synonym: "establishment of cell quiescence abolished" EXACT [GO:0070314, PomBase:mah]
+synonym: "G1/G0 transition abolished" EXACT [GO:0070314, PomBase:mah]
+synonym: "stationary phase abolished" RELATED [GO:0070314, PomBase:mah]
 is_a: FYPO:0000427 ! abnormal G1 to G0 transition
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0070314
@@ -4680,7 +4675,11 @@ creation_date: 2011-07-14T06:45:37Z
 id: FYPO:0000429
 name: delayed G0 to G1 transition
 def: "A cellular process phenotype in which the G0 to G1 transition is abnormal." [PomBase:mah]
+synonym: "delayed cell cycle quiescence" RELATED [GO:0070314, PomBase:mah]
+synonym: "delayed establishment of cell quiescence" EXACT [GO:0070314, PomBase:mah]
 synonym: "delayed exit from G0 (stationary phase)" EXACT [PomBase:mah]
+synonym: "delayed G1/G0 transition" EXACT [GO:0070314, PomBase:mah]
+synonym: "delayed stationary phase" RELATED [GO:0070314, PomBase:mah]
 synonym: "exit from G0 (stationary phase): delayed" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: PATO:0000502
@@ -4873,6 +4872,7 @@ creation_date: 2011-08-12T02:03:05Z
 id: FYPO:0000445
 name: cell cycle arrest in mitotic G1 phase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G1 phase." [PomBase:mah]
+synonym: "mitotic cell cycle progression in G1 phase: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic G1 phase arrest" EXACT [PomBase:mah]
 is_a: FYPO:0000407 ! cell cycle arrest
 intersection_of: PATO:0000297
@@ -4884,6 +4884,7 @@ creation_date: 2011-08-12T02:07:59Z
 id: FYPO:0000446
 name: cell cycle arrest in mitotic G2 phase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G2 phase." [PomBase:mah]
+synonym: "mitotic cell cycle progression in G2 phase: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic G2 phase arrest" EXACT [PomBase:mah]
 is_a: FYPO:0000407 ! cell cycle arrest
 intersection_of: PATO:0000297
@@ -4936,7 +4937,7 @@ synonym: "decreased protein localisation to centromere" EXACT [PomBase:mah]
 synonym: "decreased protein localisation to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "decreased protein localization to chromosome, centric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "decreased protein localization to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
-is_a: FYPO:0000452 ! abnormal protein localization to chromatin
+is_a: FYPO:0000449 ! abnormal protein localization to centromere
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0071459
 created_by: midori
@@ -4950,7 +4951,7 @@ synonym: "increased protein localisation to centromere" EXACT [PomBase:mah]
 synonym: "increased protein localisation to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "increased protein localization to chromosome, centric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "increased protein localization to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
-is_a: FYPO:0000452 ! abnormal protein localization to chromatin
+is_a: FYPO:0000449 ! abnormal protein localization to centromere
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0071459
 created_by: midori
@@ -4994,7 +4995,7 @@ def: "A cell phenotype in which the number of sites of double-strand breaks in D
 synonym: "accumulation of DNA damage foci" EXACT [PomBase:mah]
 synonym: "increased number of DNA damage foci" EXACT [PomBase:mah]
 synonym: "increased number of double-strand break sites" EXACT [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0000470
 intersection_of: inheres_in GO:0035861
 created_by: midori
@@ -5058,6 +5059,134 @@ intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0070601
 created_by: midori
 creation_date: 2011-08-12T03:14:23Z
+
+[Term]
+id: FYPO:0000461
+name: flocculation abolished
+def: "A cellular process phenotype in which flocculation is abolished." [PomBase:mah]
+synonym: "absent flocculation" EXACT [PomBase:mah]
+synonym: "flocculation: absent" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0000128
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
+
+[Term]
+id: FYPO:0000463
+name: normal flocculation
+def: "A cellular process phenotype in which flocculation is normal." [PomBase:mah]
+synonym: "flocculation: normal" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000257 ! normal phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000128
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
+
+[Term]
+id: FYPO:0000464
+name: decreased intracellular transport
+def: "A cellular process phenotype in which the occurrence of intracellular transport is decreased." [PomBase:mah]
+synonym: "intracellular transport: decreased" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0046907
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
+
+[Term]
+id: FYPO:0000465
+name: invasive growth abolished
+def: "A cellular process phenotype in which invasive growth is abolished." [PomBase:mah]
+synonym: "absent invasive growth" EXACT [PomBase:mah]
+synonym: "invasive growth: absent" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0070783
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
+
+[Term]
+id: FYPO:0000466
+name: decreased invasive growth
+def: "A cellular process phenotype in which the occurrence of invasive growth is decreased." [PomBase:mah]
+synonym: "invasive growth: decreased" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0070783
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
+
+[Term]
+id: FYPO:0000467
+name: increased invasive growth
+def: "A cellular process phenotype in which the occurrence of invasive growth is increased." [PomBase:mah]
+synonym: "invasive growth: increased" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0070783
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
+
+[Term]
+id: FYPO:0000468
+name: abnormal mating type switching
+def: "A cellular process phenotype in which mating type switching is abnormal." [PomBase:mah]
+synonym: "mating type switching: abnormal" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007533
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
+
+[Term]
+id: FYPO:0000469
+name: mating type switching abolished
+def: "A cellular process phenotype in which mating type switching is abolished." [PomBase:mah]
+synonym: "absent mating type switching" EXACT [PomBase:mah]
+synonym: "mating type switching: absent" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000468 ! abnormal mating type switching
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0007533
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
+
+[Term]
+id: FYPO:0000470
+name: decreased mating type switching
+def: "A cellular process phenotype in which the occurrence of mating type switching is decreased." [PomBase:mah]
+synonym: "mating type switching: decreased" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000468 ! abnormal mating type switching
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0007533
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
+
+[Term]
+id: FYPO:0000471
+name: increased mating type switching
+def: "A cellular process phenotype in which the occurrence of mating type switching is increased." [PomBase:mah]
+synonym: "mating type switching: increased" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000468 ! abnormal mating type switching
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0007533
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
+
+[Term]
+id: FYPO:0000472
+name: normal mating type switching
+def: "A cellular process phenotype in which mating type switching is normal." [PomBase:mah]
+synonym: "mating type switching: normal" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007533
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-08-12T04:05:34Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
