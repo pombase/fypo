@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 15:08:2011 18:12
-saved-by: mah79
+date: 16:08:2011 10:51
+saved-by: midori
 auto-generated-by: OBO-Edit 2.1-beta16
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
@@ -2462,7 +2462,6 @@ id: FYPO:0000219
 name: increased protein oxidation
 def: "A cellular metabolism phenotype in which protein oxidation is increased, resulting in the accumulation of proteins with oxidative modifications including carbonylated proteins." [PomBase:mah]
 synonym: "accumulation of carbonylated proteins" RELATED [PomBase:mah]
-is_a: FYPO:0000329 ! abnormal protein modification
 is_a: FYPO:0000547 ! increased protein modification
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0018158
@@ -3670,7 +3669,7 @@ creation_date: 2011-06-03T12:00:35Z
 id: FYPO:0000337
 name: abnormal mitosis
 def: "A cellular process phenotype in which mitosis is abnormal." [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000607 ! abnormal mitotic M phase progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007067
 intersection_of: qualifier PATO:0000460
@@ -3730,7 +3729,7 @@ def: "A cellular process phenotype in which the occurrence of cellular respirati
 synonym: "decreased respiration" BROAD [PomBase:mah]
 synonym: "decreased respiratory metabolism" EXACT [PomBase:mah]
 synonym: "respiratory metabolism: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000078 ! abnormal cellular respiration
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0045333
 <created_by: midori
@@ -4822,7 +4821,7 @@ id: FYPO:0000439
 name: normal filamentous growth
 def: "A cellular process phenotype in which filamentous growth is normal." [PomBase:mah]
 synonym: "filamentous growth: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000047 ! normal cell growth
 is_a: FYPO:0000257 ! normal phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030447
@@ -5290,6 +5289,18 @@ intersection_of: PATO:0000694
 intersection_of: inheres_in GO:0007126
 created_by: midori
 creation_date: 2011-08-15T10:19:32Z
+
+[Term]
+id: FYPO:0000480
+name: delayed mitotic G1 phase progression
+def: "A cellular process phenotype in which progression through the G1 phase of the mitotic cell cycle is delayed." [PomBase:mah]
+synonym: "mitotic cell cycle delay in G1" EXACT [PomBase:mah]
+synonym: "mitotic cell cycle progression in G1 phase: delayed" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000409 ! delayed cell cycle progression
+intersection_of: PATO:0000502
+intersection_of: inheres_in GO:0000080
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
 
 [Term]
 id: FYPO:0000481
@@ -6046,13 +6057,24 @@ created_by: midori
 creation_date: 2011-08-15T11:08:30Z
 
 [Term]
+id: FYPO:0000543
+name: increased duration of mitotic G1 phase
+def: "A cellular process phenotype in which the duration of progression through the G1 phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
+synonym: "mitotic cell cycle progression in G1 phase: increased duration" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+intersection_of: PATO:0000498
+intersection_of: inheres_in GO:0000080
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
 id: FYPO:0000544
 name: protein modification abolished
 def: "A cellular process phenotype in which protein modification is abolished." [PomBase:mah]
 synonym: "abolished protein/peptide modification" EXACT [PomBase:mah]
 synonym: "absent protein/peptide modification" EXACT [PomBase:mah]
 synonym: "protein/peptide modification: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000329 ! abnormal protein modification
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0006464
 created_by: midori
@@ -6064,7 +6086,7 @@ name: decreased protein modification
 def: "A cellular process phenotype in which the occurrence of protein modification is decreased." [PomBase:mah]
 synonym: "decreased protein/peptide modification" EXACT [PomBase:mah]
 synonym: "protein/peptide modification: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000329 ! abnormal protein modification
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0006464
 created_by: midori
@@ -6088,7 +6110,7 @@ name: increased protein modification
 def: "A cellular process phenotype in which the occurrence of protein modification is increased." [PomBase:mah]
 synonym: "increased protein/peptide modification" EXACT [PomBase:mah]
 synonym: "protein/peptide modification: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000329 ! abnormal protein modification
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0006464
 created_by: midori
@@ -6138,7 +6160,8 @@ name: pseudohyphal growth abolished
 def: "A cellular process phenotype in which pseudohyphal growth is abolished." [PomBase:mah]
 synonym: "absent pseudohyphal growth" EXACT [PomBase:mah]
 synonym: "pseudohyphal growth: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000436 ! filamentous growth abolished
+is_a: FYPO:0000550 ! abnormal pseudohyphal growth
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0007124
 created_by: midori
@@ -6149,6 +6172,7 @@ id: FYPO:0000552
 name: decreased pseudohyphal growth
 def: "A cellular process phenotype in which the occurrence of pseudohyphal growth is decreased." [PomBase:mah]
 synonym: "pseudohyphal growth: decreased" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000437 ! decreased filamentous growth
 is_a: FYPO:0000550 ! abnormal pseudohyphal growth
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0007124
@@ -6160,6 +6184,7 @@ id: FYPO:0000553
 name: increased pseudohyphal growth
 def: "A cellular process phenotype in which the occurrence of pseudohyphal growth is increased." [PomBase:mah]
 synonym: "pseudohyphal growth: increased" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000438 ! increased filamentous growth
 is_a: FYPO:0000550 ! abnormal pseudohyphal growth
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0007124
@@ -6171,7 +6196,7 @@ id: FYPO:0000554
 name: normal pseudohyphal growth
 def: "A cellular process phenotype in which pseudohyphal growth is normal." [PomBase:mah]
 synonym: "pseudohyphal growth: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000047 ! normal cell growth
+is_a: FYPO:0000439 ! normal filamentous growth
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007124
 intersection_of: qualifier PATO:0000461
@@ -6257,6 +6282,20 @@ created_by: midori
 creation_date: 2011-08-15T11:41:34Z
 
 [Term]
+id: FYPO:0000561
+name: normal mitotic G1 phase progression
+def: "A cellular process phenotype in which progression through the G1 phase of the mitotic cell cycle is normal." [PomBase:mah]
+synonym: "mitotic cell cycle progression in G1 phase: normal" EXACT [SGD:phenotype_annotation]
+synonym: "normal mitotic cell cycle progression in G1" EXACT [PomBase:mah]
+is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000257 ! normal phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000080
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
 id: FYPO:0000562
 name: cellular respiration abolished
 def: "A cellular process phenotype in which cellular respiration is abolished." [PomBase:mah]
@@ -6270,6 +6309,19 @@ intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0045333
 created_by: midori
 creation_date: 2011-08-15T11:41:34Z
+
+[Term]
+id: FYPO:0000563
+name: abnormal mitotic G2 phase progression
+def: "A cellular process phenotype in which progression through the G2 phase of the mitotic cell cycle is abnormal." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle progression in G2" EXACT [PomBase:mah]
+synonym: "mitotic cell cycle progression in G2 phase: abnormal" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000085
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
 
 [Term]
 id: FYPO:0000564
@@ -6291,7 +6343,7 @@ def: "A cellular process phenotype in which the occurrence of cellular respirati
 synonym: "increased respiration" BROAD [PomBase:mah]
 synonym: "increased respiratory metabolism" EXACT [PomBase:mah]
 synonym: "respiratory metabolism: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000078 ! abnormal cellular respiration
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0045333
 created_by: midori
@@ -6770,6 +6822,220 @@ intersection_of: PATO:0000499
 intersection_of: inheres_in GO:0000080
 created_by: midori
 creation_date: 2011-08-15T12:00:20Z
+
+[Term]
+id: FYPO:0000604
+name: decreased rate of mitotic G2 phase progression
+def: "A cellular process phenotype in which progression through the G2 phase of the mitotic cell cycle proceeds at a slower rate than normal." [PomBase:mah]
+synonym: "mitotic cell cycle progression in G2 phase: decreased rate" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000408 ! decreased rate of cell cycle progression
+intersection_of: PATO:0000911
+intersection_of: inheres_in GO:0000085
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000605
+name: delayed mitotic G2 phase progression
+def: "A cellular process phenotype in which progression through the G2 phase of the mitotic cell cycle is delayed." [PomBase:mah]
+synonym: "mitotic cell cycle progression in G2 phase: delayed" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000409 ! delayed cell cycle progression
+intersection_of: PATO:0000502
+intersection_of: inheres_in GO:0000085
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000606
+name: increased duration of mitotic G2 phase
+def: "A cellular process phenotype in which the duration of progression through the G2 phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
+synonym: "mitotic cell cycle progression in G2 phase: increased duration" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+intersection_of: PATO:0000498
+intersection_of: inheres_in GO:0000085
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000607
+name: abnormal mitotic M phase progression
+def: "A cellular process phenotype in which progression through M phase of the mitotic cell cycle is abnormal." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle progression in M" EXACT [PomBase:mah]
+synonym: "mitotic cell cycle progression in M phase: abnormal" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000087
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000608
+name: mitotic cell cycle arrest in M phase
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in M phase." [PomBase:mah]
+synonym: "mitotic cell cycle progression in M phase: arrested" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000502 ! arrested mitotic cell cycle
+intersection_of: PATO:0000297
+intersection_of: inheres_in GO:0000087
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000609
+name: delayed mitotic M phase progression
+def: "A cellular process phenotype in which progression through M phase of the mitotic cell cycle is delayed." [PomBase:mah]
+synonym: "mitotic cell cycle progression in M phase: delayed" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000409 ! delayed cell cycle progression
+intersection_of: PATO:0000502
+intersection_of: inheres_in GO:0000087
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000610
+name: abnormal mitotic S phase progression
+def: "A cellular process phenotype in which progression through S phase of the mitotic cell cycle is abnormal." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle progression in S" EXACT [PomBase:mah]
+synonym: "mitotic cell cycle progression in S phase: abnormal" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000084
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000611
+name: mitotic cell cycle arrest in S phase
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in S phase." [PomBase:mah]
+synonym: "mitotic cell cycle progression in S phase: arrested" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000502 ! arrested mitotic cell cycle
+intersection_of: PATO:0000297
+intersection_of: inheres_in GO:0000084
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000612
+name: decreased rate of mitotic S phase progression
+def: "A cellular process phenotype in which progression through S phase of the mitotic cell cycle proceeds at a slower rate than normal." [PomBase:mah]
+synonym: "mitotic cell cycle progression in S phase: decreased rate" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000408 ! decreased rate of cell cycle progression
+intersection_of: PATO:0000911
+intersection_of: inheres_in GO:0000084
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000613
+name: delayed mitotic S phase progression
+def: "A cellular process phenotype in which progression through S phase of the mitotic cell cycle is delayed." [PomBase:mah]
+synonym: "mitotic cell cycle progression in S phase: delayed" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000409 ! delayed cell cycle progression
+intersection_of: PATO:0000502
+intersection_of: inheres_in GO:0000084
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000614
+name: increased duration of mitotic S phase
+def: "A cellular process phenotype in which the duration of progression through S phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
+synonym: "mitotic cell cycle progression in S phase: increased duration" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+intersection_of: PATO:0000498
+intersection_of: inheres_in GO:0000084
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000615
+name: increased rate of mitotic S phase progression
+def: "A cellular process phenotype in which progression through S phase of the mitotic cell cycle proceeds at a faster rate than normal." [PomBase:mah]
+synonym: "mitotic cell cycle progression in S phase: increased rate" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0000912
+intersection_of: inheres_in GO:0000084
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000616
+name: abnormal mitotic anaphase progression
+def: "A cellular process phenotype in which progression through mitotic anaphase is abnormal." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle progression in anaphase" EXACT [PomBase:mah]
+synonym: "mitotic cell cycle progression in anaphase: abnormal" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000607 ! abnormal mitotic M phase progression
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000090
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000617
+name: delayed mitotic anaphase progression
+def: "A cellular process phenotype in which progression through anaphase of mitosis is delayed." [PomBase:mah]
+synonym: "mitotic cell cycle progression in anaphase: delayed" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000409 ! delayed cell cycle progression
+is_a: FYPO:0000609 ! delayed mitotic M phase progression
+intersection_of: PATO:0000502
+intersection_of: inheres_in GO:0000090
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000618
+name: increased duration of mitotic anaphase
+def: "A cellular process phenotype in which the duration of progression through the anaphase of mitosis is longer than normal." [PomBase:mah]
+synonym: "mitotic cell cycle progression in anaphase: increased duration" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+intersection_of: PATO:0000498
+intersection_of: inheres_in GO:0000090
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000619
+name: mitotic cell cycle arrest in late anaphase
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in late anaphase." [PomBase:mah]
+synonym: "mitotic cell cycle progression in late anaphase: arrested" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000502 ! arrested mitotic cell cycle
+intersection_of: PATO:0000297
+intersection_of: inheres_in GO:0000090
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000620
+name: mitotic cell cycle arrest in metaphase
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in metaphase." [PomBase:mah]
+synonym: "mitotic cell cycle progression in metaphase: arrested" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000502 ! arrested mitotic cell cycle
+intersection_of: PATO:0000297
+intersection_of: inheres_in GO:0000090
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000621
+name: delayed mitotic metaphase
+def: "A cellular process phenotype in which progression through metaphase of mitosis is delayed." [PomBase:mah]
+synonym: "mitotic cell cycle progression in metaphase: delayed" EXACT [SGD:phenotype_annotation]
+synonym: "mitotic metaphase delay" EXACT [PomBase:mah]
+is_a: FYPO:0000609 ! delayed mitotic M phase progression
+intersection_of: PATO:0000502
+intersection_of: inheres_in GO:0000089
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000622
+name: mitotic cell cycle arrest in telophase
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in telophase." [PomBase:mah]
+synonym: "mitotic cell cycle progression in telophase: arrested" EXACT [SGD:phenotype_annotation]
+intersection_of: PATO:0000297
+intersection_of: inheres_in GO:0000093
 
 [Typedef]
 id: comprises_cells_with_phenotype
