@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 16:08:2011 17:05
+date: 19:08:2011 16:19
 saved-by: midori
-auto-generated-by: OBO-Edit 2.1-beta16
+auto-generated-by: OBO-Edit 2.1-beta18
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -100,7 +100,7 @@ id: FYPO:0000009
 name: abnormal cell adhesion
 def: "A cellular process phenotype in which adhesion of a cell to a substrate or another cell is abnormal." [PomBase:mah]
 synonym: "adhesion defects" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007155
 intersection_of: qualifier PATO:0000460
@@ -122,9 +122,11 @@ id: FYPO:0000011
 name: abnormal cell cycle progression
 alt_id: FYPO:0000406
 def: "A cellular process phenotype in which a cell does not proceed normally through a cell cycle." [PomBase:mah]
+synonym: "abnormal cell-division cycle" EXACT [GO:0007049, PomBase:mah]
 synonym: "cell cycle defects" EXACT [PomBase:mah]
 synonym: "cell cycle progression: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
+is_a: FYPO:0000631 ! cell cycle phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007049
 intersection_of: qualifier PATO:0000460
@@ -295,7 +297,7 @@ name: abnormal cell polarity
 def: "A cellular process phenotype in which the establishment or maintenance of cell polarity is abnormal." [PomBase:mah]
 synonym: "abnormal establishment or maintenance of cell polarity" EXACT [PomBase:mah]
 synonym: "cell polarity defects" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007163
 intersection_of: qualifier PATO:0000460
@@ -321,7 +323,7 @@ alt_id: FYPO:0000226
 def: "A cellular process phenotype in which chromosome segregation is abnormal." [PomBase:mah]
 synonym: "centromere function defective" RELATED [PomBase:mah]
 synonym: "chromosome segregation defects" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007059
 intersection_of: qualifier PATO:0000460
@@ -359,7 +361,7 @@ name: abnormal cytokinesis
 def: "A cellular process phenotype in which cytokinesis is abnormal." [PomBase:mah]
 synonym: "abnormal cell cycle cytokinesis" EXACT [PomBase:mah]
 synonym: "cytokinesis defects" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0033205
 intersection_of: qualifier PATO:0000460
@@ -492,8 +494,8 @@ alt_id: FYPO:0000210
 def: "A cellular process phenotype in which negative regulation of transcription by glucose is abnormal." [PomBase:mah]
 synonym: "abnormal negative regulation of transcription by glucose" EXACT [PomBase:mah]
 synonym: "glucose repression defects" EXACT [PomBase:mah]
-is_a: FYPO:0000143 ! transcription regulation phenotype
 is_a: FYPO:0000298 ! cellular response phenotype
+is_a: FYPO:0000624 ! abnormal negative regulation of transcription
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0045014
 intersection_of: qualifier PATO:0000460
@@ -576,7 +578,7 @@ id: FYPO:0000051
 name: abnormal meiosis
 def: "A cellular process phenotype in which meiosis is abnormal." [PomBase:mah]
 synonym: "meiosis defects" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007126
 intersection_of: qualifier PATO:0000460
@@ -1303,10 +1305,8 @@ name: cellular process phenotype
 def: "A phenotype that affects a cellular process." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 is_a: FYPO:0000300 ! biological process phenotype
-intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0005819
+intersection_of: FYPO:0000001 ! phenotype
 intersection_of: inheres_in GO:0009987
-intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-12T12:00:38Z
 
@@ -1393,7 +1393,7 @@ name: abnormal sporulation
 def: "A cellular process phenotype in which ascospore formation is abnormal." [PomBase:mah]
 synonym: "abnormal ascospore formation" EXACT [PomBase:mah]
 synonym: "sporulation defects" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030437
 intersection_of: qualifier PATO:0000460
@@ -1517,7 +1517,7 @@ id: FYPO:0000132
 name: abnormal septum disassembly
 def: "A cellular process phenotype characterized by abnormal primary cell septum disassembly; may result in the formation of chains of attached cells." [PomBase:mah]
 synonym: "chained cells" RELATED [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0005819
 intersection_of: qualifier PATO:0000460
@@ -1577,6 +1577,7 @@ id: FYPO:0000137
 name: cell cycle checkpoint phenotype
 def: "A cell phenotype that affects any cell cycle checkpoint." [PomBase:mah]
 is_a: FYPO:0000145 ! regulation phenotype
+is_a: FYPO:0000631 ! cell cycle phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0000075
 created_by: midori
@@ -1639,6 +1640,8 @@ creation_date: 2011-04-12T05:46:51Z
 id: FYPO:0000143
 name: transcription regulation phenotype
 def: "A gene expression phenotype that affects the regulation of DNA-dependent transcription." [PomBase:mah]
+synonym: "gene-specific transcription regulation phenotype" RELATED [GO:0006355, PomBase:mah]
+synonym: "transcriptional control phenotyep" BROAD [GO:0006355, PomBase:mah]
 is_a: FYPO:0000288 ! gene expression regulation phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0006355
@@ -1649,8 +1652,8 @@ creation_date: 2011-04-12T05:47:38Z
 id: FYPO:0000144
 name: abnormal chromatin silencing
 def: "A transcription regulation phenotype in which chromatin silencing is abnormal." [PomBase:mah]
-is_a: FYPO:0000143 ! transcription regulation phenotype
 is_a: FYPO:0000574 ! abnormal gene silencing
+is_a: FYPO:0000624 ! abnormal negative regulation of transcription
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006342
 intersection_of: qualifier PATO:0000460
@@ -1980,7 +1983,7 @@ id: FYPO:0000174
 name: abnormal cell wall biogenesis
 def: "A cellular process phenotype in which cell wall biogenesis is abnormal." [PomBase:mah]
 synonym: "abnormal fungal-type cell wall biogenesis" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0009272
 intersection_of: qualifier PATO:0000460
@@ -2079,7 +2082,7 @@ id: FYPO:0000182
 name: abnormal cell wall organization
 def: "A cellular process phenotype in which cell wall organization is abnormal." [PomBase:mah]
 synonym: "abnormal fungal-type cell wall organization" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0031505
 intersection_of: qualifier PATO:0000460
@@ -2122,7 +2125,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000186
 name: abnormal cell division
 def: "A cellular process phenotype in which cell division is abnormal." [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051301
 intersection_of: qualifier PATO:0000460
@@ -3345,7 +3348,7 @@ creation_date: 2011-04-26T03:10:44Z
 id: FYPO:0000305
 name: abnormal spore germination
 def: "A cellular process phenotype in which spore germination is abnormal." [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0009847
 intersection_of: qualifier PATO:0000460
@@ -3530,7 +3533,7 @@ synonym: "cell cycle passage through the metaphase-anaphase transition: delayed"
 synonym: "delayed cell cycle passage through mitotic metaphase-anaphase transition" EXACT []
 synonym: "mitotic cell cycle delay at metaphase/anaphase transition" EXACT [PomBase:mah]
 is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0001542
 intersection_of: inheres_in GO:0007091
 created_by: mah79
@@ -3922,7 +3925,7 @@ name: mating projection absent
 def: "A cellular structure phenotype in which cells do not form mating projections." [PomBase:mah]
 synonym: "absent mating projection morphology" EXACT [PomBase:mah]
 synonym: "mating projection morphology: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000136 ! cellular structure phenotype
+is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0002000
 intersection_of: inheres_in GO:0005937
 created_by: midori
@@ -3944,7 +3947,7 @@ id: FYPO:0000360
 name: abnormal RNA localization
 def: "A cellular process phenotype in which RNA localization is abnormal." [PomBase:mah]
 synonym: "RNA localization: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006403
 intersection_of: qualifier PATO:0000460
@@ -3979,7 +3982,7 @@ name: peroxisomes absent
 def: "A cellular structure phenotype in which cells do not contain peroxisomes." [PomBase:mah]
 synonym: "absent peroxisomal morphology" EXACT [PomBase:mah]
 synonym: "peroxisomal morphology: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000136 ! cellular structure phenotype
+is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0002000
 intersection_of: inheres_in GO:0005777
 created_by: midori
@@ -4035,7 +4038,7 @@ name: vacuoles absent
 def: "A cellular structure phenotype in which cells do not contain vacuoles." [PomBase:mah]
 synonym: "absent vacuolar morphology" EXACT [PomBase:mah]
 synonym: "vacuolar morphology: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000136 ! cellular structure phenotype
+is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0002000
 intersection_of: inheres_in GO:0000324
 created_by: midori
@@ -4104,7 +4107,7 @@ name: apoptosis abolished
 def: "A cellular process phenotype in which apoptosis is abolished." [PomBase:mah]
 synonym: "absent apoptosis" EXACT [PomBase:mah]
 synonym: "apoptosis: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000629 ! abnormal apoptosis
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0006915
 created_by: midori
@@ -4115,7 +4118,7 @@ id: FYPO:0000376
 name: decreased apoptosis
 def: "A cellular process phenotype in which the occurrence of apoptosis is decreased." [PomBase:mah]
 synonym: "apoptosis: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000629 ! abnormal apoptosis
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0006915
 created_by: midori
@@ -4126,7 +4129,7 @@ id: FYPO:0000377
 name: increased apoptosis
 def: "A cellular process phenotype in which the occurrence of apoptosis is increased." [PomBase:mah]
 synonym: "apoptosis: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000629 ! abnormal apoptosis
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0006915
 created_by: midori
@@ -4137,8 +4140,8 @@ id: FYPO:0000378
 name: normal apoptosis
 def: "A cellular process phenotype in which apoptosis is normal." [PomBase:mah]
 synonym: "apoptosis: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006915
 intersection_of: qualifier PATO:0000461
@@ -4206,8 +4209,8 @@ id: FYPO:0000385
 name: normal autophagy
 def: "A cellular process phenotype in which autophagy is normal." [PomBase:mah]
 synonym: "autophagy: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006914
 intersection_of: qualifier PATO:0000461
@@ -4220,7 +4223,7 @@ name: biofilm formation abolished
 def: "A cellular process phenotype in which biofilm formation is abolished." [PomBase:mah]
 synonym: "absent biofilm formation" EXACT [PomBase:mah]
 synonym: "biofilm formation: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000630 ! abnormal biofilm formation
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0042710
 created_by: midori
@@ -4231,7 +4234,7 @@ id: FYPO:0000387
 name: decreased biofilm formation
 def: "A cellular process phenotype in which the occurrence of biofilm formation is decreased." [PomBase:mah]
 synonym: "biofilm formation: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000630 ! abnormal biofilm formation
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0042710
 created_by: midori
@@ -4242,7 +4245,7 @@ id: FYPO:0000388
 name: increased biofilm formation
 def: "A cellular process phenotype in which the occurrence of biofilm formation is increased." [PomBase:mah]
 synonym: "biofilm formation: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0042710
 created_by: midori
@@ -4470,8 +4473,9 @@ id: FYPO:0000411
 name: normal cell cycle progression
 def: "A cellular process phenotype in which cell cycle progression is normal." [PomBase:mah]
 synonym: "cell cycle progression: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+synonym: "normal cell-division cycle" EXACT [GO:0007049, PomBase:mah]
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000086
 intersection_of: inheres_in GO:0007049
@@ -4484,7 +4488,7 @@ id: FYPO:0000412
 name: abnormal cell fusion
 def: "A cellular process phenotype in which plasma membrane fusion is abnormal." [PomBase:mah]
 synonym: "cell fusion: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0045026
 intersection_of: qualifier PATO:0000460
@@ -4642,8 +4646,8 @@ id: FYPO:0000426
 name: normal endocytosis
 def: "A cellular process phenotype in which endocytosis is normal." [PomBase:mah]
 synonym: "endocytosis: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006897
 intersection_of: qualifier PATO:0000461
@@ -4693,7 +4697,7 @@ synonym: "delayed exit from G0 (stationary phase)" EXACT [PomBase:mah]
 synonym: "delayed G1/G0 transition" EXACT [GO:0070314, PomBase:mah]
 synonym: "delayed stationary phase" RELATED [GO:0070314, PomBase:mah]
 synonym: "exit from G0 (stationary phase): delayed" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000502
 intersection_of: inheres_in GO:0045023
 created_by: midori
@@ -4755,8 +4759,8 @@ name: normal fermentation
 def: "A cellular process phenotype in which fermentation is normal." [PomBase:mah]
 synonym: "fermentative metabolism: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal fermentative metabolism" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006113
 intersection_of: qualifier PATO:0000461
@@ -5091,8 +5095,8 @@ id: FYPO:0000463
 name: normal flocculation
 def: "A cellular process phenotype in which flocculation is normal." [PomBase:mah]
 synonym: "flocculation: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000300 ! biological process phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000128
@@ -5196,8 +5200,8 @@ id: FYPO:0000472
 name: normal mating type switching
 def: "A cellular process phenotype in which mating type switching is normal." [PomBase:mah]
 synonym: "mating type switching: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007533
 intersection_of: qualifier PATO:0000461
@@ -5266,8 +5270,8 @@ id: FYPO:0000478
 name: normal meiosis
 def: "A cellular process phenotype in which meiosis is normal." [PomBase:mah]
 synonym: "meiosis: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007126
 intersection_of: qualifier PATO:0000461
@@ -5383,8 +5387,8 @@ id: FYPO:0000488
 name: normal meiotic recombination
 def: "A cellular process phenotype in which reciprocal meiotic recombination is normal." [PomBase:mah]
 synonym: "meiotic recombination: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007131
 intersection_of: qualifier PATO:0000461
@@ -5408,7 +5412,7 @@ id: FYPO:0000490
 name: abnormal mitochondrial genome maintenance
 def: "A cellular process phenotype in which mitochondrial genome maintenance is abnormal." [PomBase:mah]
 synonym: "mitochondrial genome maintenance: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000002
 intersection_of: qualifier PATO:0000460
@@ -5454,8 +5458,8 @@ id: FYPO:0000494
 name: normal mitochondrial genome maintenance
 def: "A cellular process phenotype in which mitochondrial genome maintenance is normal." [PomBase:mah]
 synonym: "mitochondrial genome maintenance: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000002
 intersection_of: qualifier PATO:0000461
@@ -5502,8 +5506,8 @@ id: FYPO:0000498
 name: normal mitochondrial transport
 def: "A cellular process phenotype in which mitochondrial transport is normal." [PomBase:mah]
 synonym: "mitochondrial transport: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006839
 intersection_of: qualifier PATO:0000461
@@ -5562,8 +5566,8 @@ id: FYPO:0000503
 name: normal mitotic recombination
 def: "A cellular process phenotype in which mitotic recombination is normal." [PomBase:mah]
 synonym: "mitotic recombination: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006312
 intersection_of: qualifier PATO:0000461
@@ -5575,7 +5579,7 @@ id: FYPO:0000504
 name: decreased necrotic cell death
 def: "A cellular process phenotype in which the occurrence of necrotic cell death is decreased." [PomBase:mah]
 synonym: "necrotic cell death: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0070265
 created_by: midori
@@ -5586,7 +5590,7 @@ id: FYPO:0000505
 name: increased necrotic cell death
 def: "A cellular process phenotype in which the occurrence of necrotic cell death is increased." [PomBase:mah]
 synonym: "necrotic cell death: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0070265
 created_by: midori
@@ -5633,8 +5637,8 @@ id: FYPO:0000509
 name: normal nuclear export
 def: "A cellular process phenotype in which nuclear export is normal." [PomBase:mah]
 synonym: "nuclear export: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051168
 intersection_of: qualifier PATO:0000461
@@ -5648,7 +5652,7 @@ def: "A cellular process phenotype in which karyogamy involved in conjugation wi
 synonym: "abnormal karyogamy" EXACT [PomBase:mah]
 synonym: "abnormal karyogamy involved in conjugation with cellular fusion" EXACT [PomBase:mah]
 synonym: "nuclear fusion during mating: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000742
 intersection_of: qualifier PATO:0000460
@@ -5724,8 +5728,8 @@ id: FYPO:0000516
 name: normal nuclear import
 def: "A cellular process phenotype in which nuclear import is normal." [PomBase:mah]
 synonym: "nuclear import: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051170
 intersection_of: qualifier PATO:0000461
@@ -5899,6 +5903,7 @@ def: "A cellular process phenotype in which cell cycle arrest in response to phe
 synonym: "abnormal pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
 synonym: "pheromone-induced cell cycle arrest: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000145 ! regulation phenotype
+is_a: FYPO:0000631 ! cell cycle phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000751
 intersection_of: qualifier PATO:0000460
@@ -5936,8 +5941,8 @@ name: normal cell cycle arrest in response to pheromone
 def: "A cellular process phenotype in which cell cycle arrest in response to pheromone is normal." [PomBase:mah]
 synonym: "normal pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
 synonym: "pheromone-induced cell cycle arrest: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000751
 intersection_of: qualifier PATO:0000461
@@ -5963,8 +5968,8 @@ name: normal spindle pole body localization
 def: "A cellular process phenotype in which spindle pole body localization is normal." [PomBase:mah]
 synonym: "normal position of spindle pole body" EXACT [PomBase:mah]
 synonym: "position of spindle pole body: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0070631
 intersection_of: qualifier PATO:0000461
@@ -6131,8 +6136,8 @@ name: normal protein modification
 def: "A cellular process phenotype in which protein modification is normal." [PomBase:mah]
 synonym: "normal protein/peptide modification" EXACT [PomBase:mah]
 synonym: "protein/peptide modification: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006464
 intersection_of: qualifier PATO:0000461
@@ -6269,8 +6274,8 @@ name: normal re-entry into mitotic cell cycle after pheromone arrest
 def: "A cellular process phenotype in which re-entry into the mitotic cell cycle after pheromone arrest is normal." [PomBase:mah]
 synonym: "normal recovery from pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
 synonym: "recovery from pheromone-induced cell cycle arrest: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: PATO:0000587
 intersection_of: inheres_in GO:0000321
@@ -6284,8 +6289,8 @@ name: normal mitotic G1 phase progression
 def: "A cellular process phenotype in which progression through the G1 phase of the mitotic cell cycle is normal." [PomBase:mah]
 synonym: "mitotic cell cycle progression in G1 phase: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal mitotic cell cycle progression in G1" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000080
 intersection_of: qualifier PATO:0000461
@@ -6312,7 +6317,7 @@ name: abnormal mitotic G2 phase progression
 def: "A cellular process phenotype in which progression through the G2 phase of the mitotic cell cycle is abnormal." [PomBase:mah]
 synonym: "abnormal mitotic cell cycle progression in G2" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in G2 phase: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000085
 intersection_of: qualifier PATO:0000460
@@ -6327,7 +6332,7 @@ synonym: "decreased rate of respiration" BROAD [PomBase:mah]
 synonym: "decreased rate of respiratory metabolism" EXACT [PomBase:mah]
 synonym: "respiratory metabolism: decreased rate" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000078 ! abnormal cellular respiration
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000911
 intersection_of: inheres_in GO:0045333
 created_by: midori
@@ -6353,8 +6358,8 @@ def: "A cellular process phenotype in which cellular respiration is normal." [Po
 synonym: "normal respiration" BROAD [PomBase:mah]
 synonym: "normal respiratory metabolism" EXACT [PomBase:mah]
 synonym: "respiratory metabolism: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0045333
 intersection_of: qualifier PATO:0000461
@@ -6376,9 +6381,11 @@ creation_date: 2011-08-15T11:41:34Z
 
 [Term]
 id: FYPO:0000568
-name: abnormal mating projection assembly
+name: abnormal shmoo formation
 def: "A cellular process phenotype in which mating projection assembly is abnormal." [PomBase:mah]
-synonym: "abnormal shmoo formation" EXACT [PomBase:mah]
+synonym: "abnormal mating projection assembly" EXACT [PomBase:mah]
+synonym: "abnormal mating projection formation" EXACT [PomBase:mah]
+synonym: "abnormal shmoo assembly" EXACT [PomBase:mah]
 synonym: "shmoo formation: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000336 ! abnormal cellular component assembly
 intersection_of: PATO:0000001
@@ -6389,12 +6396,14 @@ creation_date: 2011-08-15T11:41:34Z
 
 [Term]
 id: FYPO:0000569
-name: mating projection assembly abolished
+name: shmoo formation abolished
 def: "A cellular process phenotype in which mating projection assembly is abolished." [PomBase:mah]
 synonym: "absent shmoo formation" EXACT [PomBase:mah]
-synonym: "shmoo formation abolished" EXACT [PomBase:mah]
+synonym: "mating projection assembly abolished" EXACT [PomBase:mah]
+synonym: "mating projection formation abolished" EXACT [PomBase:mah]
+synonym: "shmoo assembly abolished" EXACT [PomBase:mah]
 synonym: "shmoo formation: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000568 ! abnormal mating projection assembly
+is_a: FYPO:0000568 ! abnormal shmoo formation
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0031382
 created_by: midori
@@ -6402,11 +6411,13 @@ creation_date: 2011-08-15T11:41:34Z
 
 [Term]
 id: FYPO:0000570
-name: decreased mating projection assembly
+name: decreased shmoo formation
 def: "A cellular process phenotype in which the occurrence of mating projection assembly is decreased." [PomBase:mah]
-synonym: "decreased shmoo formation" EXACT [PomBase:mah]
+synonym: "decreased mating projection assembly" EXACT [PomBase:mah]
+synonym: "decreased mating projection formation" EXACT [PomBase:mah]
+synonym: "decreased shmoo assembly" EXACT [PomBase:mah]
 synonym: "shmoo formation: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000568 ! abnormal mating projection assembly
+is_a: FYPO:0000568 ! abnormal shmoo formation
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0031382
 created_by: midori
@@ -6414,11 +6425,13 @@ creation_date: 2011-08-15T11:41:34Z
 
 [Term]
 id: FYPO:0000571
-name: decreased rate of mating projection assembly
+name: decreased rate of shmoo formation
 def: "A cellular process phenotype in which the rate of mating projection assembly is decreased." [PomBase:mah]
-synonym: "decreased rate of shmoo formation" EXACT [PomBase:mah]
+synonym: "decreased rate of mating projection assembly" EXACT [PomBase:mah]
+synonym: "decreased rate of mating projection formation" EXACT [PomBase:mah]
+synonym: "decreased rate of shmoo assembly" EXACT [PomBase:mah]
 synonym: "shmoo formation: decreased rate" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000568 ! abnormal mating projection assembly
+is_a: FYPO:0000568 ! abnormal shmoo formation
 intersection_of: PATO:0000911
 intersection_of: inheres_in GO:0031382
 created_by: midori
@@ -6426,11 +6439,13 @@ creation_date: 2011-08-15T11:41:34Z
 
 [Term]
 id: FYPO:0000572
-name: increased rate of mating projection assembly
+name: increased rate of shmoo formation
 def: "A cellular process phenotype in which the rate of mating projection assembly is increased." [PomBase:mah]
-synonym: "increased rate of shmoo formation" EXACT [PomBase:mah]
+synonym: "increased rate of mating projection assembly" EXACT [PomBase:mah]
+synonym: "increased rate of mating projection formation" EXACT [PomBase:mah]
+synonym: "increased rate of shmoo assembly" EXACT [PomBase:mah]
 synonym: "shmoo formation: increased rate" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000568 ! abnormal mating projection assembly
+is_a: FYPO:0000568 ! abnormal shmoo formation
 intersection_of: PATO:0000912
 intersection_of: inheres_in GO:0031382
 created_by: midori
@@ -6438,12 +6453,14 @@ creation_date: 2011-08-15T11:41:34Z
 
 [Term]
 id: FYPO:0000573
-name: normal mating projection assembly
+name: normal shmoo formation
 def: "A cellular process phenotype in which mating projection assembly is normal." [PomBase:mah]
-synonym: "normal shmoo formation" EXACT [PomBase:mah]
+synonym: "normal mating projection assembly" EXACT [PomBase:mah]
+synonym: "normal mating projection formation" EXACT [PomBase:mah]
+synonym: "normal shmoo assembly" EXACT [PomBase:mah]
 synonym: "shmoo formation: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0031382
 intersection_of: qualifier PATO:0000461
@@ -6501,8 +6518,8 @@ id: FYPO:0000578
 name: normal gene silencing
 def: "A cellular process phenotype in which gene silencing is normal." [PomBase:mah]
 synonym: "silencing: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0016458
 intersection_of: qualifier PATO:0000461
@@ -6514,8 +6531,8 @@ id: FYPO:0000579
 name: normal spore germination
 def: "A cellular process phenotype in which spore germination is normal." [PomBase:mah]
 synonym: "spore germination: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0009847
 intersection_of: qualifier PATO:0000461
@@ -6652,8 +6669,8 @@ name: normal sporulation
 def: "A cellular process phenotype in which ascospore formation is normal." [PomBase:mah]
 synonym: "normal ascospore formation" EXACT [PomBase:mah]
 synonym: "sporulation: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030437
 intersection_of: qualifier PATO:0000461
@@ -6666,7 +6683,7 @@ name: abnormal transposition
 def: "A cellular process phenotype in which transposition is abnormal." [PomBase:mah]
 synonym: "abnormal transposable element transposition" EXACT [PomBase:mah]
 synonym: "transposable element transposition: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0032196
 intersection_of: qualifier PATO:0000460
@@ -6729,8 +6746,8 @@ name: normal transposition
 def: "A cellular process phenotype in which transposition is normal." [PomBase:mah]
 synonym: "normal transposable element transposition" EXACT [PomBase:mah]
 synonym: "transposable element transposition: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0032196
 intersection_of: qualifier PATO:0000461
@@ -6788,8 +6805,8 @@ id: FYPO:0000601
 name: normal vacuolar transport
 def: "A cellular process phenotype in which vacuolar transport is normal." [PomBase:mah]
 synonym: "vacuolar transport: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007034
 intersection_of: qualifier PATO:0000461
@@ -6802,7 +6819,7 @@ name: abnormal mitotic G1 phase progression
 def: "A cellular process phenotype in which progression through the G1 phase of the mitotic cell cycle is abnormal." [PomBase:mah]
 synonym: "abnormal mitotic cell cycle progression in G1" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in G1 phase: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000080
 intersection_of: qualifier PATO:0000460
@@ -6862,7 +6879,7 @@ name: abnormal mitotic M phase progression
 def: "A cellular process phenotype in which progression through M phase of the mitotic cell cycle is abnormal." [PomBase:mah]
 synonym: "abnormal mitotic cell cycle progression in M" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in M phase: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000087
 intersection_of: qualifier PATO:0000460
@@ -6899,7 +6916,7 @@ name: abnormal mitotic S phase progression
 def: "A cellular process phenotype in which progression through S phase of the mitotic cell cycle is abnormal." [PomBase:mah]
 synonym: "abnormal mitotic cell cycle progression in S" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in S phase: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000084
 intersection_of: qualifier PATO:0000460
@@ -7041,8 +7058,143 @@ id: FYPO:0000622
 name: mitotic cell cycle arrest in telophase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in telophase." [PomBase:mah]
 synonym: "mitotic cell cycle progression in telophase: arrested" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000502 ! arrested mitotic cell cycle
 intersection_of: PATO:0000297
 intersection_of: inheres_in GO:0000093
+created_by: midori
+creation_date: 2011-08-16T10:03:01Z
+
+[Term]
+id: FYPO:0000623
+name: abnormal positive regulation of transcription
+def: "A transcription regulation phenotype in which any process of positive regulation of transcription is abnormal." [PomBase:mah]
+synonym: "abnormal activation of gene-specific transcription" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal activation of transcription, DNA-dependent" NARROW [GO:0045893, PomBase:mah]
+synonym: "abnormal positive regulation of cellular transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
+synonym: "abnormal positive regulation of gene-specific transcription" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal stimulation of gene-specific transcription" NARROW [GO:0045893, PomBase:mah]
+synonym: "abnormal stimulation of transcription, DNA-dependent" NARROW [GO:0045893, PomBase:mah]
+synonym: "abnormal up regulation of gene-specific transcription" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal up regulation of transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
+synonym: "abnormal up-regulation of gene-specific transcription" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal up-regulation of transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
+synonym: "abnormal upregulation of gene-specific transcription" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal upregulation of transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
+synonym: "abnormal positive regulation of transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
+is_a: FYPO:0000143 ! transcription regulation phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0045893
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-19T03:38:05Z
+
+[Term]
+id: FYPO:0000624
+name: abnormal negative regulation of transcription
+def: "A transcription regulation phenotype in which any process of negative regulation of transcription is abnormal." [PomBase:mah]
+synonym: "abnormal down regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal down regulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal down-regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal down-regulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal downregulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal downregulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal inhibition of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal inhibition of transcription, DNA-dependent" NARROW [GO:0045892, PomBase:mah]
+synonym: "abnormal negative regulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal negative regulation of cellular transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal negative regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
+is_a: FYPO:0000143 ! transcription regulation phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0045892
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-19T03:40:47Z
+
+[Term]
+id: FYPO:0000625
+name: abnormal premeiotic DNA replication
+def: "A cellular process phenotype in which premeiotic DNA replication is abnormal." [PomBase:mah]
+synonym: "abnormal meiotic DNA replication" RELATED [GOC:mah, GO:0006279]
+synonym: "abnormal meiotic DNA synthesis" RELATED [GOC:mah, GO:0006279]
+synonym: "abnormal premeiotic DNA synthesis" RELATED [GOC:mah, GO:0006279]
+is_a: FYPO:0000217 ! abnormal DNA replication
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006279
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-19T03:48:13Z
+
+[Term]
+id: FYPO:0000626
+name: abnormal initiation of premeiotic DNA replication
+def: "A cellular process phenotype in which the initiation of premeiotic DNA replication is abnormal." [PomBase:mah]
+is_a: FYPO:0000176 ! abnormal DNA replication initiation
+is_a: FYPO:0000625 ! abnormal premeiotic DNA replication
+synonym: "abnormal premeiotic DNA replication initiation" EXACT [GOC:mah, GO:0072691]
+synonym: "abnormal meiotic DNA replication initiation" RELATED [GO:0072691, GOC:mah]
+synonym: "abnormal initiation of meiotic DNA synthesis" RELATED [GO:0072691, GOC:mah]
+synonym: "abnormal initiation of premeiotic DNA synthesis" RELATED [GO:0072691, GOC:mah]
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0072691
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-19T03:49:02Z
+
+[Term]
+id: FYPO:0000627
+name: normal cellular process
+def: "A phenotype in which a specific cellular process is normal." [PomBase:mah]
+is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000257 ! normal phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0009987
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-08-19T04:05:16Z
+
+[Term]
+id: FYPO:0000628
+name: abnormal cellular process
+def: "A phenotype in which a specific cellular process is abnormal." [PomBase:mah]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0009987
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-19T04:06:34Z
+
+[Term]
+id: FYPO:0000629
+name: abnormal apoptosis
+def: "A cellular process phenotype in which apoptosis is abnormal." [PomBase:mah]
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006915
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-19T04:10:09Z
+
+[Term]
+id: FYPO:0000630
+name: abnormal biofilm formation
+def: "A cellular process phenotype in which biofilm formation is abnormal." [PomBase:mah]
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0042710
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-08-19T04:12:58Z
+
+[Term]
+id: FYPO:0000631
+name: cell cycle phenotype
+def: "A cellular process phenotype that affects progression of the mitotic or meiotic cell cycle, or regulation of cell cycle progression." [PomBase:mah]
+synonym: "cell-division cycle phenotype" EXACT [GO:0007049, PomBase:mah]
+is_a: FYPO:0000114 ! cellular process phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0007049
+created_by: midori
+creation_date: 2011-08-19T04:16:04Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
