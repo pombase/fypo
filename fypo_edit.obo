@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 19:08:2011 16:19
+date: 23:08:2011 17:20
 saved-by: midori
-auto-generated-by: OBO-Edit 2.1-beta18
+auto-generated-by: OBO-Edit 2.1-beta16
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -7072,6 +7072,7 @@ synonym: "abnormal activation of gene-specific transcription" RELATED [GO:004589
 synonym: "abnormal activation of transcription, DNA-dependent" NARROW [GO:0045893, PomBase:mah]
 synonym: "abnormal positive regulation of cellular transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
 synonym: "abnormal positive regulation of gene-specific transcription" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal positive regulation of transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
 synonym: "abnormal stimulation of gene-specific transcription" NARROW [GO:0045893, PomBase:mah]
 synonym: "abnormal stimulation of transcription, DNA-dependent" NARROW [GO:0045893, PomBase:mah]
 synonym: "abnormal up regulation of gene-specific transcription" RELATED [GO:0045893, PomBase:mah]
@@ -7080,7 +7081,6 @@ synonym: "abnormal up-regulation of gene-specific transcription" RELATED [GO:004
 synonym: "abnormal up-regulation of transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
 synonym: "abnormal upregulation of gene-specific transcription" RELATED [GO:0045893, PomBase:mah]
 synonym: "abnormal upregulation of transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
-synonym: "abnormal positive regulation of transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
 is_a: FYPO:0000143 ! transcription regulation phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0045893
@@ -7100,9 +7100,9 @@ synonym: "abnormal downregulation of gene-specific transcription" RELATED [GO:00
 synonym: "abnormal downregulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
 synonym: "abnormal inhibition of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
 synonym: "abnormal inhibition of transcription, DNA-dependent" NARROW [GO:0045892, PomBase:mah]
-synonym: "abnormal negative regulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
 synonym: "abnormal negative regulation of cellular transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
 synonym: "abnormal negative regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal negative regulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
 is_a: FYPO:0000143 ! transcription regulation phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0045892
@@ -7114,9 +7114,9 @@ creation_date: 2011-08-19T03:40:47Z
 id: FYPO:0000625
 name: abnormal premeiotic DNA replication
 def: "A cellular process phenotype in which premeiotic DNA replication is abnormal." [PomBase:mah]
-synonym: "abnormal meiotic DNA replication" RELATED [GOC:mah, GO:0006279]
-synonym: "abnormal meiotic DNA synthesis" RELATED [GOC:mah, GO:0006279]
-synonym: "abnormal premeiotic DNA synthesis" RELATED [GOC:mah, GO:0006279]
+synonym: "abnormal meiotic DNA replication" RELATED [GO:0006279, GOC:mah]
+synonym: "abnormal meiotic DNA synthesis" RELATED [GO:0006279, GOC:mah]
+synonym: "abnormal premeiotic DNA synthesis" RELATED [GO:0006279, GOC:mah]
 is_a: FYPO:0000217 ! abnormal DNA replication
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006279
@@ -7128,12 +7128,12 @@ creation_date: 2011-08-19T03:48:13Z
 id: FYPO:0000626
 name: abnormal initiation of premeiotic DNA replication
 def: "A cellular process phenotype in which the initiation of premeiotic DNA replication is abnormal." [PomBase:mah]
-is_a: FYPO:0000176 ! abnormal DNA replication initiation
-is_a: FYPO:0000625 ! abnormal premeiotic DNA replication
-synonym: "abnormal premeiotic DNA replication initiation" EXACT [GOC:mah, GO:0072691]
-synonym: "abnormal meiotic DNA replication initiation" RELATED [GO:0072691, GOC:mah]
 synonym: "abnormal initiation of meiotic DNA synthesis" RELATED [GO:0072691, GOC:mah]
 synonym: "abnormal initiation of premeiotic DNA synthesis" RELATED [GO:0072691, GOC:mah]
+synonym: "abnormal meiotic DNA replication initiation" RELATED [GO:0072691, GOC:mah]
+synonym: "abnormal premeiotic DNA replication initiation" EXACT [GO:0072691, GOC:mah]
+is_a: FYPO:0000176 ! abnormal DNA replication initiation
+is_a: FYPO:0000625 ! abnormal premeiotic DNA replication
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0072691
 intersection_of: qualifier PATO:0000460
@@ -7195,6 +7195,53 @@ intersection_of: FYPO:0000001 ! phenotype
 intersection_of: inheres_in GO:0007049
 created_by: midori
 creation_date: 2011-08-19T04:16:04Z
+
+[Term]
+id: FYPO:0000632
+name: mitochondrial translation phenotype
+def: "A cellular process phenotype that affects mitochondrial translation." [PomBase:mah]
+is_a: FYPO:0000140 ! cellular metabolism phenotype
+is_a: FYPO:0000291 ! translation phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0032543
+created_by: midori
+creation_date: 2011-08-23T04:58:17Z
+
+[Term]
+id: FYPO:0000633
+name: sensitive to G418
+def: "A phenotype in which cells show increased sensitivity to G418." [PomBase:mah]
+synonym: "sensitive to Geneticin" EXACT [CHEBI:459363, PomBase:al]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:459363
+created_by: midori
+creation_date: 2011-08-23T04:58:25Z
+
+[Term]
+id: FYPO:0000634
+name: protein localization to centromere abolished
+def: "A cell phenotype in which the localization of a protein to the centromere of a chromosome is abolished." [PomBase:mah]
+synonym: "protein localisation to centromere abolished" EXACT [PomBase:mah]
+synonym: "protein localisation to chromosome, centromeric region, abolished" EXACT [GO:0071459, PomBase:mah]
+synonym: "protein localization to chromosome, centric region, abolished" EXACT [GO:0071459, PomBase:mah]
+synonym: "protein localization to chromosome, centromeric region, abolished" EXACT [GO:0071459, PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+intersection_of: inheres_in GO:0071459
+intersection_of: qualifier PATO:0001508
+created_by: midori
+creation_date: 2011-08-23T04:58:31Z
+
+[Term]
+id: FYPO:0000635
+name: growth auxotrophic for leucine
+def: "Auxotrophy in which leucine is required for cell growth." [PomBase:mah]
+is_a: FYPO:0000128 ! auxotrophy
+intersection_of: PATO:0000422
+intersection_of: towards CHEBI:15603
+created_by: midori
+creation_date: 2011-08-23T05:17:07Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
