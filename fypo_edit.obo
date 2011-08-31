@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 23:08:2011 17:20
+date: 31:08:2011 15:21
 saved-by: midori
-auto-generated-by: OBO-Edit 2.1-beta16
+auto-generated-by: OBO-Edit 2.1-beta18
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -26,7 +26,7 @@ creation_date: 2011-03-16T04:25:28Z
 id: FYPO:0000003
 name: cell population phenotype
 def: "A phenotype that is observed at the level of a population of cells." [PomBase:mah]
-comment: note to self: differentium is population level, and may reflect observation conditions
+comment: note: differentium is population level, and may reflect observation conditions
 is_a: FYPO:0000001 ! phenotype
 created_by: midori
 creation_date: 2011-03-16T04:26:35Z
@@ -518,6 +518,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000046
 name: slow cell growth
 def: "A cellular process phenotype in which cell growth is slower than normal." [PomBase:mah]
+synonym: "decreased cell growth rate" EXACT [PomBase:mah]
 synonym: "growth defect, slow growth" EXACT [PomBase:mah]
 is_a: FYPO:0000045 ! abnormal cell growth
 intersection_of: PATO:0000911
@@ -530,6 +531,7 @@ id: FYPO:0000047
 name: normal cell growth
 def: "A cellular process phenotype in which cells grow at a normal rate." [PomBase:mah]
 synonym: "growth normal" EXACT [PomBase:mah]
+is_a: FYPO:0000124 ! viable
 is_a: FYPO:0000139 ! cell growth phenotype
 is_a: FYPO:0000257 ! normal phenotype
 intersection_of: PATO:0000001
@@ -854,7 +856,6 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000075
 name: resistance to lovastatin
 def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of lovastatin than normal." [PomBase:mah]
-comment: was misspelled lavostatin
 synonym: "resistant to lovastatin" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
@@ -1215,7 +1216,6 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000106
 name: sensitive to hygromycin B
 def: "A phenotype in which cells show increased sensitivity to hygromycin B." [PomBase:mah]
-comment: was mistyped hygromycin 4
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001551
 intersection_of: inheres_in GO:0016049
@@ -1641,7 +1641,7 @@ id: FYPO:0000143
 name: transcription regulation phenotype
 def: "A gene expression phenotype that affects the regulation of DNA-dependent transcription." [PomBase:mah]
 synonym: "gene-specific transcription regulation phenotype" RELATED [GO:0006355, PomBase:mah]
-synonym: "transcriptional control phenotyep" BROAD [GO:0006355, PomBase:mah]
+synonym: "transcriptional control phenotype" BROAD [GO:0006355, PomBase:mah]
 is_a: FYPO:0000288 ! gene expression regulation phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0006355
@@ -2501,7 +2501,6 @@ name: slow aerobic cell growth
 def: "A cellular process phenotype in which cell growth is slower than normal under aerobic conditions." [PomBase:mah]
 synonym: "aerobic growth defects" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
-intersection_of: FYPO:0000046 ! slow cell growth
 intersection_of: PATO:0001459
 intersection_of: inheres_in GO:0016049
 created_by: midori
@@ -2792,7 +2791,6 @@ def: "A cell growth phenotype in which cells grow at a slower rate than normal i
 synonym: "growth defect, slow growth with proline nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 intersection_of: FYPO:0000046 ! slow cell growth
-intersection_of: PATO:0000467
 intersection_of: inheres_in BTO:0000316
 intersection_of: towards CHEBI:17203
 created_by: midori
@@ -2805,7 +2803,6 @@ def: "A cell growth phenotype in which cells grow at a slower rate than normal i
 synonym: "growth defects, growth inhibition in galactose-based medium" RELATED [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 intersection_of: FYPO:0000046 ! slow cell growth
-intersection_of: PATO:0000467
 intersection_of: inheres_in BTO:0000316
 intersection_of: towards CHEBI:12936
 created_by: midori
@@ -2864,7 +2861,7 @@ id: FYPO:0000257
 name: normal phenotype
 def: "A cell phenotype that shows no detectable differences from normal." [PomBase:mah]
 synonym: "no obvious phenotype" EXACT [PomBase:mah]
-is_a: FYPO:0000124 ! viable
+is_a: FYPO:0000001 ! phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0000461
@@ -3044,7 +3041,6 @@ id: FYPO:0000274
 name: increased mitotic M phase duration
 def: "A cell cycle phenotype in the duration of M phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
 synonym: "spindle checkpoint activated" RELATED [PomBase:mah]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 is_a: FYPO:0000607 ! abnormal mitotic M phase progression
 intersection_of: PATO:0000502
 intersection_of: inheres_in GO:0000087
@@ -3446,7 +3442,7 @@ creation_date: 2011-04-27T11:47:04Z
 [Term]
 id: FYPO:0000315
 name: inviable germinating spore with elongated, septated germ tube
-def: "A phenotype in which a spore germinates to produce an elongated germ tube, and undergeos septation, but does not go on to form a dividing cell." [PomBase:mah]
+def: "A phenotype in which a spore germinates to produce an elongated germ tube, and undergoes septation, but does not go on to form a dividing cell." [PomBase:mah]
 is_a: FYPO:0000313 ! inviable germinating spore with abnormal germ tube morphology
 created_by: mah79
 creation_date: 2011-04-27T11:47:04Z
@@ -3533,7 +3529,6 @@ synonym: "cell cycle passage through the metaphase-anaphase transition: delayed"
 synonym: "delayed cell cycle passage through mitotic metaphase-anaphase transition" EXACT []
 synonym: "mitotic cell cycle delay at metaphase/anaphase transition" EXACT [PomBase:mah]
 is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
-is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0001542
 intersection_of: inheres_in GO:0007091
 created_by: mah79
@@ -4140,7 +4135,6 @@ id: FYPO:0000378
 name: normal apoptosis
 def: "A cellular process phenotype in which apoptosis is normal." [PomBase:mah]
 synonym: "apoptosis: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006915
@@ -4209,7 +4203,6 @@ id: FYPO:0000385
 name: normal autophagy
 def: "A cellular process phenotype in which autophagy is normal." [PomBase:mah]
 synonym: "autophagy: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006914
@@ -4474,7 +4467,6 @@ name: normal cell cycle progression
 def: "A cellular process phenotype in which cell cycle progression is normal." [PomBase:mah]
 synonym: "cell cycle progression: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal cell-division cycle" EXACT [GO:0007049, PomBase:mah]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000086
@@ -4498,7 +4490,7 @@ creation_date: 2011-07-14T06:45:37Z
 [Term]
 id: FYPO:0000413
 name: cell fusion abolished
-def: "A cellular process phenotype in which plasma membrane fusion is abolisheid." [PomBase:mah]
+def: "A cellular process phenotype in which plasma membrane fusion is abolished." [PomBase:mah]
 synonym: "absent cell fusion" EXACT [PomBase:mah]
 synonym: "cell fusion: absent" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000412 ! abnormal cell fusion
@@ -4646,7 +4638,6 @@ id: FYPO:0000426
 name: normal endocytosis
 def: "A cellular process phenotype in which endocytosis is normal." [PomBase:mah]
 synonym: "endocytosis: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006897
@@ -4759,7 +4750,6 @@ name: normal fermentation
 def: "A cellular process phenotype in which fermentation is normal." [PomBase:mah]
 synonym: "fermentative metabolism: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal fermentative metabolism" EXACT [PomBase:mah]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006113
@@ -5200,7 +5190,6 @@ id: FYPO:0000472
 name: normal mating type switching
 def: "A cellular process phenotype in which mating type switching is normal." [PomBase:mah]
 synonym: "mating type switching: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007533
@@ -5270,7 +5259,6 @@ id: FYPO:0000478
 name: normal meiosis
 def: "A cellular process phenotype in which meiosis is normal." [PomBase:mah]
 synonym: "meiosis: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007126
@@ -5387,7 +5375,6 @@ id: FYPO:0000488
 name: normal meiotic recombination
 def: "A cellular process phenotype in which reciprocal meiotic recombination is normal." [PomBase:mah]
 synonym: "meiotic recombination: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007131
@@ -5458,7 +5445,6 @@ id: FYPO:0000494
 name: normal mitochondrial genome maintenance
 def: "A cellular process phenotype in which mitochondrial genome maintenance is normal." [PomBase:mah]
 synonym: "mitochondrial genome maintenance: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000002
@@ -5506,7 +5492,6 @@ id: FYPO:0000498
 name: normal mitochondrial transport
 def: "A cellular process phenotype in which mitochondrial transport is normal." [PomBase:mah]
 synonym: "mitochondrial transport: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006839
@@ -5566,7 +5551,6 @@ id: FYPO:0000503
 name: normal mitotic recombination
 def: "A cellular process phenotype in which mitotic recombination is normal." [PomBase:mah]
 synonym: "mitotic recombination: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006312
@@ -5637,7 +5621,6 @@ id: FYPO:0000509
 name: normal nuclear export
 def: "A cellular process phenotype in which nuclear export is normal." [PomBase:mah]
 synonym: "nuclear export: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051168
@@ -5728,7 +5711,6 @@ id: FYPO:0000516
 name: normal nuclear import
 def: "A cellular process phenotype in which nuclear import is normal." [PomBase:mah]
 synonym: "nuclear import: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051170
@@ -5941,7 +5923,6 @@ name: normal cell cycle arrest in response to pheromone
 def: "A cellular process phenotype in which cell cycle arrest in response to pheromone is normal." [PomBase:mah]
 synonym: "normal pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
 synonym: "pheromone-induced cell cycle arrest: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000751
@@ -5968,7 +5949,6 @@ name: normal spindle pole body localization
 def: "A cellular process phenotype in which spindle pole body localization is normal." [PomBase:mah]
 synonym: "normal position of spindle pole body" EXACT [PomBase:mah]
 synonym: "position of spindle pole body: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0070631
@@ -6062,7 +6042,6 @@ id: FYPO:0000543
 name: increased duration of mitotic G1 phase
 def: "A cellular process phenotype in which the duration of progression through the G1 phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
 synonym: "mitotic cell cycle progression in G1 phase: increased duration" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
 intersection_of: PATO:0000498
 intersection_of: inheres_in GO:0000080
@@ -6136,7 +6115,6 @@ name: normal protein modification
 def: "A cellular process phenotype in which protein modification is normal." [PomBase:mah]
 synonym: "normal protein/peptide modification" EXACT [PomBase:mah]
 synonym: "protein/peptide modification: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006464
@@ -6248,7 +6226,7 @@ creation_date: 2011-08-15T11:41:34Z
 id: FYPO:0000558
 name: increased re-entry into mitotic cell cycle after pheromone arrest
 def: "A cellular process phenotype in which the occurrence of re-entry into the mitotic cell cycle after pheromone arrest is increased." [PomBase:mah]
-synonym: "increased recovery from pheromone-induced cell cycle arresta" EXACT [PomBase:mah]
+synonym: "increased recovery from pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
 synonym: "recovery from pheromone-induced cell cycle arrest: increased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000555 ! abnormal re-entry into mitotic cell cycle after pheromone arrest
 intersection_of: PATO:0002051
@@ -6274,7 +6252,6 @@ name: normal re-entry into mitotic cell cycle after pheromone arrest
 def: "A cellular process phenotype in which re-entry into the mitotic cell cycle after pheromone arrest is normal." [PomBase:mah]
 synonym: "normal recovery from pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
 synonym: "recovery from pheromone-induced cell cycle arrest: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: PATO:0000587
@@ -6289,7 +6266,6 @@ name: normal mitotic G1 phase progression
 def: "A cellular process phenotype in which progression through the G1 phase of the mitotic cell cycle is normal." [PomBase:mah]
 synonym: "mitotic cell cycle progression in G1 phase: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal mitotic cell cycle progression in G1" EXACT [PomBase:mah]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000080
@@ -6358,7 +6334,6 @@ def: "A cellular process phenotype in which cellular respiration is normal." [Po
 synonym: "normal respiration" BROAD [PomBase:mah]
 synonym: "normal respiratory metabolism" EXACT [PomBase:mah]
 synonym: "respiratory metabolism: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0045333
@@ -6459,7 +6434,6 @@ synonym: "normal mating projection assembly" EXACT [PomBase:mah]
 synonym: "normal mating projection formation" EXACT [PomBase:mah]
 synonym: "normal shmoo assembly" EXACT [PomBase:mah]
 synonym: "shmoo formation: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0031382
@@ -6518,7 +6492,6 @@ id: FYPO:0000578
 name: normal gene silencing
 def: "A cellular process phenotype in which gene silencing is normal." [PomBase:mah]
 synonym: "silencing: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0016458
@@ -6531,7 +6504,6 @@ id: FYPO:0000579
 name: normal spore germination
 def: "A cellular process phenotype in which spore germination is normal." [PomBase:mah]
 synonym: "spore germination: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0009847
@@ -6669,7 +6641,6 @@ name: normal sporulation
 def: "A cellular process phenotype in which ascospore formation is normal." [PomBase:mah]
 synonym: "normal ascospore formation" EXACT [PomBase:mah]
 synonym: "sporulation: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030437
@@ -6746,7 +6717,6 @@ name: normal transposition
 def: "A cellular process phenotype in which transposition is normal." [PomBase:mah]
 synonym: "normal transposable element transposition" EXACT [PomBase:mah]
 synonym: "transposable element transposition: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0032196
@@ -6805,7 +6775,6 @@ id: FYPO:0000601
 name: normal vacuolar transport
 def: "A cellular process phenotype in which vacuolar transport is normal." [PomBase:mah]
 synonym: "vacuolar transport: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007034
@@ -6866,7 +6835,6 @@ id: FYPO:0000606
 name: increased duration of mitotic G2 phase
 def: "A cellular process phenotype in which the duration of progression through the G2 phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
 synonym: "mitotic cell cycle progression in G2 phase: increased duration" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
 intersection_of: PATO:0000498
 intersection_of: inheres_in GO:0000085
@@ -6964,7 +6932,6 @@ id: FYPO:0000614
 name: increased duration of mitotic S phase
 def: "A cellular process phenotype in which the duration of progression through S phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
 synonym: "mitotic cell cycle progression in S phase: increased duration" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 is_a: FYPO:0000610 ! abnormal mitotic S phase progression
 intersection_of: PATO:0000498
 intersection_of: inheres_in GO:0000084
@@ -7012,7 +6979,6 @@ id: FYPO:0000618
 name: increased duration of mitotic anaphase
 def: "A cellular process phenotype in which the duration of progression through the anaphase of mitosis is longer than normal." [PomBase:mah]
 synonym: "mitotic cell cycle progression in anaphase: increased duration" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 is_a: FYPO:0000616 ! abnormal mitotic anaphase progression
 intersection_of: PATO:0000498
 intersection_of: inheres_in GO:0000090
@@ -7200,7 +7166,6 @@ creation_date: 2011-08-19T04:16:04Z
 id: FYPO:0000632
 name: mitochondrial translation phenotype
 def: "A cellular process phenotype that affects mitochondrial translation." [PomBase:mah]
-is_a: FYPO:0000140 ! cellular metabolism phenotype
 is_a: FYPO:0000291 ! translation phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0032543
@@ -7242,6 +7207,53 @@ intersection_of: PATO:0000422
 intersection_of: towards CHEBI:15603
 created_by: midori
 creation_date: 2011-08-23T05:17:07Z
+
+[Term]
+id: FYPO:0000636
+name: increased cell growth rate
+def: "A cellular process phenotype in which cell growth is faster than normal." [PomBase:mah]
+synonym: "enhanced cell growth" RELATED [PomBase:mah]
+synonym: "fast cell growth" EXACT [PomBase:mah]
+is_a: FYPO:0000045 ! abnormal cell growth
+intersection_of: PATO:0000912
+intersection_of: inheres_in GO:0016049
+created_by: midori
+creation_date: 2011-08-31T01:30:12Z
+
+[Term]
+id: FYPO:0000637
+name: increased cell growth rate on glucose carbon source
+def: "A cell growth phenotype in which cells grow at a faster rate than normal in a medium containing glucose as the carbon source." [PomBase:mah]
+synonym: "enhanced growth on glucose" RELATED [PomBase:mah]
+synonym: "fast cell growth on glucose carbon source" EXACT [PomBase:mah]
+is_a: FYPO:0000636 ! increased cell growth rate
+intersection_of: FYPO:0000046 ! slow cell growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: towards CHEBI:17634
+created_by: midori
+creation_date: 2011-08-31T02:20:29Z
+
+[Term]
+id: FYPO:0000638
+name: conjugation abolished
+def: "A cellular process phenotype in which conjugation is abolished." [PomBase:mah]
+is_a: FYPO:0000031 ! abnormal conjugation
+intersection_of: inheres_in GO:0000747
+intersection_of: qualifier PATO:0001508
+created_by: midori
+creation_date: 2011-08-31T02:27:49Z
+
+[Term]
+id: FYPO:0000639
+name: delayed septation
+def: "A cellular process phenotype in which the occurrence of septation is delayed." [PomBase:al, PomBase:mah]
+synonym: "delayed barrier septum formation involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "delayed septum formation" BROAD [PomBase:mah]
+is_a: FYPO:0000117 ! abnormal septation
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0071937
+created_by: midori
+creation_date: 2011-08-31T02:55:54Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
