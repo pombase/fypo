@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 12:09:2011 15:35
+date: 28:09:2011 12:30
 saved-by: midori
-auto-generated-by: OBO-Edit 2.1-beta18
+auto-generated-by: OBO-Edit 2.1-beta19
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -58,8 +58,8 @@ id: FYPO:0000006
 name: abnormal DNA damage checkpoint
 def: "A cell cycle checkpoint phenotype that affects the DNA damage checkpoint." [PomBase:mah]
 synonym: "DNA damage checkpoint defects" EXACT [PomBase:mah]
-is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 is_a: FYPO:0000157 ! abnormal response to DNA damage stimulus
+is_a: FYPO:0000643 ! abnormal DNA integrity checkpoint
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000077
 intersection_of: qualifier PATO:0000460
@@ -545,11 +545,11 @@ id: FYPO:0000048
 name: invasive growth abolished
 alt_id: FYPO:0000465
 def: "A cellular process phenotype in which invasive growth is abolished." [PomBase:mah]
+comment: This term was made obsolete because it is not required to describe fission yeast.
 synonym: "absent invasive growth" EXACT [PomBase:mah]
 synonym: "invasive growth: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000436 ! filamentous growth abolished
-intersection_of: PATO:0001508
-intersection_of: inheres_in GO:0070783
+is_obsolete: true
+consider: FYPO:0000551
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -1970,8 +1970,8 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000173
 name: abnormal mitotic cell cycle DNA replication checkpoint
 def: "A cell cycle checkpoint phenotype that affects the DNA replication checkpoint in a mitotic cell cycle." [PomBase:mah]
-is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 is_a: FYPO:0000166 ! abnormal regulation of G2/M transition of mitotic cell cycle
+is_a: FYPO:0000643 ! abnormal DNA integrity checkpoint
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0033314
 intersection_of: qualifier PATO:0000460
@@ -2695,7 +2695,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000241
 name: genome stability defects
 def: "A cell phenotype in which any process that affects the physical integrity, replication, or segregation of genomic DNA is abnormal. Encompasses effects on DNA metabolism, chromosome organization, the spindle assembly checkpoint, and any DNA integrity checkpoint." [PomBase:jh, PomBase:mah, PomBase:vw]
-comment: Might change this to abnormal chromosome organization, with corresponding xp def.
+comment: Consider annotating to 'abnormal chromosome organization' (FYPO:0000641), 'DNA metabolism phenotype' (FYPO:0000293) or any of its children, 'abnormal mitotic cell cycle spindle assembly checkpoint' (FYPO:0000168), or 'abnormal DNA integrity checkpoint' (FYPO:0000643) or any of its children.
 is_a: FYPO:0000002 ! cell phenotype
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2763,8 +2763,8 @@ name: slow growth at high temperature
 def: "A cell growth phenotype in which cells grow at a slower rate than normal at a high temperature." [PomBase:mah]
 synonym: "growth defect, slow growth at high temperatures" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
-intersection_of: during FYPO:0000046 ! slow cell growth
 intersection_of: PATO:0001305
+intersection_of: during FYPO:0000046 ! slow cell growth
 intersection_of: inheres_in BTO:0000316
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -4758,52 +4758,6 @@ created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
 [Term]
-id: FYPO:0000435
-name: abnormal filamentous growth
-def: "A cellular process phenotype in which filamentous growth is abnormal." [PomBase:mah]
-synonym: "filamentous growth: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000045 ! abnormal cell growth
-intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0030447
-intersection_of: qualifier PATO:0000460
-created_by: midori
-creation_date: 2011-07-14T06:45:37Z
-
-[Term]
-id: FYPO:0000436
-name: filamentous growth abolished
-def: "A cellular process phenotype in which filamentous growth is abolished." [PomBase:mah]
-synonym: "absent filamentous growth" EXACT [PomBase:mah]
-synonym: "filamentous growth: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000435 ! abnormal filamentous growth
-intersection_of: PATO:0001508
-intersection_of: inheres_in GO:0030447
-created_by: midori
-creation_date: 2011-07-14T06:45:37Z
-
-[Term]
-id: FYPO:0000437
-name: decreased filamentous growth
-def: "A cellular process phenotype in which the occurrence of filamentous growth is decreased." [PomBase:mah]
-synonym: "filamentous growth: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000435 ! abnormal filamentous growth
-intersection_of: PATO:0002052
-intersection_of: inheres_in GO:0030447
-created_by: midori
-creation_date: 2011-07-14T06:45:37Z
-
-[Term]
-id: FYPO:0000438
-name: increased filamentous growth
-def: "A cellular process phenotype in which the occurrence of filamentous growth is increased." [PomBase:mah]
-synonym: "filamentous growth: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000435 ! abnormal filamentous growth
-intersection_of: PATO:0002051
-intersection_of: inheres_in GO:0030447
-created_by: midori
-creation_date: 2011-07-14T06:45:37Z
-
-[Term]
 id: FYPO:0000439
 name: normal filamentous growth
 def: "A cellular process phenotype in which filamentous growth is normal." [PomBase:mah]
@@ -5106,25 +5060,13 @@ created_by: midori
 creation_date: 2011-08-12T04:05:34Z
 
 [Term]
-id: FYPO:0000465
-name: invasive growth abolished
-def: "A cellular process phenotype in which invasive growth is abolished." [PomBase:mah]
-synonym: "absent invasive growth" EXACT [PomBase:mah]
-synonym: "invasive growth: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000436 ! filamentous growth abolished
-intersection_of: PATO:0001508
-intersection_of: inheres_in GO:0070783
-created_by: midori
-creation_date: 2011-08-12T04:05:34Z
-
-[Term]
 id: FYPO:0000466
 name: decreased invasive growth
 def: "A cellular process phenotype in which the occurrence of invasive growth is decreased." [PomBase:mah]
+comment: This term was made obsolete because it is not required to describe fission yeast.
 synonym: "invasive growth: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000437 ! decreased filamentous growth
-intersection_of: PATO:0002052
-intersection_of: inheres_in GO:0070783
+is_obsolete: true
+consider: FYPO:0000552
 created_by: midori
 creation_date: 2011-08-12T04:05:34Z
 
@@ -5132,10 +5074,10 @@ creation_date: 2011-08-12T04:05:34Z
 id: FYPO:0000467
 name: increased invasive growth
 def: "A cellular process phenotype in which the occurrence of invasive growth is increased." [PomBase:mah]
+comment: This term was made obsolete because it is not required to describe fission yeast.
 synonym: "invasive growth: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000438 ! increased filamentous growth
-intersection_of: PATO:0002051
-intersection_of: inheres_in GO:0070783
+is_obsolete: true
+consider: FYPO:0000553
 created_by: midori
 creation_date: 2011-08-12T04:05:34Z
 
@@ -6125,9 +6067,12 @@ creation_date: 2011-08-15T11:41:34Z
 [Term]
 id: FYPO:0000550
 name: abnormal pseudohyphal growth
+alt_id: FYPO:0000435
 def: "A cellular process phenotype in which pseudohyphal growth is abnormal." [PomBase:mah]
+synonym: "abnormal filamentous growth" BROAD [PomBase:mah]
+synonym: "filamentous growth: abnormal" BROAD [SGD:phenotype_annotation]
 synonym: "pseudohyphal growth: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000435 ! abnormal filamentous growth
+is_a: FYPO:0000045 ! abnormal cell growth
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007124
 intersection_of: qualifier PATO:0000460
@@ -6137,10 +6082,13 @@ creation_date: 2011-08-15T11:41:34Z
 [Term]
 id: FYPO:0000551
 name: pseudohyphal growth abolished
+alt_id: FYPO:0000436
 def: "A cellular process phenotype in which pseudohyphal growth is abolished." [PomBase:mah]
+synonym: "absent filamentous growth" BROAD [PomBase:mah]
 synonym: "absent pseudohyphal growth" EXACT [PomBase:mah]
+synonym: "filamentous growth abolished" BROAD [PomBase:mah]
+synonym: "filamentous growth: absent" BROAD [SGD:phenotype_annotation]
 synonym: "pseudohyphal growth: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000436 ! filamentous growth abolished
 is_a: FYPO:0000550 ! abnormal pseudohyphal growth
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0007124
@@ -6150,9 +6098,11 @@ creation_date: 2011-08-15T11:41:34Z
 [Term]
 id: FYPO:0000552
 name: decreased pseudohyphal growth
+alt_id: FYPO:0000437
 def: "A cellular process phenotype in which the occurrence of pseudohyphal growth is decreased." [PomBase:mah]
+synonym: "decreased filamentous growth" BROAD [PomBase:mah]
+synonym: "filamentous growth: decreased" BROAD [SGD:phenotype_annotation]
 synonym: "pseudohyphal growth: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000437 ! decreased filamentous growth
 is_a: FYPO:0000550 ! abnormal pseudohyphal growth
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0007124
@@ -6162,9 +6112,11 @@ creation_date: 2011-08-15T11:41:34Z
 [Term]
 id: FYPO:0000553
 name: increased pseudohyphal growth
+alt_id: FYPO:0000438
 def: "A cellular process phenotype in which the occurrence of pseudohyphal growth is increased." [PomBase:mah]
+synonym: "filamentous growth: increased" BROAD [SGD:phenotype_annotation]
+synonym: "increased filamentous growth" BROAD [PomBase:mah]
 synonym: "pseudohyphal growth: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000438 ! increased filamentous growth
 is_a: FYPO:0000550 ! abnormal pseudohyphal growth
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0007124
@@ -7269,6 +7221,39 @@ intersection_of: inheres_in GO:0072692
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-09-12T03:33:40Z
+
+[Term]
+id: FYPO:0000641
+name: abnormal chromosome organization
+def: "A cellular process phenotype in which any process of chromosome organization is abnormal." [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051276
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-09-28T12:10:13Z
+
+[Term]
+id: FYPO:0000642
+name: abnormal chromatin organization
+def: "A cellular process phenotype in which any process of chromatin organization is abnormal." [PomBase:mah]
+is_a: FYPO:0000641 ! abnormal chromosome organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006324
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-09-28T12:16:57Z
+
+[Term]
+id: FYPO:0000643
+name: abnormal DNA integrity checkpoint
+def: "A cell cycle checkpoint phenotype that affects any DNA inegrity checkpoint." [PomBase:mah]
+is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0031570
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-09-28T12:28:26Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
