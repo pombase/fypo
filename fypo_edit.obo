@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 05:10:2011 16:53
+date: 07:10:2011 16:45
 saved-by: midori
-auto-generated-by: OBO-Edit 2.1-beta19
+auto-generated-by: OBO-Edit 2.1-rc2
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -260,9 +260,8 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000023
-name: wee
-def: "A cell morphology phenotype characterized by abnormally small cells." [PomBase:mah]
-synonym: "small cells" EXACT [PomBase:mah]
+name: small cells
+def: "A cell morphology phenotype in which cells have an abnormally low volume." [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000596
 intersection_of: inheres_in CL:0000000
@@ -1530,9 +1529,8 @@ name: elongated multinucleate cells
 def: "A cell phenotype in which cells contain more than one nucleus apiece and are elongated." [PomBase:mah]
 is_a: FYPO:0000017 ! elongated cells
 is_a: FYPO:0000061 ! multinucleate
-intersection_of: PATO:0000573
-intersection_of: PATO:0001908
-intersection_of: inheres_in CL:0000000
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000061 ! multinucleate
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
 
@@ -3783,8 +3781,8 @@ creation_date: 2011-06-15T05:11:00Z
 [Term]
 id: FYPO:0000346
 name: small spores
-def: "A cell morphology phenotype characterized by abnormally small spores." [PomBase:mah]
-is_a: FYPO:0000023 ! wee
+def: "A cell morphology phenotype in which spores have an abnormally low volume." [PomBase:mah]
+is_a: FYPO:0000023 ! small cells
 is_a: FYPO:0000348 ! abnormal spore morphology
 intersection_of: PATO:0000596
 intersection_of: inheres_in CL:0000596
@@ -4945,7 +4943,7 @@ def: "A mixed population phenotype in which a microcolony forms, all cells in th
 is_a: FYPO:0000299 ! microcolony formation
 is_a: FYPO:0000317 ! mixed population
 relationship: includes_cells_with_phenotype FYPO:0000017 ! elongated cells
-relationship: includes_cells_with_phenotype FYPO:0000023 ! wee
+relationship: includes_cells_with_phenotype FYPO:0000023 ! small cells
 created_by: midori
 creation_date: 2011-08-12T02:39:05Z
 
@@ -5951,6 +5949,7 @@ name: abnormal protein transport
 def: "A cellular process phenotype in which protein transport is abnormal." [PomBase:mah]
 synonym: "protein transport: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0000443 ! abnormal protein localization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0015031
 intersection_of: qualifier PATO:0000460
@@ -7267,6 +7266,26 @@ intersection_of: inheres_in GO:0034613
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2011-10-05T04:52:48Z
+
+[Term]
+id: FYPO:0000645
+name: small vegetative cells
+def: "A cell morphology phenotype in which vegetatively growing cells have an abnormally low volume." [PomBase:mah]
+synonym: "wee" EXACT [PomBase:jh, PomBase:mah]
+is_a: FYPO:0000023 ! small cells
+intersection_of: PATO:0000596
+intersection_of: during GO:0072690
+intersection_of: inheres_in CL:0000596
+created_by: midori
+creation_date: 2011-10-07T02:03:07Z
+
+[Term]
+id: FYPO:0000646
+name: swollen vegetative cells
+def: "A cell morphology phenotype in which a vegetatively growing cell has a larger volume than normal." []
+is_a: FYPO:0000025 ! swollen cells
+created_by: midori
+creation_date: 2011-10-07T04:19:54Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
