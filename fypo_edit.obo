@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 10:10:2011 15:44
+date: 13:10:2011 15:09
 saved-by: midori
-auto-generated-by: OBO-Edit 2.1-rc2
+auto-generated-by: OBO-Edit 2.1-rc1
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -7197,7 +7197,7 @@ creation_date: 2011-08-31T02:27:49Z
 [Term]
 id: FYPO:0000639
 name: delayed septation
-def: "A cellular process phenotype in which the occurrence of septation is delayed." [PomBase:al, PomBase:mah]
+def: "A cellular process phenotype in which septation takes place later than normal." [PomBase:al, PomBase:mah]
 synonym: "delayed barrier septum formation involved in cell cycle cytokinesis" EXACT [PomBase:mah]
 synonym: "delayed septum formation" BROAD [PomBase:mah]
 is_a: FYPO:0000117 ! abnormal septation
@@ -7271,7 +7271,6 @@ creation_date: 2011-10-05T04:52:48Z
 id: FYPO:0000645
 name: small vegetative cells
 def: "A cell morphology phenotype in which vegetatively growing cells have an abnormally low volume." [PomBase:mah]
-synonym: "wee" EXACT [PomBase:jh, PomBase:mah]
 is_a: FYPO:0000023 ! small cells
 intersection_of: PATO:0000596
 intersection_of: during GO:0072690
@@ -7298,6 +7297,49 @@ intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0019835
 created_by: midori
 creation_date: 2011-10-10T03:28:02Z
+
+[Term]
+id: FYPO:0000648
+name: small viable vegetative cells
+def: "A cell morphology phenotype in which vegetatively growing cells are viable but have an abnormally low volume. Note that small viable cells result from a cell cycle size regulation defect." [PomBase:mah]
+synonym: "wee" EXACT [PomBase:jh, PomBase:mah]
+is_a: FYPO:0000124 ! viable
+is_a: FYPO:0000645 ! small vegetative cells
+created_by: midori
+creation_date: 2011-10-13T12:06:45Z
+
+[Term]
+id: FYPO:0000649
+name: increased septation
+def: "A cellular process phenotype in which the occurrence of septation is increased." [PomBase:mah]
+synonym: "increased barrier septum formation involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "increased septum formation" BROAD [PomBase:mah]
+is_a: FYPO:0000117 ! abnormal septation
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0071937
+created_by: midori
+creation_date: 2011-10-13T12:33:47Z
+
+[Term]
+id: FYPO:0000650
+name: increased septation index
+def: "A cell population phenotype in which the septation index is higher than normal. The septation index is the proportion of the population undergoing septation at any given time, and is usually around 10% (varying between 7-15%) for wild type." [PomBase:mah, PomBase:vw]
+is_a: FYPO:0000003 ! cell population phenotype
+relationship: includes_cells_with_phenotype FYPO:0000651 ! increased duration of septation
+created_by: midori
+creation_date: 2011-10-13T12:34:42Z
+
+[Term]
+id: FYPO:0000651
+name: increased duration of septation
+def: "A cellular process phenotype in which the duration of septation is increased." [PomBase:mah]
+synonym: "increased duration of barrier septum formation involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "increased duration of septum formation" BROAD [PomBase:mah]
+is_a: FYPO:0000117 ! abnormal septation
+intersection_of: PATO:0000498
+intersection_of: inheres_in GO:0071937
+created_by: midori
+creation_date: 2011-10-13T03:07:53Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
