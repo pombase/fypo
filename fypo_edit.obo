@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 13:10:2011 15:09
+date: 11:11:2011 15:35
 saved-by: midori
-auto-generated-by: OBO-Edit 2.1-rc1
+auto-generated-by: OBO-Edit 2.1-rc2
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -48,8 +48,6 @@ alt_id: FYPO:0000019
 def: "A cell phenotype characterized by altered cell morphology." [PomBase:mah]
 synonym: "cell morphology, misshapen cells" EXACT [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
-intersection_of: PATO:0000051
-intersection_of: inheres_in CL:0000000
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -2046,7 +2044,7 @@ name: abnormal protein targeting via the multivesicular body sorting pathway
 def: "A cellular process phenotype in which protein targeting to the vacuole via the multivesicular sorting pathway, leading to ubiquitin-dependent protein degradation, is abnormal." [PomBase:mah]
 synonym: "abnormal protein targeting to vacuole involved in ubiquitin-dependent protein catabolic process via the multivesicular body sorting pathway" EXACT [PomBase:mah]
 is_a: FYPO:0000171 ! abnormal late endosome to vacuole transport
-is_a: FYPO:0000215 ! abnormal intracellular protein transport
+is_a: FYPO:0000676 ! abnormal protein targeting to vacuole
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0043328
 intersection_of: qualifier PATO:0000460
@@ -2818,8 +2816,8 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000253
 name: increased HMG-CoA reductase activity
-def: "A cellular metabolism phenotype in which the observed rate of hydroxymethylglutaryl-CoA reductase (NADPH) activity is increased." [PMID:19041767, PomBase:mah]
-is_a: FYPO:0000140 ! cellular metabolism phenotype
+def: "A molecular function phenotype in which the observed rate of hydroxymethylglutaryl-CoA reductase (NADPH) activity is increased." [PMID:19041767, PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
 intersection_of: PATO:0000912
 intersection_of: inheres_in GO:0004420
 created_by: midori
@@ -7340,6 +7338,279 @@ intersection_of: PATO:0000498
 intersection_of: inheres_in GO:0071937
 created_by: midori
 creation_date: 2011-10-13T03:07:53Z
+
+[Term]
+id: FYPO:0000652
+name: molecular function phenotype
+def: "A phenotype that affects a molecular function such as binding or catalytic activity." [PomBase:mah]
+is_a: FYPO:0000001 ! phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0003674
+created_by: midori
+creation_date: 2011-11-11T10:42:36Z
+
+[Term]
+id: FYPO:0000653
+name: DNA binding phenotype
+def: "A phenotype that affects DNA binding." [PomBase:mah]
+is_a: FYPO:0000652 ! molecular function phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0003677
+created_by: midori
+creation_date: 2011-11-11T10:43:39Z
+
+[Term]
+id: FYPO:0000654
+name: catalytic activity phenotype
+def: "A phenotype that affects a catalytic activity." [PomBase:mah]
+synonym: "enzymatic activity phenotype" EXACT [PomBase:mah]
+is_a: FYPO:0000652 ! molecular function phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0003824
+created_by: midori
+creation_date: 2011-11-11T10:44:09Z
+
+[Term]
+id: FYPO:0000655
+name: normal DNA binding
+def: "A molecular function phenotype in which occurrence of DNA binding by a mutated gene product is normal." [PomBase:mah]
+is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000653 ! DNA binding phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003677
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-11-11T10:45:30Z
+
+[Term]
+id: FYPO:0000656
+name: abnormal DNA binding
+def: "A molecular function phenotype in which occurrence of DNA binding by a mutated gene product is abnormal." [PomBase:mah]
+is_a: FYPO:0000653 ! DNA binding phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003677
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-11-11T10:45:30Z
+
+[Term]
+id: FYPO:0000657
+name: increased DNA binding
+def: "A molecular function phenotype in which occurrence of DNA binding by a mutated gene product is increased." [PomBase:mah]
+is_a: FYPO:0000656 ! abnormal DNA binding
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0003677
+created_by: midori
+creation_date: 2011-11-11T10:45:30Z
+
+[Term]
+id: FYPO:0000658
+name: decreased DNA binding
+def: "A molecular function phenotype in which occurrence of DNA binding by a mutated gene product is decreased." [PomBase:mah]
+is_a: FYPO:0000656 ! abnormal DNA binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003677
+created_by: midori
+creation_date: 2011-11-11T10:45:30Z
+
+[Term]
+id: FYPO:0000659
+name: abolished DNA binding
+def: "A molecular function phenotype in which occurrence of DNA binding by a mutated gene product is abolished." [PomBase:mah]
+is_a: FYPO:0000656 ! abnormal DNA binding
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0003677
+created_by: midori
+creation_date: 2011-11-11T10:45:30Z
+
+[Term]
+id: FYPO:0000660
+name: normal catalytic activity
+def: "A molecular function phenotype in which a the observed rate of a specified catalytic activity is normal." [PomBase:mah]
+is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000654 ! catalytic activity phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003824
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-11-11T10:46:28Z
+
+[Term]
+id: FYPO:0000661
+name: abnormal catalytic activity
+def: "A molecular function phenotype in which a the observed rate of a specified catalytic activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000654 ! catalytic activity phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003824
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-11-11T10:46:28Z
+
+[Term]
+id: FYPO:0000662
+name: increased catalytic activity
+def: "A molecular function phenotype in which a the observed rate of a specified catalytic activity is increased." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0003824
+created_by: midori
+creation_date: 2011-11-11T10:46:28Z
+
+[Term]
+id: FYPO:0000663
+name: decreased catalytic activity
+def: "A molecular function phenotype in which a the observed rate of a specified catalytic activity is decreased." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003824
+created_by: midori
+creation_date: 2011-11-11T10:46:28Z
+
+[Term]
+id: FYPO:0000664
+name: abolished catalytic activity
+def: "A molecular function phenotype in which a specified catalytic activity is abolished." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0003824
+created_by: midori
+creation_date: 2011-11-11T10:46:28Z
+
+[Term]
+id: FYPO:0000665
+name: normal peptidase activity
+def: "A molecular function phenotype in which the observed rate of a peptidase activity is normal." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0008233
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-11-11T10:46:47Z
+
+[Term]
+id: FYPO:0000666
+name: abnormal peptidase activity
+def: "A molecular function phenotype in which the observed rate of a peptidase activity is abnormal." [PomBase:mah]
+synonym: "abnormal protease activity" EXACT [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0008233
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-11-11T10:46:47Z
+
+[Term]
+id: FYPO:0000667
+name: increased peptidase activity
+def: "A molecular function phenotype in which the observed rate of a peptidase activity is increased." [PomBase:mah]
+synonym: "increased peptidase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0000666 ! abnormal peptidase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0008233
+created_by: midori
+creation_date: 2011-11-11T10:46:47Z
+
+[Term]
+id: FYPO:0000668
+name: decreased peptidase activity
+def: "A molecular function phenotype in which the observed rate of a peptidase activity is decreased." [PomBase:mah]
+synonym: "decreased peptidase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0000666 ! abnormal peptidase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0008233
+created_by: midori
+creation_date: 2011-11-11T10:46:47Z
+
+[Term]
+id: FYPO:0000669
+name: abolished peptidase activity
+def: "A molecular function phenotype in which a peptidase activity is abolished." [PomBase:mah]
+synonym: "abolished protease activity" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0000666 ! abnormal peptidase activity
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0008233
+created_by: midori
+creation_date: 2011-11-11T10:46:47Z
+
+[Term]
+id: FYPO:0000670
+name: abnormal chromosome separation
+def: "A cellular process phenotype in which chromosome separation is abnormal." [PomBase:mah]
+is_a: FYPO:0000029 ! abnormal chromosome segregation
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051304
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-11-11T01:51:59Z
+
+[Term]
+id: FYPO:0000671
+name: abnormal rDNA separation
+def: "A cellular process phenotype in which chromosome separation at the rDNA repeat regions is abnormal." [PomBase:mah]
+synonym: "abnormal segregation of nucleolar rDNA" RELATED [PomBase:mah]
+is_a: FYPO:0000670 ! abnormal chromosome separation
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0034500
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-11-11T01:59:59Z
+
+[Term]
+id: FYPO:0000672
+name: normal cell morphology
+def: "A cell phenotype characterized by normal cell morphology." [PomBase:mah]
+is_a: FYPO:0000136 ! cellular structure phenotype
+is_a: FYPO:0000257 ! normal phenotype
+created_by: midori
+creation_date: 2011-11-11T02:51:12Z
+
+[Term]
+id: FYPO:0000673
+name: normal septation
+def: "A cellular process phenotype in which septation is normal." [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071937
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-11-11T02:53:07Z
+
+[Term]
+id: FYPO:0000674
+name: normal growth at high temperature
+def: "A cell growth phenotype in which cells grow at normal rate at a high temperature." [PomBase:mah]
+is_a: FYPO:0000047 ! normal cell growth
+intersection_of: PATO:0001305
+intersection_of: during FYPO:0000047 ! normal cell growth
+intersection_of: inheres_in BTO:0000316
+created_by: midori
+creation_date: 2011-11-11T02:55:04Z
+
+[Term]
+id: FYPO:0000675
+name: abnormal protein targeting
+def: "A transport phenotype in which protein targeting is abnormal." [PomBase:mah]
+is_a: FYPO:0000215 ! abnormal intracellular protein transport
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006605
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-11-11T03:24:12Z
+
+[Term]
+id: FYPO:0000676
+name: abnormal protein targeting to vacuole
+def: "A transport phenotype in which protein targeting to the vacuole is abnormal." [PomBase:mah]
+synonym: "abnormal vacuolar protein sorting" EXACT [PomBase:mah]
+is_a: FYPO:0000675 ! abnormal protein targeting
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006623
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-11-11T03:25:01Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
