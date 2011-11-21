@@ -234,6 +234,9 @@ for this one, will also need to link to something for the transcript or where it
 	SO:0000646 siRNA [descendant of transcript]
 	SO:0000657 repeat_region - or new descendant for centromere outer repeat?
 
+2011-11-18 response: PATO:2269 should do
+	use SO - request transcript term if necessary
+
 another example (added 2011-06-15):
 id: FYPO:0000255
 name: localization defects, nuclear accumulation of Pap1 and Sty1
@@ -256,6 +259,8 @@ def: "A gene expression phenotype in which transcription of genes that are regul
 is_a: FYPO:0000142 ! gene expression phenotype
 
 probably want xp to involve GO:0071931 positive regulation of transcription involved in G1/S phase of mitotic cell cycle, or maybe parent GO:0000083 regulation of ...
+2011-11-18 update: try doing this with annotation extension
+
 ---
 
 2011-06-03:
@@ -281,6 +286,11 @@ intersection_of: inheres_in SO:0001059
 cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/obo/ontology/phenotype/worm_phenotype_xp.obo
 	id: WBPhenotype:0000228
 	name: spontaneous mutation rate increased
+
+2011-11-18 response: should "mutation" be a process in GO?
+	normal in evolutionary sense ... but not at level of individual cell
+	ask GO (and maybe chris will have some idea where else it could live)
+		wherever it goes, mutation would have subtypes
 
 
 - have added terms for haploinsufficient and haplosufficient (syn: haploproficient)
@@ -317,14 +327,23 @@ cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/
 		name: growth defect, required for stationary phase
 		use GO:0060274 ! maintenance of stationary phase? or GO:0070314 ! G1 to G0 transition (related synonym "stationary phase")?
 
+reduced viability or inviable, during [phase], inheres in cell population [which we'll have to create]
+
+2011-11-18 response: use "during" somewhere
+
 - is there a quality for requirement, other than auxotrophy?
 	and review fypo:246 xp - any good?
+	for 246 - need something for depends_on - use the stuff we've put in the GO col16 set
+
 
 2011-06-15:
 - need xp for FYPO:0000252 increased spontaneous diploidization
 	def: A cell phenotype in which heterothallic haploid cells spontaneously form cells with diploid DNA content at a higher frequency than normal.
 	not sure whether there's a GO term that corresponds
 	(may be moot if we decide the diploidization is downstream of the other cell div defects)
+
+2011-11-18 response: PATO increased rate
+	request in GO - diploidization
 
 - added fypo:255 to question about 'accumulation' above
 	id: FYPO:0000255
@@ -343,6 +362,8 @@ cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/
 	synonym: "spores produced smaller colonies" RELATED [PomBase:mah]
 	is_a: FYPO:0000046 ! slow cell growth
 	is_a: FYPO:0000305 ! abnormal spore germination
+2011-11-18 response: use decreased_rate, cell growth, RO "preceded_by" (also look for preceding, etc)
+
 
 	id: FYPO:0000279
 	name: formation of azygotic asci upon sporulation
@@ -363,6 +384,10 @@ cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/
 	intersection_of: during GO:0045023
 	intersection_of: inheres_in GO:0008219
 	intersection_of: qualifier PATO:0000460
+2011-11-18 response: keep during 45023, use inviable? pato "lacks", cell cycle, cell growth?
+	go:45023 process fails, and cell death ensues
+	upon further discussion, settle on pato:lacks, go:45023
+		tho inferring cell death is hard with present go structure
 
 
 2011-07-19
@@ -378,7 +403,7 @@ cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/
 		chromosome organization GO:0051276
 		DNA integrity checkpoint GO:0031570
 		spindle assembly checkpoint GO:0071173
-
+	maybe revisit in go - cf. mitoch genome maintenance (which is probably missing a parent)
 
 2011-08-12
  - some new terms without xps - advice appreciated
@@ -392,6 +417,10 @@ cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/
 	synonym: "cell cycle arrest with 2C DNA content" NARROW [PomBase:mah]
 	is_a: FYPO:0000407 ! cell cycle arrest
 
+2011-11-18 response: GG says you could create a grouping term with ORs, but it would be a mess
+	RH prefers just to have term with no xp
+	or could say "after DNA replication"; G & R arguing about whether to do an xp tho
+
 	[Term]
 	id: FYPO:0000453
 	name: DNA content decreased
@@ -399,6 +428,9 @@ cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/
 	is_a: FYPO:0000002 ! cell phenotype
 
    also FYPO:0000158 - increased ditto
+2011-11-18 response: be consistent; for now use pato:concentration terms
+	inheres in cell, towards DNA
+
 
  - also thinking about adding a grouping term for 'DNA phenotype' (or some name to that effect) ...
 
@@ -416,15 +448,14 @@ cf. worm phenotype - no xp def in http://obo.cvs.sourceforge.net/*checkout*/obo/
 
 2011-11-11
  - how to do xps for normal and abnormal cell morphology?
-	for cell morphology I thought of: 
+just do this:	for cell morphology I thought of: 
 		intersection_of: PATO:0000051 ! morphology
-		intersection_of: inheres_in CL:0000000 ! cell
-
-	but how to connect to
-		intersection_of: PATO:0000001 ! quality
 		intersection_of: qualifier PATO:0000460 ! abnormal (or PATO:0000461 ! normal)
-		intersection_of: inheres_in ???
+		intersection_of: inheres_in CL:0000000 ! cell
 
  - does the proposed solution SF 3364030 make sense? if so, is there a way to construct an xp?
 	https://sourceforge.net/tracker/?func=detail&aid=3364030&group_id=65526&atid=2096431
+
+2011-11-18 response: ask go for cell cycle arrest in response to caffeine
+
 
