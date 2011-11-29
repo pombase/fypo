@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 11:11:2011 15:35
+date: 29:11:2011 18:04
 saved-by: midori
-auto-generated-by: OBO-Edit 2.1-rc2
+auto-generated-by: OBO-Edit 2.1-rc3
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -1807,6 +1807,9 @@ id: FYPO:0000158
 name: DNA content increased
 def: "A cell phenotype in which a cell contains more DNA than normal." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0001162
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:16991
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2664,9 +2667,8 @@ name: inviable upon G0 to G1 transition
 def: "A cell phenotype in which cells fail to resume growth after several days in G0 phase. The inviable cells show some features characteristic of apoptosis, including loss of DNA." [PMID:19197239, PomBase:mah]
 synonym: "die in G0 with an apoptotic-like phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
-intersection_of: PATO:0000718
-intersection_of: during GO:0045023
-intersection_of: inheres_in CL:0000000
+intersection_of: PATO:0001558
+intersection_of: inheres_in GO:0045023
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2703,8 +2705,8 @@ def: "A cell growth phenotype in which cells grow at a normal rate in a medium c
 synonym: "growth defect, normal growth with ammonia nitrogen source" RELATED [PomBase:mah]
 is_a: FYPO:0000047 ! normal cell growth
 intersection_of: FYPO:0000047 ! normal cell growth
-intersection_of: qualifier PATO:0000467
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:16134
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2716,8 +2718,8 @@ def: "A cell growth phenotype in which cells grow at a normal rate in a medium c
 synonym: "growth defect, normal growth with proline nitrogen source" RELATED [PomBase:mah]
 is_a: FYPO:0000047 ! normal cell growth
 intersection_of: FYPO:0000047 ! normal cell growth
-intersection_of: qualifier PATO:0000467
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:17203
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2728,6 +2730,7 @@ name: loss of viability upon nutrient depletion
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when cells are deprived of nutrients such as carbon or nitrogen." [PomBase:mah]
 synonym: "growth defect, required during nutrient depletion" RELATED [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
+<is_a: FYPO:0000003
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2747,8 +2750,8 @@ def: "A cell growth phenotype in which a cell grows only in the presence of an a
 synonym: "growth defect, requires antioxidant for growth" EXACT [PomBase:mah]
 is_a: FYPO:0000045 ! abnormal cell growth
 intersection_of: FYPO:0000045 ! abnormal cell growth
-intersection_of: qualifier PATO:0000462
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000462
 intersection_of: towards CHEBI:22586
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2759,9 +2762,9 @@ name: slow growth at high temperature
 def: "A cell growth phenotype in which cells grow at a slower rate than normal at a high temperature." [PomBase:mah]
 synonym: "growth defect, slow growth at high temperatures" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
-intersection_of: qualifier PATO:0001305
 intersection_of: FYPO:0000046 ! slow cell growth
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001305
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2775,8 +2778,8 @@ synonym: "growth defect, slow growth with ammonia nitrogen source" EXACT [PomBas
 synonym: "slow cell growth in minimal medium" RELATED []
 is_a: FYPO:0000046 ! slow cell growth
 intersection_of: FYPO:0000046 ! slow cell growth
-intersection_of: qualifier PATO:0000467
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:16134
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2788,8 +2791,8 @@ def: "A cell growth phenotype in which cells grow at a slower rate than normal i
 synonym: "growth defect, slow growth with proline nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 intersection_of: FYPO:0000046 ! slow cell growth
-intersection_of: qualifier PATO:0000467
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:17203
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2801,8 +2804,8 @@ def: "A cell growth phenotype in which cells grow at a slower rate than normal i
 synonym: "growth defects, growth inhibition in galactose-based medium" RELATED [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 intersection_of: FYPO:0000046 ! slow cell growth
-intersection_of: qualifier PATO:0000467
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:12936
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2842,6 +2845,10 @@ name: nuclear accumulation of Pap1 and Sty1
 def: "A localization phenotype in which the proteins Pap1 and Sty1 accumulate, and are constitutively located in, the nucleus." [PMID:12896976, PomBase:mah]
 synonym: "localization defects, nuclear accumulation of Pap1 and Sty1" EXACT [PomBase:mah]
 is_a: FYPO:0000443 ! abnormal protein localization
+intersection_of: PATO:0002269
+intersection_of: inheres_in CL:0000000
+intersection_of: towards PR:000027500
+intersection_of: towards PR:000027898
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3077,6 +3084,8 @@ def: "A cellular process phenotype in which cells grow slowly following spore ge
 synonym: "spores produced smaller colonies" RELATED [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 is_a: FYPO:0000305 ! abnormal spore germination
+intersection_of: FYPO:0000046 ! slow cell growth
+intersection_of: preceded_by GO:0009847<
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3116,8 +3125,8 @@ name: viable at high temperature
 def: "A viability phenotype in which cells are able to survive at a high temperature." [PomBase:mah]
 is_a: FYPO:0000124 ! viable
 intersection_of: FYPO:0000124 ! viable
-intersection_of: qualifier PATO:0001305
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001305
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3158,8 +3167,8 @@ name: abnormal subcellular structure
 def: "A cellular structure phenotype in which the amount, distribution, or morphology of a cell part is abnormal." [PomBase:mah]
 is_a: FYPO:0000136 ! cellular structure phenotype
 intersection_of: PATO:0000051
-intersection_of: qualifier PATO:0000460
 intersection_of: inheres_in GO:0044464
+intersection_of: qualifier PATO:0000460
 created_by: mah79
 creation_date: 2011-04-21T11:18:18Z
 
@@ -3424,8 +3433,8 @@ def: "A phenotype in which a spore germinates to produce a germ tube with abnorm
 is_a: FYPO:0000287 ! abnormal subcellular structure
 is_a: FYPO:0000316 ! inviable germinating spore
 intersection_of: PATO:0000051
-intersection_of: qualifier PATO:0000460
 intersection_of: inheres_in GO:0032172
+intersection_of: qualifier PATO:0000460
 created_by: mah79
 creation_date: 2011-04-27T11:47:04Z
 
@@ -3809,8 +3818,8 @@ name: abnormal spore morphology
 def: "A cell phenotype characterized by altered spore morphology." [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000051
-intersection_of: qualifier PATO:0000460
 intersection_of: inheres_in CL:0000596
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-07-07T03:35:26Z
 
@@ -4800,8 +4809,8 @@ def: "A cell growth phenotype in which cells grow at a slower rate than normal i
 synonym: "slow cell growth on glycerol plus ethanol" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 intersection_of: FYPO:0000046 ! slow cell growth
-intersection_of: qualifier PATO:0000467
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:16236
 intersection_of: towards CHEBI:17754
 created_by: midori
@@ -4937,6 +4946,9 @@ id: FYPO:0000453
 name: DNA content decreased
 def: "A cell phenotype in which a cell contains less DNA than normal." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0001163
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:16991
 created_by: midori
 creation_date: 2011-08-12T02:37:29Z
 
@@ -7182,8 +7194,8 @@ synonym: "enhanced growth on glucose" RELATED [PomBase:mah]
 synonym: "fast cell growth on glucose carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0000636 ! increased cell growth rate
 intersection_of: FYPO:0000046 ! slow cell growth
-intersection_of: qualifier PATO:0000467
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:17634
 created_by: midori
 creation_date: 2011-08-31T02:20:29Z
@@ -7589,9 +7601,9 @@ id: FYPO:0000674
 name: normal growth at high temperature
 def: "A cell growth phenotype in which cells grow at normal rate at a high temperature." [PomBase:mah]
 is_a: FYPO:0000047 ! normal cell growth
-intersection_of: qualifier PATO:0001305
 intersection_of: FYPO:0000047 ! normal cell growth
 intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001305
 created_by: midori
 creation_date: 2011-11-11T02:55:04Z
 
@@ -7617,6 +7629,48 @@ intersection_of: inheres_in GO:0006623
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-11-11T03:25:01Z
+
+[Term]
+id: FYPO:0000677
+name: abnormal protein targeting to prospore membrane
+def: "A transport phenotype in which protein targeting to the prospore membrane is abnormal." [PomBase:mah]
+is_a: FYPO:0000675 ! abnormal protein targeting
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0072693
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-11-29T05:16:27Z
+
+[Term]
+id: FYPO:0000678
+name: chromosome nondisjunction at meiosis I
+def: "A cellular process phenotype in which homologous chromosomes fail to segregate properly, or disjoin, during meiosis I." [PomBase:mah]
+is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
+intersection_of: inheres_in GO:0045143
+intersection_of: qualifier PATO:0001558
+created_by: midori
+creation_date: 2011-11-29T05:44:25Z
+
+[Term]
+id: FYPO:0000679
+name: developmental process phenotype
+def: "A phenotype that affects a developmental process." [PomBase:mah]
+is_a: FYPO:0000300 ! biological process phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0032502
+created_by: midori
+creation_date: 2011-11-29T06:02:16Z
+
+[Term]
+id: FYPO:0000680
+name: abnormal ascus development
+def: "A developmental process phenotype in which ascus development is abnormal." [PomBase:mah]
+is_a: FYPO:0000679 ! developmental process phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0075317
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-11-29T06:03:31Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
@@ -7680,6 +7734,11 @@ name: positively_regulates
 is_a: regulates ! regulates
 
 [Typedef]
+id: preceded_by
+name: preceded_by
+xref: OBO_REL:preceded_by
+
+[Typedef]
 id: qualifier
 name: qualifier
 comment: placeholder relation to indicate normality/abnormality.
@@ -7699,4 +7758,3 @@ id: towards
 name: towards
 comment: relation binding a relational quality or disposition to the relevant type of entity
 xref: OBO_REL:towards
-
