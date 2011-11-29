@@ -105,16 +105,16 @@ is the population-phenotype approach to 'long low pen' etc. ok?
 	A: keep going, because (once again) anything consistent can be converted if necessary
 	note 2011-06-01: could just change to has_part; I wouldn't mind. but will change later ...
 
-=== OUTSTANDING ===
-
 analogous question - what to do about vegetative growth etc.?
 	A: request 'vegetative growth' in GO (then if that fails we'll revisit)
+	DONE
 
 need differentiae for 'sensitive to $stress' terms
 	e.g. ontology terms for radiation (UV, ionizing radiation, etc)
 	A: also connected with the Conditions Issue, plus additional need-ontology crunchiness
 	update 2011-05: most of these now use 'response to' process terms, so can punt
 
+=== OUTSTANDING ===
 
 need to clarify definitions and distinctions between some shape terms
 	bulbous (is_a spheroid) vs. teardrop-shaped (not under spheroid)
@@ -129,6 +129,7 @@ inspired by previous: what to do about totally abnormal process?
 	don't belong in GO or PATO
 	A for now: try to define in terms of GO process(es)
 	example 2011-05-12: used GO:0018158 (protein oxidation) for FYPO:0000219 xp, because carbonylation is abnormal
+		example DONE
 
 population phenotypes
 	need to find or create a term for 'colony'; maybe also others (liq culture?)
@@ -182,10 +183,12 @@ ACTION ITEM (M) - done
 2.
 set up to do owl conversion & reasoning
 	after beerfest - install on themonster?
+	update Nov. 2011: looking into using Oort
 
 3.
 organize mtg on shapes
 	update: 1st meeting held 2011-06-09
+	notes taken ... not much has happened since (2011-11)
 
 4.
 G & R will try incorporating into phenotype network
@@ -211,6 +214,9 @@ intersection_of: towards CHEBI:29035
 intersection_of: inheres_in BTO:0000316 ! culture medium
 created_by: mah79
 creation_date: 2011-04-20T01:42:21Z
+
+update 2011-11-28: this one is consistent with pattern from May mtg, so leaving for now.
+
 ---
 
 2011-05-12: new question
@@ -236,6 +242,7 @@ for this one, will also need to link to something for the transcript or where it
 
 2011-11-18 response: PATO:2269 should do
 	use SO - request transcript term if necessary
+	update 2011-11-28: SO term requested https://sourceforge.net/tracker/?func=detail&aid=3444197&group_id=72703&atid=810408
 
 another example (added 2011-06-15):
 id: FYPO:0000255
@@ -243,7 +250,9 @@ name: localization defects, nuclear accumulation of Pap1 and Sty1
 def: "A localization phenotype in which the proteins Pap1 and Sty1 accumulate, and are constitutively located in, the nucleus." [PomBase:mah, PMID:12896976]
 is_a: FYPO:0000138 ! localization phenotype
 
-presumably will need PRO IDs for Pap 1 and Sty1
+presumably will need PRO IDs for Pap1 and Sty1
+	Sty1 done in col17 push - id: PR:000027500
+	Pap1 requested 2011-11-28 REF980946
 ---
 
 2011-05-16:
@@ -459,3 +468,20 @@ just do this:	for cell morphology I thought of:
 2011-11-18 response: ask go for cell cycle arrest in response to caffeine
 
 
+--------------------
+
+2011-11-28
+ - xps vs. annotations + extensions for conditions
+	we know they're semantically equivalent, and we expect to have some of each (pre-compose for combinations that crop up frequently or would be particularly useful in analysis interpretation)
+	how to construct xps using conditions?
+		creating small ontology of conditions in-house for now, so can point to those IDs
+	[Term]
+	id: FYPO:0000242
+	name: normal cell growth on ammonia nitrogen source
+	def: "A cell growth phenotype in which cells grow at a normal rate in a medium containing ammonia as the nitrogen source." [PomBase:mah]
+	synonym: "growth defect, normal growth with ammonia nitrogen source" RELATED [PomBase:mah]
+	is_a: FYPO:0000047 ! normal cell growth
+	intersection_of: FYPO:0000047 ! normal cell growth
+	intersection_of: PATO:0000467
+	intersection_of: inheres_in BTO:0000316
+	intersection_of: towards CHEBI:16134
