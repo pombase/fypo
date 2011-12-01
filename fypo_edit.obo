@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 29:11:2011 18:04
+date: 01:12:2011 17:28
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1-rc3
 default-namespace: fission_yeast_phenotype
@@ -4431,6 +4431,7 @@ creation_date: 2011-07-14T06:45:37Z
 id: FYPO:0000407
 name: cell cycle arrest
 def: "A cellular process phenotype in which cell cycle progression is arrested." [PomBase:mah]
+comment: Note that this term should be used only for cell cycle arrest that occurs in mutants. For phenotypes affecting the G1 cell cycle that normally occurs in response to mating pheromone, see 'abnormal cell cycle arrest in response to pheromone' (FYPO:0000530) and its child terms.
 synonym: "arrested cell cycle progression" EXACT [PomBase:mah]
 synonym: "cell cycle progression: arrested" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000011 ! abnormal cell cycle progression
@@ -4835,6 +4836,8 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 comment: Arrest with replicated DNA may occur between late S and G2/M; if only DNA content is measured, the arrest point cannot be determined with greater precision.
 synonym: "cell cycle arrest with 2C DNA content" NARROW [PomBase:mah]
 is_a: FYPO:0000407 ! cell cycle arrest
+intersection_of: FYPO:0000407
+intersection_of: preceded_by GO:0006261
 created_by: midori
 creation_date: 2011-08-12T02:03:05Z
 
@@ -4842,6 +4845,7 @@ creation_date: 2011-08-12T02:03:05Z
 id: FYPO:0000445
 name: cell cycle arrest in mitotic G1 phase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G1 phase." [PomBase:mah]
+comment: Note that this term should be used only for cell cycle arrest that occurs in mutants. For phenotypes affecting the G1 cell cycle that normally occurs in response to mating pheromone, see 'abnormal cell cycle arrest in response to pheromone' (FYPO:0000530) and its child terms.
 synonym: "mitotic cell cycle progression in G1 phase: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic G1 phase arrest" EXACT [PomBase:mah]
 is_a: FYPO:0000407 ! cell cycle arrest
@@ -7672,6 +7676,227 @@ intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-11-29T06:03:31Z
 
+[Term]
+id: FYPO:0000681
+name: abnormal ascus development resulting in formation of two-spore ascus
+def: "A developmental process phenotype in which ascus development results in the formation of an ascus that has abnormal morphology and contains two diploid spores." [PMID:11156975, PomBase:mah, PomBase:vw]
+is_a: FYPO:0000680 ! abnormal ascus development
+created_by: midori
+creation_date: 2011-12-01T01:29:02Z
+
+[Term]
+id: FYPO:0000682
+name: abnormal regulation of molecular function
+def: "A regulation phenotype in which regulation of a molecular function is abnormal." [PomBase:mah]
+is_a: FYPO:0000145 ! regulation phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0065009
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-01T01:43:05Z
+
+[Term]
+id: FYPO:0000683
+name: constitutive catalytic activity
+def: "A regulation phenotype in which the basal activity of an enzyme is increased relative to normal. Basal enzyme activity is the activity observed in the absence of a regulator. Abnormally elevated basal activity may or may not reach the levels observed in the normal activated state." [PomBase:al, PomBase:mah]
+synonym: "constitutive enzymatic activity" EXACT [PomBase:mah]
+synonym: "constitutively active enzyme" RELATED [PomBase:mah]
+is_a: FYPO:0000682 ! abnormal regulation of molecular function
+created_by: midori
+creation_date: 2011-12-01T01:51:53Z
+
+[Term]
+id: FYPO:0000684
+name: slow cell growth on glycerol carbon source
+def: "A cell growth phenotype in which cells grow at a slower rate than normal in a medium containing glycerol as the carbon source." [PomBase:al, PomBase:mah]
+comment: Note that trace amounts of another carbon source are usually required for S. pombe growth on glycerol; yeast extract-based rich medium supplies the trace substance, but minimal medium must be supplemented. It is therefore important to annotate the growth medium as an experimental condition when using this term.
+is_a: FYPO:0000046 ! slow cell growth
+intersection_of: FYPO:0000046 ! slow cell growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:12936
+created_by: midori
+creation_date: 2011-12-01T04:41:03Z
+
+[Term]
+id: FYPO:0000685
+name: increased transcriptional response to pheromone
+def: "A cellular response phenotype in which pheromone-responsive positive regulation of transcription occurs at a lower level of pheromone than normal." [PomBase:mah]
+synonym: "increased sensitivity of positive regulation of transcription from RNA polymerase II promoter by pheromones to pheromone" EXACT [PomBase:mah]
+synonym: "sensitive to pheromone" RELATED [PomBase:al, PomBase:mah]
+is_a: FYPO:0000302 ! abnormal response to pheromone
+is_a: FYPO:0000623 ! abnormal positive regulation of transcription
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0007329
+created_by: midori
+creation_date: 2011-12-01T04:46:17Z
+
+[Term]
+id: FYPO:0000686
+name: normal peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase activity
+def: "A molecular function phenotype in which the observed rate of peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase activity is normal." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000224
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000687
+name: abnormal peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase activity
+def: "A molecular function phenotype in which the observed rate of peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000224
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000688
+name: decreased peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase activity
+def: "A molecular function phenotype in which the observed rate of peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase activity is decreased." [PomBase:mah]
+is_a: FYPO:0000687 ! abnormal peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0000224
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000689
+name: abnormal oxidoreductase activity
+def: "A molecular function phenotype in which the observed rate of an oxidoreductase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0016491
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000690
+name: decreased oxidoreductase activity
+def: "A molecular function phenotype in which the observed rate of an oxidoreductase activity is decreased." [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0000689 ! abnormal oxidoreductase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0016491
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000691
+name: normal DNA-1,N6-ethenoadenine N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of DNA-1,N6-ethenoadenine N-glycosylase activity is normal." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0052820
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000692
+name: abnormal DNA-1,N6-ethenoadenine N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of DNA-1,N6-ethenoadenine N-glycosylase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0052820
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000693
+name: decreased DNA-1,N6-ethenoadenine N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of DNA-1,N6-ethenoadenine N-glycosylase activity is decreased." [PomBase:mah]
+synonym: "reduced DNA-1,N6-ethenoadenine N-glycosylase activity" EXACT [PomBase:al]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0000692 ! abnormal DNA-1,N6-ethenoadenine N-glycosylase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0052820
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000694
+name: abolished DNA-1,N6-ethenoadenine N-glycosylase activity
+def: "A molecular function phenotype in which DNA-1,N6-ethenoadenine N-glycosylase activity is abolished." [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0000692 ! abnormal DNA-1,N6-ethenoadenine N-glycosylase activity
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0052820
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000695
+name: increased DNA-1,N6-ethenoadenine N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of DNA-1,N6-ethenoadenine N-glycosylase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0000692 ! abnormal DNA-1,N6-ethenoadenine N-glycosylase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0052820
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000696
+name: normal DNA-7-methylguanine glycosylase activity
+def: "A molecular function phenotype in which the observed rate of DNA-7-methylguanine glycosylase activity is normal." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0043916
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000697
+name: abnormal DNA-7-methylguanine glycosylase activity
+def: "A molecular function phenotype in which the observed rate of DNA-7-methylguanine glycosylase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0043916
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000698
+name: decreased DNA-7-methylguanine glycosylase activity
+def: "A molecular function phenotype in which the observed rate of DNA-7-methylguanine glycosylase activity is decreased." [PomBase:mah]
+synonym: "reduced DNA-7-methylguanine glycosylase activity" EXACT [PomBase:al]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0000697 ! abnormal DNA-7-methylguanine glycosylase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:00043916
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000699
+name: abolished DNA-7-methylguanine glycosylase activity
+def: "A molecular function phenotype in which DNA-7-methylguanine glycosylase activity is abolished." [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0000697 ! abnormal DNA-7-methylguanine glycosylase activity
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:00043916
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000700
+name: increased DNA-7-methylguanine glycosylase activity
+def: "A molecular function phenotype in which the observed rate of DNA-7-methylguanine glycosylase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0000697 ! abnormal DNA-7-methylguanine glycosylase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:00043916
+created_by: midori
+creation_date: 2011-12-01T05:15:00Z
+
 [Typedef]
 id: comprises_cells_with_phenotype
 name: comprises cells with phenotype
@@ -7758,3 +7983,4 @@ id: towards
 name: towards
 comment: relation binding a relational quality or disposition to the relevant type of entity
 xref: OBO_REL:towards
+
