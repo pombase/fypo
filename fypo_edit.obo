@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 01:12:2011 17:28
+date: 05:12:2011 16:55
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1-rc3
 default-namespace: fission_yeast_phenotype
@@ -344,6 +344,7 @@ id: FYPO:0000031
 name: abnormal conjugation
 def: "A cellular process phenotype in which conjugation is abnormal." [PomBase:mah]
 synonym: "abnormal conjugation with cellular fusion" EXACT [PomBase:mah]
+synonym: "abnormal zygote formation" RELATED [PomBase:mah]
 synonym: "conjugation defects" EXACT [PomBase:mah]
 is_a: FYPO:0000301 ! mating phenotype
 intersection_of: PATO:0000001
@@ -530,7 +531,7 @@ def: "A cellular process phenotype in which cells grow at a normal rate." [PomBa
 synonym: "growth normal" EXACT [PomBase:mah]
 is_a: FYPO:0000124 ! viable
 is_a: FYPO:0000139 ! cell growth phenotype
-is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0016049
 intersection_of: qualifier PATO:0000461
@@ -2344,7 +2345,7 @@ creation_date: 2011-04-13T03:41:10Z
 [Term]
 id: FYPO:0000207
 name: abnormal cellular response to caffeine
-def: "A chemical response phenotype in which the cellular response to caffeine is abnormal." [PomBase:mah]
+def: "A cellular response phenotype in which the cellular response to caffeine is abnormal." [PomBase:mah]
 is_a: FYPO:0000298 ! cellular response phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0071313
@@ -2355,7 +2356,7 @@ creation_date: 2011-04-13T03:41:10Z
 [Term]
 id: FYPO:0000208
 name: abnormal cellular response to cadmium ion
-def: "A chemical response phenotype in which the cellular response to cadmium ions is abnormal." [PomBase:mah]
+def: "A cellular response phenotype in which the cellular response to cadmium ions is abnormal." [PomBase:mah]
 is_a: FYPO:0000298 ! cellular response phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0071276
@@ -2528,7 +2529,7 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000225
 name: snowman during sporulation
-def: "A cell morphology phenotype in which a cell undregoing sporulation assumes a snowman shape, having two connected parts, roughly spherical, of different sizes." [PomBase:mah]
+def: "A cell morphology phenotype in which a cell undergoing sporulation assumes a snowman shape, having two connected parts, roughly spherical, of different sizes." [PomBase:mah]
 synonym: "cell morphology, snowman during sporulation" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 created_by: midori
@@ -2730,7 +2731,6 @@ name: loss of viability upon nutrient depletion
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when cells are deprived of nutrients such as carbon or nitrogen." [PomBase:mah]
 synonym: "growth defect, required during nutrient depletion" RELATED [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
-<is_a: FYPO:0000003
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3085,7 +3085,7 @@ synonym: "spores produced smaller colonies" RELATED [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 is_a: FYPO:0000305 ! abnormal spore germination
 intersection_of: FYPO:0000046 ! slow cell growth
-intersection_of: preceded_by GO:0009847<
+intersection_of: preceded_by GO:0009847
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3101,10 +3101,14 @@ creation_date: 2011-04-19T04:37:01Z
 [Term]
 id: FYPO:0000280
 name: sterile
+alt_id: FYPO:0000638
 def: "A cellular process phenotype in which conjugation is abolished." [PomBase:mah]
-is_a: FYPO:0000301 ! mating phenotype
+synonym: "conjugation abolished" EXACT []
+synonym: "zygote formation abolished" RELATED [PomBase:mah]
+is_a: FYPO:0000031 ! abnormal conjugation
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0000747
+intersection_of: qualifier PATO:0001508
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3153,7 +3157,6 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000286
 name: sensitive to manganese depletion
 def: "A cellular process phenotype in which cells grow poorly in medium that has a low concentration of manganese (Mn2+)." [PMID:14723709, PomBase:mah]
-comment: use CHEBI:29035 in cross-product
 is_a: FYPO:0000045 ! abnormal cell growth
 intersection_of: PATO:0001163
 intersection_of: inheres_in BTO:0000316
@@ -3333,6 +3336,7 @@ name: reduced conjugation frequency
 def: "A conjugation phenotype in which conjugation occurs less frequently than normal." [PomBase:mah]
 synonym: "decreased occurrence of conjugation" EXACT [PomBase:mah]
 synonym: "reduced conjugation efficiency" EXACT [PomBase:mah]
+synonym: "reduced zygote formation" RELATED [PomBase:mah]
 is_a: FYPO:0000031 ! abnormal conjugation
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0000747
@@ -4836,7 +4840,7 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 comment: Arrest with replicated DNA may occur between late S and G2/M; if only DNA content is measured, the arrest point cannot be determined with greater precision.
 synonym: "cell cycle arrest with 2C DNA content" NARROW [PomBase:mah]
 is_a: FYPO:0000407 ! cell cycle arrest
-intersection_of: FYPO:0000407
+intersection_of: FYPO:0000407 ! cell cycle arrest
 intersection_of: preceded_by GO:0006261
 created_by: midori
 creation_date: 2011-08-12T02:03:05Z
@@ -7205,16 +7209,6 @@ created_by: midori
 creation_date: 2011-08-31T02:20:29Z
 
 [Term]
-id: FYPO:0000638
-name: conjugation abolished
-def: "A cellular process phenotype in which conjugation is abolished." [PomBase:mah]
-is_a: FYPO:0000031 ! abnormal conjugation
-intersection_of: inheres_in GO:0000747
-intersection_of: qualifier PATO:0001508
-created_by: midori
-creation_date: 2011-08-31T02:27:49Z
-
-[Term]
 id: FYPO:0000639
 name: delayed septation
 def: "A cellular process phenotype in which septation takes place later than normal." [PomBase:al, PomBase:mah]
@@ -7266,7 +7260,7 @@ creation_date: 2011-09-28T12:16:57Z
 [Term]
 id: FYPO:0000643
 name: abnormal DNA integrity checkpoint
-def: "A cell cycle checkpoint phenotype that affects any DNA inegrity checkpoint." [PomBase:mah]
+def: "A cell cycle checkpoint phenotype that affects any DNA integrity checkpoint." [PomBase:mah]
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0031570
@@ -7301,7 +7295,7 @@ creation_date: 2011-10-07T02:03:07Z
 [Term]
 id: FYPO:0000646
 name: swollen vegetative cells
-def: "A cell morphology phenotype in which a vegetatively growing cell has a larger volume than normal." []
+def: "A cell morphology phenotype in which a vegetatively growing cell has a larger volume than normal." [PomBase:mah]
 is_a: FYPO:0000025 ! swollen cells
 created_by: midori
 creation_date: 2011-10-07T04:19:54Z
@@ -7396,8 +7390,8 @@ creation_date: 2011-11-11T10:44:09Z
 id: FYPO:0000655
 name: normal DNA binding
 def: "A molecular function phenotype in which occurrence of DNA binding by a mutated gene product is normal." [PomBase:mah]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000653 ! DNA binding phenotype
+is_a: FYPO:0000706 ! normal molecular function
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0003677
 intersection_of: qualifier PATO:0000461
@@ -7409,6 +7403,7 @@ id: FYPO:0000656
 name: abnormal DNA binding
 def: "A molecular function phenotype in which occurrence of DNA binding by a mutated gene product is abnormal." [PomBase:mah]
 is_a: FYPO:0000653 ! DNA binding phenotype
+is_a: FYPO:0000707 ! abnormal molecular function
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0003677
 intersection_of: qualifier PATO:0000460
@@ -7449,8 +7444,8 @@ creation_date: 2011-11-11T10:45:30Z
 id: FYPO:0000660
 name: normal catalytic activity
 def: "A molecular function phenotype in which a the observed rate of a specified catalytic activity is normal." [PomBase:mah]
-is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000654 ! catalytic activity phenotype
+is_a: FYPO:0000706 ! normal molecular function
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0003824
 intersection_of: qualifier PATO:0000461
@@ -7462,6 +7457,7 @@ id: FYPO:0000661
 name: abnormal catalytic activity
 def: "A molecular function phenotype in which a the observed rate of a specified catalytic activity is abnormal." [PomBase:mah]
 is_a: FYPO:0000654 ! catalytic activity phenotype
+is_a: FYPO:0000707 ! abnormal molecular function
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0003824
 intersection_of: qualifier PATO:0000460
@@ -7896,6 +7892,105 @@ intersection_of: PATO:0002051
 intersection_of: inheres_in GO:00043916
 created_by: midori
 creation_date: 2011-12-01T05:15:00Z
+
+[Term]
+id: FYPO:0000701
+name: DNA damage checkpoint override in response to caffeine abolished
+def: "A cellular response phenotype in which caffeine does not override the DNA damage checkpoint (as it does in wild type cells), allowing cell cycle arrest to occur." [PMID:10224243, PomBase:mah]
+synonym: "caffeine-mediated DNA damage checkpoint override abolished" EXACT [GOC:mah, GOC:vw]
+is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+is_a: FYPO:0000207 ! abnormal cellular response to caffeine
+created_by: midori
+creation_date: 2011-12-05T01:59:12Z
+
+[Term]
+id: FYPO:0000702
+name: protein binding phenotype
+def: "A phenotype that affects protein binding." [PomBase:mah]
+is_a: FYPO:0000652 ! molecular function phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0005515
+created_by: midori
+creation_date: 2011-12-05T02:24:49Z
+
+[Term]
+id: FYPO:0000703
+name: normal protein binding
+def: "A molecular function phenotype in which occurrence of protein binding by a mutated gene product is normal." [PomBase:mah]
+is_a: FYPO:0000702 ! protein binding phenotype
+is_a: FYPO:0000706 ! normal molecular function
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0005515
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-12-05T02:25:15Z
+
+[Term]
+id: FYPO:0000704
+name: abnormal protein binding
+def: "A molecular function phenotype in which occurrence of protein binding by a mutated gene product is abnormal." [PomBase:mah]
+is_a: FYPO:0000702 ! protein binding phenotype
+is_a: FYPO:0000707 ! abnormal molecular function
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0005515
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-05T02:25:58Z
+
+[Term]
+id: FYPO:0000705
+name: abolished protein binding
+def: "A molecular function phenotype in which occurrence of protein binding by a mutated gene product is abolished." [PomBase:mah]
+is_a: FYPO:0000704 ! abnormal protein binding
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0005515
+created_by: midori
+creation_date: 2011-12-05T02:26:17Z
+
+[Term]
+id: FYPO:0000706
+name: normal molecular function
+def: "A phenotype in which a specific molecular function is normal." [PomBase:mah]
+is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000652 ! molecular function phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003674
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-12-05T03:06:23Z
+
+[Term]
+id: FYPO:0000707
+name: abnormal molecular function
+def: "A phenotype in which a specific molecular function is abnormal." [PomBase:mah]
+is_a: FYPO:0000652 ! molecular function phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003674
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-05T03:09:24Z
+
+[Term]
+id: FYPO:0000708
+name: decreased mating efficiency
+def: "A biological process phenotype in which the observed mating efficiency is lower than normal." [PMID:15300681, PMID:16598689, PomBase:al, PomBase:mah]
+comment: Note that mating efficiency is often measured by counting zygotes plus asci, sometimes also including spores, so a change in measured mating efficiency may reflect a change in conjugation frequency (see FYPO:0000031 and its descendants), a change in sporulation (see FYPO:0000121 and its descendants), or both. For this reason, this term is not a  child of 'mating phenotype' (FYPO:0000031).
+is_a: FYPO:0000300 ! biological process phenotype
+created_by: midori
+creation_date: 2011-12-05T04:26:20Z
+
+[Term]
+id: FYPO:0000709
+name: slow cell growth upon nitrogen starvation
+def: "A cell growth phenotype in which cells grow more slowly than normal under nitrogen starvation conditions, such as in nitrogen-deficient minimal medium." [PomBase:mah]
+synonym: "slow cell growth in nitrogen-deficient minimal medium" RELATED [PomBase:al, PomBase:mah]
+synonym: "slow cell growth in response to nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000046 ! slow cell growth
+is_a: FYPO:0000152 ! abnormal cellular response to nitrogen starvation
+intersection_of: FYPO:0000046
+intersection_of: during GO:0006995
+created_by: midori
+creation_date: 2011-12-05T04:43:53Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
