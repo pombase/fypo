@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 05:12:2011 16:55
+date: 06:12:2011 16:19
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1-rc3
 default-namespace: fission_yeast_phenotype
@@ -1737,7 +1737,7 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000152
 name: abnormal cellular response to nitrogen starvation
 def: "A stress response phenotype in which the response to nitrogen starvation is abnormal." [PomBase:mah]
-is_a: FYPO:0000162 ! abnormal cellular response to stress
+is_a: FYPO:0000713 ! abnormal cellular response to starvation
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006995
 intersection_of: qualifier PATO:0000460
@@ -3574,6 +3574,7 @@ creation_date: 2011-05-11T01:51:05Z
 id: FYPO:0000327
 name: resistance to trichostatin A
 def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of trichostatin A than normal." [PomBase:mah]
+synonym: "resistant to trichostatin A" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0016049
@@ -4798,9 +4799,10 @@ creation_date: 2011-08-03T04:41:43Z
 
 [Term]
 id: FYPO:0000441
-name: resistant to antimycin A
+name: resistance to antimycin A
 def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of antimycin than normal." [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
+synonym: "resistant to antimycin A" EXACT [PomBase:mah]
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0016049
 intersection_of: towards CHEBI:22584
@@ -5848,6 +5850,7 @@ def: "A cellular process phenotype in which cell cycle arrest in response to phe
 synonym: "abnormal pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
 synonym: "pheromone-induced cell cycle arrest: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000145 ! regulation phenotype
+is_a: FYPO:0000302 ! abnormal response to pheromone
 is_a: FYPO:0000631 ! cell cycle phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000751
@@ -7987,10 +7990,178 @@ synonym: "slow cell growth in nitrogen-deficient minimal medium" RELATED [PomBas
 synonym: "slow cell growth in response to nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 is_a: FYPO:0000152 ! abnormal cellular response to nitrogen starvation
-intersection_of: FYPO:0000046
+intersection_of: FYPO:0000046 ! slow cell growth
 intersection_of: during GO:0006995
 created_by: midori
 creation_date: 2011-12-05T04:43:53Z
+
+[Term]
+id: FYPO:0000710
+name: abnormal cell cycle arrest in response to nitrogen starvation
+def: "A cellular process phenotype in which cell cycle arrest in response to nitrogen starvation is abnormal." [PomBase:mah]
+is_a: FYPO:0000145 ! regulation phenotype
+is_a: FYPO:0000152 ! abnormal cellular response to nitrogen starvation
+is_a: FYPO:0000631 ! cell cycle phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0030996
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-06T12:15:03Z
+
+[Term]
+id: FYPO:0000711
+name: decreased cell cycle arrest in response to nitrogen starvation
+def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation is decreased." [PomBase:mah]
+is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0030996
+created_by: midori
+creation_date: 2011-12-06T12:15:32Z
+
+[Term]
+id: FYPO:0000712
+name: delayed cell cycle arrest in response to nitrogen starvation
+def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation is delayed." [PomBase:mah]
+is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0030996
+created_by: midori
+creation_date: 2011-12-06T12:16:53Z
+
+[Term]
+id: FYPO:0000713
+name: abnormal cellular response to starvation
+is_a: FYPO:0000162 ! abnormal cellular response to stress
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0009267
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-06T12:25:40Z
+
+[Term]
+id: FYPO:0000714
+name: sensitive to leptomycin B
+def: "A phenotype in which cells show increased sensitivity to leptomycin B." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:52646
+created_by: midori
+creation_date: 2011-12-06T12:31:38Z
+
+[Term]
+id: FYPO:0000715
+name: sensitive to K-252a
+def: "A phenotype in which cells show increased sensitivity to K-252a." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:135352
+created_by: midori
+creation_date: 2011-12-06T12:31:38Z
+
+[Term]
+id: FYPO:0000716
+name: sensitive to valinomycin
+def: "A phenotype in which cells show increased sensitivity to valinomycin." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:469669
+created_by: midori
+creation_date: 2011-12-06T12:31:38Z
+
+[Term]
+id: FYPO:0000717
+name: sensitive to actinomycin D
+def: "A phenotype in which cells show increased sensitivity to actinomycin D." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:27666
+created_by: midori
+creation_date: 2011-12-06T12:31:38Z
+
+[Term]
+id: FYPO:0000718
+name: sensitive to trisodium vanadate
+def: "A phenotype in which cells show increased sensitivity to trisodium vanadate (also known as sodium orthovanadate)." [PomBase:mah]
+synonym: "sensitive to sodium orthovanadate" EXACT [CHEBI:35607, PomBase:al]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:35607
+created_by: midori
+creation_date: 2011-12-06T12:31:38Z
+
+[Term]
+id: FYPO:0000719
+name: normal fatty acid synthase activity
+def: "A molecular function phenotype in which the observed rate of fatty acid synthase activity is normal." [PomBase:mah]
+synonym: "normal FAS activity" EXACT [PomBase:al, PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004312
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-12-06T01:43:30Z
+
+[Term]
+id: FYPO:0000720
+name: abnormal fatty acid synthase activity
+def: "A molecular function phenotype in which the observed rate of fatty acid synthase activity is abnormal." [PomBase:mah]
+synonym: "abnormal FAS activity" EXACT [PomBase:al, PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004312
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-06T01:57:58Z
+
+[Term]
+id: FYPO:0000721
+name: abnormal cellular response to pH
+def: "A cellular response phenotype in which the cellular response to a pH stimulus is abnormal." [PomBase:mah]
+is_a: FYPO:0000298 ! cellular response phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071467
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2011-12-06T02:45:18Z
+
+[Term]
+id: FYPO:0000722
+name: sensitive to acidity
+def: "A cell phenotype in which cells show increased sensitivity to acidic pH (less than 7)." [PomBase:mah]
+is_a: FYPO:0000721 ! abnormal cellular response to pH
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0071468
+created_by: midori
+creation_date: 2011-12-06T02:47:00Z
+
+[Term]
+id: FYPO:0000723
+name: sensitive to alkalinity
+def: "A cell phenotype in which cells show increased sensitivity to alkaline pH (greater than 7)." [PomBase:mah]
+is_a: FYPO:0000721 ! abnormal cellular response to pH
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0071469
+created_by: midori
+creation_date: 2011-12-06T02:48:18Z
+
+[Term]
+id: FYPO:0000724
+name: resistance to N-methyl-N'-nitro-N-nitrosoguanidine
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of N-methyl-N'-nitro-N-nitrosoguanidine than normal." [PomBase:mah]
+synonym: "resistance to methylnitronitrosoguanidine" EXACT [CHEBI:21759]
+synonym: "resistant to MNNG" EXACT [CHEBI:21759]
+synonym: "resistant to N-methyl-N'-nitro-N-nitrosoguanidine" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:21759
+created_by: midori
+creation_date: 2011-12-06T04:17:30Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
