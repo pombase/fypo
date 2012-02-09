@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 18:01:2012 15:10
+date: 09:02:2012 16:39
 saved-by: midori
-auto-generated-by: OBO-Edit 2.1
+auto-generated-by: OBO-Edit 2.1.1-beta6
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -1179,7 +1179,7 @@ id: FYPO:0000102
 name: sensitive to cisplatin
 def: "A phenotype in which cells show increased sensitivity to cisplatin." [PomBase:mah]
 synonym: "sensitive to cis-DDP" EXACT [CHEBI:27899]
-synonym: "sensitive to DDP" BROAD [PomBase:al, CHEBI:27899]
+synonym: "sensitive to DDP" BROAD [CHEBI:27899, PomBase:al]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001551
 intersection_of: inheres_in GO:0016049
@@ -2863,14 +2863,15 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000255
-name: nuclear accumulation of Pap1 and Sty1
-def: "A localization phenotype in which the proteins Pap1 and Sty1 accumulate, and are constitutively located in, the nucleus." [PMID:12896976, PomBase:mah]
-synonym: "localization defects, nuclear accumulation of Pap1 and Sty1" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+name: nuclear protein accumulation
+def: "A localization phenotype in which specific proteins abnormally accumulate, and are constitutively located in, the nucleus." [PMID:12896976, PomBase:mah]
+synonym: "localization defects, nuclear accumulation of Pap1 and Sty1" NARROW [PomBase:mah]
+synonym: "nuclear accumulation of Pap1 and Sty1" NARROW [PomBase:mah]
+synonym: "nuclear accumulation of protein" EXACT [PomBase:mah]
+is_a: FYPO:0000762 ! protein accumulation
 intersection_of: PATO:0002270
-intersection_of: inheres_in CL:0000000
-intersection_of: towards PR:000027500
-intersection_of: towards PR:000027898
+intersection_of: inheres_in GO:0005634
+intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3393,6 +3394,7 @@ creation_date: 2011-04-27T11:47:04Z
 id: FYPO:0000306
 name: spore germination abolished
 def: "A cellular process phenotype in which spore germination does not occur." [PomBase:mah]
+synonym: "inviable spore" EXACT [PomBase:jh, PomBase:mah]
 is_a: FYPO:0000305 ! abnormal spore germination
 intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0009847
@@ -4853,6 +4855,7 @@ creation_date: 2011-08-03T05:18:32Z
 id: FYPO:0000443
 name: abnormal protein localization
 def: "A cell phenotype that affects the localization of a protein in a cell." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found in a particular location and decreased levels or absence of proteins normally found in the location.
 synonym: "abnormal cellular protein localisation" EXACT [PomBase:mah]
 synonym: "abnormal cellular protein localization" EXACT [PomBase:mah]
 synonym: "abnormal protein localisation" EXACT [PomBase:mah]
@@ -4928,6 +4931,7 @@ creation_date: 2011-08-12T02:27:22Z
 id: FYPO:0000449
 name: abnormal protein localization to centromere
 def: "A cell phenotype in which the localization of a protein to the centromere of a chromosome is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the centromere and decreased levels or absence of proteins normally found there.
 synonym: "abnormal protein localisation to centromere" EXACT [PomBase:mah]
 synonym: "abnormal protein localisation to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "abnormal protein localization to chromosome, centric region" EXACT [GO:0071459, PomBase:mah]
@@ -4971,6 +4975,7 @@ creation_date: 2011-08-12T02:34:10Z
 id: FYPO:0000452
 name: abnormal protein localization to chromatin
 def: "A cell phenotype in which the localization of a protein to chromatin is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there.
 synonym: "abnormal protein localisation to chromatin" EXACT [GO:0071168, PomBase:mah]
 is_a: FYPO:0000443 ! abnormal protein localization
 intersection_of: PATO:0000001
@@ -8262,6 +8267,7 @@ creation_date: 2011-12-07T04:51:57Z
 id: FYPO:0000731
 name: abnormal protein localization to medial cortex
 def: "A cell phenotype in which the localization of a protein to the medial cortex is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there.
 synonym: "abnormal protein localisation to medial cortex" EXACT [GO:0071168, PomBase:mah]
 is_a: FYPO:0000443 ! abnormal protein localization
 intersection_of: PATO:0000001
@@ -8384,6 +8390,7 @@ creation_date: 2012-01-11T12:29:34Z
 id: FYPO:0000742
 name: abnormal protein localization to actin cortical patch
 def: "A cell phenotype in which the localization of a protein to actin cortical patches is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found in actin cortical patches and decreased levels or absence of proteins normally found there.
 synonym: "abnormal protein localisation to actin cortical patch" EXACT [PomBase:mah]
 is_a: FYPO:0000443 ! abnormal protein localization
 intersection_of: PATO:0000001
@@ -8614,6 +8621,195 @@ intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0000747
 created_by: midori
 creation_date: 2012-01-18T03:03:19Z
+
+[Term]
+id: FYPO:0000762
+name: protein accumulation
+def: "A localization phenotype in which specific proteins abnormally accumulate in the cell, or in a part of the cell such as within an organelle." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+intersection_of: PATO:0002270
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2012-02-09T02:50:56Z
+
+[Term]
+id: FYPO:0000763
+name: resistance to cadmium
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:22978
+created_by: midori
+creation_date: 2012-02-09T03:40:24Z
+
+[Term]
+id: FYPO:0000764
+name: resistance to cycloheximide
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:27641
+created_by: midori
+creation_date: 2012-02-09T03:40:24Z
+
+[Term]
+id: FYPO:0000765
+name: resistance to leptomycin B
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:52646
+created_by: midori
+creation_date: 2012-02-09T03:40:24Z
+
+[Term]
+id: FYPO:0000766
+name: resistance to N-ethylmaleimide
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:44485
+created_by: midori
+creation_date: 2012-02-09T03:40:24Z
+
+[Term]
+id: FYPO:0000767
+name: resistance to staurosporine
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:15738
+created_by: midori
+creation_date: 2012-02-09T03:40:24Z
+
+[Term]
+id: FYPO:0000768
+name: resistance to valinomycin
+xref: PomBase:mah
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:469669
+is_a: FYPO:0000126 ! increased resistance to chemical
+created_by: midori
+creation_date: 2012-02-09T03:40:24Z
+
+[Term]
+id: FYPO:0000769
+name: abnormal nuclear envelope morphology
+def: "A cellular structure phenotype in which the morphology of all or part of the nuclear envelope is abnormal." [PomBase:mah]
+synonym: "abnormal nuclear membrane morphology" NARROW [PomBase:mah]
+is_a: FYPO:0000062 ! abnormal nuclear morphology
+intersection_of: PATO:0000051
+intersection_of: inheres_in GO:0005635
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-02-09T03:51:02Z
+
+[Term]
+id: FYPO:0000770
+name: branched nuclear inner membrane
+def: "A cellular structure phenotype in which the nuclear inner membrane forms branched structures that extend into the nuclear lumen." [PMID:21880100, PomBase:mah]
+is_a: FYPO:0000769 ! abnormal nuclear envelope morphology
+intersection_of: PATO:0000402
+intersection_of: inheres_in GO:0005637
+created_by: midori
+creation_date: 2012-02-09T03:54:48Z
+
+[Term]
+id: FYPO:0000771
+name: normal nuclear pore distribution
+def: "A localization phenotype in which the spatial arrangement of nuclear pores within the nuclear envelope is normal." [PomBase:mah]
+is_a: FYPO:0000138 ! localization phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0031081
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-02-09T04:03:08Z
+
+[Term]
+id: FYPO:0000772
+name: perforated nuclear envelope
+def: "A cellular structure phenotype in which the nuclear envelope has perforations or gaps (other than nuclear pores) instead of a continuous structure." [PMID:22156749, PomBase:mah]
+synonym: "disrupted nuclear envelope" RELATED [PomBase:mah]
+synonym: "disrupted nuclear membrane" RELATED [PomBase:mah]
+synonym: "gapped nuclear envelope" EXACT [PomBase:mah]
+synonym: "perforated nuclear membrane" RELATED [PomBase:mah]
+is_a: FYPO:0000769 ! abnormal nuclear envelope morphology
+intersection_of: PATO:0002112
+intersection_of: inheres_in GO:0005637
+created_by: midori
+creation_date: 2012-02-09T04:12:08Z
+
+[Term]
+id: FYPO:0000773
+name: abnormal pre-replicative complex assembly
+def: "A cellular process phenotype in which pre-replicative complex assembly is abnormal." [PomBase:mah]
+synonym: "abnormal pre-RC assembly" EXACT [PomBase:mah]
+synonym: "abnormal pre-replicative complex formation" EXACT [GO:0006267, PomBase:mah]
+is_a: FYPO:0000447 ! abnormal protein complex assembly
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006267
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-02-09T04:18:40Z
+
+[Term]
+id: FYPO:0000774
+name: decreased pre-replicative complex assembly
+def: "A cellular process phenotype in which the occurrence of pre-replicative complex assembly is reduced." [PomBase:mah]
+synonym: "decreased pre-RC assembly" EXACT [PomBase:mah]
+synonym: "decreased pre-replicative complex formation" EXACT [GO:0006267, PomBase:mah]
+is_a: FYPO:0000773 ! abnormal pre-replicative complex assembly
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0006267
+created_by: midori
+creation_date: 2012-02-09T04:26:56Z
+
+[Term]
+id: FYPO:0000775
+name: abnormal protein phosphorylation
+def: "A cellular process phenotype in which the phosphorylation of one or more specific proteins is abnormal." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+is_a: FYPO:0000329 ! abnormal protein modification
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006468
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-02-09T04:32:41Z
+
+[Term]
+id: FYPO:0000776
+name: normal protein phosphorylation
+def: "A cellular process phenotype in which the phosphorylation of one or more specific proteins is normal." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006468
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-02-09T04:33:28Z
+
+[Term]
+id: FYPO:0000777
+name: abnormal double-strand break repair
+def: "A cellular process phenotype in which double-strand break repair is abnormal." [PomBase:mah]
+is_a: FYPO:0000188 ! abnormal DNA repair
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006302
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-02-09T04:35:48Z
+
+[Term]
+id: FYPO:0000778
+name: delayed double-strand break repair
+def: "A cellular process phenotype in which double-strand break repair is delayed." [PomBase:mah]
+is_a: FYPO:0000777 ! abnormal double-strand break repair
+intersection_of: PATO:0000502
+intersection_of: inheres_in GO:0006302
+created_by: midori
+creation_date: 2012-02-09T04:37:10Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
