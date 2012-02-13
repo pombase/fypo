@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:02:2012 16:39
+date: 13:02:2012 13:06
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1.1-beta6
 default-namespace: fission_yeast_phenotype
@@ -213,13 +213,11 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000018
 name: elongated dumbbell morphology
-def: "A cell morphology phenotype in which a cell is shaped in the form of a dumbbell, i.e. having two connected, roughly spherical parts of approximately equal size." [PomBase:mah]
+def: "A cell morphology phenotype in which a cell is longer than normal and shaped in the form of a dumbbell, i.e. having two connected, roughly spherical parts of approximately equal size." [PomBase:mah]
 synonym: "cell morphology, elongated dumbbell" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
-intersection_of: PATO:0000051
-intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0000573
-intersection_of: qualifier PATO:0001876
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000779 ! dumbbell-shaped cells
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -2543,6 +2541,8 @@ name: lemon-shaped
 def: "A cell morphology phenotype in which a single cell grows in the form of a lemon. A lemon shape is defined mathematically as having a quadric surface in three dimensions obtained by rotating less than half of a circular arc about an axis passing through the endpoints of the arc." [http://mathworld.wolfram.com/Lemon.html, PomBase:mah]
 synonym: "cell morphology, lemon shaped" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
+intersection_of: PATO:0002345
+intersection_of: inheres_in CL:0000000
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2552,6 +2552,9 @@ name: snowman during sporulation
 def: "A cell morphology phenotype in which a cell undergoing sporulation assumes a snowman shape, having two connected parts, roughly spherical, of different sizes." [PomBase:mah]
 synonym: "cell morphology, snowman during sporulation" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
+intersection_of: PATO:0002346
+intersection_of: exists_during GO:0030437
+intersection_of: inheres_in CL:0000000
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -8687,10 +8690,10 @@ creation_date: 2012-02-09T03:40:24Z
 id: FYPO:0000768
 name: resistance to valinomycin
 xref: PomBase:mah
+is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0016049
 intersection_of: towards CHEBI:469669
-is_a: FYPO:0000126 ! increased resistance to chemical
 created_by: midori
 creation_date: 2012-02-09T03:40:24Z
 
@@ -8810,6 +8813,16 @@ intersection_of: PATO:0000502
 intersection_of: inheres_in GO:0006302
 created_by: midori
 creation_date: 2012-02-09T04:37:10Z
+
+[Term]
+id: FYPO:0000779
+name: dumbbell-shaped cells
+def: "A cell morphology phenotype in which a cell is shaped in the form of a dumbbell, i.e. having two connected, roughly spherical parts of approximately equal size." [PomBase:mah]
+is_a: FYPO:0000005 ! abnormal cell morphology
+intersection_of: PATO:0001876
+intersection_of: inheres_in CL:0000000
+created_by: midori
+creation_date: 2012-02-13T12:48:01Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
