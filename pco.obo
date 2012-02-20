@@ -1,0 +1,593 @@
+format-version: 1.2
+date: 20:02:2012 14:48
+saved-by: antonialock
+auto-generated-by: OBO-Edit 2.1-rc3
+default-namespace: phenotype_condition
+
+[Term]
+id: PCO:0000001
+name: phenotype condition
+created_by: antonialock
+creation_date: 2012-02-07T11:36:20Z
+
+[Term]
+id: PCO:0000002
+name: temperature
+def: "The experiment was performed at a specific temperature." []
+is_a: PCO:0000001 ! phenotype condition
+created_by: antonialock
+creation_date: 2012-02-07T12:00:23Z
+
+[Term]
+id: PCO:0000003
+name: expression level
+def: "The expression level of the gene was altered in the experiment, compared to expressing the gene from the genome and its endogenous promoter." []
+is_a: PCO:0000001 ! phenotype condition
+created_by: antonialock
+creation_date: 2012-02-07T12:23:02Z
+
+[Term]
+id: PCO:0000004
+name: high temperature
+def: "The experiment was performed at a temperature exceeding 32 degrees Celsius." []
+is_a: PCO:0000002 ! temperature
+created_by: antonialock
+creation_date: 2012-02-07T12:17:29Z
+
+[Term]
+id: PCO:0000005
+name: normal temperature
+def: "The experiment was performed at a temperature within the range 25-32 degrees Celsius." []
+is_a: PCO:0000002 ! temperature
+created_by: antonialock
+creation_date: 2012-02-07T12:17:29Z
+
+[Term]
+id: PCO:0000006
+name: low temperature
+def: "The experiment was performed at a temperature lower than 25 degrees Celsius." []
+is_a: PCO:0000002 ! temperature
+created_by: antonialock
+creation_date: 2012-02-07T12:17:29Z
+
+[Term]
+id: PCO:0000007
+name: overexpression
+def: "The expression level of the gene was increased compared to expressing it from its endogenous promoter in the genome." []
+is_a: PCO:0000003 ! expression level
+created_by: antonialock
+creation_date: 2012-02-07T12:23:45Z
+
+[Term]
+id: PCO:0000008
+name: knockdown
+def: "The expression level of the gene was decreased compared to expressing it from its endogenous promoter in the genome." []
+is_a: PCO:0000003 ! expression level
+created_by: antonialock
+creation_date: 2012-02-07T12:23:45Z
+
+[Term]
+id: PCO:0000009
+name: growth media
+def: "A specific medium in which cells are grown." []
+is_a: PCO:0000001 ! phenotype condition
+created_by: antonialock
+creation_date: 2012-02-07T12:28:25Z
+
+[Term]
+id: PCO:0000010
+name: absence of chemical
+alt_id: PCO:0000018
+def: "The experimental conditions included the absence of a chemical." []
+synonym: "absence of nitrogen" EXACT []
+is_a: PCO:0000017 ! chemicals
+created_by: antonialock
+creation_date: 2012-02-07T02:22:00Z
+
+[Term]
+id: PCO:0000011
+name: limited chemical added
+def: "A chemical which is added to the experiment, but in an amount which is clearly limited." []
+is_a: PCO:0000017 ! chemicals
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-07T02:23:26Z
+
+[Term]
+id: PCO:0000012
+name: rich medium
+def: "Experiments were performed in rich medium containing yeast extract and other components." []
+synonym: "YE" BROAD []
+synonym: "YES" EXACT []
+is_a: PCO:0000009 ! growth media
+created_by: antonialock
+creation_date: 2012-02-07T12:39:25Z
+
+[Term]
+id: PCO:0000013
+name: minimal media
+def: "Experiments were performed in medium containing a carbon source, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
+synonym: "phenotype condition" RELATED []
+is_a: PCO:0000009 ! growth media
+created_by: antonialock
+creation_date: 2012-02-07T12:41:33Z
+
+[Term]
+id: PCO:0000014
+name: glucose minimal medium
+def: "Experiments were performed in medium containing glucose (typically <2% w/v), salts and water." []
+synonym: "EMM" EXACT []
+is_a: PCO:0000013 ! minimal media
+created_by: antonialock
+creation_date: 2012-02-07T12:50:21Z
+
+[Term]
+id: PCO:0000015
+name: sporulation medium
+def: "Experiments were performed in medium promoting mating and sporulation." []
+synonym: "malt extract medium" EXACT []
+is_a: PCO:0000013 ! minimal media
+relationship: part_of PCO:0000062 ! absence of nitrogen
+created_by: antonialock
+creation_date: 2012-02-07T01:35:35Z
+
+[Term]
+id: PCO:0000016
+name: high glucose minimal medium
+def: "Experiments were performed in minimal medium containing a high concentration of glucose as carbon source." []
+is_a: PCO:0000013 ! minimal media
+created_by: antonialock
+creation_date: 2012-02-07T12:51:06Z
+
+[Term]
+id: PCO:0000017
+name: chemicals
+alt_id: PCO:0000019
+def: "Observed phenotype is linked to a chemical." []
+is_a: PCO:0000001 ! phenotype condition
+created_by: antonialock
+creation_date: 2012-02-07T01:58:07Z
+
+[Term]
+id: PCO:0000020
+name: presence of chemical
+def: "The experimental conditions included the presence of a chemical. Chemicals can either be produced by reactions in the experiment or added exogenously." []
+is_a: PCO:0000017 ! chemicals
+created_by: antonialock
+creation_date: 2012-02-07T02:24:45Z
+
+[Term]
+id: PCO:0000021
+name: limited adenine added
+def: "Lower than usual amounts of adenine was added to the experiment." []
+is_a: PCO:0000011 ! limited chemical added
+created_by: antonialock
+creation_date: 2012-02-07T02:34:30Z
+
+[Term]
+id: PCO:0000022
+name: absence of P-factor
+def: "P-factor, the mating pheromone secreted by P-cells, was absent from the experiment." []
+is_a: PCO:0000010 ! absence of chemical
+created_by: antonialock
+creation_date: 2012-02-07T02:55:29Z
+
+[Term]
+id: PCO:0000023
+name: presence of 3',5'-cyclic AMP
+def: "Experiments were performed in the presence of cAMP. Presence can either imply exogenous addition of the chemical or the action of adenylate cyclase." []
+is_a: PCO:0000020 ! presence of chemical
+created_by: antonialock
+creation_date: 2012-02-07T03:09:38Z
+
+[Term]
+id: PCO:0000024
+name: sugar added
+def: "Experiment was performed in the presence of an exogenously added sugar." []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-07T03:09:38Z
+
+[Term]
+id: PCO:0000025
+name: sorbitol added
+def: "Experiment was performed in the presence of exogenously added sorbitol." []
+is_a: PCO:0000041 ! sugar alcohol added
+created_by: antonialock
+creation_date: 2012-02-07T03:09:38Z
+
+[Term]
+id: PCO:0000026
+name: vanadate added
+def: "Experiment was performed in the presence of exogenously added vanadate." []
+synonym: "sodium orthovanadate added" EXACT []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-07T03:09:38Z
+
+[Term]
+id: PCO:0000027
+name: presence of mating pheromone
+def: "Experiment was performed in the presence of mating pheromone." []
+is_a: PCO:0000020 ! presence of chemical
+created_by: antonialock
+creation_date: 2012-02-07T03:09:38Z
+
+[Term]
+id: PCO:0000028
+name: TBC added
+def: "Experiment was performed in the presence of exogenously added TBC." []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-07T03:09:38Z
+
+[Term]
+id: PCO:0000029
+name: tacrolimus added
+def: "Experiment was performed in the presence of exogenously added tacrolimus." []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-07T03:09:38Z
+
+[Term]
+id: PCO:0000030
+name: ions added
+def: "Experiment was performed in the presence of exogenously added ions." []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-07T03:09:38Z
+
+[Term]
+id: PCO:0000031
+name: K ions added
+def: "Experiment was performed in the presence of added potassium ions." []
+synonym: "potassium ions added" EXACT []
+is_a: PCO:0000030 ! ions added
+created_by: antonialock
+creation_date: 2012-02-07T03:10:12Z
+
+[Term]
+id: PCO:0000032
+name: Cl ions added
+def: "Experiment was performed in the presence of added chloride ions." []
+synonym: "chloride ions added" EXACT []
+is_a: PCO:0000030 ! ions added
+created_by: antonialock
+creation_date: 2012-02-07T03:10:12Z
+
+[Term]
+id: PCO:0000033
+name: Cd ions added
+def: "Experiment was performed in the presence of added cadmium ions." []
+synonym: "cadmium ions added" EXACT []
+is_a: PCO:0000030 ! ions added
+created_by: antonialock
+creation_date: 2012-02-07T03:10:12Z
+
+[Term]
+id: PCO:0000034
+name: Ca ions added
+def: "Experiment was performed in the presence of added calcium ions." []
+synonym: "calcium ions added" EXACT []
+is_a: PCO:0000030 ! ions added
+created_by: antonialock
+creation_date: 2012-02-07T03:10:12Z
+
+[Term]
+id: PCO:0000035
+name: Cu ions added
+def: "Experiment was performed in the presence of added copper ions." []
+synonym: "copper ions added" RELATED []
+is_a: PCO:0000030 ! ions added
+created_by: antonialock
+creation_date: 2012-02-07T03:10:12Z
+
+[Term]
+id: PCO:0000036
+name: Pb ions added
+def: "Experiment was performed in the presence of added lead ions." []
+synonym: " lead ions added" EXACT []
+is_a: PCO:0000030 ! ions added
+created_by: antonialock
+creation_date: 2012-02-07T03:10:12Z
+
+[Term]
+id: PCO:0000037
+name: Bi ions added
+def: "Experiment was performed in the presence of added bismuth ions." []
+synonym: "bismuth ions added" EXACT []
+is_a: PCO:0000030 ! ions added
+created_by: antonialock
+creation_date: 2012-02-07T03:10:12Z
+
+[Term]
+id: PCO:0000038
+name: Mg ions added
+def: "Experiment was performed in the presence of added magnesium ions." []
+synonym: "magnesium ions added" EXACT []
+is_a: PCO:0000030 ! ions added
+created_by: antonialock
+creation_date: 2012-02-07T03:10:12Z
+
+[Term]
+id: PCO:0000039
+name: P-factor added
+def: "Experiment was performed in the presence of exogenously added P-factor, the mating pheromone produced by h+ / P-cells ." []
+synonym: "P factor added" EXACT []
+is_a: PCO:0000058 ! mating pheromone added
+created_by: antonialock
+creation_date: 2012-02-07T03:10:36Z
+
+[Term]
+id: PCO:0000040
+name: M-factor added
+def: "Experiment was performed in the presence of exogenously added M-factor, the mating pheromone produced by h- / M-cells ." []
+synonym: "M factor added" EXACT []
+is_a: PCO:0000058 ! mating pheromone added
+created_by: antonialock
+creation_date: 2012-02-07T03:10:36Z
+
+[Term]
+id: PCO:0000041
+name: sugar alcohol added
+def: "Experiment was performed in the presence of an exogenously added sugar alcohol." []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-07T03:11:16Z
+
+[Term]
+id: PCO:0000042
+name: fatty acid added
+def: "Experiment was performed in the presence of exogenously added  fatty acid." []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-07T03:14:49Z
+
+[Term]
+id: PCO:0000043
+name: palmitic acid added
+def: "Experiments were performed in the presence of exogenously added palmitic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:46Z
+
+[Term]
+id: PCO:0000044
+name: myristic acid added
+def: "Experiments were performed in the presence of exogenously added myristic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:46Z
+
+[Term]
+id: PCO:0000045
+name: pentadecanoic acid added
+def: "Experiments were performed in the presence of exogenously added pentadecanoic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:46Z
+
+[Term]
+id: PCO:0000046
+name: margaric acid added
+def: "Experiments were performed in the presence of exogenously added margaric acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:46Z
+
+[Term]
+id: PCO:0000047
+name: stearic acid added
+def: "Experiments were performed in the presence of exogenously added stearic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:47Z
+
+[Term]
+id: PCO:0000048
+name: petroselinic acid added
+def: "Experiments were performed in the presence of exogenously added petroselinic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:47Z
+
+[Term]
+id: PCO:0000049
+name: oleic acid added
+def: "Experiments were performed in the presence of exogenously added oleic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:47Z
+
+[Term]
+id: PCO:0000050
+name: linoleic acid added
+def: "Experiments were performed in the presence of exogenously added linoleic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:47Z
+
+[Term]
+id: PCO:0000051
+name: linolenic acid added
+def: "Experiments were performed in the presence of exogenously added linolenic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:47Z
+
+[Term]
+id: PCO:0000052
+name: arachidic acid added
+def: "Experiments were performed in the presence of exogenously added arachidic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:47Z
+
+[Term]
+id: PCO:0000053
+name: melissic acid added
+def: "Experiments were performed in the presence of exogenously added melissic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-07T03:17:47Z
+
+[Term]
+id: PCO:0000054
+name: glycerol carbon source
+def: "Experiments were performed in minimal medium where glycerol is the main carbon source." []
+is_a: PCO:0000013 ! minimal media
+created_by: antonialock
+creation_date: 2012-02-07T03:29:51Z
+
+[Term]
+id: PCO:0000055
+name: M and P factor produced
+def: "Both M-factor and P-factor, endogenously produced by cells, was present in the experiment." []
+synonym: "presence of M-factor and P-factor" EXACT []
+synonym: "presence of mating pheromones" EXACT []
+is_a: PCO:0000060 ! chemical produced
+relationship: part_of PCO:0000027 ! presence of mating pheromone
+created_by: antonialock
+creation_date: 2012-02-07T03:37:43Z
+
+[Term]
+id: PCO:0000056
+name: 3'5'-cyclic AMP added
+def: "Experiment was performed in the presence of exogenously added cAMP." [CHEBI:17489]
+xref: CHEBI:17489 "3',5'-cyclic AMP"
+is_a: PCO:0000059 ! chemical added
+relationship: part_of PCO:0000023 ! presence of 3',5'-cyclic AMP
+created_by: antonialock
+creation_date: 2012-02-07T05:07:31Z
+
+[Term]
+id: PCO:0000057
+name: 3'5'-cyclic AMP produced
+def: "The experiment was performed under conditions such that cAMP was produced endogenously." []
+is_a: PCO:0000060 ! chemical produced
+relationship: part_of PCO:0000023 ! presence of 3',5'-cyclic AMP
+created_by: antonialock
+creation_date: 2012-02-07T05:10:53Z
+
+[Term]
+id: PCO:0000058
+name: mating pheromone added
+def: "Experiment was performed in the presence of exogenously added mating pheromone." []
+is_a: PCO:0000059 ! chemical added
+relationship: part_of PCO:0000027 ! presence of mating pheromone
+created_by: antonialock
+creation_date: 2012-02-07T05:25:01Z
+
+[Term]
+id: PCO:0000059
+name: chemical added
+def: "Chemical was added to the experiment exogenously." []
+relationship: part_of PCO:0000020 ! presence of chemical
+created_by: antonialock
+creation_date: 2012-02-07T05:36:48Z
+
+[Term]
+id: PCO:0000060
+name: chemical produced
+def: "Chemical was endogenously produced in the experiment." []
+relationship: part_of PCO:0000020 ! presence of chemical
+created_by: antonialock
+creation_date: 2012-02-07T05:37:05Z
+
+[Term]
+id: PCO:0000061
+name: xenobiotic substrate added
+def: "Experiment was performed in the presence of an exogenously added xenobiotic substrate. This substrate is not synthesised by S. pombe." []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-10T11:50:01Z
+
+[Term]
+id: PCO:0000062
+name: absence of nitrogen
+def: "Nitrogen was absent from the experiment." []
+is_a: PCO:0000010 ! absence of chemical
+created_by: antonialock
+creation_date: 2012-02-08T07:33:48Z
+
+[Term]
+id: PCO:0000063
+name: absence of 3'5'-cyclic AMP
+def: "3'5'-cyclic AMP was absent from the experiment." []
+is_a: PCO:0000010 ! absence of chemical
+created_by: antonialock
+creation_date: 2012-02-10T12:15:58Z
+
+[Term]
+id: PCO:0000064
+name: inositol added
+def: "Experiment was performed in the presence of exogenously added inositol." []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-13T02:35:48Z
+
+[Term]
+id: PCO:0000065
+name: absence of adenine
+def: "Adenine was absent from the experiment." []
+is_a: PCO:0000010 ! absence of chemical
+created_by: antonialock
+creation_date: 2012-02-13T02:53:59Z
+
+[Term]
+id: PCO:0000066
+name: absence of inositol
+def: "Inositol was absent from the experiment." []
+synonym: "<new synonym>" RELATED []
+is_a: PCO:0000010 ! absence of chemical
+created_by: antonialock
+creation_date: 2012-02-14T03:15:13Z
+
+[Term]
+id: PCO:0000067
+name: lauric acid added
+def: "Experiments were performed in the presence of exogenously added lauric acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-14T03:18:35Z
+
+[Term]
+id: PCO:0000068
+name: vaccenic acid added
+def: "Experiments were performed in the presence of exogenously added vaccenic acid." []
+is_a: PCO:0000042 ! fatty acid added
+created_by: antonialock
+creation_date: 2012-02-14T03:21:32Z
+
+[Term]
+id: PCO:0000069
+name: caffeine added
+def: "Experiment was performed in the presence of exogenously added caffeine." []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-15T12:28:11Z
+
+[Term]
+id: PCO:0000070
+name: absence of uracil
+def: "Uracil was absent from the experiment." []
+is_a: PCO:0000010 ! absence of chemical
+created_by: antonialock
+creation_date: 2012-02-15T12:40:35Z
+
+[Term]
+id: PCO:0000071
+name: 1-Na-PPI added
+def: "Experiment was performed in the presence of exogenously added 1-Na-PPI." []
+synonym: "4-amino-1-tert-butyl-3-(1'-naphthyl)pyrazolo[3,4-d]pyrimidine added" RELATED []
+is_a: PCO:0000059 ! chemical added
+created_by: antonialock
+creation_date: 2012-02-19T10:45:53Z
+
+[Typedef]
+id: part_of
+name: part_of
+xref: OBO_REL:part_of
+created_by: antonialock
+creation_date: 2012-02-07T11:57:34Z
+
