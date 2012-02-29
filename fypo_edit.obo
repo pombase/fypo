@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 28:02:2012 16:09
+date: 29:02:2012 15:57
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1.1-beta7
 default-namespace: fission_yeast_phenotype
@@ -942,7 +942,7 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000082
 name: sensitive to high temperature
-def: "A cell phenotype in which cells show increased sensitivity to heat; cells fail to grow or grow more slowly than normal at high temperatures." [PomBase:mah]
+def: "A cell phenotype in which cells show increased sensitivity to heat. For example, cells may fail to grow or grow more slowly than normal at high temperatures." [PomBase:mah]
 synonym: "heat sensitive" EXACT [PomBase:mah]
 synonym: "sensitive to heat" EXACT [PomBase:mah]
 synonym: "temperature sensitive" RELATED [PomBase:mah]
@@ -3155,7 +3155,6 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000282
 name: viable at high temperature
 def: "A viability phenotype in which cells are able to survive at a high temperature." [PomBase:mah]
-is_a: FYPO:0000124 ! viable
 intersection_of: FYPO:0000124 ! viable
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0001305
@@ -3280,7 +3279,7 @@ id: FYPO:0000295
 name: cytoskeleton organization phenotype
 def: "A cellular process phenotype that affects cytoskeleton organization." [PomBase:mah]
 synonym: "cytoskeleton organisation phenotype" EXACT [PomBase:mah]
-is_a: FYPO:0000114 ! cellular process phenotype
+is_a: FYPO:0000334 ! cellular component organization phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0007010
 created_by: midori
@@ -7538,6 +7537,7 @@ creation_date: 2011-11-11T10:46:28Z
 id: FYPO:0000665
 name: normal peptidase activity
 def: "A molecular function phenotype in which the observed rate of a peptidase activity is normal." [PomBase:mah]
+synonym: "normal protease activity" EXACT [PomBase:mah]
 is_a: FYPO:0000660 ! normal catalytic activity
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0008233
@@ -7641,6 +7641,7 @@ id: FYPO:0000674
 name: normal growth at high temperature
 def: "A cell growth phenotype in which cells grow at normal rate at a high temperature." [PomBase:mah]
 is_a: FYPO:0000047 ! normal cell growth
+is_a: FYPO:0000282 ! viable at high temperature
 intersection_of: FYPO:0000047 ! normal cell growth
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0001305
@@ -8245,8 +8246,8 @@ creation_date: 2011-12-07T02:53:31Z
 id: FYPO:0000728
 name: abnormal actin cortical patch assembly
 def: "A cellular process phenotype in which actin cortical patch assembly is abnormal." [PomBase:mah]
-is_a: FYPO:0000296 ! actin cytoskeleton organization phenotype
 is_a: FYPO:0000336 ! abnormal cellular component assembly
+is_a: FYPO:0000790 ! abnormal actin cortical patch organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000147
 intersection_of: qualifier PATO:0000460
@@ -8648,6 +8649,7 @@ creation_date: 2012-02-09T02:50:56Z
 [Term]
 id: FYPO:0000763
 name: resistance to cadmium
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of cadmium ions than normal." [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0016049
@@ -8658,6 +8660,7 @@ creation_date: 2012-02-09T03:40:24Z
 [Term]
 id: FYPO:0000764
 name: resistance to cycloheximide
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of selenate ions than normal." [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0016049
@@ -8668,6 +8671,7 @@ creation_date: 2012-02-09T03:40:24Z
 [Term]
 id: FYPO:0000765
 name: resistance to leptomycin B
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of selenate ions than normal." [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0016049
@@ -8678,6 +8682,7 @@ creation_date: 2012-02-09T03:40:24Z
 [Term]
 id: FYPO:0000766
 name: resistance to N-ethylmaleimide
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of selenate ions than normal." [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0016049
@@ -8688,6 +8693,7 @@ creation_date: 2012-02-09T03:40:24Z
 [Term]
 id: FYPO:0000767
 name: resistance to staurosporine
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of selenate ions than normal." [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0016049
@@ -8698,7 +8704,7 @@ creation_date: 2012-02-09T03:40:24Z
 [Term]
 id: FYPO:0000768
 name: resistance to valinomycin
-xref: PomBase:mah
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of selenate ions than normal." [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0016049
@@ -8838,6 +8844,8 @@ id: FYPO:0000780
 name: increased transcription
 def: "A cellular process phenotype in which transcription occurs to a greater extent than normal." [PomBase:mah]
 is_a: FYPO:0000143 ! transcription regulation phenotype
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0006351
 created_by: midori
 creation_date: 2012-02-28T03:56:27Z
 
@@ -8846,8 +8854,206 @@ id: FYPO:0000781
 name: decreased transcription
 def: "A cellular process phenotype in which transcription occurs to a lower extent than normal." [PomBase:mah]
 is_a: FYPO:0000143 ! transcription regulation phenotype
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0006351
 created_by: midori
 creation_date: 2012-02-28T03:57:44Z
+
+[Term]
+id: FYPO:0000782
+name: mislocalized protein
+def: "A cell phenotype in which a protein is observed in a particular location where it is not normally found." [PomBase:mah]
+comment: The difference between this term and 'abnormal protein localization' (FYPO:0000443) is that 'mislocalized protein' describes a protein that is observed in a place where it is not normally found, whereas 'abnormal protein localization' additionally encompasses the absence of protein from a place where it is normally found.
+synonym: "mislocalised protein" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+intersection_of: PATO:0000628
+intersection_of: inheres_in CHEBI:36080
+created_by: midori
+creation_date: 2012-02-29T12:48:27Z
+
+[Term]
+id: FYPO:0000783
+name: protein mislocalized to cytoplasm
+def: "A cell phenotype in which a protein that is not normally found in the cytoplasm is observed there." [PomBase:mah]
+synonym: "protein mislocalised to cytoplasm" EXACT [PomBase:mah]
+is_a: FYPO:0000782 ! mislocalized protein
+intersection_of: PATO:0000628
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005737
+created_by: midori
+creation_date: 2012-02-29T12:49:47Z
+
+[Term]
+id: FYPO:0000784
+name: protein mislocalized to nucleus
+def: "A cell phenotype in which a protein that is not normally found in the nucleus is observed there." [PomBase:mah]
+synonym: "protein mislocalised to nucleus" EXACT [PomBase:mah]
+is_a: FYPO:0000782 ! mislocalized protein
+intersection_of: PATO:0000628
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005634
+created_by: midori
+creation_date: 2012-02-29T12:50:40Z
+
+[Term]
+id: FYPO:0000785
+name: sensitive to formamide
+def: "A phenotype in which cells show increased sensitivity to formamide." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:16397
+created_by: midori
+creation_date: 2012-02-29T01:30:18Z
+
+[Term]
+id: FYPO:0000786
+name: increased plasmid loss
+def: "A cell phenotype in which plasmids are lost at a higher frequency than normal. Plasmid loss occurs when one or both daughter cells do not inherit copies of a plasmid from the mother cell, and may result from failure of plasmid replication or segregation." [PomBase:mah]
+is_a: FYPO:0000002 ! cell phenotype
+created_by: midori
+creation_date: 2012-02-29T01:39:20Z
+
+[Term]
+id: FYPO:0000787
+name: abnormal histone H3-K9 trimethylation
+def: "A cellular process phenotype in which trimethylation of lysine at position 9 of histone H3 is abnormal." [PomBase:mah]
+synonym: "abnormal histone H3 K9 trimethylation" EXACT [GO:0036124, PomBase:mah]
+synonym: "abnormal histone H3K9 trimethylation" EXACT [PomBase:vw]
+synonym: "abnormal histone lysine H3 K9 trimethylation" EXACT [GO:0036124, PomBase:mah]
+is_a: FYPO:0000458 ! abnormal histone H3-K9 methylation
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036124
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-02-29T01:43:54Z
+
+[Term]
+id: FYPO:0000788
+name: abnormal histone H3-K14 acetylation
+def: "A cellular process phenotype in which acetylation of lysine at position 14 of histone H3 is abnormal." [PomBase:mah]
+synonym: "abnormal histone H3K14 acetylation" EXACT [GO:0044154, PomBase:vw]
+is_a: FYPO:0000456 ! abnormal histone acetylation
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0044154
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-02-29T01:46:18Z
+
+[Term]
+id: FYPO:0000789
+name: sensitive to 1-NA-PP1
+def: "A phenotype in which cells show increased sensitivity to 1-NA-PP1." [PomBase:mah]
+synonym: "sensitive to 1-tert-butyl-3-naphthalen-1-yl-1H-pyrazolo[3,4-d]pyrimidin-4-amine " EXACT [CHEBI:52310, PomBase:mah]
+synonym: "sensitive to 4-amino-1-tert-butyl-3-(1'-naphthyl)pyrazolo[3,4-d]pyrimidine " EXACT [CHEBI:52310, PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:52310
+created_by: midori
+creation_date: 2012-02-29T01:53:55Z
+
+[Term]
+id: FYPO:0000790
+name: abnormal actin cortical patch organization
+def: "A cellular process phenotype in which actin cortical patch organization is abnormal." [PomBase:mah]
+is_a: FYPO:0000296 ! actin cytoskeleton organization phenotype
+is_a: FYPO:0000336 ! abnormal cellular component assembly
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0044396
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-02-29T03:11:58Z
+
+[Term]
+id: FYPO:0000791
+name: abnormal actin cortical patch morphology
+def: "A cellular structure phenotype in which the morphology of actin cortical patches is abnormal." [PomBase:mah]
+is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
+intersection_of: PATO:0001617
+intersection_of: inheres_in GO:0030479
+created_by: midori
+creation_date: 2012-02-29T03:14:15Z
+
+[Term]
+id: FYPO:0000792
+name: normal glycerol dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of glycerol dehydrogenase activity is normal." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0008888
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-02-29T03:25:55Z
+
+[Term]
+id: FYPO:0000793
+name: abnormal glycerol dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of glycerol dehydrogenase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0008888
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-02-29T03:26:33Z
+
+[Term]
+id: FYPO:0000794
+name: abolished glycerol dehydrogenase activity
+def: "A molecular function phenotype in which glycerol dehydrogenase activity is abolished." [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0000793 ! abnormal glycerol dehydrogenase activity
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0008888
+created_by: midori
+creation_date: 2012-02-29T03:27:45Z
+
+[Term]
+id: FYPO:0000795
+name: decreased glycerol dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of glycerol dehydrogenase activity is decreased." [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0000793 ! abnormal glycerol dehydrogenase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0008888
+created_by: midori
+creation_date: 2012-02-29T03:27:51Z
+
+[Term]
+id: FYPO:0000796
+name: increased glycerol dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of glycerol dehydrogenase activity is increased." [PomBase:mah]
+synonym: "increased peptidase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0000793 ! abnormal glycerol dehydrogenase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0008888
+created_by: midori
+creation_date: 2012-02-29T03:27:58Z
+
+[Term]
+id: FYPO:0000797
+name: sensitive to t-BOOH
+def: "A phenotype in which cells show increased sensitivity to tert-butyl hydroperoxide (t-BOOH)." [PomBase:mah]
+synonym: "sensitive to 2-methyl-prop-2-yl-hydroperoxide" EXACT [CHEBI:365419]
+synonym: "sensitive to tert-butyl hydroperoxide" EXACT [PomBase:al]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:365419
+created_by: midori
+creation_date: 2012-02-29T03:49:47Z
+
+[Term]
+id: FYPO:0000798
+name: sensitive to anisomycin
+def: "A phenotype in which cells show increased sensitivity to anisomycin." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:338412
+created_by: midori
+creation_date: 2012-02-29T03:54:43Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
@@ -8867,6 +9073,13 @@ xref: OBO_REL:during
 id: exists_during
 name: exists_during
 xref: OBO_REL:exists_during
+
+[Typedef]
+id: formed_by
+name: formed by
+def: "Relation between an abnormal structure and an abnormal process that forms it; A formed_by B used where B results_in_formation_of A isn't always true." [PomBase:mah]
+comment: inverse of results_in_formation_of
+synonym: "formation results from" EXACT [PomBase:mah]
 
 [Typedef]
 id: has_part

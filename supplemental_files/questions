@@ -516,7 +516,28 @@ still need to clarify definitions and distinctions between some shape terms post
 
 2012-02-28
  - best way to model protein localization going awry: abnormal loc process (have some like this now, with GO 'protein loc to CC' in xp), or protein/RNA (CHEBI) mislocalized (PATO:628) to GO CC?
+	for now, have these (plus one for nucleus):
+[Term]
+id: FYPO:0000782
+name: mislocalized protein
+def: "A cell phenotype in which a protein is observed in a particular location where it is not normally found." [PomBase:mah]
+comment: The difference between this term and 'abnormal protein localization' (FYPO:0000443) is that 'mislocalized protein' describes a protein that is observed in a place where it is not normally found, whereas 'abnormal protein localization' additionally encompasses the absence of protein from a place where it is normally found.
+synonym: "mislocalised protein" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+intersection_of: PATO:0000628
+intersection_of: inheres_in CHEBI:36080
 
+[Term]
+id: FYPO:0000783
+name: protein mislocalized to cytoplasm
+def: "A cell phenotype in which a protein that is not normally found in the cytoplasm is observed there." [PomBase:mah]
+synonym: "protein mislocalised to cytoplasm" EXACT [PomBase:mah]
+is_a: FYPO:0000782 ! mislocalized protein
+intersection_of: PATO:0000628
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005737
 
+	do the xps make sense? is there a better way to do them?
+	and do we keep or obsolete the abnormal protein localization terms? (also discussing among pombase curators)
 
 
