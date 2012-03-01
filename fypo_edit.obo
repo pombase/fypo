@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 29:02:2012 15:57
+date: 01:03:2012 15:46
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1.1-beta7
 default-namespace: fission_yeast_phenotype
@@ -81,7 +81,7 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000008
 name: abnormal meiotic recombination
-def: "A cellular process phenotype in which reciprocal meiotic recombination is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which reciprocal meiotic recombination is abnormal. Meiotic recombination is a cellular process in which double strand breaks are formed and repaired through a double Holliday junction intermediate, resulting in the equal exchange of genetic material between non-sister chromatids in a pair of homologous chromosomes." [PomBase:mah, GO:0007131]
 synonym: "abnormal meiotic DNA recombination" EXACT [PomBase:mah]
 synonym: "abnormal reciprocal meiotic recombination" EXACT [PomBase:mah]
 synonym: "DNA recombination defects, meiotic" EXACT [PomBase:mah]
@@ -318,7 +318,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000029
 name: abnormal chromosome segregation
 alt_id: FYPO:0000226
-def: "A cellular process phenotype in which chromosome segregation is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which chromosome segregation is abnormal. Chromosome segregation begins with the alignment of chromosomes at the metaphase plate, includes chromosome separation, and ends when chromosomes have completed movement to the spindle poles." [PomBase:mah, GO:0007059]
 synonym: "centromere function defective" RELATED [PomBase:mah]
 synonym: "chromosome segregation defects" EXACT [PomBase:mah]
 is_a: FYPO:0000628 ! abnormal cellular process
@@ -331,7 +331,7 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000030
 name: abnormal chromosome congression
-def: "A cellular process phenotype in which chromosome congression is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which chromosome congression is abnormal. Chromosome congression is the alignment of chromosomes at the metaphase plate, a plane halfway between the poles of the spindle." [PomBase:mah, GO:0051310]
 synonym: "chromosome segregation defects, chromosome congression" EXACT [PomBase:mah]
 is_a: FYPO:0000029 ! abnormal chromosome segregation
 intersection_of: PATO:0000001
@@ -343,7 +343,7 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000031
 name: abnormal conjugation
-def: "A cellular process phenotype in which conjugation is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which conjugation is abnormal. Conjugation, also known as mating, is a process that results in the union of cellular and genetic information from cells of compatible mating types." [PomBase:mah, GO:0000747]
 synonym: "abnormal conjugation with cellular fusion" EXACT [PomBase:mah]
 synonym: "abnormal zygote formation" RELATED [PomBase:mah]
 synonym: "conjugation defects" EXACT [PomBase:mah]
@@ -572,6 +572,7 @@ is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000776
 intersection_of: qualifier PATO:0000460
+relationship: formed_by FYPO:000080<7 ! abnormal kinetochore organization
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -603,13 +604,14 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000054
-name: abnormal microtubule organization
+name: abnormal microtubule cytoskeleton organization
 alt_id: FYPO:0000053
-def: "A phenotype that affects the organization of the microtubule cytoskeleton." [PomBase:mah]
+def: "A phenotype that affects the organization of the microtubule cytoskeleton. Microtubule cytoskeleton organization is a cellular process that  results in the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures comprising microtubules and their associated proteins." [PomBase:mah, GO:0000226]
+comment: Note that an abnormal microtubule cytoskeleton organization process may, but does not necessarily, result in abnormal microtubule cytoskeleton morphology.
 synonym: "abnormal microtubule cytoskeleton organization" EXACT [PomBase:mah]
-synonym: "abnormal microtubule organisation" EXACT [PomBase:mah]
 synonym: "microtubule cytoskeleton defects" EXACT [PomBase:mah]
-synonym: "microtubule organization defects" EXACT [PomBase:mah]
+synonym: "abnormal microtubule organisation" RELATED [PomBase:mah]
+synonym: "microtubule organization defects" RELATED [PomBase:mah]
 is_a: FYPO:0000297 ! microtubule cytoskeleton organization phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000226
@@ -702,6 +704,7 @@ is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0000051
 intersection_of: inheres_in GO:0005634
 intersection_of: qualifier PATO:0000460
+relationship: formed_by FYPO:0000810 ! abnormal nucleus organization
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -1429,7 +1432,7 @@ id: FYPO:0000123
 name: large vacuoles
 def: "A cellular structure phenotype in which vacuoles are larger than normal." [PomBase:mah]
 synonym: "vacuole organization defects, large vacuoles" EXACT [PomBase:mah]
-is_a: FYPO:0000287 ! abnormal subcellular structure
+is_a: FYPO:0000368 ! abnormal vacuolar morphology
 intersection_of: PATO:0000586
 intersection_of: inheres_in GO:0000324
 created_by: midori
@@ -1529,7 +1532,7 @@ id: FYPO:0000132
 name: abnormal septum disassembly
 def: "A cellular process phenotype characterized by abnormal primary cell septum disassembly; may result in the formation of chains of attached cells." [PomBase:mah]
 synonym: "chained cells" RELATED [PomBase:mah]
-is_a: FYPO:0000628 ! abnormal cellular process
+is_a: FYPO:0000335 ! abnormal cellular component organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030994
 intersection_of: qualifier PATO:0000460
@@ -1641,7 +1644,7 @@ creation_date: 2011-04-12T05:41:15Z
 [Term]
 id: FYPO:0000142
 name: gene expression phenotype
-def: "A cellular process phenotype that affects gene expression." [PomBase:mah]
+def: "A cellular process phenotype that affects gene expression. Gene expression includes transciption, RNA processing, and, for protein-coding genes, translation and protein maturation." [PomBase:mah, GO:0010467]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -1861,8 +1864,8 @@ def: "A cellular process phenotype in which contractile ring assembly is abnorma
 synonym: "abnormal contractile ring assembly" EXACT [PomBase:mah]
 synonym: "abnormal cytokinesis, actomyosin contractile ring assembly" EXACT [PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
-is_a: FYPO:0000296 ! actin cytoskeleton organization phenotype
 is_a: FYPO:0000336 ! abnormal cellular component assembly
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000915
 intersection_of: qualifier PATO:0000460
@@ -2100,7 +2103,7 @@ name: abnormal cell wall organization
 def: "A cellular process phenotype in which cell wall organization is abnormal." [PomBase:mah]
 synonym: "abnormal cell wall organisation" EXACT [PomBase:mah]
 synonym: "abnormal fungal-type cell wall organization" EXACT [PomBase:mah]
-is_a: FYPO:0000628 ! abnormal cellular process
+is_a: FYPO:0000335 ! abnormal cellular component organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0031505
 intersection_of: qualifier PATO:0000460
@@ -2190,7 +2193,7 @@ name: abnormal actin cortical patch localization
 def: "A cellular process phenotype in which actin cortical patch localization is abnormal." [PomBase:mah]
 synonym: "abnormal actin cortical patch localisation" EXACT [PomBase:mah]
 is_a: FYPO:0000138 ! localization phenotype
-is_a: FYPO:0000296 ! actin cytoskeleton organization phenotype
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051666
 intersection_of: qualifier PATO:0000460
@@ -2269,7 +2272,7 @@ id: FYPO:0000198
 name: abnormal establishment or maintenance of actin cytoskeleton polarity
 def: "A cellular process phenotype in which the establishment or maintenance of actin cytoskeleton polarity is abnormal." [PomBase:mah]
 is_a: FYPO:0000026 ! abnormal cell polarity
-is_a: FYPO:0000296 ! actin cytoskeleton organization phenotype
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030950
 intersection_of: qualifier PATO:0000460
@@ -2594,6 +2597,7 @@ synonym: "abnormal contractile ring actin filament organisation" EXACT [PomBase:
 synonym: "cytokinesis defects, contractile ring actin, absent" RELATED [PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
 is_a: FYPO:0000727 ! abnormal actin filament organization
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:2000689
 intersection_of: qualifier PATO:0000460
@@ -2607,7 +2611,7 @@ def: "A cytokinesis phenotype in which myosin filaments are not localized normal
 synonym: "abnormal contractile ring myosin filament organisation" EXACT [PomBase:mah]
 synonym: "cytokinesis defects, contractile ring myosin distribution, defective" RELATED [PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
-is_a: FYPO:0000296 ! actin cytoskeleton organization phenotype
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:2000708
 intersection_of: qualifier PATO:0000460
@@ -2620,9 +2624,6 @@ name: actomyosin contractile ring splitting
 def: "A cytokinesis phenotype in which the contractile ring splits upon initiation of contraction, resulting in the formation of a primary ring that undergoes constriction and a secondary ring that does not constrict." [PMID:18272786, PomBase:mah]
 synonym: "cytokinesis defects, splitting of the actinomyosin ring" RELATED [PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
-intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0000916
-intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2644,7 +2645,7 @@ name: abnormal interphase microtubule nucleation
 def: "A microtubule cytoskeleton organization phenotype in which nucleation of microtubules from interphase microtubule organizing centers (iMTOCs) is abnormal." [PMID:19001497, PomBase:mah]
 synonym: "abnormal interphase microtubule nucleation by interphase microtubule organizing center" EXACT [PomBase:mah]
 synonym: "cytoskeletal defects, cytoplasmic microtubule nucleation defects, Non-SPB" RELATED [PomBase:mah]
-is_a: FYPO:0000297 ! microtubule cytoskeleton organization phenotype
+is_a: FYPO:0000054 ! abnormal microtubule cytoskeleton organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051415
 intersection_of: qualifier PATO:0000460
@@ -3155,6 +3156,7 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000282
 name: viable at high temperature
 def: "A viability phenotype in which cells are able to survive at a high temperature." [PomBase:mah]
+is_a: FYPO:0000124 ! viable
 intersection_of: FYPO:0000124 ! viable
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0001305
@@ -3869,6 +3871,7 @@ synonym: "Golgi morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0005794
+relationship: formed_by FYPO:0000806 ! abnormal Golgi organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -3880,6 +3883,7 @@ synonym: "actin cytoskeleton morphology: abnormal" EXACT [SGD:phenotype_annotati
 is_a: FYPO:0000352 ! abnormal cytoskeleton morphology
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0015629
+relationship: formed_by FYPO:0000801 ! abnormal actin cytoskeleton organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -3902,6 +3906,7 @@ synonym: "cytoskeleton morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0005856
+relationship: formed_by FYPO:0000802 ! abnormal cytoskeleton organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -3913,6 +3918,7 @@ synonym: "endomembrane system morphology: abnormal" EXACT [SGD:phenotype_annotat
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0012505
+relationship: formed_by FYPO:0000804 ! abnormal endomembrane system organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -3924,6 +3930,7 @@ synonym: "endoplasmic reticulum morphology: abnormal" EXACT [SGD:phenotype_annot
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0005783
+relationship: formed_by FYPO:0000805 ! abnormal endoplasmic reticulum organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -3948,6 +3955,7 @@ synonym: "lipid particle morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0005811
+relationship: formed_by FYPO:0000808 ! abnormal lipid particle organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -3960,6 +3968,7 @@ synonym: "mating projection morphology: abnormal" EXACT [SGD:phenotype_annotatio
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0005937
+relationship: formed_by FYPO:0000568 ! abnormal shmoo formation
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -3983,6 +3992,7 @@ synonym: "mitochondrial morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0005739
+relationship: formed_by FYPO:0000809 ! abnormal mitochondrion organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -4007,6 +4017,7 @@ synonym: "nucleolar morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0005730
+relationship: formed_by FYPO:0000814 ! abnormal nucleolus organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -4018,6 +4029,7 @@ synonym: "peroxisomal morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0005777
+relationship: formed_by FYPO:0000811 ! abnormal peroxisome organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -4041,6 +4053,7 @@ synonym: "plasma membrane morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0005886
+relationship: formed_by FYPO:0000813 ! abnormal plasma membrane organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -4072,9 +4085,10 @@ id: FYPO:0000368
 name: abnormal vacuolar morphology
 def: "A cellular structure phenotype in which the morphology of the fungal-type vacuole is abnormal." [PomBase:mah]
 synonym: "vacuolar morphology: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000287 ! abnormal subcellular structure
+is_a: FYPO:0000812 ! abnormal vacuole organization
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0000324
+relationship: formed_by FYPO:0000287 ! abnormal subcellular structure
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -8235,7 +8249,7 @@ id: FYPO:0000727
 name: abnormal actin filament organization
 def: "A cytokinesis phenotype in which the assembly and distribution of cytoskeletal structures comprising actin filaments does not occur normally." [PomBase:mah]
 synonym: "abnormal actin filament organisation" EXACT [PomBase:mah]
-is_a: FYPO:0000296 ! actin cytoskeleton organization phenotype
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007015
 intersection_of: qualifier PATO:0000460
@@ -8721,6 +8735,7 @@ is_a: FYPO:0000062 ! abnormal nuclear morphology
 intersection_of: PATO:0000051
 intersection_of: inheres_in GO:0005635
 intersection_of: qualifier PATO:0000460
+relationship: formed_by FYPO:0000815 ! abnormal nuclear envelope organization
 created_by: midori
 creation_date: 2012-02-09T03:51:02Z
 
@@ -8957,8 +8972,8 @@ creation_date: 2012-02-29T01:53:55Z
 id: FYPO:0000790
 name: abnormal actin cortical patch organization
 def: "A cellular process phenotype in which actin cortical patch organization is abnormal." [PomBase:mah]
-is_a: FYPO:0000296 ! actin cytoskeleton organization phenotype
 is_a: FYPO:0000336 ! abnormal cellular component assembly
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0044396
 intersection_of: qualifier PATO:0000460
@@ -8972,6 +8987,7 @@ def: "A cellular structure phenotype in which the morphology of actin cortical p
 is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0030479
+relationship: formed_by FYPO:0000790 ! abnormal actin cortical patch organization
 created_by: midori
 creation_date: 2012-02-29T03:14:15Z
 
@@ -9054,6 +9070,189 @@ intersection_of: inheres_in GO:0016049
 intersection_of: towards CHEBI:338412
 created_by: midori
 creation_date: 2012-02-29T03:54:43Z
+
+[Term]
+id: FYPO:0000799
+name: sensitive to diamide
+def: "A phenotype in which cells show increased sensitivity to N,N,N',N'-tetramethyldiazene-1,2-dicarboxamide, also known as diamide." [PomBase:mah]
+synonym: "sensitive to N,N,N',N'-tetramethyldiazene-1,2-dicarboxamide" EXACT [CHEBI:48958]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:48958
+created_by: midori
+creation_date: 2012-03-01T01:37:57Z
+
+[Term]
+id: FYPO:0000801
+name: abnormal actin cytoskeleton organization
+def: "A cellular process phenotype in which actin cytoskeleton organization is abnormal." [PMID:19713940, PomBase:mah]
+synonym: "abnormal actin cytoskeleton organisation" EXACT [PomBase:mah]
+is_a: FYPO:0000296 ! actin cytoskeleton organization phenotype
+is_a: FYPO:0000802 ! abnormal cytoskeleton organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0030036
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T02:05:28Z
+
+[Term]
+id: FYPO:0000802
+name: abnormal cytoskeleton organization
+def: "A cellular process phenotype in which cytoskeleton organization is abnormal." [PomBase:mah]
+synonym: "abnormal cytoskeleton organisation" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007010
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T02:43:53Z
+
+[Term]
+id: FYPO:0000804
+name: abnormal endomembrane system organization
+def: "A cellular process phenotype in which endomembrane system organization is abnormal." [PomBase:mah]
+synonym: "abnormal endomembrane system organisation" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0010256
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:25:09Z
+
+[Term]
+id: FYPO:0000805
+name: abnormal endoplasmic reticulum organization
+def: "A cellular process phenotype in which endoplasmic reticulum organization is abnormal." [PomBase:mah]
+synonym: "abnormal endoplasmic reticulum organisation" EXACT [PomBase:mah]
+synonym: "abnormal ER organization" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007029
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:25:48Z
+
+[Term]
+id: FYPO:0000806
+name: abnormal Golgi organization
+def: "A cellular process phenotype in which Golgi organization is abnormal." [PomBase:mah]
+synonym: "abnormal Golgi organisation" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007030
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:29:07Z
+
+[Term]
+id: FYPO:0000807
+name: abnormal kinetochore organization
+def: "A cellular process phenotype in which kinetochore organization is abnormal." [PomBase:mah]
+synonym: "abnormal kinetochore organisation" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051383
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:29:58Z
+
+[Term]
+id: FYPO:0000808
+name: abnormal lipid particle organization
+def: "A cellular process phenotype in which lipid particle organization is abnormal." [PomBase:mah]
+synonym: "abnormal lipid particle organisation" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0034389
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:31:02Z
+
+[Term]
+id: FYPO:0000809
+name: abnormal mitochondrion organization
+def: "A cellular process phenotype in which mitochondrion organization is abnormal." [PomBase:mah]
+synonym: "abnormal mitochondrion organisation" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007005
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:31:48Z
+
+[Term]
+id: FYPO:0000810
+name: abnormal nucleus organization
+def: "A cellular process phenotype in which nucleus organization is abnormal." [PomBase:mah]
+synonym: "abnormal nuclear organization" EXACT [PomBase:mah]
+synonym: "abnormal nucleus organisation" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006997
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:34:22Z
+
+[Term]
+id: FYPO:0000811
+name: abnormal peroxisome organization
+def: "A cellular process phenotype in which peroxisome organization is abnormal." [PomBase:mah]
+synonym: "abnormal peroxisome organization" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007031
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:38:04Z
+
+[Term]
+id: FYPO:0000812
+name: abnormal vacuole organization
+def: "A cellular process phenotype in which vacuole organization is abnormal." [PomBase:mah]
+synonym: "abnormal vacuole organization" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007033
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:38:52Z
+
+[Term]
+id: FYPO:0000813
+name: abnormal plasma membrane organization
+def: "A cellular process phenotype in which plasma membrane organization is abnormal." [PomBase:mah]
+synonym: "abnormal plasma membrane organization" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007009
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:41:39Z
+
+[Term]
+id: FYPO:0000814
+name: abnormal nucleolus organization
+def: "A cellular process phenotype in which nucleolus organization is abnormal." [PomBase:mah]
+synonym: "abnormal nucleolus organization" EXACT [PomBase:mah]
+is_a: FYPO:0000810 ! abnormal nucleus organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007000
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:42:44Z
+
+[Term]
+id: FYPO:0000815
+name: abnormal nuclear envelope organization
+def: "A cellular process phenotype in which nuclear envelope organization is abnormal." [PomBase:mah]
+synonym: "abnormal nuclear envelope organization" EXACT [PomBase:mah]
+is_a: FYPO:0000810 ! abnormal nucleus organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006998
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-01T03:45:03Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
