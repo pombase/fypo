@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:03:2012 15:26
+date: 14:03:2012 15:21
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1.1-beta7
 default-namespace: fission_yeast_phenotype
@@ -6379,13 +6379,13 @@ creation_date: 2011-08-15T11:41:34Z
 
 [Term]
 id: FYPO:0000567
-name: decreased septation
-def: "A cellular process phenotype in which the occurrence of septation is decreased." [PomBase:mah]
+name: decreased duration of septation
+def: "A cellular process phenotype in which the duration of septation is decreased." [PomBase:mah]
 synonym: "decreased barrier septum formation involved in cell cycle cytokinesis" EXACT [PomBase:mah]
 synonym: "decreased septum formation" BROAD [PomBase:mah]
 synonym: "septum formation: decreased" BROAD [SGD:phenotype_annotation]
 is_a: FYPO:0000117 ! abnormal septation
-intersection_of: PATO:0002052
+intersection_of: PATO:0000499
 intersection_of: inheres_in GO:0071937
 created_by: midori
 creation_date: 2011-08-15T11:41:34Z
@@ -9510,7 +9510,7 @@ creation_date: 2012-03-09T03:40:40Z
 id: FYPO:0000833
 name: normal protein level
 def: "A cell phenotype in which the amount of protein measured in a cell is normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
@@ -9523,7 +9523,7 @@ creation_date: 2012-03-09T03:50:03Z
 id: FYPO:0000834
 name: altered protein level
 def: "A cell phenotype in which the amount of protein measured in a cell differs from normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
@@ -9536,7 +9536,7 @@ creation_date: 2012-03-09T03:50:50Z
 id: FYPO:0000835
 name: decreased protein level
 def: "A cell phenotype in which the amount of protein measured in a cell is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "decreased protein accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0000834 ! altered protein level
 intersection_of: inheres_in CL:0000000
@@ -9549,7 +9549,7 @@ creation_date: 2012-03-09T03:50:57Z
 id: FYPO:0000836
 name: increased protein level
 def: "A cell phenotype in which the amount of protein measured in a cell is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "increased protein accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0000834 ! altered protein level
 intersection_of: inheres_in CL:0000000
@@ -9585,11 +9585,123 @@ id: FYPO:0000839
 name: elongated mononucleate cells
 def: "A cell phenotype in which cells contain one nucleus apiece and are elongated." [PomBase:mah]
 is_a: FYPO:0000017 ! elongated cells
-is_a: FYPO:0000060
+is_a: FYPO:0000060 ! mononucleate
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000060 ! mononucleate
 created_by: midori
 creation_date: 2012-03-12T03:25:38Z
+
+[Term]
+id: FYPO:0000840
+name: normal RNA level
+def: "A cell phenotype in which the amount of RNA measured in a cell is normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+is_a: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-03-14T12:06:03Z
+
+[Term]
+id: FYPO:0000841
+name: sensitive to sodium dodecyl sulfate
+def: "A phenotype in which cells show increased sensitivity to sodium dodecyl sulfate (SDS)." [PomBase:mah]
+synonym: "sensitive to SDS" EXACT [CHEBI:8984]
+synonym: "sensitive to sodium dodecyl sulphate" EXACT [CHEBI:8984]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:8984
+created_by: midori
+creation_date: 2012-03-14T01:14:35Z
+
+[Term]
+id: FYPO:0000842
+name: sensitive to ethanol
+def: "A phenotype in which cells show increased sensitivity to ethanol." [PomBase:mah]
+synonym: "sensitive to ethyl alcohol" EXACT [CHEBI:16236]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:16236
+created_by: midori
+creation_date: 2012-03-14T01:25:07Z
+
+[Term]
+id: FYPO:0000843
+name: sensitive to dithiothreitol
+def: "A phenotype in which cells show increased sensitivity to 1,4-dithiothreitol (DTT)." [PomBase:mah]
+synonym: "sensitive to 1,4-dithiothreitol" EXACT [CHEBI:18320]
+synonym: "sensitive to DTT" EXACT [PomBase:al]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:18320
+created_by: midori
+creation_date: 2012-03-14T01:26:35Z
+
+[Term]
+id: FYPO:0000844
+name: sensitive to mercaptoethanol
+def: "A phenotype in which cells show increased sensitivity to mercaptoethanol." [PomBase:mah]
+synonym: "sensitive to 2-sulfanylethanol " EXACT [CHEBI:51218]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:51218
+created_by: midori
+creation_date: 2012-03-14T01:27:55Z
+
+[Term]
+id: FYPO:0000845
+name: abnormal protein degradation
+def: "A cellular process phenotype in which protein degradation is abnormal. Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
+synonym: "abnormal protein breakdown" EXACT [GO:0030163]
+synonym: "abnormal protein catabolic process" EXACT [GO:0030163, PomBase:mah]
+synonym: "abnormal protein catabolism" EXACT [GO:0030163, PomBase:mah]
+is_a: FYPO:0000328 ! abnormal protein metabolic process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0030163
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-03-14T02:33:44Z
+
+[Term]
+id: FYPO:0000846
+name: decreased protein degradation
+def: "A cellular process phenotype in which the occurrence of protein degradation is decreased." [PomBase:mah]
+synonym: "decreased protein catabolic process" EXACT [GO:0030163, PomBase:mah]
+synonym: "decreased protein catabolism" EXACT [GO:0030163, PomBase:mah]
+is_a: FYPO:0000845 ! abnormal protein degradation
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0030163
+created_by: midori
+creation_date: 2012-03-14T02:57:05Z
+
+[Term]
+id: FYPO:0000847
+name: increased protein degradation
+def: "A cellular process phenotype in which the occurrence of protein degradation is increased." [PomBase:mah]
+synonym: "increased protein catabolic process" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein catabolism" EXACT [GO:0030163, PomBase:mah]
+is_a: FYPO:0000845 ! abnormal protein degradation
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0030163
+created_by: midori
+creation_date: 2012-03-14T03:00:52Z
+
+[Term]
+id: FYPO:0000848
+name: abnormal chromosome morphology
+def: "A cellular structure phenotype in which the morphology of one or more chromosomes is abnormal." [PomBase:mah]
+is_a: FYPO:0000287 ! abnormal subcellular structure
+intersection_of: PATO:0001617
+intersection_of: inheres_in GO:0005694
+relationship: formed_by FYPO:0000641 ! abnormal chromosome organization
+created_by: midori
+creation_date: 2012-03-14T03:09:26Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
