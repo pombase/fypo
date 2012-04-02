@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 30:03:2012 17:03
+date: 02:04:2012 16:30
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1.1-beta7
 default-namespace: fission_yeast_phenotype
@@ -2261,8 +2261,10 @@ creation_date: 2011-04-13T03:41:10Z
 
 [Term]
 id: FYPO:0000197
-name: abnormal dynein-driven meiotic oscillatory nuclear movement
-def: "A cellular process phenotype in which dynein-driven oscillatory nuclear movement during meiosis is abnormal." [PomBase:mah]
+name: abnormal horsetail movement
+def: "A cellular process phenotype in which horsetail movement is abnormal. Horsetail movement is the oscillatory movement of the nucleus that takes place during meiotic prophase I." [GO:0030989, PomBase:mah]
+synonym: "abnormal dynein-driven meiotic oscillatory nuclear movement" EXACT [GO:0030989, PomBase:mah]
+synonym: "abnormal horsetail nuclear movement" EXACT [GO:0030989, PomBase:mah]
 is_a: FYPO:0000149 ! transport phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030989
@@ -9335,6 +9337,9 @@ synonym: "increased accumulation of M-factor in growth medium" RELATED [PomBase:
 synonym: "increased level of M-factor in growth medium" EXACT [PomBase:mah]
 synonym: "increased release of M-factor into growth medium" RELATED [PomBase:mah]
 is_a: FYPO:0000817 ! increased concentration of pheromone in growth medium
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:64120
 created_by: midori
 creation_date: 2012-03-07T04:12:02Z
 
@@ -9346,6 +9351,9 @@ synonym: "increased accumulation of P-factor in growth medium" RELATED [PomBase:
 synonym: "increased level of P-factor in growth medium" EXACT [PomBase:mah]
 synonym: "increased release of P-factor into growth medium" RELATED [PomBase:mah]
 is_a: FYPO:0000817 ! increased concentration of pheromone in growth medium
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:64121
 created_by: midori
 creation_date: 2012-03-07T04:14:04Z
 
@@ -10533,6 +10541,307 @@ intersection_of: PATO:0001508
 intersection_of: inheres_in GO:0016567
 created_by: midori
 creation_date: 2012-03-30T04:14:39Z
+
+[Term]
+id: FYPO:0000913
+name: abnormal ascus development resulting in formation ascus containing non-uniform spores
+def: "An ascus development phenotype that results in the formation of an ascus that contains spores of non-uniform size and DNA content." [PMID:20298435, PomBase:mah, PomBase:vw]
+is_a: FYPO:0000680 ! abnormal ascus development
+created_by: midori
+creation_date: 2012-04-02T12:04:59Z
+
+[Term]
+id: FYPO:0000914
+name: normal glutamate-ammonia ligase activity
+def: "A molecular function phenotype in which the observed rate of glutamate-ammonia ligase (also known as glutamine synthetase) activity is normal." [PomBase:mah]
+synonym: "normal glutamine synthetase activity" EXACT [GO:0004356, PomBase:mah]
+synonym: "normal glutamylhydroxamic synthetase activity" EXACT [GO:0004356]
+synonym: "normal GS activity" EXACT [PMID:7851743, PomBase:al]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004356
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-02T01:46:50Z
+
+[Term]
+id: FYPO:0000915
+name: abnormal pyruvate dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of pyruvate dehydrogenase activity is abnormal." [PomBase:mah]
+synonym: "abnormal PDH activity" EXACT [PMID:7851743, PomBase:al]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004738
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-04-02T01:51:18Z
+
+[Term]
+id: FYPO:0000916
+name: decreased pyruvate dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of pyruvate dehydrogenase activity is decreased." [PomBase:mah]
+synonym: "decreased PDH activity" EXACT [PMID:7851743, PomBase:al]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0000915 ! abnormal pyruvate dehydrogenase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004738
+created_by: midori
+creation_date: 2012-04-02T01:51:30Z
+
+[Term]
+id: FYPO:0000917
+name: abnormal citrate (Si)-synthase activity
+def: "A molecular function phenotype in which the observed rate of citrate (Si)-synthase activity is abnormal." [PomBase:mah]
+synonym: "abnormal citrate synthase activity" BROAD [GO:0004108, PMID:7851743, PomBase:al]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004108
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-04-02T01:54:26Z
+
+[Term]
+id: FYPO:0000918
+name: decreased citrate (Si)-synthase activity
+def: "A molecular function phenotype in which the observed rate of citrate (Si)-synthase activity is decreased." [PomBase:mah]
+synonym: "decreased citrate synthase activity" BROAD [GO:0004108, PMID:7851743, PomBase:al]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0000917 ! abnormal citrate (Si)-synthase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004108
+created_by: midori
+creation_date: 2012-04-02T01:54:32Z
+
+[Term]
+id: FYPO:0000919
+name: increased citrate (Si)-synthase activity
+def: "A molecular function phenotype in which the observed rate of citrate (Si)-synthase activity is increased." [PomBase:mah]
+synonym: "increased citrate synthase activity" BROAD [GO:0004108, PMID:7851743, PomBase:al]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0000917 ! abnormal citrate (Si)-synthase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004108
+created_by: midori
+creation_date: 2012-04-02T02:24:33Z
+
+[Term]
+id: FYPO:0000920
+name: abnormal aconitate hydratase activity
+def: "A molecular function phenotype in which the observed rate of aconitate hydratase (also known as aconitase) activity is abnormal." [PomBase:mah]
+synonym: "abnormal aconitase activity" EXACT [GO:0003994, PMID:7851743, PomBase:al]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003994
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-04-02T02:26:26Z
+
+[Term]
+id: FYPO:0000921
+name: increased aconitate hydratase activity
+def: "A molecular function phenotype in which the observed rate of aconitate hydratase (also known as aconitase) activity is increased." [PomBase:mah]
+synonym: "increased aconitase activity" EXACT [GO:0003994, PMID:7851743, PomBase:al]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0000920 ! abnormal aconitate hydratase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0003994
+created_by: midori
+creation_date: 2012-04-02T02:26:32Z
+
+[Term]
+id: FYPO:0000922
+name: abnormal isocitrate dehydrogenase (NAD+) activity
+def: "A molecular function phenotype in which the observed rate of isocitrate dehydrogenase (NAD+) activity is abnormal." [PomBase:mah]
+synonym: "abnormal NAD-IDH activity" EXACT [PMID:7851743, PomBase:al]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004449
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-04-02T02:33:48Z
+
+[Term]
+id: FYPO:0000923
+name: increased isocitrate dehydrogenase (NAD+) activity
+def: "A molecular function phenotype in which the observed rate of isocitrate dehydrogenase (NAD+) activity is increased." [PomBase:mah]
+synonym: "increased NAD-IDH activity" EXACT [PMID:7851743, PomBase:al]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0000922 ! abnormal isocitrate dehydrogenase (NAD+) activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004449
+created_by: midori
+creation_date: 2012-04-02T02:33:56Z
+
+[Term]
+id: FYPO:0000924
+name: resistance to anisomycin
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of anisomycin than normal." [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:338412
+created_by: midori
+creation_date: 2012-04-02T02:43:27Z
+
+[Term]
+id: FYPO:0000925
+name: unequal meiotic chromosome segregation
+def: "A cellular process phenotype in which chromosomes are not segregated equally to both spindle poles in a meiotic division." [PomBase:mah]
+is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
+created_by: midori
+creation_date: 2012-04-02T03:09:45Z
+
+[Term]
+id: FYPO:0000927
+name: horsetail movement abolished
+def: "A cellular process phenotype in which horsetail movement is abolished. Horsetail movement is the oscillatory movement of the nucleus that takes place during meiotic prophase I." [PomBase:mah]
+synonym: "absent horsetail movement" EXACT [PomBase:vw]
+synonym: "dynein-driven meiotic oscillatory nuclear movement abolished" EXACT [GO:0030989, PomBase:mah]
+synonym: "horsetail nuclear movement abolished" EXACT [GO:0030989, PomBase:mah]
+is_a: FYPO:0000197 ! abnormal horsetail movement
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0030989
+created_by: midori
+creation_date: 2012-04-02T03:23:19Z
+
+[Term]
+id: FYPO:0000928
+name: abnormal protein localization to cell cortex
+def: "A cell phenotype in which the localization of a protein to the cell cortex is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the cell cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process.
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000929
+name: decreased protein localization to cell cortex
+def: "A cell phenotype in which the localization of a protein to the cell cortex is decreased." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000930
+name: abolished protein localization to cell cortex
+def: "A cell phenotype in which the localization of a protein to the cell cortex is abolished." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000931
+name: abnormal protein localization to microtubule cytoskeleton
+def: "A cell phenotype in which the localization of a protein to the microtubule cytoskeleton is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with the microtubule cytoskeleton and decreased levels or absence of proteins normally found there, and describes defects in a localization process.
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000932
+name: increased protein localization to microtubule cytoskeleton
+def: "A cell phenotype in which the localization of a protein to the microtubule cytoskeleton is increased." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000933
+name: decreased protein localization to microtubule cytoskeleton
+def: "A cell phenotype in which the localization of a protein to the microtubule cytoskeleton is decreased." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000934
+name: abolished protein localization to microtubule cytoskeleton
+def: "A cell phenotype in which the localization of a protein to the microtubule cytoskeleton is abolished." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000935
+name: abnormal protein localization to cortical microtubule cytoskeleton
+def: "A cell phenotype in which the localization of a protein to the cortical microtubule cytoskeleton is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with the cortical microtubule cytoskeleton and decreased levels or absence of proteins normally found there, and describes defects in a localization process.
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000936
+name: increased protein localization to cortical microtubule cytoskeleton
+def: "A cell phenotype in which the localization of a protein to the cortical microtubule cytoskeleton is increased." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000937
+name: decreased protein localization to cortical microtubule cytoskeleton
+def: "A cell phenotype in which the localization of a protein to the cortical microtubule cytoskeleton is decreased." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000938
+name: abolished protein localization to cortical microtubule cytoskeleton
+def: "A cell phenotype in which the localization of a protein to the cortical microtubule cytoskeleton is abolished." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000939
+name: abnormal protein localization to spindle pole body
+def: "A cell phenotype in which the localization of a protein to the spindle pole body is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the spindle pole body and decreased levels or absence of proteins normally found there, and describes defects in a localization process.
+is_a: FYPO:0000443 ! abnormal protein localization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071988
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000940
+name: decreased protein localization to spindle pole body
+def: "A cell phenotype in which the localization of a protein to the spindle pole body is decreased." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0071988
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000941
+name: abolished protein localization to spindle pole body
+def: "A cell phenotype in which the localization of a protein to the spindle pole body is abolished." [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization
+intersection_of: PATO:0001508
+intersection_of: inheres_in GO:0071988
+created_by: midori
+creation_date: 2012-04-02T03:52:49Z
+
+[Term]
+id: FYPO:0000942
+name: abnormal nucleus localization in prospore
+def: "A cellular process phenotype in which nucleus localization is abnormal in a prospore" [PomBase:mah]
+synonym: "abnormal nuclear localization in prospore" EXACT [PomBase:mah]
+synonym: "abnormal nuclear position in prospore" EXACT [PomBase:mah]
+synonym: "abnormal nucleus localisation in prospore" EXACT [PomBase:mah]
+synonym: "abnormal nucleus localization in ascospore-type prospore" EXACT [GO:0005628, PomBase:mah]
+is_a: FYPO:0000517 ! abnormal nucleus localization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051647
+intersection_of: qualifier PATO:0000460
+intersection_of: occurs_in GO:0042764
+created_by: midori
+creation_date: 2012-04-02T04:22:13Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
