@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:04:2012 16:30
+date: 03:04:2012 16:46
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1.1-beta7
 default-namespace: fission_yeast_phenotype
@@ -156,9 +156,11 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000013
 name: T-shaped cells
-def: "A cell morphology phenotype in which a single cell grows in the form of the letter T. The cell usually septates perpendicular to the normal septation axis, and divides to form normal-shaped daughter cells." [PomBase:mah, PomBase:vw]
+def: "A cell morphology phenotype in which a single cell grows in the form of the letter T." [PomBase:mah, PomBase:vw]
+comment: A T-shaped cell may septate perpendicular to the normal septation axis, and divide to form normal-shaped daughter cells.
 synonym: "cell morphology, T shaped" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0000124 ! viable
 intersection_of: PATO:0001200
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -190,7 +192,7 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000016
 name: curved cells
-def: "A cell morphology phenotype in which cells are curved along the long axis." [PomBase:mah]
+def: "A cell morphology phenotype in which cells are curved along the long axis. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
 synonym: "bent cells" EXACT [PomBase:mah]
 synonym: "cell morphology, curved" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
@@ -202,7 +204,7 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000017
 name: elongated cells
-def: "A cell morphology phenotype in which cells are longer than normal." [PomBase:mah]
+def: "A cell morphology phenotype in which cells are longer than normal, i.e. the maximum distance between the cell ends is greater than normal." [PomBase:mah, PomBase:vw]
 synonym: "cell morphology, elongated cells" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000573
@@ -1500,6 +1502,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000129
 name: spherical cells
 def: "A cell morphology phenotype in which cells are formed in the shape of a sphere." [PomBase:mah]
+synonym: "orb" EXACT [PomBase:jh, PomBase:vw]
 is_a: FYPO:0000021 ! spheroid cells
 intersection_of: PATO:0001499
 intersection_of: inheres_in CL:0000000
@@ -1546,10 +1549,11 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000133
 name: elongated multinucleate cells
 def: "A cell phenotype in which cells contain more than one nucleus apiece and are elongated." [PomBase:mah]
-is_a: FYPO:0000017 ! elongated cells
 is_a: FYPO:0000061 ! multinucleate
+is_a: FYPO:0000949 ! aseptate
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000949 ! aseptate
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
 
@@ -3419,6 +3423,7 @@ id: FYPO:0000307
 name: spore germination abolished, small spores
 def: "A cellular process phenotype in which spore germination does not occur, and spores are smaller than normal." [PomBase:mah]
 is_a: FYPO:0000309 ! spore germination abolished, abnormal spore morphology
+is_a: FYPO:0000944 ! spore germination abolished, normal spore morphology
 intersection_of: has_part FYPO:0000306 ! spore germination abolished
 intersection_of: has_part FYPO:0000346 ! small spores
 created_by: midori
@@ -3430,6 +3435,7 @@ name: spore germination abolished, swollen spores
 def: "A cellular process phenotype in which spore germination does not occur, and spores have a larger volume than normal." [PomBase:mah]
 is_a: FYPO:0000309 ! spore germination abolished, abnormal spore morphology
 is_a: FYPO:0000347 ! swollen spores
+is_a: FYPO:0000944 ! spore germination abolished, normal spore morphology
 intersection_of: has_part FYPO:0000306 ! spore germination abolished
 intersection_of: has_part FYPO:0000347 ! swollen spores
 created_by: midori
@@ -3832,7 +3838,7 @@ is_a: FYPO:0000215 ! abnormal intracellular protein transport
 is_a: FYPO:0000506 ! abnormal nuclear export
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006611
-intersection_of: qualifier PATO:0000460
+intersection_of: qualifier PATO:0000460rsa
 created_by: midori
 creation_date: 2011-06-15T05:11:00Z
 
@@ -4090,11 +4096,13 @@ creation_date: 2011-07-14T06:06:09Z
 id: FYPO:0000368
 name: abnormal vacuolar morphology
 def: "A cellular structure phenotype in which the morphology of the fungal-type vacuole is abnormal." [PomBase:mah]
+comment: Note that a vacuolated phenotype may be due to the presence of more vacuoles in a cell than normal, or to vacuoles located nearer the cell surface (and hence more visible) than normal.
 synonym: "vacuolar morphology: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000812 ! abnormal vacuole organization
+synonym: "vacuolated" RELATED [PomBase:mah]
+is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
 intersection_of: inheres_in GO:0000324
-relationship: formed_by FYPO:0000287 ! abnormal subcellular structure
+relationship: formed_by FYPO:0000812 ! abnormal vacuole organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -7343,7 +7351,7 @@ creation_date: 2011-10-05T04:52:48Z
 [Term]
 id: FYPO:0000645
 name: small vegetative cells
-def: "A cell morphology phenotype in which vegetatively growing cells have an abnormally low volume." [PomBase:mah]
+def: "A cell morphology phenotype in which vegetative cells have an abnormally low volume." [PomBase:mah]
 is_a: FYPO:0000023 ! small cells
 intersection_of: PATO:0000596
 intersection_of: during GO:0072690
@@ -7397,6 +7405,7 @@ creation_date: 2011-10-13T12:33:47Z
 id: FYPO:0000650
 name: increased septation index
 def: "A cell population phenotype in which the septation index is higher than normal. The septation index is the proportion of the population undergoing septation at any given time, and is usually around 10% (varying between 7-15%) for wild type." [PomBase:mah, PomBase:vw]
+synonym: "septated" RELATED [PomBase:vw]
 is_a: FYPO:0000003 ! cell population phenotype
 relationship: includes_cells_with_phenotype FYPO:0000651 ! increased duration of septation
 created_by: midori
@@ -9255,6 +9264,8 @@ creation_date: 2012-03-01T03:38:04Z
 id: FYPO:0000812
 name: abnormal vacuole organization
 def: "A cellular process phenotype in which vacuole organization is abnormal." [PomBase:mah]
+synonym: "abnormal vacuolar organisation" EXACT [PomBase:vw]
+synonym: "abnormal vacuolar organization" EXACT [PomBase:vw]
 synonym: "abnormal vacuole organisation" EXACT [PomBase:mah]
 is_a: FYPO:0000335 ! abnormal cellular component organization
 intersection_of: PATO:0000001
@@ -9595,10 +9606,11 @@ creation_date: 2012-03-12T03:24:23Z
 id: FYPO:0000839
 name: elongated mononucleate cells
 def: "A cell phenotype in which cells contain one nucleus apiece and are elongated." [PomBase:mah]
-is_a: FYPO:0000017 ! elongated cells
 is_a: FYPO:0000060 ! mononucleate
+is_a: FYPO:0000949 ! aseptate
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000949 ! aseptate
 created_by: midori
 creation_date: 2012-03-12T03:25:38Z
 
@@ -10692,6 +10704,17 @@ created_by: midori
 creation_date: 2012-04-02T03:09:45Z
 
 [Term]
+id: FYPO:0000926
+name: normal volume cells
+def: "A cell morphology phenotype in which a cell has a normal volume." [PomBase:mah]
+is_a: FYPO:0000257 ! normal phenotype
+intersection_of: PATO:0000918
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-03T03:12:03Z
+
+[Term]
 id: FYPO:0000927
 name: horsetail movement abolished
 def: "A cellular process phenotype in which horsetail movement is abolished. Horsetail movement is the oscillatory movement of the nucleus that takes place during meiotic prophase I." [PomBase:mah]
@@ -10838,10 +10861,123 @@ synonym: "abnormal nucleus localization in ascospore-type prospore" EXACT [GO:00
 is_a: FYPO:0000517 ! abnormal nucleus localization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051647
-intersection_of: qualifier PATO:0000460
 intersection_of: occurs_in GO:0042764
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2012-04-02T04:22:13Z
+
+[Term]
+id: FYPO:0000943
+name: normal spore morphology
+def: "A cell phenotype characterized by normal spore morphology." [PomBase:mah]
+is_a: FYPO:0000672 ! normal cell morphology
+intersection_of: PATO:0000051
+intersection_of: inheres_in CL:0000596
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-03T02:27:00Z
+
+[Term]
+id: FYPO:0000944
+name: spore germination abolished, normal spore morphology
+def: "A cellular process phenotype in which spore germination does not occur, and spores have normal morphology." [PomBase:mah]
+is_a: FYPO:0000306 ! spore germination abolished
+intersection_of: has_part FYPO:0000306 ! spore germination abolished
+intersection_of: has_part FYPO:0000943 ! normal spore morphology
+created_by: midori
+creation_date: 2012-04-03T02:28:22Z
+
+[Term]
+id: FYPO:0000945
+name: swollen spheroid cells
+def: "A cell morphology phenotype in which a cell is shaped in the form of a spheroid, and has a larger volume than normal." [PomBase:mah]
+synonym: "enlarged volume spheroid cells" EXACT [PomBase:mah]
+synonym: "swollen rounded cells" RELATED [PomBase:mah]
+is_a: FYPO:0000021 ! spheroid cells
+is_a: FYPO:0000025 ! swollen cells
+created_by: midori
+creation_date: 2012-04-03T03:14:05Z
+
+[Term]
+id: FYPO:0000946
+name: normal volume spheroid cells
+def: "A cell morphology phenotype in which a cell is shaped in the form of a spheroid, and has a normal volume." [PomBase:mah]
+synonym: "normal volume rounded cells" RELATED [PomBase:mah]
+is_a: FYPO:0000021 ! spheroid cells
+intersection_of: has_part FYPO:0000021 ! spheroid cells
+intersection_of: has_part FYPO:0000926 ! normal volume cells
+created_by: midori
+creation_date: 2012-04-03T03:16:37Z
+
+[Term]
+id: FYPO:0000947
+name: swollen spherical cells
+def: "A cell morphology phenotype in which a cell is shaped in the form of a sphere, and has a larger volume than normal." [PomBase:mah]
+synonym: "enlarged volume spherical cells" EXACT [PomBase:mah]
+synonym: "swollen orb" EXACT [PomBase:vw]
+is_a: FYPO:0000129 ! spherical cells
+is_a: FYPO:0000945 ! swollen spheroid cells
+intersection_of: has_part FYPO:0000025 ! swollen cells
+intersection_of: has_part FYPO:0000129 ! spherical cells
+created_by: midori
+creation_date: 2012-04-03T03:27:05Z
+
+[Term]
+id: FYPO:0000948
+name: normal volume spherical cells
+def: "A cell morphology phenotype in which a cell is shaped in the form of a sphere, and has a normal volume." [PomBase:mah]
+synonym: "normal volume orb" EXACT [PomBase:vw]
+is_a: FYPO:0000129 ! spherical cells
+is_a: FYPO:0000946 ! normal volume spheroid cells
+intersection_of: has_part FYPO:0000129 ! spherical cells
+intersection_of: has_part FYPO:0000926 ! normal volume cells
+created_by: midori
+creation_date: 2012-04-03T03:28:08Z
+
+[Term]
+id: FYPO:0000949
+name: aseptate
+def: "A cellular structure phenotype in which cells do not contain septa." [PomBase:mah]
+synonym: "absent septum" EXACT [PomBase:mah]
+is_a: FYPO:0000287 ! abnormal subcellular structure
+intersection_of: PATO:0002000
+intersection_of: inheres_in GO:0000935
+created_by: midori
+creation_date: 2012-04-03T03:38:09Z
+
+[Term]
+id: FYPO:0000950
+name: elongated aseptate cells
+def: "A cell phenotype in which cells do not contain septa and are elongated." [PomBase:mah]
+is_a: FYPO:0000017 ! elongated cells
+is_a: FYPO:0000949 ! aseptate
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000949 ! aseptate
+created_by: midori
+creation_date: 2012-04-03T03:41:12Z
+
+[Term]
+id: FYPO:0000951
+name: small inviable vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are inviable and have an abnormally low volume." [PomBase:mah]
+is_a: FYPO:0000049 ! inviable
+is_a: FYPO:0000645 ! small vegetative cells
+created_by: midori
+creation_date: 2012-04-03T04:12:31Z
+
+[Term]
+id: FYPO:0000952
+name: vacuoles present in greater numbers
+def: "A cellular structure phenotype in which cells contain more vacuoles than normal." [PomBase:mah]
+comment: Note that a vacuolated phenotype may be due to the presence of more vacuoles in a cell than normal, or to vacuoles located nearer the cell surface (and hence more visible) than normal.
+synonym: "additional vacuoles present" EXACT [PomBase:mah]
+synonym: "extra vacuoles" EXACT [PomBase:mah]
+synonym: "vacuolated" RELATED [PomBase:mah]
+is_a: FYPO:0000287 ! abnormal subcellular structure
+intersection_of: PATO:0002002
+intersection_of: inheres_in GO:0000324
+created_by: midori
+creation_date: 2012-04-03T04:18:23Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
