@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 13:04:2012 17:57
+date: 19:04:2012 14:39
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1.1-beta7
 default-namespace: fission_yeast_phenotype
@@ -2145,8 +2145,9 @@ creation_date: 2011-04-13T03:34:54Z
 
 [Term]
 id: FYPO:0000184
-name: abnormal regulation of filamentous growth
-def: "A regulation phenotype in which regulation of filamentous growth is abnormal." [PomBase:mah]
+name: abnormal regulation of pseudohyphal growth
+def: "A regulation phenotype in which regulation of pseudohyphal growth is abnormal." [PomBase:mah]
+synonym: "abnormal regulation of filamentous growth" BROAD [PomBase:mah]
 is_a: FYPO:0000145 ! regulation phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0010570
@@ -3036,6 +3037,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000268
 name: sensitive to UV
 def: "A cell phenotype in which cells show increased sensitivity to ultraviolet light." [PomBase:mah]
+synonym: "increased sensivity to UV irradiation" EXACT [PomBase:vw]
 synonym: "sensitive to ultraviolet light" EXACT [PomBase:mah]
 synonym: "UV resistance: decreased" EXACT [:SGDph]
 is_a: FYPO:0000304 ! sensitive to stress
@@ -4878,18 +4880,6 @@ created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
 [Term]
-id: FYPO:0000439
-name: normal filamentous growth
-def: "A cellular process phenotype in which filamentous growth is normal." [PomBase:mah]
-synonym: "filamentous growth: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000047 ! normal cell growth
-intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0030447
-intersection_of: qualifier PATO:0000461
-created_by: midori
-creation_date: 2011-07-14T06:45:37Z
-
-[Term]
 id: FYPO:0000440
 name: sensitive to antimycin A
 def: "A phenotype in which cells show increased sensitivity to antimycin A." [PomBase:mah]
@@ -5088,6 +5078,7 @@ creation_date: 2011-08-12T02:39:05Z
 id: FYPO:0000455
 name: accumulation of double-strand break sites
 def: "A cell phenotype in which the number of sites of double-strand breaks in DNA is greater than normal." [PomBase:mah]
+comment: Because Rad22 often accumulates at double-strand breaks, consider also annotating to 'increased number of Rad22 foci' (FYPO:0000972).
 synonym: "accumulation of DNA damage foci" EXACT [PomBase:mah]
 synonym: "increased number of DNA damage foci" EXACT [PomBase:mah]
 synonym: "increased number of double-strand break sites" EXACT [PomBase:mah]
@@ -6288,11 +6279,15 @@ creation_date: 2011-08-15T11:41:34Z
 [Term]
 id: FYPO:0000554
 name: normal pseudohyphal growth
+alt_id: FYPO:0000439
 def: "A cellular process phenotype in which pseudohyphal growth is normal." [PomBase:mah]
+synonym: "filamentous growth: normal" BROAD [SGD:phenotype_annotation]
+synonym: "normal filamentous growth" BROAD [PomBase:mah]
 synonym: "pseudohyphal growth: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000439 ! normal filamentous growth
+is_a: FYPO:0000047 ! normal cell growth
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007124
+intersection_of: inheres_in GO:0030447
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2011-08-15T11:41:34Z
@@ -11313,6 +11308,117 @@ intersection_of: inheres_in GO:0044154
 intersection_of: occurs_at SO:0001799
 created_by: midori
 creation_date: 2012-04-12T02:32:04Z
+
+[Term]
+id: FYPO:0000968
+name: normal cellular response to stress
+def: "A cellular response phenotype in which the cellular response to a stress is normal." [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0033554
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-19T01:25:21Z
+
+[Term]
+id: FYPO:0000969
+name: normal cellular response to UV
+def: "A cellular response phenotype in which the cellular response to ultraviolet light is normal." [PomBase:mah]
+synonym: "normal cellular response to ultraviolet light" EXACT [PomBase:mah]
+synonym: "normal sensivity to UV irradiation" EXACT [PomBase:vw]
+is_a: FYPO:0000968 ! normal cellular response to stress
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0034644
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-19T01:25:40Z
+
+[Term]
+id: FYPO:0000970
+name: sensitive to mitomycin C
+def: "A phenotype in which cells show increased sensitivity to mitomycin C." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:27504
+created_by: midori
+creation_date: 2012-04-19T01:38:22Z
+
+[Term]
+id: FYPO:0000971
+name: DNA damage checkpoint activated
+def: "A cell cycle phenotype in which the DNA damage checkpoint is activated, i.e. the cell cycle is delayed or halted before nuclear division to allow DNA damage to be repaired." [PomBase:mah]
+is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+created_by: midori
+creation_date: 2012-04-19T01:40:55Z
+
+[Term]
+id: FYPO:0000972
+name: increased number of Rad22 foci
+def: "A cell phenotype in which the number of sites at which the protein Rad22 accumulates is greater than normal." [PMID:22064477, PomBase:mah]
+comment: Because Rad22 often accumulates at double-strand breaks, consider also annotating to 'accumulation of double-strand break sites' (FYPO:0000455).
+is_a: FYPO:0000136 ! cellular structure phenotype
+created_by: midori
+creation_date: 2012-04-19T02:09:54Z
+
+[Term]
+id: FYPO:0000973
+name: normal cellular response to copper ion
+def: "A cellular response phenotype in which the cellular response to copper ions is normal." [PomBase:mah]
+synonym: "normal cellular response to copper" EXACT [GO:0071280]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071280
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-19T02:30:26Z
+
+[Term]
+id: FYPO:0000974
+name: normal cellular response to zinc ion
+def: "A cellular response phenotype in which the cellular response to zinc ions is normal." [PomBase:mah]
+synonym: "normal cellular response to zinc" EXACT [GO:0071294]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071294
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-19T02:31:30Z
+
+[Term]
+id: FYPO:0000975
+name: normal cellular response to mercury ion
+def: "A cellular response phenotype in which the cellular response to mercury ions is normal." [PomBase:mah]
+synonym: "normal cellular response to mercury" EXACT [GO:0071248]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071288
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-19T02:32:52Z
+
+[Term]
+id: FYPO:0000976
+name: normal cellular response to selenite ion
+def: "A cellular response phenotype in which the cellular response to selenite ions is normal." [PomBase:mah]
+synonym: "normal cellular response to selenite" EXACT [PomBase:mah]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0072715
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-19T02:33:28Z
+
+[Term]
+id: FYPO:0000977
+name: normal cellular response to silver ion
+def: "A cellular response phenotype in which the cellular response to silver ions is normal." [PomBase:mah]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071292
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-04-19T02:34:05Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
