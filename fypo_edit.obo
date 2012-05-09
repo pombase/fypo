@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 30:04:2012 15:01
+date: 09:05:2012 15:29
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1.1-beta9
 default-namespace: fission_yeast_phenotype
@@ -4364,9 +4364,11 @@ name: mitotic cell cycle arrest at START
 def: "A cellular process phenotype in which traversing the start control point of the mitotic cell cycle is arrested." [PomBase:mah]
 synonym: "cell cycle passage through START: arrested" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
-is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0007089
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+is_a: FYPO:0001029
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0007089
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
@@ -4400,12 +4402,13 @@ creation_date: 2011-07-14T06:06:09Z
 id: FYPO:0000392
 name: cell cycle arrest at mitotic metaphase/anaphase transition
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested at the metaphase/anaphase transition." [PomBase:mah]
+synonym: "abnormal cell cycle arrest at mitotic metaphase/anaphase transition" EXACT [PomBase:mah, XX:<new dbxref>]
 synonym: "cell cycle passage through the metaphase-anaphase transition: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic metaphase/anaphase arrest" EXACT [PomBase:mah]
-is_a: FYPO:0000407 ! cell cycle arrest
-is_a: FYPO:0000502 ! arrested mitotic cell cycle
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0007091
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0007091
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
@@ -4425,13 +4428,16 @@ creation_date: 2011-07-14T06:06:09Z
 id: FYPO:0000395
 name: mitotic cell cycle arrest at G1/S phase transition
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested at the G1/S transition." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle arrest at G1/S phase transition" EXACT [PomBase:mah]
 synonym: "cell cycle progression through the G1/S phase transition: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic G1/S phase arrest" EXACT [PomBase:mah]
 is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
-is_a: FYPO:0000502 ! arrested mitotic cell cycle
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
 is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0000082
+is_a: FYPO:0001029
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0000082
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
@@ -4474,13 +4480,15 @@ creation_date: 2011-07-14T06:45:37Z
 id: FYPO:0000400
 name: cell cycle arrest at mitotic G2/M phase transition
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested at the G2/M transition." [PomBase:mah]
+synonym: "abnormal cell cycle arrest at mitotic G2/M phase transition" EXACT [PomBase:mah]
 synonym: "cell cycle progression through the G2/M phase transition: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic G2/M phase arrest" EXACT [PomBase:mah]
 is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
-is_a: FYPO:0000502 ! arrested mitotic cell cycle
-is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0000086
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+is_a: FYPO:0001029
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0000086
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
@@ -4532,14 +4540,15 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000407
-name: cell cycle arrest
-def: "A cellular process phenotype in which cell cycle progression is arrested." [PomBase:mah]
-comment: Note that this term should be used only for cell cycle arrest that occurs in mutants. For phenotypes affecting the G1 cell cycle that normally occurs in response to mating pheromone, see 'abnormal cell cycle arrest in response to pheromone' (FYPO:0000530) and its child terms.
-synonym: "arrested cell cycle progression" EXACT [PomBase:mah]
+name: abnormally arrested cell cycle progression
+def: "A cellular process phenotype in which cell cycle progression is arrested under conditions where arrest does not normally occur." [PomBase:mah]
+comment: Note that this term should be used only for cell cycle arrest that occurs in mutants but not in wild type cells. For phenotypes affecting cell cycle that normally occurs, e.g. in response to mating pheromone, see 'normally arrested cell cycle progression' (FYPO:0001025), 'abnormal occurrence of normal cell cycle arrest' (FYPO:0001026), and their child terms.
+synonym: "abnormal cell cycle arrest" EXACT [PomBase:mah]
 synonym: "cell cycle progression: arrested" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000011 ! abnormal cell cycle progression
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0007049
+is_a: FYPO:0001024 ! cell cycle arrest phenotype
+intersection_of: PATO:0001561
+intersection_of: towards GO:0007050
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
@@ -4939,8 +4948,8 @@ name: cell cycle arrest with replicated DNA
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested when cells have replicated genomic DNA." [PomBase:mah]
 comment: Arrest with replicated DNA may occur between late S and G2/M; if only DNA content is measured, the arrest point cannot be determined with greater precision.
 synonym: "cell cycle arrest with 2C DNA content" NARROW [PomBase:mah]
-is_a: FYPO:0000407 ! cell cycle arrest
-intersection_of: FYPO:0000407 ! cell cycle arrest
+is_a: FYPO:0000407 ! abnormally arrested cell cycle progression
+intersection_of: FYPO:0000407 ! abnormally arrested cell cycle progression
 intersection_of: preceded_by GO:0006261
 created_by: midori
 creation_date: 2011-08-12T02:03:05Z
@@ -4952,10 +4961,10 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 comment: Note that this term should be used only for cell cycle arrest that occurs in mutants. For phenotypes affecting the G1 cell cycle that normally occurs in response to mating pheromone, see 'abnormal cell cycle arrest in response to pheromone' (FYPO:0000530) and its child terms.
 synonym: "mitotic cell cycle progression in G1 phase: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic G1 phase arrest" EXACT [PomBase:mah]
-is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
 is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
+is_a: FYPO:0001029
 intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0000080
+intersection_of: happens_during GO:0000080
 created_by: midori
 creation_date: 2011-08-12T02:07:59Z
 
@@ -4965,10 +4974,10 @@ name: cell cycle arrest in mitotic G2 phase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G2 phase." [PomBase:mah]
 synonym: "mitotic cell cycle progression in G2 phase: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic G2 phase arrest" EXACT [PomBase:mah]
-is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
 is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
+is_a: FYPO:0001029
 intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0000085
+intersection_of: happens_during GO:0000085
 created_by: midori
 creation_date: 2011-08-12T02:11:06Z
 
@@ -5300,7 +5309,7 @@ def: "A cellular process phenotype in which meiosis is arrested." [PomBase:mah]
 synonym: "meiosis: arrested" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000051 ! abnormal meiosis
 intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0007126
+intersection_of: towards GO:0007126
 created_by: midori
 creation_date: 2011-08-15T10:19:32Z
 
@@ -5613,14 +5622,15 @@ creation_date: 2011-08-15T10:19:32Z
 
 [Term]
 id: FYPO:0000502
-name: arrested mitotic cell cycle
-def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested." [PomBase:mah]
-synonym: "mitotic cell cycle arrest" RELATED [PomBase:mah]
-synonym: "mitotic cell cycle arrested" EXACT [PomBase:mah]
+name: abnormally arrested mitotic cell cycle
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested under conditions where arrest does not normally occur." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle arrest" RELATED [PomBase:mah]
+synonym: "mitotic cell cycle abnormally arrested" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle: arrested" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0000278
+is_a: FYPO:0000407 ! abnormally arrested cell cycle progression
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
 created_by: midori
 creation_date: 2011-08-15T10:19:32Z
 
@@ -5968,12 +5978,12 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000530
 name: abnormal cell cycle arrest in response to pheromone
-def: "A cellular process phenotype in which cell cycle arrest in response to pheromone is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which the cell cycle arrest that normally occurs in response to pheromone is abnormal." [PomBase:mah]
 synonym: "abnormal pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
 synonym: "pheromone-induced cell cycle arrest: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000145 ! regulation phenotype
 is_a: FYPO:0000302 ! abnormal response to pheromone
-is_a: FYPO:0000631 ! cell cycle phenotype
+is_a: FYPO:0001026 ! abnormal occurrence of normal cell cycle arrest
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000751
 intersection_of: qualifier PATO:0000460
@@ -6012,7 +6022,7 @@ name: normal cell cycle arrest in response to pheromone
 def: "A cellular process phenotype in which cell cycle arrest in response to pheromone is normal." [PomBase:mah]
 synonym: "normal pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
 synonym: "pheromone-induced cell cycle arrest: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000627 ! normal cellular process
+is_a: FYPO:0001025 ! normally arrested cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000751
 intersection_of: qualifier PATO:0000461
@@ -6971,11 +6981,13 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000608
 name: mitotic cell cycle arrest in M phase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in M phase." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle arrest in M phase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in M phase: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000502 ! arrested mitotic cell cycle
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
 is_a: FYPO:0000607 ! abnormal mitotic M phase progression
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0000087
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0000087
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
@@ -7008,11 +7020,13 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000611
 name: mitotic cell cycle arrest in S phase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in S phase." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle arrest in S phase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in S phase: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000502 ! arrested mitotic cell cycle
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
 is_a: FYPO:0000610 ! abnormal mitotic S phase progression
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0000084
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0000084
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
@@ -7103,10 +7117,12 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000619
 name: mitotic cell cycle arrest in late anaphase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in late anaphase." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle arrest in late anaphase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in late anaphase: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000502 ! arrested mitotic cell cycle
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0000090
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0000090
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
@@ -7114,10 +7130,12 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000620
 name: mitotic cell cycle arrest in metaphase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in metaphase." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle arrest in metaphase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in metaphase: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000502 ! arrested mitotic cell cycle
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0000089
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0000089
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
@@ -7137,10 +7155,12 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000622
 name: mitotic cell cycle arrest in telophase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in telophase." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle arrest in telophase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in telophase: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000502 ! arrested mitotic cell cycle
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0000093
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0000093
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
@@ -8148,10 +8168,10 @@ creation_date: 2011-12-05T04:43:53Z
 [Term]
 id: FYPO:0000710
 name: abnormal cell cycle arrest in response to nitrogen starvation
-def: "A cellular process phenotype in which cell cycle arrest in response to nitrogen starvation is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which cell cycle arrest in response to nitrogen starvation, which normally occurs in G1 phase, is abnormal." [PomBase:mah]
 is_a: FYPO:0000145 ! regulation phenotype
 is_a: FYPO:0000152 ! abnormal cellular response to nitrogen starvation
-is_a: FYPO:0000631 ! cell cycle phenotype
+is_a: FYPO:0001026 ! abnormal occurrence of normal cell cycle arrest
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030996
 intersection_of: qualifier PATO:0000460
@@ -9699,11 +9719,12 @@ creation_date: 2012-03-09T03:51:05Z
 [Term]
 id: FYPO:0000837
 name: cell cycle arrest in mitotic interphase
-def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in any part of interphase." [PomBase:mah]
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in any part of interphase. Includes normal and abnormal occurrences of arrest." [PomBase:mah]
 synonym: "mitotic interphase cell cycle arrest" EXACT [PomBase:mah]
-is_a: FYPO:0000407 ! cell cycle arrest
-intersection_of: PATO:0000297
-intersection_of: inheres_in GO:0051329
+is_a: FYPO:0001024 ! cell cycle arrest phenotype
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0051329
 created_by: midori
 creation_date: 2012-03-09T04:18:58Z
 
@@ -11707,29 +11728,29 @@ creation_date: 2012-04-25T03:07:07Z
 
 [Term]
 id: FYPO:0001000
-name: cell cycle arrest in mitotic G1 phase during nitrogen starvation
-def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G1 phase when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
-comment: Note that this term should be used only for cell cycle arrest that occurs in mutants. For phenotypes affecting the G1 cell cycle that normally occurs in response to mating pheromone, see 'abnormal cell cycle arrest in response to pheromone' (FYPO:0000530) and its child terms.
+name: normal cell cycle arrest in mitotic G1 phase during nitrogen starvation
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested normally in G1 phase when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
 synonym: "mitotic G1 phase arrest during nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
-is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
-intersection_of: PATO:0000297
-intersection_of: happens_during GO:0006995
-intersection_of: inheres_in GO:0000080
+is_a: FYPO:0001025 ! normally arrested cell cycle progression
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0030996
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-04-25T03:36:56Z
 
 [Term]
 id: FYPO:0001001
-name: cell cycle arrest in mitotic G2 phase during nitrogen starvation
-def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G2 phase when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
-comment: Note that this term should be used only for cell cycle arrest that occurs in mutants. For phenotypes affecting the G1 cell cycle that normally occurs in response to mating pheromone, see 'abnormal cell cycle arrest in response to pheromone' (FYPO:0000530) and its child terms.
+name: abnormal cell cycle arrest in mitotic G2 phase during nitrogen starvation
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G2 phase, instead of the normal G1 phase, when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
 synonym: "mitotic G2 phase arrest during nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
-is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
-intersection_of: PATO:0000297
+is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+intersection_of: PATO:0001561
+intersection_of: towards GO:0071850
+intersection_of: happens_during GO:0000085
 intersection_of: happens_during GO:0006995
-intersection_of: inheres_in GO:0000085
 created_by: midori
 creation_date: 2012-04-25T03:39:33Z
 
@@ -11994,6 +12015,66 @@ intersection_of: inheres_in GO:0072719
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-04-30T02:59:00Z
+
+[Term]
+id: FYPO:0001024
+name: cell cycle arrest phenotype
+def: "A cell cycle phenotype that affects or involves the normal or abnormal occurrence of cell cycle arrest. In cell cycle arrest, progression through the cell cycle is halted during one of the normal phases (G1, S, G2, or M)." [PomBase:mah]
+is_a: FYPO:0000631 ! cell cycle phenotype
+created_by: midori
+creation_date: 2012-05-09T01:15:41Z
+
+[Term]
+id: FYPO:0001025
+name: normally arrested cell cycle progression
+def: "A cellular process phenotype in which cell cycle progression is arrested under conditions where arrest normally occurs." [PomBase:mah]
+synonym: "normal cell cycle arrest" EXACT [PomBase:mah]
+synonym: "normal cell cycle arrest in mitotic interphase" EXACT [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007050
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-05-09T01:38:00Z
+
+[Term]
+id: FYPO:0001026
+name: abnormal occurrence of normal cell cycle arrest
+def: "A cellular process phenotype in which a cell cycle arrest that normally occurs is abnormal (does not occur, or occurs abnormally)." [PomBase:mah]
+is_a: FYPO:0000628 ! abnormal cellular process
+is_a: FYPO:0001024 ! cell cycle arrest phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007050
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-05-09T01:43:53Z
+
+[Term]
+id: FYPO:0001027
+name: normal cell cycle arrest in mitotic G2 phase during glucose starvation
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested normally in G2 phase when the cell is subject to glucose starvation." [PomBase:al, PomBase:mah]
+comment: Note that this term should be used only for cell cycle arrest that occurs in mutants. For phenotypes affecting the G1 cell cycle that normally occurs in response to mating pheromone, see 'abnormal cell cycle arrest in response to pheromone' (FYPO:0000530) and its child terms.
+synonym: "mitotic G1 phase arrest during glucose starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
+is_a: FYPO:0001025 ! normally arrested cell cycle progression
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036227
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-05-09T01:54:19Z
+
+[Term]
+id: FYPO:0001028
+name: abnormal cell cycle arrest in mitotic interphase
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in any part of interphase, under conditions where arrest is not a normal occurrence." [PomBase:mah]
+synonym: "abnormal mitotic interphase cell cycle arrest" EXACT [PomBase:mah]
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
+intersection_of: PATO:0000297
+intersection_of: inheres_in GO:0051329
+created_by: midori
+creation_date: 2012-05-09T02:46:23Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
