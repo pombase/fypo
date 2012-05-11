@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 10:05:2012 16:45
+date: 11:05:2012 16:21
 saved-by: midori
 auto-generated-by: OBO-Edit 2.1.1-beta9
 default-namespace: fission_yeast_phenotype
@@ -1565,6 +1565,7 @@ def: "A cell phenotype in which cells contain more than one nucleus apiece and a
 is_a: FYPO:0000017 ! elongated cells
 is_a: FYPO:0000061 ! multinucleate
 is_a: FYPO:0000949 ! aseptate
+intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000061 ! multinucleate
 intersection_of: has_part FYPO:0000949 ! aseptate
@@ -1577,6 +1578,7 @@ name: branched, elongated, multiseptate cells
 def: "A cell morphology phenotype in which cells form branches near the septum, are elongated, and have more than one septum per cell." [PomBase:mah]
 is_a: FYPO:0000015 ! branched cells
 is_a: FYPO:0000223 ! elongated, multiseptate cells
+intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000015 ! branched cells
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000118 ! multiseptate
@@ -1656,6 +1658,7 @@ def: "A cellular process phenotype in which mitotic sister chromatid segregation
 synonym: "abnormal mitotic chromosome segregation" EXACT [PomBase:mah]
 synonym: "chromosome segregation defects, mitotic" EXACT [PomBase:mah]
 is_a: FYPO:0000029 ! abnormal chromosome segregation
+is_a: FYPO:0000337 ! abnormal mitosis
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000070
 intersection_of: qualifier PATO:0000460
@@ -2562,6 +2565,7 @@ name: elongated, multiseptate cells
 def: "A cell morphology phenotype in which cells are elongated and have more than one septum per cell." [PomBase:mah]
 is_a: FYPO:0000017 ! elongated cells
 is_a: FYPO:0000118 ! multiseptate
+intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000118 ! multiseptate
 created_by: midori
@@ -2611,8 +2615,14 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000229
 name: cut
+alt_id: FYPO:0000322
+alt_id: FYPO:0000323
 def: "An inviable phenotype in which a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells." [PomBase:mah, PomBase:vw, PomBse:jh]
+comment: In a cut phenotype, the septum may partition the two nuclei into the two daughter cells, partition both nuclei into one daughter cell, or physically divide one nucleus, depending on septum placement.
+synonym: "cut, binucleate cell formation" NARROW [PomBase:mah, PomBase:vw]
+synonym: "cut, septum dividing nucleus" NARROW [PomBase:mah, PomBase:vw]
 is_a: FYPO:0000029 ! abnormal chromosome segregation
+is_a: FYPO:0000049 ! inviable
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3147,7 +3157,7 @@ synonym: "spores produced smaller colonies" RELATED [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
 is_a: FYPO:0000305 ! abnormal spore germination
 intersection_of: FYPO:0000046 ! slow cell growth
-intersection_of: preceded_by GO:0009847
+intersection_of: is_preceded_by GO:0009847
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3451,6 +3461,7 @@ name: spore germination abolished, small spores
 def: "A cellular process phenotype in which spore germination does not occur, and spores are smaller than normal." [PomBase:mah]
 is_a: FYPO:0000309 ! spore germination abolished, abnormal spore morphology
 is_a: FYPO:0000944 ! spore germination abolished, normal spore morphology
+intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000306 ! spore germination abolished
 intersection_of: has_part FYPO:0000346 ! small spores
 created_by: midori
@@ -3463,6 +3474,7 @@ def: "A cellular process phenotype in which spore germination does not occur, an
 is_a: FYPO:0000309 ! spore germination abolished, abnormal spore morphology
 is_a: FYPO:0000347 ! swollen spores
 is_a: FYPO:0000944 ! spore germination abolished, normal spore morphology
+intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000306 ! spore germination abolished
 intersection_of: has_part FYPO:0000347 ! swollen spores
 created_by: midori
@@ -3474,6 +3486,7 @@ name: spore germination abolished, abnormal spore morphology
 def: "A cellular process phenotype in which spore germination does not occur, and spores have abnormal morphology." [PomBase:mah]
 synonym: "spore germination abolished, misshapen spores" EXACT [PomBase:mah]
 is_a: FYPO:0000306 ! spore germination abolished
+intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000306 ! spore germination abolished
 intersection_of: has_part FYPO:0000348 ! abnormal spore morphology
 created_by: midori
@@ -3590,22 +3603,6 @@ relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable
 relationship: includes_cells_with_phenotype FYPO:0000316 ! inviable germinating spore
 created_by: midori
 creation_date: 2011-04-27T04:32:25Z
-
-[Term]
-id: FYPO:0000322
-name: cut, septum dividing nucleus
-def: "A cut phenotype in which the septum forms and physically divides the nucleus into two parts." [PomBase:mah, PomBase:vw]
-is_a: FYPO:0000229 ! cut
-created_by: midori
-creation_date: 2011-04-27T05:16:50Z
-
-[Term]
-id: FYPO:0000323
-name: cut, binucleate cell formation
-def: "A cut phenotype in which septum formation produces a cell containing two nuclei." [PomBase:mah, PomBase:vw]
-is_a: FYPO:0000229 ! cut
-created_by: midori
-creation_date: 2011-04-27T05:20:29Z
 
 [Term]
 id: FYPO:0000324
@@ -4963,7 +4960,7 @@ comment: Arrest with replicated DNA may occur between late S and G2/M; if only D
 synonym: "cell cycle arrest with 2C DNA content" NARROW [PomBase:mah]
 is_a: FYPO:0000407 ! abnormally arrested cell cycle progression
 intersection_of: FYPO:0000407 ! abnormally arrested cell cycle progression
-intersection_of: preceded_by GO:0006261
+intersection_of: is_preceded_by GO:0006261
 created_by: midori
 creation_date: 2011-08-12T02:03:05Z
 
@@ -9774,6 +9771,7 @@ name: elongated mononucleate cells
 def: "A cell phenotype in which cells contain one nucleus apiece and are elongated." [PomBase:mah]
 is_a: FYPO:0000060 ! mononucleate
 is_a: FYPO:0000949 ! aseptate
+intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000060 ! mononucleate
 intersection_of: has_part FYPO:0000949 ! aseptate
@@ -11096,6 +11094,7 @@ id: FYPO:0000944
 name: spore germination abolished, normal spore morphology
 def: "A cellular process phenotype in which spore germination does not occur, and spores have normal morphology." [PomBase:mah]
 is_a: FYPO:0000306 ! spore germination abolished
+intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000306 ! spore germination abolished
 intersection_of: has_part FYPO:0000943 ! normal spore morphology
 created_by: midori
@@ -11118,6 +11117,7 @@ name: normal volume spheroid cells
 def: "A cell morphology phenotype in which a cell is shaped in the form of a spheroid, and has a normal volume." [PomBase:mah]
 synonym: "normal volume rounded cells" RELATED [PomBase:mah]
 is_a: FYPO:0000021 ! spheroid cells
+intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000021 ! spheroid cells
 intersection_of: has_part FYPO:0000926 ! normal volume cells
 created_by: midori
@@ -11131,6 +11131,7 @@ synonym: "enlarged volume spherical cells" EXACT [PomBase:mah]
 synonym: "swollen orb" EXACT [PomBase:vw]
 is_a: FYPO:0000129 ! spherical cells
 is_a: FYPO:0000945 ! swollen spheroid cells
+intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000025 ! swollen cells
 intersection_of: has_part FYPO:0000129 ! spherical cells
 created_by: midori
@@ -11143,6 +11144,7 @@ def: "A cell morphology phenotype in which a cell is shaped in the form of a sph
 synonym: "normal volume orb" EXACT [PomBase:vw]
 is_a: FYPO:0000129 ! spherical cells
 is_a: FYPO:0000946 ! normal volume spheroid cells
+intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000129 ! spherical cells
 intersection_of: has_part FYPO:0000926 ! normal volume cells
 created_by: midori
@@ -11165,6 +11167,7 @@ name: elongated aseptate cells
 def: "A cell phenotype in which cells do not contain septa and are elongated." [PomBase:mah]
 is_a: FYPO:0000017 ! elongated cells
 is_a: FYPO:0000949 ! aseptate
+intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000949 ! aseptate
 created_by: midori
@@ -11834,6 +11837,7 @@ def: "A cell phenotype in which cells contain more than one nucleus apiece, are 
 synonym: "elongated, multinucleate dumbbell-shaped cells" EXACT [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate cells
 is_a: FYPO:0000779 ! dumbbell-shaped cells
+intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000061 ! multinucleate
 intersection_of: has_part FYPO:0000779 ! dumbbell-shaped cells
@@ -12288,6 +12292,329 @@ intersection_of: inheres_in GO:0003993
 created_by: midori
 creation_date: 2012-05-10T04:20:35Z
 
+[Term]
+id: FYPO:0001046
+name: premature mitosis
+def: "A cellular process phenotype in which cells enter mitosis earlier, relative to cell size or DNA integrity checkpoint status, than normal." [PomBase:mah]
+synonym: "early mitosis" EXACT [PomBase:mah]
+is_a: FYPO:0000337 ! abnormal mitosis
+intersection_of: PATO:0000694
+intersection_of: inheres_in GO:0007067
+created_by: midori
+creation_date: 2012-05-11T01:28:00Z
+
+[Term]
+id: FYPO:0001047
+name: mitotic catastrophe
+def: "An inviable phenotype in which cells enter mitosis prematurely, undergo abnormal mitotic chromosome segregation, and subsequently die." [PomBase:mah]
+comment: Note that in higher eukaryotes, mitotic catastrophe is more broadly defined as any phenotype in which cells undergo an aberrant mitosis that arrests before completion, and subsequently die by necrosis or apoptosis.
+is_a: FYPO:0000049 ! inviable
+is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+is_a: FYPO:0001046 ! premature mitosis
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+intersection_of: has_part FYPO:0001046 ! premature mitosis
+created_by: midori
+creation_date: 2012-05-11T01:34:45Z
+
+[Term]
+id: FYPO:0001048
+name: mitotic catastrophe with cut
+def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), and then undergoes septation and subsequently die." [PomBase:mah]
+synonym: "cut with mitotic catastrophe" EXACT [PomBase:mah]
+is_a: FYPO:0000229 ! cut
+is_a: FYPO:0001047 ! mitotic catastrophe
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+intersection_of: has_part FYPO:0000229 ! cut
+intersection_of: has_part FYPO:0001046 ! premature mitosis
+created_by: midori
+creation_date: 2012-05-11T01:37:41Z
+
+[Term]
+id: FYPO:0001049
+name: mitotic catastrophe, small cells
+def: "A cellular process phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are smaller than wild type." [PomBase:mah]
+is_a: FYPO:0000951 ! small inviable vegetative cells
+is_a: FYPO:0001047 ! mitotic catastrophe
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+intersection_of: has_part FYPO:0000951 ! small inviable vegetative cells
+intersection_of: has_part FYPO:0001046 ! premature mitosis
+created_by: midori
+creation_date: 2012-05-11T01:59:31Z
+
+[Term]
+id: FYPO:0001050
+name: mitotic catastrophe, normal size cells
+def: "A cellular process phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are same size as wild type." [PomBase:mah]
+comment: Note that mitotic catastrophe in normal-size cells is usually interpreted to mean that cells enter mitosis despite failing to activate a DNA integrity checkpoint.
+is_a: FYPO:0001047 ! mitotic catastrophe
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+intersection_of: has_part FYPO:0000672 ! normal cell morphology
+intersection_of: has_part FYPO:0001046 ! premature mitosis
+created_by: midori
+creation_date: 2012-05-11T02:09:56Z
+
+[Term]
+id: FYPO:0001051
+name: mitotic catastrophe, elongated cells
+def: "A cellular process phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are longer than wild type." [PomBase:mah]
+comment: Note that mitotic catastrophe in elongated cells is usually interpreted to mean that cells enter mitosis despite failing to maintain a DNA integrity checkpoint.
+is_a: FYPO:0001047 ! mitotic catastrophe
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+intersection_of: has_part FYPO:0001046 ! premature mitosis
+created_by: midori
+creation_date: 2012-05-11T02:16:25Z
+
+[Term]
+id: FYPO:0001052
+name: mitotic catastrophe with cut, small cells
+def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are smaller than wild type, and then undergoes septation and subsequently die." [PomBase:mah]
+synonym: "cut with mitotic catastrophe, small cells" EXACT [PomBase:mah]
+is_a: FYPO:0001048 ! mitotic catastrophe with cut
+is_a: FYPO:0001049 ! mitotic catastrophe, small cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+intersection_of: has_part FYPO:0000229 ! cut
+intersection_of: has_part FYPO:0000951 ! small inviable vegetative cells
+intersection_of: has_part FYPO:0001046 ! premature mitosis
+created_by: midori
+creation_date: 2012-05-11T02:38:12Z
+
+[Term]
+id: FYPO:0001053
+name: mitotic catastrophe with cut, normal size cells
+def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are the same size as wild type, and then undergoes septation and subsequently die." [PomBase:mah]
+synonym: "cut with mitotic catastrophe, normal size cells" EXACT [PomBase:mah]
+is_a: FYPO:0001048 ! mitotic catastrophe with cut
+is_a: FYPO:0001050 ! mitotic catastrophe, normal size cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+intersection_of: has_part FYPO:0000229 ! cut
+intersection_of: has_part FYPO:0000672 ! normal cell morphology
+intersection_of: has_part FYPO:0001046 ! premature mitosis
+created_by: midori
+creation_date: 2012-05-11T02:39:40Z
+
+[Term]
+id: FYPO:0001054
+name: mitotic catastrophe with cut, elongated cells
+def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are longer than wild type, and then undergoes septation and subsequently die." [PomBase:mah]
+synonym: "cut with mitotic catastrophe, elongated cells" EXACT [PomBase:mah]
+is_a: FYPO:0001048 ! mitotic catastrophe with cut
+is_a: FYPO:0001051 ! mitotic catastrophe, elongated cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+intersection_of: has_part FYPO:0000229 ! cut
+intersection_of: has_part FYPO:0001046 ! premature mitosis
+created_by: midori
+creation_date: 2012-05-11T02:39:47Z
+
+[Term]
+id: FYPO:0001055
+name: cut following normal mitotic entry
+def: "An inviable phenotype in which a cell enters mitosis normally, but then undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells." [PomBase:mah]
+synonym: "cut following normal entry into mitosis" EXACT [PomBase:mah]
+synonym: "cut with normal mitotic entry" EXACT [PomBase:mah]
+is_a: FYPO:0000229 ! cut
+created_by: midori
+creation_date: 2012-05-11T02:46:40Z
+
+[Term]
+id: FYPO:0001056
+name: normal L-arginine import
+def: "A cellular process phenotype in which L-arginine import into the cell is normal." [PomBase:mah]
+synonym: "normal L-arginine import into cell" EXACT [PomBase:al]
+synonym: "normal L-arginine uptake" EXACT [GO:0043091]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0043091
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-05-11T03:49:08Z
+
+[Term]
+id: FYPO:0001057
+name: abnormal amino acid import
+def: "A cellular process phenotype in which the import of one or more amino acids into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal amino acid import into cell" EXACT [PomBase:al]
+synonym: "abnormal amino acid uptake" EXACT [GO:0043090]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0043090
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-05-11T03:54:42Z
+
+[Term]
+id: FYPO:0001058
+name: decreased amino acid import
+def: "A cellular process phenotype in which the import of one or more amino acids into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased amino acid import into cell" EXACT [PomBase:al]
+synonym: "decreased amino acid uptake" EXACT [GO:0043090]
+synonym: "reduced amino acid import" EXACT [PomBase:mah]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0001057 ! abnormal amino acid import
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0043090
+created_by: midori
+creation_date: 2012-05-11T03:55:46Z
+
+[Term]
+id: FYPO:0001059
+name: abnormal L-glutamate import
+def: "A cellular process phenotype in which the import of L-glutamate into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal L-glutamate import into cell" EXACT [PomBase:al]
+synonym: "abnormal L-glutamate uptake" EXACT [GO:0051938]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0001057 ! abnormal amino acid import
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051938
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-05-11T03:57:30Z
+
+[Term]
+id: FYPO:0001060
+name: decreased L-glutamate import
+def: "A cellular process phenotype in which the import of L-glutamate into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased L-glutamate import into cell" EXACT [PomBase:al]
+synonym: "decreased L-glutamate uptake" EXACT [GO:0051938]
+synonym: "reduced L-glutamate import" EXACT [PomBase:mah]
+is_a: FYPO:0001058 ! decreased amino acid import
+is_a: FYPO:0001059 ! abnormal L-glutamate import
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0051938
+created_by: midori
+creation_date: 2012-05-11T04:06:25Z
+
+[Term]
+id: FYPO:0001061
+name: abnormal L-glutamine import
+def: "A cellular process phenotype in which the import of L-glutamine into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal L-glutamine import into cell" EXACT [PomBase:al]
+synonym: "abnormal L-glutamine uptake" EXACT [GO:0036229]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0001057 ! abnormal amino acid import
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036299
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-05-11T04:08:09Z
+
+[Term]
+id: FYPO:0001062
+name: decreased L-glutamine import
+def: "A cellular process phenotype in which the import of L-glutamine into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased L-glutamine import into cell" EXACT [PomBase:al]
+synonym: "decreased L-glutamine uptake" EXACT [GO:0036229]
+synonym: "reduced L-glutamine import" EXACT [PomBase:mah]
+is_a: FYPO:0001058 ! decreased amino acid import
+is_a: FYPO:0001061 ! abnormal L-glutamine import
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0036299
+created_by: midori
+creation_date: 2012-05-11T04:08:19Z
+
+[Term]
+id: FYPO:0001063
+name: abnormal glycine import
+def: "A cellular process phenotype in which the import of glycine into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal glycine import into cell" EXACT [PomBase:al]
+synonym: "abnormal glycine uptake" EXACT [GO:0036233]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0001057 ! abnormal amino acid import
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036233
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-05-11T04:10:09Z
+
+[Term]
+id: FYPO:0001064
+name: decreased glycine import
+def: "A cellular process phenotype in which the import of glycine into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased glycine import into cell" EXACT [PomBase:al]
+synonym: "decreased glycine uptake" EXACT [GO:0036233]
+synonym: "reduced glycine import" EXACT [PomBase:mah]
+is_a: FYPO:0001058 ! decreased amino acid import
+is_a: FYPO:0001063 ! abnormal glycine import
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0036233
+created_by: midori
+creation_date: 2012-05-11T04:10:17Z
+
+[Term]
+id: FYPO:0001065
+name: abnormal L-threonine import
+def: "A cellular process phenotype in which the import of L-threonine into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal L-threonine import into cell" EXACT [PomBase:al]
+synonym: "abnormal L-threonine uptake" EXACT [GO:0036231]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0001057 ! abnormal amino acid import
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036231
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-05-11T04:11:34Z
+
+[Term]
+id: FYPO:0001066
+name: decreased L-threonine import
+def: "A cellular process phenotype in which the import of L-threonine into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased L-threonine import into cell" EXACT [PomBase:al]
+synonym: "decreased L-threonine uptake" EXACT [GO:0036231]
+synonym: "reduced L-threonine import" EXACT [PomBase:mah]
+is_a: FYPO:0001058 ! decreased amino acid import
+is_a: FYPO:0001065 ! abnormal L-threonine import
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0036231
+created_by: midori
+creation_date: 2012-05-11T04:11:43Z
+
+[Term]
+id: FYPO:0001067
+name: abnormal L-tyrosine import
+def: "A cellular process phenotype in which the import of L-tyrosine into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal L-tyrosine import into cell" EXACT [PomBase:al]
+synonym: "abnormal L-tyrosine uptake" EXACT [GO:0036232]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0001057 ! abnormal amino acid import
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036232
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-05-11T04:14:15Z
+
+[Term]
+id: FYPO:0001068
+name: decreased L-tyrosine import
+def: "A cellular process phenotype in which the import of L-tyrosine into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased L-tyrosine import into cell" EXACT [PomBase:al]
+synonym: "decreased L-tyrosine uptake" EXACT [GO:0036232]
+synonym: "reduced L-tyrosine import" EXACT [PomBase:mah]
+is_a: FYPO:0001058 ! decreased amino acid import
+is_a: FYPO:0001067 ! abnormal L-tyrosine import
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0036232
+created_by: midori
+creation_date: 2012-05-11T04:14:20Z
+
 [Typedef]
 id: comprises_cells_with_phenotype
 name: comprises cells with phenotype
@@ -12380,10 +12707,6 @@ id: positively_regulates
 name: positively_regulates
 xref: RO:0002213
 is_a: regulates ! regulates
-
-[Typedef]
-id: preceded_by
-name: preceded_by (UNDECLARED)
 
 [Typedef]
 id: precedes
