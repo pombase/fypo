@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 15:05:2012 16:56
+date: 31:05:2012 17:13
 saved-by: midori
-auto-generated-by: OBO-Edit 2.2-rc1
+auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -147,7 +147,7 @@ synonym: "increased G2 duration" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle delay at G2/M transition" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in G2 phase: increased duration" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
-is_a: FYPO:0000409 ! delayed cell cycle progression
+is_a: FYPO:0000409 ! delayed cell cycle phase transition
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000086
 intersection_of: qualifier PATO:0001542
@@ -2380,6 +2380,7 @@ creation_date: 2011-04-13T03:41:10Z
 id: FYPO:0000205
 name: DNA replication checkpoint activated
 def: "A cell cycle phenotype in which the DNA replication checkpoint is activated, i.e. the cell cycle is delayed or halted before nuclear division to allow DNA replication to be completed." [PomBase:mah]
+synonym: "DNA replication arrest" RELATED [PomBase:vw]
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2596,7 +2597,7 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000227
-name: chromosome loss upon segregation
+name: chromosome loss during segregation
 def: "A chromosome segregation phenotype in which one or more chromosome or minichromosome is not correctly segregated to either daughter cells." [PMID:11809834, PMID:20211136, PomBase:mah]
 synonym: "chromosome segregation defects, chromosome loss" EXACT [PomBase:mah]
 is_a: FYPO:0000029 ! abnormal chromosome segregation
@@ -2617,7 +2618,7 @@ id: FYPO:0000229
 name: cut
 alt_id: FYPO:0000322
 alt_id: FYPO:0000323
-def: "An inviable phenotype in which a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells." [PomBase:mah, PomBase:vw, PomBase:jh]
+def: "An inviable phenotype in which a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells." [PomBase:jh, PomBase:mah, PomBase:vw]
 comment: In a cut phenotype, the septum may partition the two nuclei into the two daughter cells, partition both nuclei into one daughter cell, or physically divide one nucleus, depending on septum placement.
 synonym: "cut, binucleate cell formation" NARROW [PomBase:mah, PomBase:vw]
 synonym: "cut, septum dividing nucleus" NARROW [PomBase:mah, PomBase:vw]
@@ -3151,7 +3152,7 @@ creation_date: 2011-04-19T04:37:01Z
 
 [Term]
 id: FYPO:0000278
-name: slow cell growth upon spore germination
+name: slow cell growth following spore germination
 def: "A cellular process phenotype in which cells grow slowly following spore germination, resulting in the formation of a smaller colony than normal in a given amount of time." [PomBase:mah]
 synonym: "spores produced smaller colonies" RELATED [PomBase:mah]
 is_a: FYPO:0000046 ! slow cell growth
@@ -3718,7 +3719,7 @@ synonym: "cell cycle progression through the G1/S phase transition: delayed" EXA
 synonym: "delayed cell cycle progression through mitotic G1/S phase transition" EXACT []
 synonym: "mitotic cell cycle delay at G1/S transition" EXACT [PomBase:mah]
 is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
-is_a: FYPO:0000409 ! delayed cell cycle progression
+is_a: FYPO:0000409 ! delayed cell cycle phase transition
 intersection_of: PATO:0000502
 intersection_of: inheres_in GO:0000082
 intersection_of: qualifier PATO:0001542
@@ -4383,13 +4384,13 @@ creation_date: 2011-07-14T06:06:09Z
 
 [Term]
 id: FYPO:0000390
-name: increased rate of passage through START of mitotic cell cycle
-def: "A cellular process phenotype in which the rate of traversing the start control point of the mitotic cell cycle is increased." [PomBase:mah]
-synonym: "cell cycle passage through START: increased rate" EXACT [SGD:phenotype_annotation]
-synonym: "increased rate of mitotic cell cycle passage through START" EXACT [PomBase:mah]
+name: advanced passage through START of mitotic cell cycle
+def: "A cellular process phenotype in which traversing the start control point of the mitotic cell cycle takes place earlier than normal." [PomBase:mah]
+synonym: "advanced mitotic cell cycle passage through START" EXACT [PomBase:mah]
+synonym: "cell cycle passage through START: increased rate" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
-is_a: FYPO:0000410 ! increased rate of cell cycle progression
-intersection_of: PATO:0000912
+is_a: FYPO:0000827 ! advanced cell cycle progression
+intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0007089
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
@@ -4451,12 +4452,13 @@ creation_date: 2011-07-14T06:06:09Z
 
 [Term]
 id: FYPO:0000397
-name: increased rate of cell cycle progression through mitotic G1/S phase transition
-def: "A cellular process phenotype in which the rate of progression through the G1/S transition of the mitotic cell cycle is increased." [PomBase:mah]
-synonym: "cell cycle progression through the G1/S phase transition: increased rate" EXACT [SGD:phenotype_annotation]
+name: decreased duration of cell cycle progression through mitotic G1/S phase transition
+def: "A cellular process phenotype in which the duration of progression through the G1/S transition of the mitotic cell cycle is shorter than normal." [PomBase:mah]
+synonym: "cell cycle progression through the G1/S phase transition: increased rate" RELATED [SGD:phenotype_annotation]
+synonym: "increased rate of cell cycle progression through mitotic G1/S phase transition" RELATED [PomBase:mah]
 is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
-is_a: FYPO:0000410 ! increased rate of cell cycle progression
-intersection_of: PATO:0000912
+is_a: FYPO:0000410 ! decreased duration of cell cycle phase
+intersection_of: PATO:0000499
 intersection_of: inheres_in GO:0000082
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
@@ -4523,12 +4525,13 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000404
-name: increased rate of cell cycle progression through mitotic G2/M phase transition
-def: "A cellular process phenotype in which the rate of progression through the G2/M transition of the mitotic cell cycle is increased." [PomBase:mah]
+name: decreased duration of cell cycle progression through mitotic G2/M phase transition
+def: "A cellular process phenotype in which the duration of progression through the G2/M transition of the mitotic cell cycle is shorter than normal." [PomBase:mah]
 synonym: "cell cycle progression through the G2/M phase transition: increased rate" EXACT [SGD:phenotype_annotation]
+synonym: "increased rate of cell cycle progression through mitotic G2/M phase transition" RELATED [PomBase:mah]
 is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
-is_a: FYPO:0000410 ! increased rate of cell cycle progression
-intersection_of: PATO:0000912
+is_a: FYPO:0000410 ! decreased duration of cell cycle phase
+intersection_of: PATO:0000499
 intersection_of: inheres_in GO:0000086
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
@@ -4561,20 +4564,21 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000408
-name: decreased rate of cell cycle progression
-def: "A cellular process phenotype in which the rate of cell cycle progression is decreased." [PomBase:mah]
-synonym: "cell cycle progression: decreased rate" EXACT [SGD:phenotype_annotation]
-synonym: "reduced rate of cell cycle progression" EXACT [PomBase:mah]
+name: increased duration of cell cycle phase
+def: "A cellular process phenotype in which the duration of one or more cell cycle phases is longer than normal." [PomBase:mah]
+synonym: "cell cycle progression: decreased rate" RELATED [SGD:phenotype_annotation]
+synonym: "decreased rate of cell cycle progression" RELATED [PomBase:mah]
+synonym: "reduced rate of cell cycle progression" RELATED [PomBase:mah]
 is_a: FYPO:0000011 ! abnormal cell cycle progression
-intersection_of: PATO:0000911
+intersection_of: PATO:0000498
 intersection_of: inheres_in GO:0007049
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000409
-name: delayed cell cycle progression
-def: "A cellular process phenotype in which cell cycle progression is delayed, one or more cell cycle phase transitions takes place later than normal." [PomBase:mah]
+name: delayed cell cycle phase transition
+def: "A cellular process phenotype in which one or more cell cycle phase transitions takes place later than normal." [PomBase:mah]
 synonym: "cell cycle progression: delayed" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000011 ! abnormal cell cycle progression
 intersection_of: PATO:0000502
@@ -4584,11 +4588,12 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000410
-name: increased rate of cell cycle progression
-def: "A cellular process phenotype in which the rate of cell cycle progression is increased." [PomBase:mah]
-synonym: "cell cycle progression: increased rate" EXACT [SGD:phenotype_annotation]
+name: decreased duration of cell cycle phase
+def: "A cellular process phenotype in which the duration of one or more cell cycle phases is shorter than normal." [PomBase:mah]
+synonym: "cell cycle progression: increased rate" RELATED [SGD:phenotype_annotation]
+synonym: "increased rate of cell cycle progression" RELATED [PomBase:mah]
 is_a: FYPO:0000011 ! abnormal cell cycle progression
-intersection_of: PATO:0000912
+intersection_of: PATO:0000499
 intersection_of: inheres_in GO:0007049
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
@@ -5365,19 +5370,6 @@ created_by: midori
 creation_date: 2011-08-15T10:19:32Z
 
 [Term]
-id: FYPO:0000480
-name: delayed mitotic G1 phase progression
-def: "A cellular process phenotype in which progression through the G1 phase of the mitotic cell cycle is delayed." [PomBase:mah]
-synonym: "mitotic cell cycle delay in G1" EXACT [PomBase:mah]
-synonym: "mitotic cell cycle progression in G1 phase: delayed" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000409 ! delayed cell cycle progression
-is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
-intersection_of: PATO:0000502
-intersection_of: inheres_in GO:0000080
-created_by: midori
-creation_date: 2011-08-16T10:03:01Z
-
-[Term]
 id: FYPO:0000481
 name: abnormal mitotic recombination
 def: "A cellular process phenotype in which mitotic recombination is abnormal." [PomBase:mah]
@@ -5583,7 +5575,7 @@ id: FYPO:0000498
 name: normal mitochondrial transport
 def: "A cellular process phenotype in which mitochondrial transport is normal." [PomBase:mah]
 synonym: "mitochondrial transport: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000627 ! normal cellular process
+is_a: FYPO:0001071 ! normal transport
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0006839
 intersection_of: qualifier PATO:0000461
@@ -6149,9 +6141,15 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000543
 name: increased duration of mitotic G1 phase
+alt_id: FYPO:0000480
 def: "A cellular process phenotype in which the duration of progression through the G1 phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
+synonym: "delayed mitotic G1 phase progression" RELATED [PomBase:mah]
+synonym: "increased duration of mitotic G1 phase progression" EXACT []
+synonym: "mitotic cell cycle delay in G1" RELATED [PomBase:mah]
+synonym: "mitotic cell cycle progression in G1 phase: delayed" RELATED [SGD:phenotype_annotation]
 synonym: "mitotic cell cycle progression in G1 phase: increased duration" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
+is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
 intersection_of: PATO:0000498
 intersection_of: inheres_in GO:0000080
 created_by: midori
@@ -6392,7 +6390,7 @@ name: normal mitotic G1 phase progression
 def: "A cellular process phenotype in which progression through the G1 phase of the mitotic cell cycle is normal." [PomBase:mah]
 synonym: "mitotic cell cycle progression in G1 phase: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal mitotic cell cycle progression in G1" EXACT [PomBase:mah]
-is_a: FYPO:0000627 ! normal cellular process
+is_a: FYPO:0000411 ! normal cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000080
 intersection_of: qualifier PATO:0000461
@@ -6912,7 +6910,7 @@ id: FYPO:0000601
 name: normal vacuolar transport
 def: "A cellular process phenotype in which vacuolar transport is normal." [PomBase:mah]
 synonym: "vacuolar transport: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000627 ! normal cellular process
+is_a: FYPO:0001071 ! normal transport
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007034
 intersection_of: qualifier PATO:0000461
@@ -6939,32 +6937,25 @@ def: "A cellular process phenotype in which the duration of G1 phase of a mitoti
 synonym: "mitotic cell cycle progression in G1 phase: decreased duration" EXACT [SGD:phenotype_annotation]
 synonym: "reduced duration of mitotic G1 phase" EXACT [PomBase:mah]
 is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
+is_a: FYPO:0001070 ! decreased duration of mitotic cell cycle phase
 intersection_of: PATO:0000499
 intersection_of: inheres_in GO:0000080
 created_by: midori
 creation_date: 2011-08-15T12:00:20Z
 
 [Term]
-id: FYPO:0000604
-name: decreased rate of mitotic G2 phase progression
-def: "A cellular process phenotype in which progression through the G2 phase of the mitotic cell cycle proceeds at a slower rate than normal." [PomBase:mah]
-synonym: "mitotic cell cycle progression in G2 phase: decreased rate" EXACT [SGD:phenotype_annotation]
-synonym: "reduced rate of mitotic G2 phase progression" EXACT [PomBase:mah]
-is_a: FYPO:0000408 ! decreased rate of cell cycle progression
-is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
-intersection_of: PATO:0000911
-intersection_of: inheres_in GO:0000085
-created_by: midori
-creation_date: 2011-08-16T10:03:01Z
-
-[Term]
 id: FYPO:0000605
-name: delayed mitotic G2 phase progression
-def: "A cellular process phenotype in which progression through the G2 phase of the mitotic cell cycle is delayed." [PomBase:mah]
-synonym: "mitotic cell cycle progression in G2 phase: delayed" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000409 ! delayed cell cycle progression
+name: increased duration of mitotic G2 phase
+alt_id: FYPO:0000604
+def: "A cellular process phenotype in which the duration of progression through the G2 phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
+synonym: "decreased rate of mitotic G2 phase progression" RELATED []
+synonym: "delayed mitotic G2 phase progression" RELATED [PomBase:mah]
+synonym: "mitotic cell cycle progression in G2 phase: decreased rate" EXACT [SGD:phenotype_annotation]
+synonym: "mitotic cell cycle progression in G2 phase: delayed" RELATED [SGD:phenotype_annotation]
+synonym: "reduced rate of mitotic G2 phase progression" RELATED [PomBase:mah]
 is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
-intersection_of: PATO:0000502
+is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
+intersection_of: PATO:0000499
 intersection_of: inheres_in GO:0000085
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
@@ -7001,7 +6992,7 @@ id: FYPO:0000609
 name: delayed mitotic M phase progression
 def: "A cellular process phenotype in which progression through M phase of the mitotic cell cycle is delayed." [PomBase:mah]
 synonym: "mitotic cell cycle progression in M phase: delayed" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000409 ! delayed cell cycle progression
+is_a: FYPO:0000409 ! delayed cell cycle phase transition
 is_a: FYPO:0000607 ! abnormal mitotic M phase progression
 intersection_of: PATO:0000502
 intersection_of: inheres_in GO:0000087
@@ -7036,24 +7027,11 @@ created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
 [Term]
-id: FYPO:0000612
-name: decreased rate of mitotic S phase progression
-def: "A cellular process phenotype in which progression through S phase of the mitotic cell cycle proceeds at a slower rate than normal." [PomBase:mah]
-synonym: "mitotic cell cycle progression in S phase: decreased rate" EXACT [SGD:phenotype_annotation]
-synonym: "reduced rate of mitotic S phase progression" EXACT [PomBase:mah]
-is_a: FYPO:0000408 ! decreased rate of cell cycle progression
-is_a: FYPO:0000610 ! abnormal mitotic S phase progression
-intersection_of: PATO:0000911
-intersection_of: inheres_in GO:0000084
-created_by: midori
-creation_date: 2011-08-16T10:03:01Z
-
-[Term]
 id: FYPO:0000613
 name: delayed mitotic S phase progression
 def: "A cellular process phenotype in which progression through S phase of the mitotic cell cycle is delayed." [PomBase:mah]
 synonym: "mitotic cell cycle progression in S phase: delayed" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000409 ! delayed cell cycle progression
+is_a: FYPO:0000409 ! delayed cell cycle phase transition
 is_a: FYPO:0000610 ! abnormal mitotic S phase progression
 intersection_of: PATO:0000502
 intersection_of: inheres_in GO:0000084
@@ -7063,9 +7041,14 @@ creation_date: 2011-08-16T10:03:01Z
 [Term]
 id: FYPO:0000614
 name: increased duration of mitotic S phase
+alt_id: FYPO:0000612
 def: "A cellular process phenotype in which the duration of progression through S phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
+synonym: "decreased rate of mitotic S phase progression" RELATED []
+synonym: "mitotic cell cycle progression in S phase: decreased rate" RELATED [SGD:phenotype_annotation]
 synonym: "mitotic cell cycle progression in S phase: increased duration" EXACT [SGD:phenotype_annotation]
+synonym: "reduced rate of mitotic S phase progression" RELATED [PomBase:mah]
 is_a: FYPO:0000610 ! abnormal mitotic S phase progression
+is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
 intersection_of: PATO:0000498
 intersection_of: inheres_in GO:0000084
 created_by: midori
@@ -7073,11 +7056,12 @@ creation_date: 2011-08-16T10:03:01Z
 
 [Term]
 id: FYPO:0000615
-name: increased rate of mitotic S phase progression
-def: "A cellular process phenotype in which progression through S phase of the mitotic cell cycle proceeds at a faster rate than normal." [PomBase:mah]
-synonym: "mitotic cell cycle progression in S phase: increased rate" EXACT [SGD:phenotype_annotation]
+name: decreased duration of mitotic S phase
+def: "A cellular process phenotype in which the duration of progression through S phase of the mitotic cell cycle is shorter than normal." [PomBase:mah]
+synonym: "mitotic cell cycle progression in S phase: increased rate" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000610 ! abnormal mitotic S phase progression
-intersection_of: PATO:0000912
+is_a: FYPO:0001070 ! decreased duration of mitotic cell cycle phase
+intersection_of: PATO:0000499
 intersection_of: inheres_in GO:0000084
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
@@ -7096,22 +7080,15 @@ created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
 [Term]
-id: FYPO:0000617
-name: delayed mitotic anaphase progression
-def: "A cellular process phenotype in which progression through anaphase of mitosis is delayed." [PomBase:mah]
-synonym: "mitotic cell cycle progression in anaphase: delayed" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000609 ! delayed mitotic M phase progression
-is_a: FYPO:0000616 ! abnormal mitotic anaphase progression
-intersection_of: PATO:0000502
-intersection_of: inheres_in GO:0000090
-created_by: midori
-creation_date: 2011-08-16T10:03:01Z
-
-[Term]
 id: FYPO:0000618
 name: increased duration of mitotic anaphase
+alt_id: FYPO:0000617
 def: "A cellular process phenotype in which the duration of progression through the anaphase of mitosis is longer than normal." [PomBase:mah]
+synonym: "delayed mitotic anaphase progression" RELATED [PomBase:mah]
+synonym: "increased duration of mitotic anaphase progression" EXACT []
+synonym: "mitotic cell cycle progression in anaphase: delayed" RELATED [SGD:phenotype_annotation]
 synonym: "mitotic cell cycle progression in anaphase: increased duration" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000609 ! delayed mitotic M phase progression
 is_a: FYPO:0000616 ! abnormal mitotic anaphase progression
 intersection_of: PATO:0000498
 intersection_of: inheres_in GO:0000090
@@ -7146,8 +7123,9 @@ creation_date: 2011-08-16T10:03:01Z
 
 [Term]
 id: FYPO:0000621
-name: delayed mitotic metaphase
-def: "A cellular process phenotype in which progression through metaphase of mitosis is delayed." [PomBase:mah]
+name: delayed onset of mitotic metaphase
+def: "A cellular process phenotype in which the onset of metaphase of mitosis is delayed." [PomBase:mah]
+synonym: "delayed mitotic metaphase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in metaphase: delayed" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic metaphase delay" EXACT [PomBase:mah]
 is_a: FYPO:0000609 ! delayed mitotic M phase progression
@@ -7446,7 +7424,7 @@ def: "A cellular process phenotype in which cellular protein localization is nor
 synonym: "normal cellular protein localization" EXACT [PomBase:mah]
 synonym: "normal protein localisation" EXACT [PomBase:mah]
 is_a: FYPO:0000138 ! localization phenotype
-is_a: FYPO:0000627 ! normal cellular process
+is_a: FYPO:0001071 ! normal transport
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0034613
 intersection_of: qualifier PATO:0000461
@@ -7702,7 +7680,7 @@ creation_date: 2011-11-11T10:46:47Z
 id: FYPO:0000668
 name: decreased peptidase activity
 def: "A molecular function phenotype in which the observed rate of a peptidase activity is decreased." [PomBase:mah]
-synonym: "decreased peptidase activity" EXACT [PomBase:mah]
+synonym: "decreased protease activity" EXACT [PomBase:mah]
 synonym: "reduced peptidase activity" EXACT [PomBase:mah]
 is_a: FYPO:0000663 ! decreased catalytic activity
 is_a: FYPO:0000666 ! abnormal peptidase activity
@@ -8160,7 +8138,7 @@ creation_date: 2011-12-05T04:26:20Z
 
 [Term]
 id: FYPO:0000709
-name: slow cell growth upon nitrogen starvation
+name: slow cell growth during nitrogen starvation
 def: "A cell growth phenotype in which cells grow more slowly than normal under nitrogen starvation conditions, such as in nitrogen-deficient minimal medium." [PomBase:mah]
 synonym: "slow cell growth in nitrogen-deficient minimal medium" RELATED [PomBase:al, PomBase:mah]
 synonym: "slow cell growth in response to nitrogen starvation" EXACT [PomBase:mah]
@@ -9685,6 +9663,7 @@ def: "A cell phenotype in which the amount of protein measured in a cell is norm
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "protein/peptide accumulation: normal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0001076 ! normal level of substance in cell
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0000461
@@ -9780,6 +9759,7 @@ def: "A cell phenotype in which the amount of RNA measured in a cell is normal. 
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "RNA accumulation: normal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0001076 ! normal level of substance in cell
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0000461
@@ -12317,11 +12297,10 @@ def: "An inviable phenotype in which cells enter mitosis prematurely, undergo ab
 comment: Note that in higher eukaryotes, mitotic catastrophe is more broadly defined as any phenotype in which cells undergo an aberrant mitosis that arrests before completion, and subsequently die by necrosis or apoptosis.
 is_a: FYPO:0000049 ! inviable
 is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-is_a: FYPO:0001046 ! premature mitosis
+is_a: FYPO:0000337 ! abnormal mitosis
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000049 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-intersection_of: has_part FYPO:0001046 ! premature mitosis
 created_by: midori
 creation_date: 2012-05-11T01:34:45Z
 
@@ -12448,7 +12427,7 @@ def: "A cellular process phenotype in which L-arginine import into the cell is n
 synonym: "normal L-arginine import into cell" EXACT [PomBase:al]
 synonym: "normal L-arginine uptake" EXACT [GO:0043091]
 is_a: FYPO:0000149 ! transport phenotype
-is_a: FYPO:0000627 ! normal cellular process
+is_a: FYPO:0001071 ! normal transport
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0043091
 intersection_of: qualifier PATO:0000461
@@ -12622,6 +12601,252 @@ intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0036232
 created_by: midori
 creation_date: 2012-05-11T04:14:20Z
+
+[Term]
+id: FYPO:0001069
+name: increased duration of mitotic cell cycle phase
+def: "A cellular process phenotype in which the duration of one or more mitotic cell cycle phases is longer than normal." [PomBase:mah]
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+is_a: FYPO:0000408 ! increased duration of cell cycle phase
+intersection_of: PATO:0000498
+intersection_of: inheres_in GO:0022403
+created_by: midori
+creation_date: 2012-05-31T14:19:07Z
+
+[Term]
+id: FYPO:0001070
+name: decreased duration of mitotic cell cycle phase
+def: "A cellular process phenotype in which the duration of one or more mitotic cell cycle phases is shorter than normal." [PomBase:mah]
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+is_a: FYPO:0000410 ! decreased duration of cell cycle phase
+intersection_of: PATO:0000499
+intersection_of: inheres_in GO:0022403
+created_by: midori
+creation_date: 2012-05-31T14:19:54Z
+
+[Term]
+id: FYPO:0001071
+name: normal transport
+def: "A cellular process phenotype in which transport is normal." [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006810
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-05-31T15:46:37Z
+
+[Term]
+id: FYPO:0001072
+name: normal myo-inositol import
+def: "A cellular process phenotype in which myo-inositol import into the cell is normal." [PomBase:mah]
+synonym: "normal myo-inositol import into cell" EXACT [PomBase:al]
+synonym: "normal myo-inositol uptake" EXACT [GO:0043091]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0001071 ! normal transport
+created_by: midori
+creation_date: 2012-05-31T15:59:13Z
+
+[Term]
+id: FYPO:0001073
+name: abnormal myo-inositol import
+def: "A cellular process phenotype in which the import of myo-inositol into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal myo-inositol import into cell" EXACT [PomBase:al]
+synonym: "abnormal myo-inositol uptake" EXACT [GO:0043090]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
+created_by: midori
+creation_date: 2012-05-31T16:00:28Z
+
+[Term]
+id: FYPO:0001074
+name: decreased myo-inositol import
+def: "A cellular process phenotype in which the import of myo-inositol into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased myo-inositol import into cell" EXACT [PomBase:al]
+synonym: "decreased myo-inositol uptake" EXACT [GO:0043090]
+synonym: "reduced myo-inositol import" EXACT [PomBase:mah]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0001073 ! abnormal myo-inositol import
+created_by: midori
+creation_date: 2012-05-31T16:00:49Z
+
+[Term]
+id: FYPO:0001075
+name: normal cellular response to papulacandin B
+def: "A cellular response phenotype in which the cellular response to papulacandin B is normal." [PomBase:mah]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0072731
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-05-31T16:05:26Z
+
+[Term]
+id: FYPO:0001076
+name: normal level of substance in cell
+def: "A cell phenotype in which the amount of a specific substance measured in a cell is normal." [PomBase:mah]
+is_a: FYPO:0000257 ! normal phenotype
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:24431
+created_by: midori
+creation_date: 2012-05-31T16:27:42Z
+
+[Term]
+id: FYPO:0001077
+name: normal polysaccharide level
+def: "A cell phenotype in which the amount of a polysaccharide measured in a cell is normal." [PomBase:mah]
+is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0001076 ! normal level of substance in cell
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:18154
+created_by: midori
+creation_date: 2012-05-31T16:29:26Z
+
+[Term]
+id: FYPO:0001078
+name: normal beta-glucan level
+def: "A cell phenotype in which the amount of beta-D-glucan measured in a cell is normal." [PomBase:mah]
+synonym: "normal beta-D-glucan level" EXACT [CHEBI:28793, PomBase:mah]
+synonym: "normal cellular beta-glucan level" EXACT [PomBase:al]
+is_a: FYPO:0001077 ! normal polysaccharide level
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:28793
+created_by: midori
+creation_date: 2012-05-31T16:30:57Z
+
+[Term]
+id: FYPO:0001079
+name: normal galactomannan level
+def: "A cell phenotype in which the amount of galactomannan measured in a cell is normal." [PomBase:mah]
+synonym: "normal cellular galactomannan level" EXACT [PomBase:al]
+is_a: FYPO:0001077 ! normal polysaccharide level
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:27680
+created_by: midori
+creation_date: 2012-05-31T16:33:06Z
+
+[Term]
+id: FYPO:0001080
+name: decreased polysaccharide level
+def: "A cell phenotype in which the amount of a polysaccharide measured in a cell is lower than normal." [PomBase:mah]
+is_a: FYPO:0000991 ! decreased level of substance in cell
+is_a: FYPO:0001085 ! altered polysaccharide level
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:18154
+created_by: midori
+creation_date: 2012-05-31T16:33:42Z
+
+[Term]
+id: FYPO:0001081
+name: decreased cell wall alpha-glucan level
+def: "A cell phenotype in which the amount of alpha-D-glucan measured in the cell wall is lower than normal." [PomBase:mah]
+synonym: "decreased cell wall alpha-D-glucan level" EXACT [CHEBI:22385, PomBase:mah]
+is_a: FYPO:0001080 ! decreased polysaccharide level
+intersection_of: inheres_in GO:0009277
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:22385
+created_by: midori
+creation_date: 2012-05-31T16:35:00Z
+
+[Term]
+id: FYPO:0001082
+name: decreased cell wall beta-glucan level
+def: "A cell phenotype in which the amount of beta-D-glucan measured in the cell wall is lower than normal." [PomBase:mah]
+synonym: "decreased cell wall beta-D-glucan level" EXACT [CHEBI:28793, PomBase:mah]
+is_a: FYPO:0001080 ! decreased polysaccharide level
+intersection_of: inheres_in GO:0009277
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:28793
+created_by: midori
+creation_date: 2012-05-31T16:36:19Z
+
+[Term]
+id: FYPO:0001083
+name: increased polysaccharide level
+def: "A cell phenotype in which the amount of a polysaccharide measured in a cell is greater than normal." [PomBase:mah]
+is_a: FYPO:0000990 ! increased level of substance in cell
+is_a: FYPO:0001085 ! altered polysaccharide level
+intersection_of: inheres_in GO:0009277
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:18154
+created_by: midori
+creation_date: 2012-05-31T16:37:01Z
+
+[Term]
+id: FYPO:0001084
+name: increased cell wall alpha-glucan level
+def: "A cell phenotype in which the amount of alpha-D-glucan measured in the cell wall is greater than normal." [PomBase:mah]
+synonym: "increased cell wall alpha-D-glucan level" EXACT [CHEBI:22385, PomBase:mah]
+is_a: FYPO:0001083 ! increased polysaccharide level
+intersection_of: inheres_in GO:0009277
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:22385
+created_by: midori
+creation_date: 2012-05-31T16:37:12Z
+
+[Term]
+id: FYPO:0001085
+name: altered polysaccharide level
+is_a: FYPO:0000989 ! altered level of substance in cell
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:18154
+created_by: midori
+creation_date: 2012-05-31T16:39:05Z
+
+[Term]
+id: FYPO:0001086
+name: normal glucosyltransferase activity
+def: "A molecular function phenotype in which the observed rate of a glucosyltransferase activity is normal." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0046527
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-05-31T16:41:20Z
+
+[Term]
+id: FYPO:0001087
+name: abnormal glucosyltransferase activity
+def: "A molecular function phenotype in which the observed rate of a glucosyltransferase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0046527
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-05-31T16:41:54Z
+
+[Term]
+id: FYPO:0001088
+name: decreased glucosyltransferase activity
+def: "A molecular function phenotype in which the observed rate of a glucosyltransferase activity is decreased." [PomBase:mah]
+synonym: "reduced glucosyltransferase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001087 ! abnormal glucosyltransferase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0046527
+created_by: midori
+creation_date: 2012-05-31T16:42:14Z
+
+[Term]
+id: FYPO:0001089
+name: increased glucosyltransferase activity
+def: "A molecular function phenotype in which the observed rate of a glucosyltransferase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001087 ! abnormal glucosyltransferase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0046527
+created_by: midori
+creation_date: 2012-05-31T16:42:35Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
