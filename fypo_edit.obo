@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 31:05:2012 17:13
+date: 01:06:2012 15:40
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -1263,6 +1263,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000108
 name: sensitive to menadione
 def: "A phenotype in which cells show increased sensitivity to menadione." [PomBase:mah]
+synonym: "sensitive to vitamin K3" RELATED [PomBase:al]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001551
 intersection_of: inheres_in GO:0016049
@@ -7513,7 +7514,7 @@ creation_date: 2011-11-11T10:42:36Z
 id: FYPO:0000653
 name: DNA binding phenotype
 def: "A phenotype that affects DNA binding." [PomBase:mah]
-is_a: FYPO:0000652 ! molecular function phenotype
+is_a: FYPO:0001092 ! binding phenotype
 intersection_of: FYPO:0000001 ! phenotype
 intersection_of: inheres_in GO:0003677
 created_by: midori
@@ -8063,7 +8064,7 @@ creation_date: 2011-12-05T01:59:12Z
 id: FYPO:0000702
 name: protein binding phenotype
 def: "A phenotype that affects protein binding." [PomBase:mah]
-is_a: FYPO:0000652 ! molecular function phenotype
+is_a: FYPO:0001092 ! binding phenotype
 intersection_of: FYPO:0000001 ! phenotype
 intersection_of: inheres_in GO:0005515
 created_by: midori
@@ -9893,8 +9894,9 @@ creation_date: 2012-03-15T10:55:12Z
 
 [Term]
 id: FYPO:0000851
-name: resistant to osmotic stress
+name: resistance to osmotic stress
 def: "A cell phenotype in which cells show decreased sensitivity to osmotic stress." [PomBase:mah]
+synonym: "resistant to osmotic stress" EXACT [PomBase:mah]
 is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
 is_a: FYPO:0000850 ! resistant to stress
 intersection_of: PATO:0001552
@@ -9907,7 +9909,7 @@ id: FYPO:0000852
 name: resistant to salt stress
 def: "A cell phenotype in which cells show decreased sensitivity to a salt stress." [PomBase:mah]
 synonym: "ionic stress resistance: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000851 ! resistant to osmotic stress
+is_a: FYPO:0000851 ! resistance to osmotic stress
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0071472
 created_by: midori
@@ -12847,6 +12849,312 @@ intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0046527
 created_by: midori
 creation_date: 2012-05-31T16:42:35Z
+
+[Term]
+id: FYPO:0001090
+name: resistance to heat shock
+def: "A cell phenotype in which cells show decreased sensitivity to heat shock. Heat shock is a transient exposure to high temperature." [PomBase:mah]
+synonym: "resistant to heat shock" EXACT [PomBase:mah]
+is_a: FYPO:0000850 ! resistant to stress
+created_by: midori
+creation_date: 2012-06-01T13:48:51Z
+
+[Term]
+id: FYPO:0001091
+name: normal cellular response to heat shock
+def: "A cellular response phenotype in which the cellular response to heat shock is normal. Heat shock is a transient exposure to high temperature." [PomBase:mah]
+is_a: FYPO:0000968 ! normal cellular response to stress
+created_by: midori
+creation_date: 2012-06-01T13:59:10Z
+
+[Term]
+id: FYPO:0001092
+name: binding phenotype
+def: "A phenotype that affects the binding of a gene product to another substance." [PomBase:mah]
+is_a: FYPO:0000652 ! molecular function phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0005488
+created_by: midori
+creation_date: 2012-06-01T14:07:32Z
+
+[Term]
+id: FYPO:0001093
+name: abolished chromatin binding
+def: "A molecular function phenotype in which chromatin binding by a mutated gene product does not occur. The gene product may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
+synonym: "abolished chromatin association" EXACT [PomBase:vw]
+is_a: FYPO:0001092 ! binding phenotype
+intersection_of: PATO:0001558
+intersection_of: towards GO:0003682
+created_by: midori
+creation_date: 2012-06-01T14:08:25Z
+
+[Term]
+id: FYPO:0001094
+name: normal DNA replication origin binding
+def: "A molecular function phenotype in which occurrence of DNA binding at a replication origin by a mutated gene product is normal." [PomBase:mah]
+synonym: "normal origin binding" EXACT [PomBase:mah]
+is_a: FYPO:0000655 ! normal DNA binding
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003688
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-06-01T14:23:10Z
+
+[Term]
+id: FYPO:0001095
+name: abolished DNA replication origin binding
+def: "A molecular function phenotype in which DNA binding at a replication origin by a mutated gene product does not occur." [PomBase:mah]
+synonym: "abolished origin binding" EXACT [PomBase:mah]
+is_a: FYPO:0000659 ! abolished DNA binding
+intersection_of: PATO:0001558
+intersection_of: towards GO:0003688
+created_by: midori
+creation_date: 2012-06-01T14:24:32Z
+
+[Term]
+id: FYPO:0001096
+name: normal RNA level during nitrogen starvation
+def: "A cell phenotype in which the amount of RNA measured in a cell during nitrogen starvation is normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+is_a: FYPO:0000840 ! normal RNA level
+is_a: FYPO:0001076 ! normal level of substance in cell
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+intersection_of: exists_during GO:0006995 
+created_by: midori
+creation_date: 2012-06-01T14:32:55Z
+
+[Term]
+id: FYPO:0001097
+name: sensitive to amitrole
+def: "A phenotype in which cells show increased sensitivity to amitrole." [PomBase:mah]
+synonym: "sensitive to 3-amino-1,2,4-triazole" EXACT [CHEBI:40036, PomBase:al]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:40036
+created_by: midori
+creation_date: 2012-06-01T14:35:59Z
+
+[Term]
+id: FYPO:0001098
+name: sensitive to 4-nitroquinoline N-oxide
+def: "A phenotype in which cells show increased sensitivity to 4-nitroquinoline N-oxide." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:16907
+created_by: midori
+creation_date: 2012-06-01T14:37:39Z
+
+[Term]
+id: FYPO:0001099
+name: normal cellular response to CCCP
+def: "A cellular response phenotype in which the cellular response to CCCP (carbonyl cyanide m-chlorophenyl hydrazone) is normal." [PomBase:mah]
+synonym: "normal cellular response to carbonyl cyanide m-chlorophenyl hydrazone" EXACT [CHEBI:3259]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0072727
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-06-01T14:38:51Z
+
+[Term]
+id: FYPO:0001100
+name: normal cellular response to Gentian violet
+def: "A cellular response phenotype in which the cellular response to Gentian violet (also known as crystal violet) is normal." [PomBase:mah]
+synonym: "normal cellular response to : {4-[Bis-(4-dimethylamino-phenyl)-methylene]-cyclohexa-2,5-dienylidene}-dimethyl-ammonium chloride" EXACT [CHEBI:198346]
+synonym: "normal cellular response to crystal violet" EXACT [PomBase:mah]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0072729
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-06-01T14:39:48Z
+
+[Term]
+id: FYPO:0001101
+name: decreased protein level during cellular response to hydrogen peroxide
+def: "A cell phenotype in which the amount of protein measured in a cell  during a cellular response to hydrogen peroxide is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "decreased protein accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
+synonym: "reduced protein level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+is_a: FYPO:0000835 ! decreased protein level
+is_a: FYPO:0000991 ! decreased level of substance in cell
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:36080
+intersection_of: exists_during GO:0070301
+created_by: midori
+creation_date: 2012-06-01T14:47:37Z
+
+[Term]
+id: FYPO:0001102
+name: increased protein level during cellular response to hydrogen peroxide
+def: "A cell phenotype in which the amount of protein measured in a cell during a cellular response to hydrogen peroxide is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "increased protein accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
+is_a: FYPO:0000836 ! increased protein level
+is_a: FYPO:0000990 ! increased level of substance in cell
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:36080
+intersection_of: exists_during GO:0070301
+created_by: midori
+creation_date: 2012-06-01T14:48:16Z
+
+[Term]
+id: FYPO:0001103
+name: resistance to hydrogen peroxide
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of hydrogen peroxide than normal." [PomBase:mah]
+synonym: "resistance to H2O2" EXACT [CHEBI:16240, PomBase:mah]
+synonym: "resistant to hydrogen peroxide" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:16240
+created_by: midori
+creation_date: 2012-06-01T14:49:59Z
+
+[Term]
+id: FYPO:0001104
+name: abnormal catalase activity
+def: "A molecular function phenotype in which the observed rate of catalase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004096
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-06-01T15:00:27Z
+
+[Term]
+id: FYPO:0001105
+name: abolished catalase activity
+def: "A molecular function phenotype in which catalase activity is absent." [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001104 ! abnormal catalase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004096
+created_by: midori
+creation_date: 2012-06-01T15:00:35Z
+
+[Term]
+id: FYPO:0001106
+name: abnormal glutathione-disulfide reductase activity
+def: "A molecular function phenotype in which the observed rate of glutathione-disulfide reductase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004362
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-06-01T15:14:45Z
+
+[Term]
+id: FYPO:0001107
+name: decreased glutathione-disulfide reductase activity
+def: "A molecular function phenotype in which the observed rate of glutathione-disulfide reductase activity is decreased." [PomBase:mah]
+synonym: "reduced glutathione-disulfide reductase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001106 ! abnormal glutathione-disulfide reductase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004362
+created_by: midori
+creation_date: 2012-06-01T15:14:58Z
+
+[Term]
+id: FYPO:0001108
+name: increased glutathione-disulfide reductase activity
+def: "A molecular function phenotype in which the observed rate of glutathione-disulfide reductase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001106 ! abnormal glutathione-disulfide reductase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004362
+created_by: midori
+creation_date: 2012-06-01T15:15:04Z
+
+[Term]
+id: FYPO:0001109
+name: resistance to menadione
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of menadione than normal." [PomBase:mah]
+synonym: "resistance to vitamin K3" RELATED [PomBase:al]
+synonym: "resistant to menadione" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:28869
+created_by: midori
+creation_date: 2012-06-01T15:18:55Z
+
+[Term]
+id: FYPO:0001110
+name: inviable germinating spore, multiple cell divisions
+def: "A phenotype in which a spore germinates to produce a cell of normal morphology that undergoes two or more rounds of cell division, and then dies." [PomBase:al, PomBase:mah]
+is_a: FYPO:0000316 ! inviable germinating spore
+created_by: midori
+creation_date: 2012-06-01T15:21:23Z
+
+[Term]
+id: FYPO:0001111
+name: increased cellular glutathione disulfide level
+def: "A cell phenotype in which the amount of glutathione disulfide (GSSG) measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular GSSG level" EXACT [CHEBI:17858, PomBase:al]
+synonym: "increased cellular oxidised glutathione level" EXACT [CHEBI:17858, PomBase:al]
+synonym: "increased glutathione disulfide accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0000990 ! increased level of substance in cell
+is_a: FYPO:0001015 ! altered cellular phosphatidylinositol-4-phosphate level
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:17858
+created_by: midori
+creation_date: 2012-06-01T15:26:21Z
+
+[Term]
+id: FYPO:0001112
+name: advanced cell cycle arrest in response to nitrogen starvation
+def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation takes place earlier than normal." [PomBase:mah]
+is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
+intersection_of: PATO:0000502
+intersection_of: inheres_in GO:0030996
+intersection_of: happens_during GO:0006995
+created_by: midori
+creation_date: 2012-06-01T15:29:57Z
+
+[Term]
+id: FYPO:0001113
+name: normal cellular response to pheromone
+def: "A cellular response phenotype in which the cellular response to a pheromone is normal." [PomBase:mah]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071444
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-06-01T15:37:34Z
+
+[Term]
+id: FYPO:0001114
+name: normal cellular response to M-factor
+def: "A cellular response phenotype in which the cellular response to M-factor is normal." [PomBase:mah]
+is_a: FYPO:0001113 ! normal cellular response to pheromone
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071444
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:64120
+created_by: midori
+creation_date: 2012-06-01T15:39:05Z
+
+[Term]
+id: FYPO:0001115
+name: normal cellular response to P-factor
+def: "A cellular response phenotype in which the cellular response to P-factor is normal." [PomBase:mah]
+is_a: FYPO:0001113 ! normal cellular response to pheromone
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071444
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:64121
+created_by: midori
+creation_date: 2012-06-01T15:39:33Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
