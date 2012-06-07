@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 01:06:2012 15:40
+date: 07:06:2012 16:03
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -49,6 +49,9 @@ def: "A cell phenotype characterized by altered cell morphology." [PomBase:mah]
 synonym: "cell morphology, misshapen cells" RELATED [PomBase:mah]
 synonym: "cellular morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000136 ! cellular structure phenotype
+intersection_of: PATO:0000051
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -160,8 +163,8 @@ name: T-shaped cells
 def: "A cell morphology phenotype in which a single cell grows in the form of the letter T." [PomBase:mah, PomBase:vw]
 comment: A T-shaped cell may septate perpendicular to the normal septation axis, and divide to form normal-shaped daughter cells.
 synonym: "cell morphology, T shaped" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
 is_a: FYPO:0000124 ! viable
+is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
 intersection_of: PATO:0001200
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -173,7 +176,7 @@ name: bottle-shaped cells
 def: "A cell morphology phenotype in which the cell tapers at one end to a diameter smaller than the other." [PomBase:mah]
 synonym: "cell morphology, bottle/skittle" EXACT [PomBase:mah]
 synonym: "skittle-shaped cells" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0002213
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -184,7 +187,7 @@ id: FYPO:0000015
 name: branched cells
 def: "A cell morphology phenotype in which a daughter cell grows from near, and at approximately a right angle to, the septum of the mother cell, resulting in the formation of a branched, septated cell. Cell division may give rise to branched or unbranched daughter cells." [PomBase:jh, PomBase:mah]
 synonym: "cell morphology, branched" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0000402
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -196,7 +199,7 @@ name: curved cells
 def: "A cell morphology phenotype in which cells are curved along the long axis. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
 synonym: "bent cells" EXACT [PomBase:mah]
 synonym: "cell morphology, curved" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
 intersection_of: PATO:0000406
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -207,7 +210,8 @@ id: FYPO:0000017
 name: elongated cells
 def: "A cell morphology phenotype in which cells are longer than normal, i.e. the maximum distance between the cell ends is greater than normal." [PomBase:mah, PomBase:vw]
 synonym: "cell morphology, elongated cells" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
+synonym: "long cells" EXACT [PomBase:vw]
+is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0000573
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -219,7 +223,7 @@ name: pear-shaped cells
 def: "A cell morphology phenotype in which a cell is shaped in the form of a pear." [PomBase:mah]
 comment: Discussing what this means; may rename.
 synonym: "cell morphology, pear shaped" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0002240
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -228,10 +232,10 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000021
 name: spheroid cells
-def: "A cell morphology phenotype in which a cell is shaped in the form of a spheroid. Spheroid cells are shorter than normal, and have approximately the same diameter as normal." [PomBase:mah]
+def: "A cell morphology phenotype in which a cell is shaped in the form of a spheroid. In spheroid cells, there is much less difference between the long and short axes of the cell than in wild type. Spheroid cells may shorter than normal, with approximately the same diameter as normal, or they may be enlarged." [PomBase:mah]
 synonym: "cell morphology, round cells" RELATED [PomBase:mah]
 synonym: "cell morphology, rounded cells" RELATED [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0001865
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -254,7 +258,7 @@ id: FYPO:0000023
 name: small cells
 def: "A cell morphology phenotype in which cells have an abnormally low volume." [PomBase:mah]
 synonym: "cell size: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001127 ! abnormal cell size
 intersection_of: PATO:0000596
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -265,7 +269,7 @@ id: FYPO:0000024
 name: stubby cells
 def: "A cell morphology phenotype in which the cell diameter is larger than normal and the cell length is shorter than normal." [PomBase:mah]
 synonym: "cell morphology, stubby cells" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0001653
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -276,7 +280,7 @@ id: FYPO:0000025
 name: swollen cells
 def: "A cell morphology phenotype in which a cell has a larger volume than normal." [PomBase:mah]
 synonym: "cell morphology, swollen cells" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001127 ! abnormal cell size
 intersection_of: PATO:0000595
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -1563,9 +1567,10 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000133
 name: elongated multinucleate cells
 def: "A cell phenotype in which cells contain more than one nucleus apiece and are elongated." [PomBase:mah]
-is_a: FYPO:0000017 ! elongated cells
+synonym: "long multinucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000061 ! multinucleate
 is_a: FYPO:0000949 ! aseptate
+is_a: FYPO:0001122 ! elongated vegetative cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000061 ! multinucleate
@@ -1577,8 +1582,9 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000134
 name: branched, elongated, multiseptate cells
 def: "A cell morphology phenotype in which cells form branches near the septum, are elongated, and have more than one septum per cell." [PomBase:mah]
+synonym: "branched, long, multiseptate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000015 ! branched cells
-is_a: FYPO:0000223 ! elongated, multiseptate cells
+is_a: FYPO:0000223 ! elongated multiseptate cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000015 ! branched cells
 intersection_of: has_part FYPO:0000017 ! elongated cells
@@ -2537,7 +2543,9 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000220
 name: accumulation of non-coding outer repeat transcripts
 def: "A cellular metabolism phenotype in which small interfering RNA transcripts derived from the centromere outer repeat region are present at greater levels than normal." [PMID:20211136, PomBase:mah]
+synonym: "increased level of non-coding outer repeat transcripts" EXACT [PomBase:mah]
 is_a: FYPO:0000140 ! cellular metabolism phenotype
+is_a: FYPO:0000825 ! increased RNA level
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2563,10 +2571,11 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000223
-name: elongated, multiseptate cells
+name: elongated multiseptate cells
 def: "A cell morphology phenotype in which cells are elongated and have more than one septum per cell." [PomBase:mah]
-is_a: FYPO:0000017 ! elongated cells
+synonym: "long multiseptate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000118 ! multiseptate
+is_a: FYPO:0001122 ! elongated vegetative cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000118 ! multiseptate
@@ -2578,7 +2587,7 @@ id: FYPO:0000224
 name: lemon-shaped
 def: "A cell morphology phenotype in which a single cell grows in the form of a lemon. A lemon shape is defined mathematically as having a quadric surface in three dimensions obtained by rotating less than half of a circular arc about an axis passing through the endpoints of the arc." [http://mathworld.wolfram.com/Lemon.html, PomBase:mah]
 synonym: "cell morphology, lemon shaped" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0002345
 intersection_of: inheres_in CL:0000000
 created_by: midori
@@ -2981,7 +2990,7 @@ def: "A cell phenotype in which cells do not respond normally to reactive oxygen
 synonym: "protects against physiological oxidative damage in G0" RELATED [PomBase:mah]
 is_a: FYPO:0000180 ! abnormal cellular response to oxidative stress
 intersection_of: PATO:0000001
-intersection_of: during GO:0045023
+intersection_of: happens_during GO:0045023
 intersection_of: inheres_in GO:0034614
 intersection_of: qualifier PATO:0000460
 created_by: midori
@@ -3112,7 +3121,7 @@ id: FYPO:0000273
 name: siRNAs homologous to outer repeats absent
 def: "An RNA metabolism phenotype in which small interfering RNAs homologous to the outer repeat regions of the centromere are absent." [PMID:20211136, PomBase:mah]
 synonym: "siRNAs homologous to outer repeats undetectable" EXACT [PomBase:mah]
-is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0000826 ! decreased RNA level
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3534,8 +3543,9 @@ creation_date: 2011-04-27T11:47:04Z
 id: FYPO:0000314
 name: inviable germinating spore with elongated germ tube
 def: "A phenotype in which a spore germinates to produce an elongated germ tube, and does not go on to form a dividing cell." [PomBase:mah]
-is_a: FYPO:0000017 ! elongated cells
+synonym: "inviable germinating spore with long germ tube" EXACT [PomBase:vw]
 is_a: FYPO:0000313 ! inviable germinating spore with abnormal germ tube morphology
+is_a: FYPO:0001123 ! elongated spores
 intersection_of: PATO:0000573
 intersection_of: inheres_in GO:0032172
 created_by: midori
@@ -3545,6 +3555,7 @@ creation_date: 2011-04-27T11:47:04Z
 id: FYPO:0000315
 name: inviable germinating spore with elongated, septated germ tube
 def: "A phenotype in which a spore germinates to produce an elongated germ tube, and undergoes septation, but does not go on to form a dividing cell." [PomBase:mah]
+synonym: "inviable germinating spore with long, septated germ tube" EXACT [PomBase:vw]
 is_a: FYPO:0000313 ! inviable germinating spore with abnormal germ tube morphology
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
@@ -4026,7 +4037,7 @@ name: mating projection absent
 def: "A cellular structure phenotype in which cells do not form mating projections." [PomBase:mah]
 synonym: "absent mating projection morphology" EXACT [PomBase:mah]
 synonym: "mating projection morphology: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0002000
 intersection_of: inheres_in GO:0005937
 created_by: midori
@@ -7438,7 +7449,7 @@ name: small vegetative cells
 def: "A cell morphology phenotype in which vegetative cells have an abnormally low volume." [PomBase:mah]
 is_a: FYPO:0000023 ! small cells
 intersection_of: PATO:0000596
-intersection_of: during GO:0072690
+intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000596
 created_by: midori
 creation_date: 2011-10-07T02:03:07Z
@@ -7448,6 +7459,9 @@ id: FYPO:0000646
 name: swollen vegetative cells
 def: "A cell morphology phenotype in which a vegetatively growing cell has a larger volume than normal." [PomBase:mah]
 is_a: FYPO:0000025 ! swollen cells
+intersection_of: PATO:0000595
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000596
 created_by: midori
 creation_date: 2011-10-07T04:19:54Z
 
@@ -7470,6 +7484,9 @@ def: "A cell morphology phenotype in which vegetatively growing cells are viable
 synonym: "wee" EXACT [PomBase:jh, PomBase:mah]
 is_a: FYPO:0000124 ! viable
 is_a: FYPO:0000645 ! small vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000023 ! small cells
+intersection_of: has_part FYPO:0000645 ! small vegetative cells
 created_by: midori
 creation_date: 2011-10-13T12:06:45Z
 
@@ -7732,6 +7749,9 @@ def: "A cell phenotype characterized by normal cell morphology." [PomBase:mah]
 synonym: "cellular morphology: normal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000136 ! cellular structure phenotype
 is_a: FYPO:0000257 ! normal phenotype
+intersection_of: PATO:0000051
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2011-11-11T02:51:12Z
 
@@ -8146,7 +8166,7 @@ synonym: "slow cell growth in response to nitrogen starvation" EXACT [PomBase:ma
 is_a: FYPO:0000046 ! slow cell growth
 is_a: FYPO:0000152 ! abnormal cellular response to nitrogen starvation
 intersection_of: FYPO:0000046 ! slow cell growth
-intersection_of: during GO:0006995
+intersection_of: happens_during GO:0006995
 created_by: midori
 creation_date: 2011-12-05T04:43:53Z
 
@@ -8961,8 +8981,9 @@ alt_id: FYPO:0000018
 def: "A cell morphology phenotype in which a cell is longer than normal and shaped in the form of a dumbbell, i.e. having two connected, roughly spherical parts of approximately equal size." [PomBase:mah]
 comment: Note that all dumbbell-shaped cells observed are also elongated.
 synonym: "cell morphology, elongated dumbbell" EXACT [PomBase:mah]
+synonym: "cell morphology, long dumbbell" EXACT [PomBase:vw]
 synonym: "elongated dumbbell morphology" EXACT [PomBase:mah]
-is_a: FYPO:0000005 ! abnormal cell morphology
+is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0001876
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: inheres_in CL:0000000
@@ -9476,7 +9497,6 @@ creation_date: 2012-03-07T04:12:02Z
 
 [Term]
 id: FYPO:0000819
-name: increased concentration of P-factor in growth medium
 def: "A phenotype in which the concentration of P-factor, the mating pheromone produced by mating type plus cells, released into the growth medium is higher than normal." [PomBase:mah]
 synonym: "increased accumulation of P-factor in growth medium" RELATED [PomBase:mah]
 synonym: "increased level of P-factor in growth medium" EXACT [PomBase:mah]
@@ -9485,6 +9505,7 @@ is_a: FYPO:0000817 ! increased concentration of pheromone in growth medium
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:64121
+name: increased concentration of P-factor in growth medium
 created_by: midori
 creation_date: 2012-03-07T04:14:04Z
 
@@ -9514,6 +9535,9 @@ synonym: "decreased level of M-factor in growth medium" EXACT [PomBase:mah]
 synonym: "decreased release of M-factor into growth medium" RELATED [PomBase:mah]
 synonym: "reduced concentration of M-factor in growth medium" EXACT [PomBase:mah]
 is_a: FYPO:0000820 ! decreased concentration of pheromone in growth medium
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:64120
 created_by: midori
 creation_date: 2012-03-07T04:15:08Z
 
@@ -9526,6 +9550,9 @@ synonym: "decreased level of P-factor in growth medium" EXACT [PomBase:mah]
 synonym: "decreased release of P-factor into growth medium" RELATED [PomBase:mah]
 synonym: "reduced concentration of P-factor in growth medium" EXACT [PomBase:mah]
 is_a: FYPO:0000820 ! decreased concentration of pheromone in growth medium
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:64121
 created_by: midori
 creation_date: 2012-03-07T04:15:24Z
 
@@ -9651,6 +9678,7 @@ creation_date: 2012-03-08T03:46:56Z
 id: FYPO:0000832
 name: elongated nucleus
 def: "A cellular structure phenotype in which the nucleus is longer than normal." [PomBase:mah]
+synonym: "long nucleus" EXACT [PomBase:vw]
 is_a: FYPO:0000062 ! abnormal nuclear morphology
 intersection_of: PATO:0000573
 intersection_of: inheres_in GO:0005634
@@ -9744,6 +9772,7 @@ creation_date: 2012-03-12T03:24:23Z
 id: FYPO:0000839
 name: elongated mononucleate cells
 def: "A cell phenotype in which cells contain one nucleus apiece and are elongated." [PomBase:mah]
+synonym: "long mononucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000060 ! mononucleate
 is_a: FYPO:0000949 ! aseptate
 intersection_of: FYPO:0000136 ! cellular structure phenotype
@@ -10505,6 +10534,8 @@ id: FYPO:0000895
 name: mitochondrial aggregation
 def: "An abnormal intracellular mitochondrion distribution phenotype in which mitochondria cluster together more than normal." [PomBase:mah]
 is_a: FYPO:0000894 ! abnormal intracellular mitochondrion distribution
+intersection_of: PATO:0001629
+intersection_of: inheres_in GO:0005739
 created_by: midori
 creation_date: 2012-03-29T02:45:02Z
 
@@ -10513,6 +10544,9 @@ id: FYPO:0000896
 name: mitochondrial aggregation at cell tip
 def: "An abnormal intracellular mitochondrion distribution phenotype in which mitochondria cluster together more than normal, with a cluster at one or both ends of the cell." [PomBase:mah]
 is_a: FYPO:0000895 ! mitochondrial aggregation
+intersection_of: PATO:0001629
+intersection_of: inheres_in GO:0005739
+intersection_of: occurs_at: GO:0051286
 created_by: midori
 creation_date: 2012-03-29T02:53:52Z
 
@@ -11085,6 +11119,9 @@ synonym: "enlarged volume spheroid cells" EXACT [PomBase:mah]
 synonym: "swollen rounded cells" RELATED [PomBase:mah]
 is_a: FYPO:0000021 ! spheroid cells
 is_a: FYPO:0000025 ! swollen cells
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: has_part FYPO:0000021 ! spheroid cells
+intersection_of: has_part FYPO:0000025 ! swollen cells
 created_by: midori
 creation_date: 2012-04-03T03:14:05Z
 
@@ -11142,8 +11179,9 @@ creation_date: 2012-04-03T03:38:09Z
 id: FYPO:0000950
 name: elongated aseptate cells
 def: "A cell phenotype in which cells do not contain septa and are elongated." [PomBase:mah]
-is_a: FYPO:0000017 ! elongated cells
+synonym: "elongated aseptate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000949 ! aseptate
+is_a: FYPO:0001122 ! elongated vegetative cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000949 ! aseptate
@@ -11156,6 +11194,10 @@ name: small inviable vegetative cells
 def: "A cell morphology phenotype in which vegetative cells are inviable and have an abnormally low volume." [PomBase:mah]
 is_a: FYPO:0000049 ! inviable
 is_a: FYPO:0000645 ! small vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000023 ! small cells
+intersection_of: has_part FYPO:0000049 ! inviable
 created_by: midori
 creation_date: 2012-04-03T04:12:31Z
 
@@ -11716,6 +11758,7 @@ id: FYPO:0000998
 name: elongated cells during nitrogen starvation
 def: "A cell morphology phenotype in which a cell becomes longer than normal, i.e. the maximum distance between the cell ends is greater than normal, when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
 synonym: "cell morphology, elongated cells during nitrogen starvation" EXACT [PomBase:mah]
+synonym: "long cells during nitrogen starvation" EXACT [PomBase:vw]
 is_a: FYPO:0000017 ! elongated cells
 is_a: FYPO:0000995 ! abnormal cell morphology during nitrogen starvation
 intersection_of: PATO:0000573
@@ -11812,6 +11855,7 @@ id: FYPO:0001006
 name: multinucleate dumbbell-shaped cells
 def: "A cell phenotype in which cells contain more than one nucleus apiece, are elongated, and shaped in the form of a dumbbell, i.e. having two connected, roughly spherical parts of approximately equal size." [PomBase:mah]
 synonym: "elongated, multinucleate dumbbell-shaped cells" EXACT [PomBase:mah]
+synonym: "long, multinucleate dumbbell-shaped cells" EXACT [PomBase:vw]
 is_a: FYPO:0000133 ! elongated multinucleate cells
 is_a: FYPO:0000779 ! dumbbell-shaped cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
@@ -12344,8 +12388,8 @@ is_a: FYPO:0001047 ! mitotic catastrophe
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000049 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-intersection_of: has_part FYPO:0000672 ! normal cell morphology
 intersection_of: has_part FYPO:0001046 ! premature mitosis
+intersection_of: has_part FYPO:0001124 ! normal cell size
 created_by: midori
 creation_date: 2012-05-11T02:09:56Z
 
@@ -12354,13 +12398,14 @@ id: FYPO:0001051
 name: mitotic catastrophe, elongated cells
 def: "A cellular process phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are longer than wild type." [PomBase:mah]
 comment: Note that mitotic catastrophe in elongated cells is usually interpreted to mean that cells enter mitosis despite failing to maintain a DNA integrity checkpoint.
-is_a: FYPO:0000017 ! elongated cells
+synonym: "mitotic catastrophe, long cells" EXACT [PomBase:vw]
 is_a: FYPO:0001047 ! mitotic catastrophe
+is_a: FYPO:0001122 ! elongated vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000049 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0001046 ! premature mitosis
+intersection_of: has_part FYPO:0001122 ! elongated vegetative cells
 created_by: midori
 creation_date: 2012-05-11T02:16:25Z
 
@@ -12391,8 +12436,8 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000049 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0000229 ! cut
-intersection_of: has_part FYPO:0000672 ! normal cell morphology
 intersection_of: has_part FYPO:0001046 ! premature mitosis
+intersection_of: has_part FYPO:0001124 ! normal cell size
 created_by: midori
 creation_date: 2012-05-11T02:39:40Z
 
@@ -12401,14 +12446,15 @@ id: FYPO:0001054
 name: mitotic catastrophe with cut, elongated cells
 def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are longer than wild type, and then undergoes septation and subsequently die." [PomBase:mah]
 synonym: "cut with mitotic catastrophe, elongated cells" EXACT [PomBase:mah]
+synonym: "mitotic catastrophe with cut, long cells" EXACT [PomBase:vw]
 is_a: FYPO:0001048 ! mitotic catastrophe with cut
 is_a: FYPO:0001051 ! mitotic catastrophe, elongated cells
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000049 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0000229 ! cut
 intersection_of: has_part FYPO:0001046 ! premature mitosis
+intersection_of: has_part FYPO:0001122 ! elongated vegetative cells
 created_by: midori
 creation_date: 2012-05-11T02:39:47Z
 
@@ -12919,10 +12965,10 @@ comment: Consider annotating to a term describing abnormal transcription or abno
 is_a: FYPO:0000840 ! normal RNA level
 is_a: FYPO:0001076 ! normal level of substance in cell
 intersection_of: PATO:0001159
+intersection_of: exists_during GO:0006995
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0000461
 intersection_of: towards CHEBI:33697
-intersection_of: exists_during GO:0006995 
 created_by: midori
 creation_date: 2012-06-01T14:32:55Z
 
@@ -12982,11 +13028,10 @@ comment: Consider annotating to a term describing abnormal translation or abnorm
 synonym: "decreased protein accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 synonym: "reduced protein level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
 is_a: FYPO:0000835 ! decreased protein level
-is_a: FYPO:0000991 ! decreased level of substance in cell
+intersection_of: exists_during GO:0070301
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:36080
-intersection_of: exists_during GO:0070301
 created_by: midori
 creation_date: 2012-06-01T14:47:37Z
 
@@ -12998,10 +13043,10 @@ comment: Consider annotating to a term describing abnormal translation or abnorm
 synonym: "increased protein accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 is_a: FYPO:0000836 ! increased protein level
 is_a: FYPO:0000990 ! increased level of substance in cell
+intersection_of: exists_during GO:0070301
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
-intersection_of: exists_during GO:0070301
 created_by: midori
 creation_date: 2012-06-01T14:48:16Z
 
@@ -13116,8 +13161,8 @@ name: advanced cell cycle arrest in response to nitrogen starvation
 def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation takes place earlier than normal." [PomBase:mah]
 is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
 intersection_of: PATO:0000502
-intersection_of: inheres_in GO:0030996
 intersection_of: happens_during GO:0006995
+intersection_of: inheres_in GO:0030996
 created_by: midori
 creation_date: 2012-06-01T15:29:57Z
 
@@ -13155,6 +13200,152 @@ intersection_of: qualifier PATO:0000461
 intersection_of: towards CHEBI:64121
 created_by: midori
 creation_date: 2012-06-01T15:39:33Z
+
+[Term]
+id: FYPO:0001116
+name: decreased RNA level during cellular response to hydrogen peroxide
+def: "A cell phenotype in which the amount of RNA measured in a cell  during a cellular response to hydrogen peroxide is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased RNA accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
+synonym: "reduced RNA level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+is_a: FYPO:0000826 ! decreased RNA level
+intersection_of: exists_during GO:0070301
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-06-07T11:25:57Z
+
+[Term]
+id: FYPO:0001117
+name: decreased RNA level during vegetative growth
+def: "A cell phenotype in which the amount of RNA measured in a cell  during vegetative growth is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. Also note that this term can be used to indicate that RNA level is decreased in a mutant in the absence of stress.
+synonym: "decreased RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+synonym: "reduced RNA level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000826 ! decreased RNA level
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-06-07T11:31:36Z
+
+[Term]
+id: FYPO:0001118
+name: abnormal cell morphology during vegetative growth
+def: "A cell phenotype in which cell morphology is altered when the cell is undergoing vegetative growth." [PomBase:mah]
+is_a: FYPO:0000005 ! abnormal cell morphology
+intersection_of: FYPO:0000005 ! abnormal cell morphology
+intersection_of: exists_during GO:0072690
+created_by: midori
+creation_date: 2012-06-07T11:45:38Z
+
+[Term]
+id: FYPO:0001119
+name: bottle-shaped cells during vegetative growth
+def: "A cell morphology phenotype in which the cell takes on a bottle shape, i.e. tapers at one end to a diameter smaller than the other, when the cell is undergoing vegetative growth." [PomBase:mah]
+synonym: "cell morphology, bottle/skittle during vegetative growth" EXACT [PomBase:mah]
+synonym: "skittle-shaped cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000014 ! bottle-shaped cells
+is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+intersection_of: FYPO:0000014 ! bottle-shaped cells
+intersection_of: exists_during GO:0072690
+created_by: midori
+creation_date: 2012-06-07T11:47:07Z
+
+[Term]
+id: FYPO:0001120
+name: pear-shaped cells during vegetative growth
+def: "A cell morphology phenotype in which a cell is shaped in the form of a pear when the cell is undergoing vegetative growth." [PomBase:mah]
+comment: Discussing what this means; may rename.
+synonym: "cell morphology, pear shaped during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000020 ! pear-shaped cells
+is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+intersection_of: FYPO:0000020 ! pear-shaped cells
+intersection_of: exists_during GO:0072690
+created_by: midori
+creation_date: 2012-06-07T11:47:18Z
+
+[Term]
+id: FYPO:0001121
+name: abnormal cell shape, normal cell size during vegetative growth
+def: "A cell phenotype in which cell shape is altered, but cell size remains normal, when the cell is undergoing vegetative growth." [PomBase:mah, PomBase:vw]
+synonym: "lumpy" RELATED [PomBase:vw]
+is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0001124 ! normal cell size
+intersection_of: has_part FYPO:0001126 ! abnormal cell shape
+created_by: midori
+creation_date: 2012-06-07T11:56:50Z
+
+[Term]
+id: FYPO:0001122
+name: elongated vegetative cells
+def: "A cell phenotype in which cells are elongated when undergoing vegetative growth." [PomBase:mah]
+synonym: "long vegetative cells" EXACT [PomBase:vw]
+is_a: FYPO:0000017 ! elongated cells
+intersection_of: FYPO:0000017 ! elongated cells
+intersection_of: exists_during GO:0072690
+created_by: midori
+creation_date: 2012-06-07T13:10:57Z
+
+[Term]
+id: FYPO:0001123
+name: elongated spores
+def: "A cell phenotype in which spores are longer than normal." [PomBase:mah]
+synonym: "long spores" EXACT [PomBase:vw]
+is_a: FYPO:0000017 ! elongated cells
+is_a: FYPO:0000348 ! abnormal spore morphology
+intersection_of: PATO:0000573
+intersection_of: inheres_in CL:0000596
+created_by: midori
+creation_date: 2012-06-07T13:11:48Z
+
+[Term]
+id: FYPO:0001124
+name: normal cell size
+def: "A cell morphology phenotype in which cells have a normal volume and dimensions." [PomBase:mah]
+is_a: FYPO:0000672 ! normal cell morphology
+intersection_of: PATO:0000117
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-06-07T15:28:36Z
+
+[Term]
+id: FYPO:0001125
+name: normal cell shape
+def: "A cell morphology phenotype in which cells have a normal shape." [PomBase:mah]
+is_a: FYPO:0000672 ! normal cell morphology
+intersection_of: PATO:0000052
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-06-07T15:28:36Z
+
+[Term]
+id: FYPO:0001126
+name: abnormal cell shape
+def: "A cell morphology phenotype in which cells have a normal shape." [PomBase:mah]
+is_a: FYPO:0000005 ! abnormal cell morphology
+intersection_of: PATO:0000052
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-06-07T15:28:36Z
+
+[Term]
+id: FYPO:0001127
+name: abnormal cell size
+def: "A cell morphology phenotype in which cells have a volume or dimensions that differ from normal." [PomBase:mah]
+is_a: FYPO:0000005 ! abnormal cell morphology
+intersection_of: PATO:0000117
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-06-07T16:00:41Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
@@ -13224,6 +13415,10 @@ name: occurs_at
 def: "P occurs_at C : the execution of P is located at C." [GOC:cjm, GOC:mah]
 comment: This relation is not constrained with respect to whether C completely surrounds, or is adjacent to, the location where P is executed. Example: chromatin silencing at centromere unfolds_around centromere : Repression of transcription of centromeric DNA by the formation of heterochromatin.
 xref: GOREL:0000501
+
+[Typedef]
+id: occurs_at:
+name: occurs_at: (UNDECLARED)
 
 [Typedef]
 id: occurs_in
