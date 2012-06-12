@@ -1,13 +1,15 @@
 format-version: 1.2
-date: 30:05:2012 21:56
+date: 12:06:2012 15:30
 saved-by: antonialock
-auto-generated-by: OBO-Edit 2.1-rc3
+auto-generated-by: OBO-Edit 2.2
+subsetdef: Grouping_terms "The grouping terms are high level terms not used for direct annotation but for grouping purposes in the ontology."
 default-namespace: phenotype_condition
 
 [Term]
 id: PCO:0000001
 name: phenotype condition
 def: "Any aspect of an experiment that the experimenter controls and that does not depend on which strain/organism/cells are used." []
+subset: Grouping_terms
 created_by: antonialock
 creation_date: 2012-02-07T11:36:20Z
 
@@ -15,6 +17,7 @@ creation_date: 2012-02-07T11:36:20Z
 id: PCO:0000002
 name: temperature
 def: "Any experimental condition specifying the temperature at which the experiment was performed." []
+subset: Grouping_terms
 is_a: PCO:0000001 ! phenotype condition
 created_by: antonialock
 creation_date: 2012-02-07T12:00:23Z
@@ -40,6 +43,8 @@ id: PCO:0000005
 name: normal temperature
 def: "The experiment was performed at a temperature within the range 25-32 degrees Celsius." []
 is_a: PCO:0000002 ! temperature
+disjoint_from: PCO:0000004 ! high temperature
+disjoint_from: PCO:0000006 ! low temperature
 created_by: antonialock
 creation_date: 2012-02-07T12:17:29Z
 
@@ -48,6 +53,7 @@ id: PCO:0000006
 name: low temperature
 def: "The experiment was performed at a temperature lower than 25 degrees Celsius." []
 is_a: PCO:0000002 ! temperature
+disjoint_from: PCO:0000004 ! high temperature
 created_by: antonialock
 creation_date: 2012-02-07T12:17:29Z
 
@@ -71,6 +77,7 @@ creation_date: 2012-02-07T12:23:45Z
 id: PCO:0000009
 name: growth medium
 def: "Any experimental condition specifying the type of growth medium." []
+subset: Grouping_terms
 is_a: PCO:0000001 ! phenotype condition
 created_by: antonialock
 creation_date: 2012-02-07T12:28:25Z
@@ -87,7 +94,8 @@ creation_date: 2012-02-07T02:22:00Z
 [Term]
 id: PCO:0000011
 name: limited chemical added
-def: "An experimental condition in which a chemical was added to the assay buffers in a limiting quantity compared to standard assay buffers." []
+def: "An experimental condition in which a chemical was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
+subset: Grouping_terms
 is_a: PCO:0000059 ! chemical added
 created_by: antonialock
 creation_date: 2012-02-07T02:23:26Z
@@ -108,6 +116,7 @@ id: PCO:0000013
 name: minimal medium
 def: "Experiments were performed in medium containing a carbon source, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
 comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+subset: Grouping_terms
 synonym: "phenotype condition" RELATED []
 is_a: PCO:0000100 ! medium components
 created_by: antonialock
@@ -145,7 +154,7 @@ creation_date: 2012-02-07T12:51:06Z
 [Term]
 id: PCO:0000021
 name: limited adenine added
-def: "An experimental condition in which adenine was added to the assay buffers in a limiting quantity compared to standard assay buffers." []
+def: "An experimental condition in which adenine was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
 comment: Example: 5 mg/L adenine compared to 100 mg/L
 xref: PMID:7565608
 is_a: PCO:0000011 ! limited chemical added
@@ -171,7 +180,7 @@ creation_date: 2012-02-07T03:09:38Z
 [Term]
 id: PCO:0000024
 name: sugar added
-def: "An experimental condition in which a sugar was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which a sugar was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -180,7 +189,7 @@ creation_date: 2012-02-07T03:09:38Z
 [Term]
 id: PCO:0000025
 name: sorbitol added
-def: "An experimental condition in which sorbitol was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which sorbitol was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000041 ! sugar alcohol added
 created_by: antonialock
@@ -189,7 +198,7 @@ creation_date: 2012-02-07T03:09:38Z
 [Term]
 id: PCO:0000026
 name: vanadate added
-def: "An experimental condition in which vanadate was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which vanadate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "sodium orthovanadate added" EXACT []
 is_a: PCO:0000109 ! excess chemical added
@@ -207,7 +216,7 @@ creation_date: 2012-02-07T03:09:38Z
 [Term]
 id: PCO:0000028
 name: TBC added
-def: "An experimental condition in which TBC was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which TBC was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -216,7 +225,7 @@ creation_date: 2012-02-07T03:09:38Z
 [Term]
 id: PCO:0000029
 name: tacrolimus added
-def: "An experimental condition in which tacrolimus was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which tacrolimus was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -227,6 +236,7 @@ id: PCO:0000030
 name: ions added
 def: "An experimental condition in which ions were added to the assay buffer in excess compared to standard assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
+subset: Grouping_terms
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
 creation_date: 2012-02-07T03:09:38Z
@@ -314,7 +324,7 @@ creation_date: 2012-02-07T03:10:12Z
 [Term]
 id: PCO:0000039
 name: P-factor added
-def: "An experimental condition in which P-factor was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which P-factor was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "P factor added" EXACT []
 is_a: PCO:0000058 ! mating pheromone added
@@ -324,7 +334,7 @@ creation_date: 2012-02-07T03:10:36Z
 [Term]
 id: PCO:0000040
 name: M-factor added
-def: "An experimental condition in which M-factor was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which M-factor was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "M factor added" EXACT []
 is_a: PCO:0000058 ! mating pheromone added
@@ -334,8 +344,9 @@ creation_date: 2012-02-07T03:10:36Z
 [Term]
 id: PCO:0000041
 name: sugar alcohol added
-def: "An experimental condition in which a sugar alcohol was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which a sugar alcohol was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
+subset: Grouping_terms
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
 creation_date: 2012-02-07T03:11:16Z
@@ -343,8 +354,9 @@ creation_date: 2012-02-07T03:11:16Z
 [Term]
 id: PCO:0000042
 name: fatty acid added
-def: "An experimental condition in which a fatty acid was added to the assay buffer in excess compared to standard assay buffers." [PomBase:alock]
+def: "An experimental condition in which a fatty acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:alock]
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
+subset: Grouping_terms
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
 creation_date: 2012-02-07T03:14:49Z
@@ -352,7 +364,7 @@ creation_date: 2012-02-07T03:14:49Z
 [Term]
 id: PCO:0000043
 name: palmitic acid added
-def: "An experimental condition in which palmitic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which palmitic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -361,7 +373,7 @@ creation_date: 2012-02-07T03:17:46Z
 [Term]
 id: PCO:0000044
 name: myristic acid added
-def: "An experimental condition in which myristic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which myristic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -370,7 +382,7 @@ creation_date: 2012-02-07T03:17:46Z
 [Term]
 id: PCO:0000045
 name: pentadecanoic acid added
-def: "An experimental condition in which pentadecanoic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which pentadecanoic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -379,7 +391,7 @@ creation_date: 2012-02-07T03:17:46Z
 [Term]
 id: PCO:0000046
 name: margaric acid added
-def: "An experimental condition in which margaric acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which margaric acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -388,7 +400,7 @@ creation_date: 2012-02-07T03:17:46Z
 [Term]
 id: PCO:0000047
 name: stearic acid added
-def: "An experimental condition in which stearic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which stearic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -397,7 +409,7 @@ creation_date: 2012-02-07T03:17:47Z
 [Term]
 id: PCO:0000048
 name: petroselinic acid added
-def: "An experimental condition in which petroselinic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which petroselinic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -406,7 +418,7 @@ creation_date: 2012-02-07T03:17:47Z
 [Term]
 id: PCO:0000049
 name: oleic acid added
-def: "An experimental condition in which oleic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which oleic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -415,7 +427,7 @@ creation_date: 2012-02-07T03:17:47Z
 [Term]
 id: PCO:0000050
 name: linoleic acid added
-def: "An experimental condition in which linoleic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which linoleic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -424,7 +436,7 @@ creation_date: 2012-02-07T03:17:47Z
 [Term]
 id: PCO:0000051
 name: linolenic acid added
-def: "An experimental condition in which linolenic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which linolenic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -433,7 +445,7 @@ creation_date: 2012-02-07T03:17:47Z
 [Term]
 id: PCO:0000052
 name: arachidic acid added
-def: "An experimental condition in which arachidic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which arachidic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -442,7 +454,7 @@ creation_date: 2012-02-07T03:17:47Z
 [Term]
 id: PCO:0000053
 name: melissic acid added
-def: "An experimental condition in which melissic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which melissic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -453,6 +465,7 @@ id: PCO:0000054
 name: glycerol minimal medium
 def: "Experiments were performed in minimal medium where glycerol is the main carbon source." []
 comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+subset: Grouping_terms
 is_a: PCO:0000013 ! minimal medium
 created_by: antonialock
 creation_date: 2012-02-07T03:29:51Z
@@ -470,7 +483,7 @@ creation_date: 2012-02-07T03:37:43Z
 [Term]
 id: PCO:0000056
 name: 3'5'-cyclic AMP added
-def: "An experimental condition in which 3'5'-cyclic AMP was added to the assay buffer in excess compared to standard assay buffers." [CHEBI:17489]
+def: "An experimental condition in which 3'5'-cyclic AMP was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [CHEBI:17489]
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 xref: CHEBI:17489 "3',5'-cyclic AMP"
 is_a: PCO:0000109 ! excess chemical added
@@ -488,8 +501,9 @@ creation_date: 2012-02-07T05:10:53Z
 [Term]
 id: PCO:0000058
 name: mating pheromone added
-def: "An experimental condition in which mating pheromone (M factor and P factor) was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which mating pheromone (M factor and P factor) was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
+subset: Grouping_terms
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
 creation_date: 2012-02-07T05:25:01Z
@@ -501,6 +515,7 @@ alt_id: PCO:0000017
 alt_id: PCO:0000019
 alt_id: PCO:0000020
 def: "Any experimental condition in which cells are exposed to a chemical which is normally not present in the growth medium or which is added in an unusual quantity." []
+subset: Grouping_terms
 synonym: "chemical added" EXACT []
 synonym: "chemicals" EXACT []
 is_a: PCO:0000001 ! phenotype condition
@@ -518,7 +533,7 @@ creation_date: 2012-02-07T05:37:05Z
 [Term]
 id: PCO:0000061
 name: xenobiotic substrate added
-def: "An experimental condition in which a xenobiotic substrate was added to the assay buffer. A xenobiotic substrate is a macromolecular substrate which is not synthesised by S. pombe." []
+def: "An experimental condition in which a xenobiotic substrate was added to the medium or assay buffer in excess compared to standard medium or assay buffers. A xenobiotic substrate is a macromolecular substrate which is not synthesised by S. pombe." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -543,7 +558,7 @@ creation_date: 2012-02-10T12:15:58Z
 [Term]
 id: PCO:0000064
 name: inositol added
-def: "An experimental condition in which inositol was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which inositol was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -568,7 +583,7 @@ creation_date: 2012-02-14T03:15:13Z
 [Term]
 id: PCO:0000067
 name: lauric acid added
-def: "An experimental condition in which lauric acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which lauric acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -577,7 +592,7 @@ creation_date: 2012-02-14T03:18:35Z
 [Term]
 id: PCO:0000068
 name: vaccenic acid added
-def: "An experimental condition in which vaccenic acid was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which vaccenic acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000042 ! fatty acid added
 created_by: antonialock
@@ -586,7 +601,7 @@ creation_date: 2012-02-14T03:21:32Z
 [Term]
 id: PCO:0000069
 name: caffeine added
-def: "An experimental condition in which caffeine was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which caffeine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -603,16 +618,18 @@ creation_date: 2012-02-15T12:40:35Z
 [Term]
 id: PCO:0000071
 name: 1-Na-PP1 added
-def: "An experimental condition in which 1-Na-PP1 was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which 1-Na-PP1 was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
+synonym: "1-Na-PP1 present" EXACT []
 synonym: "4-amino-1-tert-butyl-3-(1'-naphthyl)pyrazolo[3,4-d]pyrimidine added" EXACT []
+synonym: "4-amino-1-tert-butyl-3-(1'-naphthyl)pyrazolo[3,4-d]pyrimidine present" EXACT []
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
 creation_date: 2012-02-19T10:45:53Z
 
 [Term]
 id: PCO:0000072
-name: glycerol carbon source + glucose
+name: glycerol carbon source + glucose minimal medium
 def: "Experiments were performed in minimal medium where glycerol is the main carbon source, but the medium also contained trace amounts of glucose (<0.1%)." []
 comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 is_a: PCO:0000054 ! glycerol minimal medium
@@ -632,7 +649,7 @@ creation_date: 2012-02-27T12:15:46Z
 [Term]
 id: PCO:0000074
 name: NAD+ added
-def: "An experimental condition in which NAD+ was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which NAD+ was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -641,7 +658,7 @@ creation_date: 2012-02-27T01:14:00Z
 [Term]
 id: PCO:0000075
 name: NADP+ added
-def: "An experimental condition in which NADP+ was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which NADP+ was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -650,7 +667,7 @@ creation_date: 2012-02-27T01:14:35Z
 [Term]
 id: PCO:0000076
 name: dihydroxyacetone added
-def: "An experimental condition in which dihydroxyacetone was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which dihydroxyacetone was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "DHA added" EXACT []
 is_a: PCO:0000109 ! excess chemical added
@@ -659,8 +676,8 @@ creation_date: 2012-02-27T04:02:57Z
 
 [Term]
 id: PCO:0000077
-name: glycerol sole carbon source
-def: "Experiments were performed in minimal medium where glycerol is the sole carbon source." []
+name: glycerol sole carbon source minimal medium
+def: "Experiments were performed in minimal medium where glycerol is the sole carbon source (e.g. NO addition of glucose/ethanol etc at all)." []
 comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 is_a: PCO:0000054 ! glycerol minimal medium
 created_by: antonialock
@@ -669,7 +686,7 @@ creation_date: 2012-02-27T04:32:45Z
 [Term]
 id: PCO:0000078
 name: hydrogen peroxide added
-def: "An experimental condition in which hydrogen peroxide was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which hydrogen peroxide was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "H2O2 added" EXACT []
 is_a: PCO:0000109 ! excess chemical added
@@ -679,7 +696,7 @@ creation_date: 2012-02-29T03:06:23Z
 [Term]
 id: PCO:0000079
 name: thiabendazole added
-def: "An experimental condition in which thiabendazole was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which thiabendazole was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "TBZ added" EXACT []
 is_a: PCO:0000109 ! excess chemical added
@@ -690,7 +707,9 @@ creation_date: 2012-03-12T02:59:23Z
 id: PCO:0000080
 name: rich medium
 comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+subset: Grouping_terms
 is_a: PCO:0000100 ! medium components
+disjoint_from: PCO:0000013 ! minimal medium
 created_by: antonialock
 creation_date: 2012-03-14T01:33:58Z
 
@@ -706,7 +725,7 @@ creation_date: 2012-03-14T01:35:45Z
 [Term]
 id: PCO:0000082
 name: arginine added
-def: "An experimental condition in which arginine was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which arginine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -724,7 +743,7 @@ creation_date: 2012-03-22T08:23:14Z
 [Term]
 id: PCO:0000084
 name: glutamate added
-def: "An experimental condition in which glutamate was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which glutamate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -733,7 +752,7 @@ creation_date: 2012-03-22T08:28:47Z
 [Term]
 id: PCO:0000085
 name: glutamine added
-def: "An experimental condition in which glutamine was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which glutamine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -742,7 +761,7 @@ creation_date: 2012-03-22T08:29:26Z
 [Term]
 id: PCO:0000086
 name: ornithine added
-def: "An experimental condition in which ornithine was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which ornithine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -751,7 +770,7 @@ creation_date: 2012-03-22T08:29:44Z
 [Term]
 id: PCO:0000087
 name: proline added
-def: "An experimental condition in which proline was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which proline was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -760,9 +779,11 @@ creation_date: 2012-03-22T08:30:19Z
 [Term]
 id: PCO:0000088
 name: 2-OG added
-def: "An experimental condition in which 2-OG was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which 2-OG was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
+synonym: "2-OG present" EXACT []
 synonym: "2-oxoglutarate added" EXACT []
+synonym: "2-oxoglutarate present" EXACT []
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
 creation_date: 2012-03-22T08:30:35Z
@@ -770,7 +791,7 @@ creation_date: 2012-03-22T08:30:35Z
 [Term]
 id: PCO:0000089
 name: Na oleate added
-def: "An experimental condition in which Na oleate was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which Na oleate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "sodium oleate added" EXACT []
 is_a: PCO:0000042 ! fatty acid added
@@ -780,7 +801,7 @@ creation_date: 2012-03-22T08:52:53Z
 [Term]
 id: PCO:0000090
 name: limited nitrogen added
-def: "An experimental condition in which nitrogen was added to the assay buffers in a limiting quantity compared to standard assay buffers." []
+def: "An experimental condition in which nitrogen was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
 is_a: PCO:0000011 ! limited chemical added
 created_by: antonialock
 creation_date: 2012-03-26T11:47:41Z
@@ -788,7 +809,7 @@ creation_date: 2012-03-26T11:47:41Z
 [Term]
 id: PCO:0000091
 name: cisplatin added
-def: "An experimental condition in which cisplatin was added to the assay buffer." []
+def: "An experimental condition in which cisplatin was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -818,6 +839,7 @@ creation_date: 2012-04-23T01:04:46Z
 id: PCO:0000094
 name: sequential growth conditions
 def: "Any set of experimental conditions in which cells are sequentially exposed to different conditions such as temperature, available nutrients, or presence of specific chemicals." []
+subset: Grouping_terms
 is_a: PCO:0000001 ! phenotype condition
 created_by: antonialock
 creation_date: 2012-04-23T03:15:51Z
@@ -869,6 +891,8 @@ id: PCO:0000100
 name: medium components
 def: "Any experimental condition specifying the nutritional composition of the growth medium." []
 comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+subset: Grouping_terms
+synonym: "medium composition" RELATED []
 is_a: PCO:0000009 ! growth medium
 created_by: antonialock
 creation_date: 2012-05-04T07:48:31Z
@@ -877,15 +901,17 @@ creation_date: 2012-05-04T07:48:31Z
 id: PCO:0000101
 name: medium texture
 def: "Any experimental condition specifying the physical texture of the growth medium." []
+subset: Grouping_terms
 is_a: PCO:0000009 ! growth medium
 created_by: antonialock
 creation_date: 2012-05-04T07:51:30Z
 
 [Term]
 id: PCO:0000102
-name: solid agar
-def: "Cells were grown on solid agar." []
+name: solid agar plates
+def: "Cells were grown on solid agar plates." []
 is_a: PCO:0000101 ! medium texture
+disjoint_from: PCO:0000103 ! liquid culture
 created_by: antonialock
 creation_date: 2012-05-04T07:53:03Z
 
@@ -909,7 +935,7 @@ creation_date: 2012-05-11T02:53:00Z
 [Term]
 id: PCO:0000105
 name: limited thiamine added
-def: "An experimental condition in which thiamine was added to the assay buffers in a limiting quantity compared to standard assay buffers." [PMID:12653111]
+def: "An experimental condition in which thiamine was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." [PMID:12653111]
 xref: PMID:12653111
 is_a: PCO:0000011 ! limited chemical added
 created_by: antonialock
@@ -918,7 +944,7 @@ creation_date: 2012-05-11T03:00:02Z
 [Term]
 id: PCO:0000106
 name: thiamine added
-def: "An experimental condition in which thiamine was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which thiamine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -927,7 +953,7 @@ creation_date: 2012-05-11T03:02:06Z
 [Term]
 id: PCO:0000107
 name: aminopyrimidine added
-def: "An experimental condition in which aminopyrimidine was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which aminopyrimidine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -936,7 +962,7 @@ creation_date: 2012-05-11T03:02:21Z
 [Term]
 id: PCO:0000108
 name: thiazole added
-def: "An experimental condition in which thiazole was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which thiazole was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -945,8 +971,9 @@ creation_date: 2012-05-11T03:03:12Z
 [Term]
 id: PCO:0000109
 name: excess chemical added
-def: "An experimental condition in which a chemical was added to the assay buffers in excess compared to standard assay buffers." []
+def: "An experimental condition in which a chemical was added to the medium or assay buffers in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
+subset: Grouping_terms
 is_a: PCO:0000059 ! chemical added
 created_by: antonialock
 creation_date: 2012-05-11T03:03:45Z
@@ -955,6 +982,7 @@ creation_date: 2012-05-11T03:03:45Z
 id: PCO:0000110
 name: nitrogen starvation and recovery
 def: "Cells are initially starved of nitrogen in minimal medium -N. This medium is then replaced with nitrogen containing rich medium and cells are allowed to resume growth." []
+subset: Grouping_terms
 is_a: PCO:0000094 ! sequential growth conditions
 created_by: antonialock
 creation_date: 2012-05-11T03:31:01Z
@@ -962,7 +990,7 @@ creation_date: 2012-05-11T03:31:01Z
 [Term]
 id: PCO:0000111
 name: limited myo-inositol added
-def: "An experimental condition in which myo-inositol was added to the assay buffers in a limiting quantity compared to standard assay buffers." []
+def: "An experimental condition in which myo-inositol was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
 comment: Mating and sporulation is very inefficient in media containing 1 mg/L of myo-inositol, compared to 10 mg/L which is the most efficient myo-inositol concentration observed for mating and sporulation.
 synonym: "limited inositol added" RELATED []
 xref: PMID:9560432
@@ -973,7 +1001,7 @@ creation_date: 2012-05-17T12:11:53Z
 [Term]
 id: PCO:0000112
 name: limited phosphate added
-def: "An experimental condition in which phosphate was added to the assay buffers in a limiting quantity compared to standard assay buffers." []
+def: "An experimental condition in which phosphate was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
 is_a: PCO:0000011 ! limited chemical added
 created_by: antonialock
 creation_date: 2012-05-18T09:21:48Z
@@ -981,7 +1009,7 @@ creation_date: 2012-05-18T09:21:48Z
 [Term]
 id: PCO:0000113
 name: calcofluor white added
-def: "An experimental condition in which calcofluor white was added to the assay buffer." []
+def: "An experimental condition in which calcofluor white was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
 creation_date: 2012-05-18T05:06:48Z
@@ -989,7 +1017,7 @@ creation_date: 2012-05-18T05:06:48Z
 [Term]
 id: PCO:0000114
 name: cyclosporin A added
-def: "An experimental condition in which cyclosporin A was added to the assay buffer." []
+def: "An experimental condition in which cyclosporin A was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
 creation_date: 2012-05-22T01:47:47Z
@@ -997,7 +1025,7 @@ creation_date: 2012-05-22T01:47:47Z
 [Term]
 id: PCO:0000115
 name: guanosine triphosphate added
-def: "An experimental condition in which guanosine triphosphate was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which guanosine triphosphate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "GTP added" EXACT []
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
@@ -1007,6 +1035,7 @@ creation_date: 2012-05-22T03:25:08Z
 id: PCO:0000116
 name: heat shock
 def: "Cells are initially grown at a temperature, which is followed by a heat shock at an elevated temperature. The temperature is then again lowered." []
+subset: Grouping_terms
 is_a: PCO:0000094 ! sequential growth conditions
 created_by: antonialock
 creation_date: 2012-05-23T11:01:03Z
@@ -1022,7 +1051,7 @@ creation_date: 2012-05-23T11:07:16Z
 [Term]
 id: PCO:0000118
 name: glutathione added
-def: "An experimental condition in which glutathione was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which glutathione was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "GSH added" EXACT []
 synonym: "L-gamma-glutamyl-L-cysteinylglycine added" EXACT []
 is_a: PCO:0000109 ! excess chemical added
@@ -1032,7 +1061,7 @@ creation_date: 2012-05-30T05:18:17Z
 [Term]
 id: PCO:0000119
 name: N-acetyl-L-cysteine added
-def: "An experimental condition in which N-acetyl-L-cysteine was added to the assay buffer in excess compared to standard assay buffers." []
+def: "An experimental condition in which N-acetyl-L-cysteine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "acetylcysteine added" EXACT []
 synonym: "NAC added" EXACT []
 is_a: PCO:0000109 ! excess chemical added
@@ -1042,7 +1071,8 @@ creation_date: 2012-05-30T05:18:44Z
 [Term]
 id: PCO:0000120
 name: chemical excluded
-def: "An experimental condition in which a chemical which is normally a component of a medium is completely excluded." []
+def: "An experimental condition in which a chemical, which is normally a component of a medium, is completely excluded." []
+subset: Grouping_terms
 is_a: PCO:0000059 ! chemical added
 created_by: antonialock
 creation_date: 2012-05-30T09:51:14Z
