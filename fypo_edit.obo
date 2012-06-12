@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:06:2012 17:17
+date: 11:06:2012 14:49
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -12545,7 +12545,6 @@ name: abnormal L-glutamate import
 def: "A cellular process phenotype in which the import of L-glutamate into the cell is abnormal." [PomBase:mah]
 synonym: "abnormal L-glutamate import into cell" EXACT [PomBase:al]
 synonym: "abnormal L-glutamate uptake" EXACT [GO:0051938]
-is_a: FYPO:0000149 ! transport phenotype
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051938
@@ -12573,7 +12572,6 @@ name: abnormal L-glutamine import
 def: "A cellular process phenotype in which the import of L-glutamine into the cell is abnormal." [PomBase:mah]
 synonym: "abnormal L-glutamine import into cell" EXACT [PomBase:al]
 synonym: "abnormal L-glutamine uptake" EXACT [GO:0036229]
-is_a: FYPO:0000149 ! transport phenotype
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0036299
@@ -12601,7 +12599,6 @@ name: abnormal glycine import
 def: "A cellular process phenotype in which the import of glycine into the cell is abnormal." [PomBase:mah]
 synonym: "abnormal glycine import into cell" EXACT [PomBase:al]
 synonym: "abnormal glycine uptake" EXACT [GO:0036233]
-is_a: FYPO:0000149 ! transport phenotype
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0036233
@@ -12629,7 +12626,6 @@ name: abnormal L-threonine import
 def: "A cellular process phenotype in which the import of L-threonine into the cell is abnormal." [PomBase:mah]
 synonym: "abnormal L-threonine import into cell" EXACT [PomBase:al]
 synonym: "abnormal L-threonine uptake" EXACT [GO:0036231]
-is_a: FYPO:0000149 ! transport phenotype
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0036231
@@ -12657,7 +12653,6 @@ name: abnormal L-tyrosine import
 def: "A cellular process phenotype in which the import of L-tyrosine into the cell is abnormal." [PomBase:mah]
 synonym: "abnormal L-tyrosine import into cell" EXACT [PomBase:al]
 synonym: "abnormal L-tyrosine uptake" EXACT [GO:0036232]
-is_a: FYPO:0000149 ! transport phenotype
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0036232
@@ -13511,6 +13506,45 @@ intersection_of: towards SO:0000375
 created_by: midori
 creation_date: 2012-06-08T16:47:19Z
 
+[Term]
+id: FYPO:0001139
+name: abnormal leucine import
+def: "A cellular process phenotype in which the import of leucine into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal leucine import into cell" EXACT [PomBase:al]
+synonym: "abnormal leucine uptake" EXACT [GO:0036233]
+is_a: FYPO:0001057 ! abnormal amino acid import
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036233
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-06-11T14:24:42Z
+
+[Term]
+id: FYPO:0001140
+name: decreased leucine import
+def: "A cellular process phenotype in which the import of leucine into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased leucine import into cell" EXACT [PomBase:al]
+synonym: "decreased leucine uptake" EXACT [GO:0036233]
+synonym: "reduced leucine import" EXACT [PomBase:mah]
+is_a: FYPO:0001058 ! decreased amino acid import
+is_a: FYPO:0001139 ! abnormal leucine import
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0036233
+created_by: midori
+creation_date: 2012-06-11T14:26:26Z
+
+[Term]
+id: FYPO:0001141
+name: abolished transcriptional response to pheromone
+def: "A conjugation phenotype in which regulation of transcription in response to mating pheromone is abolished." [PomBase:mah]
+synonym: "abolished regulation of transcription from RNA polymerase II promoter by pheromones" EXACT [GO:0046019, PomBase:mah]
+is_a: FYPO:0000984 ! abnormal transcriptional response to pheromone
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0046019
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-06-11T14:48:00Z
+
 [Typedef]
 id: comprises_cells_with_phenotype
 name: comprises cells with phenotype
@@ -13539,7 +13573,7 @@ id: has_output
 name: has_output
 def: "p has_output c iff c participates_in p at the end of p and c is in some way changed by p or created by p." [GOC:curators]
 xref: RO:0002234
-is_a: has_participant
+is_a: has_participant ! has_participant
 
 [Typedef]
 id: has_part
