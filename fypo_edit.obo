@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 11:06:2012 14:49
+date: 14:06:2012 17:00
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -11325,6 +11325,7 @@ creation_date: 2012-04-12T12:28:02Z
 id: FYPO:0000960
 name: normal cellular response to ethanol
 def: "A cellular response phenotype in which the cellular response to ethanol is normal." [PomBase:mah]
+synonym: "normal cellular response to ethyl alcohol" EXACT [PomBase:mah]
 is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0071361
@@ -11824,9 +11825,9 @@ id: FYPO:0001001
 name: abnormal cell cycle arrest in mitotic G2 phase during nitrogen starvation
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G2 phase, instead of the normal G1 phase, when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
 synonym: "mitotic G2 phase arrest during nitrogen starvation" EXACT [PomBase:mah]
-is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
 is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
 is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+is_a: FYPO:0001151 ! cell cycle arrest in mitotic G2 phase during starvation
 intersection_of: PATO:0001561
 intersection_of: happens_during GO:0000085
 intersection_of: happens_during GO:0006995
@@ -12139,8 +12140,8 @@ name: normal cell cycle arrest in mitotic G2 phase during glucose starvation
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested normally in G2 phase when the cell is subject to glucose starvation." [PomBase:al, PomBase:mah]
 comment: Note that this term should be used only for cell cycle arrest that occurs in mutants. For phenotypes affecting the G1 cell cycle that normally occurs in response to mating pheromone, see 'abnormal cell cycle arrest in response to pheromone' (FYPO:0000530) and its child terms.
 synonym: "mitotic G1 phase arrest during glucose starvation" EXACT [PomBase:mah]
-is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
 is_a: FYPO:0001025 ! normally arrested cell cycle progression
+is_a: FYPO:0001151 ! cell cycle arrest in mitotic G2 phase during starvation
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0036227
 intersection_of: qualifier PATO:0000461
@@ -12757,6 +12758,7 @@ creation_date: 2012-05-31T16:05:26Z
 id: FYPO:0001076
 name: normal level of substance in cell
 def: "A cell phenotype in which the amount of a specific substance measured in a cell is normal." [PomBase:mah]
+is_a: FYPO:0000002 ! cell phenotype
 is_a: FYPO:0000257 ! normal phenotype
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
@@ -13514,7 +13516,7 @@ synonym: "abnormal leucine import into cell" EXACT [PomBase:al]
 synonym: "abnormal leucine uptake" EXACT [GO:0036233]
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0036233
+intersection_of: inheres_in GO:0060356
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2012-06-11T14:24:42Z
@@ -13529,7 +13531,7 @@ synonym: "reduced leucine import" EXACT [PomBase:mah]
 is_a: FYPO:0001058 ! decreased amino acid import
 is_a: FYPO:0001139 ! abnormal leucine import
 intersection_of: PATO:0002052
-intersection_of: inheres_in GO:0036233
+intersection_of: inheres_in GO:0060356
 created_by: midori
 creation_date: 2012-06-11T14:26:26Z
 
@@ -13539,11 +13541,162 @@ name: abolished transcriptional response to pheromone
 def: "A conjugation phenotype in which regulation of transcription in response to mating pheromone is abolished." [PomBase:mah]
 synonym: "abolished regulation of transcription from RNA polymerase II promoter by pheromones" EXACT [GO:0046019, PomBase:mah]
 is_a: FYPO:0000984 ! abnormal transcriptional response to pheromone
-intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0046019
-intersection_of: qualifier PATO:0000460
+intersection_of: towards GO:0046019
+intersection_of: PATO:0001558
 created_by: midori
 creation_date: 2012-06-11T14:48:00Z
+
+[Term]
+id: FYPO:0001142
+name: normal Man8GlcNAc level
+def: "A cell phenotype in which the amount of Man8GlcNAc2 measured in a cell is normal. Man8GlcNAc2 is any N-glycan that consists of a branched ten-membered mannooligosaccharide containing eight D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:64048, CHEBI:64052, PomBase:mah]
+synonym: "normal cellular Man8GlcNAc level" EXACT [PomBase:al]
+synonym: "normal Man8GlcNAc2 level" EXACT [PomBase:mah]
+is_a: FYPO:0001077 ! normal polysaccharide level
+created_by: midori
+creation_date: 2012-06-14T15:52:46Z
+
+[Term]
+id: FYPO:0001143
+name: normal Man9GlcNAc level
+def: "A cell phenotype in which the amount of Man9GlcNAc2 measured in a cell is normal. Man9GlcNAc2 is any N-glycan that consists of a branched undecasaccharide consisting of nine D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:59579, PomBase:mah]
+synonym: "normal cellular Man9GlcNAc level" EXACT [PomBase:al]
+synonym: "normal Man9GlcNAc2 level" EXACT [PomBase:mah]
+is_a: FYPO:0001077 ! normal polysaccharide level
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:59579
+created_by: midori
+creation_date: 2012-06-14T15:55:35Z
+
+[Term]
+id: FYPO:0001144
+name: decreased Man8GlcNAc level
+def: "A cell phenotype in which the amount of Man8GlcNAc2 measured in a cell is lower than normal. Man8GlcNAc2 is any N-glycan that consists of a branched ten-membered mannooligosaccharide containing eight D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:64048, CHEBI:64052, PomBase:mah]
+synonym: "decreased cellular Man8GlcNAc level" EXACT [PomBase:al]
+synonym: "decreased Man8GlcNAc2 level" EXACT [PomBase:mah]
+synonym: "reduced Man8GlcNAc level" EXACT [PomBase:mah]
+is_a: FYPO:0001080 ! decreased polysaccharide level
+created_by: midori
+creation_date: 2012-06-14T15:59:43Z
+
+[Term]
+id: FYPO:0001145
+name: increased Man9GlcNAc level
+def: "A cell phenotype in which the amount of Man9GlcNAc2 measured in a cell is higher than normal. Man9GlcNAc2 is any N-glycan that consists of a branched undecasaccharide consisting of nine D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:59579, PomBase:mah]
+synonym: "increased cellular Man9GlcNAc level" EXACT [PomBase:al]
+synonym: "increased Man9GlcNAc2 level" EXACT [PomBase:mah]
+is_a: FYPO:0001083 ! increased polysaccharide level
+intersection_of: qualifier PATO:0001162
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:59579
+created_by: midori
+creation_date: 2012-06-14T16:00:30Z
+
+[Term]
+id: FYPO:0001146
+name: decreased misfolded glycoprotein degradation
+def: "A cellular process phenotype in which the occurrence of misfolded glycoprotein degradation is decreased." [PomBase:mah]
+synonym: "decreased misfolded glycoprotein catabolic process" EXACT [GO:0030163, PomBase:mah]
+synonym: "decreased misfolded glycoprotein catabolism" EXACT [PomBase:mah]
+synonym: "reduced protein degradation" EXACT [PomBase:mah]
+is_a: FYPO:0000845 ! abnormal protein degradation
+created_by: midori
+creation_date: 2012-06-14T16:04:32Z
+
+[Term]
+id: FYPO:0001147
+name: normal mating efficiency
+def: "A biological process phenotype in which the observed mating efficiency is normal (i.e. the same as in wild-type cells)." [PomBase:al, PomBase:mah]
+comment: Note that mating efficiency is often measured by counting zygotes plus asci, sometimes also including spores, so a change in measured mating efficiency may reflect a change in conjugation frequency (see FYPO:0000031 and its descendants), a change in sporulation (see FYPO:0000121 and its descendants), or both. For this reason, this term is not a child of 'mating phenotype' (FYPO:0000031).
+is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0000300 ! biological process phenotype
+created_by: midori
+creation_date: 2012-06-14T16:21:22Z
+
+[Term]
+id: FYPO:0001148
+name: normal cellular response to amiloride
+def: "A cellular response phenotype in which the cellular response to amiloride is normal." [PomBase:mah]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+created_by: midori
+creation_date: 2012-06-14T16:30:50Z
+
+[Term]
+id: FYPO:0001149
+name: normal cellular response to methylamine
+def: "A cellular response phenotype in which the cellular response to methylamine is normal." [PomBase:mah]
+is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+created_by: midori
+creation_date: 2012-06-14T16:33:06Z
+
+[Term]
+id: FYPO:0001150
+name: sensitive to methylamine
+def: "A phenotype in which cells show increased sensitivity to methylamine." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:16830
+created_by: midori
+creation_date: 2012-06-14T16:34:29Z
+
+[Term]
+id: FYPO:0001151
+name: cell cycle arrest in mitotic G2 phase during starvation
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G2 phase when the cell is subject to starvation for one or more nutrients." [PMID:19366728, PomBase:mah]
+synonym: "mitotic G2 phase arrest during starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+intersection_of: PATO:0001561
+intersection_of: happens_during GO:0000085
+intersection_of: happens_during GO:0009267
+intersection_of: towards GO:0071850
+created_by: midori
+creation_date: 2012-06-14T16:45:50Z
+
+[Term]
+id: FYPO:0001152
+name: decreased RNA level during nitrogen starvation
+def: "A cell phenotype in which the amount of RNA measured in a cell  when the cell is subject to nitrogen starvation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased RNA accumulation during nitrogen starvation" RELATED [PomBase:mah]
+synonym: "reduced RNA level during nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000826 ! decreased RNA level
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-06-14T16:52:51Z
+
+[Term]
+id: FYPO:0001153
+name: normal cellular methylamine level
+def: "A cell phenotype in which the amount of methylamine measured in a cell is normal." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0001076 ! normal level of substance in cell
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:16830
+created_by: midori
+creation_date: 2012-06-14T16:54:23Z
+
+[Term]
+id: FYPO:0001154
+name: increased cellular methylamine level
+def: "A cell phenotype in which the amount of methylamine measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased methylamine accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0000990 ! increased level of substance in cell
+is_a: FYPO:0001015 ! altered cellular phosphatidylinositol-4-phosphate level
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:16830
+created_by: midori
+creation_date: 2012-06-14T16:55:28Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
