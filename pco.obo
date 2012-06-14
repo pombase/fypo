@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 14:06:2012 09:32
+date: 14:06:2012 11:39
 saved-by: antonialock
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Grouping_terms "The grouping terms are high level terms not used for direct annotation but for grouping purposes in the ontology."
@@ -96,7 +96,7 @@ id: PCO:0000011
 name: limited chemical added
 def: "An experimental condition in which a chemical was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
 subset: Grouping_terms
-is_a: PCO:0000059 ! chemical added
+is_a: PCO:0000059 ! chemical added or excluded
 created_by: antonialock
 creation_date: 2012-02-07T02:23:26Z
 
@@ -104,7 +104,7 @@ creation_date: 2012-02-07T02:23:26Z
 id: PCO:0000012
 name: glucose rich medium
 def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is high (eg around 2-3%)." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "YE" BROAD []
 synonym: "YES" EXACT []
 is_a: PCO:0000080 ! rich medium
@@ -115,7 +115,7 @@ creation_date: 2012-02-07T12:39:25Z
 id: PCO:0000013
 name: minimal medium
 def: "Experiments were performed in medium containing a carbon source, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 subset: Grouping_terms
 synonym: "phenotype condition" RELATED []
 is_a: PCO:0000100 ! medium components
@@ -124,11 +124,11 @@ creation_date: 2012-02-07T12:41:33Z
 
 [Term]
 id: PCO:0000014
-name: glucose minimal medium
+name: normal glucose minimal medium
 def: "Experiments were performed in medium containing glucose (typically <2% w/v), salts and water." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "EMM" EXACT []
-is_a: PCO:0000013 ! minimal medium
+is_a: PCO:0000126 ! glucose minimal medium
 created_by: antonialock
 creation_date: 2012-02-07T12:50:21Z
 
@@ -136,7 +136,7 @@ creation_date: 2012-02-07T12:50:21Z
 id: PCO:0000015
 name: sporulation medium
 def: "Experiments were performed in medium promoting mating and sporulation." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "malt extract medium" EXACT []
 is_a: PCO:0000013 ! minimal medium
 created_by: antonialock
@@ -145,9 +145,9 @@ creation_date: 2012-02-07T01:35:35Z
 [Term]
 id: PCO:0000016
 name: high glucose minimal medium
-def: "Experiments were performed in minimal medium containing a high concentration of glucose as carbon source." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
-is_a: PCO:0000013 ! minimal medium
+def: "Experiments were performed in minimal medium containing a high concentration of glucose (~5-8% typically) as carbon source, salts and water." []
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+is_a: PCO:0000126 ! glucose minimal medium
 created_by: antonialock
 creation_date: 2012-02-07T12:51:06Z
 
@@ -464,7 +464,7 @@ creation_date: 2012-02-07T03:17:47Z
 id: PCO:0000054
 name: glycerol minimal medium
 def: "Experiments were performed in minimal medium where glycerol is the main carbon source." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 subset: Grouping_terms
 is_a: PCO:0000013 ! minimal medium
 created_by: antonialock
@@ -510,7 +510,7 @@ creation_date: 2012-02-07T05:25:01Z
 
 [Term]
 id: PCO:0000059
-name: chemical added
+name: chemical added or excluded
 alt_id: PCO:0000017
 alt_id: PCO:0000019
 alt_id: PCO:0000020
@@ -629,9 +629,9 @@ creation_date: 2012-02-19T10:45:53Z
 
 [Term]
 id: PCO:0000072
-name: glycerol carbon source + glucose minimal medium
+name: glycerol main carbon source + minute amounts of glucose minimal medium
 def: "Experiments were performed in minimal medium where glycerol is the main carbon source, but the medium also contained trace amounts of glucose (<0.1%)." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 is_a: PCO:0000054 ! glycerol minimal medium
 created_by: antonialock
 creation_date: 2012-02-27T12:12:17Z
@@ -640,7 +640,7 @@ creation_date: 2012-02-27T12:12:17Z
 id: PCO:0000073
 name: DHA minimal medium
 def: "Experiments were performed in minimal medium where DHA (dihydroxyacetone) is the main carbon source." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "dihydroxyactone minimal medium" EXACT []
 is_a: PCO:0000013 ! minimal medium
 created_by: antonialock
@@ -678,7 +678,7 @@ creation_date: 2012-02-27T04:02:57Z
 id: PCO:0000077
 name: glycerol sole carbon source minimal medium
 def: "Experiments were performed in minimal medium where glycerol is the sole carbon source (e.g. NO addition of glucose/ethanol etc at all)." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 is_a: PCO:0000054 ! glycerol minimal medium
 created_by: antonialock
 creation_date: 2012-02-27T04:32:45Z
@@ -706,7 +706,7 @@ creation_date: 2012-03-12T02:59:23Z
 [Term]
 id: PCO:0000080
 name: rich medium
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 subset: Grouping_terms
 is_a: PCO:0000100 ! medium components
 disjoint_from: PCO:0000013 ! minimal medium
@@ -717,7 +717,7 @@ creation_date: 2012-03-14T01:33:58Z
 id: PCO:0000081
 name: low glucose rich medium
 def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is low (eg around 0.1%)." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 is_a: PCO:0000080 ! rich medium
 created_by: antonialock
 creation_date: 2012-03-14T01:35:45Z
@@ -735,7 +735,7 @@ creation_date: 2012-03-22T08:21:12Z
 id: PCO:0000083
 name: glycerol rich medium
 def: "Experiments were performed in rich medium containing yeast extract and other components. The carbon source is glycerol, typically around 2%." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 is_a: PCO:0000080 ! rich medium
 created_by: antonialock
 creation_date: 2012-03-22T08:23:14Z
@@ -926,9 +926,9 @@ creation_date: 2012-05-04T07:53:10Z
 [Term]
 id: PCO:0000104
 name: low glucose minimal medium
-def: "Experiments were performed in minimal medium containing a low concentration of glucose (~0.5%)  as carbon source." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
-is_a: PCO:0000013 ! minimal medium
+def: "Experiments were performed in minimal medium containing a low concentration of glucose (~0.5%)  as carbon source, salts and water." []
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+is_a: PCO:0000126 ! glucose minimal medium
 created_by: antonialock
 creation_date: 2012-05-11T02:53:00Z
 
@@ -974,7 +974,7 @@ name: excess chemical added
 def: "An experimental condition in which a chemical was added to the medium or assay buffers in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 subset: Grouping_terms
-is_a: PCO:0000059 ! chemical added
+is_a: PCO:0000059 ! chemical added or excluded
 created_by: antonialock
 creation_date: 2012-05-11T03:03:45Z
 
@@ -1073,14 +1073,15 @@ id: PCO:0000120
 name: chemical excluded
 def: "An experimental condition in which a chemical, which is normally a component of a medium, is completely excluded." []
 subset: Grouping_terms
-is_a: PCO:0000059 ! chemical added
+is_a: PCO:0000059 ! chemical added or excluded
 created_by: antonialock
 creation_date: 2012-05-30T09:51:14Z
 
 [Term]
 id: PCO:0000121
 name: methylamine added
-def: "An experimental condition in which methylamine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
+def: "An experimental condition in which methylamine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PMID:10467002]
+comment: Methylamine is a nitrogen analogue that Schizosaccharomyces pombe cannot utilize as a nitrogen source.
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
 creation_date: 2012-06-13T16:49:55Z
@@ -1119,6 +1120,27 @@ def: "Cells were grown to exponential phase." []
 is_a: PCO:0000122 ! growth timing
 created_by: antonialock
 creation_date: 2012-06-14T09:31:28Z
+
+[Term]
+id: PCO:0000126
+name: glucose minimal medium
+def: "Experiments were performed in medium containing glucose, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+subset: Grouping_terms
+is_a: PCO:0000013 ! minimal medium
+created_by: antonialock
+creation_date: 2012-06-14T11:28:33Z
+
+[Term]
+id: PCO:0000127
+name: nitrogen excluded
+def: "Nitrogen was completely excluded from the experimental medium/buffer." []
+comment: Note that the medium type should also be specified, for instance 'glucose minimal medium'.
+synonym: "-N" EXACT []
+synonym: "nitrogen free" EXACT []
+is_a: PCO:0000120 ! chemical excluded
+created_by: antonialock
+creation_date: 2012-06-14T11:36:47Z
 
 [Typedef]
 id: part_of
