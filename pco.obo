@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 14:06:2012 20:13
+date: 14:06:2012 20:43
 saved-by: antonialock
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Grouping_terms "The grouping terms are high level terms not used for direct annotation but for grouping purposes in the ontology."
@@ -102,12 +102,12 @@ creation_date: 2012-02-07T02:23:26Z
 
 [Term]
 id: PCO:0000012
-name: glucose rich medium
-def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is high (eg around 2-3%)." []
+name: normal glucose rich medium
+def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is typically around 2-3%." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "YE" BROAD []
 synonym: "YES" EXACT []
-is_a: PCO:0000080 ! rich medium
+is_a: PCO:0000137 ! glucose rich medium
 created_by: antonialock
 creation_date: 2012-02-07T12:39:25Z
 
@@ -629,7 +629,7 @@ creation_date: 2012-02-19T10:45:53Z
 
 [Term]
 id: PCO:0000072
-name: glycerol main carbon source + minute amounts of glucose minimal medium
+name: glycerol main carbon source + low amount of glucose minimal medium
 def: "Experiments were performed in minimal medium where glycerol is the main carbon source, but the medium also contained trace amounts of glucose (<0.1%)." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 is_a: PCO:0000054 ! glycerol minimal medium
@@ -716,9 +716,9 @@ creation_date: 2012-03-14T01:33:58Z
 [Term]
 id: PCO:0000081
 name: low glucose rich medium
-def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is low (eg around 0.1%)." []
+def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is very low (eg around 0.1%)." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
-is_a: PCO:0000080 ! rich medium
+is_a: PCO:0000137 ! glucose rich medium
 created_by: antonialock
 creation_date: 2012-03-14T01:35:45Z
 
@@ -733,10 +733,10 @@ creation_date: 2012-03-22T08:21:12Z
 
 [Term]
 id: PCO:0000083
-name: glycerol rich medium
-def: "Experiments were performed in rich medium containing yeast extract and other components. The carbon source is glycerol, typically around 2%." []
+name: glycerol sole carbon source rich medium
+def: "Experiments were performed in rich medium containing glycerol as the sole carbon source, yeast extract and other components. The concentration of glycerol is typically around 2%." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
-is_a: PCO:0000080 ! rich medium
+is_a: PCO:0000138 ! glycerol rich medium
 created_by: antonialock
 creation_date: 2012-03-22T08:23:14Z
 
@@ -1186,6 +1186,81 @@ subset: Grouping_terms
 is_a: PCO:0000001 ! phenotype condition
 created_by: antonialock
 creation_date: 2012-06-14T16:41:56Z
+
+[Term]
+id: PCO:0000133
+name: oxygen level
+def: "Describes experimental conditions in which the amount of oxygen available during growth or the assay was controlled." []
+subset: Grouping_terms
+is_a: PCO:0000132 ! experimental environment
+created_by: antonialock
+creation_date: 2012-06-14T20:21:38Z
+
+[Term]
+id: PCO:0000134
+name: anaerobic environment
+def: "The assay, or growth of cells, was conducted under strict anaerobic conditions." []
+synonym: "- O" EXACT []
+synonym: "- oxygen" EXACT []
+synonym: "-O" EXACT []
+synonym: "-oxygen" EXACT []
+synonym: "anaerobiosis" EXACT []
+synonym: "minus oxygen" EXACT []
+is_a: PCO:0000133 ! oxygen level
+created_by: antonialock
+creation_date: 2012-06-14T20:22:49Z
+
+[Term]
+id: PCO:0000135
+name: semi-aerobic environment
+def: "The assay, or growth of cells, was conducted under semi-anaerobic conditions, where the level of oxygen is lower than normal." []
+synonym: "limited O atoms" RELATED []
+synonym: "limited oxygen" RELATED []
+synonym: "reduced oxygen level" RELATED []
+synonym: "semi aerobic environment" EXACT []
+synonym: "semi-anaerobic environment" EXACT []
+synonym: "semiaerobic environment" RELATED []
+synonym: "semianaerobic environment" RELATED []
+is_a: PCO:0000133 ! oxygen level
+created_by: antonialock
+creation_date: 2012-06-14T20:26:46Z
+
+[Term]
+id: PCO:0000136
+name: raffinose rich medium
+def: "Experiments were performed in rich medium containing raffinose as the carbon source, yeast extract and other components. The concentration of raffinose is typically around 2%." []
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+is_a: PCO:0000080 ! rich medium
+created_by: antonialock
+creation_date: 2012-06-14T20:32:52Z
+
+[Term]
+id: PCO:0000137
+name: glucose rich medium
+def: "Experiments were performed in rich medium  containing glucose as the sole carbon source, yeast extract and other components." []
+subset: Grouping_terms
+is_a: PCO:0000080 ! rich medium
+created_by: antonialock
+creation_date: 2012-06-14T20:35:20Z
+
+[Term]
+id: PCO:0000138
+name: glycerol rich medium
+def: "Experiments were performed in rich medium containing glycerol as the main carbon source, yeast extract and other components." []
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+is_a: PCO:0000080 ! rich medium
+created_by: antonialock
+creation_date: 2012-06-14T20:38:23Z
+
+[Term]
+id: PCO:0000139
+name: glycerol + ethanol rich medium
+def: "Experiments were performed in rich medium containing glycerol and ethanol as the carbon sources, yeast extract and other components. The concentration of glycerol is typically around 2-3%, whereas the concentration of ethanol is around 1%." []
+comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+synonym: "glycerol and ethanol rich medium" EXACT []
+is_a: PCO:0000138 ! glycerol rich medium
+created_by: antonialock
+creation_date: 2012-06-14T20:39:24Z
 
 [Typedef]
 id: part_of
