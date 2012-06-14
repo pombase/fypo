@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 14:06:2012 15:23
+date: 14:06:2012 16:50
 saved-by: antonialock
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Grouping_terms "The grouping terms are high level terms not used for direct annotation but for grouping purposes in the ontology."
@@ -18,7 +18,7 @@ id: PCO:0000002
 name: temperature
 def: "Any experimental condition specifying the temperature at which the experiment was performed." []
 subset: Grouping_terms
-is_a: PCO:0000001 ! phenotype condition
+is_a: PCO:0000132 ! experimental environment
 created_by: antonialock
 creation_date: 2012-02-07T12:00:23Z
 
@@ -33,7 +33,7 @@ creation_date: 2012-02-07T12:23:02Z
 [Term]
 id: PCO:0000004
 name: high temperature
-def: "The experiment was performed at a temperature exceeding 32 degrees Celsius." []
+def: "The experiment was performed, or cells were grown, at a temperature exceeding 32 degrees Celsius." []
 is_a: PCO:0000002 ! temperature
 created_by: antonialock
 creation_date: 2012-02-07T12:17:29Z
@@ -41,7 +41,7 @@ creation_date: 2012-02-07T12:17:29Z
 [Term]
 id: PCO:0000005
 name: normal temperature
-def: "The experiment was performed at a temperature within the range 25-32 degrees Celsius." []
+def: "The experiment was performed, or cells were grown, at a temperature within the range 25-32 degrees Celsius." []
 is_a: PCO:0000002 ! temperature
 disjoint_from: PCO:0000004 ! high temperature
 disjoint_from: PCO:0000006 ! low temperature
@@ -51,7 +51,7 @@ creation_date: 2012-02-07T12:17:29Z
 [Term]
 id: PCO:0000006
 name: low temperature
-def: "The experiment was performed at a temperature lower than 25 degrees Celsius." []
+def: "The experiment was performed, or cells were grown, at a temperature lower than 25 degrees Celsius." []
 is_a: PCO:0000002 ! temperature
 disjoint_from: PCO:0000004 ! high temperature
 created_by: antonialock
@@ -75,7 +75,7 @@ creation_date: 2012-02-07T12:23:45Z
 
 [Term]
 id: PCO:0000009
-name: growth medium
+name: growth medium 
 def: "Any experimental condition specifying the type of growth medium." []
 subset: Grouping_terms
 is_a: PCO:0000001 ! phenotype condition
@@ -893,7 +893,7 @@ def: "Any experimental condition specifying the nutritional composition of the g
 comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 subset: Grouping_terms
 synonym: "medium composition" RELATED []
-is_a: PCO:0000009 ! growth medium
+is_a: PCO:0000009 ! growth medium 
 created_by: antonialock
 creation_date: 2012-05-04T07:48:31Z
 
@@ -902,7 +902,7 @@ id: PCO:0000101
 name: medium texture
 def: "Any experimental condition specifying the physical texture of the growth medium." []
 subset: Grouping_terms
-is_a: PCO:0000009 ! growth medium
+is_a: PCO:0000009 ! growth medium 
 created_by: antonialock
 creation_date: 2012-05-04T07:51:30Z
 
@@ -1144,26 +1144,27 @@ creation_date: 2012-06-14T11:36:47Z
 
 [Term]
 id: PCO:0000128
-name: medium pH
-def: "Any experimental condition where the pH of the medium is significantly different than the standard pH of ~5.6." [PMID:10467002]
+name: pH
+def: "Any experimental condition where the pH of the medium or assay buffer is significantly different than the standard pombe growth medium with a pH of ~5.6." [PMID:10467002]
 subset: Grouping_terms
-is_a: PCO:0000009 ! growth medium
+is_a: PCO:0000001 ! phenotype condition
+is_a: PCO:0000132 ! experimental environment
 created_by: antonialock
 creation_date: 2012-06-14T12:02:27Z
 
 [Term]
 id: PCO:0000129
 name: high pH
-def: "Any experimental condition where the pH of the medium is significantly higher than the standard pH of ~5.6." []
+def: "Any experimental condition where the pH of the medium or assay buffer is higher than the standard pombe growth medium of pH of ~5.6." [PMID:10467002]
 subset: Grouping_terms
-is_a: PCO:0000128 ! medium pH
+is_a: PCO:0000128 ! pH
 created_by: antonialock
 creation_date: 2012-06-14T12:04:38Z
 
 [Term]
 id: PCO:0000130
 name: pH 6.8
-def: "Cells were grown in a medium with pH 6.8. Standard Schizosaccharomyces pombe medium has pH 5.6 and this medium is therefore much less acidic." [PMID:10467002]
+def: "Cells were grown in a medium or experiments were performed in a buffer with pH 6.8. Standard Schizosaccharomyces pombe growth medium has pH 5.6 and this medium/buffer is therefore much less acidic." [PMID:10467002]
 is_a: PCO:0000129 ! high pH
 created_by: antonialock
 creation_date: 2012-06-14T12:05:40Z
@@ -1177,6 +1178,15 @@ synonym: "coenzyme Q6" EXACT []
 is_a: PCO:0000109 ! excess chemical added
 created_by: antonialock
 creation_date: 2012-06-14T15:21:19Z
+
+[Term]
+id: PCO:0000132
+name: experimental environment
+def: "Set of conditions affecting the physical environment of the experiment." []
+subset: Grouping_terms
+is_a: PCO:0000001 ! phenotype condition
+created_by: antonialock
+creation_date: 2012-06-14T16:41:56Z
 
 [Typedef]
 id: part_of
