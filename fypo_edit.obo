@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 14:06:2012 17:00
+date: 15:06:2012 14:31
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -2748,8 +2748,8 @@ name: inviable upon G0 to G1 transition
 def: "A cell phenotype in which cells fail to resume growth after several days in G0 phase. The inviable cells show some features characteristic of apoptosis, including loss of DNA." [PMID:19197239, PomBase:mah]
 synonym: "die in G0 with an apoptotic-like phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
-intersection_of: PATO:0001558
-intersection_of: inheres_in GO:0045023
+intersection_of: FYPO:0000049
+intersection_of: during GO:0045023
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -7832,8 +7832,8 @@ id: FYPO:0000678
 name: chromosome nondisjunction at meiosis I
 def: "A cellular process phenotype in which homologous chromosomes fail to segregate properly, or disjoin, during meiosis I." [PomBase:mah]
 is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
-intersection_of: inheres_in GO:0045143
-intersection_of: qualifier PATO:0001558
+intersection_of: towards GO:0045143
+intersection_of: PATO:0001558
 created_by: midori
 creation_date: 2011-11-29T05:44:25Z
 
@@ -9249,7 +9249,7 @@ comment: Note that this term refers only to substances released into the growth 
 synonym: "increased accumulation of substance in growth medium" RELATED [PomBase:mah]
 synonym: "increased level of substance in growth medium" EXACT [PomBase:mah]
 synonym: "increased release of substance into growth medium" RELATED [PomBase:mah]
-is_a: FYPO:0000001 ! phenotype
+is_a: FYPO:0001155 ! altered effect on growth medium
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:24431
@@ -9469,7 +9469,7 @@ synonym: "decreased accumulation of substance in growth medium" RELATED [PomBase
 synonym: "decreased level of substance in growth medium" EXACT [PomBase:mah]
 synonym: "decreased release of substance into growth medium" RELATED [PomBase:mah]
 synonym: "reduced concentration of substance in growth medium" EXACT [PomBase:mah]
-is_a: FYPO:0000001 ! phenotype
+is_a: FYPO:0001155 ! altered effect on growth medium
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:24431
@@ -11862,9 +11862,8 @@ name: viable upon G0 to G1 transition
 def: "A cell phenotype in which cells to resume growth normally upon exiting G0 phase." [PMID:19366728, PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 is_a: FYPO:0000257 ! normal phenotype
-intersection_of: PATO:0001558
-intersection_of: happens_during GO:0006995
-intersection_of: inheres_in GO:0045023
+intersection_of: FYPO:0000124
+intersection_of: during GO:0045023
 created_by: midori
 creation_date: 2012-04-25T03:50:33Z
 
@@ -13541,8 +13540,8 @@ name: abolished transcriptional response to pheromone
 def: "A conjugation phenotype in which regulation of transcription in response to mating pheromone is abolished." [PomBase:mah]
 synonym: "abolished regulation of transcription from RNA polymerase II promoter by pheromones" EXACT [GO:0046019, PomBase:mah]
 is_a: FYPO:0000984 ! abnormal transcriptional response to pheromone
-intersection_of: towards GO:0046019
 intersection_of: PATO:0001558
+intersection_of: towards GO:0046019
 created_by: midori
 creation_date: 2012-06-11T14:48:00Z
 
@@ -13550,6 +13549,7 @@ creation_date: 2012-06-11T14:48:00Z
 id: FYPO:0001142
 name: normal Man8GlcNAc level
 def: "A cell phenotype in which the amount of Man8GlcNAc2 measured in a cell is normal. Man8GlcNAc2 is any N-glycan that consists of a branched ten-membered mannooligosaccharide containing eight D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:64048, CHEBI:64052, PomBase:mah]
+comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
 synonym: "normal cellular Man8GlcNAc level" EXACT [PomBase:al]
 synonym: "normal Man8GlcNAc2 level" EXACT [PomBase:mah]
 is_a: FYPO:0001077 ! normal polysaccharide level
@@ -13560,6 +13560,7 @@ creation_date: 2012-06-14T15:52:46Z
 id: FYPO:0001143
 name: normal Man9GlcNAc level
 def: "A cell phenotype in which the amount of Man9GlcNAc2 measured in a cell is normal. Man9GlcNAc2 is any N-glycan that consists of a branched undecasaccharide consisting of nine D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:59579, PomBase:mah]
+comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
 synonym: "normal cellular Man9GlcNAc level" EXACT [PomBase:al]
 synonym: "normal Man9GlcNAc2 level" EXACT [PomBase:mah]
 is_a: FYPO:0001077 ! normal polysaccharide level
@@ -13574,6 +13575,7 @@ creation_date: 2012-06-14T15:55:35Z
 id: FYPO:0001144
 name: decreased Man8GlcNAc level
 def: "A cell phenotype in which the amount of Man8GlcNAc2 measured in a cell is lower than normal. Man8GlcNAc2 is any N-glycan that consists of a branched ten-membered mannooligosaccharide containing eight D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:64048, CHEBI:64052, PomBase:mah]
+comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
 synonym: "decreased cellular Man8GlcNAc level" EXACT [PomBase:al]
 synonym: "decreased Man8GlcNAc2 level" EXACT [PomBase:mah]
 synonym: "reduced Man8GlcNAc level" EXACT [PomBase:mah]
@@ -13585,11 +13587,12 @@ creation_date: 2012-06-14T15:59:43Z
 id: FYPO:0001145
 name: increased Man9GlcNAc level
 def: "A cell phenotype in which the amount of Man9GlcNAc2 measured in a cell is higher than normal. Man9GlcNAc2 is any N-glycan that consists of a branched undecasaccharide consisting of nine D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:59579, PomBase:mah]
+comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
 synonym: "increased cellular Man9GlcNAc level" EXACT [PomBase:al]
 synonym: "increased Man9GlcNAc2 level" EXACT [PomBase:mah]
 is_a: FYPO:0001083 ! increased polysaccharide level
-intersection_of: qualifier PATO:0001162
 intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:59579
 created_by: midori
 creation_date: 2012-06-14T16:00:30Z
@@ -13697,6 +13700,111 @@ intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:16830
 created_by: midori
 creation_date: 2012-06-14T16:55:28Z
+
+[Term]
+id: FYPO:0001155
+name: altered effect on growth medium
+def: "A phenotype in which the changes that take place in growth medium, due to metabolism, secretion, etc. by a cell or population of cells, differs from normal." [PomBase:mah]
+is_a: FYPO:0000001 ! phenotype
+created_by: midori
+creation_date: 2012-06-15T12:57:29Z
+
+[Term]
+id: FYPO:0001156
+name: decreased pH of growth medium
+def: "A phenotype in which cells cause the pH of their growth medium to decrease by a greater amount than normal." [PomBase:mah]
+synonym: "decreased pH level of growth medium" EXACT [PomBase:al]
+synonym: "increased growth medium acidification" EXACT [PMID:10467002, PomBase:mah]
+is_a: FYPO:0001155 ! altered effect on growth medium
+created_by: midori
+creation_date: 2012-06-15T13:37:06Z
+
+[Term]
+id: FYPO:0001157
+name: increased cell growth rate at high pH
+def: "A cell growth phenotype in which cells grow at a faster rate than normal in a medium with higher than standard pH. Standard S. pombe growth media are approximately pH 5.6." [PMID:10467002, PomBase:mah]
+synonym: "enhanced growth at high pH" RELATED [PomBase:mah]
+synonym: "fast cell growth at high pH" EXACT [PomBase:mah]
+is_a: FYPO:0000636 ! increased cell growth rate
+created_by: midori
+creation_date: 2012-06-15T13:43:25Z
+
+[Term]
+id: FYPO:0001158
+name: normal cellular pH
+def: "A cell phenotype in which the measured intracellular pH is normal." [PomBase:mah]
+synonym: "normal cellular pH level" EXACT [PomBase:al]
+is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0000257 ! normal phenotype
+created_by: midori
+creation_date: 2012-06-15T13:47:22Z
+
+[Term]
+id: FYPO:0001159
+name: increased cellular pH
+def: "A cell phenotype in which the measured intracellular pH is higher than normal." [PomBase:mah]
+synonym: "increased cellular pH level" EXACT [PomBase:al]
+is_a: FYPO:0000002 ! cell phenotype
+created_by: midori
+creation_date: 2012-06-15T13:47:43Z
+
+[Term]
+id: FYPO:0001160
+name: cell cycle arrest in mitotic G2 phase during stationary phase
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G2 phase when the population in which the cell is found is in stationary phase." [PMID:19366728, PomBase:mah]
+synonym: "mitotic G2 phase arrest during stationary phase" EXACT [PomBase:mah]
+is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+intersection_of: PATO:0001561
+intersection_of: happens_during GO:0000085
+intersection_of: happens_during GO:0060274
+intersection_of: towards GO:0071850
+created_by: midori
+creation_date: 2012-06-15T14:04:54Z
+
+[Term]
+id: FYPO:0001161
+name: slow aerobic cell growth on glucose carbon source
+def: "A cell growth phenotype in which cells grow at a slower rate than normal under aerobic conditions and in a medium containing glucose as the carbon source." [PomBase:mah]
+is_a: FYPO:0000222 ! slow aerobic cell growth
+created_by: midori
+creation_date: 2012-06-15T14:18:50Z
+
+[Term]
+id: FYPO:0001162
+name: slow aerobic cell growth on raffinose carbon source
+def: "A cell growth phenotype in which cells grow at a slower rate than normal under aerobic conditions and in a medium containing raffinose as the carbon source." [PomBase:mah]
+is_a: FYPO:0000222 ! slow aerobic cell growth
+created_by: midori
+creation_date: 2012-06-15T14:21:23Z
+
+[Term]
+id: FYPO:0001163
+name: slow semi-anaerobic cell growth on glucose carbon source
+def: "A cell growth phenotype in which cells grow at a slower rate than normal under semi-anaerobic conditions and in a medium containing glucose as the carbon source." [PomBase:mah]
+is_a: FYPO:0000046 ! slow cell growth
+created_by: midori
+creation_date: 2012-06-15T14:22:11Z
+
+[Term]
+id: FYPO:0001164
+name: normal cell growth on glucose carbon source
+def: "A cell growth phenotype in which cells grow at a normal rate in a medium containing glucose as the carbon source." [PomBase:mah]
+is_a: FYPO:0000047 ! normal cell growth
+intersection_of: FYPO:0000047 ! normal cell growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:17634
+created_by: midori
+creation_date: 2012-06-15T14:22:57Z
+
+[Term]
+id: FYPO:0001165
+name: inviable following anaerobic growth
+def: "A cell phenotype in which cells that are exposed to anaerobic conditions fail to grow upon being returned to aerobic conditions." [PomBase:mah]
+is_a: FYPO:0000049 ! inviable
+created_by: midori
+creation_date: 2012-06-15T14:28:05Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
