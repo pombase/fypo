@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 15:06:2012 14:31
+date: 18:06:2012 15:59
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -1968,6 +1968,9 @@ name: increased DNA recombination at mitotic DNA replication fork barriers
 def: "A cellular process phenotype in which the frequency of DNA recombination at replication fork barriers is increased." [PomBase:mah]
 synonym: "DNA recombination defect, at mitotic DNA replication fork barriers, elevated" EXACT [PomBase:mah]
 is_a: FYPO:0000063 ! abnormal DNA recombination
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0006310
+intersection_of: occurs_at SO:0001914
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2551,6 +2554,9 @@ synonym: "increased level of centromeric outer repeat transcripts" EXACT [PomBas
 synonym: "increased level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 is_a: FYPO:0000140 ! cellular metabolism phenotype
 is_a: FYPO:0000825 ! increased RNA level
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards SO:0001914
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2748,7 +2754,7 @@ name: inviable upon G0 to G1 transition
 def: "A cell phenotype in which cells fail to resume growth after several days in G0 phase. The inviable cells show some features characteristic of apoptosis, including loss of DNA." [PMID:19197239, PomBase:mah]
 synonym: "die in G0 with an apoptotic-like phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
-intersection_of: FYPO:0000049
+intersection_of: FYPO:0000049 ! inviable
 intersection_of: during GO:0045023
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -4180,7 +4186,7 @@ creation_date: 2011-07-14T05:04:23Z
 [Term]
 id: FYPO:0000370
 name: abnormal RNA modification
-def: "A cellular process phenotype in which RNA modification is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which RNA modification is abnormal. All RNA modification may be abnormal, or one or more specific RNA modifications may be selectively affected." [PomBase:mah]
 synonym: "RNA modification: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000294 ! RNA metabolism phenotype
 intersection_of: PATO:0000001
@@ -4192,7 +4198,7 @@ creation_date: 2011-07-14T06:06:09Z
 [Term]
 id: FYPO:0000371
 name: RNA modification abolished
-def: "A cellular process phenotype in which RNA modification does not occur." [PomBase:mah]
+def: "A cellular process phenotype in which RNA modification does not occur. All RNA modification may be abolished, or one or more specific RNA modifications may be selectively affected." [PomBase:mah]
 synonym: "absent RNA modification" EXACT [PomBase:mah]
 synonym: "RNA modification: absent" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000370 ! abnormal RNA modification
@@ -4204,7 +4210,7 @@ creation_date: 2011-07-14T06:06:09Z
 [Term]
 id: FYPO:0000372
 name: decreased RNA modification
-def: "A cellular process phenotype in which the occurrence of RNA modification is decreased." [PomBase:mah]
+def: "A cellular process phenotype in which the occurrence of RNA modification is decreased. All RNA modification may be decreased, or one or more specific RNA modifications may be selectively affected." [PomBase:mah]
 synonym: "reduced RNA modification" EXACT [PomBase:mah]
 synonym: "RNA modification: decreased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000370 ! abnormal RNA modification
@@ -4228,7 +4234,7 @@ creation_date: 2011-07-14T06:06:09Z
 [Term]
 id: FYPO:0000374
 name: increased RNA modification
-def: "A cellular process phenotype in which the occurrence of RNA modification is increased." [PomBase:mah]
+def: "A cellular process phenotype in which the occurrence of RNA modification is increased. All RNA modification may be increased, or one or more specific RNA modifications may be selectively affected." [PomBase:mah]
 synonym: "RNA modification: increased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000370 ! abnormal RNA modification
 intersection_of: PATO:0002051
@@ -7832,8 +7838,8 @@ id: FYPO:0000678
 name: chromosome nondisjunction at meiosis I
 def: "A cellular process phenotype in which homologous chromosomes fail to segregate properly, or disjoin, during meiosis I." [PomBase:mah]
 is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
-intersection_of: towards GO:0045143
 intersection_of: PATO:0001558
+intersection_of: towards GO:0045143
 created_by: midori
 creation_date: 2011-11-29T05:44:25Z
 
@@ -11862,7 +11868,7 @@ name: viable upon G0 to G1 transition
 def: "A cell phenotype in which cells to resume growth normally upon exiting G0 phase." [PMID:19366728, PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 is_a: FYPO:0000257 ! normal phenotype
-intersection_of: FYPO:0000124
+intersection_of: FYPO:0000124 ! viable
 intersection_of: during GO:0045023
 created_by: midori
 creation_date: 2012-04-25T03:50:33Z
@@ -13623,6 +13629,9 @@ id: FYPO:0001148
 name: normal cellular response to amiloride
 def: "A cellular response phenotype in which the cellular response to amiloride is normal." [PomBase:mah]
 is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036254
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-06-14T16:30:50Z
 
@@ -13631,6 +13640,9 @@ id: FYPO:0001149
 name: normal cellular response to methylamine
 def: "A cellular response phenotype in which the cellular response to methylamine is normal." [PomBase:mah]
 is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036256
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-06-14T16:33:06Z
 
@@ -13805,6 +13817,108 @@ def: "A cell phenotype in which cells that are exposed to anaerobic conditions f
 is_a: FYPO:0000049 ! inviable
 created_by: midori
 creation_date: 2012-06-15T14:28:05Z
+
+[Term]
+id: FYPO:0001166
+name: normal cell growth on fructose carbon source
+def: "A cell growth phenotype in which cells grow at a normal rate in a medium containing fructose as the carbon source." [PomBase:mah]
+is_a: FYPO:0000047 ! normal cell growth
+intersection_of: FYPO:0000047 ! normal cell growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:15824
+created_by: midori
+creation_date: 2012-06-18T14:58:12Z
+
+[Term]
+id: FYPO:0001167
+name: abnormal ATPase activity
+def: "A molecular function phenotype in which the observed rate of ATPase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0016887
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-06-18T15:16:22Z
+
+[Term]
+id: FYPO:0001168
+name: decreased ATPase activity
+def: "A molecular function phenotype in which the observed rate of ATPase activity is decreased." [PomBase:mah]
+synonym: "reduced ATPase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001167 ! abnormal ATPase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0016887
+created_by: midori
+creation_date: 2012-06-18T15:16:30Z
+
+[Term]
+id: FYPO:0001169
+name: normal proton transport
+def: "A cellular process phenotype in which proton (H+) transport is normal." [PomBase:mah]
+synonym: "normal hydrogen ion transport" EXACT [PomBase:mah]
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0001071 ! normal transport
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0015992
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-06-18T15:18:27Z
+
+[Term]
+id: FYPO:0001170
+name: decreased methionine import during nitrogen starvation
+def: "A cellular process phenotype in which the import of methionine into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased methionine import into cell" EXACT [PomBase:al]
+synonym: "decreased methionine transport into cell during nitrogen starvation" EXACT [PomBase:al]
+synonym: "decreased methionine uptake" EXACT [GO:0036233]
+synonym: "reduced methionine import" EXACT [PomBase:mah]
+is_a: FYPO:0001058 ! decreased amino acid import
+is_a: FYPO:0001139 ! abnormal leucine import
+created_by: midori
+creation_date: 2012-06-18T15:29:46Z
+
+[Term]
+id: FYPO:0001171
+name: decreased cellular pH
+def: "A cell phenotype in which the measured intracellular pH is lower than normal." [PomBase:mah]
+synonym: "decreased cellular pH level" EXACT [PomBase:al]
+is_a: FYPO:0000002 ! cell phenotype
+created_by: midori
+creation_date: 2012-06-18T15:37:06Z
+
+[Term]
+id: FYPO:0001172
+name: abnormal 7-methylguanosine cap hypermethylation
+def: "A cellular process phenotype in which hypermethylation of the 7-(mono)methylguanosine (m(7)G) cap structure at the 2' position of the guanosine residue to form a 2,2,7-trimethylguanosine cap structure is abnormal." [PomBase:mah]
+synonym: "abnormal 2,2,7-trimethylguanosine cap formation" EXACT [GO:0036261, PomBase:mah]
+synonym: "abnormal conversion of m(7)G to m(3)G" EXACT [GO:0036261, PomBase:mah]
+synonym: "abnormal snoRNA capping" NARROW [GO:0036261, PomBase:mah]
+synonym: "abnormal snRNA capping" NARROW [GO:0036261, PomBase:mah]
+synonym: "abnormal TMG cap formation" EXACT [GO:0036261, PomBase:mah]
+is_a: FYPO:0000370 ! abnormal RNA modification
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036261
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-06-18T15:51:40Z
+
+[Term]
+id: FYPO:0001173
+name: 7-methylguanosine cap hypermethylation abolished
+def: "A cellular process phenotype in which hypermethylation of the 7-(mono)methylguanosine (m(7)G) cap structure at the 2' position of the guanosine residue to form a 2,2,7-trimethylguanosine cap structure is abolished." [PomBase:mah]
+synonym: "2,2,7-trimethylguanosine cap formation abolished" EXACT [GO:0036261, PomBase:mah]
+synonym: "conversion of m(7)G to m(3)G abolished" EXACT [GO:0036261, PomBase:mah]
+synonym: "snoRNA capping abolished" NARROW [GO:0036261, PomBase:mah]
+synonym: "snRNA capping abolished" NARROW [GO:0036261, PomBase:mah]
+synonym: "TMG cap formation abolished" EXACT [GO:0036261, PomBase:mah]
+is_a: FYPO:0000371 ! RNA modification abolished
+is_a: FYPO:0001172 ! abnormal 7-methylguanosine cap hypermethylation
+intersection_of: PATO:0001558
+intersection_of: towards GO:0036261
+created_by: midori
+creation_date: 2012-06-18T15:57:19Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
