@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+if [ $# = 0 ]
+then
+    echo usage: $0 sourceforge_username 1>&2
+    exit 1
+fi
+
+username=$1
+
+CURRENT_DIR=`pwd`
+
 TEMP_DIR=/tmp/release_fypo.$RANDOM.$$
 
 rm -rf $TEMP_DIR
@@ -22,7 +32,7 @@ BRENDA_TISSUE_OBO=http://www.brenda-enzymes.info/ontology/tissue/tree/update/upd
 /usr/local/OBOReleaseManager/scripts/ontology-release-runner -outdir $OUT_DIR \
     --no-subsets -reasoner elk --simple \
     $FYPO_OBO $GO_OBO $PCO_OBO $CHEBI_OBO $CELL_TYPE_OBO $BRENDA_TISSUE_OBO \
-    > ontology-release-runner.log 2>&1
+    > $CURRENT_DIR/ontology-release-runner.log 2>&1
 
 release_path=$OUT_DIR/releases/*
 release=`basename $release_path`
@@ -40,6 +50,10 @@ do
   svn add $new_release_dir/$file
 done
 
-svn commit -m 'FYPO release' releases
+rm -f releases/latest
+(cd releases; ln -s $release latest)
+svn add releases/latest
+
+svn commit --username=$username -m 'FYPO release' releases
 
 rm -rf $TEMP_DIR
