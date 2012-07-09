@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 06:07:2012 16:31
+date: 09:07:2012 17:17
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -565,6 +565,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000049
 name: inviable
 def: "A viability phenotype in which cells are unable to survive under normal conditions." [PomBase:mah]
+synonym: "lethal" EXACT [PomBase:mah]
 is_a: FYPO:0000004 ! viability
 intersection_of: PATO:0000718
 intersection_of: inheres_in CL:0000000
@@ -12445,8 +12446,8 @@ is_a: FYPO:0001047 ! mitotic catastrophe
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000049 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 intersection_of: has_part FYPO:0001124 ! normal cell size
+intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 created_by: midori
 creation_date: 2012-05-11T02:09:56Z
 
@@ -12461,8 +12462,8 @@ is_a: FYPO:0001122 ! elongated vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000049 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 intersection_of: has_part FYPO:0001122 ! elongated vegetative cells
+intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 created_by: midori
 creation_date: 2012-05-11T02:16:25Z
 
@@ -12493,8 +12494,8 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000049 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0000229 ! cut
-intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 intersection_of: has_part FYPO:0001124 ! normal cell size
+intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 created_by: midori
 creation_date: 2012-05-11T02:39:40Z
 
@@ -12510,8 +12511,8 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000049 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0000229 ! cut
-intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 intersection_of: has_part FYPO:0001122 ! elongated vegetative cells
+intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 created_by: midori
 creation_date: 2012-05-11T02:39:47Z
 
@@ -14313,11 +14314,33 @@ name: mistimed mitosis
 def: "A cellular process phenotype in which cells enter mitosis earlier or later than normal. relative to cell size or DNA integrity checkpoint status," [PomBase:mah]
 synonym: "abnormal onset of mitosis" EXACT [PomBase:mah]
 is_a: FYPO:0000337 ! abnormal mitosis
-intersection_of: PATO:0002325 ! onset quality
-intersection_of: inheres_in GO:0007067 ! mitosis
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: PATO:0002325
+intersection_of: inheres_in GO:0007067
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2012-07-06T16:15:36Z
+
+[Term]
+id: FYPO:0001205
+name: abolished alpha-glucosidase activity
+def: "A molecular function phenotype in which alpha-glucosidase activity is absent." [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004558
+created_by: midori
+creation_date: 2012-07-09T17:10:25Z
+
+[Term]
+id: FYPO:0001206
+name: abolished maltase activity
+def: "A molecular function phenotype in which maltase activity is absent." [PomBase:mah]
+synonym: "abolished protease activity" EXACT [PomBase:mah]
+is_a: FYPO:0001205 ! abolished alpha-glucosidase activity
+is_a: FYPO:0000666 ! abnormal maltase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0032450
+created_by: midori
+creation_date: 2012-07-09T17:13:55Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
