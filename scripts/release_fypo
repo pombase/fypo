@@ -39,7 +39,7 @@ BRENDA_TISSUE_OBO=http://www.brenda-enzymes.info/ontology/tissue/tree/update/upd
 release_path=$OUT_DIR/releases/*
 release=`basename $release_path`
 
-if [ -e $release_path ]
+if [ ! -e $release_path ]
 then
   echo "error: no directories found in $OUT_DIR/releases/ - check $OORT_LOG_FILE" 1>&2
   exit 1
