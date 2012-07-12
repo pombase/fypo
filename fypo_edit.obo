@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:07:2012 10:33
+date: 12:07:2012 15:46
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -1387,10 +1387,10 @@ id: FYPO:0000118
 name: multiseptate
 def: "A septation phenotype characterized by the presence of more than one septum in a cell." [PomBase:mah]
 synonym: "septation defects, multiple septa" EXACT [PomBase:mah]
-is_a: FYPO:0000117 ! abnormal septation
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0000470
 intersection_of: inheres_in GO:0000935
+relationship: output_of FYPO:0000117 ! abnormal septation
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
 
@@ -5697,7 +5697,7 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000506
 name: abnormal nuclear export
-def: "A cellular process phenotype in which nuclear export is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which nuclear export is abnormal. Nuclear export is the directed movement of any substance out of the nucleus; export of all substances or a specific substance may be affected." [PomBase:mah]
 synonym: "nuclear export: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000518 ! abnormal nuclear transport
 intersection_of: PATO:0000001
@@ -5709,7 +5709,7 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000507
 name: nuclear export abolished
-def: "A cellular process phenotype in which nuclear export does not occur." [PomBase:mah]
+def: "A cellular process phenotype in which nuclear export does not occur. Nuclear export is the directed movement of any substance out of the nucleus; export of all substances or a specific substance may be affected." [PomBase:mah]
 synonym: "absent nuclear export" EXACT [PomBase:mah]
 synonym: "nuclear export: absent" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000506 ! abnormal nuclear export
@@ -5721,7 +5721,7 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000508
 name: decreased nuclear export
-def: "A cellular process phenotype in which the occurrence of nuclear export is decreased." [PomBase:mah]
+def: "A cellular process phenotype in which the occurrence of nuclear export is decreased. Nuclear export is the directed movement of any substance out of the nucleus; export of all substances or a specific substance may be affected." [PomBase:mah]
 synonym: "nuclear export: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "reduced nuclear export" EXACT [PomBase:mah]
 is_a: FYPO:0000464 ! decreased intracellular transport
@@ -5734,7 +5734,7 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000509
 name: normal nuclear export
-def: "A cellular process phenotype in which nuclear export is normal." [PomBase:mah]
+def: "A cellular process phenotype in which nuclear export is normal. Nuclear export is the directed movement of any substance out of the nucleus; export of all substances or a specific substance may be affected." [PomBase:mah]
 synonym: "nuclear export: normal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
@@ -5801,10 +5801,10 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000514
 name: nuclear import abolished
-def: "A cellular process phenotype in which nuclear import does not occur." [PomBase:mah]
+def: "A cellular process phenotype in which nuclear import does not occur. Nuclear import is the directed movement of any substance into the nucleus; import of all substances or a specific substance may be affected." [PomBase:mah]
 synonym: "absent nuclear import" EXACT [PomBase:mah]
 synonym: "nuclear import: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000518 ! abnormal nuclear transport
+is_a: FYPO:0001217 ! abnormal nuclear import
 intersection_of: PATO:0001558
 intersection_of: towards GO:0051170
 created_by: midori
@@ -5813,11 +5813,11 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000515
 name: decreased nuclear import
-def: "A cellular process phenotype in which the occurrence of nuclear import is decreased." [PomBase:mah]
+def: "A cellular process phenotype in which the occurrence of nuclear import is decreased. Nuclear import is the directed movement of any substance into the nucleus; import of all substances or a specific substance may be affected." [PomBase:mah]
 synonym: "nuclear import: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "reduced nuclear import" EXACT [PomBase:mah]
 is_a: FYPO:0000464 ! decreased intracellular transport
-is_a: FYPO:0000518 ! abnormal nuclear transport
+is_a: FYPO:0001217 ! abnormal nuclear import
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0051170
 created_by: midori
@@ -5826,7 +5826,7 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000516
 name: normal nuclear import
-def: "A cellular process phenotype in which nuclear import is normal." [PomBase:mah]
+def: "A cellular process phenotype in which nuclear import is normal. Nuclear import is the directed movement of any substance into the nucleus; import of all substances or a specific substance may be affected." [PomBase:mah]
 synonym: "nuclear import: normal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
@@ -13110,7 +13110,6 @@ def: "A cell phenotype in which the amount of protein measured in a cell during 
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "increased protein accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 is_a: FYPO:0000836 ! increased protein level
-is_a: FYPO:0000990 ! increased level of substance in cell
 intersection_of: exists_during GO:0070301
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0001162
@@ -14335,7 +14334,7 @@ id: FYPO:0001206
 name: abolished maltase activity
 def: "A molecular function phenotype in which maltase activity is absent." [PomBase:mah]
 synonym: "abolished protease activity" EXACT [PomBase:mah]
-is_a: FYPO:0001184 ! abnormal peptidase activity
+is_a: FYPO:0001184 ! abnormal maltase activity
 is_a: FYPO:0001205 ! abolished alpha-glucosidase activity
 intersection_of: PATO:0001558
 intersection_of: towards GO:0032450
@@ -14352,6 +14351,232 @@ intersection_of: inheres_in GO:0016049
 intersection_of: towards CHEBI:16634
 created_by: midori
 creation_date: 2012-07-12T10:30:03Z
+
+[Term]
+id: FYPO:0001208
+name: substance absent from cell
+def: "A cell phenotype in which the amount of a specific substance measured in a cell is too low to detect." [PomBase:mah]
+is_a: FYPO:0000991 ! decreased level of substance in cell
+intersection_of: PATO:0002000
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:24431
+created_by: midori
+creation_date: 2012-07-12T12:09:35Z
+
+[Term]
+id: FYPO:0001209
+name: polysaccharide absent from cell
+def: "A cell phenotype in which the amount of a polysaccharide measured in a cell is too low to detect." [PomBase:mah]
+is_a: FYPO:0001080 ! decreased polysaccharide level
+is_a: FYPO:0001208 ! substance absent from cell
+intersection_of: PATO:0002000
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:18154
+created_by: midori
+creation_date: 2012-07-12T12:12:20Z
+
+[Term]
+id: FYPO:0001210
+name: Glc2Man9GlcNAc absent from cell
+def: "A cell phenotype in which the amount of Glc2Man9GlcNAc2 measured in a cell is too low to detect. Glc2Man9GlcNAc2 is an N-glycan that is involved in post-translational modification of proteins, and consists of a branched ten-membered mannooligosaccharide containing two D-glucose residues, nine D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:59082, PomBase:mah]
+comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
+synonym: "absent Glc2Man9GlcNAc" EXACT [PomBase:al]
+synonym: "Glc2Man9GlcNAc2 absent from cell" EXACT [PomBase:mah]
+is_a: FYPO:0001209 ! polysaccharide absent from cell
+intersection_of: PATO:0002000
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:59082
+created_by: midori
+creation_date: 2012-07-12T12:13:39Z
+
+[Term]
+id: FYPO:0001211
+name: Glc3Man9GlcNAc absent from cell
+def: "A cell phenotype in which the amount of Glc3Man9GlcNAc measured in a cell is too low to detect. Glc3Man9GlcNAc2 is an N-glycan that is involved in post-translational modification of proteins, and consists of a branched ten-membered mannooligosaccharide containing three D-glucose residues, nine D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:53019, PomBase:mah]
+comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
+synonym: "absent Glc3Man9GlcNAc" EXACT [PomBase:al]
+synonym: "Glc3Man9GlcNAc2 absent from cell" EXACT [PomBase:mah]
+is_a: FYPO:0001209 ! polysaccharide absent from cell
+intersection_of: PATO:0002000
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:53019
+created_by: midori
+creation_date: 2012-07-12T12:15:33Z
+
+[Term]
+id: FYPO:0001212
+name: decreased Glc1Man9GlcNAc level
+def: "A cell phenotype in which the amount of Glc1Man9GlcNAc2 measured in a cell is lower than normal. Glc1Man9GlcNAc2 is an N-glycan that is involved in post-translational modification of proteins, and consists of a branched ten-membered mannooligosaccharide containing one D-glucose residue, nine D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:59080, PomBase:mah]
+comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
+synonym: "decreased cellular Glc1Man9GlcNAc level" EXACT [PomBase:al]
+synonym: "decreased Glc1Man9GlcNAc2 level" EXACT [PomBase:mah]
+synonym: "reduced Glc1Man9GlcNAc level" EXACT [PomBase:mah]
+is_a: FYPO:0001080 ! decreased polysaccharide level
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:59080
+created_by: midori
+creation_date: 2012-07-12T12:16:24Z
+
+[Term]
+id: FYPO:0001213
+name: increased Man8GlcNAc level
+def: "A cell phenotype in which the amount of Man8GlcNAc2 measured in a cell is higher than normal. Man8GlcNAc2 is any N-glycan that consists of a branched ten-membered mannooligosaccharide containing eight D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:64048, CHEBI:64052, PomBase:mah]
+comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
+synonym: "increased cellular Man8GlcNAc level" EXACT [PomBase:al]
+synonym: "increased Man8GlcNAc2 level" EXACT [PomBase:mah]
+is_a: FYPO:0001083 ! increased polysaccharide level
+created_by: midori
+creation_date: 2012-07-12T12:17:32Z
+
+[Term]
+id: FYPO:0001214
+name: sensitive to potassium chloride
+def: "A phenotype in which cells show increased sensitivity to potassium chloride." [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:32588
+created_by: midori
+creation_date: 2012-07-12T14:21:19Z
+
+[Term]
+id: FYPO:0001215
+name: normal protein complex assembly
+def: "A cellular process phenotype in which the assembly of a protein complex at the cellular level is normal." [PomBase:mah]
+synonym: "normal cellular protein complex assembly" EXACT [GO:0043623]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0043623
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-07-12T14:30:00Z
+
+[Term]
+id: FYPO:0001216
+name: normal SAGA complex assembly
+def: "A cellular process phenotype in which the assembly of a SAGA complex onto chromatin is normal." [PomBase:mah]
+is_a: FYPO:0001215 ! normal protein complex assembly
+created_by: midori
+creation_date: 2012-07-12T14:32:23Z
+
+[Term]
+id: FYPO:0001217
+name: abnormal nuclear import
+def: "A cellular process phenotype in which nuclear import is abnormal. Nuclear import is the directed movement of any substance out of the nucleus; import of all substances or a specific substance may be affected." [PomBase:mah]
+is_a: FYPO:0000518 ! abnormal nuclear transport
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051170
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-07-12T14:39:54Z
+
+[Term]
+id: FYPO:0001218
+name: nuclear export during response to nitrogen starvation abolished
+def: "A cellular process phenotype in which nuclear export does not occur when the cell is subject to nitrogen starvation. Nuclear export is the directed movement of any substance out of the nucleus; export of all substances or a specific substance may be affected." [PomBase:mah]
+synonym: "absent nuclear export during response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "nuclear export in response to nitrogen starvation abolished" EXACT [PomBase:al]
+is_a: FYPO:0000507 ! nuclear export abolished
+intersection_of: PATO:0001558
+intersection_of: during GO:0006995
+intersection_of: towards GO:0051168
+created_by: midori
+creation_date: 2012-07-12T14:41:50Z
+
+[Term]
+id: FYPO:0001219
+name: increased protein level during cellular response to nitrogen starvation
+def: "A cell phenotype in which the amount of protein measured in a cell during a cellular response to nitrogen starvation is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "increased protein accumulation during cellular response to nitrogen starvation" RELATED [PomBase:mah]
+is_a: FYPO:0000836 ! increased protein level
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2012-07-12T15:10:12Z
+
+[Term]
+id: FYPO:0001220
+name: increased protein level during cellular response to pheromone
+def: "A cell phenotype in which the amount of protein measured in a cell during a cellular response to a pheromone is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "increased protein accumulation during cellular response to pheromone" RELATED [PomBase:mah]
+is_a: FYPO:0000836 ! increased protein level
+intersection_of: exists_during GO:0071444
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2012-07-12T15:13:41Z
+
+[Term]
+id: FYPO:0001221
+name: normal nucleus:cytoplasm ratio
+def: "A cell phenotype in which the ratio of the nuclear volume to the total cell volume is in the same range as wild type (approximately 0.076-0.089)." [PMID:17998401, PomBase:mah]
+synonym: "normal nuclear:cytoplasmic ratio" EXACT [PomBase:mah]
+synonym: "normal nuclear:cytoplasmic volume ratio" EXACT [PomBase:mah]
+synonym: "normal nucleus:cell volume ratio" EXACT [PomBase:mah]
+synonym: "normal nucleus:cytoplasm volume ratio" EXACT [PomBase:mah]
+is_a: FYPO:0000257 ! normal phenotype
+created_by: midori
+creation_date: 2012-07-12T15:15:47Z
+
+[Term]
+id: FYPO:0001222
+name: binucleate
+def: "A cellular structure phenotype in which a cell contains two nuclei." [PomBase:mah]
+is_a: FYPO:0000061 ! multinucleate
+intersection_of: PATO:0001406
+intersection_of: inheres_in CL:0000000
+created_by: midori
+creation_date: 2012-07-12T15:37:08Z
+
+[Term]
+id: FYPO:0001223
+name: binucleate multiseptate cells
+def: "A cell morphology phenotype in which cells have two nuclei and more than one septum per cell." [PomBase:mah]
+is_a: FYPO:0000118 ! multiseptate
+is_a: FYPO:0001222 ! binucleate
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: has_part FYPO:0001222
+intersection_of: has_part FYPO:0000118 ! multiseptate
+created_by: midori
+creation_date: 2012-07-12T15:39:43Z
+
+[Term]
+id: FYPO:0001224
+name: binucleate monoseptate cells
+def: "A cell morphology phenotype in which cells have two nuclei and one septum per cell." [PomBase:mah]
+is_a: FYPO:0001222 ! binucleate
+is_a: FYPO:0001225 ! monoseptate
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: has_part FYPO:0001222
+intersection_of: has_part FYPO:0001225
+created_by: midori
+creation_date: 2012-07-12T15:40:42Z
+
+[Term]
+id: FYPO:0001225
+name: monoseptate
+def: "A cellular structure phenotype in which a cell contains a single septum." [PomBase:mah]
+is_a: FYPO:0000136 ! cellular structure phenotype
+created_by: midori
+creation_date: 2012-07-12T15:42:41Z
+
+[Term]
+id: FYPO:0001226
+name: mononucleate with asymmetric septum
+def: "A cellular structure phenotype in which a cell contains a single nucleus and an asymmetrically located septum." [PomBase:mah]
+is_a: FYPO:0000060 ! mononucleate
+is_a: FYPO:0000339 ! mislocalized septum
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: has_part FYPO:0000060
+intersection_of: has_part FYPO:0000339
+created_by: midori
+creation_date: 2012-07-12T15:44:34Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
