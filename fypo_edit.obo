@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:07:2012 15:46
+date: 13:07:2012 16:47
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -14537,12 +14537,12 @@ creation_date: 2012-07-12T15:37:08Z
 [Term]
 id: FYPO:0001223
 name: binucleate multiseptate cells
-def: "A cell morphology phenotype in which cells have two nuclei and more than one septum per cell." [PomBase:mah]
+def: "A cell morphology phenotype in which cells have two nuclei and more than one septum per cell. The septa are grouped together between the two nuclei." [PomBase:mah]
 is_a: FYPO:0000118 ! multiseptate
 is_a: FYPO:0001222 ! binucleate
 intersection_of: FYPO:0000136 ! cellular structure phenotype
-intersection_of: has_part FYPO:0001222
 intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0001222 ! binucleate
 created_by: midori
 creation_date: 2012-07-12T15:39:43Z
 
@@ -14553,8 +14553,8 @@ def: "A cell morphology phenotype in which cells have two nuclei and one septum 
 is_a: FYPO:0001222 ! binucleate
 is_a: FYPO:0001225 ! monoseptate
 intersection_of: FYPO:0000136 ! cellular structure phenotype
-intersection_of: has_part FYPO:0001222
-intersection_of: has_part FYPO:0001225
+intersection_of: has_part FYPO:0001222 ! binucleate
+intersection_of: has_part FYPO:0001225 ! monoseptate
 created_by: midori
 creation_date: 2012-07-12T15:40:42Z
 
@@ -14573,10 +14573,39 @@ def: "A cellular structure phenotype in which a cell contains a single nucleus a
 is_a: FYPO:0000060 ! mononucleate
 is_a: FYPO:0000339 ! mislocalized septum
 intersection_of: FYPO:0000136 ! cellular structure phenotype
-intersection_of: has_part FYPO:0000060
-intersection_of: has_part FYPO:0000339
+intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000339 ! mislocalized septum
 created_by: midori
 creation_date: 2012-07-12T15:44:34Z
+
+[Term]
+id: FYPO:0001227
+name: protein mislocalized to cytoplasm during cellular response to hydrogen peroxide
+def: "A cell phenotype in which a protein that is not normally found in the cytoplasm is observed there, during a cellular response to hydrogen peroxide." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the cytoplasm in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants.
+synonym: "protein mislocalised to cytoplasm during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+synonym: "protein mislocalized to cytoplasm in response to hydrogen peroxide" EXACT [PomBase:al]
+is_a: FYPO:0000783 ! protein mislocalized to cytoplasm
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0070301
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005737
+created_by: midori
+creation_date: 2012-07-13T16:15:07Z
+
+[Term]
+id: FYPO:0001228
+name: nuclear protein accumulation during cellular response to hydrogen peroxide
+def: "A localization phenotype in which specific proteins abnormally accumulate, and are constitutively located in, the nucleus during a cellular response to hydrogen peroxide." [PomBase:mah]
+synonym: "nuclear accumulation of protein during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+synonym: "nuclear protein accumulation in response to hydrogen peroxide" EXACT [PomBase:al]
+is_a: FYPO:0000255 ! nuclear protein accumulation
+intersection_of: PATO:0002270
+intersection_of: happens_during GO:0070301
+intersection_of: inheres_in GO:0005634
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2012-07-13T16:39:13Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
