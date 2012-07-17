@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 16:07:2012 16:18
+date: 17:07:2012 13:48
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -2497,11 +2497,11 @@ creation_date: 2011-04-13T03:41:10Z
 [Term]
 id: FYPO:0000216
 name: abnormal negative regulation of DNA replication initiation
-def: "A regulation phenotype in which negative regulation of DNA-dependent DNA replication initiation is abnormal, resulting in re-replication of all or part of the genome." [PomBase:mah]
+def: "A regulation phenotype in which negative regulation of the initiation of DNA-dependent DNA replication is abnormal, resulting in re-replication of all or part of the genome." [PomBase:mah]
 synonym: "abnormal negative regulation of DNA-dependent DNA replication initiation" EXACT [PomBase:mah]
 synonym: "DNA replication defects, endoreduplication" RELATED [PomBase:mah]
-is_a: FYPO:0000145 ! regulation phenotype
 is_a: FYPO:0000217 ! abnormal DNA replication
+is_a: FYPO:0001248 ! abnormal regulation of DNA replication initiation
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0032297
 intersection_of: qualifier PATO:0000460
@@ -13048,7 +13048,6 @@ name: normal RNA level during nitrogen starvation
 def: "A cell phenotype in which the amount of RNA measured in a cell during nitrogen starvation is normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 is_a: FYPO:0000840 ! normal RNA level
-is_a: FYPO:0001076 ! normal level of substance in cell
 intersection_of: PATO:0001159
 intersection_of: exists_during GO:0006995
 intersection_of: inheres_in CL:0000000
@@ -14653,8 +14652,8 @@ def: "A cellular structure phenotype in which the morphology of all or part of t
 comment: Note that an abnormal chromosome organization process may, but does not necessarily, result in abnormal chromosome morphology.
 is_a: FYPO:0001229 ! abnormal cell cortex morphology
 intersection_of: PATO:0001617
-intersection_of: inheres_in GO:0005938
 intersection_of: exists_during GO:0006995
+intersection_of: inheres_in GO:0005938
 relationship: output_of FYPO:0000641 ! abnormal chromosome organization
 created_by: midori
 creation_date: 2012-07-16T13:52:15Z
@@ -14678,9 +14677,9 @@ def: "A cellular structure phenotype in which the morphology of all or part of t
 comment: Note that an abnormal chromosome organization process may, but does not necessarily, result in abnormal chromosome morphology.
 is_a: FYPO:0001231 ! normal cell cortex morphology
 intersection_of: PATO:0000051
+intersection_of: exists_during GO:0006995
 intersection_of: inheres_in GO:0044464
 intersection_of: qualifier PATO:0000460
-intersection_of: exists_during GO:0006995
 relationship: output_of FYPO:0000641 ! abnormal chromosome organization
 created_by: midori
 creation_date: 2012-07-16T13:56:11Z
@@ -14786,7 +14785,7 @@ synonym: "increased RNA accumulation during cellular response to adenine starvat
 is_a: FYPO:0000825 ! increased RNA level
 intersection_of: exists_during GO:0036223
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
+intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-07-16T15:56:42Z
@@ -14801,7 +14800,7 @@ synonym: "increased RNA level during cellular response to thiamine" EXACT [GO:00
 is_a: FYPO:0000825 ! increased RNA level
 intersection_of: exists_during GO:0071301
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
+intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-07-16T15:57:59Z
@@ -14833,6 +14832,77 @@ intersection_of: inheres_in GO:0016049
 intersection_of: towards CHEBI:48828
 created_by: midori
 creation_date: 2012-07-16T16:15:13Z
+
+[Term]
+id: FYPO:0001246
+name: normal RNA level during cellular response to hydrogen peroxide
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to hydrogen peroxide is normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+is_a: FYPO:0000840 ! normal RNA level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0070301
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-07-17T13:17:07Z
+
+[Term]
+id: FYPO:0001247
+name: increased RNA level during vegetative growth
+def: "A cell phenotype in which the amount of RNA measured in a cell  during vegetative growth is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased RNA accumulation during during vegetative growth" RELATED [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-07-17T13:23:30Z
+
+[Term]
+id: FYPO:0001248
+name: abnormal regulation of DNA replication initiation
+def: "A regulation phenotype in which regulation of the initiation of DNA-dependent DNA replication is abnormal." [PomBase:mah]
+synonym: "abnormal regulation of DNA-dependent DNA replication initiation" EXACT [GO:0006270, PomBase:mah]
+is_a: FYPO:0000145 ! regulation phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0030174
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-07-17T13:25:25Z
+
+[Term]
+id: FYPO:0001249
+name: increased origin firing efficiency
+def: "A regulation phenotype in which the probability that a DNA replication will initiate at a particular replication origin is higher than in wild type. In cells with increased origin firing efficiency, genomic DNA replication initiates from more origins than wild type, and is completed in more, smaller segments, than wild type." [PMID:18799612, PomBase:mah]
+is_a: FYPO:0001248 ! abnormal regulation of DNA replication initiation
+created_by: midori
+creation_date: 2012-07-17T13:28:55Z
+
+[Term]
+id: FYPO:0001250
+name: decreased origin firing efficiency
+def: "A regulation phenotype in which the probability that a DNA replication will initiate at a particular replication origin is lower than in wild type. In cells with decreased origin firing efficiency, genomic DNA replication initiates from fewer origins than wild type, and is completed in fewer, larger segments, than wild type." [PMID:18799612, PomBase:mah]
+is_a: FYPO:0001248 ! abnormal regulation of DNA replication initiation
+created_by: midori
+creation_date: 2012-07-17T13:31:48Z
+
+[Term]
+id: FYPO:0001251
+name: protein mislocalized to nucleus during vegetative growth
+def: "A cell phenotype in which a protein that is not normally found in the nucleus is observed there during vegetative growth." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "protein mislocalised to nucleus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000784 ! protein mislocalized to nucleus
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005634
+relationship: output_of FYPO:0001129 ! abnormal protein localization to nucleus
+created_by: midori
+creation_date: 2012-07-17T13:40:07Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
