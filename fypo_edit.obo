@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 25:07:2012 18:10
+date: 26:07:2012 15:16
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -515,6 +515,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000045
 name: abnormal cell growth
 def: "A cellular process phenotype in which cell growth is abnormal." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "growth defect" EXACT [PomBase:mah]
 is_a: FYPO:0000139 ! cell growth phenotype
 intersection_of: PATO:0000001
@@ -526,8 +527,14 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000046
 name: decreased cell growth
+alt_id: FYPO:0000222
 def: "A cellular process phenotype in which cell growth is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+synonym: "aerobic growth defects" RELATED [PomBase:mah]
+synonym: "decreased aerobic cell growth" NARROW []
+synonym: "reduced aerobic cell growth" NARROW [PomBase:mah]
 synonym: "reduced cell growth" EXACT [PomBase:mah]
+synonym: "slow aerobic cell growth" NARROW [PomBase:mah]
 is_a: FYPO:0000045 ! abnormal cell growth
 intersection_of: PATO:0002302
 intersection_of: inheres_in GO:0016049
@@ -2572,19 +2579,6 @@ created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
-id: FYPO:0000222
-name: decreased aerobic cell growth
-def: "A cellular process phenotype in which cell growth is decreased relative to normal under aerobic conditions." [PomBase:mah]
-synonym: "aerobic growth defects" EXACT [PomBase:mah]
-synonym: "reduced aerobic cell growth" EXACT [PomBase:mah]
-synonym: "slow aerobic cell growth" NARROW [PomBase:mah]
-is_a: FYPO:0000046 ! decreased cell growth
-intersection_of: PATO:0001459
-intersection_of: inheres_in GO:0016049
-created_by: midori
-creation_date: 2011-04-19T02:59:38Z
-
-[Term]
 id: FYPO:0000223
 name: elongated multiseptate cells
 def: "A cell morphology phenotype in which cells are elongated and have more than one septum per cell." [PomBase:mah]
@@ -2832,7 +2826,9 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000245
 name: loss of viability in stationary phase
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable after entering stationary phase." [PomBase:mah]
+synonym: "decreased viability in stationary phase" EXACT [PomBase:mah]
 synonym: "growth defect, required for stationary phase" RELATED [PomBase:mah]
+synonym: "reduced viability in stationary phase" EXACT [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2854,6 +2850,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000247
 name: decreased growth at high temperature
 def: "A cell growth phenotype in which cell growth is decreased relative to normal at a high temperature." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "growth defect, slow growth at high temperatures" NARROW [PomBase:mah]
 synonym: "reduced growth at high temperature" RELATED [PomBase:mah]
 synonym: "slow growth at high temperature" NARROW [PomBase:mah]
@@ -2869,6 +2866,7 @@ id: FYPO:0000249
 name: decreased cell growth on ammonia nitrogen source
 alt_id: FYPO:0000248
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing ammonia as the nitrogen source." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "growth defect, slow growth in minimal media" RELATED [PomBase:mah]
 synonym: "growth defect, slow growth with ammonia nitrogen source" NARROW [PomBase:mah]
 synonym: "reduced cell growth on ammonia nitrogen source" EXACT [PomBase:mah]
@@ -2886,6 +2884,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000250
 name: decreased cell growth on proline nitrogen source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing L-proline as the nitrogen source." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "growth defect, slow growth with proline nitrogen source" RELATED [PomBase:mah]
 synonym: "reduced cell growth on proline nitrogen source" RELATED [PomBase:mah]
 synonym: "slow cell growth on proline nitrogen source" NARROW [PomBase:mah]
@@ -2901,6 +2900,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000251
 name: decreased cell growth on galactose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing galactose as the carbon source." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "growth defects, growth inhibition in galactose-based medium" RELATED [PomBase:mah]
 synonym: "reduced cell growth on galactose carbon source" RELATED [PomBase:mah]
 synonym: "slow cell growth on galactose carbon source" NARROW [PomBase:mah]
@@ -3190,6 +3190,7 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000278
 name: decreased cell growth following spore germination
 def: "A cellular process phenotype in which cell growth is decreased following spore germination, resulting in the formation of a smaller colony than normal in a given amount of time." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "reduced cell growth following spore germination" EXACT [PomBase:mah]
 synonym: "slow cell growth following spore germination" NARROW [PomBase:mah]
 synonym: "spores produced smaller colonies" RELATED [PomBase:mah]
@@ -3946,7 +3947,7 @@ creation_date: 2011-07-07T03:35:26Z
 id: FYPO:0000349
 name: abnormal Golgi morphology
 def: "A cellular structure phenotype in which the morphology of the Golgi apparatus is abnormal." [PomBase:mah]
-comment: Note that an abnormal Gorgi organization process may, but does not necessarily, result in abnormal Golgi morphology.
+comment: Note that an abnormal Golgi organization process may, but does not necessarily, result in abnormal Golgi morphology.
 synonym: "Golgi morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000287 ! abnormal subcellular structure
 intersection_of: PATO:0001617
@@ -4174,7 +4175,7 @@ creation_date: 2011-07-14T06:06:09Z
 id: FYPO:0000368
 name: abnormal vacuolar morphology
 def: "A cellular structure phenotype in which the morphology of the fungal-type vacuole is abnormal." [PomBase:mah]
-comment: Note that a vacuolated phenotype may be due to the presence of more vacuoles in a cell than normal, or to vacuoles located nearer the cell surface (and hence more visible) than normal. Also ee 'vacuoles present in greater numbers' (FYPO:0000952). Note that an abnormal vacuole organization process may, but does not necessarily, result in abnormal vacuolar morphology.
+comment: Note that a vacuolated phenotype may be due to the presence of more vacuoles in a cell than normal, or to vacuoles located nearer the cell surface (and hence more visible) than normal. Also see 'vacuoles present in greater numbers' (FYPO:0000952). Note that an abnormal vacuole organization process may, but does not necessarily, result in abnormal vacuolar morphology.
 synonym: "vacuolar morphology: abnormal" EXACT [SGD:phenotype_annotation]
 synonym: "vacuolated" RELATED [PomBase:mah]
 is_a: FYPO:0000287 ! abnormal subcellular structure
@@ -4969,6 +4970,7 @@ creation_date: 2011-08-03T04:41:43Z
 id: FYPO:0000442
 name: decreased cell growth on glycerol/ethanol carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing glycerol and ethanol as the carbon sources." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "decreased cell growth on glycerol plus ethanol" EXACT [PomBase:mah]
 synonym: "reduced cell growth on glycerol/ethanol carbon source" RELATED [PomBase:mah]
 synonym: "slow cell growth on glycerol/ethanol carbon source" NARROW [PomBase:mah]
@@ -6279,6 +6281,7 @@ id: FYPO:0000550
 name: abnormal pseudohyphal growth
 alt_id: FYPO:0000435
 def: "A cellular process phenotype in which pseudohyphal growth is abnormal." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "abnormal filamentous growth" BROAD [PomBase:mah]
 synonym: "filamentous growth: abnormal" BROAD [SGD:phenotype_annotation]
 synonym: "pseudohyphal growth: abnormal" EXACT [SGD:phenotype_annotation]
@@ -6324,7 +6327,7 @@ creation_date: 2011-08-15T11:41:34Z
 id: FYPO:0000553
 name: increased pseudohyphal growth during cellular hyperosmotic response
 alt_id: FYPO:0000438
-def: "A cellular process phenotype in which the occurrence of pseudohyphal growth is increased during a cellular hyperosmotic response" [PomBase:mah]
+def: "A cellular process phenotype in which the occurrence of pseudohyphal growth is increased during a cellular hyperosmotic response." [PomBase:mah]
 synonym: "increased filamentous growth during cellular hyperosmotic response" BROAD [PomBase:mah]
 is_a: FYPO:0000550 ! abnormal pseudohyphal growth
 intersection_of: PATO:0002051
@@ -7378,6 +7381,7 @@ creation_date: 2011-08-23T05:17:07Z
 id: FYPO:0000636
 name: increased cell growth rate
 def: "A cellular process phenotype in which cell growth is faster than normal." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "enhanced cell growth" RELATED [PomBase:mah]
 synonym: "fast cell growth" EXACT [PomBase:mah]
 is_a: FYPO:0000045 ! abnormal cell growth
@@ -7390,6 +7394,7 @@ creation_date: 2011-08-31T01:30:12Z
 id: FYPO:0000637
 name: increased cell growth rate on glucose carbon source
 def: "A cell growth phenotype in which cells grow at a faster rate than normal in a medium containing glucose as the carbon source." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "enhanced growth on glucose" RELATED [PomBase:mah]
 synonym: "fast cell growth on glucose carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0000636 ! increased cell growth rate
@@ -7915,7 +7920,7 @@ creation_date: 2011-12-01T01:51:53Z
 id: FYPO:0000684
 name: decreased cell growth on glycerol carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing glycerol as the carbon source." [PomBase:al, PomBase:mah]
-comment: Note that trace amounts of another carbon source are usually required for S. pombe growth on glycerol; yeast extract-based rich medium supplies the trace substance, but minimal medium must be supplemented. It is therefore important to annotate the growth medium as an experimental condition when using this term.
+comment: Note that trace amounts of another carbon source are usually required for S. pombe growth on glycerol; yeast extract-based rich medium supplies the trace substance, but minimal medium must be supplemented. It is therefore important to annotate the growth medium as an experimental condition when using this term. Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "reduced cell growth on glycerol carbon source" EXACT [PomBase:mah]
 synonym: "slow cell growth on glycerol carbon source" NARROW [PomBase:mah]
 is_a: FYPO:0000046 ! decreased cell growth
@@ -8197,6 +8202,7 @@ creation_date: 2011-12-05T04:26:20Z
 id: FYPO:0000709
 name: decreased cell growth during nitrogen starvation
 def: "A cell growth phenotype in which cell growth is decreased relative to normal under nitrogen starvation conditions, such as in nitrogen-deficient minimal medium." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "decreased cell growth in response to nitrogen starvation" EXACT [PomBase:mah]
 synonym: "reduced cell growth during nitrogen starvation" RELATED [PomBase:mah]
 synonym: "slow cell growth during nitrogen starvation" NARROW [PomBase:mah]
@@ -9611,6 +9617,8 @@ id: FYPO:0000824
 name: altered RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell differs from normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "altered cellular mRNA level" NARROW [PomBase:vw]
+synonym: "altered cellular RNA level" EXACT [PomBase:mah]
 synonym: "RNA accumulation: abnormal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000989 ! altered level of substance in cell
 intersection_of: PATO:0001159
@@ -9625,6 +9633,8 @@ id: FYPO:0000825
 name: increased RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased cellular mRNA level" NARROW [PomBase:vw]
+synonym: "increased cellular RNA level" EXACT [PomBase:mah]
 synonym: "increased RNA accumulation" RELATED [PomBase:mah]
 synonym: "RNA accumulation: increased" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000824 ! altered RNA level
@@ -9640,6 +9650,8 @@ id: FYPO:0000826
 name: decreased RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased cellular mRNA level" NARROW [PomBase:vw]
+synonym: "decreased cellular RNA level" EXACT [PomBase:mah]
 synonym: "decreased RNA accumulation" RELATED [PomBase:mah]
 synonym: "reduced RNA level" EXACT [PomBase:mah]
 synonym: "RNA accumulation: decreased" RELATED [SGD:phenotype_annotation]
@@ -9743,6 +9755,7 @@ id: FYPO:0000834
 name: altered protein level
 def: "A cell phenotype in which the amount of protein measured in a cell differs from normal. Total protein or a specific protein may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "altered cellular protein level" EXACT [PomBase:mah]
 synonym: "protein/peptide accumulation: abnormal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000989 ! altered level of substance in cell
 intersection_of: PATO:0001159
@@ -11726,6 +11739,7 @@ creation_date: 2012-04-25T02:06:49Z
 id: FYPO:0000990
 name: increased level of substance in cell
 def: "A cell phenotype in which the amount of a specific substance measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased accumulation of substance in cell" RELATED [PomBase:mah]
 is_a: FYPO:0000989 ! altered level of substance in cell
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0001162
@@ -11780,8 +11794,8 @@ name: increased cellular phosphatidylinositol-4-phosphate level
 def: "A cell phenotype in which the amount of phosphatidylinositol-4-phosphate measured in a cell is higher than normal." [PomBase:mah]
 synonym: "increased cellular PI-4-P level" EXACT [PomBase:al]
 synonym: "increased PI-4-P accumulation" RELATED [PomBase:al]
-is_a: FYPO:0000990 ! increased level of substance in cell
 is_a: FYPO:0001015 ! altered cellular phosphatidylinositol-4-phosphate level
+is_a: FYPO:0001286 ! increased cellular phosphoinositide level
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:37530
@@ -12821,6 +12835,7 @@ creation_date: 2012-05-31T16:27:42Z
 id: FYPO:0001077
 name: normal polysaccharide level
 def: "A cell phenotype in which the amount of a polysaccharide measured in a cell is normal." [PomBase:mah]
+synonym: "normal polysaccharide accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001076 ! normal level of substance in cell
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
@@ -12833,6 +12848,7 @@ creation_date: 2012-05-31T16:29:26Z
 id: FYPO:0001078
 name: normal beta-glucan level
 def: "A cell phenotype in which the amount of beta-D-glucan measured in a cell is normal." [PomBase:mah]
+synonym: "normal beta-glucan accumulation" RELATED [PomBase:mah]
 synonym: "normal beta-D-glucan level" EXACT [CHEBI:28793, PomBase:mah]
 synonym: "normal cellular beta-glucan level" EXACT [PomBase:al]
 is_a: FYPO:0001077 ! normal polysaccharide level
@@ -12847,6 +12863,7 @@ creation_date: 2012-05-31T16:30:57Z
 id: FYPO:0001079
 name: normal galactomannan level
 def: "A cell phenotype in which the amount of galactomannan measured in a cell is normal." [PomBase:mah]
+synonym: "normal galactomannan accumulation" RELATED [PomBase:mah]
 synonym: "normal cellular galactomannan level" EXACT [PomBase:al]
 is_a: FYPO:0001077 ! normal polysaccharide level
 intersection_of: PATO:0001159
@@ -12860,6 +12877,7 @@ creation_date: 2012-05-31T16:33:06Z
 id: FYPO:0001080
 name: decreased polysaccharide level
 def: "A cell phenotype in which the amount of a polysaccharide measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased polysaccharide accumulation" RELATED [PomBase:mah]
 synonym: "decreased cellular polysaccharide level" EXACT [PomBase:mah]
 synonym: "reduced polysaccharide level" EXACT [PomBase:mah]
 is_a: FYPO:0000991 ! decreased level of substance in cell
@@ -12874,6 +12892,7 @@ creation_date: 2012-05-31T16:33:42Z
 id: FYPO:0001081
 name: decreased cell wall alpha-glucan level
 def: "A cell phenotype in which the amount of alpha-D-glucan measured in the cell wall is lower than normal." [PomBase:mah]
+synonym: "decreased cell wall alpha-glucan accumulation" RELATED [PomBase:mah]
 synonym: "decreased cell wall alpha-D-glucan level" EXACT [CHEBI:22385, PomBase:mah]
 synonym: "reduced cell wall alpha-glucan level" EXACT [PomBase:mah]
 is_a: FYPO:0001080 ! decreased polysaccharide level
@@ -12887,6 +12906,7 @@ creation_date: 2012-05-31T16:35:00Z
 id: FYPO:0001082
 name: decreased cell wall beta-glucan level
 def: "A cell phenotype in which the amount of beta-D-glucan measured in the cell wall is lower than normal." [PomBase:mah]
+synonym: "decreased cell wall beta-glucan accumulation" RELATED [PomBase:mah]
 synonym: "decreased cell wall beta-D-glucan level" EXACT [CHEBI:28793, PomBase:mah]
 synonym: "reduced cell wall beta-glucan level" EXACT [PomBase:mah]
 is_a: FYPO:0001080 ! decreased polysaccharide level
@@ -12900,6 +12920,7 @@ creation_date: 2012-05-31T16:36:19Z
 id: FYPO:0001083
 name: increased polysaccharide level
 def: "A cell phenotype in which the amount of a polysaccharide measured in a cell is greater than normal." [PomBase:mah]
+synonym: "increased polysaccharide accumulation" RELATED [PomBase:mah]
 synonym: "increased cellular polysaccharide level" EXACT [PomBase:mah]
 is_a: FYPO:0000990 ! increased level of substance in cell
 is_a: FYPO:0001085 ! altered polysaccharide level
@@ -12913,6 +12934,7 @@ creation_date: 2012-05-31T16:37:01Z
 id: FYPO:0001084
 name: increased cell wall alpha-glucan level
 def: "A cell phenotype in which the amount of alpha-D-glucan measured in the cell wall is greater than normal." [PomBase:mah]
+synonym: "increased cell wall alpha-glucan accumulation" RELATED [PomBase:mah]
 synonym: "increased cell wall alpha-D-glucan level" EXACT [CHEBI:22385, PomBase:mah]
 is_a: FYPO:0001083 ! increased polysaccharide level
 intersection_of: inheres_in GO:0009277
@@ -12924,6 +12946,8 @@ creation_date: 2012-05-31T16:37:12Z
 [Term]
 id: FYPO:0001085
 name: altered polysaccharide level
+def: "A cell phenotype in which the amount of a polysaccharide measured in a cell differs from normal." [PomBase:mah]
+synonym: "altered cellular polysaccharide level" EXACT [PomBase:mah]
 is_a: FYPO:0000989 ! altered level of substance in cell
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
@@ -13042,6 +13066,7 @@ creation_date: 2012-06-01T14:24:32Z
 id: FYPO:0001096
 name: normal RNA level during nitrogen starvation
 def: "A cell phenotype in which the amount of RNA measured in a cell during nitrogen starvation is normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+synonym: "normal RNA accumulation during nitrogen starvation" RELATED [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 is_a: FYPO:0000840 ! normal RNA level
 intersection_of: PATO:0001159
@@ -13502,6 +13527,7 @@ creation_date: 2012-06-08T15:41:39Z
 id: FYPO:0001134
 name: normal 18S rRNA level
 def: "A cell phenotype in which the amount of 18S ribosomal RNA measured in a cell is normal." [PomBase:mah]
+synonym: "normal 18S rRNA accumulation" RELATED [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 is_a: FYPO:0000840 ! normal RNA level
 is_a: FYPO:0001076 ! normal level of substance in cell
@@ -13516,6 +13542,7 @@ creation_date: 2012-06-08T16:38:01Z
 id: FYPO:0001135
 name: increased 35S rRNA precursor level
 def: "A cell phenotype in which the amount of the 35S rRNA primary transcript measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased 35S rRNA precursor accumulation" RELATED [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "increased 35S rRNA primary transcript level" EXACT [PomBase:mah, SO:0000325]
 is_a: FYPO:0000825 ! increased RNA level
@@ -13529,6 +13556,7 @@ creation_date: 2012-06-08T16:40:54Z
 id: FYPO:0001136
 name: increased 27S rRNA precursor level
 def: "A cell phenotype in which the amount of any 27S rRNA precursor measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased 27S rRNA precursor accumulation" RELATED [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 is_a: FYPO:0000825 ! increased RNA level
 created_by: midori
@@ -13538,6 +13566,7 @@ creation_date: 2012-06-08T16:44:25Z
 id: FYPO:0001137
 name: decreased 25S rRNA level
 def: "A cell phenotype in which the amount of the mature 25S rRNA measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased 25S rRNA accumulation" RELATED [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "decreased mature 25S rRNA transcript" EXACT [PomBase:vw]
 synonym: "reduced 25S rRNA level" EXACT [PomBase:mah]
@@ -13552,6 +13581,7 @@ creation_date: 2012-06-08T16:45:47Z
 id: FYPO:0001138
 name: decreased 5.8S rRNA level
 def: "A cell phenotype in which the amount of the mature 5.8S rRNA measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased 5.8S rRNA accumulation" RELATED [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "decreased mature 5.8S rRNA transcript" EXACT [PomBase:vw]
 synonym: "reduced 5.8S rRNA level" EXACT [PomBase:mah]
@@ -13604,6 +13634,7 @@ creation_date: 2012-06-11T14:48:00Z
 id: FYPO:0001142
 name: normal Man8GlcNAc level
 def: "A cell phenotype in which the amount of Man8GlcNAc2 measured in a cell is normal. Man8GlcNAc2 is any N-glycan that consists of a branched ten-membered mannooligosaccharide containing eight D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:64048, CHEBI:64052, PomBase:mah]
+synonym: "normal Man8GlcNAc accumulation" RELATED [PomBase:mah]
 comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
 synonym: "normal cellular Man8GlcNAc level" EXACT [PomBase:al]
 synonym: "normal Man8GlcNAc2 level" EXACT [PomBase:mah]
@@ -13615,6 +13646,7 @@ creation_date: 2012-06-14T15:52:46Z
 id: FYPO:0001143
 name: normal Man9GlcNAc level
 def: "A cell phenotype in which the amount of Man9GlcNAc2 measured in a cell is normal. Man9GlcNAc2 is any N-glycan that consists of a branched undecasaccharide consisting of nine D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:59579, PomBase:mah]
+synonym: "normal Man9GlcNAc accumulation" RELATED [PomBase:mah]
 comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
 synonym: "normal cellular Man9GlcNAc level" EXACT [PomBase:al]
 synonym: "normal Man9GlcNAc2 level" EXACT [PomBase:mah]
@@ -13630,6 +13662,7 @@ creation_date: 2012-06-14T15:55:35Z
 id: FYPO:0001144
 name: decreased Man8GlcNAc level
 def: "A cell phenotype in which the amount of Man8GlcNAc2 measured in a cell is lower than normal. Man8GlcNAc2 is any N-glycan that consists of a branched ten-membered mannooligosaccharide containing eight D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:64048, CHEBI:64052, PomBase:mah]
+synonym: "decreased Man8GlcNAc accumulation" RELATED [PomBase:mah]
 comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
 synonym: "decreased cellular Man8GlcNAc level" EXACT [PomBase:al]
 synonym: "decreased Man8GlcNAc2 level" EXACT [PomBase:mah]
@@ -13642,6 +13675,7 @@ creation_date: 2012-06-14T15:59:43Z
 id: FYPO:0001145
 name: increased Man9GlcNAc level
 def: "A cell phenotype in which the amount of Man9GlcNAc2 measured in a cell is higher than normal. Man9GlcNAc2 is any N-glycan that consists of a branched undecasaccharide consisting of nine D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:59579, PomBase:mah]
+synonym: "increased Man9GlcNAc accumulation" RELATED [PomBase:mah]
 comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
 synonym: "increased cellular Man9GlcNAc level" EXACT [PomBase:al]
 synonym: "increased Man9GlcNAc2 level" EXACT [PomBase:mah]
@@ -13739,6 +13773,7 @@ creation_date: 2012-06-14T16:52:51Z
 id: FYPO:0001153
 name: normal cellular methylamine level
 def: "A cell phenotype in which the amount of methylamine measured in a cell is normal." [PomBase:mah]
+synonym: "normal cellular methylamine accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001076 ! normal level of substance in cell
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
@@ -13781,6 +13816,7 @@ creation_date: 2012-06-15T13:37:06Z
 id: FYPO:0001157
 name: increased cell growth rate at high pH
 def: "A cell growth phenotype in which cells grow at a faster rate than normal in a medium with higher than standard pH. Standard S. pombe growth media are approximately pH 5.6." [PMID:10467002, PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "enhanced growth at high pH" RELATED [PomBase:mah]
 synonym: "fast cell growth at high pH" EXACT [PomBase:mah]
 is_a: FYPO:0000636 ! increased cell growth rate
@@ -13826,17 +13862,19 @@ name: decreased aerobic cell growth on glucose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal under aerobic conditions and in a medium containing glucose as the carbon source." [PomBase:mah]
 synonym: "reduced aerobic cell growth on glucose carbon source" EXACT [PomBase:mah]
 synonym: "slow aerobic cell growth on glucose carbon source" NARROW [PomBase:mah]
-is_a: FYPO:0000222 ! decreased aerobic cell growth
+is_a: FYPO:0000046 ! decreased cell growth
 created_by: midori
 creation_date: 2012-06-15T14:18:50Z
 
 [Term]
 id: FYPO:0001162
-name: decreased aerobic cell growth on raffinose carbon source
+name: decreased cell growth on raffinose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal under aerobic conditions and in a medium containing raffinose as the carbon source." [PomBase:mah]
-synonym: "reduced aerobic cell growth on raffinose carbon source" EXACT [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+synonym: "decreased aerobic cell growth on raffinose carbon source" NARROW [PomBase:mah]
+synonym: "reduced cell growth on raffinose carbon source" EXACT [PomBase:mah]
 synonym: "slow aerobic cell growth on raffinose carbon source" NARROW [PomBase:mah]
-is_a: FYPO:0000222 ! decreased aerobic cell growth
+is_a: FYPO:0000046 ! decreased cell growth
 created_by: midori
 creation_date: 2012-06-15T14:21:23Z
 
@@ -14001,6 +14039,7 @@ creation_date: 2012-06-21T11:12:36Z
 id: FYPO:0001176
 name: decreased cell growth on sucrose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing sucrose as the carbon source." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "reduced cell growth on sucrose carbon source" RELATED [PomBase:mah]
 synonym: "slow cell growth on sucrose carbon source" NARROW [PomBase:mah]
 is_a: FYPO:0000046 ! decreased cell growth
@@ -14015,6 +14054,7 @@ creation_date: 2012-06-21T11:13:07Z
 id: FYPO:0001177
 name: decreased cell growth on trehalose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing trehalose as the carbon source." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "reduced cell growth on trehalose carbon source" EXACT [PomBase:mah]
 synonym: "slow cell growth on trehalose carbon source" NARROW [PomBase:mah]
 is_a: FYPO:0000046 ! decreased cell growth
@@ -14178,6 +14218,7 @@ creation_date: 2012-07-05T14:41:18Z
 id: FYPO:0001191
 name: sensitive to Novozyme 234
 def: "A phenotype in which cells show increased sensitivity to Novozyme 234 (a formerly-available commercial enzyme preparation that degrades cell wall polysaccharides)." [PMID:1909713, PomBase:mah]
+synonym: "sensitive to lysing enzymes from Trichoderma harzianum" RELATED [PomBase:al]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
 creation_date: 2012-07-05T15:07:33Z
@@ -14195,6 +14236,7 @@ creation_date: 2012-07-05T15:35:28Z
 id: FYPO:0001193
 name: normal cellular response to Novozyme 234
 def: "A cellular response phenotype in which the cellular response to Novozyme 234 (a formerly-available commercial enzyme preparation that degrades cell wall polysaccharides), is normal." [PomBase:mah]
+synonym: "normal cellular response to lysing enzymes from Trichoderma harzianum" RELATED [PomBase:al]
 is_a: FYPO:0000953 ! normal cellular response to chemical stimulus
 created_by: midori
 creation_date: 2012-07-05T15:36:56Z
@@ -14203,6 +14245,7 @@ creation_date: 2012-07-05T15:36:56Z
 id: FYPO:0001194
 name: increased beta-glucan level
 def: "A cell phenotype in which the amount of beta-D-glucan measured in the cell is greater than normal." [PomBase:mah]
+synonym: "increased beta-glucan accumulation" RELATED [PomBase:mah]
 synonym: "increased beta-D-glucan level" EXACT [CHEBI:28793, PomBase:mah]
 synonym: "increased cellular beta-glucan level" EXACT [PomBase:mah]
 is_a: FYPO:0001083 ! increased polysaccharide level
@@ -14216,6 +14259,7 @@ creation_date: 2012-07-05T15:53:01Z
 id: FYPO:0001195
 name: decreased galactomannan level
 def: "A cell phenotype in which the amount of galactomannan measured in the cell is lower than normal." [PomBase:mah]
+synonym: "decreased galactomannan accumulation" RELATED [PomBase:mah]
 synonym: "decreased cellular galactomannan level" EXACT [PomBase:mah]
 synonym: "reduced galactomannan level" EXACT [PomBase:mah]
 is_a: FYPO:0001080 ! decreased polysaccharide level
@@ -14229,6 +14273,7 @@ creation_date: 2012-07-05T15:54:27Z
 id: FYPO:0001196
 name: normal alpha-glucan level
 def: "A cell phenotype in which the amount of alpha-D-glucan measured in a cell is normal." [PomBase:mah]
+synonym: "normal alpha-glucan accumulation" RELATED [PomBase:mah]
 synonym: "normal alpha-D-glucan level" EXACT [CHEBI:22385, PomBase:mah]
 synonym: "normal cellular alpha-glucan level" EXACT [PomBase:al]
 is_a: FYPO:0001077 ! normal polysaccharide level
@@ -14270,6 +14315,7 @@ creation_date: 2012-07-05T16:13:54Z
 id: FYPO:0001199
 name: normal cellular calcium level
 def: "A cell phenotype in which the amount of calcium ion measured in a cell is normal." [PomBase:mah]
+synonym: "normal cellular calcium accumulation" RELATED [PomBase:mah]
 synonym: "normal cellular calcium ion level" EXACT [PomBase:mah]
 is_a: FYPO:0001076 ! normal level of substance in cell
 intersection_of: PATO:0001159
@@ -14319,7 +14365,7 @@ creation_date: 2012-07-05T16:45:20Z
 id: FYPO:0001203
 name: coflocculating cells
 def: "A cell population phenotype that reflects increased occurrence of coflocculation. In coflocculation, yeast cells coaggregate with cells of another species, usually bacteria." [PMID:11472912, PomBase:mah]
-comment: Note: coflocculation between S. pombe and E. coli is sensitive to mannose but not to glucose or galactose. Plant lectins such as HHA, GNA, NPA, or Concanavalin A (ConA) decrease but do not abolish S. pombe-E.coli coflocculation. Cations have different effects: Li+, Na+, K+, Mg2+ or Mn2+ increase coflocculation, Co2+, Zn2+ , and Ca2+ have no effect, and Cu2+ or Hg2+ completely abolish coflocculation.
+comment: Note: coflocculation between S. pombe and E. coli is sensitive to mannose but not to glucose or galactose. Plant lectins such as HHA, GNA, NPA, or Concanavalin A (ConA) decrease but do not abolish S. pombe-E. coli coflocculation. Cations have different effects: Li+, Na+, K+, Mg2+ or Mn2+ increase coflocculation, Co2+, Zn2+ , and Ca2+ have no effect, and Cu2+ or Hg2+ completely abolish coflocculation.
 synonym: "co-flocculating cells" EXACT [PomBase:mah]
 synonym: "increased coflocculation" EXACT [PomBase:mah]
 is_a: FYPO:0000155 ! flocculating cells
@@ -14426,6 +14472,7 @@ creation_date: 2012-07-12T12:15:33Z
 id: FYPO:0001212
 name: decreased Glc1Man9GlcNAc level
 def: "A cell phenotype in which the amount of Glc1Man9GlcNAc2 measured in a cell is lower than normal. Glc1Man9GlcNAc2 is an N-glycan that is involved in post-translational modification of proteins, and consists of a branched ten-membered mannooligosaccharide containing one D-glucose residue, nine D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:59080, PomBase:mah]
+synonym: "decreased Glc1Man9GlcNAc accumulation" RELATED [PomBase:mah]
 comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
 synonym: "decreased cellular Glc1Man9GlcNAc level" EXACT [PomBase:al]
 synonym: "decreased Glc1Man9GlcNAc2 level" EXACT [PomBase:mah]
@@ -14441,6 +14488,7 @@ creation_date: 2012-07-12T12:16:24Z
 id: FYPO:0001213
 name: increased Man8GlcNAc level
 def: "A cell phenotype in which the amount of Man8GlcNAc2 measured in a cell is higher than normal. Man8GlcNAc2 is any N-glycan that consists of a branched ten-membered mannooligosaccharide containing eight D-mannosyl residues and two N-acetylglucosamine residues." [CHEBI:64048, CHEBI:64052, PomBase:mah]
+synonym: "increased Man8GlcNAc accumulation" RELATED [PomBase:mah]
 comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
 synonym: "increased cellular Man8GlcNAc level" EXACT [PomBase:al]
 synonym: "increased Man8GlcNAc2 level" EXACT [PomBase:mah]
@@ -14650,7 +14698,6 @@ is_a: FYPO:0001229 ! abnormal cell cortex morphology
 intersection_of: PATO:0001617
 intersection_of: exists_during GO:0006995
 intersection_of: inheres_in GO:0005938
-relationship: output_of FYPO:0000641 ! abnormal chromosome organization
 created_by: midori
 creation_date: 2012-07-16T13:52:15Z
 
@@ -14676,7 +14723,6 @@ intersection_of: PATO:0000051
 intersection_of: exists_during GO:0006995
 intersection_of: inheres_in GO:0044464
 intersection_of: qualifier PATO:0000460
-relationship: output_of FYPO:0000641 ! abnormal chromosome organization
 created_by: midori
 creation_date: 2012-07-16T13:56:11Z
 
@@ -14697,7 +14743,7 @@ creation_date: 2012-07-16T13:59:40Z
 id: FYPO:0001234
 name: slow cell growth
 def: "A cellular process phenotype in which cell growth is slower than normal." [PomBase:mah]
-comment: Use this term when growth rate, e.g. as measured by population doubling time, is reduced. Note that with growth on plates, growth rate can be difficult to assess, so it may be better to use 'decreased cell growth' (FYPO:0000046).
+comment: Use this term when growth rate, e.g. as measured by population doubling time, is reduced. Note that with growth on plates, growth rate can be difficult to assess, so it may be better to use 'decreased cell growth' (FYPO:0000046). Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "decreased cell growth rate" EXACT [PomBase:mah]
 synonym: "growth defect, slow growth" EXACT [PomBase:mah]
 synonym: "reduced cell growth rate" EXACT [PomBase:mah]
@@ -14788,7 +14834,7 @@ creation_date: 2012-07-16T15:31:50Z
 [Term]
 id: FYPO:0001242
 name: increased RNA level during cellular response to adenine starvation
-def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to adenine starvation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to adenine starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "increased RNA accumulation during cellular response to adenine starvation" RELATED [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level
@@ -14802,7 +14848,7 @@ creation_date: 2012-07-16T15:56:42Z
 [Term]
 id: FYPO:0001243
 name: increased RNA level during cellular response to vitamin B1
-def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to vitamin B1 is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to vitamin B1 is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "increased RNA accumulation during cellular response to vitamin B1" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to thiamine" EXACT [GO:0071301, PomBase:mah]
@@ -14834,7 +14880,7 @@ creation_date: 2012-07-16T16:01:16Z
 id: FYPO:0001245
 name: sensitive to cobalt
 def: "A phenotype in which cells show increased sensitivity to cobalt ions." [PomBase:mah]
-synonym: "sensitive to cobalt ions" EXACT [CHEBI:]
+synonym: "sensitive to cobalt ions" EXACT [CHEBI:23336]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001551
 intersection_of: inheres_in GO:0016049
@@ -14846,6 +14892,7 @@ creation_date: 2012-07-16T16:15:13Z
 id: FYPO:0001246
 name: normal RNA level during cellular response to hydrogen peroxide
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to hydrogen peroxide is normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+synonym: "normal RNA accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 is_a: FYPO:0000840 ! normal RNA level
 intersection_of: PATO:0001159
@@ -14859,9 +14906,9 @@ creation_date: 2012-07-17T13:17:07Z
 [Term]
 id: FYPO:0001247
 name: increased RNA level during vegetative growth
-def: "A cell phenotype in which the amount of RNA measured in a cell during vegetative growth is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+def: "A cell phenotype in which the amount of RNA measured in a cell during vegetative growth is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
-synonym: "increased RNA accumulation during during vegetative growth" RELATED [PomBase:mah]
+synonym: "increased RNA accumulation during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000000
@@ -15008,7 +15055,7 @@ creation_date: 2012-07-19T16:06:01Z
 [Term]
 id: FYPO:0001259
 name: decreased RNA level during cellular response to hypoxia
-def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to hypoxia is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to hypoxia is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "decreased RNA accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to hyperoxic stress" EXACT [GO:0071456]
@@ -15089,7 +15136,7 @@ creation_date: 2012-07-19T16:23:32Z
 [Term]
 id: FYPO:0001265
 name: increased protein phosphorylation during cellular hyperosmotic response
-def: "A cellular process phenotype in which the phosphorylation of one or more specific proteins occurs to a greater extent than normal during a cellular hyperosmotic response" [PomBase:mah]
+def: "A cellular process phenotype in which the phosphorylation of one or more specific proteins occurs to a greater extent than normal during a cellular hyperosmotic response." [PomBase:mah]
 is_a: FYPO:0000547 ! increased protein modification
 is_a: FYPO:0000775 ! abnormal protein phosphorylation
 intersection_of: PATO:0002051
@@ -15245,6 +15292,421 @@ intersection_of: inheres_in GO:0072689
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-07-20T17:36:38Z
+
+[Term]
+id: FYPO:0001279
+name: increased RNA level during cellular response to oxidative stress
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to oxidative stress is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased RNA accumulation during cellular response to oxidative stress" RELATED [PomBase:mah]
+synonym: "increased RNA level during cellular response to DEM" NARROW [PomBase:al]
+synonym: "increased RNA level during cellular response to diethyl maleate" NARROW [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level
+intersection_of: exists_during GO:0034599
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-07-26T10:59:25Z
+
+[Term]
+id: FYPO:0001280
+name: decreased RNA level during cellular response to oxidative stress
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to oxidative stress is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased RNA accumulation during cellular response to oxidative stress" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to DEM" NARROW [PomBase:al]
+synonym: "decreased RNA level during cellular response to diethyl maleate" NARROW [PomBase:mah]
+synonym: "reduced RNA level during cellular response to oxidative stress" EXACT [PomBase:mah]
+is_a: FYPO:0000826 ! decreased RNA level
+intersection_of: exists_during GO:0034599
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-07-26T11:06:41Z
+
+[Term]
+id: FYPO:0001281
+name: normal protein phosphorylation during cellular response to hydrogen peroxide
+def: "A cellular process phenotype in which the phosphorylation of one or more specific proteins is normal during a cellular response to hydrogen peroxide." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "normal protein phosphorylation during cellular response to H2O2" EXACT [PomBase:mah]
+is_a: FYPO:0000776 ! normal protein phosphorylation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0070301
+intersection_of: inheres_in GO:0006468
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-07-26T11:15:18Z
+
+[Term]
+id: FYPO:0001282
+name: abnormal chromatin organization during nitrogen starvation
+def: "A cellular process phenotype in which any process of chromatin organization is abnormal when the cell is subject to nitrogen starvation. Chromatin organization results in the specification, formation or maintenance of the physical structure of eukaryotic chromatin." [GO:0006325, PomBase:mah]
+synonym: "abnormal chromatin organisation during nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000642 ! abnormal chromatin organization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0006995
+intersection_of: inheres_in GO:0006325
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-07-26T11:50:10Z
+
+[Term]
+id: FYPO:0001283
+name: decreased protein level during cellular response to nitrogen starvation
+def: "A cell phenotype in which the amount of protein measured in a cell during a cellular response to nitrogen starvation is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "decreased protein accumulation during cellular response to nitrogen starvation" RELATED [PomBase:mah]
+synonym: "reduced protein level during cellular response to nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000835 ! decreased protein level
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2012-07-26T11:59:16Z
+
+[Term]
+id: FYPO:0001284
+name: phosphatidylserine absent from cell
+def: "A cell phenotype in which the amount of phosphatidylserine measured in a cell is too low to detect." [PomBase:mah]
+synonym: "phosphatidyl-L-serine absent from cell" EXACT [CHEBI:18303]
+synonym: "PS absent from cell" EXACT [PomBase:mah]
+is_a: FYPO:0001080 ! decreased polysaccharide level
+is_a: FYPO:0001208 ! substance absent from cell
+intersection_of: PATO:0002000
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:18303
+created_by: midori
+creation_date: 2012-07-26T12:20:15Z
+
+[Term]
+id: FYPO:0001285
+name: decreased cellular phosphatidylethanolamine level
+def: "A cell phenotype in which the amount of phosphatidylethanolamine measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular PE level" EXACT [PomBase:mah]
+synonym: "decreased phosphatidylethanolamine accumulation" RELATED [PomBase:al]
+synonym: "reduced cellular phosphatidylethanolamine level" EXACT [PomBase:mah]
+is_a: FYPO:0000991 ! decreased level of substance in cell
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:16038
+created_by: midori
+creation_date: 2012-07-26T12:25:19Z
+
+[Term]
+id: FYPO:0001286
+name: increased cellular phosphoinositide level
+def: "A cell phenotype in which the amount of a phosphoinositide measured in a cell is higher than normal. A phosphoinositide is any phosphatidylinositol that is phosphorylated at one or more of the hydroxy groups of inositol." [PomBase:mah]
+synonym: "increased cellular PI level" RELATED [PomBase:al]
+synonym: "increased PI accumulation" RELATED [PomBase:al]
+is_a: FYPO:0000990 ! increased level of substance in cell
+is_a: FYPO:0001290 ! altered cellular phosphoinositide level
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:18179
+created_by: midori
+creation_date: 2012-07-26T12:26:35Z
+
+[Term]
+id: FYPO:0001287
+name: altered phospholipid level
+def: "A cell phenotype in which the amount of a phospholipid measured in a cell differs from normal. A phospholipid is any lipid containing phosphoric acid as a mono- or di-ester." [CHEBI:16247, PomBase:mah]
+synonym: "altered cellular phospholipid level" EXACT [PomBase:mah]
+is_a: FYPO:0000989 ! altered level of substance in cell
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:16247
+created_by: midori
+creation_date: 2012-07-26T13:16:37Z
+
+[Term]
+id: FYPO:0001288
+name: increased phospholipid level
+def: "A cell phenotype in which the amount of a phospholipid measured in a cell is higher than normal. A phospholipid is any lipid containing phosphoric acid as a mono- or di-ester." [CHEBI:16247, PomBase:mah]
+synonym: "increased phospholipid accumulation" RELATED [PomBase:mah]
+synonym: "increased cellular phospholipid level" EXACT [PomBase:mah]
+is_a: FYPO:0001287 ! altered phospholipid level
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:16247
+created_by: midori
+creation_date: 2012-07-26T13:21:43Z
+
+[Term]
+id: FYPO:0001289
+name: decreased phospholipid level
+def: "A cell phenotype in which the amount of a phospholipid measured in a cell is lower than normal. A phospholipid is any lipid containing phosphoric acid as a mono- or di-ester." [CHEBI:16247, PomBase:mah]
+synonym: "decreased phospholipid accumulation" RELATED [PomBase:mah]
+synonym: "decreased cellular phospholipid level" EXACT [PomBase:mah]
+synonym: "reduced phospholipid level" EXACT [PomBase:mah]
+is_a: FYPO:0001287 ! altered phospholipid level
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:16247
+created_by: midori
+creation_date: 2012-07-26T13:22:15Z
+
+[Term]
+id: FYPO:0001290
+name: altered cellular phosphoinositide level
+def: "A cell phenotype in which the amount of a phosphoinositide measured in a cell differs from normal. A phosphoinositide is any phosphatidylinositol that is phosphorylated at one or more of the hydroxy groups of inositol." [PomBase:mah]
+synonym: "altered cellular PI level" RELATED [PomBase:al]
+synonym: "altered PI accumulation" RELATED [PomBase:al]
+is_a: FYPO:0001287 ! altered phospholipid level
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:18179
+created_by: midori
+creation_date: 2012-07-26T13:23:26Z
+
+[Term]
+id: FYPO:0001291
+name: abnormal CDP-diacylglycerol-serine O-phosphatidyltransferase activity
+def: "A molecular function phenotype in which the observed rate of CDP-diacylglycerol-serine O-phosphatidyltransferase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003882
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-07-26T13:33:37Z
+
+[Term]
+id: FYPO:0001292
+name: decreased CDP-diacylglycerol-serine O-phosphatidyltransferase activity
+def: "A molecular function phenotype in which the observed rate of CDP-diacylglycerol-serine O-phosphatidyltransferase activity is decreased." [PomBase:mah]
+synonym: "reduced CDP-diacylglycerol-serine O-phosphatidyltransferase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001291 ! abnormal CDP-diacylglycerol-serine O-phosphatidyltransferase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003882
+created_by: midori
+creation_date: 2012-07-26T13:34:04Z
+
+[Term]
+id: FYPO:0001293
+name: normal cell wall biogenesis
+def: "A cellular process phenotype in which cell wall biogenesis is normal." [PomBase:mah]
+synonym: "normal fungal-type cell wall biogenesis" EXACT [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0009272
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-07-26T13:49:47Z
+
+[Term]
+id: FYPO:0001294
+name: normal actin cortical patch localization
+def: "A cellular process phenotype in which actin cortical patch localization is normal." [PomBase:mah]
+synonym: "normal actin cortical patch localisation" EXACT [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051666
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-07-26T14:12:03Z
+
+[Term]
+id: FYPO:0001295
+name: normal palmitoyl-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of palmitoyl-CoA ligase activity is normal." [PomBase:mah]
+synonym: "normal palmitoyl-CoA synthetase activity" EXACT [GO:0090433, PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0090433
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-07-26T14:25:18Z
+
+[Term]
+id: FYPO:0001296
+name: normal oleoyl-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of oleoyl-CoA ligase activity is normal." [PomBase:mah]
+synonym: "normal oleoyl-CoA synthetase activity" EXACT [GO:0090434, PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:00904334
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-07-26T14:31:43Z
+
+[Term]
+id: FYPO:0001297
+name: abnormal palmitoyl-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of palmitoyl-CoA ligase activity is abnormal." [PomBase:mah]
+synonym: "abnormal palmitoyl-CoA synthetase activity" EXACT [GO:0090433, PomBase:mah]
+is_a: FYPO:0001305 ! abnormal long-chain fatty acid-CoA ligase activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0090433
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-07-26T14:33:36Z
+
+[Term]
+id: FYPO:0001298
+name: decreased palmitoyl-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of palmitoyl-CoA ligase activity is decreased." [PomBase:mah]
+synonym: "decreased palmitoyl-CoA synthetase activity" EXACT [GO:0090433, PomBase:mah]
+synonym: "reduced palmitoyl-CoA ligase activity" EXACT [PomBase:al]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001297 ! abnormal palmitoyl-CoA ligase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0090433
+created_by: midori
+creation_date: 2012-07-26T14:34:05Z
+
+[Term]
+id: FYPO:0001299
+name: abolished palmitoyl-CoA ligase activity
+def: "A molecular function phenotype in which palmitoyl-CoA ligase activity is absent." [PomBase:mah]
+synonym: "abolished palmitoyl-CoA synthetase activity" EXACT [GO:0090433, PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001297 ! abnormal palmitoyl-CoA ligase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0090433
+created_by: midori
+creation_date: 2012-07-26T14:34:26Z
+
+[Term]
+id: FYPO:0001300
+name: abnormal oleoyl-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of oleoyl-CoA ligase activity is abnormal." [PomBase:mah]
+synonym: "abnormal oleoyl-CoA synthetase activity" EXACT [GO:0090434, PomBase:mah]
+is_a: FYPO:0001305 ! abnormal long-chain fatty acid-CoA ligase activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0090434
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-07-26T14:38:21Z
+
+[Term]
+id: FYPO:0001301
+name: abolished oleoyl-CoA ligase activity
+def: "A molecular function phenotype in which oleoyl-CoA ligase activity is absent." [PomBase:mah]
+synonym: "abolished oleoyl-CoA synthetase activity" EXACT [GO:0090434, PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001300 ! abnormal oleoyl-CoA ligase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0090434
+created_by: midori
+creation_date: 2012-07-26T14:38:28Z
+
+[Term]
+id: FYPO:0001302
+name: decreased oleoyl-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of oleoyl-CoA ligase activity is decreased." [PomBase:mah]
+synonym: "decreased oleoyl-CoA synthetase activity" RELATED [GO:0090434, PomBase:mah]
+synonym: "reduced oleoyl-CoA ligase activity" EXACT [PomBase:al]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001300 ! abnormal oleoyl-CoA ligase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0090434
+created_by: midori
+creation_date: 2012-07-26T14:38:38Z
+
+[Term]
+id: FYPO:0001303
+name: abnormal myristoyl-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of myristoyl-CoA ligase activity is abnormal." [PomBase:mah]
+synonym: "abnormal myristoyl-CoA synthetase activity" EXACT [GO:0090432, PomBase:mah]
+is_a: FYPO:0001305 ! abnormal long-chain fatty acid-CoA ligase activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0090432
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-07-26T14:40:40Z
+
+[Term]
+id: FYPO:0001304
+name: decreased myristoyl-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of myristoyl-CoA ligase activity is decreased." [PomBase:mah]
+synonym: "decreased myristoyl-CoA synthetase activity" RELATED [GO:0090432, PomBase:mah]
+synonym: "reduced myristoyl-CoA ligase activity" EXACT [PomBase:al]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001303 ! abnormal myristoyl-CoA ligase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0090432
+created_by: midori
+creation_date: 2012-07-26T14:40:44Z
+
+[Term]
+id: FYPO:0001305
+name: abnormal long-chain fatty acid-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of any long-chain fatty acid-CoA ligase activity is abnormal." [PomBase:mah]
+synonym: "abnormal lcfa-ligase activity" EXACT [PomBase:al]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004467
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-07-26T14:44:02Z
+
+[Term]
+id: FYPO:0001306
+name: abolished long-chain fatty acid-CoA ligase activity
+def: "A molecular function phenotype in which long-chain fatty acid-CoA ligase activity is absent." [PomBase:mah]
+synonym: "abolished lcfa-ligase activity" EXACT [PomBase:al]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001305 ! abnormal long-chain fatty acid-CoA ligase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004467
+created_by: midori
+creation_date: 2012-07-26T14:45:16Z
+
+[Term]
+id: FYPO:0001307
+name: decreased long-chain fatty acid-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of long-chain fatty acid-CoA ligase activity is decreased." [PomBase:mah]
+synonym: "decreased lcfa-ligase activity" EXACT [PomBase:al]
+synonym: "reduced long-chain fatty acid-CoA ligase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001305 ! abnormal long-chain fatty acid-CoA ligase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004467
+created_by: midori
+creation_date: 2012-07-26T14:45:21Z
+
+[Term]
+id: FYPO:0001308
+name: increased long-chain fatty acid-CoA ligase activity
+def: "A molecular function phenotype in which the observed rate of long-chain fatty acid-CoA ligase activity is increased." [PomBase:mah]
+synonym: "increased lcfa-ligase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001305 ! abnormal long-chain fatty acid-CoA ligase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004467
+created_by: midori
+creation_date: 2012-07-26T14:45:26Z
+
+[Term]
+id: FYPO:0001309
+name: increased viability in stationary phase
+def: "A cell population phenotype in which a larger than normal proportion of the population remains viable after entering stationary phase." [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+created_by: midori
+creation_date: 2012-07-26T14:58:27Z
+
+[Term]
+id: FYPO:0001310
+name: normal viability in stationary phase
+def: "A cell population phenotype in which a normal proportion of the population remains viable after entering stationary phase." [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0000257 ! normal phenotype
+created_by: midori
+creation_date: 2012-07-26T14:59:20Z
+
+[Term]
+id: FYPO:0001311
+name: decreased plasmid loss
+def: "A cell phenotype in which plasmids are lost at a lower frequency than normal. Plasmid loss occurs when one or both daughter cells do not inherit copies of a plasmid from the mother cell, and may result from failure of plasmid replication or segregation." [PomBase:mah]
+is_a: FYPO:0000002 ! cell phenotype
+created_by: midori
+creation_date: 2012-07-26T15:11:43Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
