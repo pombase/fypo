@@ -6,6 +6,11 @@ then
     exit 1
 fi
 
+# this is a dirty hack: DNS problems at SysBiol mean that sometimes
+# the lookup of obo.cvs.sourceforge.net by owltools falls.  If we
+# query before we start it works.  Sigh.
+dig obo.cvs.sourceforge.net > /dev/null 2>&1
+
 username=$1
 
 CURRENT_DIR=`pwd`
