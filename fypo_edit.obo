@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 03:08:2012 15:56
+date: 07:08:2012 15:10
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -2133,8 +2133,11 @@ id: FYPO:0000161
 name: abnormal actomyosin contractile ring assembly
 def: "A cellular process phenotype in which contractile ring assembly is abnormal." [PomBase:mah]
 synonym: "abnormal actomyosin contractile ring assembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actomyosin contractile ring formation" RELATED [GO:0000915, PomBase:mah]
 synonym: "abnormal contractile ring assembly" EXACT [PomBase:mah]
 synonym: "abnormal cytokinesis, actomyosin contractile ring assembly" EXACT [PomBase:mah]
+synonym: "abnormal cytokinetic ring assembly" NARROW [PomBase:vw]
+synonym: "abnormal cytokinetic ring formation" RELATED [PomBase:vw]
 is_a: FYPO:0000032 ! abnormal cytokinesis
 is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
 is_a: FYPO:0001354 ! abnormal cellular component assembly during vegetative growth
@@ -3004,7 +3007,7 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000232
 name: actomyosin contractile ring splitting
-def: "A cytokinesis phenotype in which the contractile ring splits upon initiation of contraction, resulting in the formation of a primary ring that undergoes constriction and a secondary ring that does not constrict." [PMID:18272786, PomBase:mah]
+def: "A cytokinesis phenotype in which the contractile ring splits upon initiation of contraction during anaphase B, resulting in the formation of a primary ring that undergoes constriction and a secondary ring that does not constrict." [PMID:18272786, PomBase:mah]
 synonym: "actomyosin contractile ring splitting during vegetative growth" EXACT [PomBase:mah]
 synonym: "cytokinesis defects, splitting of the actinomyosin ring" RELATED [PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
@@ -3087,6 +3090,7 @@ id: FYPO:0000238
 name: inviable upon G0 to G1 transition
 def: "A cell phenotype in which cells fail to resume growth after several days in G0 phase. The inviable cells show some features characteristic of apoptosis, including loss of DNA." [PMID:19197239, PomBase:mah]
 synonym: "die in G0 with an apoptotic-like phenotype" EXACT [PomBase:mah]
+is_a: FYPO:0000049 ! inviable
 intersection_of: FYPO:0000049 ! inviable
 intersection_of: during GO:0045023
 created_by: midori
@@ -5566,15 +5570,15 @@ creation_date: 2011-08-03T05:18:32Z
 
 [Term]
 id: FYPO:0000443
-name: abnormal protein localization
-def: "A cell phenotype that affects the localization of a protein in a cell. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." [PomBase:mah]
+name: abnormal protein localization during vegetative growth
+def: "A cell phenotype that affects the localization of a protein in a cell in the vegetative growth phase of the life cycle. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." [PomBase:mah]
 comment: We recommend using one of the more specific terms instead of annotating to this term directly, if possible. If this term is used, we recommend noting which protein(s) were used in the assay.
-synonym: "abnormal cellular protein localisation" EXACT [PomBase:mah]
-synonym: "abnormal cellular protein localization" EXACT [PomBase:mah]
-synonym: "abnormal protein localisation" EXACT [PomBase:mah]
-synonym: "abnormal protein localization during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cellular protein localisation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cellular protein localization during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal protein localisation during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein/peptide distribution: abnormal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+is_a: FYPO:0001370 ! abnormal protein localization
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0034613
@@ -5661,7 +5665,7 @@ synonym: "abnormal protein localisation to chromosome, centromeric region" EXACT
 synonym: "abnormal protein localization to centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to chromosome, centric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "abnormal protein localization to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0071459
@@ -5709,7 +5713,7 @@ def: "A cell phenotype in which the localization of a protein to chromatin is ab
 comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to chromatin" EXACT [GO:0071168, PomBase:mah]
 synonym: "abnormal protein localization to chromatin during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0071168
@@ -6868,7 +6872,7 @@ name: abnormal protein transport
 def: "A cellular process phenotype in which protein transport is abnormal." [PomBase:mah]
 synonym: "abnormal protein transport during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein transport: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -8181,7 +8185,7 @@ synonym: "protein localisation to chromosome, centromeric region, abolished" EXA
 synonym: "protein localization to centromere abolished during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein localization to chromosome, centric region, abolished" EXACT [GO:0071459, PomBase:mah]
 synonym: "protein localization to chromosome, centromeric region, abolished" EXACT [GO:0071459, PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0071459
@@ -9317,7 +9321,10 @@ id: FYPO:0000729
 name: delayed actomyosin contractile ring assembly
 def: "A cellular process phenotype in which contractile ring assembly is delayed." [PomBase:mah]
 synonym: "delayed actomyosin contractile ring assembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "delayed actomyosin contractile ring formation" RELATED [GO:0000915, PomBase:vw]
 synonym: "delayed contractile ring assembly" EXACT [PomBase:mah]
+synonym: "delayed cytokinetic ring assembly" RELATED [PomBase:vw]
+synonym: "delayed cytokinetic ring formation" RELATED [PomBase:vw]
 is_a: FYPO:0000161 ! abnormal actomyosin contractile ring assembly
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
@@ -9338,12 +9345,13 @@ creation_date: 2011-12-07T04:51:57Z
 
 [Term]
 id: FYPO:0000731
-name: abnormal protein localization to medial cortex
-def: "A cell phenotype in which the localization of a protein to the medial cortex is abnormal." [PomBase:mah]
+name: abnormal protein localization to medial cortex during vegetative growth
+def: "A cell phenotype in which the localization of a protein to the medial cortex is abnormal in the vegetative growth phase of the life cycle." [PomBase:mah]
 comment: Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abnormal protein localisation to medial cortex" EXACT [GO:0071168, PomBase:mah]
-synonym: "abnormal protein localization to medial cortex during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+synonym: "abnormal protein localisation to medial cortex during vegetative growth" EXACT [GO:0071574, PomBase:mah]
+synonym: "abnormal protein localization to medial ring during vegetative growth" EXACT [GO:0031097, GO:0071574]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+is_a: FYPO:0001373 ! abnormal protein localization to medial cortex
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0071574
@@ -9478,7 +9486,7 @@ def: "A cell phenotype in which the localization of a protein to actin cortical 
 comment: Encompasses both presence of proteins not normally found in actin cortical patches and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to actin cortical patch" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to actin cortical patch during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0044379
@@ -9747,7 +9755,7 @@ id: FYPO:0000762
 name: protein accumulation
 def: "A localization phenotype in which specific proteins abnormally accumulate in the cell, or in a part of the cell such as within an organelle." [PomBase:mah]
 synonym: "protein accumulation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0002270
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in CL:0000000
@@ -10032,7 +10040,7 @@ is_a: FYPO:0001320 ! vegetative cell phenotype
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CHEBI:36080
-relationship: output_of FYPO:0000443 ! abnormal protein localization
+relationship: output_of FYPO:0000443 ! abnormal protein localization during vegetative growth
 created_by: midori
 creation_date: 2012-02-29T12:48:27Z
 
@@ -11911,8 +11919,7 @@ name: abnormal protein localization to linear element
 def: "A cell phenotype in which the localization of a protein to linear elements is abnormal." [PomBase:mah]
 comment: Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to linear element" EXACT [GO:0036181, PomBase:mah]
-synonym: "abnormal protein localization to linear element during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0001370 ! abnormal protein localization
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0036181
@@ -12150,7 +12157,7 @@ def: "A cell phenotype in which the localization of a protein to the cell cortex
 comment: Encompasses both presence of proteins not normally found at the cell cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to cell cortex" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to cell cortex during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0072697
@@ -12166,7 +12173,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "decreased protein localisation to cell cortex" EXACT [PomBase:mah]
 synonym: "decreased protein localization to cell cortex during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced protein localization to cell cortex" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0072697
@@ -12182,7 +12189,7 @@ synonym: "abolished protein localization to cell cortex" EXACT [PomBase:mah]
 synonym: "protein absent from cell cortex" RELATED [PomBase:mah]
 synonym: "protein localisation to cell cortex abolished" EXACT [PomBase:mah]
 synonym: "protein localization to cell cortex abolished during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0072697
@@ -12196,7 +12203,7 @@ def: "A cell phenotype in which the localization of a protein to the microtubule
 comment: Encompasses both presence of proteins not normally found associated with the microtubule cytoskeleton and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to microtubule cytoskeleton" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0072698
@@ -12211,7 +12218,7 @@ def: "A cell phenotype in which the localization of a protein to the microtubule
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein localisation to microtubule cytoskeleton" EXACT [PomBase:mah]
 synonym: "increased protein localization to microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0072698
@@ -12226,7 +12233,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "decreased protein localisation to microtubule cytoskeleton" EXACT [PomBase:mah]
 synonym: "decreased protein localization to microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced protein localization to microtubule cytoskeleton" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0072698
@@ -12242,7 +12249,7 @@ synonym: "abolished protein localization to microtubule cytoskeleton" EXACT [Pom
 synonym: "protein absent from to microtubule cytoskeleton" RELATED [PomBase:mah]
 synonym: "protein localisation to microtubule cytoskeleton abolished" EXACT [PomBase:mah]
 synonym: "protein localization to microtubule cytoskeleton abolished during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0072698
@@ -12256,7 +12263,7 @@ def: "A cell phenotype in which the localization of a protein to the cortical mi
 comment: Encompasses both presence of proteins not normally found associated with the cortical microtubule cytoskeleton and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to cortical microtubule cytoskeleton" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to cortical microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0072699
@@ -12271,7 +12278,7 @@ def: "A cell phenotype in which the localization of a protein to the cortical mi
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein localisation to cortical microtubule cytoskeleton" EXACT [PomBase:mah]
 synonym: "increased protein localization to cortical microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0072699
@@ -12286,7 +12293,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "decreased protein localisation to cortical microtubule cytoskeleton" EXACT [PomBase:mah]
 synonym: "decreased protein localization to cortical microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced protein localization to cortical microtubule cytoskeleton" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0072699
@@ -12302,7 +12309,7 @@ synonym: "abolished protein localization to cortical microtubule cytoskeleton" E
 synonym: "protein absent from cortical microtubule cytoskeleton" RELATED [PomBase:mah]
 synonym: "protein localisation to cortical microtubule cytoskeleton abolished" EXACT [PomBase:mah]
 synonym: "protein localization to cortical microtubule cytoskeleton abolished during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0072699
@@ -12316,7 +12323,7 @@ def: "A cell phenotype in which the localization of a protein to the spindle pol
 comment: Encompasses both presence of proteins not normally found at the spindle pole body and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to spindle pole body" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to spindle pole body during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0071988
@@ -12332,7 +12339,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "decreased protein localisation to spindle pole body" EXACT [PomBase:mah]
 synonym: "decreased protein localization to spindle pole body during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced protein localization to spindle pole body" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0071988
@@ -12348,7 +12355,7 @@ synonym: "abolished protein localization to spindle pole body" EXACT [PomBase:ma
 synonym: "protein absent from to spindle pole body" RELATED [PomBase:mah]
 synonym: "protein localisation to spindle pole body abolished" EXACT [PomBase:mah]
 synonym: "protein localization to spindle pole body abolished during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0071988
@@ -13263,7 +13270,10 @@ name: abolished actomyosin contractile ring assembly
 def: "A cytokinesis phenotype in which the assembly and distribution of actin filament bundles does not occur, resulting in the failure to form an actomyosin contractile ring." [PMID:19713940, PomBase:mah]
 comment: Note that a ring structure may form without filamentous actin, but a ring lacking F-actin is not considered a contractile ring.
 synonym: "abolished actomyosin contractile ring assembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished actomyosin contractile ring formation" RELATED [GO:0000915, PomBase:mah]
 synonym: "abolished contractile ring assembly" EXACT [PomBase:mah]
+synonym: "abolished cytokinetic ring assembly" RELATED [PomBase:vw]
+synonym: "abolished cytokinetic ring formation" RELATED [PomBase:vw]
 synonym: "cytokinesis defects, contractile ring actin, absent" RELATED [PomBase:mah]
 is_a: FYPO:0000161 ! abnormal actomyosin contractile ring assembly
 intersection_of: PATO:0001558
@@ -14904,7 +14914,7 @@ def: "A cell phenotype in which the localization of a protein to the nucleus is 
 comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to nucleus" EXACT [GO:0034504, PomBase:mah]
 synonym: "abnormal protein localization to nucleus during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0034504
@@ -14919,7 +14929,7 @@ def: "A cell phenotype in which the localization of a protein to the nucleus is 
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein localisation to nucleus" EXACT [GO:0034504, PomBase:mah]
 synonym: "increased protein localization to nucleus during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0034504
@@ -14934,7 +14944,7 @@ comment: Encompasses both presence of proteins not normally found associated wit
 synonym: "abnormal protein heterochromatin to chromatin" EXACT [PomBase:mah]
 synonym: "abnormal protein localisation to heterochromatin" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to heterochromatin during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0097355
@@ -15579,13 +15589,14 @@ creation_date: 2012-06-27T14:04:23Z
 
 [Term]
 id: FYPO:0001179
-name: protein localization abolished
-def: "A cell phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found." [PomBase:mah]
+name: protein localization abolished during vegetative growth
+def: "A cell phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found in the vegetative growth phase of the life cycle." [PomBase:mah]
 comment: We recommend using one of the more specific terms instead of annotating to this term directly, if possible. If this term is used, we recommend noting which protein(s) were used in the assay.
-synonym: "abolished protein localization" EXACT [PomBase:mah]
-synonym: "protein absent from specific location in cell" RELATED [PomBase:mah]
-synonym: "protein localization abolished during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+synonym: "abolished protein localization during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein absent from specific location in cell during vegetative growth" RELATED [PomBase:mah]
+synonym: "protein localisation abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+is_a: FYPO:0001375 ! protein localization abolished
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0034613
@@ -16779,7 +16790,7 @@ synonym: "abnormal protein localisation to kinetochore" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to chromosome, centric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "abnormal protein localization to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "abnormal protein localization to kinetochore during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0034501
@@ -17691,6 +17702,9 @@ def: "A cell phenotype that affects the localization of a structure or substance
 synonym: "localisation phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000138 ! localization phenotype
 is_a: FYPO:0001331 ! cellular process phenotype during vegetative growth
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0051641
 created_by: midori
 creation_date: 2012-08-01T16:55:18Z
 
@@ -18053,6 +18067,257 @@ intersection_of: inheres_in GO:0044237
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2012-08-02T18:07:32Z
+
+[Term]
+id: FYPO:0001364
+name: abnormal contractile ring contraction
+def: "A cellular process phenotype in which contractile ring contraction is abnormal. Contractile ring contraction is the part of cytokinesis in which the actomyosin contractile ring constricts." [GO:0000916, PomBase:mah]
+synonym: "abnormal actomyosin contractile ring contraction" EXACT [GO:0000916, PomBase:mah]
+synonym: "abnormal contractile ring constriction" EXACT [PomBase:vw]
+synonym: "abnormal contractile ring contraction during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal contractile ring contraction involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+is_a: FYPO:0000032 ! abnormal cytokinesis
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000916
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-07T12:39:39Z
+
+[Term]
+id: FYPO:0001365
+name: decreased rate of contractile ring contraction
+def: "A cellular process phenotype in which the rate of contractile ring contraction is decreased. Contractile ring contraction is the part of cytokinesis in which the actomyosin contractile ring constricts." [GO:0000916, PomBase:mah]
+synonym: "decreased rate of actomyosin contractile ring contraction" EXACT [GO:0000916, PomBase:mah]
+synonym: "decreased rate of contractile ring constriction" EXACT [PomBase:mah]
+synonym: "decreased rate of contractile ring contraction during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased rate of contractile ring contraction involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "reduced rate of contractile ring contraction" EXACT [PomBase:mah]
+is_a: FYPO:0001364 ! abnormal contractile ring contraction
+intersection_of: PATO:0000911
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0032187
+created_by: midori
+creation_date: 2012-08-07T12:41:50Z
+
+[Term]
+id: FYPO:0001366
+name: normal actin cytoskeleton organization
+def: "A cellular process phenotype in which actin cytoskeleton organization is normal. Actin cytoskeleton organization is the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures comprising actin filaments and their associated proteins." [GO:0030036, PomBase:mah]
+synonym: "normal actin cytoskeleton organisation" EXACT [PomBase:mah]
+synonym: "normal actin cytoskeleton organization during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal actin filament organization" RELATED [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030036
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-07T12:51:48Z
+
+[Term]
+id: FYPO:0001367
+name: normal cytokinesis
+def: "A cellular process phenotype in which cytokinesis is normal. Cytokinesis is part of the cell cycle and results in the division of the cytoplasm of a cell and its separation into two daughter cells." [GO:0033205, PomBase:mah]
+synonym: "normal cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "normal cytokinesis during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0033205
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-07T12:54:44Z
+
+[Term]
+id: FYPO:0001368
+name: normal actomyosin contractile ring assembly
+def: "A cellular process phenotype in which contractile ring assembly is normal." [PomBase:mah]
+synonym: "normal actomyosin contractile ring assembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal actomyosin contractile ring formation" RELATED [GO:0000915, PomBase:vw]
+synonym: "normal contractile ring assembly" EXACT [PomBase:mah]
+synonym: "normal cytokinesis, actomyosin contractile ring assembly" EXACT [PomBase:mah]
+synonym: "normal cytokinetic ring assembly" RELATED [PomBase:vw]
+synonym: "normal cytokinetic ring formation" RELATED [PomBase:vw]
+is_a: FYPO:0001366 ! normal actin cytoskeleton organization
+is_a: FYPO:0001367 ! normal cytokinesis
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000915
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-07T12:54:57Z
+
+[Term]
+id: FYPO:0001369
+name: mislocalized actomyosin contractile ring
+def: "A cell phenotype in which a cell forms an actomyosin contractile ring in an abnormal location. The normal location is at the midpoint of, and perpendicular to, the long axis of the cell." [PomBase:mah]
+synonym: "contractile ring displaced from cell centre" EXACT [PomBase:vw]
+synonym: "mislocalised actomyosin contractile ring" EXACT [PomBase:mah]
+is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
+relationship: output_of FYPO:0000033 ! abnormal contractile ring localization
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005826
+created_by: midori
+creation_date: 2012-08-07T13:31:19Z
+
+[Term]
+id: FYPO:0001370
+name: abnormal protein localization
+def: "A cell phenotype that affects the localization of a protein in a cell. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." [PomBase:mah]
+comment: We recommend using one of the more specific terms instead of annotating to this term directly, if possible. If this term is used, we recommend noting which protein(s) were used in the assay.
+synonym: "abnormal cellular protein localisation" EXACT [PomBase:mah]
+synonym: "abnormal cellular protein localization" EXACT [PomBase:mah]
+synonym: "abnormal protein localisation" EXACT [PomBase:mah]
+synonym: "protein/peptide distribution: abnormal" RELATED [SGD:phenotype_annotation]
+is_a: FYPO:0000138 ! localization phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0034613
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-07T13:40:05Z
+
+[Term]
+id: FYPO:0001371
+name: protein localization to medial cortex abolished
+def: "A cell phenotype in which the localization of a protein to the medial cortex is abolished." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "protein localisation to medial cortex abolished" EXACT [GO:0071574, PomBase:mah]
+synonym: "protein localization to medial ring abolished" EXACT [GO:0031097, GO:0071574]
+is_a: FYPO:0001373 ! abnormal protein localization to medial cortex
+is_a: FYPO:0001375 ! protein localization abolished
+intersection_of: PATO:0001558
+intersection_of: towards GO:0071574
+created_by: midori
+creation_date: 2012-08-07T13:55:44Z
+
+[Term]
+id: FYPO:0001372
+name: abnormal protein localization to medial cortex in spores
+def: "A cell phenotype in which the localization of a protein to the medial cortex of a spore is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to medial cortex in spores" EXACT [GO:0071574, PomBase:mah]
+synonym: "abnormal protein localization to medial ring in spores" EXACT [GO:0031097, GO:0071574]
+is_a: FYPO:0001373 ! abnormal protein localization to medial cortex
+intersection_of: FYPO:0001373 
+intersection_of: inheres_in CL:0000596
+created_by: midori
+creation_date: 2012-08-07T13:49:04Z
+
+[Term]
+id: FYPO:0001373
+name: abnormal protein localization to medial cortex
+def: "A cell phenotype in which the localization of a protein to the medial cortex is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to medial cortex" EXACT [GO:0071574, PomBase:mah]
+synonym: "abnormal protein localization to medial ring" EXACT [GO:0031097, GO:0071574]
+is_a: FYPO:0001370 ! abnormal protein localization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071574
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-07T13:49:11Z
+
+[Term]
+id: FYPO:0001374
+name: protein localization to medial cortex abolished in spores
+def: "A cell phenotype in which the localization of a protein to the medial cortex of a spore is abolished." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "protein localisation to medial cortex abolished in spores" EXACT [GO:0071574, PomBase:mah]
+synonym: "protein localization to medial ring abolished in spores" EXACT [GO:0031097, GO:0071574]
+is_a: FYPO:0001371 ! protein localization to medial cortex abolished
+is_a: FYPO:0001372 ! abnormal protein localization to medial cortex in spores
+intersection_of: PATO:0001558
+intersection_of: inheres_in CL:0000596
+intersection_of: towards GO:0071574
+created_by: midori
+creation_date: 2012-08-07T13:56:10Z
+
+[Term]
+id: FYPO:0001375
+name: protein localization abolished
+def: "A cell phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found." [PomBase:mah]
+comment: We recommend using one of the more specific terms instead of annotating to this term directly, if possible. If this term is used, we recommend noting which protein(s) were used in the assay.
+synonym: "abolished protein localization" EXACT [PomBase:mah]
+synonym: "protein absent from specific location in cell" RELATED [PomBase:mah]
+is_a: FYPO:0001370 ! abnormal protein localization
+intersection_of: PATO:0001558
+intersection_of: towards GO:0034613
+created_by: midori
+creation_date: 2012-08-07T13:56:37Z
+
+[Term]
+id: FYPO:0001376
+name: normal cellular calcium level during cellular response to salt stress
+def: "A cell phenotype in which the amount of calcium ion measured in a cell during a cellular response to salt stress is normal." [PomBase:mah]
+synonym: "normal cellular calcium accumulation during cellular response to salt stress" RELATED [PomBase:mah]
+synonym: "normal cellular calcium ion level during cellular response to salt stress" EXACT [PomBase:mah]
+is_a: FYPO:0001199 ! normal cellular calcium level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0071472
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:29108
+created_by: midori
+creation_date: 2012-08-07T14:56:53Z
+
+[Term]
+id: FYPO:0001377
+name: decreased cellular calcium level during cellular response to salt stress
+def: "A cell phenotype in which the amount of calcium ion measured in a cell during a cellular response to salt stress is lower than normal." [PomBase:mah]
+synonym: "decreased calcium accumulation during cellular response to salt stress" RELATED [PomBase:al]
+synonym: "decreased cellular calcium ion level during cellular response to salt stress" EXACT [PomBase:mah]
+synonym: "reduced cellular calcium level during cellular response to salt stress" EXACT [PomBase:mah]
+is_a: FYPO:0001197 ! decreased cellular calcium level
+intersection_of: exists_during GO:0071472
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:29108
+created_by: midori
+creation_date: 2012-08-07T14:58:22Z
+
+[Term]
+id: FYPO:0001378
+name: increased cellular calcium level during cellular response to salt stress
+def: "A cell phenotype in which the amount of calcium ion measured in a cell during a cellular response to salt stress is higher than normal." [PomBase:mah]
+synonym: "increased calcium accumulation during cellular response to salt stress" RELATED [PomBase:mah]
+synonym: "increased cellular calcium ion level during cellular response to salt stress" EXACT [PomBase:mah]
+is_a: FYPO:0001198 ! increased cellular calcium level
+intersection_of: exists_during GO:0071472
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:29108
+created_by: midori
+creation_date: 2012-08-07T14:58:54Z
+
+[Term]
+id: FYPO:0001379
+name: resistance to tacrolimus
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of tacrolimus than normal." [PomBase:mah]
+synonym: "resistance to FK506" EXACT [CHEBI:61057, PomBase:mah]
+synonym: "resistance to tacrolimus during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to tacrolimus" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:61057
+created_by: midori
+creation_date: 2012-08-07T15:05:20Z
+
+[Term]
+id: FYPO:0001380
+name: normal nuclear morphology
+def: "A cellular structure phenotype in which the morphology of the nucleus is normal." [PomBase:mah]
+synonym: "normal nuclear morphology during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular structure during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005634
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-07T15:06:55Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
