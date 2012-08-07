@@ -581,7 +581,80 @@ def: "A cellular process phenotype in which a cell does not undergo the normal t
 synonym: "loss of pre-quiescence cell divisions following nitrogen starvation" EXACT [PomBase:al]
 is_a: FYPO:0000427 ! abnormal G1 to G0 transition
 
-this one might work as abolished GO cell division (51301) or cell cycle (7049), preceding GO g0-to-g1 (45023)
+this one might work as abolished mitotic cell cycle, preceding GO g0 entry:
+intersection_of: PATO:0001558
+intersection_of: towards GO:0000278
+intersection_of: is_preceded_by GO:0070314
 
 
+2012-06-15
+- a bunch more new terms for which I haven't figured out how/whether to do xps:
 
+[Term]
+id: FYPO:0001165
+name: inviable following anaerobic growth
+def: "A cell phenotype in which cells that are exposed to anaerobic conditions fail to grow upon being returned to aerobic conditions." [PomBase:mah]
+is_a: FYPO:0000049 ! inviable
+
+[Term]
+id: FYPO:0001155
+name: altered effect on growth medium
+def: "A phenotype in which the changes that take place in growth medium, due to metabolism, secretion, etc. by a cell or population of cells, differs from normal." [PomBase:mah]
+is_a: FYPO:0000001 ! phenotype
+
+[Term]
+id: FYPO:0001156
+name: decreased pH of growth medium
+def: "A phenotype in which cells cause the pH of their growth medium to decrease by a greater amount than normal." [PomBase:mah]
+synonym: "decreased pH level of growth medium" EXACT [PomBase:al]
+synonym: "increased growth medium acidification" EXACT [PMID:10467002, PomBase:mah]
+is_a: FYPO:0001155 ! altered effect on growth medium
+
+[Term]
+id: FYPO:0001157
+name: increased cell growth rate at high pH
+def: "A cell growth phenotype in which cells grow at a faster rate than normal in a medium with higher than standard pH. Standard S. pombe growth media are approximately pH 5.6." [PMID:10467002, PomBase:mah]
+synonym: "enhanced growth at high pH" RELATED [PomBase:mah]
+synonym: "fast cell growth at high pH" EXACT [PomBase:mah]
+is_a: FYPO:0000636 ! increased cell growth rate
+
+[Term]
+id: FYPO:0001158
+name: normal cellular pH
+def: "A cell phenotype in which the measured intracellular pH is normal." [PomBase:mah]
+synonym: "normal cellular pH level" EXACT [PomBase:al]
+is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0000257 ! normal phenotype
+
+[Term]
+id: FYPO:0001159
+name: increased cellular pH
+def: "A cell phenotype in which the measured intracellular pH is higher than normal." [PomBase:mah]
+synonym: "increased cellular pH level" EXACT [PomBase:al]
+is_a: FYPO:0000002 ! cell phenotype
+
+[Term]
+id: FYPO:0001161
+name: slow aerobic cell growth on glucose carbon source
+def: "A cell growth phenotype in which cells grow at a slower rate than normal under aerobic conditions and in a medium containing glucose as the carbon source." [PomBase:mah]
+is_a: FYPO:0000222 ! slow aerobic cell growth
+
+[Term]
+id: FYPO:0001162
+name: slow aerobic cell growth on raffinose carbon source
+def: "A cell growth phenotype in which cells grow at a slower rate than normal under aerobic conditions and in a medium containing raffinose as the carbon source." [PomBase:mah]
+is_a: FYPO:0000222 ! slow aerobic cell growth
+
+[Term]
+id: FYPO:0001163
+name: slow semi-anaerobic cell growth on glucose carbon source
+def: "A cell growth phenotype in which cells grow at a slower rate than normal under semi-anaerobic conditions and in a medium containing glucose as the carbon source." [PomBase:mah]
+is_a: FYPO:0000046 ! slow cell growth
+
+note added 2012-08-07: term names above may not be completely up to date following overhaul of aerobic & vegetative growth handling
+----
+
+
+2012-08-07
+- what to do if one phenotype may be an output_of more than one possible other phenotype?
+	e.g. decreased transcription (fypo:781) could result from insufficient positive regulation (fypo:623) or overzealous negative regulation (fypo:624)
