@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 07:08:2012 15:10
+date: 09:08:2012 16:08
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -18095,8 +18095,8 @@ synonym: "decreased rate of contractile ring constriction" EXACT [PomBase:mah]
 synonym: "decreased rate of contractile ring contraction during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased rate of contractile ring contraction involved in cell cycle cytokinesis" EXACT [PomBase:mah]
 synonym: "reduced rate of contractile ring contraction" EXACT [PomBase:mah]
-is_a: FYPO:0001364 ! abnormal contractile ring contraction
 is_a: FYPO:0000419 ! decreased rate of cytokinesis
+is_a: FYPO:0001364 ! abnormal contractile ring contraction
 intersection_of: PATO:0000911
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0032187
@@ -18158,10 +18158,10 @@ def: "A cell phenotype in which a cell forms an actomyosin contractile ring in a
 synonym: "contractile ring displaced from cell centre" EXACT [PomBase:vw]
 synonym: "mislocalised actomyosin contractile ring" EXACT [PomBase:mah]
 is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
-relationship: output_of FYPO:0000033 ! abnormal contractile ring localization
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005826
+relationship: output_of FYPO:0000033 ! abnormal contractile ring localization
 created_by: midori
 creation_date: 2012-08-07T13:31:19Z
 
@@ -18203,7 +18203,7 @@ comment: Encompasses both presence of proteins not normally found at the medial 
 synonym: "abnormal protein localisation to medial cortex in spores" EXACT [GO:0071574, PomBase:mah]
 synonym: "abnormal protein localization to medial ring in spores" EXACT [GO:0031097, GO:0071574]
 is_a: FYPO:0001373 ! abnormal protein localization to medial cortex
-intersection_of: FYPO:0001373 
+intersection_of: FYPO:0001373 ! abnormal protein localization to medial cortex
 intersection_of: inheres_in CL:0000596
 created_by: midori
 creation_date: 2012-08-07T13:49:04Z
@@ -18321,6 +18321,29 @@ intersection_of: inheres_in GO:0005634
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-07T15:06:55Z
+
+[Term]
+id: FYPO:0001381
+name: abnormal protein kinase activity
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004672
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-09T16:05:03Z
+
+[Term]
+id: FYPO:0001382
+name: decreased protein kinase activity
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is decreased." [PomBase:mah]
+synonym: "reduced protein kinase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001381 ! abnormal protein kinase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004672
+created_by: midori
+creation_date: 2012-08-09T16:06:18Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
