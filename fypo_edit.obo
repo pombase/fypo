@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:08:2012 16:34
+date: 10:08:2012 16:47
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -18349,7 +18349,6 @@ creation_date: 2012-08-09T16:06:18Z
 id: FYPO:0001383
 name: normal DNA content
 def: "A cell phenotype in which the amount of DNA measured in a cell is normal." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 is_a: FYPO:0001076 ! normal level of substance in cell
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
@@ -18357,6 +18356,57 @@ intersection_of: qualifier PATO:0000461
 intersection_of: towards CHEBI:16991
 created_by: midori
 creation_date: 2012-08-09T16:33:17Z
+
+[Term]
+id: FYPO:0001384
+name: abolished protein kinase activity
+def: "A molecular function phenotype in which a protein kinase activity is absent." [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001381 ! abnormal protein kinase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004672
+created_by: midori
+creation_date: 2012-08-10T13:54:04Z
+
+[Term]
+id: FYPO:0001385
+name: inviable germinating spore, cell cycle arrest with replicated DNA
+def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest with replicated DNA." [PMID:9705504, PomBase:mah]
+is_a: FYPO:0000316 ! inviable germinating spore
+intersection_of: FYPO:0000316
+intersection_of: has_part FYPO:0000444
+created_by: midori
+creation_date: 2012-08-10T14:06:51Z
+
+[Term]
+id: FYPO:0001386
+name: increased haploidization
+def: "A cell phenotype in which non-sporulating diploid cells become haploid by chromosome loss at a higher frequency than normal." [PMID:9914167, PomBase:mah]
+is_a: FYPO:0001320 ! vegetative cell phenotype
+created_by: midori
+creation_date: 2012-08-10T14:51:16Z
+
+[Term]
+id: FYPO:0001387
+name: loss of viability at high temperature
+def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when are grown at a temperature higher than standard." [PomBase:mah]
+comment: For S. pombe, high temperature usually means above 32 degrees C. This term can be used when a population of heat-sensitive cells loses viability when grown at the restrictive temperature.
+synonym: "loss of viability at restrictive temperature" RELATED [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+relationship: includes_cells_with_phenotype FYPO:0000713 ! abnormal cellular response to starvation
+created_by: midori
+creation_date: 2012-08-10T14:55:36Z
+
+[Term]
+id: FYPO:0001388
+name: decreased protein level in germinating spore
+def: "A cell phenotype in which the amount of protein measured in a cell is lower than normal during or just after spore germination. Total protein or a specific protein may be affected." [PomBase:mah]
+is_a: FYPO:0000835 ! decreased protein level
+intersection_of: inheres_in CL:0000596
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2012-08-10T16:32:24Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
