@@ -36,6 +36,7 @@ CHEBI_OBO=http://obo.cvs.sourceforge.net/viewvc/obo/obo/ontology/chemical/chebi.
 CELL_TYPE_OBO=http://obo.cvs.sourceforge.net/viewvc/obo/obo/ontology/anatomy/cell_type/cell.edit.obo
 BRENDA_TISSUE_OBO=http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO
 
+echo running ontology-release-runner
 /usr/local/OBOReleaseManager/scripts/ontology-release-runner -outdir $OUT_DIR \
     --no-subsets -reasoner elk --simple \
     $FYPO_OBO $GO_OBO $PCO_OBO $CHEBI_OBO $CELL_TYPE_OBO $BRENDA_TISSUE_OBO \
@@ -58,14 +59,14 @@ files_to_move="fypo.obo fypo-merged.obo fypo-simple.obo"
 
 for file in $files_to_move
 do
+  svn cp releases/latest/$file $new_release_dir/$file
   mv $release_path/$file $new_release_dir/ ||
     (echo failed to move $file to release directory 1>&2; exit 1)
-  svn add $new_release_dir/$file
 done
 
-rm -f releases/latest
-(cd releases; ln -s $release latest)
-svn add releases/latest
+rm releases/latest
+
+ln -s $new_release_dir releases/latest
 
 svn commit --username=$username -m 'FYPO release' releases
 
