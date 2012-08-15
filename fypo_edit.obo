@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 10:08:2012 16:47
+date: 15:08:2012 15:45
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -707,6 +707,7 @@ name: long microtubules
 def: "A microtubule organization phenotype in which cells form microtubules that are longer than normal." [PomBase:mah]
 synonym: "long microtubules during vegetative growth" EXACT [PomBase:mah]
 synonym: "microtubule organization defects, long microtubules" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
 is_a: FYPO:0001350 ! abnormal microtubule cytoskeleton organization during vegetative growth
 intersection_of: PATO:0000573
 intersection_of: exists_during GO:0072690
@@ -4270,14 +4271,17 @@ creation_date: 2011-06-03T01:43:41Z
 [Term]
 id: FYPO:0000339
 name: mislocalized septum
-def: "A septation phenotype in which a cell forms a septum in an abnormal location." [PomBase:mah]
+def: "A septation phenotype in which a cell forms a septum in an abnormal location. The normal location is at the midpoint of the long axis of the cell." [PomBase:mah]
 synonym: "abnormal barrier septum site selection" RELATED [PomBase:mah]
 synonym: "abnormal septum localization" RELATED [PomBase:mah]
 synonym: "abnormal septum location" EXACT [PomBase:mah]
 synonym: "abnormal septum position" EXACT [PomBase:mah]
 synonym: "abnormal septum positioning" RELATED [PomBase:mah]
+synonym: "asymmetric septum" EXACT [PomBase:mah]
+synonym: "asymmetrically located septum" EXACT [PomBase:mah]
 synonym: "mislocalised septum" EXACT [PomBase:mah]
 synonym: "mislocalized septum during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000117 ! abnormal septation
 is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
@@ -6547,6 +6551,7 @@ synonym: "abnormal nuclear position" EXACT [PomBase:mah]
 synonym: "abnormal nucleus localisation" EXACT [PomBase:mah]
 synonym: "nuclear position: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000138 ! localization phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051647
 intersection_of: qualifier PATO:0000460
@@ -10849,6 +10854,7 @@ name: normal protein localization to nucleus
 def: "A cell phenotype in which the localization of a protein to the nucleus is normal." [PomBase:mah]
 synonym: "normal protein localisation to nucleus" EXACT [PomBase:mah]
 synonym: "normal protein localization to nucleus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 is_a: FYPO:0001337 ! localization phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -16219,6 +16225,7 @@ id: FYPO:0001226
 name: mononucleate with asymmetric septum
 def: "A cellular structure phenotype in which a cell contains a single nucleus and an asymmetrically located septum." [PomBase:mah]
 synonym: "mononucleate with asymmetric septum during vegetative growth" EXACT [PomBase:mah]
+synonym: "mononucleate with asymmetrically located septum" EXACT [PomBase:mah]
 is_a: FYPO:0000060 ! mononucleate
 is_a: FYPO:0000339 ! mislocalized septum
 intersection_of: FYPO:0000136 ! cellular structure phenotype
@@ -18175,6 +18182,7 @@ synonym: "abnormal cellular protein localization" EXACT [PomBase:mah]
 synonym: "abnormal protein localisation" EXACT [PomBase:mah]
 synonym: "protein/peptide distribution: abnormal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000138 ! localization phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0034613
 intersection_of: qualifier PATO:0000460
@@ -18373,8 +18381,8 @@ id: FYPO:0001385
 name: inviable germinating spore, cell cycle arrest with replicated DNA
 def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest with replicated DNA." [PMID:9705504, PomBase:mah]
 is_a: FYPO:0000316 ! inviable germinating spore
-intersection_of: FYPO:0000316
-intersection_of: has_part FYPO:0000444
+intersection_of: FYPO:0000316 ! inviable germinating spore
+intersection_of: has_part FYPO:0000444 ! cell cycle arrest with replicated DNA
 created_by: midori
 creation_date: 2012-08-10T14:06:51Z
 
@@ -18407,6 +18415,229 @@ intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-08-10T16:32:24Z
+
+[Term]
+id: FYPO:0001389
+name: normal nucleus localization
+def: "A cellular process phenotype in which nucleus localization is abnormal." [PomBase:mah]
+synonym: "normal nuclear localization" EXACT [PomBase:mah]
+synonym: "normal nuclear position" EXACT [PomBase:mah]
+synonym: "normal nucleus localisation" EXACT [PomBase:mah]
+synonym: "normal nucleus localization during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000138 ! localization phenotype
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051647
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-15T11:46:28Z
+
+[Term]
+id: FYPO:0001390
+name: misoriented septum
+def: "A septation phenotype in which a cell forms a septum that is not perpendicular to the long axis of the cell." [PomBase:mah]
+synonym: "abnormal septum orientation" EXACT [PomBase:mah]
+synonym: "misoriented septum during vegetative growth" EXACT [PomBase:mah]
+synonym: "tilted septum" EXACT [PomBase:al]
+is_a: FYPO:0000117 ! abnormal septation
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+intersection_of: PATO:0000133
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0000935
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-15T13:03:09Z
+
+[Term]
+id: FYPO:0001391
+name: asymmetric septum, near non-growing end
+def: "A septation phenotype in which a cell forms a septum closer to the non-growing end of the cell, instead of at the midpoint of the long axis." [PomBase:mah]
+synonym: "asymmetric septum, near non-growing end, during vegetative growth" EXACT [PomBase:mah]
+synonym: "asymmetrically located septum, near non-growing end" EXACT [PomBase:mah]
+is_a: FYPO:0000339 ! mislocalized septum
+created_by: midori
+creation_date: 2012-08-15T13:08:14Z
+
+[Term]
+id: FYPO:0001392
+name: abnormal regulation of cell growth
+def: "A regulation phenotype in which regulation of vegetative cell growth is abnormal." [PomBase:mah]
+synonym: "abnormal regulation of vegetative cell growth" EXACT [PomBase:mah]
+is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0001558
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-15T13:20:37Z
+
+[Term]
+id: FYPO:0001393
+name: abnormal activation of monopolar cell growth
+def: "A regulation phenotype in which the activation of monopolar cell growth, i.e. the initiation of growth at the old end of a cell following cell division, is abnormal." [PomBase:mah]
+synonym: "abnormal regulation of monopolar vegetative cell growth" EXACT [PomBase:mah]
+is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051522
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-15T13:21:29Z
+
+[Term]
+id: FYPO:0001394
+name: activation of monopolar cell growth at either end
+def: "A regulation phenotype in which the activation of monopolar cell growth may occur at either the new or old end of the cell, instead of exclusively at the old end, following cell division. A population of cells with this phenotype has a 1:1 mix of cells initiating growth at the new end and cells initiating growth at the old end." [PomBase:mah]
+synonym: "abnormal initiation of growth from either old or new end following cell division" EXACT [PomBase:al]
+is_a: FYPO:0001393 ! abnormal activation of monopolar cell growth
+created_by: midori
+creation_date: 2012-08-15T13:23:28Z
+
+[Term]
+id: FYPO:0001395
+name: normal activation of monopolar cell growth
+def: "A regulation phenotype in which the activation of monopolar cell growth, i.e. the initiation of growth at the old end of a cell following cell division, is normal." [PomBase:mah]
+synonym: "normal initiation of growth from old end following cell division" EXACT [PomBase:al]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051522
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-15T13:35:02Z
+
+[Term]
+id: FYPO:0001396
+name: normal activation of bipolar cell growth
+def: "A regulation phenotype in which activation of bipolar cell growth is normal; results in normal new end take-off." [PomBase:mah]
+synonym: "normal activation of bipolar cell growth during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal NETO" EXACT [PomBase:mah]
+synonym: "normal new end take off" EXACT [PomBase:mah]
+is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051519
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-15T13:48:18Z
+
+[Term]
+id: FYPO:0001397
+name: monopolar actin cortical patch localization to old end
+def: "A cellular process phenotype in which actin cortical patches are localized to only the old end of a cell following cell division." [PomBase:mah]
+synonym: "monopolar actin cortical patch localisation to old end" EXACT [PomBase:mah]
+synonym: "monopolar actin cortical patch localization to old end during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001019 ! monopolar actin cortical patch localization
+created_by: midori
+creation_date: 2012-08-15T14:00:14Z
+
+[Term]
+id: FYPO:0001398
+name: monopolar actin cortical patch localization to either end
+def: "A cellular process phenotype in which actin cortical patches are localized to only one end of a cell following cell division; patches may localize to either the old or the new end. A population of cells with this phenotype has a 1:1 mix of cells with actin patches at the old end and cells with patches at the new end." [PomBase:mah]
+synonym: "monopolar actin cortical patch localisation to either end" EXACT [PomBase:mah]
+synonym: "monopolar actin cortical patch localization to either end during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001019 ! monopolar actin cortical patch localization
+created_by: midori
+creation_date: 2012-08-15T14:06:42Z
+
+[Term]
+id: FYPO:0001399
+name: normal mitotic spindle
+def: "A cellular structure phenotype in which the structure of the mitotic spindle is normal." [PomBase:mah]
+synonym: "normal mitotic spindle during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular structure during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: exists_during GO:0007067
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0072686
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-15T14:29:30Z
+
+[Term]
+id: FYPO:0001400
+name: normal interphase cytoplasmic microtubules
+def: "A cellular structure phenotype in which the structure of cytoplasmic microtubules is normal during interphase of the mitotic cell cycle." [PomBase:mah]
+synonym: "normal cytoplasmic microtubules during interphase" EXACT [PomBase:mah]
+synonym: "normal interphase cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular structure during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: exists_during GO:0007067
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005881
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-15T14:40:33Z
+
+[Term]
+id: FYPO:0001401
+name: abnormal protein localization to cell division site
+def: "A cell phenotype in which the localization of a protein to the site of cell division is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the cell cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to cell division site" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to cell division site during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+created_by: midori
+creation_date: 2012-08-15T15:14:14Z
+
+[Term]
+id: FYPO:0001402
+name: normal protein localization to cell cortex
+def: "A cell phenotype in which the localization of a protein to the cell cortex is normal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the cell cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to cell cortex" EXACT [PomBase:mah]
+synonym: "normal protein localization to cell cortex during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072697
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-15T15:15:59Z
+
+[Term]
+id: FYPO:0001403
+name: increased cell-substrate adhesion
+def: "A cell adhesion phenotype in which cells adhere to a substrate more strongly or to a greater extent than normal." [PomBase:mah]
+synonym: "increased cell-substrate adhesion during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000009 ! abnormal cell adhesion
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: towards GO:0031589
+created_by: midori
+creation_date: 2012-08-15T15:36:37Z
+
+[Term]
+id: FYPO:0001404
+name: irregular colony morphology
+def: "A colony morphology phenotype in which the outline of a colony growing on a solid surface is not symmetrical." [PomBase:mah, PomBase:mp]
+is_a: FYPO:0000150 ! abnormal colony morphology
+created_by: midori
+creation_date: 2012-08-15T15:38:42Z
+
+[Term]
+id: FYPO:0001405
+name: glossy colony morphology
+def: "A colony morphology phenotype in which a colony growing on a solid surface has an abnormally glossy surface." [PomBase:mah, PomBase:mp]
+is_a: FYPO:0000150 ! abnormal colony morphology
+created_by: midori
+creation_date: 2012-08-15T15:40:06Z
+
+[Term]
+id: FYPO:0001406
+name: increased septum thickness
+def: "A septation phenotype in which a cell forms a septum that is thicker than normal." [PomBase:mah]
+synonym: "increased septum thickness during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000117 ! abnormal septation
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+intersection_of: PATO:0000591
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0000935
+created_by: midori
+creation_date: 2012-08-15T15:43:42Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
