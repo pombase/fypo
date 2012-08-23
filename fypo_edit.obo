@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 22:08:2012 16:10
+date: 23:08:2012 16:48
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -587,7 +587,7 @@ alt_id: FYPO:0000222
 def: "A cellular process phenotype in which cell growth is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "aerobic growth defects" RELATED [PomBase:mah]
-synonym: "decreased aerobic cell growth" NARROW []
+synonym: "decreased aerobic cell growth" NARROW [PomBase:mah]
 synonym: "reduced aerobic cell growth" NARROW [PomBase:mah]
 synonym: "reduced cell growth" EXACT [PomBase:mah]
 synonym: "slow aerobic cell growth" NARROW [PomBase:mah]
@@ -3719,6 +3719,7 @@ id: FYPO:0000290
 name: transcription phenotype
 def: "A cellular process phenotype that affects DNA-dependent transcription." [PomBase:mah]
 synonym: "transcription phenotype during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000142 ! gene expression phenotype
 is_a: FYPO:0000294 ! RNA metabolism phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: during GO:0072690
@@ -3731,6 +3732,7 @@ id: FYPO:0000291
 name: translation phenotype
 def: "A cellular process phenotype that affects translation." [PomBase:mah]
 synonym: "translation phenotype during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000142 ! gene expression phenotype
 is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: during GO:0072690
@@ -4339,6 +4341,7 @@ is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0070814
 intersection_of: qualifier PATO:0002052
+relationship: has_output FYPO:0001413 ! increased cellular sulfide level
 created_by: midori
 creation_date: 2011-06-14T04:44:26Z
 
@@ -10008,7 +10011,7 @@ creation_date: 2012-02-13T12:48:01Z
 [Term]
 id: FYPO:0000780
 name: increased transcription
-def: "A cellular process phenotype in which transcription occurs to a greater extent than normal." [PomBase:mah]
+def: "A cellular process phenotype in which transcription occurs to a greater extent than normal. All genes, or a specific subset of genes, may be affected." [PomBase:mah]
 comment: Use this term if there is evidence, such as labeled nucleotide incorporation, showing that transcription rather than RNA stability is affected; otherwise, use 'increased RNA level' (FYPO:0000825).
 synonym: "increased transcription during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001335 ! transcription regulation phenotype during vegetative growth
@@ -10022,7 +10025,7 @@ creation_date: 2012-02-28T03:56:27Z
 [Term]
 id: FYPO:0000781
 name: decreased transcription
-def: "A cellular process phenotype in which transcription occurs to a lower extent than normal." [PomBase:mah]
+def: "A cellular process phenotype in which transcription occurs to a lower extent than normal. All genes, or a specific subset of genes, may be affected." [PomBase:mah]
 comment: Use this term if there is evidence, such as labeled nucleotide incorporation, showing that transcription rather than RNA stability is affected; otherwise, use 'decreased RNA level' (FYPO:0000826).
 synonym: "decreased transcription during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced transcription" EXACT [PomBase:mah]
@@ -10634,9 +10637,11 @@ id: FYPO:0000824
 name: altered RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell differs from normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "abnormal RNA level" EXACT [PomBase:mah]
 synonym: "altered cellular mRNA level" NARROW [PomBase:vw]
 synonym: "altered cellular RNA level" EXACT [PomBase:mah]
 synonym: "RNA accumulation: abnormal" RELATED [SGD:phenotype_annotation]
+is_a: FYPO:0000142 ! gene expression phenotype
 is_a: FYPO:0000989 ! altered level of substance in cell
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
@@ -10655,7 +10660,7 @@ synonym: "increased cellular mRNA level" NARROW [PomBase:vw]
 synonym: "increased cellular RNA level" EXACT [PomBase:mah]
 synonym: "increased RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased RNA accumulation during vegetative growth" RELATED [PomBase:mah]
-synonym: "increased RNA level during vegetative growth" EXACT []
+synonym: "increased mRNA level during vegetative growth" NARROW [PomBase:mah]
 synonym: "increased RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "RNA accumulation: increased" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0001326 ! altered RNA level during vegetative growth
@@ -10791,8 +10796,10 @@ id: FYPO:0000834
 name: altered protein level
 def: "A cell phenotype in which the amount of protein measured in a cell differs from normal. Total protein or a specific protein may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "abnormal protein level" EXACT [PomBase:mah]
 synonym: "altered cellular protein level" EXACT [PomBase:mah]
 synonym: "protein/peptide accumulation: abnormal" RELATED [SGD:phenotype_annotation]
+is_a: FYPO:0000142 ! gene expression phenotype
 is_a: FYPO:0000989 ! altered level of substance in cell
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
@@ -10867,7 +10874,7 @@ def: "A cell phenotype in which cells contain one nucleus apiece and are elongat
 synonym: "elongated mononucleate cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "long mononucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000060 ! mononucleate
-is_a: FYPO:0000949 ! aseptate
+is_a: FYPO:0000950 ! elongated aseptate cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cells
@@ -10881,6 +10888,8 @@ id: FYPO:0000840
 name: normal RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal cellular RNA level" EXACT [PomBase:mah]
+synonym: "normal mRNA level" NARROW [PomBase:mah]
 synonym: "RNA accumulation: normal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0001076 ! normal level of substance in cell
 intersection_of: PATO:0001159
@@ -13009,6 +13018,7 @@ creation_date: 2012-04-25T01:27:55Z
 id: FYPO:0000989
 name: altered level of substance in cell
 def: "A cell phenotype in which the amount of a specific substance measured in a cell differs from normal." [PomBase:mah]
+synonym: "abnormal level of substance in cell" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0001159
 intersection_of: inheres_in CL:0000000
@@ -13045,6 +13055,7 @@ creation_date: 2012-04-25T02:08:00Z
 id: FYPO:0000992
 name: altered cellular phosphatidylinositol-3-phosphate level
 def: "A cell phenotype in which the amount of phosphatidylinositol-3-phosphate measured in a cell differs from normal." [PomBase:mah]
+synonym: "abnormal cellular phosphatidylinositol-3-phosphate level" EXACT [PomBase:mah]
 synonym: "altered cellular phosphatidylinositol-3-phosphate level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cellular PI-3-P level" EXACT [PomBase:al]
 synonym: "altered PI-3-P accumulation" RELATED [PomBase:al]
@@ -13360,6 +13371,7 @@ creation_date: 2012-04-26T12:59:57Z
 id: FYPO:0001015
 name: altered cellular phosphatidylinositol-4-phosphate level
 def: "A cell phenotype in which the amount of phosphatidylinositol-4-phosphate measured in a cell differs from normal." [PomBase:mah]
+synonym: "abnormal cellular phosphatidylinositol-4-phosphate level" EXACT [PomBase:mah]
 synonym: "altered cellular phosphatidylinositol-4-phosphate level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cellular PI-4-P level" EXACT [PomBase:al]
 synonym: "altered PI-4-P accumulation" RELATED [PomBase:al]
@@ -14363,6 +14375,7 @@ creation_date: 2012-05-31T16:37:12Z
 id: FYPO:0001085
 name: altered polysaccharide level
 def: "A cell phenotype in which the amount of a polysaccharide measured in a cell differs from normal." [PomBase:mah]
+synonym: "abnormal polysaccharide level" EXACT [PomBase:mah]
 synonym: "altered cellular polysaccharide level" EXACT [PomBase:mah]
 synonym: "altered polysaccharide level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
@@ -14422,7 +14435,7 @@ creation_date: 2012-05-31T16:42:35Z
 [Term]
 id: FYPO:0001090
 name: resistance to heat shock
-def: "A cell phenotype in which cells show decreased sensitivity to heat shock. Heat shock is a transient exposure to high temperature." [PomBase:mah]
+def: "A cell phenotype in which cells show decreased sensitivity to heat shock. Heat shock is a form of heat stress in which cells are briefly exposed to a very high temperature." [PomBase:mah]
 synonym: "resistance to heat shock during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to heat shock" EXACT [PomBase:mah]
 is_a: FYPO:0000850 ! resistant to stress
@@ -14432,7 +14445,7 @@ creation_date: 2012-06-01T13:48:51Z
 [Term]
 id: FYPO:0001091
 name: normal cellular response to heat shock
-def: "A cellular response phenotype in which the cellular response to heat shock is normal (i.e. indistinguishable from wild type). Heat shock is a transient exposure to high temperature." [PomBase:mah]
+def: "A cellular response phenotype in which the cellular response to heat shock is normal (i.e. indistinguishable from wild type). Heat shock is a form of heat stress in which cells are briefly exposed to a very high temperature." [PomBase:mah]
 synonym: "normal cellular response to heat shock during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000968 ! normal cellular response to stress
 created_by: midori
@@ -14487,6 +14500,8 @@ id: FYPO:0001096
 name: normal RNA level during nitrogen starvation
 def: "A cell phenotype in which the amount of RNA measured in a cell during nitrogen starvation is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal cellular RNA level during nitrogen starvation" EXACT [PomBase:mah]
+synonym: "normal mRNA level during nitrogen starvation" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during nitrogen starvation" RELATED [PomBase:mah]
 is_a: FYPO:0000840 ! normal RNA level
 intersection_of: PATO:0001159
@@ -14748,6 +14763,7 @@ id: FYPO:0001116
 name: decreased RNA level during cellular response to hydrogen peroxide
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to hydrogen peroxide is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mRNA level during cellular response to hydrogen peroxide" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced RNA level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
@@ -15288,6 +15304,7 @@ creation_date: 2012-06-14T16:55:28Z
 id: FYPO:0001155
 name: altered effect on growth medium
 def: "A phenotype in which the changes that take place in growth medium, due to metabolism, secretion, etc. by a cell or population of cells, differs from normal." [PomBase:mah]
+synonym: "abnormal effect on growth medium" EXACT [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
 created_by: midori
 creation_date: 2012-06-15T12:57:29Z
@@ -16440,6 +16457,7 @@ id: FYPO:0001242
 name: increased RNA level during cellular response to adenine starvation
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to adenine starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased mRNA level during cellular response to adenine starvation" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to adenine starvation" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to adenine starvation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level
@@ -16456,6 +16474,7 @@ id: FYPO:0001243
 name: increased RNA level during cellular response to vitamin B1
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to vitamin B1 is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased mRNA level during cellular response to oxidative stress" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to vitamin B1" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to thiamine" EXACT [GO:0071301, PomBase:mah]
 synonym: "increased RNA level during cellular response to vitamin B1 during vegetative growth" EXACT [PomBase:mah]
@@ -16473,6 +16492,7 @@ id: FYPO:0001244
 name: decreased RNA level during cellular response to vitamin B1 starvation
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to vitamin B1 starvation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mRNA level during cellular response to vitamin B1 starvation" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to vitamin B1 starvation" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to thiamine starvation" EXACT [GO:0036225, PomBase:mah]
 synonym: "decreased RNA level during cellular response to vitamin B1 starvation during vegetative growth" EXACT [PomBase:mah]
@@ -16505,6 +16525,7 @@ id: FYPO:0001246
 name: normal RNA level during cellular response to hydrogen peroxide
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to hydrogen peroxide is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal mRNA level during cellular response to hydrogen peroxide" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001317 ! normal RNA level during vegetative growth
@@ -16658,6 +16679,7 @@ id: FYPO:0001259
 name: decreased RNA level during cellular response to hypoxia
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to hypoxia is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "decreased mRNA level during cellular response to hypoxia" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to hyperoxic stress" EXACT [GO:0071456]
 synonym: "decreased RNA level during cellular response to hypoxia during vegetative growth" EXACT [PomBase:mah]
@@ -16676,6 +16698,7 @@ id: FYPO:0001260
 name: normal RNA level during cellular response to hypoxia
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to hypoxia is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "normal mRNA level during cellular response to hypoxia" NARROW [PomBase:mah]
 synonym: "normal protein level during cellular response to increased oxygen tension" EXACT [GO:0071456]
 synonym: "normal RNA accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to hyperoxic stress" EXACT [GO:0071456]
@@ -16933,6 +16956,7 @@ id: FYPO:0001279
 name: increased RNA level during cellular response to oxidative stress
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to oxidative stress is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased mRNA level during cellular response to oxidative stress" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to oxidative stress" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to DEM" NARROW [PomBase:al]
 synonym: "increased RNA level during cellular response to diethyl maleate" NARROW [PomBase:mah]
@@ -16951,6 +16975,7 @@ id: FYPO:0001280
 name: decreased RNA level during cellular response to oxidative stress
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to oxidative stress is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mRNA level during cellular response to oxidative stress" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to oxidative stress" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to DEM" NARROW [PomBase:al]
 synonym: "decreased RNA level during cellular response to diethyl maleate" NARROW [PomBase:mah]
@@ -17061,6 +17086,7 @@ creation_date: 2012-07-26T12:26:35Z
 id: FYPO:0001287
 name: altered phospholipid level
 def: "A cell phenotype in which the amount of a phospholipid measured in a cell differs from normal. A phospholipid is any lipid containing phosphoric acid as a mono- or di-ester." [CHEBI:16247, PomBase:mah]
+synonym: "abnormal phospholipid level" EXACT [PomBase:mah]
 synonym: "altered cellular phospholipid level" EXACT [PomBase:mah]
 synonym: "altered phospholipid level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
@@ -17107,6 +17133,7 @@ creation_date: 2012-07-26T13:22:15Z
 id: FYPO:0001290
 name: altered cellular phosphoinositide level
 def: "A cell phenotype in which the amount of a phosphoinositide measured in a cell differs from normal. A phosphoinositide is any phosphatidylinositol that is phosphorylated at one or more of the hydroxy groups of inositol." [PomBase:mah]
+synonym: "abnormal cellular phosphoinositide level" EXACT [PomBase:mah]
 synonym: "altered cellular phosphoinositide level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cellular PI level" RELATED [PomBase:al]
 synonym: "altered PI accumulation" RELATED [PomBase:al]
@@ -17435,6 +17462,8 @@ id: FYPO:0001317
 name: normal RNA level during vegetative growth
 def: "A cell phenotype in which the amount of RNA measured in a cell is normal when the cell is in the vegetative growth phase of the life cycle. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal cellular RNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal mRNA level during vegetative growth" NARROW [PomBase:mah]
 is_a: FYPO:0000840 ! normal RNA level
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
 intersection_of: PATO:0001159
@@ -17513,6 +17542,7 @@ creation_date: 2012-08-01T14:46:27Z
 id: FYPO:0001323
 name: altered level of substance in cell during vegetative growth
 def: "A cell phenotype in which the amount of a specific substance measured in a cell differs from normal when the cell is in the vegetative growth phase of the life cycle." [PomBase:mah]
+synonym: "abnormal level of substance in cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000989 ! altered level of substance in cell
 is_a: FYPO:0001320 ! vegetative cell phenotype
 intersection_of: PATO:0001159
@@ -17544,6 +17574,7 @@ id: FYPO:0001325
 name: altered protein level during vegetative growth
 def: "A cell phenotype in which the amount of protein measured in a cell differs from normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "abnormal protein level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cellular protein level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000834 ! altered protein level
 is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
@@ -17560,6 +17591,7 @@ id: FYPO:0001326
 name: altered RNA level during vegetative growth
 def: "A cell phenotype in which the amount of RNA measured in a cell differs from normal when the cell is in the vegetative growth phase of the life cycle. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "abnormal RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cellular mRNA level during vegetative growth" NARROW [PomBase:vw]
 synonym: "altered cellular RNA level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000824 ! altered RNA level
@@ -17953,7 +17985,7 @@ name: decreased vegetative cell growth
 def: "A cellular process phenotype in which vegetative cell growth is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise (e.g. as for 'decreased cell growth on glucose carbon source' FYPO:0001407).
 synonym: "aerobic vegetative growth defects" RELATED [PomBase:mah]
-synonym: "decreased vegetative aerobic cell growth" NARROW []
+synonym: "decreased vegetative aerobic cell growth" NARROW [PomBase:mah]
 synonym: "reduced vegetative aerobic cell growth" NARROW [PomBase:mah]
 synonym: "reduced vegetative cell growth" EXACT [PomBase:mah]
 synonym: "slow vegetative aerobic cell growth" NARROW [PomBase:mah]
@@ -18704,8 +18736,9 @@ creation_date: 2012-08-16T16:41:11Z
 [Term]
 id: FYPO:0001411
 name: altered cellular sulfide level
-def: "A cell phenotype in which the amount of sulfide (S2-), also called acid labile sulfide) measured in a cell differs from normal." [PomBase:mah]
+def: "A cell phenotype in which the amount of sulfide (S2-, also called acid labile sulfide) measured in a cell differs from normal." [PomBase:mah]
 synonym: "abnormal cellular sulfide accumulation" RELATED [PomBase:mah]
+synonym: "abnormal cellular sulfide level" EXACT [PomBase:mah]
 synonym: "altered cellular acid labile sulfide level" EXACT [PomBase:al]
 synonym: "altered cellular sulfide ion level" EXACT [PomBase:mah]
 synonym: "altered cellular sulfide level during vegetative growth" EXACT [PomBase:mah]
@@ -18722,7 +18755,7 @@ creation_date: 2012-08-16T16:43:19Z
 [Term]
 id: FYPO:0001412
 name: decreased cellular sulfide level
-def: "A cell phenotype in which the amount of sulfide (S2-), also called acid labile sulfide) measured in a cell is lower than from normal." [PomBase:mah]
+def: "A cell phenotype in which the amount of sulfide (S2-, also called acid labile sulfide) measured in a cell is lower than from normal." [PomBase:mah]
 synonym: "decreased cellular acid labile sulfide level" EXACT [PomBase:al]
 synonym: "decreased cellular sulfide accumulation" RELATED [PomBase:mah]
 synonym: "decreased cellular sulfide ion level" EXACT [PomBase:mah]
@@ -18984,6 +19017,363 @@ intersection_of: exists_during GO:0072690
 intersection_of: precedes GO:0006261
 created_by: midori
 creation_date: 2012-08-22T15:27:17Z
+
+[Term]
+id: FYPO:0001431
+name: resistance to Dio-9
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of the antibiotic Dio-9 than normal." [PomBase:mah]
+comment: DIO 9 has CAS registry number 11006-20-5.
+synonym: "resistance to DIO 9" EXACT [PomBase:mah]
+synonym: "resistance to Dio-9 during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to Dio-9" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+created_by: midori
+creation_date: 2012-08-23T12:22:31Z
+
+[Term]
+id: FYPO:0001432
+name: resistance to ethidium bromide
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of ethidium bromide than normal." [PomBase:mah]
+synonym: "resistance to EtBr" EXACT [PomBase:mah]
+synonym: "resistance to ethidium bromide during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to ethidium bromide" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:4883
+created_by: midori
+creation_date: 2012-08-23T12:45:11Z
+
+[Term]
+id: FYPO:0001433
+name: resistance to decamethylenediguanidine
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of decamethylenediguanidine than normal." [PomBase:mah]
+synonym: "resistance to Anticoman" EXACT [CHEBI:768260, PomBase:mah]
+synonym: "resistance to decamethylenediguanidine during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to decamethylenediguanidine" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:768260
+created_by: midori
+creation_date: 2012-08-23T12:49:28Z
+
+[Term]
+id: FYPO:0001434
+name: resistance to N,N'-(p-xylylidene)bis-aminoguanidine 2HCl
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of N,N'-(p-xylylidene)bis-aminoguanidine 2HCl than normal." [PomBase:mah]
+synonym: "resistance to N,N'-(p-xylylidene)bis-aminoguanidine 2HCl during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to N,N'-(p-xylylidene)bis-aminoguanidine 2HCl" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+created_by: midori
+creation_date: 2012-08-23T12:50:30Z
+
+[Term]
+id: FYPO:0001435
+name: normal cellular response to erythromycin
+def: "A cellular response phenotype in which the cellular response to erythromycin is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to erythromycin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+created_by: midori
+creation_date: 2012-08-23T12:53:50Z
+
+[Term]
+id: FYPO:0001436
+name: normal cellular response to trichodermin
+def: "A cellular response phenotype in which the cellular response to trichodermin is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to trichodermin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+created_by: midori
+creation_date: 2012-08-23T12:55:40Z
+
+[Term]
+id: FYPO:0001437
+name: normal cellular response to antimycin A
+def: "A cellular response phenotype in which the cellular response to antimycin A is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to antimycin A during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+created_by: midori
+creation_date: 2012-08-23T12:56:12Z
+
+[Term]
+id: FYPO:0001438
+name: normal cellular response to tetracycline
+def: "A cellular response phenotype in which the cellular response to tetracycline is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to tetracycline during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+created_by: midori
+creation_date: 2012-08-23T12:58:33Z
+
+[Term]
+id: FYPO:0001439
+name: normal cellular response to chloramphenicol
+def: "A cellular response phenotype in which the cellular response to chloramphenicol is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to chloramphenicol during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+created_by: midori
+creation_date: 2012-08-23T12:59:01Z
+
+[Term]
+id: FYPO:0001440
+name: abnormal protein complex localization
+def: "A cell phenotype in which the localization of a protein complex is abnormal." [PomBase:mah]
+synonym: "abnormal cellular protein complex localization" EXACT [GO:0034629, PomBase:mah]
+synonym: "abnormal protein complex localisation" EXACT [GO:0034629, PomBase:mah]
+synonym: "abnormal protein complex localization during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0034629
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-23T14:24:05Z
+
+[Term]
+id: FYPO:0001441
+name: decreased SAGA complex localization to promoter region
+def: "A cell phenotype in which the localization of a protein to the cell cortex is decreased." [PomBase:mah]
+synonym: "decreased SAGA complex localisation to promoter region" EXACT [PomBase:mah]
+synonym: "decreased SAGA complex localization to promoter region during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased SAGA complex localization to transcription regulatory region" EXACT [PomBase:mah]
+synonym: "decreased SAGA complex recruitment" EXACT [PomBase:mah]
+synonym: "reduced SAGA complex localization to promoter region" EXACT [PomBase:mah]
+synonym: "reduced SAGA complex recruitment" EXACT [PomBase:vw]
+is_a: FYPO:0001440 ! abnormal protein complex localization
+created_by: midori
+creation_date: 2012-08-23T14:34:58Z
+
+[Term]
+id: FYPO:0001442
+name: decreased histone H3-K9 acetylation
+def: "A cellular process phenotype in which acetylation of lysine at position 9 of histone H3 occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased histone H3 K9 acetylation" EXACT [GO:0043970, PomBase:mah]
+synonym: "decreased histone H3-K9 acetylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased histone lysine H3 K9 acetylation" EXACT [GO:0051567, PomBase:mah]
+synonym: "reduced histone H3-K9 acetylation" EXACT [PomBase:mah]
+is_a: FYPO:0000201 ! abnormal histone deacetylation
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043970
+intersection_of: qualifier PATO:0002052
+created_by: midori
+creation_date: 2012-08-23T14:45:03Z
+
+[Term]
+id: FYPO:0001443
+name: transcription abolished
+def: "A cellular process phenotype in which transcription does not occur. All genes, or a specific subset of genes, may be affected." [PomBase:mah]
+is_a: FYPO:0000781 ! decreased transcription
+intersection_of: PATO:0001558
+intersection_of: towards GO:0006351
+created_by: midori
+creation_date: 2012-08-23T14:53:02Z
+
+[Term]
+id: FYPO:0001444
+name: increased cellular trehalose level
+def: "A cell phenotype in which the amount of trehalose measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular trehalose level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased trehalose accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+is_a: FYPO:0001446 ! altered cellular trehalose level
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2012-08-23T15:18:12Z
+
+[Term]
+id: FYPO:0001445
+name: increased cellular trehalose level during heat shock
+def: "A cell phenotype in which the amount of trehalose measured in a cell is higher than normal when the cell is subject to heat shock." [PomBase:mah]
+synonym: "increased cellular trehalose level during vegetative growth and during heat shock" EXACT [PomBase:mah]
+synonym: "increased trehalose accumulation during heat shock" RELATED [PomBase:mah]
+is_a: FYPO:0001444 ! increased cellular trehalose level
+created_by: midori
+creation_date: 2012-08-23T15:19:11Z
+
+[Term]
+id: FYPO:0001446
+name: altered cellular trehalose level
+def: "A cell phenotype in which the amount of trehalose measured in a cell differs from normal." [PomBase:mah]
+synonym: "abnormal cellular trehalose accumulation" RELATED [PomBase:mah]
+synonym: "abnormal cellular trehalose level" EXACT [PomBase:mah]
+synonym: "altered cellular trehalose level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2012-08-23T15:22:37Z
+
+[Term]
+id: FYPO:0001447
+name: decreased cellular trehalose level
+def: "A cell phenotype in which the amount of trehalose measured in a cell is lower than from normal." [PomBase:mah]
+synonym: "decreased cellular trehalose accumulation" RELATED [PomBase:mah]
+synonym: "decreased cellular trehalose level during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced cellular trehalose level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+is_a: FYPO:0001446 ! altered cellular trehalose level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2012-08-23T15:24:19Z
+
+[Term]
+id: FYPO:0001448
+name: trehalose absent from cell during heat shock
+def: "A cell phenotype in which the amount of trehalose measured in a cell is too low to detect." [PomBase:mah]
+comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalent. The reason is that the GlcNAc2 form is attached to N-linked glycoproteins, but the GlcNAc form is what is usually detected in experiments, following cleavage by endoglycosidase H. For the purposes of observing and interpreting phenotypes, the difference is not significant.
+synonym: "absent trehalose" EXACT [PomBase:al]
+synonym: "trehalose absent from cell during vegetative growth and during heat shock" EXACT [PomBase:mah]
+is_a: FYPO:0001446 ! altered cellular trehalose level
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2012-08-23T15:26:41Z
+
+[Term]
+id: FYPO:0001449
+name: normal cellular trehalose level
+def: "A cell phenotype in which the amount of trehalose measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular trehalose accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular trehalose level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2012-08-23T15:28:23Z
+
+[Term]
+id: FYPO:0001450
+name: resistance to cold
+def: "A cell phenotype in which cells show decreased sensitivity to cold." [PomBase:mah]
+synonym: "resistance to cold during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to cold" EXACT [PomBase:mah]
+is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
+is_a: FYPO:0000850 ! resistant to stress
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0070417
+created_by: midori
+creation_date: 2012-08-23T15:46:25Z
+
+[Term]
+id: FYPO:0001451
+name: resistance to freezing
+def: "A cell phenotype in which cells show decreased sensitivity to freezing." [PomBase:mah]
+synonym: "resistance to freezing during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to freeze-thawing" RELATED [PomBase:al]
+synonym: "resistant to freezing" EXACT [PomBase:mah]
+is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
+is_a: FYPO:0001450 ! resistance to cold
+intersection_of: PATO:0001552
+intersection_of: during GO:0071497
+intersection_of: inheres_in GO:0071470
+created_by: midori
+creation_date: 2012-08-23T15:47:42Z
+
+[Term]
+id: FYPO:0001452
+name: resistance to water deprivation
+def: "A cell phenotype in which cells show decreased sensitivity to water deprivation." [PomBase:mah]
+synonym: "resistance to water deprivation during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to dehydration" EXACT [GO:0009414, PomBase:al]
+synonym: "resistant to water deprivation" EXACT [PomBase:mah]
+is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
+is_a: FYPO:0000850 ! resistant to stress
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0042631
+created_by: midori
+creation_date: 2012-08-23T15:49:03Z
+
+[Term]
+id: FYPO:0001453
+name: resistance to ethanol
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of ethanol than normal." [PomBase:mah]
+synonym: "resistance to ethanol during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to ethyl alcohol" EXACT [CHEBI:16236]
+synonym: "resistant to ethanol" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:16236
+created_by: midori
+creation_date: 2012-08-23T15:50:53Z
+
+[Term]
+id: FYPO:0001454
+name: normal cellular response to freezing
+def: "A cellular response phenotype in which the cellular response to freezing is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to freeze-thawing" RELATED [PomBase:al]
+synonym: "normal cellular response to freezing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000968 ! normal cellular response to stress
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071497
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-23T15:54:30Z
+
+[Term]
+id: FYPO:0001455
+name: normal cellular response to water deprivation
+def: "A cellular response phenotype in which the cellular response to water deprivation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to dehydration" EXACT [GO:0009414, GO:0042631, PomBase:al]
+synonym: "normal cellular response to water deprivation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000968 ! normal cellular response to stress
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0042631
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-23T15:58:02Z
+
+[Term]
+id: FYPO:0001456
+name: increased RNA level during cellular response to endoplasmic reticulum stress
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to endoplasmic reticulum stress is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased mRNA level during cellular response to endoplasmic reticulum stress" NARROW [PomBase:mah]
+synonym: "increased RNA accumulation during cellular response to endoplasmic reticulum stress" RELATED [PomBase:mah]
+synonym: "increased RNA level during cellular response to endoplasmic reticulum stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased RNA level during response to ER stress" EXACT [GO:0034976, PomBase:mah]
+synonym: "increased RNA level under ER stress-inducing conditions" RELATED [PomBase:vw]
+is_a: FYPO:0000825 ! increased RNA level
+intersection_of: exists_during GO:0034976
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-08-23T16:26:07Z
+
+[Term]
+id: FYPO:0001457
+name: sensitive to tunicamycin
+def: "A phenotype in which cells show increased sensitivity to tunicamycin." [PomBase:mah]
+synonym: "sensitive to tunicamycin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:29699
+created_by: midori
+creation_date: 2012-08-23T16:33:02Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
