@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 23:08:2012 16:48
+date: 24:08:2012 14:23
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -8313,6 +8313,22 @@ created_by: midori
 creation_date: 2011-09-28T12:28:26Z
 
 [Term]
+id: FYPO:0000644
+name: normal protein localization
+def: "A cellular process phenotype in which cellular protein localization is normal." [PomBase:mah]
+synonym: "normal cellular protein localization" EXACT [PomBase:mah]
+synonym: "normal protein localisation" EXACT [PomBase:mah]
+synonym: "normal protein localization during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+is_a: FYPO:0001071 ! normal transport
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034613
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2011-10-05T04:52:48Z
+
+[Term]
 id: FYPO:0000645
 name: small vegetative cells
 def: "A cell morphology phenotype in which vegetative cells have an abnormally low volume." [PomBase:mah]
@@ -9523,7 +9539,7 @@ name: normal protein localization to actin cortical patch
 def: "A cell phenotype in which the localization of a protein to actin cortical patches is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal protein localisation to actin cortical patch" EXACT [PomBase:mah]
 synonym: "normal protein localization to actin cortical patch during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+is_a: FYPO:0000644 ! localization phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0044379
@@ -9882,7 +9898,7 @@ id: FYPO:0000771
 name: normal nuclear pore distribution
 def: "A localization phenotype in which the spatial arrangement of nuclear pores within the nuclear envelope is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal nuclear pore distribution during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+is_a: FYPO:0000644 ! localization phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0031081
@@ -10658,9 +10674,9 @@ def: "A cell phenotype in which the amount of RNA measured in a cell is higher t
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "increased cellular mRNA level" NARROW [PomBase:vw]
 synonym: "increased cellular RNA level" EXACT [PomBase:mah]
+synonym: "increased mRNA level during vegetative growth" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased RNA accumulation during vegetative growth" RELATED [PomBase:mah]
-synonym: "increased mRNA level during vegetative growth" NARROW [PomBase:mah]
 synonym: "increased RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "RNA accumulation: increased" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0001326 ! altered RNA level during vegetative growth
@@ -10859,7 +10875,7 @@ def: "A cell phenotype in which the localization of a protein to the nucleus is 
 synonym: "normal protein localisation to nucleus" EXACT [PomBase:mah]
 synonym: "normal protein localization to nucleus during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
-is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+is_a: FYPO:0000644 ! localization phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0034504
@@ -18627,7 +18643,7 @@ comment: Encompasses both presence of proteins not normally found at the cell co
 synonym: "normal protein localisation to cell cortex" EXACT [PomBase:mah]
 synonym: "normal protein localization to cell cortex during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
-is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+is_a: FYPO:0000644 ! localization phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0072697
@@ -19067,6 +19083,10 @@ def: "An increased chemical resistance phenotype in which cells grow in the pres
 synonym: "resistance to N,N'-(p-xylylidene)bis-aminoguanidine 2HCl during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to N,N'-(p-xylylidene)bis-aminoguanidine 2HCl" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:67202
 created_by: midori
 creation_date: 2012-08-23T12:50:30Z
 
@@ -19135,11 +19155,14 @@ name: decreased SAGA complex localization to promoter region
 def: "A cell phenotype in which the localization of a protein to the cell cortex is decreased." [PomBase:mah]
 synonym: "decreased SAGA complex localisation to promoter region" EXACT [PomBase:mah]
 synonym: "decreased SAGA complex localization to promoter region during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased SAGA complex localization to transcription regulatory region" EXACT [PomBase:mah]
-synonym: "decreased SAGA complex recruitment" EXACT [PomBase:mah]
+synonym: "decreased SAGA complex localization to transcription regulatory region" EXACT [GO:0072742, PomBase:mah]
+synonym: "decreased SAGA complex recruitment" EXACT [GO:0072742, PomBase:mah]
 synonym: "reduced SAGA complex localization to promoter region" EXACT [PomBase:mah]
 synonym: "reduced SAGA complex recruitment" EXACT [PomBase:vw]
 is_a: FYPO:0001440 ! abnormal protein complex localization
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072742
+intersection_of: qualifier PATO:0002052
 created_by: midori
 creation_date: 2012-08-23T14:34:58Z
 
@@ -19149,7 +19172,7 @@ name: decreased histone H3-K9 acetylation
 def: "A cellular process phenotype in which acetylation of lysine at position 9 of histone H3 occurs to a lower extent than normal." [PomBase:mah]
 synonym: "decreased histone H3 K9 acetylation" EXACT [GO:0043970, PomBase:mah]
 synonym: "decreased histone H3-K9 acetylation during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased histone lysine H3 K9 acetylation" EXACT [GO:0051567, PomBase:mah]
+synonym: "decreased histone lysine H3 K9 acetylation" EXACT [GO:0043970, PomBase:mah]
 synonym: "reduced histone H3-K9 acetylation" EXACT [PomBase:mah]
 is_a: FYPO:0000201 ! abnormal histone deacetylation
 intersection_of: happens_during GO:0072690
@@ -19374,6 +19397,21 @@ intersection_of: inheres_in GO:0016049
 intersection_of: towards CHEBI:29699
 created_by: midori
 creation_date: 2012-08-23T16:33:02Z
+
+[Term]
+id: FYPO:0001458
+name: decreased histone H3-K14 acetylation
+def: "A cellular process phenotype in which acetylation of lysine at position 14 of histone H3 occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased histone H3 K14 acetylation" EXACT [GO:0044154, PomBase:mah]
+synonym: "decreased histone H3-K14 acetylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased histone lysine H3 K14 acetylation" EXACT [GO:0044154, PomBase:mah]
+synonym: "reduced histone H3-K14 acetylation" EXACT [PomBase:mah]
+is_a: FYPO:0000201 ! abnormal histone deacetylation
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0044154
+intersection_of: qualifier PATO:0002052
+created_by: midori
+creation_date: 2012-08-24T14:22:25Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
