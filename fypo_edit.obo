@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 29:08:2012 17:06
+date: 30:08:2012 15:46
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -175,8 +175,8 @@ def: "A cell morphology phenotype in which a single cell grows in the form of th
 comment: A T-shaped cell may septate perpendicular to the normal septation axis, and divide to form normal-shaped daughter cells.
 synonym: "cell morphology, T shaped" EXACT [PomBase:mah]
 synonym: "T-shaped cells during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000124 ! viable
 is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+is_a: FYPO:0001491 ! viable vegetative cells
 intersection_of: PATO:0001200
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000000
@@ -630,6 +630,7 @@ id: FYPO:0000049
 name: inviable
 def: "A viability phenotype in which cells are unable to survive under normal conditions." [PomBase:mah]
 comment: Viability is usually determined under standard laboratory conditions, i.e. a cell is generally considered inviable if it cannot grow in rich medium under normal conditions such as temperature, pressure, oxygen level, pH, etc.
+synonym: "essential" RELATED [PomBase:mah]
 synonym: "lethal" EXACT [PomBase:mah]
 is_a: FYPO:0000004 ! viability
 intersection_of: PATO:0000718
@@ -1794,6 +1795,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000061 ! multinucleate
 intersection_of: has_part FYPO:0000949 ! aseptate
+relationship: output_of FYPO:0000032 ! abnormal cytokinesis
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
 
@@ -2752,9 +2754,9 @@ creation_date: 2011-04-13T03:41:10Z
 
 [Term]
 id: FYPO:0000211
-name: abnormal response to drug
+name: abnormal cellular response to drug
 def: "A chemical response phenotype in which the cellular response to a chemical is abnormal." [PomBase:mah]
-synonym: "abnormal response to drug during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cellular response to drug during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001342 ! cellular response phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -3098,6 +3100,7 @@ id: FYPO:0000238
 name: inviable upon G0 to G1 transition
 def: "A cell phenotype in which cells fail to resume growth after several days in G0 phase. The inviable cells show some features characteristic of apoptosis, including loss of DNA." [PMID:19197239, PomBase:mah]
 synonym: "die in G0 with an apoptotic-like phenotype" EXACT [PomBase:mah]
+synonym: "essential upon G0 to G1 transition" RELATED [PomBase:mah]
 is_a: FYPO:0000049 ! inviable
 intersection_of: FYPO:0000049 ! inviable
 intersection_of: during GO:0045023
@@ -3637,8 +3640,8 @@ id: FYPO:0000282
 name: viable at high temperature
 def: "A viability phenotype in which cells are able to survive at a high temperature." [PomBase:mah]
 synonym: "viable at high temperature during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000124 ! viable
 is_a: FYPO:0001320 ! vegetative cell phenotype
+is_a: FYPO:0001491 ! viable vegetative cells
 intersection_of: FYPO:0000124 ! viable
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in BTO:0000316
@@ -3953,6 +3956,7 @@ creation_date: 2011-04-27T11:47:04Z
 id: FYPO:0000310
 name: inviable germinating spore with normal germ tube morphology
 def: "A phenotype in which a spore germinates to produce a normal germ tube, but does not go on to form a dividing cell." [PomBase:mah]
+synonym: "essential; germinating spore with normal germ tube morphology" RELATED [PomBase:mah]
 synonym: "inviable germinating spore with normal germ tube morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000316 ! inviable germinating spore
 created_by: midori
@@ -3962,6 +3966,7 @@ creation_date: 2011-04-27T11:47:04Z
 id: FYPO:0000311
 name: inviable germinating spore with normal, unseptated germ tube morphology
 def: "A phenotype in which a spore germinates to produce a normal germ tube, but does not septate or go on to form a dividing cell." [PomBase:mah]
+synonym: "essential; germinating spore with normal, unseptated germ tube morphology" RELATED [PomBase:mah]
 synonym: "inviable germinating spore with normal, unseptated germ tube morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000310 ! inviable germinating spore with normal germ tube morphology
 created_by: midori
@@ -3971,6 +3976,7 @@ creation_date: 2011-04-27T11:47:04Z
 id: FYPO:0000312
 name: inviable germinating spore with normal, septated germ tube morphology
 def: "A phenotype in which a spore germinates to produce a normal germ tube, and undergoes septation, but does not go on to form a dividing cell." [PomBase:mah]
+synonym: "essential; germinating spore with normal, septated germ tube morphology" RELATED [PomBase:mah]
 synonym: "inviable germinating spore with normal, septated germ tube morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000310 ! inviable germinating spore with normal germ tube morphology
 created_by: midori
@@ -3980,6 +3986,7 @@ creation_date: 2011-04-27T11:47:04Z
 id: FYPO:0000313
 name: inviable germinating spore with abnormal germ tube morphology
 def: "A phenotype in which a spore germinates to produce a germ tube with abnormal morphology, and does not go on to form a dividing cell." [PomBase:mah]
+synonym: "essential; germinating spore with abnormal germ tube morphology" RELATED [PomBase:mah]
 is_a: FYPO:0000287 ! abnormal subcellular structure
 is_a: FYPO:0000316 ! inviable germinating spore
 intersection_of: PATO:0000051
@@ -3992,6 +3999,7 @@ creation_date: 2011-04-27T11:47:04Z
 id: FYPO:0000314
 name: inviable germinating spore with elongated germ tube
 def: "A phenotype in which a spore germinates to produce an elongated germ tube, and does not go on to form a dividing cell." [PomBase:mah]
+synonym: "essential; germinating spore with elongated germ tube" RELATED [PomBase:mah]
 synonym: "inviable germinating spore with long germ tube" EXACT [PomBase:vw]
 is_a: FYPO:0000313 ! inviable germinating spore with abnormal germ tube morphology
 is_a: FYPO:0001123 ! elongated spores
@@ -4004,6 +4012,7 @@ creation_date: 2011-04-27T11:47:04Z
 id: FYPO:0000315
 name: inviable germinating spore with elongated, septated germ tube
 def: "A phenotype in which a spore germinates to produce an elongated germ tube, and undergoes septation, but does not go on to form a dividing cell." [PomBase:mah]
+synonym: "essential; germinating spore with elongated, septated germ tube" RELATED [PomBase:mah]
 synonym: "inviable germinating spore with long, septated germ tube" EXACT [PomBase:vw]
 is_a: FYPO:0000313 ! inviable germinating spore with abnormal germ tube morphology
 created_by: midori
@@ -4013,6 +4022,7 @@ creation_date: 2011-04-27T11:47:04Z
 id: FYPO:0000316
 name: inviable germinating spore
 def: "A viability phenotype in which a spore germinates but fails to produce dividing cells that can survive under normal conditions." [PomBase:jh, PomBase:mah]
+synonym: "essential in germinating spore" RELATED [PomBase:mah]
 is_a: FYPO:0000049 ! inviable
 created_by: midori
 creation_date: 2011-04-27T01:13:41Z
@@ -4029,6 +4039,7 @@ creation_date: 2011-04-27T01:32:52Z
 id: FYPO:0000318
 name: inviable mixed population including long cells
 def: "A mixed population phenotype in which a microcolony forms, and all cells in the population divide once upon spore germination but are inviable, and some cells are longer than normal." [PomBase:jh, PomBase:mah]
+synonym: "essential; mixed population including long cells" RELATED [PomBase:mah]
 synonym: "long low penetrance" EXACT [PomBase:jh, PomBase:vw]
 is_a: FYPO:0000299 ! microcolony formation
 is_a: FYPO:0000317 ! mixed population
@@ -4040,6 +4051,7 @@ creation_date: 2011-04-27T04:18:16Z
 id: FYPO:0000319
 name: inviable mixed population including spores and divided germinated spores
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of spores and germinated spores most of which go on to divide once or twice. Some germinated spores remain septated and do not complete cell division." [PomBase:jh, PomBase:mah]
+synonym: "essential; mixed population including spores and divided germinated spores" RELATED [PomBase:mah]
 synonym: "put cut" RELATED [PomBase:jh]
 is_a: FYPO:0000317 ! mixed population
 relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable
@@ -4052,6 +4064,7 @@ creation_date: 2011-04-27T04:20:40Z
 id: FYPO:0000320
 name: inviable germinating spore, single cell division
 def: "A phenotype in which a spore germinates to produce a cell of normal morphology that undergoes a single round of cell division, and then dies." [PomBase:jh, PomBase:mah, PomBase:vw]
+synonym: "essential; germinating spore, single cell division" RELATED [PomBase:mah]
 is_a: FYPO:0000316 ! inviable germinating spore
 created_by: midori
 creation_date: 2011-04-27T04:25:13Z
@@ -4060,6 +4073,7 @@ creation_date: 2011-04-27T04:25:13Z
 id: FYPO:0000321
 name: inviable mixed population including spores and undivided germinated spores
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores and germinated spores that fail to divide." [PomBase:jh, PomBase:mah]
+synonym: "essential; mixed population including spores and undivided germinated spores" RELATED [PomBase:mah]
 is_a: FYPO:0000317 ! mixed population
 relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable
 relationship: includes_cells_with_phenotype FYPO:0000316 ! inviable germinating spore
@@ -5754,6 +5768,7 @@ creation_date: 2011-08-12T02:37:29Z
 id: FYPO:0000454
 name: inviable mixed population including long and short cells
 def: "A mixed population phenotype in which a microcolony forms, all cells in the population are inviable, and some cells are longer and other cells smaller than normal." [PomBase:mah]
+synonym: "essential; mixed population including long and short cells" RELATED [PomBase:mah]
 is_a: FYPO:0000299 ! microcolony formation
 is_a: FYPO:0000317 ! mixed population
 relationship: includes_cells_with_phenotype FYPO:0000017 ! elongated cells
@@ -7867,6 +7882,7 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000611
 name: mitotic cell cycle arrest in S phase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in S phase." [PomBase:mah]
+comment: Cells arrested in S phase typically have more than 1C, but less than 2C, DNA content.
 synonym: "abnormal mitotic cell cycle arrest in S phase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest in S phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in S phase: arrested" EXACT [SGD:phenotype_annotation]
@@ -8373,11 +8389,11 @@ name: small viable vegetative cells
 def: "A cell morphology phenotype in which vegetatively growing cells are viable but have an abnormally low volume. Note that small viable cells result from a cell cycle size regulation defect." [PomBase:mah]
 synonym: "small viable vegetative cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "wee" EXACT [PomBase:jh, PomBase:mah]
-is_a: FYPO:0000124 ! viable
 is_a: FYPO:0000645 ! small vegetative cells
+is_a: FYPO:0001491 ! viable vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000023 ! small cells
+intersection_of: has_part FYPO:0000124 ! small cells
 intersection_of: has_part FYPO:0000645 ! small vegetative cells
 created_by: midori
 creation_date: 2011-10-13T12:06:45Z
@@ -9818,7 +9834,7 @@ creation_date: 2012-02-09T03:40:24Z
 [Term]
 id: FYPO:0000765
 name: resistance to leptomycin B
-def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of selenate ions than normal." [PomBase:mah]
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of leptomycin B than normal." [PomBase:mah]
 synonym: "resistance to leptomycin B during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
@@ -11050,8 +11066,9 @@ creation_date: 2012-03-14T04:24:49Z
 
 [Term]
 id: FYPO:0000850
-name: resistant to stress
+name: resistance to stress
 def: "A phenotype in which cells show decreased sensitivity to a stress." [PomBase:mah]
+synonym: "resistant to stress" EXACT [PomBase:mah]
 synonym: "resistant to stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "stress resistance: increased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
@@ -11068,7 +11085,7 @@ def: "A cell phenotype in which cells show decreased sensitivity to osmotic stre
 synonym: "resistance to osmotic stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to osmotic stress" EXACT [PomBase:mah]
 is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
-is_a: FYPO:0000850 ! resistant to stress
+is_a: FYPO:0000850 ! resistance to stress
 intersection_of: PATO:0001552
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0071470
@@ -12529,13 +12546,14 @@ creation_date: 2012-04-03T03:41:12Z
 id: FYPO:0000951
 name: small inviable vegetative cells
 def: "A cell morphology phenotype in which vegetative cells are inviable and have an abnormally low volume." [PomBase:mah]
+synonym: "essential; small vegetative cells" RELATED [PomBase:mah]
 synonym: "small inviable vegetative cells during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000049 ! inviable
 is_a: FYPO:0000645 ! small vegetative cells
+is_a: FYPO:0001489 ! inviable vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000023 ! small cells
-intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0001489 ! inviable
 created_by: midori
 creation_date: 2012-04-03T04:12:31Z
 
@@ -13753,6 +13771,7 @@ creation_date: 2012-05-09T05:09:40Z
 id: FYPO:0001042
 name: inviable germinating spore, single or double cell division
 def: "A phenotype in which a spore germinates to produce a cell of normal morphology that undergoes one or two rounds of cell division, and then dies." [PomBase:al, PomBase:mah]
+synonym: "essential; germinating spore, single or double cell division" RELATED [PomBase:mah]
 synonym: "inviable germinating spore, single or double cell division during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000316 ! inviable germinating spore
 created_by: midori
@@ -13809,12 +13828,12 @@ name: mitotic catastrophe
 def: "An inviable phenotype in which cells enter mitosis prematurely, undergo abnormal mitotic chromosome segregation, and subsequently die." [PomBase:mah]
 comment: Note that in higher eukaryotes, mitotic catastrophe is more broadly defined as any phenotype in which cells undergo an aberrant mitosis that arrests before completion, and subsequently die by necrosis or apoptosis.
 synonym: "mitotic catastrophe during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000049 ! inviable
 is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 is_a: FYPO:0001320 ! vegetative cell phenotype
+is_a: FYPO:0001489 ! inviable vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
-intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0001489 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 created_by: midori
 creation_date: 2012-05-11T01:34:45Z
@@ -13829,7 +13848,7 @@ is_a: FYPO:0000229 ! cut
 is_a: FYPO:0001047 ! mitotic catastrophe
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
-intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0001489 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0000229 ! cut
 intersection_of: has_part FYPO:0001204 ! mistimed mitosis
@@ -13845,7 +13864,7 @@ is_a: FYPO:0000951 ! small inviable vegetative cells
 is_a: FYPO:0001047 ! mitotic catastrophe
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
-intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0001489 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0000951 ! small inviable vegetative cells
 intersection_of: has_part FYPO:0001204 ! mistimed mitosis
@@ -13861,7 +13880,7 @@ synonym: "mitotic catastrophe, normal size cells during vegetative growth" EXACT
 is_a: FYPO:0001047 ! mitotic catastrophe
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
-intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0001489 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0001124 ! normal cell size
 intersection_of: has_part FYPO:0001204 ! mistimed mitosis
@@ -13879,9 +13898,9 @@ is_a: FYPO:0001047 ! mitotic catastrophe
 is_a: FYPO:0001122 ! elongated vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
-intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0001489 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-intersection_of: has_part FYPO:0001122 ! elongated vegetative cells
+intersection_of: has_part FYPO:0001490 ! elongated vegetative cells
 intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 created_by: midori
 creation_date: 2012-05-11T02:16:25Z
@@ -13896,7 +13915,7 @@ is_a: FYPO:0001048 ! mitotic catastrophe with cut
 is_a: FYPO:0001049 ! mitotic catastrophe, small cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
-intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0001489 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0000229 ! cut
 intersection_of: has_part FYPO:0000951 ! small inviable vegetative cells
@@ -13914,7 +13933,7 @@ is_a: FYPO:0001048 ! mitotic catastrophe with cut
 is_a: FYPO:0001050 ! mitotic catastrophe, normal size cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
-intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0001489 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0000229 ! cut
 intersection_of: has_part FYPO:0001124 ! normal cell size
@@ -13933,10 +13952,10 @@ is_a: FYPO:0001048 ! mitotic catastrophe with cut
 is_a: FYPO:0001051 ! mitotic catastrophe, elongated cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
-intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0001489 ! inviable
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: has_part FYPO:0000229 ! cut
-intersection_of: has_part FYPO:0001122 ! elongated vegetative cells
+intersection_of: has_part FYPO:0001490 ! elongated vegetative cells
 intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 created_by: midori
 creation_date: 2012-05-11T02:39:47Z
@@ -14459,7 +14478,7 @@ name: resistance to heat shock
 def: "A cell phenotype in which cells show decreased sensitivity to heat shock. Heat shock is a form of heat stress in which cells are briefly exposed to a very high temperature." [PomBase:mah]
 synonym: "resistance to heat shock during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to heat shock" EXACT [PomBase:mah]
-is_a: FYPO:0000850 ! resistant to stress
+is_a: FYPO:0000850 ! resistance to stress
 created_by: midori
 creation_date: 2012-06-01T13:48:51Z
 
@@ -14712,6 +14731,7 @@ creation_date: 2012-06-01T15:18:55Z
 id: FYPO:0001110
 name: inviable germinating spore, multiple cell divisions
 def: "A phenotype in which a spore germinates to produce a cell of normal morphology that undergoes two or more rounds of cell division, and then dies." [PomBase:al, PomBase:mah]
+synonym: "essential; germinating spore, multiple cell divisions" RELATED [PomBase:mah]
 synonym: "inviable germinating spore, multiple cell divisions during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000316 ! inviable germinating spore
 created_by: midori
@@ -15441,6 +15461,7 @@ creation_date: 2012-06-15T14:22:57Z
 id: FYPO:0001165
 name: inviable following anaerobic growth
 def: "A cell phenotype in which cells that are exposed to anaerobic conditions fail to grow upon being returned to aerobic conditions." [PomBase:mah]
+synonym: "essential following anaerobic growth" RELATED [PomBase:mah]
 synonym: "inviable following anaerobic growth during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000049 ! inviable
 is_a: FYPO:0001320 ! vegetative cell phenotype
@@ -18435,6 +18456,7 @@ creation_date: 2012-08-10T13:54:04Z
 id: FYPO:0001385
 name: inviable germinating spore, cell cycle arrest with replicated DNA
 def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest with replicated DNA." [PMID:9705504, PomBase:mah]
+synonym: "essential; germinating spore, cell cycle arrest with replicated DNA" RELATED [PomBase:mah]
 is_a: FYPO:0000316 ! inviable germinating spore
 intersection_of: FYPO:0000316 ! inviable germinating spore
 intersection_of: has_part FYPO:0000444 ! cell cycle arrest with replicated DNA
@@ -19291,8 +19313,7 @@ name: resistance to cold
 def: "A cell phenotype in which cells show decreased sensitivity to cold." [PomBase:mah]
 synonym: "resistance to cold during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to cold" EXACT [PomBase:mah]
-is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
-is_a: FYPO:0000850 ! resistant to stress
+is_a: FYPO:0000850 ! resistance to stress
 intersection_of: PATO:0001552
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0070417
@@ -19306,7 +19327,6 @@ def: "A cell phenotype in which cells show decreased sensitivity to freezing." [
 synonym: "resistance to freezing during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to freeze-thawing" RELATED [PomBase:al]
 synonym: "resistant to freezing" EXACT [PomBase:mah]
-is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
 is_a: FYPO:0001450 ! resistance to cold
 intersection_of: PATO:0001552
 intersection_of: during GO:0071497
@@ -19321,8 +19341,7 @@ def: "A cell phenotype in which cells show decreased sensitivity to water depriv
 synonym: "resistance to water deprivation during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to dehydration" EXACT [GO:0009414, PomBase:al]
 synonym: "resistant to water deprivation" EXACT [PomBase:mah]
-is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
-is_a: FYPO:0000850 ! resistant to stress
+is_a: FYPO:0000850 ! resistance to stress
 intersection_of: PATO:0001552
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0042631
@@ -19608,6 +19627,359 @@ intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005816
 created_by: midori
 creation_date: 2012-08-29T16:52:11Z
+
+[Term]
+id: FYPO:0001476
+name: abnormal guanosine-diphosphatase activity
+def: "A molecular function phenotype in which the observed rate of guanosine-diphosphatase activity is abnormal." [PomBase:mah]
+synonym: "abnormal GDPase activity" EXACT [GO:0004382, PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004382
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-30T11:37:58Z
+
+[Term]
+id: FYPO:0001477
+name: decreased guanosine-diphosphatase activity
+def: "A molecular function phenotype in which the observed rate of guanosine-diphosphatase activity is decreased." [PomBase:mah]
+synonym: "decreased GDPase activity" EXACT [GO:0004382, PomBase:mah]
+synonym: "reduced guanosine-diphosphatase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001476 ! abnormal guanosine-diphosphatase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004382
+created_by: midori
+creation_date: 2012-08-30T11:38:10Z
+
+[Term]
+id: FYPO:0001478
+name: increased guanosine-diphosphatase activity
+def: "A molecular function phenotype in which the observed rate of guanosine-diphosphatase activity is increased." [PomBase:mah]
+synonym: "increased GDPase activity" EXACT [GO:0004382, PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001476 ! abnormal guanosine-diphosphatase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004382
+created_by: midori
+creation_date: 2012-08-30T11:38:17Z
+
+[Term]
+id: FYPO:0001479
+name: abnormal alpha,alpha-trehalase activity
+def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity is abnormal." [PomBase:mah]
+synonym: "abnormal neutral trehalase activity" EXACT [PMID:9729425, PomBase:mah]
+synonym: "abnormal trehalase activity" BROAD [GO:0004555, GO:0015927]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004555
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-30T11:47:38Z
+
+[Term]
+id: FYPO:0001480
+name: normal alpha,alpha-trehalase activity
+def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal neutral trehalase activity" EXACT [PMID:9729425, PomBase:mah]
+synonym: "normal trehalase activity" BROAD [GO:0004555, GO:0015927]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004555
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-30T12:05:18Z
+
+[Term]
+id: FYPO:0001481
+name: alpha,alpha-trehalase activity increase abolished during cellular response to nutrient
+def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity does not increase as a result of a nutrient stimulus." [PomBase:mah]
+synonym: "absent increase in trehalase activity following nutrient stimulus" EXACT [PomBase:al]
+synonym: "neutral trehalase activity increase abolished during cellular response to nutrient" EXACT [PMID:9729425, PomBase:mah]
+synonym: "trehalase activity increase abolished during cellular response to nutrient" BROAD [GO:0004555, GO:0015927]
+is_a: FYPO:0001479 ! abnormal alpha,alpha-trehalase activity
+is_a: FYPO:0001484 ! abnormal cellular response to nutrient
+created_by: midori
+creation_date: 2012-08-30T12:11:19Z
+
+[Term]
+id: FYPO:0001482
+name: alpha,alpha-trehalase activity increase abolished during cellular response to heat
+def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity does not increase as a result of a heat stimulus." [PomBase:mah]
+synonym: "absent increase in trehalase activity in response to high temperature" EXACT [PomBase:al]
+synonym: "neutral trehalase activity increase abolished during cellular response to heat" EXACT [PMID:9729425, PomBase:mah]
+synonym: "trehalase activity increase abolished during cellular response to heat" BROAD [GO:0004555, GO:0015927]
+is_a: FYPO:0000212 ! abnormal cellular response to heat
+is_a: FYPO:0001479 ! abnormal alpha,alpha-trehalase activity
+created_by: midori
+creation_date: 2012-08-30T12:15:03Z
+
+[Term]
+id: FYPO:0001483
+name: normal alpha,alpha-trehalase activity increase during cellular response to oxidative stress
+def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity increases normally (i.e. as in wild type) as a result of a heat stimulus." [PomBase:mah]
+synonym: "normal increase in trehalase activity in response to oxidative stress" EXACT [PomBase:al]
+synonym: "normal neutral trehalase activity increase during cellular response to oxidative stress" EXACT [PMID:9729425, PomBase:mah]
+synonym: "normal trehalase activity increase during cellular response to oxidative stress" BROAD [GO:0004555, GO:0015927]
+is_a: FYPO:0001480 ! normal alpha,alpha-trehalase activity activity
+is_a: FYPO:0001485 ! normal cellular response to oxidative stress
+created_by: midori
+creation_date: 2012-08-30T12:18:52Z
+
+[Term]
+id: FYPO:0001484
+name: abnormal cellular response to nutrient
+def: "A chemical response phenotype in which the cellular response to a nutrient is abnormal." [PomBase:mah]
+synonym: "abnormal cellular response to nutrient during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001342 ! cellular response phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0031670
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-08-30T13:01:53Z
+
+[Term]
+id: FYPO:0001485
+name: normal cellular response to oxidative stress
+def: "A cellular response phenotype in which the cellular response to oxidative stress is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to oxidative stress during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000968 ! normal cellular response to stress
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034599
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-08-30T13:03:23Z
+
+[Term]
+id: FYPO:0001486
+name: normal RNA level during cellular response to salt stress
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to salt stress is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "normal mRNA level during cellular response to salt stress" NARROW [PomBase:mah]
+synonym: "normal RNA accumulation during cellular response to salt stress" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0071472
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-08-30T13:08:09Z
+
+[Term]
+id: FYPO:0001487
+name: normal RNA level during cellular response to heat
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to heat is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "normal mRNA level during cellular response to heat" NARROW [PomBase:mah]
+synonym: "normal RNA accumulation during cellular response to heat" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal RNA level during cellular response to high temperature" EXACT [PomBase:al]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0034605
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-08-30T13:09:03Z
+
+[Term]
+id: FYPO:0001488
+name: sensitive to protamine sulfate
+def: "A phenotype in which cells show increased sensitivity to protamine sulfate. A protamine is any of a group of simple proteins that yield basic amino acids on hydrolysis, and forms a complex with heparin." [PomBase:mah]
+synonym: "sensitive to protamine sulfate during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+created_by: midori
+creation_date: 2012-08-30T13:32:12Z
+
+[Term]
+id: FYPO:0001489
+name: inviable vegetative cells
+def: "A cell morphology phenotype in which cells are inviable in the phase of the life cycle during which wild type cells undergo vegetative growth." [PomBase:mah]
+synonym: "essential in vegetative cells" RELATED [PomBase:mah]
+synonym: "inviable cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000049 ! inviable
+intersection_of: FYPO:0000049 ! cell phenotype
+intersection_of: exists_during GO:0072690
+created_by: midori
+creation_date: 2012-08-30T13:59:02Z
+
+[Term]
+id: FYPO:0001490
+name: elongated inviable vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are inviable and longer than normal." [PomBase:mah]
+synonym: "elongated inviable cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "essential; elongated vegetative cells" RELATED [PomBase:mah]
+is_a: FYPO:0001122 ! elongated vegetative cells
+is_a: FYPO:0001489 ! inviable vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017
+intersection_of: has_part FYPO:0000049 ! inviable
+created_by: midori
+creation_date: 2012-08-30T14:08:27Z
+
+[Term]
+id: FYPO:0001491
+name: viable vegetative cells
+def: "A cell morphology phenotype in which vegetatively growing cells are viable." [PomBase:mah]
+synonym: "viable cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000124 ! viable
+intersection_of: FYPO:0000124 ! cell phenotype
+intersection_of: exists_during GO:0072690
+created_by: midori
+creation_date: 2012-08-30T14:12:48Z
+
+[Term]
+id: FYPO:0001492
+name: elongated viable vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are viable and longer than normal." [PomBase:mah]
+synonym: "elongated viable vegetative cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001122 ! elongated vegetative cells
+is_a: FYPO:0001491 ! viable vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017
+intersection_of: has_part FYPO:0000124 ! inviable
+created_by: midori
+creation_date: 2012-08-30T14:17:56Z
+
+[Term]
+id: FYPO:0001493
+name: elongated multinucleate inviable vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are inviable, longer than normal, and contain more than one nucleus apiece." [PomBase:mah]
+synonym: "elongated inviable multinucleate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "essential; elongated multinucleate vegetative cells" RELATED [PomBase:mah]
+is_a: FYPO:0000133 ! elongated multinucleate cells
+is_a: FYPO:0001490 ! elongated inviable vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017
+intersection_of: has_part FYPO:0000061 ! small cells
+intersection_of: has_part FYPO:0000049 ! inviable
+created_by: midori
+creation_date: 2012-08-30T14:27:16Z
+
+[Term]
+id: FYPO:0001494
+name: elongated multiseptate inviable vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are inviable, longer than normal, and contain more than one septum apiece." [PomBase:mah]
+synonym: "elongated inviable multiseptate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "essential; elongated multiseptate vegetative cells" RELATED [PomBase:mah]
+is_a: FYPO:0000223 ! elongated multiseptate cells
+is_a: FYPO:0001490 ! elongated inviable vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000118
+intersection_of: has_part FYPO:0000017 ! small cells
+intersection_of: has_part FYPO:0000049 ! inviable
+created_by: midori
+creation_date: 2012-08-30T14:30:53Z
+
+[Term]
+id: FYPO:0001495
+name: elongated multinucleate viable vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are viable, longer than normal, and contain more than one nucleus apiece." [PomBase:mah]
+synonym: "elongated multinucleate viable cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000133 ! elongated multinucleate cells
+is_a: FYPO:0001492 ! elongated viable vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017
+intersection_of: has_part FYPO:0000061 ! small cells
+intersection_of: has_part FYPO:0000124 ! inviable
+created_by: midori
+creation_date: 2012-08-30T14:32:23Z
+
+[Term]
+id: FYPO:0001496
+name: elongated multiseptate viable vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are viable, longer than normal, and contain more than one septum apiece." [PomBase:mah]
+synonym: "elongated viable multiseptate cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000223 ! elongated multiseptate cells
+is_a: FYPO:0001492 ! elongated viable vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017
+intersection_of: has_part FYPO:0000118 ! small cells
+intersection_of: has_part FYPO:0000124 ! inviable
+created_by: midori
+creation_date: 2012-08-30T14:32:53Z
+
+[Term]
+id: FYPO:0001497
+name: elongated inviable vegetative cells with mitotic cell cycle arrest in S phase
+def: "A cell morphology phenotype in which vegetative cells are inviable and longer than normal, and progression through the mitotic cell cycle is arrested in S phase." [PomBase:mah]
+comment: A population of cells with this phenotype usually shows a marginal increase in cell number before all cells die. Cells arrested in S phase typically have more than 1C, but less than 2C, DNA content.
+synonym: "elongated inviable cells with mitotic cell cycle arrest in S phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "essential; elongated vegetative cells with mitotic cell cycle arrest in S phase" RELATED [PomBase:mah]
+synonym: "mitotic cell cycle arrest in S-phase with elongated inviable cells" EXACT [PomBase:vw]
+synonym: "mitotic S-phase arrested elongated inviable vegetative cells" EXACT [PomBase:mah]
+is_a: FYPO:0000611 ! mitotic cell cycle arrest in S phase
+is_a: FYPO:0001489 ! inviable vegetative cells
+is_a: FYPO:0001490 ! elongated inviable vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! small cells
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000611
+created_by: midori
+creation_date: 2012-08-30T14:37:31Z
+
+[Term]
+id: FYPO:0001498
+name: sensitive to cytochalasin B
+def: "A phenotype in which cells show increased sensitivity to cytochalasin B." [PomBase:mah]
+synonym: "sensitive to cytochalasin B during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:23527
+created_by: midori
+creation_date: 2012-08-30T15:23:47Z
+
+[Term]
+id: FYPO:0001499
+name: resistance to cytochalasin B
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of cytochalasin B than normal." [PomBase:mah]
+synonym: "resistance to cytochalasin B during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:23527
+created_by: midori
+creation_date: 2012-08-30T15:24:42Z
+
+[Term]
+id: FYPO:0001500
+name: normal cellular response to cytochalasin B
+def: "A cellular response phenotype in which the cellular response to cytochalasin B is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to cytochalasin B during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+created_by: midori
+creation_date: 2012-08-30T15:25:41Z
+
+[Term]
+id: FYPO:0001501
+name: sensitive to brefeldin A
+def: "A phenotype in which cells show increased sensitivity to brefeldin A." [PomBase:mah]
+synonym: "sensitive to brefeldin A during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:48080
+created_by: midori
+creation_date: 2012-08-30T15:29:30Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
