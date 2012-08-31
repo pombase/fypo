@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 30:08:2012 16:52
+date: 31:08:2012 14:52
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -3933,10 +3933,10 @@ id: FYPO:0000308
 name: spore germination abolished, swollen spores
 def: "A cellular process phenotype in which spore germination does not occur, and spores have a larger volume than normal." [PomBase:mah]
 is_a: FYPO:0000309 ! spore germination abolished, abnormal spore morphology
-relationship: has_part FYPO:0000347 ! swollen spores
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000306 ! spore germination abolished
 intersection_of: has_part FYPO:0000347 ! swollen spores
+relationship: has_part FYPO:0000347 ! swollen spores
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
 
@@ -8375,11 +8375,11 @@ def: "An inviable phenotype in which cells lyse, i.e. the plasma membrane ruptur
 synonym: "cell lysis during vegetative growth" EXACT [PomBase:mah]
 synonym: "cytolysis" EXACT [PomBase:mah]
 synonym: "inviable, lysed cells" EXACT [PomBase:mah]
-relationship: has_part FYPO:0000049 ! inviable
 is_a: FYPO:0001320 ! vegetative cell phenotype
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0019835
+relationship: has_part FYPO:0000049 ! inviable
 created_by: midori
 creation_date: 2011-10-10T03:28:02Z
 
@@ -18047,6 +18047,7 @@ def: "A cellular process phenotype in which vegetative cell growth is abnormal."
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "vegetative growth defect" EXACT [PomBase:mah]
 is_a: FYPO:0000045 ! abnormal cell growth
+is_a: FYPO:0001358 ! cell growth phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0016049
@@ -18799,7 +18800,7 @@ creation_date: 2012-08-16T16:43:19Z
 [Term]
 id: FYPO:0001412
 name: decreased cellular sulfide level
-def: "A cell phenotype in which the amount of sulfide (S2-, also called acid labile sulfide) measured in a cell is lower than from normal." [PomBase:mah]
+def: "A cell phenotype in which the amount of sulfide (S2-, also called acid labile sulfide) measured in a cell is lower than normal." [PomBase:mah]
 synonym: "decreased cellular acid labile sulfide level" EXACT [PomBase:al]
 synonym: "decreased cellular sulfide accumulation" RELATED [PomBase:mah]
 synonym: "decreased cellular sulfide ion level" EXACT [PomBase:mah]
@@ -18819,7 +18820,7 @@ creation_date: 2012-08-16T16:54:55Z
 [Term]
 id: FYPO:0001413
 name: increased cellular sulfide level
-def: "A cell phenotype in which the amount of sulfide (S2-, also called acid labile sulfide) measured in a cell is higher than from normal." [PomBase:mah]
+def: "A cell phenotype in which the amount of sulfide (S2-, also called acid labile sulfide) measured in a cell is higher than normal." [PomBase:mah]
 synonym: "increased cellular acid labile sulfide level" EXACT [PomBase:al]
 synonym: "increased cellular sulfide accumulation" RELATED [PomBase:mah]
 synonym: "increased cellular sulfide ion level" EXACT [PomBase:mah]
@@ -19124,6 +19125,10 @@ name: normal cellular response to erythromycin
 def: "A cellular response phenotype in which the cellular response to erythromycin is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular response to erythromycin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072743
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-23T12:53:50Z
 
@@ -19133,6 +19138,10 @@ name: normal cellular response to trichodermin
 def: "A cellular response phenotype in which the cellular response to trichodermin is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular response to trichodermin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072744
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-23T12:55:40Z
 
@@ -19142,6 +19151,10 @@ name: normal cellular response to antimycin A
 def: "A cellular response phenotype in which the cellular response to antimycin A is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular response to antimycin A during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072745
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-23T12:56:12Z
 
@@ -19151,6 +19164,10 @@ name: normal cellular response to tetracycline
 def: "A cellular response phenotype in which the cellular response to tetracycline is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular response to tetracycline during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072746
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-23T12:58:33Z
 
@@ -19160,6 +19177,10 @@ name: normal cellular response to chloramphenicol
 def: "A cellular response phenotype in which the cellular response to chloramphenicol is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular response to chloramphenicol during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072747
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-23T12:59:01Z
 
@@ -19250,10 +19271,8 @@ name: altered cellular trehalose level
 def: "A cell phenotype in which the amount of trehalose measured in a cell differs from normal." [PomBase:mah]
 synonym: "abnormal cellular trehalose accumulation" RELATED [PomBase:mah]
 synonym: "abnormal cellular trehalose level" EXACT [PomBase:mah]
-synonym: "altered cellular trehalose level during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
+is_a: FYPO:0000989 ! altered level of substance in cell
 intersection_of: PATO:0001159
-intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0000460
 intersection_of: towards CHEBI:27082
@@ -19263,14 +19282,12 @@ creation_date: 2012-08-23T15:22:37Z
 [Term]
 id: FYPO:0001447
 name: decreased cellular trehalose level
-def: "A cell phenotype in which the amount of trehalose measured in a cell is lower than from normal." [PomBase:mah]
+def: "A cell phenotype in which the amount of trehalose measured in a cell is lower than normal." [PomBase:mah]
 synonym: "decreased cellular trehalose accumulation" RELATED [PomBase:mah]
-synonym: "decreased cellular trehalose level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced cellular trehalose level" EXACT [PomBase:mah]
-is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+is_a: FYPO:0000991 ! decreased level of substance in cell
 is_a: FYPO:0001446 ! altered cellular trehalose level
 intersection_of: PATO:0001159
-intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:27082
@@ -19285,10 +19302,6 @@ comment: Note that these terms treat Man(n)GlcNAc and Man(n)GlcNAc2 as equivalen
 synonym: "absent trehalose" EXACT [PomBase:al]
 synonym: "trehalose absent from cell during vegetative growth and during heat shock" EXACT [PomBase:mah]
 is_a: FYPO:0001446 ! altered cellular trehalose level
-intersection_of: PATO:0002000
-intersection_of: during GO:0072690
-intersection_of: inheres_in CL:0000000
-intersection_of: towards CHEBI:27082
 created_by: midori
 creation_date: 2012-08-23T15:26:41Z
 
@@ -19557,6 +19570,10 @@ def: "A cellular response phenotype in which the cellular response to tacrolimus
 synonym: "normal cellular response to FK506" EXACT [CHEBI:61057]
 synonym: "normal cellular response to tacrolimus during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072748
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-29T16:03:18Z
 
@@ -19570,6 +19587,11 @@ synonym: "normal cellular response to tacrolimus  during salt stress during vege
 synonym: "normal cellular response to tacrolimus and salt stress" EXACT [PomBase:al]
 is_a: FYPO:0001037 ! normal cellular response to salt stress
 is_a: FYPO:0001472 ! normal cellular response to tacrolimus during osmotic stress
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0071472
+intersection_of: inheres_in GO:0072748
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-29T16:04:35Z
 
@@ -19583,6 +19605,11 @@ synonym: "normal cellular response to tacrolimus and osmotic stress" EXACT [PomB
 synonym: "normal cellular response to tacrolimus and sorbitol" NARROW [PomBase:al]
 is_a: FYPO:0001021 ! normal cellular response to osmotic stress
 is_a: FYPO:0001470 ! normal cellular response to tacrolimus
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0071470
+intersection_of: inheres_in GO:0072748
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-29T16:08:07Z
 
@@ -19597,6 +19624,11 @@ synonym: "resistance to tacrolimus during salt stress during vegetative growth" 
 synonym: "resistant to tacrolimus" EXACT [PomBase:mah]
 is_a: FYPO:0000852 ! resistance to salt stress
 is_a: FYPO:0001379 ! resistance to tacrolimus
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: during GO:0071472
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:61057
 created_by: midori
 creation_date: 2012-08-29T16:11:06Z
 
@@ -19922,13 +19954,13 @@ synonym: "elongated inviable cells with mitotic cell cycle arrest in S phase dur
 synonym: "essential; elongated vegetative cells with mitotic cell cycle arrest in S phase" RELATED [PomBase:mah]
 synonym: "mitotic cell cycle arrest in S-phase with elongated inviable cells" EXACT [PomBase:vw]
 synonym: "mitotic S-phase arrested elongated inviable vegetative cells" EXACT [PomBase:mah]
-relationship: has_part FYPO:0000611 ! mitotic cell cycle arrest in S phase
 is_a: FYPO:0001490 ! elongated inviable vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000049 ! inviable
 intersection_of: has_part FYPO:0000611 ! mitotic cell cycle arrest in S phase
+relationship: has_part FYPO:0000611 ! mitotic cell cycle arrest in S phase
 created_by: midori
 creation_date: 2012-08-30T14:37:31Z
 
@@ -19964,6 +19996,10 @@ name: normal cellular response to cytochalasin B
 def: "A cellular response phenotype in which the cellular response to cytochalasin B is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular response to cytochalasin B during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072749
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-30T15:25:41Z
 
@@ -19979,6 +20015,100 @@ intersection_of: inheres_in GO:0016049
 intersection_of: towards CHEBI:48080
 created_by: midori
 creation_date: 2012-08-30T15:29:30Z
+
+[Term]
+id: FYPO:0001502
+name: increased cellular trehalose level during cellular response to osmotic stress
+def: "A cell phenotype in which the amount of trehalose measured in a cell is higher than normal when the cell is subject to osmotic stress." [PomBase:mah]
+synonym: "increased cellular trehalose level during vegetative growth and during cellular response to osmotic stress" EXACT [PomBase:mah]
+synonym: "increased cellular trehalose level in response to osmotic stress" EXACT [PomBase:al]
+synonym: "increased trehalose accumulation during cellular response to osmotic stress" RELATED [PomBase:mah]
+is_a: FYPO:0001444 ! increased cellular trehalose level
+intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:0071470
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2012-08-31T14:27:51Z
+
+[Term]
+id: FYPO:0001503
+name: decreased alpha,alpha-trehalase activity during sporulation
+def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity is lower than normal during sporulation." [PomBase:mah]
+synonym: "decreased neutral trehalase activity during sporulation" EXACT [PMID:9729425, PomBase:mah]
+synonym: "decreased trehalase activity during sporulation" BROAD [GO:0004555, GO:0015927]
+synonym: "reduced alpha,alpha-trehalase activity during sporulation" EXACT [PomBase:mah]
+is_a: FYPO:0000212 ! abnormal cellular response to heat
+is_a: FYPO:0001479 ! abnormal alpha,alpha-trehalase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004555
+intersection_of: during GO:0030437
+created_by: midori
+creation_date: 2012-08-31T14:29:44Z
+
+[Term]
+id: FYPO:0001504
+name: decreased cellular trehalose level during sporulation
+def: "A cell phenotype in which the amount of trehalose measured in a cell is lower than normal during sporulation." [PomBase:mah]
+synonym: "decreased cellular trehalose accumulation during sporulation" RELATED [PomBase:mah]
+synonym: "reduced cellular trehalose level during sporulation" EXACT [PomBase:mah]
+is_a: FYPO:0001447 ! decreased cellular trehalose level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0030437
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2012-08-31T14:31:44Z
+
+[Term]
+id: FYPO:0001505
+name: increased cellular phosphatidylserine level
+def: "A cell phenotype in which the amount of phosphatidylserine measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular phosphatidyl-L-serine level" EXACT [CHEBI:18303]
+synonym: "increased cellular phosphatidylserine level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased cellular PS level" EXACT [PomBase:mah]
+synonym: "increased phosphatidylserine accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:18303
+created_by: midori
+creation_date: 2012-08-31T14:45:54Z
+
+[Term]
+id: FYPO:0001506
+name: normal cellular phosphatidylcholine level
+def: "A cell phenotype in which the amount of phosphatidylcholine measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular PC level" EXACT [PomBase:mah]
+synonym: "normal cellular phosphatidylcholine accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular phosphatidylcholine level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:49183
+created_by: midori
+creation_date: 2012-08-31T14:48:33Z
+
+[Term]
+id: FYPO:0001507
+name: normal cellular phosphatidylinositol level
+def: "A cell phenotype in which the amount of phosphatidylinositol measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular phosphatidylinositol accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular phosphatidylinositol level during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal cellular PI level" EXACT [CHEBI:28874, PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:28874
+created_by: midori
+creation_date: 2012-08-31T14:49:23Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
