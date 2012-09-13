@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 04:09:2012 17:05
+date: 13:09:2012 16:19
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -175,7 +175,7 @@ def: "A cell morphology phenotype in which a single cell grows in the form of th
 comment: A T-shaped cell may septate perpendicular to the normal septation axis, and divide to form normal-shaped daughter cells.
 synonym: "cell morphology, T shaped" EXACT [PomBase:mah]
 synonym: "T-shaped cells during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 is_a: FYPO:0001491 ! viable vegetative cells
 intersection_of: PATO:0001200
 intersection_of: exists_during GO:0072690
@@ -201,8 +201,9 @@ id: FYPO:0000015
 name: branched cells
 def: "A cell morphology phenotype in which a daughter cell grows from near, and at approximately a right angle to, the septum of the mother cell, resulting in the formation of a branched, septated cell. Cell division may give rise to branched or unbranched daughter cells." [PomBase:jh, PomBase:mah]
 synonym: "branched cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "branched, septated cells" EXACT [PomBase:jh, PomBase:mah, PomBase:vw]
 synonym: "cell morphology, branched" EXACT [PomBase:mah]
-is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0000402
 intersection_of: exists_during GO:0072690
@@ -217,7 +218,7 @@ def: "A cell morphology phenotype in which cells are curved along the long axis.
 synonym: "bent cells" EXACT [PomBase:mah]
 synonym: "cell morphology, curved" EXACT [PomBase:mah]
 synonym: "curved cells during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 intersection_of: PATO:0000406
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000000
@@ -255,7 +256,7 @@ def: "A cell morphology phenotype in which a cell is shaped in the form of a sph
 synonym: "cell morphology, round cells" RELATED [PomBase:mah]
 synonym: "cell morphology, rounded cells" RELATED [PomBase:mah]
 synonym: "spheroid cells during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0001865
 intersection_of: exists_during GO:0072690
@@ -2366,6 +2367,7 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000179
 name: abnormal protein targeting via the multivesicular body sorting pathway
 def: "A cellular process phenotype in which protein targeting to the vacuole via the multivesicular sorting pathway, leading to ubiquitin-dependent protein degradation, is abnormal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein targeting to vacuole involved in ubiquitin-dependent protein catabolic process via the multivesicular body sorting pathway" EXACT [PomBase:mah]
 synonym: "abnormal protein targeting via the multivesicular body sorting pathway during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000171 ! abnormal late endosome to vacuole transport
@@ -2939,7 +2941,7 @@ synonym: "snowman during sporulation" RELATED [PomBase:mah]
 is_a: FYPO:0000348 ! abnormal spore morphology
 intersection_of: PATO:0002346
 intersection_of: exists_during GO:0030437
-intersection_of: inheres_in CL:0000000
+intersection_of: inheres_in CL:0000596
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -4024,6 +4026,9 @@ name: inviable germinating spore
 def: "A viability phenotype in which a spore germinates but fails to produce dividing cells that can survive under normal conditions." [PomBase:jh, PomBase:mah]
 synonym: "essential in germinating spore" RELATED [PomBase:mah]
 is_a: FYPO:0000049 ! inviable
+intersection_of: FYPO:0000049 ! inviable
+intersection_of: during GO:0009847
+intersection_of: inheres_in CL:0000596
 created_by: midori
 creation_date: 2011-04-27T01:13:41Z
 
@@ -4467,7 +4472,7 @@ creation_date: 2011-07-14T05:04:23Z
 id: FYPO:0000352
 name: abnormal cytoskeleton morphology
 def: "A cellular structure phenotype in which the morphology of the cytoskeleton is abnormal." [PomBase:mah]
-comment: Note that an abnormal actin cytoskeleton organization process may, but does not necessarily, result in abnormal cytoskeleton morphology.
+comment: Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in abnormal cytoskeleton morphology.
 synonym: "abnormal cytoskeleton morphology during vegetative growth" EXACT [PomBase:mah]
 synonym: "cytoskeleton morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000287 ! abnormal subcellular structure
@@ -5706,6 +5711,7 @@ creation_date: 2011-08-12T02:29:38Z
 id: FYPO:0000450
 name: decreased protein localization to centromere
 def: "A cell phenotype in which the localization of a protein to the centromere of a chromosome is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein localisation to centromere" EXACT [PomBase:mah]
 synonym: "decreased protein localisation to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "decreased protein localization to centromere during vegetative growth" EXACT [PomBase:mah]
@@ -5723,6 +5729,7 @@ creation_date: 2011-08-12T02:33:53Z
 id: FYPO:0000451
 name: increased protein localization to centromere
 def: "A cell phenotype in which the localization of a protein to the centromere of a chromosome is increased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein localisation to centromere" EXACT [PomBase:mah]
 synonym: "increased protein localisation to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "increased protein localization to centromere during vegetative growth" EXACT [PomBase:mah]
@@ -8332,6 +8339,7 @@ creation_date: 2011-09-28T12:28:26Z
 id: FYPO:0000644
 name: normal protein localization
 def: "A cellular process phenotype in which cellular protein localization is normal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal cellular protein localization" EXACT [PomBase:mah]
 synonym: "normal protein localisation" EXACT [PomBase:mah]
 synonym: "normal protein localization during vegetative growth" EXACT [PomBase:mah]
@@ -8703,7 +8711,7 @@ creation_date: 2011-11-11T02:55:04Z
 id: FYPO:0000675
 name: abnormal protein targeting
 def: "A transport phenotype in which protein targeting is abnormal." [PomBase:mah]
-comment: Encompasses both targeting of proteins to a particular location where they are not normally found and decreased or no targeting of proteins normally found in the location.
+comment: Encompasses both targeting of proteins to a particular location where they are not normally found and decreased or no targeting of proteins normally found in the location. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein targeting during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000215 ! abnormal intracellular protein transport
 intersection_of: PATO:0000001
@@ -8717,7 +8725,7 @@ creation_date: 2011-11-11T03:24:12Z
 id: FYPO:0000676
 name: abnormal protein targeting to vacuole
 def: "A transport phenotype in which protein targeting to the vacuole is abnormal." [PomBase:mah]
-comment: Encompasses both targeting of proteins to the vacuole where they are not normally found and decreased or no targeting of proteins normally found in the vacuole.
+comment: Encompasses both targeting of proteins to the vacuole where they are not normally found and decreased or no targeting of proteins normally found in the vacuole. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein targeting to vacuole during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal vacuolar protein sorting" EXACT [PomBase:mah]
 is_a: FYPO:0000597 ! abnormal vacuolar transport
@@ -8733,7 +8741,7 @@ creation_date: 2011-11-11T03:25:01Z
 id: FYPO:0000677
 name: abnormal protein targeting to prospore membrane
 def: "A transport phenotype in which protein targeting to the prospore membrane is abnormal." [PomBase:mah]
-comment: Encompasses both targeting of proteins to the prospore membrane where they are not normally found and decreased or no targeting of proteins normally found in the prospore membrane.
+comment: Encompasses both targeting of proteins to the prospore membrane where they are not normally found and decreased or no targeting of proteins normally found in the prospore membrane. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein targeting to prospore membrane during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000675 ! abnormal protein targeting
 intersection_of: PATO:0000001
@@ -9555,6 +9563,7 @@ creation_date: 2012-01-11T12:50:31Z
 id: FYPO:0000744
 name: normal protein localization to actin cortical patch
 def: "A cell phenotype in which the localization of a protein to actin cortical patches is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to actin cortical patch" EXACT [PomBase:mah]
 synonym: "normal protein localization to actin cortical patch during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization
@@ -10075,7 +10084,7 @@ creation_date: 2012-02-28T03:57:44Z
 id: FYPO:0000782
 name: mislocalized protein
 def: "A cell phenotype in which a protein is observed in a particular location where it is not normally found." [PomBase:mah]
-comment: The difference between this term and 'abnormal protein localization' (FYPO:0000443) is that 'mislocalized protein' describes a protein that is observed in a place where it is not normally found, whereas 'abnormal protein localization' additionally encompasses the absence of protein from a place where it is normally found. FYPO:0000782 can therefore be used in any case where a protein is in a different location in a mutant compared to wild type, whereas additional information is usually required to support annotation to FYPO:0000443 or its descendants.
+comment: The difference between this term and 'abnormal protein localization' (FYPO:0000443) is that 'mislocalized protein' describes a protein that is observed in a place where it is not normally found, whereas 'abnormal protein localization' additionally encompasses the absence of protein from a place where it is normally found. FYPO:0000782 can therefore be used in any case where a protein is in a different location in a mutant compared to wild type, whereas additional information is usually required to support annotation to FYPO:0000443 or its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "mislocalised protein" EXACT [PomBase:mah]
 synonym: "mislocalized protein during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001320 ! vegetative cell phenotype
@@ -10090,7 +10099,7 @@ creation_date: 2012-02-29T12:48:27Z
 id: FYPO:0000783
 name: protein mislocalized to cytoplasm
 def: "A cell phenotype in which a protein that is not normally found in the cytoplasm is observed there." [PomBase:mah]
-comment: Note that this term can be used to annotate any case where a protein is found in the cytoplasm in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants.
+comment: Note that this term can be used to annotate any case where a protein is found in the cytoplasm in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "protein mislocalised to cytoplasm" EXACT [PomBase:mah]
 synonym: "protein mislocalized to cytoplasm during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000782 ! mislocalized protein
@@ -10890,6 +10899,7 @@ creation_date: 2012-03-09T04:18:58Z
 id: FYPO:0000838
 name: normal protein localization to nucleus
 def: "A cell phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to nucleus" EXACT [PomBase:mah]
 synonym: "normal protein localization to nucleus during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization
@@ -14837,9 +14847,9 @@ creation_date: 2012-06-07T11:31:36Z
 
 [Term]
 id: FYPO:0001118
-name: abnormal cell morphology during vegetative growth
-def: "A cell phenotype in which cell morphology is altered when the cell is undergoing vegetative growth." [PomBase:mah]
-synonym: "abnormal cell morphology during vegetative growth during vegetative growth" EXACT [PomBase:mah]
+name: abnormal vegetative cell morphology
+def: "A cell phenotype in which cell morphology is altered in the vegetative growth phase of the life cycle." [PomBase:mah]
+synonym: "abnormal cell morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
 is_a: FYPO:0001320 ! vegetative cell phenotype
 intersection_of: FYPO:0000005 ! abnormal cell morphology
@@ -14850,11 +14860,11 @@ creation_date: 2012-06-07T11:45:38Z
 [Term]
 id: FYPO:0001119
 name: bottle-shaped cells during vegetative growth
-def: "A cell morphology phenotype in which the cell takes on a bottle shape, i.e. tapers at one end to a diameter smaller than the other, when the cell is undergoing vegetative growth." [PomBase:mah]
+def: "A cell morphology phenotype in which the cell takes on a bottle shape, i.e. tapers at one end to a diameter smaller than the other, in the vegetative growth phase of the life cycle." [PomBase:mah]
 synonym: "cell morphology, bottle/skittle during vegetative growth" EXACT [PomBase:mah]
 synonym: "skittle-shaped cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000014 ! bottle-shaped cells
-is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 intersection_of: FYPO:0000014 ! bottle-shaped cells
 intersection_of: exists_during GO:0072690
 created_by: midori
@@ -14863,11 +14873,11 @@ creation_date: 2012-06-07T11:47:07Z
 [Term]
 id: FYPO:0001120
 name: pear-shaped cells during vegetative growth
-def: "A cell morphology phenotype in which a cell is shaped in the form of a pear when the cell is undergoing vegetative growth." [PomBase:mah]
+def: "A cell morphology phenotype in which a cell is shaped in the form of a pear in the vegetative growth phase of the life cycle." [PomBase:mah]
 comment: Discussing what this means; may rename.
 synonym: "cell morphology, pear shaped during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000020 ! pear-shaped cells
-is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 intersection_of: FYPO:0000020 ! pear-shaped cells
 intersection_of: exists_during GO:0072690
 created_by: midori
@@ -14875,10 +14885,11 @@ creation_date: 2012-06-07T11:47:18Z
 
 [Term]
 id: FYPO:0001121
-name: abnormal cell shape, normal cell size during vegetative growth
-def: "A cell phenotype in which cell shape is altered, but cell size remains normal, when the cell is undergoing vegetative growth." [PomBase:mah, PomBase:vw]
+name: vegetative cells, abnormal cell shape, normal cell size
+def: "A cell phenotype in which cell shape is altered, but cell size remains normal, in the vegetative growth phase of the life cycle." [PomBase:mah, PomBase:vw]
+synonym: "abnormal cell shape, normal cell size during vegetative growth" EXACT []
 synonym: "lumpy" RELATED [PomBase:vw]
-is_a: FYPO:0001118 ! abnormal cell morphology during vegetative growth
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0001124 ! normal cell size
@@ -14889,10 +14900,10 @@ creation_date: 2012-06-07T11:56:50Z
 [Term]
 id: FYPO:0001122
 name: elongated vegetative cells
-def: "A cell phenotype in which cells are elongated when undergoing vegetative growth." [PomBase:mah]
+def: "A cell phenotype in which cells are elongated in the vegetative growth phase of the life cycle." [PomBase:mah]
 synonym: "long vegetative cells" EXACT [PomBase:vw]
 is_a: FYPO:0000017 ! elongated cells
-is_a: FYPO:0001320 ! vegetative cell phenotype
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 intersection_of: FYPO:0000017 ! elongated cells
 intersection_of: exists_during GO:0072690
 created_by: midori
@@ -15002,7 +15013,7 @@ creation_date: 2012-06-08T12:04:38Z
 id: FYPO:0001131
 name: abnormal protein localization to heterochromatin
 def: "A cell phenotype in which the localization of a protein to heterochromatin is abnormal." [PomBase:mah]
-comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process.
+comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein heterochromatin to chromatin" EXACT [PomBase:mah]
 synonym: "abnormal protein localisation to heterochromatin" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to heterochromatin during vegetative growth" EXACT [PomBase:mah]
@@ -15447,6 +15458,7 @@ creation_date: 2012-06-15T14:22:11Z
 id: FYPO:0001164
 name: normal cell growth on glucose carbon source
 def: "A cell growth phenotype in which cells grow normally in a medium containing glucose as the carbon source." [PomBase:mah]
+synonym: "normal vegetative cell growth on dextrose carbon source" EXACT [PomBase:al]
 synonym: "normal vegetative cell growth on glucose carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell growth
 intersection_of: FYPO:0000047 ! normal cell growth
@@ -15524,10 +15536,10 @@ creation_date: 2012-06-18T15:18:27Z
 id: FYPO:0001170
 name: decreased methionine import during nitrogen starvation
 def: "A cellular process phenotype in which the import of methionine into the cell occurs to a lower extent than normal." [PomBase:mah]
-synonym: "decreased methionine import into cell" EXACT [PomBase:al]
+synonym: "decreased methionine import into cell during nitrogen starvation" EXACT [PomBase:al]
 synonym: "decreased methionine transport into cell during nitrogen starvation" EXACT [PomBase:al]
-synonym: "decreased methionine uptake" EXACT [GO:0036233]
-synonym: "reduced methionine import" EXACT [PomBase:mah]
+synonym: "decreased methionine uptake during nitrogen starvation" EXACT [GO:0036233]
+synonym: "reduced methionine import during nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001058 ! decreased amino acid import
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0006995
@@ -16380,7 +16392,7 @@ creation_date: 2012-07-16T13:56:11Z
 [Term]
 id: FYPO:0001233
 name: normal subcellular structure
-def: "A cell phenotype in which the amount, distribution, or morphology of a cell part is abnormal." [PomBase:mah]
+def: "A cell phenotype in which the amount, distribution, or morphology of a cell part is normal." [PomBase:mah]
 synonym: "normal cellular pH level" EXACT [PomBase:al]
 is_a: FYPO:0000136 ! cellular structure phenotype
 is_a: FYPO:0000257 ! normal phenotype
@@ -17450,7 +17462,7 @@ creation_date: 2012-08-01T11:18:45Z
 [Term]
 id: FYPO:0001313
 name: normal subcellular structure during vegetative growth
-def: "A cell phenotype in which the amount, distribution, or morphology of a cell part is abnormal when the cell is in the vegetative growth phase of the life cycle." [PomBase:mah]
+def: "A cell phenotype in which the amount, distribution, or morphology of a cell part is normal when the cell is in the vegetative growth phase of the life cycle." [PomBase:mah]
 is_a: FYPO:0001233 ! normal subcellular structure
 is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 intersection_of: PATO:0000051
@@ -18497,7 +18509,7 @@ creation_date: 2012-08-10T16:32:24Z
 [Term]
 id: FYPO:0001389
 name: normal nucleus localization
-def: "A cellular process phenotype in which nucleus localization is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which nucleus localization is normal." [PomBase:mah]
 synonym: "normal nuclear localization" EXACT [PomBase:mah]
 synonym: "normal nuclear position" EXACT [PomBase:mah]
 synonym: "normal nucleus localisation" EXACT [PomBase:mah]
@@ -18962,6 +18974,7 @@ creation_date: 2012-08-22T14:19:01Z
 id: FYPO:0001423
 name: normal protein targeting to vacuole
 def: "A cellular process phenotype in which protein targeting to the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein targeting to vacuole during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal vacuolar protein sorting" EXACT [PomBase:mah]
 is_a: FYPO:0000601 ! normal vacuolar transport
@@ -19636,7 +19649,7 @@ creation_date: 2012-08-29T16:11:06Z
 id: FYPO:0001474
 name: abnormal spindle pole body structure
 def: "A cellular structure phenotype in which the structure of the spindle pole body is abnormal." [PomBase:mah]
-comment: Note that an abnormal kinetochore organization process may, but does not necessarily, result in abnormal kinetochore structure.
+comment: Note that an abnormal spindle pole body organization process may, but does not necessarily, result in abnormal spindle pole body structure.
 synonym: "abnormal SPB structure" EXACT [PomBase:mah]
 synonym: "abnormal spindle pole body structure during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
@@ -19789,7 +19802,7 @@ creation_date: 2012-08-30T13:03:23Z
 id: FYPO:0001486
 name: normal RNA level during cellular response to salt stress
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to salt stress is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to salt stress" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to salt stress" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
@@ -19807,7 +19820,7 @@ creation_date: 2012-08-30T13:08:09Z
 id: FYPO:0001487
 name: normal RNA level during cellular response to heat
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to heat is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to heat" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to heat" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
@@ -19873,7 +19886,7 @@ creation_date: 2012-08-30T14:12:48Z
 id: FYPO:0001492
 name: elongated viable vegetative cells
 def: "A cell morphology phenotype in which vegetative cells are viable and longer than normal." [PomBase:mah]
-synonym: "elongated viable vegetative cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated viable cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001122 ! elongated vegetative cells
 is_a: FYPO:0001491 ! viable vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -20128,6 +20141,7 @@ creation_date: 2012-09-04T17:02:28Z
 id: FYPO:0001509
 name: normal protein localization to chromatin
 def: "A cell phenotype in which the localization of a protein to the chromatin is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to chromatin" EXACT [PomBase:mah]
 synonym: "normal protein localization to chromatin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization
@@ -20138,6 +20152,506 @@ intersection_of: inheres_in GO:0071168
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-09-04T17:04:49Z
+
+[Term]
+id: FYPO:0001510
+name: viable vegetative cells, abnormal cell shape, normal cell size
+def: "A cell phenotype in which cells are viable, cell shape is altered, and cell size remains normal, in the vegetative growth phase of the life cycle." [PomBase:mah, PomBase:vw]
+synonym: "viable lumpy" RELATED [PomBase:vw]
+synonym: "viable, abnormal cell shape, normal cell size during vegetative growth" EXACT []
+is_a: FYPO:0001121 ! vegetative cells, abnormal cell shape, normal cell size
+is_a: FYPO:0001491 ! viable vegetative cells
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0001124 ! normal cell size
+intersection_of: has_part FYPO:0001126 ! abnormal cell shape
+intersection_of: has_part FYPO:0001491
+created_by: midori
+creation_date: 2012-09-13T10:47:20Z
+
+[Term]
+id: FYPO:0001511
+name: inviable vegetative cells, abnormal cell shape, normal cell size
+def: "A cell phenotype in which cells are inviable, cell shape is altered, and cell size remains normal, in the vegetative growth phase of the life cycle." [PomBase:mah, PomBase:vw]
+synonym: "inviable lumpy" RELATED [PomBase:vw]
+synonym: "inviable, abnormal cell shape, normal cell size during vegetative growth" EXACT []
+is_a: FYPO:0001121 ! vegetative cells, abnormal cell shape, normal cell size
+is_a: FYPO:0001489 ! inviable vegetative cells
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0001124 ! normal cell size
+intersection_of: has_part FYPO:0001126 ! abnormal cell shape
+intersection_of: has_part FYPO:0001489 ! inviable
+created_by: midori
+creation_date: 2012-09-13T10:52:33Z
+
+[Term]
+id: FYPO:0001512
+name: branched, elongated cells
+def: "A cell morphology phenotype in which cells are branched, and therefore septated, and longer than normal." [PomBase:mah]
+synonym: "branched, elongated cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "branched, elongated, septated cells" EXACT [PomBase:jh, PomBase:mah, PomBase:vw]
+synonym: "branched, long, septated cells" EXACT [PomBase:vw]
+is_a: FYPO:0000015 ! branched cells
+is_a: FYPO:0001122 ! elongated vegetative cells
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000015 ! branched cells
+intersection_of: has_part FYPO:0000017 ! elongated cells
+created_by: midori
+creation_date: 2012-09-13T10:58:38Z
+
+[Term]
+id: FYPO:0001513
+name: normal mitotic sister chromatid segregation
+def: "A cellular process phenotype in which mitotic sister chromatid segregation is normal (i.e. indistinguishable from wild type). Mitotic sister chromatid segregation is the entire process in which replicated homologous chromosomes are organized and then physically separated and apportioned to two sets during the mitotic cell cycle." [GO:0000070, PomBase:mah]
+synonym: "normal mitotic chromosome segregation" EXACT [PomBase:mah]
+synonym: "normal mitotic sister chromatid segregation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001007 ! normal mitosis
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000070
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-09-13T11:23:11Z
+
+[Term]
+id: FYPO:0001514
+name: decreased protein localization to nucleus
+def: "A cell phenotype in which the localization of a protein to the nucleus is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to nucleus" EXACT [GO:0034504, PomBase:mah]
+synonym: "decreased protein localization to nucleus during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to nucleus" EXACT []
+is_a: FYPO:0001129 ! abnormal protein localization to nucleus
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034504
+created_by: midori
+creation_date: 2012-09-13T11:39:44Z
+
+[Term]
+id: FYPO:0001515
+name: abnormal telomere tethering at nuclear periphery
+def: "A cellular process phenotype in which telomere tethering at the nuclear periphery is abnormal." [PomBase:mah]
+synonym: "abnormal telomere anchoring at nuclear periphery" EXACT [PomBase:vw]
+synonym: "abnormal telomere tethering at nuclear periphery during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034398
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-09-13T11:46:25Z
+
+[Term]
+id: FYPO:0001516
+name: resistance to mercury
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of mercury ions than normal." [PomBase:mah]
+synonym: "resistance to mercury during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to mercury ion" EXACT []
+synonym: "resistant to mercury" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:25197
+created_by: midori
+creation_date: 2012-09-13T13:16:13Z
+
+[Term]
+id: FYPO:0001517
+name: resistance to aluminium
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of aluminium ions than normal." [PomBase:mah]
+synonym: "resistance to aluminium cation" EXACT [CHEBI:63062]
+synonym: "resistance to aluminium during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to aluminum" EXACT []
+synonym: "resistant to aluminium" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:63062
+created_by: midori
+creation_date: 2012-09-13T13:22:53Z
+
+[Term]
+id: FYPO:0001518
+name: resistance to diethyl maleate
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of diethyl maleate than normal." [PomBase:mah]
+synonym: "resistance to diethyl maleate during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to diethylmaleate" EXACT [PomBase:al]
+synonym: "resistant to diethyl maleate" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+created_by: midori
+creation_date: 2012-09-13T13:41:57Z
+
+[Term]
+id: FYPO:0001519
+name: abnormal gamma-glutamyltransferase activity
+def: "A molecular function phenotype in which the observed rate of gamma-glutamyltransferase activity is abnormal." [PomBase:mah]
+synonym: "abnormal gamma-glutamyl transpeptidase activity activity" EXACT [GO:0003840, PomBase:mah]
+synonym: "abnormal GGT activity" BROAD [PomBase:al, PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003840
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-09-13T13:53:10Z
+
+[Term]
+id: FYPO:0001520
+name: increased gamma-glutamyltransferase activity
+def: "A molecular function phenotype in which the observed rate of gamma-glutamyltransferase activity activity is increased." [PomBase:mah]
+synonym: "increased gamma-glutamyl transpeptidase activity" EXACT [GO:0003840, PomBase:mah]
+synonym: "increased GGT activity" BROAD [PomBase:al, PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001519 ! abnormal gamma-glutamyltransferase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0003840
+created_by: midori
+creation_date: 2012-09-13T13:53:17Z
+
+[Term]
+id: FYPO:0001521
+name: increased cellular glutathione level
+def: "A cell phenotype in which the amount of glutathione (GSH) measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular glutathione level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased cellular GSH level" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased cellular L-gamma-glutamyl-L-cysteinylglycine level" EXACT [CHEBI:16856]
+synonym: "increased cellular reduced glutathione level" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased glutathione accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:16856
+created_by: midori
+creation_date: 2012-09-13T14:02:16Z
+
+[Term]
+id: FYPO:0001522
+name: normal cellular response to caffeine
+def: "A cellular response phenotype in which the cellular response to caffeine is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to caffeine during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071313
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-09-13T14:06:29Z
+
+[Term]
+id: FYPO:0001523
+name: normal cellular response to leptomycin B
+def: "A cellular response phenotype in which the cellular response to leptomycin B is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to leptomycin B during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072750
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-09-13T14:09:56Z
+
+[Term]
+id: FYPO:0001524
+name: resistance to L-thialysine
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of L-thialysine than normal." [PomBase:mah]
+synonym: "resistance to L-thialysine during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to thialysine" BROAD [PomBase:mah]
+synonym: "resistant to L-thialysine" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:497734
+created_by: midori
+creation_date: 2012-09-13T14:36:42Z
+
+[Term]
+id: FYPO:0001525
+name: sensitive to L-thialysine
+def: "A phenotype in which cells show increased sensitivity to L-thialysine." [PomBase:mah]
+synonym: "sensitive to L-thialysine during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to thialysine" BROAD [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:497734
+created_by: midori
+creation_date: 2012-09-13T14:43:00Z
+
+[Term]
+id: FYPO:0001526
+name: normal cellular response to L-thialysine
+def: "A cellular response phenotype in which the cellular response to L-thialysine is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to L-thialysine during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal cellular response to thialysine" BROAD []
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072751
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-09-13T14:46:44Z
+
+[Term]
+id: FYPO:0001527
+name: normal GTP binding
+def: "A molecular function phenotype in which occurrence of GTP binding by a mutated gene product is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000706 ! normal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0005255
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-09-13T14:53:26Z
+
+[Term]
+id: FYPO:0001528
+name: abnormal GTP binding
+def: "A molecular function phenotype in which occurrence of GTP binding by a mutated gene product is abnormal." [PomBase:mah]
+is_a: FYPO:0000707 ! abnormal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0005255
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-09-13T14:54:29Z
+
+[Term]
+id: FYPO:0001529
+name: decreased GTP binding
+def: "A molecular function phenotype in which occurrence of GTP binding by a mutated gene product is decreased." [PomBase:mah]
+synonym: "reduced GTP binding" EXACT [PomBase:mah]
+is_a: FYPO:0001528 ! abnormal GTP binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0005255
+created_by: midori
+creation_date: 2012-09-13T14:55:25Z
+
+[Term]
+id: FYPO:0001530
+name: abnormal GTPase activity
+def: "A molecular function phenotype in which the observed rate of GTPase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003924
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-09-13T15:01:53Z
+
+[Term]
+id: FYPO:0001531
+name: decreased GTPase activity
+def: "A molecular function phenotype in which the observed rate of CTPase activity is decreased." [PomBase:mah]
+synonym: "reduced CTPase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001530 ! abnormal GTPase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003924
+created_by: midori
+creation_date: 2012-09-13T15:02:01Z
+
+[Term]
+id: FYPO:0001532
+name: normal duration of mitotic S phase
+def: "A cell cycle phenotype in the duration of S phase of the mitotic cell cycle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000411 ! normal cell cycle progression
+intersection_of: PATO:0001309
+intersection_of: inheres_in GO:0000084
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-09-13T15:28:30Z
+
+[Term]
+id: FYPO:0001533
+name: sensitive to zinc starvation
+def: "A cell phenotype in which cells show increased sensitivity to zinc starvation." [PomBase:mah]
+synonym: "sensitive to zinc ion starvation" EXACT [PomBase:mah]
+synonym: "sensitive to zinc starvation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000304 ! sensitive to stress
+is_a: FYPO:0001200 ! abnormal cellular response to calcium starvation
+created_by: midori
+creation_date: 2012-09-13T15:35:17Z
+
+[Term]
+id: FYPO:0001534
+name: decreased cellular zinc level
+def: "A cell phenotype in which the amount of zinc ion measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular zinc ion level" EXACT [PomBase:mah]
+synonym: "decreased cellular zinc level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased zinc accumulation" RELATED [PomBase:al]
+synonym: "reduced cellular calcium level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:27365
+created_by: midori
+creation_date: 2012-09-13T15:43:51Z
+
+[Term]
+id: FYPO:0001535
+name: normal cellular zinc level
+def: "A cell phenotype in which the amount of zinc ion measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular zinc accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular zinc ion level" EXACT [PomBase:mah]
+synonym: "normal cellular zinc level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:27365
+created_by: midori
+creation_date: 2012-09-13T15:48:08Z
+
+[Term]
+id: FYPO:0001536
+name: normal cellular copper level
+def: "A cell phenotype in which the amount of copper ion measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular copper accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular copper ion level" EXACT [PomBase:mah]
+synonym: "normal cellular copper level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:23378
+created_by: midori
+creation_date: 2012-09-13T16:07:14Z
+
+[Term]
+id: FYPO:0001537
+name: normal cellular iron level
+def: "A cell phenotype in which the amount of iron ion measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular iron accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular iron ion level" EXACT [PomBase:mah]
+synonym: "normal cellular iron level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:24875
+created_by: midori
+creation_date: 2012-09-13T16:07:47Z
+
+[Term]
+id: FYPO:0001538
+name: normal cellular potassium level
+def: "A cell phenotype in which the amount of potassium ion measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular potassium accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular potassium ion level" EXACT [PomBase:mah]
+synonym: "normal cellular potassium level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:29103
+created_by: midori
+creation_date: 2012-09-13T16:08:23Z
+
+[Term]
+id: FYPO:0001539
+name: normal cellular magnesium level
+def: "A cell phenotype in which the amount of magnesium ion measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular magnesium accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular magnesium ion level" EXACT [PomBase:mah]
+synonym: "normal cellular magnesium level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:18420
+created_by: midori
+creation_date: 2012-09-13T16:14:33Z
+
+[Term]
+id: FYPO:0001540
+name: normal cellular manganese level
+def: "A cell phenotype in which the amount of manganese ion measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular manganese accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular manganese ion level" EXACT [PomBase:mah]
+synonym: "normal cellular manganese level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:25155
+created_by: midori
+creation_date: 2012-09-13T16:08:54Z
+
+[Term]
+id: FYPO:0001541
+name: normal cellular molybdenum level
+def: "A cell phenotype in which the amount of molybdenum ion measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular molybdenum accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular molybdenum ion level" EXACT [PomBase:mah]
+synonym: "normal cellular molybdenum level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:37239
+created_by: midori
+creation_date: 2012-09-13T16:09:45Z
+
+[Term]
+id: FYPO:0001542
+name: normal cellular nickel level
+def: "A cell phenotype in which the amount of nickel ion measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular nickel accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular nickel ion level" EXACT [PomBase:mah]
+synonym: "normal cellular nickel level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:25516
+created_by: midori
+creation_date: 2012-09-13T16:10:13Z
+
+[Term]
+id: FYPO:0001543
+name: normal cellular phosphorus level
+def: "A cell phenotype in which the amount of phosphorus measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular phosphorus accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular phosphorus level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:26082
+created_by: midori
+creation_date: 2012-09-13T16:11:42Z
+
+[Term]
+id: FYPO:0001544
+name: normal cellular sulfur level
+def: "A cell phenotype in which the amount of sulfur measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular sulfur accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular sulfur level during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal cellular sulphur level" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:26835
+created_by: midori
+creation_date: 2012-09-13T16:12:10Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
