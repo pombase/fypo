@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 13:09:2012 16:19
+date: 14:09:2012 17:07
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -14627,6 +14627,7 @@ synonym: "decreased protein accumulation during cellular response to hydrogen pe
 synonym: "decreased protein level during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced protein level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
 is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+is_a: FYPO:0001548 ! altered protein level during cellular response to hydrogen peroxide
 intersection_of: exists_during GO:0070301
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000000
@@ -14643,6 +14644,7 @@ comment: Consider annotating to a term describing abnormal translation or abnorm
 synonym: "increased protein accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
+is_a: FYPO:0001548 ! altered protein level during cellular response to hydrogen peroxide
 intersection_of: exists_during GO:0070301
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000000
@@ -14887,7 +14889,7 @@ creation_date: 2012-06-07T11:47:18Z
 id: FYPO:0001121
 name: vegetative cells, abnormal cell shape, normal cell size
 def: "A cell phenotype in which cell shape is altered, but cell size remains normal, in the vegetative growth phase of the life cycle." [PomBase:mah, PomBase:vw]
-synonym: "abnormal cell shape, normal cell size during vegetative growth" EXACT []
+synonym: "abnormal cell shape, normal cell size during vegetative growth" EXACT [PomBase:mah]
 synonym: "lumpy" RELATED [PomBase:vw]
 is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 intersection_of: FYPO:0000136 ! cellular structure phenotype
@@ -15535,12 +15537,12 @@ creation_date: 2012-06-18T15:18:27Z
 [Term]
 id: FYPO:0001170
 name: decreased methionine import during nitrogen starvation
-def: "A cellular process phenotype in which the import of methionine into the cell occurs to a lower extent than normal." [PomBase:mah]
+def: "A cellular process phenotype in which the import of methionine into the cell occurs to a lower extent than normal when the cell is subject to nitrogen starvation." [PomBase:mah]
 synonym: "decreased methionine import into cell during nitrogen starvation" EXACT [PomBase:al]
 synonym: "decreased methionine transport into cell during nitrogen starvation" EXACT [PomBase:al]
 synonym: "decreased methionine uptake during nitrogen starvation" EXACT [GO:0036233]
 synonym: "reduced methionine import during nitrogen starvation" EXACT [PomBase:mah]
-is_a: FYPO:0001058 ! decreased amino acid import
+is_a: FYPO:0001558 ! decreased methionine import
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0006995
 intersection_of: inheres_in GO:0044690
@@ -16685,6 +16687,7 @@ synonym: "increased protein level during cellular response to hyperoxic stress" 
 synonym: "increased protein level during cellular response to hypoxia during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased protein level during cellular response to increased oxygen tension" EXACT [GO:0071456]
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
+is_a: FYPO:0001549 ! altered protein level during cellular response to hypoxia
 intersection_of: exists_during GO:0071456
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000000
@@ -16736,10 +16739,10 @@ name: decreased RNA level during cellular response to hypoxia
 def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to hypoxia is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "decreased mRNA level during cellular response to hypoxia" NARROW [PomBase:mah]
+synonym: "decreased protein level during cellular response to increased oxygen tension" EXACT [GO:0071456]
 synonym: "decreased RNA accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to hyperoxic stress" EXACT [GO:0071456]
 synonym: "decreased RNA level during cellular response to hypoxia during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased protein level during cellular response to increased oxygen tension" EXACT [GO:0071456]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
 intersection_of: exists_during GO:0071456
 intersection_of: exists_during GO:0072690
@@ -16949,6 +16952,7 @@ synonym: "decreased protein level during cellular response to hypoxia during veg
 synonym: "decreased protein level during cellular response to increased oxygen tension" EXACT [GO:0071456]
 synonym: "reduced protein level during cellular response to hypoxia" EXACT [PomBase:mah]
 is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+is_a: FYPO:0001549 ! altered protein level during cellular response to hypoxia
 intersection_of: exists_during GO:0071456
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000000
@@ -20158,14 +20162,14 @@ id: FYPO:0001510
 name: viable vegetative cells, abnormal cell shape, normal cell size
 def: "A cell phenotype in which cells are viable, cell shape is altered, and cell size remains normal, in the vegetative growth phase of the life cycle." [PomBase:mah, PomBase:vw]
 synonym: "viable lumpy" RELATED [PomBase:vw]
-synonym: "viable, abnormal cell shape, normal cell size during vegetative growth" EXACT []
+synonym: "viable, abnormal cell shape, normal cell size during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001121 ! vegetative cells, abnormal cell shape, normal cell size
 is_a: FYPO:0001491 ! viable vegetative cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0001124 ! normal cell size
 intersection_of: has_part FYPO:0001126 ! abnormal cell shape
-intersection_of: has_part FYPO:0001491
+intersection_of: has_part FYPO:0001491 ! viable vegetative cells
 created_by: midori
 creation_date: 2012-09-13T10:47:20Z
 
@@ -20174,14 +20178,14 @@ id: FYPO:0001511
 name: inviable vegetative cells, abnormal cell shape, normal cell size
 def: "A cell phenotype in which cells are inviable, cell shape is altered, and cell size remains normal, in the vegetative growth phase of the life cycle." [PomBase:mah, PomBase:vw]
 synonym: "inviable lumpy" RELATED [PomBase:vw]
-synonym: "inviable, abnormal cell shape, normal cell size during vegetative growth" EXACT []
+synonym: "inviable, abnormal cell shape, normal cell size during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001121 ! vegetative cells, abnormal cell shape, normal cell size
 is_a: FYPO:0001489 ! inviable vegetative cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0001124 ! normal cell size
 intersection_of: has_part FYPO:0001126 ! abnormal cell shape
-intersection_of: has_part FYPO:0001489 ! inviable
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cells
 created_by: midori
 creation_date: 2012-09-13T10:52:33Z
 
@@ -20222,7 +20226,7 @@ def: "A cell phenotype in which the localization of a protein to the nucleus is 
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein localisation to nucleus" EXACT [GO:0034504, PomBase:mah]
 synonym: "decreased protein localization to nucleus during vegetative growth" EXACT [PomBase:mah]
-synonym: "reduced protein localization to nucleus" EXACT []
+synonym: "reduced protein localization to nucleus" EXACT [PomBase:mah]
 is_a: FYPO:0001129 ! abnormal protein localization to nucleus
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
@@ -20249,7 +20253,7 @@ id: FYPO:0001516
 name: resistance to mercury
 def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of mercury ions than normal." [PomBase:mah]
 synonym: "resistance to mercury during vegetative growth" EXACT [PomBase:mah]
-synonym: "resistance to mercury ion" EXACT []
+synonym: "resistance to mercury ion" EXACT [PomBase:mah]
 synonym: "resistant to mercury" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
@@ -20265,7 +20269,7 @@ name: resistance to aluminium
 def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of aluminium ions than normal." [PomBase:mah]
 synonym: "resistance to aluminium cation" EXACT [CHEBI:63062]
 synonym: "resistance to aluminium during vegetative growth" EXACT [PomBase:mah]
-synonym: "resistance to aluminum" EXACT []
+synonym: "resistance to aluminum" EXACT [PomBase:mah]
 synonym: "resistant to aluminium" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
@@ -20389,7 +20393,7 @@ id: FYPO:0001526
 name: normal cellular response to L-thialysine
 def: "A cellular response phenotype in which the cellular response to L-thialysine is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular response to L-thialysine during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal cellular response to thialysine" BROAD []
+synonym: "normal cellular response to thialysine" BROAD [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -20652,6 +20656,406 @@ intersection_of: qualifier PATO:0000461
 intersection_of: towards CHEBI:26835
 created_by: midori
 creation_date: 2012-09-13T16:12:10Z
+
+[Term]
+id: FYPO:0001545
+name: normal cellular response to L-canavanine
+def: "A cellular response phenotype in which the cellular response to L-canavanine is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to canavanine" BROAD [PomBase:mah]
+synonym: "normal cellular response to L-canavanine during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0036280
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-09-14T14:23:13Z
+
+[Term]
+id: FYPO:0001546
+name: decreased RNA level during cellular response to zinc ion
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to zinc ion is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "decreased mRNA level during cellular response to zinc ion" NARROW [PomBase:mah]
+synonym: "decreased RNA accumulation during cellular response to zinc ion" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to zinc" EXACT [GO:0071456]
+synonym: "decreased RNA level during cellular response to zinc ion during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: exists_during GO:0071294
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-09-14T14:26:22Z
+
+[Term]
+id: FYPO:0001547
+name: increased RNA level during cellular response to zinc ion starvation
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to zinc ion starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased mRNA level during cellular response to zinc ion starvation" NARROW [PomBase:mah]
+synonym: "increased RNA accumulation during cellular response to zinc ion starvation" RELATED [PomBase:mah]
+synonym: "increased RNA level during cellular response to zinc ion starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased RNA level during cellular response to zinc starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level
+intersection_of: exists_during GO:0034224
+intersection_of: exists_during GO:0036223
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-09-14T14:28:30Z
+
+[Term]
+id: FYPO:0001548
+name: altered protein level during cellular response to hydrogen peroxide
+def: "A cell phenotype in which the amount of protein measured in a cell differs from normal during a cellular response to hydrogen peroxide. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "abnormal protein level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+synonym: "altered cellular protein level during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001325 ! altered protein level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0070301
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2012-09-14T14:32:40Z
+
+[Term]
+id: FYPO:0001549
+name: altered protein level during cellular response to hypoxia
+def: "A cell phenotype in which the amount of protein measured in a cell differs from normal during a cellular response to hypoxia. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "abnormal protein level during cellular response to hypoxia" EXACT [PomBase:mah]
+synonym: "altered cellular protein level during cellular response to hypoxia during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001325 ! altered protein level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0071456
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2012-09-14T14:34:37Z
+
+[Term]
+id: FYPO:0001550
+name: altered protein level during cellular response to zinc ion
+def: "A cell phenotype in which the amount of protein measured in a cell differs from normal during a cellular response to zinc ions. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "abnormal protein level during cellular response to zinc ion" EXACT [PomBase:mah]
+synonym: "altered cellular protein level during cellular response to zinc ion during vegetative growth" EXACT [PomBase:mah]
+synonym: "altered protein level during cellular response to zinc" EXACT [PomBase:mah]
+is_a: FYPO:0001325 ! altered protein level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0071294
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2012-09-14T14:36:13Z
+
+[Term]
+id: FYPO:0001551
+name: increased protein level during cellular response to zinc ion starvation
+def: "A cell phenotype in which the amount of protein measured in a cell during a cellular response to zinc ion starvation is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "increased protein accumulation during cellular response to zinc ion starvation" RELATED [PomBase:mah]
+synonym: "increased protein level during cellular response to zinc ion starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein level during cellular response to zinc starvation" EXACT [GO:0071453]
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: exists_during GO:0034224
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2012-09-14T14:37:37Z
+
+[Term]
+id: FYPO:0001552
+name: increased cellular zinc level
+def: "A cell phenotype in which the amount of zinc ion measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular zinc ion level" EXACT [PomBase:mah]
+synonym: "increased cellular zinc level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased zinc accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+is_a: FYPO:0001462 ! altered cellular calcium level
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:27365
+created_by: midori
+creation_date: 2012-09-14T14:42:05Z
+
+[Term]
+id: FYPO:0001553
+name: abnormal RNA processing
+def: "A cellular process phenotype in which RNA processing is abnormal. RNA processing is the conversion of one or more primary RNA transcripts into one or more mature RNA molecules." [GO:0006396, PomBase:mah]
+synonym: "abnormal RNA processing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000142 ! gene expression phenotype
+is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006396
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-09-14T15:07:19Z
+
+[Term]
+id: FYPO:0001554
+name: abnormal tRNA processing
+def: "A cellular process phenotype in which tRNA processing is abnormal. tRNA processing is the conversion a primary tRNA transcript into a mature tRNA molecules." [GO:0008033, PomBase:mah]
+synonym: "abnormal tRNA processing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001553 ! abnormal RNA processing
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0008033
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-09-14T15:10:20Z
+
+[Term]
+id: FYPO:0001555
+name: formation of abnormal tRNA processing intermediates
+def: "A cellular process phenotype in which the intermediate RNAs formed during tRNA processing differ from wild type in size." [PomBase:al, PomBase:mah]
+comment: Note that the mature tRNA may be of normal or abnormal size.
+synonym: "abnormal tRNA maturation intermediates" EXACT [PomBase:al]
+is_a: FYPO:0001554 ! abnormal tRNA processing
+created_by: midori
+creation_date: 2012-09-14T15:12:24Z
+
+[Term]
+id: FYPO:0001556
+name: excess nuclear envelope present
+def: "A cellular structure phenotype in which cells contain more nuclear envelope than normal. Excess nuclear envelopes may take the form of intranuclear membrane stacks or small cytoplasmic spheres that are attached to the nucleus, have double lipid bilayer membranes, and may structures resembling nuclear pores." [PMID:22156749, PomBase:mah]
+synonym: "increased nuclear envelope proliferation" RELATED [PMID:22156749, PomBase:vw]
+synonym: "nuclear envelope present in greater amount" EXACT [PomBase:mah]
+is_a: FYPO:0000062 ! abnormal nuclear morphology
+intersection_of: PATO:0002002
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005635
+created_by: midori
+creation_date: 2012-09-14T15:22:32Z
+
+[Term]
+id: FYPO:0001557
+name: resistance to ethionine
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of ethionine than normal." [PomBase:mah]
+comment: Note that a racemic mixture of D and L enantiomers of ethionine is usually used to test sensitivity or resistance.
+synonym: "resistance to DL-ethionine" EXACT [PomBase:mah]
+synonym: "resistance to ethionine during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to ethionine" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+created_by: midori
+creation_date: 2012-09-14T16:15:57Z
+
+[Term]
+id: FYPO:0001558
+name: decreased methionine import
+def: "A cellular process phenotype in which the import of methionine into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased methionine import into cell" EXACT [PomBase:al]
+synonym: "decreased methionine transport into cell" EXACT [PomBase:al]
+synonym: "decreased methionine uptake" EXACT [GO:0036233]
+synonym: "reduced methionine import" EXACT [PomBase:mah]
+synonym: "reduced methionine uptake" EXACT [PomBase:vw]
+is_a: FYPO:0001058 ! decreased amino acid import
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0044690
+created_by: midori
+creation_date: 2012-09-14T16:32:14Z
+
+[Term]
+id: FYPO:0001559
+name: normal methionine import
+def: "A cellular process phenotype in which methionine import into the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal methionine import during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal methionine import into cell" EXACT [PomBase:al]
+synonym: "normal methionine uptake" EXACT [GO:0043091]
+is_a: FYPO:0001071 ! normal transport
+is_a: FYPO:0001336 ! transport phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0044690
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-09-14T16:34:42Z
+
+[Term]
+id: FYPO:0001560
+name: decreased cellular threonine level
+def: "A cell phenotype in which the amount of L-threonine measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular L-threonine level" EXACT [PomBase:mah]
+synonym: "decreased cellular threonine level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased threonine accumulation" RELATED [PomBase:al]
+synonym: "reduced cellular threonine level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:16857
+created_by: midori
+creation_date: 2012-09-14T16:44:29Z
+
+[Term]
+id: FYPO:0001561
+name: decreased cellular citrulline level
+def: "A cell phenotype in which the amount of L-citrulline measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular citrulline level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased cellular L-citrulline level" EXACT [PomBase:mah]
+synonym: "decreased citrulline accumulation" RELATED [PomBase:al]
+synonym: "reduced cellular citrulline level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:16349
+created_by: midori
+creation_date: 2012-09-14T16:45:19Z
+
+[Term]
+id: FYPO:0001562
+name: decreased cellular histidine level
+def: "A cell phenotype in which the amount of L-histidine measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular histidine level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased cellular L-histidine level" EXACT [PomBase:mah]
+synonym: "decreased histidine accumulation" RELATED [PomBase:al]
+synonym: "reduced cellular histidine level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:15971
+created_by: midori
+creation_date: 2012-09-14T16:46:05Z
+
+[Term]
+id: FYPO:0001563
+name: decreased cellular glutamate level
+def: "A cell phenotype in which the amount of L-glutamate measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular glutamate level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased cellular L-glutamate level" EXACT [PomBase:mah]
+synonym: "decreased glutamate accumulation" RELATED [PomBase:al]
+synonym: "reduced cellular glutamate level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:29989
+created_by: midori
+creation_date: 2012-09-14T16:46:41Z
+
+[Term]
+id: FYPO:0001564
+name: decreased cellular ornithine level
+def: "A cell phenotype in which the amount of L-ornithine measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular L-ornithine level" EXACT [PomBase:mah]
+synonym: "decreased cellular ornithine level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased ornithine accumulation" RELATED [PomBase:al]
+synonym: "reduced cellular ornithine level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:15729
+created_by: midori
+creation_date: 2012-09-14T16:47:41Z
+
+[Term]
+id: FYPO:0001565
+name: increased cellular threonine level
+def: "A cell phenotype in which the amount of L-threonine measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular L-threonine level" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased cellular threonine level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased threonine accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:16857
+created_by: midori
+creation_date: 2012-09-14T16:48:22Z
+
+[Term]
+id: FYPO:0001566
+name: increased cellular citrulline level
+def: "A cell phenotype in which the amount of L-citrulline measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular citrulline level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased cellular L-citrulline level" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased citrulline accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:16349
+created_by: midori
+creation_date: 2012-09-14T16:49:05Z
+
+[Term]
+id: FYPO:0001567
+name: increased cellular histidine level
+def: "A cell phenotype in which the amount of L-histidine measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular histidine level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased cellular L-histidine level" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased histidine accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:15971
+created_by: midori
+creation_date: 2012-09-14T16:49:35Z
+
+[Term]
+id: FYPO:0001568
+name: increased cellular glutamate level
+def: "A cell phenotype in which the amount of L-glutamate measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular glutamate level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased cellular L-glutamate level" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased glutamate accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:29989
+created_by: midori
+creation_date: 2012-09-14T16:50:25Z
+
+[Term]
+id: FYPO:0001569
+name: increased cellular ornithine level
+def: "A cell phenotype in which the amount of L-ornithine measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular L-ornithine level" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased cellular ornithine level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased ornithine accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:15729
+created_by: midori
+creation_date: 2012-09-14T16:51:00Z
+
+[Term]
+id: FYPO:0001570
+name: decreased cellular glutathione level
+def: "A cell phenotype in which the amount of glutathione (GSH) measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular glutathione level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased cellular GSH level" EXACT [CHEBI:16856, PomBase:al]
+synonym: "decreased cellular L-gamma-glutamyl-L-cysteinylglycine level" EXACT [CHEBI:16856]
+synonym: "decreased cellular reduced glutathione level" EXACT [CHEBI:16856, PomBase:al]
+synonym: "decreased glutathione accumulation" RELATED [PomBase:mah]
+synonym: "reduced cellular glutathione level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:16856
+created_by: midori
+creation_date: 2012-09-14T16:51:27Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
