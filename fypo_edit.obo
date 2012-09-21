@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 20:09:2012 16:17
+date: 21:09:2012 15:29
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -10145,6 +10145,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CHEBI:36080
 intersection_of: towards GO:0005634
 relationship: output_of FYPO:0001129 ! abnormal protein localization to nucleus
+relationship: output_of FYPO:0001584 ! abnormal protein localization to cell tip
 created_by: midori
 creation_date: 2012-02-29T12:50:40Z
 
@@ -20315,7 +20316,7 @@ creation_date: 2012-09-13T13:41:57Z
 id: FYPO:0001519
 name: abnormal gamma-glutamyltransferase activity
 def: "A molecular function phenotype in which the observed rate of gamma-glutamyltransferase activity is abnormal." [PomBase:mah]
-synonym: "abnormal gamma-glutamyl transpeptidase activity activity" EXACT [GO:0003840, PomBase:mah]
+synonym: "abnormal gamma-glutamyl transpeptidase activity" EXACT [GO:0003840, PomBase:mah]
 synonym: "abnormal GGT activity" BROAD [PomBase:al, PomBase:mah]
 is_a: FYPO:0000661 ! abnormal catalytic activity
 intersection_of: PATO:0000001
@@ -21102,8 +21103,8 @@ comment: Note that cell growth terms refer to growth under aerobic conditions un
 synonym: "abolished cell growth on methionine nitrogen source during vegetative growth" EXACT [PomBase:mah]
 synonym: "abolished methionine utilization" RELATED [PomBase:mah, PomBase:vw]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
-intersection_of: is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: inheres_in BTO:0000316
+intersection_of: is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:15603
 created_by: midori
@@ -21118,8 +21119,8 @@ synonym: "increased mRNA level during cellular response to rapamycin" NARROW [Po
 synonym: "increased RNA accumulation during cellular response to rapamycin" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to rapamycin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level
-intersection_of: exists_during GO:0072752
 intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:0072752
 intersection_of: inheres_in CL:0000000
 intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
@@ -21154,8 +21155,8 @@ comment: Note that cell growth terms refer to growth under aerobic conditions un
 synonym: "abolished cell growth on dipeptide nitrogen source during vegetative growth" EXACT [PomBase:mah]
 synonym: "abolished dipeptide utilization" RELATED [PomBase:mah, PomBase:vw]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
-intersection_of: is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: inheres_in BTO:0000316
+intersection_of: is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:46761
 created_by: midori
@@ -21169,8 +21170,8 @@ comment: Note that cell growth terms refer to growth under aerobic conditions un
 synonym: "abolished cell growth on tetrapeptide nitrogen source during vegetative growth" EXACT [PomBase:mah]
 synonym: "abolished tetrapeptide utilization" RELATED [PomBase:mah, PomBase:vw]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
-intersection_of: is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: inheres_in BTO:0000316
+intersection_of: is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:48030
 created_by: midori
@@ -21244,6 +21245,65 @@ is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegeta
 created_by: midori
 creation_date: 2012-09-20T16:02:56Z
 
+[Term]
+id: FYPO:0001583
+name: resistance to lithium
+def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of lithium ions than normal." [PomBase:mah]
+synonym: "resistance to lithium during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:49713
+created_by: midori
+creation_date: 2012-09-21T15:24:01Z
+
+[Term]
+id: FYPO:0001584
+name: abnormal protein localization to cell tip
+def: "A cell phenotype in which the localization of a protein to the cell tip is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to cell tip" EXACT [GO:0034504, PomBase:mah]
+synonym: "abnormal protein localization to cell tip during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+created_by: midori
+creation_date: 2012-09-21T15:26:12Z
+
+[Term]
+id: FYPO:0001585
+name: abolished protein localization to cell tip
+def: "A cell phenotype in which the localization of a protein to the cell tip is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to cell tip" EXACT [PomBase:mah]
+synonym: "abolished protein localization to cell tip during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001584 ! abnormal protein localization to cell tip
+created_by: midori
+creation_date: 2012-09-21T15:26:25Z
+
+[Term]
+id: FYPO:0001586
+name: decreased protein localization to cell tip
+def: "A cell phenotype in which the localization of a protein to the cell tip is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to cell tip" EXACT [GO:0034504, PomBase:mah]
+synonym: "decreased protein localization to cell tip during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to nucleus" EXACT [PomBase:mah]
+is_a: FYPO:0001584 ! abnormal protein localization to cell tip
+created_by: midori
+creation_date: 2012-09-21T15:26:32Z
+
+[Term]
+id: FYPO:0001587
+name: normal protein localization to cell tip
+def: "A cell phenotype in which the localization of a protein to the cell tip is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to cell tip" EXACT [PomBase:mah]
+synonym: "normal protein localization to cell tip during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+created_by: midori
+creation_date: 2012-09-21T15:26:58Z
+
 [Typedef]
 id: comprises_cells_with_phenotype
 name: comprises cells with phenotype
@@ -21299,6 +21359,10 @@ creation_date: 2011-04-26T02:10:32Z
 id: inheres_in
 name: inheres_in
 xref: BFO:0000052
+
+[Typedef]
+id: is_a:
+name: is_a: (UNDECLARED)
 
 [Typedef]
 id: is_preceded_by
