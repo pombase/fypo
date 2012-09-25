@@ -20304,8 +20304,9 @@ creation_date: 2012-09-13T13:22:53Z
 id: FYPO:0001518
 name: resistance to diethyl maleate
 def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of diethyl maleate than normal." [PomBase:mah]
+comment: Note that diethyl maleate should not be written without a space, as diethylmaleate is a different compound.
 synonym: "resistance to diethyl maleate during vegetative growth" EXACT [PomBase:mah]
-synonym: "resistance to diethylmaleate" EXACT [PomBase:al]
+synonym: "resistance to DEM" EXACT [PomBase:al]
 synonym: "resistant to diethyl maleate" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 created_by: midori
@@ -21103,7 +21104,7 @@ synonym: "abolished cell growth on methionine nitrogen source during vegetative 
 synonym: "abolished methionine utilization" RELATED [PomBase:mah, PomBase:vw]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: inheres_in BTO:0000316
-intersection_of: is_a: FYPO:0001575 ! vegetative cell growth abolished
+intersection_of: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:15603
 created_by: midori
@@ -21155,7 +21156,7 @@ synonym: "abolished cell growth on dipeptide nitrogen source during vegetative g
 synonym: "abolished dipeptide utilization" RELATED [PomBase:mah, PomBase:vw]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: inheres_in BTO:0000316
-intersection_of: is_a: FYPO:0001575 ! vegetative cell growth abolished
+intersection_of: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:46761
 created_by: midori
@@ -21170,7 +21171,7 @@ synonym: "abolished cell growth on tetrapeptide nitrogen source during vegetativ
 synonym: "abolished tetrapeptide utilization" RELATED [PomBase:mah, PomBase:vw]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: inheres_in BTO:0000316
-intersection_of: is_a: FYPO:0001575 ! vegetative cell growth abolished
+intersection_of: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:48030
 created_by: midori
@@ -21241,6 +21242,10 @@ synonym: "normal cellular response to GSH" EXACT [CHEBI:16856]
 synonym: "normal cellular response to L-gamma-glutamyl-L-cysteinylglycine" EXACT [CHEBI:16856]
 synonym: "normal cellular response to reduced glutathione" EXACT [CHEBI:16856]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072753
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-09-20T16:02:56Z
 
@@ -21335,11 +21340,9 @@ is_a: has_participant ! has_participant
 
 [Typedef]
 id: has_part
-name: has_part
+name: has part
 xref: BFO:0000051
 is_transitive: true
-created_by: midori
-creation_date: 2009-07-30T12:00:35Z
 
 [Typedef]
 id: has_participant
@@ -21358,10 +21361,6 @@ creation_date: 2011-04-26T02:10:32Z
 id: inheres_in
 name: inheres_in
 xref: BFO:0000052
-
-[Typedef]
-id: is_a:
-name: is_a: (UNDECLARED)
 
 [Typedef]
 id: is_preceded_by
@@ -21430,6 +21429,6 @@ is_a: has_output ! has_output
 [Typedef]
 id: towards
 name: towards
-comment: relation binding a relational quality or disposition to the relevant type of entity
+comment: Relation binding a relational quality or disposition to the relevant type of entity.
 xref: OBO_REL:towards
 
