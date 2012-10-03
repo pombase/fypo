@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 27:09:2012 16:19
+date: 03:10:2012 16:35
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -20318,6 +20318,10 @@ synonym: "resistance to DEM" EXACT [PomBase:al]
 synonym: "resistance to diethyl maleate during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to diethyl maleate" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:68508
 created_by: midori
 creation_date: 2012-09-13T13:41:57Z
 
@@ -21445,6 +21449,9 @@ synonym: "decreased serine uptake" EXACT [GO:0036232]
 synonym: "reduced serine import" EXACT [PomBase:mah]
 is_a: FYPO:0001360 ! decreased amino acid import during vegetative growth
 is_a: FYPO:0001657 ! abnormal serine import
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0090478
 created_by: midori
 creation_date: 2012-09-27T12:01:24Z
 
@@ -21467,6 +21474,7 @@ creation_date: 2012-09-27T12:17:29Z
 id: FYPO:0001597
 name: normal valine import
 def: "A cellular process phenotype in which valine import is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal L-valine import" NARROW [PomBase:mah]
 synonym: "normal valine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal valine import into cell" EXACT [PomBase:al]
 synonym: "normal valine uptake" EXACT [PomBase:mah]
@@ -21482,6 +21490,7 @@ creation_date: 2012-09-27T12:22:29Z
 id: FYPO:0001598
 name: normal glutamine import
 def: "A cellular process phenotype in which glutamine import is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal L-glutamine import" NARROW [PomBase:mah]
 synonym: "normal glutamine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal glutamine import into cell" EXACT [PomBase:al]
 synonym: "normal glutamine uptake" EXACT [PomBase:mah]
@@ -21497,6 +21506,7 @@ creation_date: 2012-09-27T12:23:11Z
 id: FYPO:0001599
 name: normal asparagine import
 def: "A cellular process phenotype in which asparagine import is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal L-asparagine import" NARROW [PomBase:mah]
 synonym: "normal asparagine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal asparagine import into cell" EXACT [PomBase:al]
 synonym: "normal asparagine uptake" EXACT [PomBase:mah]
@@ -21512,10 +21522,14 @@ creation_date: 2012-09-27T12:23:36Z
 id: FYPO:0001600
 name: normal isoleucine import
 def: "A cellular process phenotype in which isoleucine import is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal L-isoleucine import" NARROW [PomBase:mah]
 synonym: "normal isoleucine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal isoleucine import into cell" EXACT [PomBase:al]
 synonym: "normal isoleucine uptake" EXACT [PomBase:mah]
 is_a: FYPO:0001596 ! normal amino acid import
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0090476
 created_by: midori
 creation_date: 2012-09-27T12:24:12Z
 
@@ -22220,8 +22234,8 @@ name: abnormal glutamate import
 def: "A cellular process phenotype in which the import of glutamate into the cell is abnormal." [PomBase:mah]
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
-intersection_of: qualifier PATO:0000460
 intersection_of: inheres_in GO:0051938
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2012-09-27T15:50:49Z
 
@@ -22403,6 +22417,203 @@ intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2012-09-27T16:17:09Z
 
+[Term]
+id: FYPO:0001659
+name: altered cellular cAMP level
+def: "A cell phenotype in which the amount of cyclic AMP measured in a cell differs from normal." [PomBase:mah]
+synonym: "abnormal cellular cAMP accumulation" RELATED [PomBase:mah]
+synonym: "abnormal cellular cAMP level" EXACT [PomBase:mah]
+synonym: "altered cellular cyclic AMP level" EXACT [PomBase:mah]
+is_a: FYPO:0000989 ! altered level of substance in cell
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:17489
+created_by: midori
+creation_date: 2012-10-03T15:56:44Z
+
+[Term]
+id: FYPO:0001660
+name: decreased cellular cAMP level
+def: "A cell phenotype in which the amount of cyclic AMP measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular cAMP accumulation" RELATED [PomBase:mah]
+synonym: "decreased cellular cyclic AMP level" EXACT [PomBase:mah]
+synonym: "reduced cellular cAMP level" EXACT [PomBase:mah]
+is_a: FYPO:0000991 ! decreased level of substance in cell
+is_a: FYPO:0001659 ! altered cellular cAMP level
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:17489
+created_by: midori
+creation_date: 2012-10-03T15:56:53Z
+
+[Term]
+id: FYPO:0001661
+name: increased cellular cAMP level
+def: "A cell phenotype in which the amount of cyclic AMP measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cAMP accumulation" RELATED [PomBase:mah]
+synonym: "increased cellular cyclic AMP level" EXACT [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+is_a: FYPO:0001659 ! altered cellular cAMP level
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:17489
+created_by: midori
+creation_date: 2012-10-03T15:57:15Z
+
+[Term]
+id: FYPO:0001662
+name: decreased cellular cAMP level during glucose starvation
+def: "A cell phenotype in which the amount of trehalose measured in a cell is lower than normal when the cell is subject to glucose starvation." [PomBase:mah]
+synonym: "decreased cellular cAMP accumulation during glucose starvation" RELATED [PomBase:mah]
+synonym: "decreased cellular cyclic AMP level during cellular response to glucose starvation" EXACT [PomBase:mah]
+synonym: "reduced cellular cAMP level during glucose starvation" EXACT [PomBase:mah]
+is_a: FYPO:0001660 ! decreased cellular cAMP level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0042149
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:17489
+created_by: midori
+creation_date: 2012-10-03T15:57:38Z
+
+[Term]
+id: FYPO:0001663
+name: increased cellular cAMP level during glucose starvation
+def: "A cell phenotype in which the amount of cyclic AMP measured in a cell is higher than normal when the cell is subject to glucose starvation." [PomBase:mah]
+synonym: "increased cAMP accumulation during cellular response to glucose starvation" RELATED [PomBase:mah]
+synonym: "increased cellular cAMP level in response to glucose starvation" EXACT [PomBase:al]
+synonym: "increased cellular cyclic AMP level and during cellular response to glucose starvation" EXACT [PomBase:mah]
+is_a: FYPO:0001661 ! increased cellular cAMP level
+intersection_of: exists_during GO:0042149
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:17489
+created_by: midori
+creation_date: 2012-10-03T15:58:30Z
+
+[Term]
+id: FYPO:0001664
+name: increased cellular cAMP level during cellular response to glucose stimulus
+def: "A cell phenotype in which the amount of cyclic AMP measured in a cell is higher than normal during a cellular response to glucose stimulus." [PomBase:mah]
+synonym: "increased cAMP accumulation during cellular response to glucose stimulus" RELATED [PomBase:mah]
+synonym: "increased cellular cAMP level in response to glucose stimulus" EXACT [PomBase:al]
+synonym: "increased cellular cyclic AMP level during cellular response to glucose stimulus" EXACT [PomBase:mah]
+is_a: FYPO:0001661 ! increased cellular cAMP level
+intersection_of: exists_during GO:0071333
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:117489
+created_by: midori
+creation_date: 2012-10-03T16:03:24Z
+
+[Term]
+id: FYPO:0001665
+name: decreased cellular cAMP level during cellular response to glucose stimulus
+def: "A cell phenotype in which the amount of cyclic AMP measured in a cell is higher than normal during a cellular response to glucose stimulus." [PomBase:mah]
+synonym: "decreased cAMP accumulation during cellular response to glucose stimulus" RELATED [PomBase:mah]
+synonym: "decreased cellular cAMP level in response to glucose stimulus" EXACT [PomBase:al]
+synonym: "decreased cellular cyclic AMP level during cellular response to glucose stimulus" EXACT [PomBase:mah]
+synonym: "reduced cellular cAMP level during cellular response to glucose stimulus" EXACT [PomBase:mah]
+is_a: FYPO:0001660 ! decreased cellular cAMP level
+intersection_of: exists_during GO:0071333
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:17489
+created_by: midori
+creation_date: 2012-10-03T16:07:39Z
+
+[Term]
+id: FYPO:0001666
+name: normal cAMP level
+def: "A cell phenotype in which the amount of cyclic AMP measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular cAMP level" EXACT [PomBase:mah]
+synonym: "normal cyclic AMY level" EXACT [PomBase:mah]
+is_a: FYPO:0001076 ! normal level of substance in cell
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:17489
+created_by: midori
+creation_date: 2012-10-03T16:09:21Z
+
+[Term]
+id: FYPO:0001667
+name: normal cAMP level during glucose starvation
+def: "A cell phenotype in which the amount of cyclic AMP measured in a cell during glucose starvation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cAMP accumulation during glucose starvation" RELATED [PomBase:mah]
+synonym: "normal cellular cAMP level during glucose starvation" EXACT [PomBase:mah]
+synonym: "normal cyclic AMP level during glucose starvation" EXACT [PomBase:mah]
+is_a: FYPO:0001666 ! normal cAMP level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0042149
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:17489
+created_by: midori
+creation_date: 2012-10-03T16:09:33Z
+
+[Term]
+id: FYPO:0001668
+name: normal protein processing
+def: "A cellular process phenotype in which protein processing is normal (i.e. indistinguishable from wild type). Protein processing is any protein maturation process achieved by the cleavage of a peptide bond or bonds within a protein." [GO:0016485, PomBase:mah]
+synonym: "normal protein processing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0016485
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-10-03T16:16:56Z
+
+[Term]
+id: FYPO:0001669
+name: abolished protein processing
+def: "A cell phenotype in which the protein processing is abolished. Processing of all proteins or of one or more specific proteins may be affected. Protein processing is any protein maturation process achieved by the cleavage of a peptide bond or bonds within a protein." [GO:0016485, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein processing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001421 ! abnormal protein processing
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0016485
+created_by: midori
+creation_date: 2012-10-03T16:25:27Z
+
+[Term]
+id: FYPO:0001670
+name: abnormal GDP binding
+def: "A molecular function phenotype in which occurrence of GDP binding by a mutated gene product is abnormal." [PomBase:mah]
+is_a: FYPO:0000707 ! abnormal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0019003
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-10-03T16:29:51Z
+
+[Term]
+id: FYPO:0001671
+name: decreased GDP binding
+def: "A molecular function phenotype in which occurrence of GDP binding by a mutated gene product is decreased." [PomBase:mah]
+synonym: "reduced GDP binding" EXACT [PomBase:mah]
+is_a: FYPO:0001670 ! abnormal GDP binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0019003
+created_by: midori
+creation_date: 2012-10-03T16:29:57Z
+
+[Term]
+id: FYPO:0001672
+name: normal GTPase activity
+def: "A molecular function phenotype in which the observed rate of a GTPase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003924
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-10-03T16:35:01Z
+
 [Typedef]
 id: comprises_cells_with_phenotype
 name: comprises cells with phenotype
@@ -22448,7 +22659,7 @@ xref: BFO:0000057
 id: includes_cells_with_phenotype
 name: includes cells with phenotype
 def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in some or all of the individual cells in the population." [PomBase:mah]
-is_a: has_part ! has part
+is_a: has_part ! has_part
 created_by: midori
 creation_date: 2011-04-26T02:10:32Z
 
