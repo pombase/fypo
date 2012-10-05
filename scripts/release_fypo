@@ -35,11 +35,12 @@ PATO_OBO=http://obo.cvs.sourceforge.net/viewvc/obo/obo/ontology/phenotype/qualit
 CHEBI_OBO=http://obo.cvs.sourceforge.net/viewvc/obo/obo/ontology/chemical/chebi.obo
 CELL_TYPE_OBO=http://obo.cvs.sourceforge.net/viewvc/obo/obo/ontology/anatomy/cell_type/cell.edit.obo
 BRENDA_TISSUE_OBO=http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO
+SO_OBO=http://song.cvs.sourceforge.net/song/ontology/so-xp.obo
 
 echo running ontology-release-runner
 /usr/local/OBOReleaseManager/scripts/ontology-release-runner -outdir $OUT_DIR \
     --no-subsets -reasoner elk --simple \
-    $FYPO_OBO $GO_OBO $PCO_OBO $CHEBI_OBO $CELL_TYPE_OBO $BRENDA_TISSUE_OBO \
+    $FYPO_OBO $GO_OBO $PCO_OBO $CHEBI_OBO $CELL_TYPE_OBO $BRENDA_TISSUE_OBO $SO_OBO \
     > $OORT_LOG_FILE 2>&1
 
 release_path=$OUT_DIR/releases/*
