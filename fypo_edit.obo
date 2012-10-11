@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:10:2012 14:22
+date: 11:10:2012 16:22
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -781,7 +781,9 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000061
 name: multinucleate
 def: "A cellular structure phenotype in which a cell contains more than one nucleus." [PomBase:mah]
+synonym: "multinucleate cells" EXACT [PomBase:al]
 synonym: "multinucleate during vegetative growth" EXACT [PomBase:mah]
+synonym: "multiple nuclei" EXACT [PomBase:al]
 is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
 intersection_of: PATO:0001908
 intersection_of: exists_during GO:0072690
@@ -1577,6 +1579,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000118
 name: multiseptate
 def: "A septation phenotype characterized by the presence of more than one septum in a cell." [PomBase:mah]
+synonym: "multiseptate cells" EXACT [PomBase:al]
 synonym: "multiseptate during vegetative growth" EXACT [PomBase:mah]
 synonym: "septation defects, multiple septa" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
@@ -16255,6 +16258,7 @@ creation_date: 2012-07-12T15:15:47Z
 id: FYPO:0001222
 name: binucleate
 def: "A cellular structure phenotype in which a cell contains two nuclei." [PomBase:mah]
+synonym: "binucleate cells" EXACT [PomBase:al]
 synonym: "binucleate during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000061 ! multinucleate
 intersection_of: PATO:0001406
@@ -20858,10 +20862,15 @@ id: FYPO:0001557
 name: resistance to ethionine
 def: "An increased chemical resistance phenotype in which cells grow in the presence of a higher concentration of ethionine than normal." [PomBase:mah]
 comment: Note that a racemic mixture of D and L enantiomers of ethionine is usually used to test sensitivity or resistance.
-synonym: "resistance to DL-ethionine" EXACT [PomBase:mah]
+synonym: "resistance to S-ethylhomocysteine" EXACT [CHEBI:68662, PomBase:mah]
+synonym: "resistance to DL-ethionine" RELATED [PomBase:mah]
 synonym: "resistance to ethionine during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to ethionine" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:68662
 created_by: midori
 creation_date: 2012-09-14T16:15:57Z
 
@@ -22597,6 +22606,46 @@ intersection_of: inheres_in GO:0005634
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-10-09T10:53:23Z
+
+[Term]
+id: FYPO:0001674
+name: abnormal L-aminoadipate-semialdehyde dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of L-aminoadipate-semialdehyde dehydrogenase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004043
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-10-11T14:46:46Z
+
+[Term]
+id: FYPO:0001675
+name: increased L-aminoadipate-semialdehyde dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of L-aminoadipate-semialdehyde dehydrogenase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001674 ! abnormal L-aminoadipate-semialdehyde dehydrogenase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004043
+created_by: midori
+creation_date: 2012-10-11T14:46:54Z
+
+[Term]
+id: FYPO:0001676
+name: protein mislocalized to nucleus during S phase
+def: "A cell phenotype in which a protein that is not normally found in the nucleus is observed there during S phase of a mitotic cell cycle." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "protein mislocalised to nucleus during S phase" EXACT [PomBase:mah]
+synonym: "protein mislocalised to nucleus during S phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nucleus during S phase during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000784 ! protein mislocalized to nucleus
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:0000084
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005634
+relationship: output_of FYPO:0001129 ! abnormal protein localization to nucleus
+created_by: midori
+creation_date: 2012-10-11T16:20:13Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
