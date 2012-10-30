@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 29:10:2012 11:44
+date: 30:10:2012 15:52
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -5751,11 +5751,10 @@ creation_date: 2011-08-12T02:34:10Z
 
 [Term]
 id: FYPO:0000452
-name: abnormal protein localization to chromatin
-def: "A cell phenotype in which the localization of a protein to chromatin is abnormal." [PomBase:mah]
+name: abnormal protein localization to chromatin during vegetative growth
+def: "A cell phenotype in which the localization of a protein to chromatin is abnormal in the vegetative growth phase of the life cycle." [PomBase:mah]
 comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abnormal protein localisation to chromatin" EXACT [GO:0071168, PomBase:mah]
-synonym: "abnormal protein localization to chromatin during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal protein localisation to chromatin during vegetative growth" EXACT [GO:0071168, PomBase:mah]
 is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -19775,7 +19774,7 @@ creation_date: 2012-08-30T12:15:03Z
 [Term]
 id: FYPO:0001483
 name: normal alpha,alpha-trehalase activity increase during cellular response to oxidative stress
-def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity increases normally (i.e. as in wild type) as a result of a heat stimulus." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity increases normally (i.e. as in wild type) as a result of oxidative stress." [PomBase:mah]
 synonym: "normal increase in trehalase activity in response to oxidative stress" EXACT [PomBase:al]
 synonym: "normal neutral trehalase activity increase during cellular response to oxidative stress" EXACT [PMID:9729425, PomBase:mah]
 synonym: "normal trehalase activity increase during cellular response to oxidative stress" BROAD [GO:0004555, GO:0015927]
@@ -20137,12 +20136,12 @@ creation_date: 2012-08-31T14:49:23Z
 
 [Term]
 id: FYPO:0001508
-name: abolished protein localization to chromatin
-def: "A cell phenotype in which the localization of a protein to chromatin is abolished." [PomBase:mah]
+name: abolished protein localization to chromatin during vegetative growth
+def: "A cell phenotype in which the localization of a protein to chromatin is abolished in the vegetative growth phase of the life cycle." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abolished protein localisation to chromatin" EXACT [PomBase:mah]
-synonym: "abolished protein localization to chromatin during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000452 ! abnormal protein localization to chromatin
+synonym: "abolished protein localisation to chromatin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
+is_a: FYPO:0001678 ! abolished protein localization to chromatin
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0071168
@@ -22658,6 +22657,57 @@ intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0071574
 created_by: midori
 creation_date: 2012-10-29T11:40:14Z
+
+[Term]
+id: FYPO:0001678
+name: abolished protein localization to chromatin
+def: "A cell phenotype in which the localization of a protein to chromatin is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to chromatin" EXACT [PomBase:mah]
+is_a: FYPO:0001679 ! abnormal protein localization to chromatin
+intersection_of: PATO:0001558
+intersection_of: towards GO:0071168
+created_by: midori
+creation_date: 2012-10-30T15:29:03Z
+
+[Term]
+id: FYPO:0001679
+name: abnormal protein localization to chromatin
+def: "A cell phenotype in which the localization of a protein to chromatin is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to chromatin" EXACT [GO:0071168, PomBase:mah]
+is_a: FYPO:0001370 ! abnormal protein localization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071168
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-10-30T15:39:19Z
+
+[Term]
+id: FYPO:0001680
+name: abolished protein localization to chromatin during premeiotic DNA replication
+def: "A cell phenotype in which the localization of a protein to chromatin is abolished during the round of DNA replication that precedes meiosis I." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to chromatin during premeiotic DNA replication" EXACT [PomBase:mah]
+is_a: FYPO:0001678 ! abolished protein localization to chromatin
+intersection_of: PATO:0001558
+intersection_of: during GO:0006279
+intersection_of: towards GO:0071168
+created_by: midori
+creation_date: 2012-10-30T15:42:30Z
+
+[Term]
+id: FYPO:0001681
+name: abolished protein localization to chromatin during S phase of meiotic cell cycle
+def: "A cell phenotype in which the localization of a protein to chromatin is abolished during S phase of a meiotic cell cycle." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to chromatin during S phase of meiotic cell cycle" EXACT [PomBase:mah]
+is_a: FYPO:0001678 ! abolished protein localization to chromatin
+intersection_of: PATO:0001558
+intersection_of: during GO:0051332
+intersection_of: towards GO:0071168
+created_by: midori
+creation_date: 2012-10-30T15:50:10Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
