@@ -18,8 +18,6 @@ name: cell phenotype
 def: "A phenotype that is observed at the level of an individual cell." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 is_a: FYPO:0000001 ! phenotype
-intersection_of: FYPO:0000001 ! phenotype
-intersection_of: inheres_in CL:0000000
 created_by: midori
 creation_date: 2011-03-16T04:25:28Z
 
@@ -1834,7 +1832,7 @@ id: FYPO:0000136
 name: cellular structure phenotype
 def: "A phenotype that affects the structure of a cell or a cellular component." [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
-intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0001241
 intersection_of: inheres_in GO:0005575
 created_by: midori
 creation_date: 2011-04-12T12:01:21Z
@@ -3682,10 +3680,6 @@ name: sensitive to manganese depletion
 def: "A cellular process phenotype in which cells grow poorly in medium that has a low concentration of manganese (Mn2+)." [PMID:14723709, PomBase:mah]
 synonym: "sensitive to manganese depletion during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001356 ! abnormal vegetative cell growth
-intersection_of: PATO:0001163
-intersection_of: during GO:0072690
-intersection_of: inheres_in BTO:0000316
-intersection_of: towards CHEBI:29035
 created_by: midori
 creation_date: 2011-04-20T01:42:21Z
 
@@ -5170,9 +5164,9 @@ synonym: "abnormally arrested cell cycle progression during vegetative growth" E
 synonym: "cell cycle progression: arrested" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000011 ! abnormal cell cycle progression
 is_a: FYPO:0001024 ! cell cycle arrest phenotype
-intersection_of: PATO:0001561
+intersection_of: PATO:0000297
 intersection_of: happens_during GO:0072690
-intersection_of: towards GO:0007050
+intersection_of: towards GO:0007049
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
@@ -8385,8 +8379,8 @@ is_a: FYPO:0000645 ! small vegetative cells
 is_a: FYPO:0001491 ! viable vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000124 ! viable
-intersection_of: has_part FYPO:0000645 ! small vegetative cells
+intersection_of: has_part FYPO:0000023 ! small cells
+intersection_of: has_part FYPO:0001491 ! viable vegetative cells
 created_by: midori
 creation_date: 2011-10-13T12:06:45Z
 
@@ -22797,7 +22791,6 @@ synonym: "formation results from" EXACT [PomBase:mah]
 id: part_of
 name: part_of
 xref: BFO:0000050
-is_transitive: true
 
 [Typedef]
 id: positively_regulates
