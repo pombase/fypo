@@ -54,6 +54,40 @@ subsetdef: upper_ontology_conflict ""
 subsetdef: value_slim ""
 subsetdef: vertebrate_core ""
 subsetdef: virus_checked "Viral overhaul terms"
+synonymtypedef: aa1 "amino acid 1 letter code" 
+synonymtypedef: aa3 "amino acid 3 letter code" 
+synonymtypedef: AAMOD "amino acid modification" 
+synonymtypedef: ATTRIBUTION_REQUIRED "" 
+synonymtypedef: BRAND_NAME "" 
+synonymtypedef: BRAND_NAME "BRAND NAME" 
+synonymtypedef: BS "biosapiens" 
+synonymtypedef: dbsnp "dbsnp variant terms" 
+synonymtypedef: dbvar "DBVAR" 
+synonymtypedef: DUBIOUS "" 
+synonymtypedef: ebi_variants "ensembl variant terms" 
+synonymtypedef: FORMULA "" 
+synonymtypedef: FORMULA "FORMULA" 
+synonymtypedef: GE "LANGUAGE GERMAN" 
+synonymtypedef: HOMOLOGY "" 
+synonymtypedef: InChI "" 
+synonymtypedef: InChI "InChI" 
+synonymtypedef: InChIKey "" 
+synonymtypedef: InChIKey "InChIKey" 
+synonymtypedef: INCONSISTENT "" 
+synonymtypedef: INN "" 
+synonymtypedef: INN "INN" 
+synonymtypedef: IUPAC_NAME "" 
+synonymtypedef: IUPAC_NAME "IUPAC NAME" 
+synonymtypedef: PLURAL "" 
+synonymtypedef: PRO-short-label "" 
+synonymtypedef: PSI-MOD-label "" 
+synonymtypedef: RNAMOD "RNA modification" EXACT
+synonymtypedef: SCI "SCIENTIFIC NAME" 
+synonymtypedef: SENSU "" 
+synonymtypedef: SMILES "" 
+synonymtypedef: SMILES "SMILES" 
+synonymtypedef: systematic_synonym "" 
+synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision: 485 $
 ontology: fypo
@@ -537,6 +571,7 @@ synonym: "growth normal" EXACT [PomBase:mah]
 is_a: FYPO:0000124 ! viable
 is_a: FYPO:0000139 ! cell growth phenotype
 is_a: FYPO:0000627 ! normal cellular process
+relationship: has_part FYPO:0001419 ! normal cell growth rate
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -1417,6 +1452,9 @@ synonym: "elongated multinucleate cells during vegetative growth" EXACT [PomBase
 synonym: "long multinucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000061 ! multinucleate
 is_a: FYPO:0000950 ! elongated aseptate cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000061 ! multinucleate
+relationship: has_part FYPO:0000949 ! aseptate
 relationship: output_of FYPO:0000032 ! abnormal cytokinesis
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
@@ -1429,6 +1467,9 @@ synonym: "branched, elongated, multiseptate cells during vegetative growth" EXAC
 synonym: "branched, long, multiseptate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000223 ! elongated multiseptate cells
 is_a: FYPO:0001512 ! branched, elongated cells
+relationship: has_part FYPO:0000015 ! branched cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000118 ! multiseptate
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
 
@@ -2275,6 +2316,8 @@ synonym: "elongated multiseptate cells during vegetative growth" EXACT [PomBase:
 synonym: "long multiseptate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000118 ! multiseptate
 is_a: FYPO:0001122 ! elongated vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000118 ! multiseptate
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3102,6 +3145,8 @@ id: FYPO:0000307
 name: spore germination abolished, small spores
 def: "A cellular process phenotype in which spore germination does not occur, and spores are smaller than normal." [PomBase:mah]
 is_a: FYPO:0000309 ! spore germination abolished, abnormal spore morphology
+relationship: has_part FYPO:0000306 ! spore germination abolished
+relationship: has_part FYPO:0000346 ! small spores
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
 
@@ -3110,6 +3155,8 @@ id: FYPO:0000308
 name: spore germination abolished, swollen spores
 def: "A cellular process phenotype in which spore germination does not occur, and spores have a larger volume than normal." [PomBase:mah]
 is_a: FYPO:0000309 ! spore germination abolished, abnormal spore morphology
+relationship: has_part FYPO:0000306 ! spore germination abolished
+relationship: has_part FYPO:0000347 ! swollen spores
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
 
@@ -3119,6 +3166,8 @@ name: spore germination abolished, abnormal spore morphology
 def: "A cellular process phenotype in which spore germination does not occur, and spores have abnormal morphology." [PomBase:mah]
 synonym: "spore germination abolished, misshapen spores" EXACT [PomBase:mah]
 is_a: FYPO:0000306 ! spore germination abolished
+relationship: has_part FYPO:0000306 ! spore germination abolished
+relationship: has_part FYPO:0000348 ! abnormal spore morphology
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
 
@@ -6660,6 +6709,7 @@ synonym: "cell lysis during vegetative growth" EXACT [PomBase:mah]
 synonym: "cytolysis" EXACT [PomBase:mah]
 synonym: "inviable, lysed cells" EXACT [PomBase:mah]
 is_a: FYPO:0001331 ! cellular process phenotype during vegetative growth
+relationship: has_part FYPO:0000049 ! inviable
 created_by: midori
 creation_date: 2011-10-10T03:28:02Z
 
@@ -6671,6 +6721,8 @@ synonym: "small viable vegetative cells during vegetative growth" EXACT [PomBase
 synonym: "wee" EXACT [PomBase:jh, PomBase:mah]
 is_a: FYPO:0000645 ! small vegetative cells
 is_a: FYPO:0001491 ! viable vegetative cells
+relationship: has_part FYPO:0000023 ! small cells
+relationship: has_part FYPO:0001491 ! viable vegetative cells
 created_by: midori
 creation_date: 2011-10-13T12:06:45Z
 
@@ -7947,6 +7999,7 @@ synonym: "dumbbell-shaped cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "elongated dumbbell morphology" EXACT [PomBase:mah]
 is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 is_a: FYPO:0001126 ! abnormal cell shape
+relationship: has_part FYPO:0000017 ! elongated cells
 created_by: midori
 creation_date: 2012-02-13T12:48:01Z
 
@@ -8623,6 +8676,9 @@ synonym: "elongated mononucleate cells during vegetative growth" EXACT [PomBase:
 synonym: "long mononucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000060 ! mononucleate
 is_a: FYPO:0000950 ! elongated aseptate cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000060 ! mononucleate
+relationship: has_part FYPO:0000949 ! aseptate
 created_by: midori
 creation_date: 2012-03-12T03:25:38Z
 
@@ -9805,6 +9861,8 @@ id: FYPO:0000944
 name: spore germination abolished, normal spore morphology
 def: "A cellular process phenotype in which spore germination does not occur, and spores have normal morphology." [PomBase:mah]
 is_a: FYPO:0000306 ! spore germination abolished
+relationship: has_part FYPO:0000306 ! spore germination abolished
+relationship: has_part FYPO:0000943 ! normal spore morphology
 created_by: midori
 creation_date: 2012-04-03T02:28:22Z
 
@@ -9817,6 +9875,8 @@ synonym: "swollen rounded cells" RELATED [PomBase:mah]
 synonym: "swollen spheroid cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000021 ! spheroid cells
 is_a: FYPO:0000646 ! swollen vegetative cells
+relationship: has_part FYPO:0000021 ! spheroid cells
+relationship: has_part FYPO:0000025 ! swollen cells
 created_by: midori
 creation_date: 2012-04-03T03:14:05Z
 
@@ -9827,6 +9887,8 @@ def: "A cell morphology phenotype in which a cell is shaped in the form of a sph
 synonym: "normal volume rounded cells" RELATED [PomBase:mah]
 synonym: "normal volume spheroid cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000021 ! spheroid cells
+relationship: has_part FYPO:0000021 ! spheroid cells
+relationship: has_part FYPO:0000926 ! normal volume cells
 created_by: midori
 creation_date: 2012-04-03T03:16:37Z
 
@@ -9839,6 +9901,8 @@ synonym: "swollen orb" EXACT [PomBase:vw]
 synonym: "swollen spherical cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000129 ! spherical cells
 is_a: FYPO:0000945 ! swollen spheroid cells
+relationship: has_part FYPO:0000025 ! swollen cells
+relationship: has_part FYPO:0000129 ! spherical cells
 created_by: midori
 creation_date: 2012-04-03T03:27:05Z
 
@@ -9850,6 +9914,8 @@ synonym: "normal volume orb" EXACT [PomBase:vw]
 synonym: "normal volume spherical cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000129 ! spherical cells
 is_a: FYPO:0000946 ! normal volume spheroid cells
+relationship: has_part FYPO:0000129 ! spherical cells
+relationship: has_part FYPO:0000926 ! normal volume cells
 created_by: midori
 creation_date: 2012-04-03T03:28:08Z
 
@@ -9870,6 +9936,8 @@ def: "A cell phenotype in which cells do not contain septa and are elongated." [
 synonym: "elongated aseptate cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000949 ! aseptate
 is_a: FYPO:0001122 ! elongated vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000949 ! aseptate
 created_by: midori
 creation_date: 2012-04-03T03:41:12Z
 
@@ -9881,6 +9949,8 @@ synonym: "essential; small vegetative cells" RELATED [PomBase:mah]
 synonym: "small inviable vegetative cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000645 ! small vegetative cells
 is_a: FYPO:0001489 ! inviable vegetative cells
+relationship: has_part FYPO:0000023 ! small cells
+relationship: has_part FYPO:0001489 ! inviable vegetative cells
 created_by: midori
 creation_date: 2012-04-03T04:12:31Z
 
@@ -10438,6 +10508,10 @@ synonym: "long, multinucleate dumbbell-shaped cells" EXACT [PomBase:vw]
 synonym: "multinucleate dumbbell-shaped cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate cells
 is_a: FYPO:0000779 ! dumbbell-shaped cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000061 ! multinucleate
+relationship: has_part FYPO:0000779 ! dumbbell-shaped cells
+relationship: has_part FYPO:0000949 ! aseptate
 created_by: midori
 creation_date: 2012-04-25T04:07:50Z
 
@@ -10869,6 +10943,8 @@ comment: Note that in higher eukaryotes, mitotic catastrophe is more broadly def
 synonym: "mitotic catastrophe during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 is_a: FYPO:0001489 ! inviable vegetative cells
+relationship: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+relationship: has_part FYPO:0001489 ! inviable vegetative cells
 created_by: midori
 creation_date: 2012-05-11T01:34:45Z
 
@@ -10880,6 +10956,10 @@ synonym: "cut with mitotic catastrophe" EXACT [PomBase:mah]
 synonym: "mitotic catastrophe with cut during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000229 ! cut
 is_a: FYPO:0001047 ! mitotic catastrophe
+relationship: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+relationship: has_part FYPO:0000229 ! cut
+relationship: has_part FYPO:0001204 ! mistimed mitosis
+relationship: has_part FYPO:0001489 ! inviable vegetative cells
 created_by: midori
 creation_date: 2012-05-11T01:37:41Z
 
@@ -10890,6 +10970,10 @@ def: "A cellular process phenotype in which cells undergo mitotic catastrophe (i
 synonym: "mitotic catastrophe, small cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000951 ! small inviable vegetative cells
 is_a: FYPO:0001047 ! mitotic catastrophe
+relationship: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+relationship: has_part FYPO:0000951 ! small inviable vegetative cells
+relationship: has_part FYPO:0001204 ! mistimed mitosis
+relationship: has_part FYPO:0001489 ! inviable vegetative cells
 created_by: midori
 creation_date: 2012-05-11T01:59:31Z
 
@@ -10900,6 +10984,10 @@ def: "A cellular process phenotype in which cells undergo mitotic catastrophe (i
 comment: Note that mitotic catastrophe in normal-size cells is usually interpreted to mean that cells enter mitosis despite failing to activate a DNA integrity checkpoint.
 synonym: "mitotic catastrophe, normal size cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001047 ! mitotic catastrophe
+relationship: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+relationship: has_part FYPO:0001124 ! normal cell size
+relationship: has_part FYPO:0001204 ! mistimed mitosis
+relationship: has_part FYPO:0001489 ! inviable vegetative cells
 created_by: midori
 creation_date: 2012-05-11T02:09:56Z
 
@@ -10912,6 +11000,10 @@ synonym: "mitotic catastrophe, elongated cells during vegetative growth" EXACT [
 synonym: "mitotic catastrophe, long cells" EXACT [PomBase:vw]
 is_a: FYPO:0001047 ! mitotic catastrophe
 is_a: FYPO:0001490 ! elongated inviable vegetative cells
+relationship: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+relationship: has_part FYPO:0001204 ! mistimed mitosis
+relationship: has_part FYPO:0001489 ! inviable vegetative cells
+relationship: has_part FYPO:0001490 ! elongated inviable vegetative cells
 created_by: midori
 creation_date: 2012-05-11T02:16:25Z
 
@@ -10923,6 +11015,11 @@ synonym: "cut with mitotic catastrophe, small cells" EXACT [PomBase:mah]
 synonym: "mitotic catastrophe with cut, small cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001048 ! mitotic catastrophe with cut
 is_a: FYPO:0001049 ! mitotic catastrophe, small cells
+relationship: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+relationship: has_part FYPO:0000229 ! cut
+relationship: has_part FYPO:0000951 ! small inviable vegetative cells
+relationship: has_part FYPO:0001204 ! mistimed mitosis
+relationship: has_part FYPO:0001489 ! inviable vegetative cells
 created_by: midori
 creation_date: 2012-05-11T02:38:12Z
 
@@ -10934,6 +11031,11 @@ synonym: "cut with mitotic catastrophe, normal size cells" EXACT [PomBase:mah]
 synonym: "mitotic catastrophe with cut, normal size cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001048 ! mitotic catastrophe with cut
 is_a: FYPO:0001050 ! mitotic catastrophe, normal size cells
+relationship: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+relationship: has_part FYPO:0000229 ! cut
+relationship: has_part FYPO:0001124 ! normal cell size
+relationship: has_part FYPO:0001204 ! mistimed mitosis
+relationship: has_part FYPO:0001489 ! inviable vegetative cells
 created_by: midori
 creation_date: 2012-05-11T02:39:40Z
 
@@ -10946,6 +11048,11 @@ synonym: "mitotic catastrophe with cut, elongated cells during vegetative growth
 synonym: "mitotic catastrophe with cut, long cells" EXACT [PomBase:vw]
 is_a: FYPO:0001048 ! mitotic catastrophe with cut
 is_a: FYPO:0001051 ! mitotic catastrophe, elongated cells
+relationship: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+relationship: has_part FYPO:0000229 ! cut
+relationship: has_part FYPO:0001204 ! mistimed mitosis
+relationship: has_part FYPO:0001489 ! inviable vegetative cells
+relationship: has_part FYPO:0001490 ! elongated inviable vegetative cells
 created_by: midori
 creation_date: 2012-05-11T02:39:47Z
 
@@ -11667,6 +11774,8 @@ def: "A cell phenotype in which cell shape is altered, but cell size remains nor
 synonym: "abnormal cell shape, normal cell size during vegetative growth" EXACT [PomBase:mah]
 synonym: "lumpy" RELATED [PomBase:vw]
 is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+relationship: has_part FYPO:0001124 ! normal cell size
+relationship: has_part FYPO:0001126 ! abnormal cell shape
 created_by: midori
 creation_date: 2012-06-07T11:56:50Z
 
@@ -12760,6 +12869,8 @@ def: "A cell morphology phenotype in which cells have two nuclei and more than o
 synonym: "binucleate multiseptate cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001222 ! binucleate
 is_a: FYPO:0001252 ! multinucleate multiseptate cells
+relationship: has_part FYPO:0000118 ! multiseptate
+relationship: has_part FYPO:0001222 ! binucleate
 created_by: midori
 creation_date: 2012-07-12T15:39:43Z
 
@@ -12770,6 +12881,8 @@ def: "A cell morphology phenotype in which cells have two nuclei and one septum 
 synonym: "binucleate monoseptate cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001222 ! binucleate
 is_a: FYPO:0001225 ! monoseptate
+relationship: has_part FYPO:0001222 ! binucleate
+relationship: has_part FYPO:0001225 ! monoseptate
 created_by: midori
 creation_date: 2012-07-12T15:40:42Z
 
@@ -12790,6 +12903,8 @@ synonym: "mononucleate with asymmetric septum during vegetative growth" EXACT [P
 synonym: "mononucleate with asymmetrically located septum" EXACT [PomBase:mah]
 is_a: FYPO:0000060 ! mononucleate
 is_a: FYPO:0000339 ! mislocalized septum
+relationship: has_part FYPO:0000060 ! mononucleate
+relationship: has_part FYPO:0000339 ! mislocalized septum
 created_by: midori
 creation_date: 2012-07-12T15:44:34Z
 
@@ -12880,6 +12995,7 @@ id: FYPO:0001235
 name: decreased extent of cell population growth
 def: "A cellular process phenotype in which cell growth in a cell population occurs to a lower extent than normal, i.e. the population stops growing earlier than normal." [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
+relationship: has_part FYPO:0000046 ! decreased cell growth
 created_by: midori
 creation_date: 2012-07-16T14:25:09Z
 
@@ -13037,6 +13153,8 @@ def: "A cell morphology phenotype in which cells have two or more nuclei and mor
 synonym: "multinucleate multiseptate cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000061 ! multinucleate
 is_a: FYPO:0000118 ! multiseptate
+relationship: has_part FYPO:0000061 ! multinucleate
+relationship: has_part FYPO:0000118 ! multiseptate
 created_by: midori
 creation_date: 2012-07-19T15:38:21Z
 
@@ -14146,6 +14264,7 @@ is_a: FYPO:0000047 ! normal cell growth
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 is_a: FYPO:0001358 ! cell growth phenotype during vegetative growth
 is_a: FYPO:0001491 ! viable vegetative cells
+relationship: has_part FYPO:0001420 ! normal vegetative cell growth rate
 created_by: midori
 creation_date: 2012-08-01T18:20:01Z
 
@@ -14451,6 +14570,7 @@ name: inviable germinating spore, cell cycle arrest with replicated DNA
 def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest with replicated DNA." [PMID:9705504, PomBase:mah]
 synonym: "essential; germinating spore, cell cycle arrest with replicated DNA" RELATED [PomBase:mah]
 is_a: FYPO:0000316 ! inviable germinating spore
+relationship: has_part FYPO:0000444 ! cell cycle arrest with replicated DNA
 created_by: midori
 creation_date: 2012-08-10T14:06:51Z
 
@@ -14920,6 +15040,8 @@ name: swollen elongated cells
 def: "A cell morphology phenotype in which a cell has a larger volume, and is longer, than normal." [PMID:10388806, PomBase:mah]
 is_a: FYPO:0000025 ! swollen cells
 is_a: FYPO:0001122 ! elongated vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000025 ! swollen cells
 created_by: midori
 creation_date: 2012-08-22T15:16:12Z
 
@@ -15567,6 +15689,8 @@ synonym: "elongated inviable cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "essential; elongated vegetative cells" RELATED [PomBase:mah]
 is_a: FYPO:0001122 ! elongated vegetative cells
 is_a: FYPO:0001489 ! inviable vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000049 ! inviable
 created_by: midori
 creation_date: 2012-08-30T14:08:27Z
 
@@ -15586,6 +15710,8 @@ def: "A cell morphology phenotype in which vegetative cells are viable and longe
 synonym: "elongated viable cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001122 ! elongated vegetative cells
 is_a: FYPO:0001491 ! viable vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000124 ! viable
 created_by: midori
 creation_date: 2012-08-30T14:17:56Z
 
@@ -15597,6 +15723,9 @@ synonym: "elongated inviable multinucleate cells during vegetative growth" EXACT
 synonym: "essential; elongated multinucleate vegetative cells" RELATED [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate cells
 is_a: FYPO:0001490 ! elongated inviable vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000049 ! inviable
+relationship: has_part FYPO:0000061 ! multinucleate
 created_by: midori
 creation_date: 2012-08-30T14:27:16Z
 
@@ -15608,6 +15737,9 @@ synonym: "elongated inviable multiseptate cells during vegetative growth" EXACT 
 synonym: "essential; elongated multiseptate vegetative cells" RELATED [PomBase:mah]
 is_a: FYPO:0000223 ! elongated multiseptate cells
 is_a: FYPO:0001490 ! elongated inviable vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000049 ! inviable
+relationship: has_part FYPO:0000118 ! multiseptate
 created_by: midori
 creation_date: 2012-08-30T14:30:53Z
 
@@ -15618,6 +15750,9 @@ def: "A cell morphology phenotype in which vegetative cells are viable, longer t
 synonym: "elongated multinucleate viable cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate cells
 is_a: FYPO:0001492 ! elongated viable vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000061 ! multinucleate
+relationship: has_part FYPO:0000124 ! viable
 created_by: midori
 creation_date: 2012-08-30T14:32:23Z
 
@@ -15628,6 +15763,9 @@ def: "A cell morphology phenotype in which vegetative cells are viable, longer t
 synonym: "elongated viable multiseptate cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000223 ! elongated multiseptate cells
 is_a: FYPO:0001492 ! elongated viable vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000118 ! multiseptate
+relationship: has_part FYPO:0000124 ! viable
 created_by: midori
 creation_date: 2012-08-30T14:32:53Z
 
@@ -15641,6 +15779,9 @@ synonym: "essential; elongated vegetative cells with mitotic cell cycle arrest i
 synonym: "mitotic cell cycle arrest in S-phase with elongated inviable cells" EXACT [PomBase:vw]
 synonym: "mitotic S-phase arrested elongated inviable vegetative cells" EXACT [PomBase:mah]
 is_a: FYPO:0001490 ! elongated inviable vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000049 ! inviable
+relationship: has_part FYPO:0000611 ! mitotic cell cycle arrest in S phase
 created_by: midori
 creation_date: 2012-08-30T14:37:31Z
 
@@ -15780,6 +15921,9 @@ synonym: "viable lumpy" RELATED [PomBase:vw]
 synonym: "viable, abnormal cell shape, normal cell size during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001121 ! vegetative cells, abnormal cell shape, normal cell size
 is_a: FYPO:0001491 ! viable vegetative cells
+relationship: has_part FYPO:0001124 ! normal cell size
+relationship: has_part FYPO:0001126 ! abnormal cell shape
+relationship: has_part FYPO:0001491 ! viable vegetative cells
 created_by: midori
 creation_date: 2012-09-13T10:47:20Z
 
@@ -15791,6 +15935,9 @@ synonym: "inviable lumpy" RELATED [PomBase:vw]
 synonym: "inviable, abnormal cell shape, normal cell size during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001121 ! vegetative cells, abnormal cell shape, normal cell size
 is_a: FYPO:0001489 ! inviable vegetative cells
+relationship: has_part FYPO:0001124 ! normal cell size
+relationship: has_part FYPO:0001126 ! abnormal cell shape
+relationship: has_part FYPO:0001489 ! inviable vegetative cells
 created_by: midori
 creation_date: 2012-09-13T10:52:33Z
 
@@ -15803,6 +15950,8 @@ synonym: "branched, elongated, septated cells" EXACT [PomBase:jh, PomBase:mah, P
 synonym: "branched, long, septated cells" EXACT [PomBase:vw]
 is_a: FYPO:0000015 ! branched cells
 is_a: FYPO:0001122 ! elongated vegetative cells
+relationship: has_part FYPO:0000015 ! branched cells
+relationship: has_part FYPO:0000017 ! elongated cells
 created_by: midori
 creation_date: 2012-09-13T10:58:38Z
 
