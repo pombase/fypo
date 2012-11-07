@@ -43,7 +43,7 @@ echo running ontology-release-runner
     $FYPO_OBO $GO_OBO $PCO_OBO $CHEBI_OBO $CELL_TYPE_OBO $BRENDA_TISSUE_OBO $SO_OBO \
     > $OORT_LOG_FILE 2>&1
 
-release_path=$OUT_DIR/releases/*
+release_path=`echo $OUT_DIR/releases/*`
 release=`basename $release_path`
 
 if [ ! -e $release_path ]
