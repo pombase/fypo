@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:11:2012 16:58
+date: 07:11:2012 16:55
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -58,7 +58,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000006
 name: abnormal DNA damage checkpoint
-def: "A cell cycle checkpoint phenotype that affects the DNA damage checkpoint." [PomBase:mah]
+def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is abnormal. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage. In a mutant, the checkpoint may fail to activate under appropriate conditions, or may occur to a greater or lesser extent than wild type under any specified set of conditions." [PomBase:mah]
+synonym: "abnormal DNA damage checkpoint activation" EXACT [PomBase:mah]
 synonym: "abnormal DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 synonym: "DNA damage checkpoint defects" EXACT [PomBase:mah]
 is_a: FYPO:0000157 ! abnormal response to DNA damage stimulus
@@ -74,8 +75,9 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000007
 name: abnormal S-phase DNA damage checkpoint
 alt_id: FYPO:0000195
-def: "A cell cycle checkpoint phenotype that affects the S phase DNA damage checkpoint (also known as the intra-S phase DNA damage checkpoint)." [PomBase:mah]
+def: "A cell cycle checkpoint phenotype in which the S phase DNA damage checkpoint (also known as the intra-S phase DNA damage checkpoint) is abnormal. The S phase DNA damage checkpoint slows progression through S phase in response to DNA damage. In a mutant, the checkpoint may fail to activate under appropriate conditions, or may occur to a greater or lesser extent than wild type under any specified set of conditions." [PomBase:mah]
 synonym: "abnormal intra-S DNA damage checkpoint" EXACT [PomBase:mah]
+synonym: "abnormal S-phase DNA damage checkpoint activation" EXACT [PomBase:mah]
 synonym: "abnormal S-phase DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 synonym: "DNA damage checkpoint defects, S-phase" EXACT [PomBase:mah]
 is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
@@ -146,13 +148,19 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000012
 name: mitotic G2/M transition delay
+alt_id: FYPO:0000205
 alt_id: FYPO:0000401
 alt_id: FYPO:0000606
+alt_id: FYPO:0000971
 def: "A cell cycle phenotype in which the G2/M transition of the mitotic cell cycle takes place later than normal. The duration of G2 phase is thus longer than normal." [PomBase:mah]
+comment: A G2/M delay may indicate that a checkpoint, such as the DNA replication checkpoint or the G2/M DNA damage checkpoint, is activated. Checkpoint activation can be tested using checkpoint kinase mutants.
 synonym: "cell cycle progression through the G2/M phase transition: delayed" EXACT [SGD:phenotype_annotation]
 synonym: "cell cycle, G2 delay" EXACT [PomBase:mah]
 synonym: "delayed cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
+synonym: "DNA replication arrest" RELATED [PomBase:vw]
+synonym: "DNA replication checkpoint activated" RELATED [PomBase:mah]
 synonym: "G2 delay" EXACT [PomBase:mah]
+synonym: "G2/M transition DNA damage checkpoint activated" RELATED [PomBase:mah]
 synonym: "increased duration of mitotic G2 phase" EXACT [PomBase:mah]
 synonym: "increased G2 duration" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle delay at G2/M transition" EXACT [PomBase:mah]
@@ -1433,7 +1441,7 @@ is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001551
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0016049
-intersection_of: towards CHEBI:43626
+intersection_of: towards CHEBI:69136
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
 
@@ -2228,9 +2236,10 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000168
 name: abnormal mitotic cell cycle spindle assembly checkpoint
-def: "A cell cycle checkpoint phenotype that affects the spindle assembly checkpoint of a mitotic cell cycle. The mitotic spindle assembly checkpoint delays the metaphase/anaphase transition of a mitotic nuclear division until the spindle is correctly assembled and chromosomes are attached to the spindle." [GO:0007094, PomBase:mah]
-is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+def: "A cell cycle checkpoint phenotype in which the spindle assembly checkpoint of a mitotic cell cycle is abnormal. The mitotic spindle assembly checkpoint normally delays the metaphase/anaphase transition of a mitotic nuclear division until the spindle is correctly assembled and chromosomes are attached to the spindle. In a mutant, the checkpoint may fail to activate under appropriate conditions, or may occur to a greater or lesser extent than wild type under any specified set of conditions." [GO:0007094, PomBase:mah]
+synonym: "abnormal mitotic cell cycle spindle assembly checkpoint activation" EXACT [PomBase:mah]
 is_a: FYPO:0000200 ! abnormal regulation of mitotic metaphase/anaphase transition
+is_a: FYPO:0001704 ! abnormal cell cycle checkpoint
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007094
 intersection_of: qualifier PATO:0000460
@@ -2280,8 +2289,9 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000173
 name: abnormal mitotic cell cycle DNA replication checkpoint
 alt_id: FYPO:0000823
-def: "A cell cycle checkpoint phenotype that affects the DNA replication checkpoint in a mitotic cell cycle. The DNA replication checkpoint prevents the initiation of mitosis until DNA replication is complete." [PomBase:mah]
+def: "A cell cycle checkpoint phenotype in which the DNA replication checkpoint in a mitotic cell cycle is abnormal. The DNA replication checkpoint normally prevents the initiation of mitosis until DNA replication is complete. In a mutant, the checkpoint may fail to activate under appropriate conditions, or may occur to a greater or lesser extent than wild type under any specified set of conditions." [PomBase:mah]
 synonym: "abnormal DNA replication checkpoint" BROAD [PomBase:mah]
+synonym: "abnormal mitotic cell cycle DNA replication checkpoint activation" EXACT [PomBase:mah]
 is_a: FYPO:0000166 ! abnormal regulation of G2/M transition of mitotic cell cycle
 is_a: FYPO:0000643 ! abnormal DNA integrity checkpoint
 intersection_of: PATO:0000001
@@ -2686,15 +2696,6 @@ intersection_of: inheres_in GO:0006406
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-13T03:41:10Z
-
-[Term]
-id: FYPO:0000205
-name: DNA replication checkpoint activated
-def: "A cell cycle phenotype in which the DNA replication checkpoint is activated, i.e. the cell cycle is delayed or halted before nuclear division to allow DNA replication to be completed." [PomBase:mah]
-synonym: "DNA replication arrest" RELATED [PomBase:vw]
-is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
-created_by: midori
-creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000206
@@ -4209,6 +4210,7 @@ id: FYPO:0000333
 name: mitotic G1/S transition delay
 alt_id: FYPO:0000396
 def: "A cell cycle phenotype in which the G1/S transition of the mitotic cell cycle takes place later than normal." [PomBase:mah]
+comment: A G1/S delay may indicate that a checkpoint, such as the cell size checkpoint or the G1/S DNA damage checkpoint, is activated. Checkpoint activation can be tested using checkpoint kinase mutants.
 synonym: "cell cycle progression through the G1/S phase transition: delayed" EXACT [SGD:phenotype_annotation]
 synonym: "delayed cell cycle progression through mitotic G1/S phase transition" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle delay at G1/S transition" EXACT [PomBase:mah]
@@ -8304,8 +8306,9 @@ creation_date: 2011-09-28T12:16:57Z
 [Term]
 id: FYPO:0000643
 name: abnormal DNA integrity checkpoint
-def: "A cell cycle checkpoint phenotype that affects any DNA integrity checkpoint." [PomBase:mah]
-is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+def: "A cell cycle checkpoint phenotype in which a DNA integrity checkpoint is abnormal. A DNA integrity checkpoint normally regulates cell cycle progression in response to changes in DNA structure. In a mutant, the checkpoint may fail to activate under appropriate conditions, or may occur to a greater or lesser extent than wild type under any specified set of conditions." [PomBase:mah]
+synonym: "abnormal DNA integrity checkpoint activation" EXACT [PomBase:mah]
+is_a: FYPO:0001704 ! abnormal cell cycle checkpoint
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0031570
 intersection_of: qualifier PATO:0000460
@@ -12816,15 +12819,6 @@ intersection_of: inheres_in GO:0016049
 intersection_of: towards CHEBI:27504
 created_by: midori
 creation_date: 2012-04-19T01:38:22Z
-
-[Term]
-id: FYPO:0000971
-name: DNA damage checkpoint activated
-def: "A cell cycle phenotype in which the DNA damage checkpoint is activated, i.e. the cell cycle is delayed or halted before nuclear division to allow DNA damage to be repaired." [PomBase:mah]
-synonym: "DNA damage checkpoint activated during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
-created_by: midori
-creation_date: 2012-04-19T01:40:55Z
 
 [Term]
 id: FYPO:0000972
@@ -22737,6 +22731,11 @@ synonym: "decreased RNA accumulation during cellular response to purvalanol A" R
 synonym: "decreased RNA level during cellular response to purvalanol A during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced RNA level during cellular response to purvalanol A" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: exists_during GO:0072754
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:47600
 created_by: midori
 creation_date: 2012-11-02T15:37:15Z
 
@@ -22749,6 +22748,11 @@ synonym: "increased mRNA level during cellular response to purvalanol A" NARROW 
 synonym: "increased RNA accumulation during cellular response to purvalanol A" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to purvalanol A during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level
+intersection_of: exists_during GO:0072754
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:47600
 created_by: midori
 creation_date: 2012-11-02T15:39:06Z
 
@@ -22769,6 +22773,10 @@ name: normal cellular response to benomyl
 def: "A cellular response phenotype in which the cellular response to benomyl is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular response to benomyl during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072755
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-11-02T15:45:13Z
 
@@ -22807,6 +22815,10 @@ def: "A cellular response phenotype in which the cellular response to camptothec
 synonym: "normal cellular response to camptothecin during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal cellular response to CPT" EXACT [PomBase:al]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072757
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-11-02T15:52:52Z
 
@@ -22816,6 +22828,10 @@ name: normal cellular response to paraquat
 def: "A cellular response phenotype in which the cellular response to paraquat is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular response to paraquat during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072756
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-11-02T15:54:56Z
 
@@ -22943,6 +22959,70 @@ intersection_of: inheres_in GO:0016049
 intersection_of: towards CHEBI:34892
 created_by: midori
 creation_date: 2012-11-02T16:57:43Z
+
+[Term]
+id: FYPO:0001703
+name: normal cell cycle checkpoint
+def: "A cell cycle phenotype in which a specific cell cycle checkpoint is normal (i.e. indistinguishable from wild type). A cell cycle checkpoint controls cell cycle progression by monitoring the timing and integrity of specific cell cycle events." [GO:0000075, PomBase:mah]
+synonym: "normal cell cycle checkpoint activation" EXACT [PomBase:mah]
+is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0000075
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-07T16:00:24Z
+
+[Term]
+id: FYPO:0001704
+name: abnormal cell cycle checkpoint
+def: "A cell cycle phenotype in which a specific cell cycle checkpoint is abnormal. A cell cycle checkpoint normally controls cell cycle progression by monitoring the timing and integrity of specific cell cycle events. In a mutant, the checkpoint may fail to activate under appropriate conditions, or may occur to a greater or lesser extent than wild type under any specified set of conditions." [GO:0000075, PomBase:mah]
+synonym: "abnormal cell cycle checkpoint activation" EXACT [PomBase:mah]
+is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+intersection_of: PATO:0000001
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0000075
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-07T16:03:57Z
+
+[Term]
+id: FYPO:0001705
+name: normal DNA damage checkpoint
+def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
+synonym: "normal DNA damage checkpoint activation" EXACT [PomBase:mah]
+synonym: "normal DNA damage checkpoint activation under non-stressed conditions" NARROW [PomBase:al]
+synonym: "normal DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001703 ! normal cell cycle checkpoint
+intersection_of: PATO:0000001
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0000077
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-07T16:37:55Z
+
+[Term]
+id: FYPO:0001706
+name: normal DNA damage checkpoint during gamma irradiation
+def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal when the cell is subject to gamma irradiation. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
+synonym: "normal DNA damage checkpoint activation during gamma irradiation" EXACT [PomBase:al]
+synonym: "normal DNA damage checkpoint during gamma irradiation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001705 ! normal DNA damage checkpoint
+created_by: midori
+creation_date: 2012-11-07T16:41:15Z
+
+[Term]
+id: FYPO:0001707
+name: increased DNA damage checkpoint activation
+def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint occurs to a greater extent than wild type under any specified set of conditions." [PomBase:mah]
+synonym: "increased DNA damage checkpoint activation under non-stressed conditions" NARROW [PomBase:al]
+is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0000077
+created_by: midori
+creation_date: 2012-11-07T16:53:08Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
