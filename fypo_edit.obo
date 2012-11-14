@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:11:2012 15:41
+date: 14:11:2012 17:38
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -365,14 +365,16 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000030
-name: abnormal chromosome congression
-def: "A cellular process phenotype in which chromosome congression is abnormal. Chromosome congression is the alignment of chromosomes at the metaphase plate, a plane halfway between the poles of the spindle." [GO:0051310, PomBase:mah]
+name: abnormal mitotic chromosome congression
+def: "A cellular process phenotype in which chromosome congression is abnormal during mitosis. Chromosome congression is the alignment of chromosomes at the metaphase plate, a plane halfway between the poles of the spindle." [GO:0051310, PomBase:mah]
+synonym: "abnormal chromosome congression at mitotic metaphase plate" EXACT [PomBase:mah]
 synonym: "abnormal chromosome congression during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic metaphase plate congression" EXACT [GO:0007080]
 synonym: "chromosome segregation defects, chromosome congression" EXACT [PomBase:mah]
-is_a: FYPO:0001359 ! abnormal chromosome segregation during vegetative growth
+is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0051310
+intersection_of: inheres_in GO:0007080
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
@@ -1314,7 +1316,7 @@ id: FYPO:0000098
 name: sensitive to calcium
 def: "A phenotype in which cells show increased sensitivity to calcium." [PomBase:mah]
 synonym: "sensitive to calcium during vegetative growth" EXACT [PomBase:mah]
-synonym: "sensitive to calcium ions" EXACT []
+synonym: "sensitive to calcium ions" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001551
 intersection_of: during GO:0072690
@@ -1891,12 +1893,16 @@ creation_date: 2011-04-12T02:23:26Z
 [Term]
 id: FYPO:0000141
 name: abnormal mitotic sister chromatid segregation
+alt_id: FYPO:0001359
 def: "A cellular process phenotype in which mitotic sister chromatid segregation is abnormal. Mitotic sister chromatid segregation is the entire process in which replicated homologous chromosomes are organized and then physically separated and apportioned to two sets during the mitotic cell cycle." [GO:0000070, PomBase:mah]
+synonym: "abnormal chromosome segregation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal mitotic chromosome segregation" EXACT [PomBase:mah]
 synonym: "abnormal mitotic sister chromatid segregation during vegetative growth" EXACT [PomBase:mah]
+synonym: "centromere function defective during vegetative growth" RELATED [PomBase:mah]
+synonym: "chromosome segregation defects during vegetative growth" EXACT [PomBase:mah]
 synonym: "chromosome segregation defects, mitotic" EXACT [PomBase:mah]
+is_a: FYPO:0000029 ! abnormal chromosome segregation
 is_a: FYPO:0000337 ! abnormal mitosis
-is_a: FYPO:0001359 ! abnormal chromosome segregation during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000070
@@ -2944,11 +2950,12 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000227
-name: chromosome loss during segregation
-def: "A chromosome segregation phenotype in which one or more chromosome or minichromosome is not correctly segregated to either daughter cells." [PMID:11809834, PMID:20211136, PomBase:mah]
+name: chromosome loss during mitotic chromosome segregation
+def: "A chromosome segregation phenotype in which one or more chromosome or minichromosome is not correctly segregated to either daughter cells during mitosis." [PMID:11809834, PMID:20211136, PomBase:mah]
+synonym: "chromosome loss during mitotic sister chromatid segregation" EXACT [PomBase:mah]
 synonym: "chromosome loss during segregation during vegetative growth" EXACT [PomBase:mah]
 synonym: "chromosome segregation defects, chromosome loss" EXACT [PomBase:mah]
-is_a: FYPO:0001359 ! abnormal chromosome segregation during vegetative growth
+is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2974,8 +2981,8 @@ synonym: "cut during vegetative growth" EXACT [PomBase:mah]
 synonym: "cut, binucleate cell formation" NARROW [PomBase:mah, PomBase:vw]
 synonym: "cut, septum dividing nucleus" NARROW [PomBase:mah, PomBase:vw]
 is_a: FYPO:0000049 ! inviable
+is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 is_a: FYPO:0001320 ! vegetative cell phenotype
-is_a: FYPO:0001359 ! abnormal chromosome segregation during vegetative growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3657,11 +3664,13 @@ creation_date: 2011-04-19T04:37:01Z
 
 [Term]
 id: FYPO:0000283
-name: chromosome fragmentation upon segregation
-def: "A chromosome segregation phenotype in which chromosomes are broken during segregation." [PomBase:mah]
+name: mitotic chromosome fragmentation upon segregation
+def: "A chromosome segregation phenotype in which chromosomes are broken during mitotic chromosome segregation." [PomBase:mah]
+synonym: "chromosome fragmentation upon mitotic chromosome segregation" EXACT [PomBase:mah]
+synonym: "chromosome fragmentation upon segregation during mitosis" EXACT [PomBase:mah]
 synonym: "chromosome fragmentation upon segregation during vegetative growth" EXACT [PomBase:mah]
 synonym: "chromosome segregation defects, chromosome fragmentation" EXACT [PomBase:mah]
-is_a: FYPO:0001359 ! abnormal chromosome segregation during vegetative growth
+is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: PATO:0001444
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0005694
@@ -5270,28 +5279,30 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000415
-name: decreased chromosome segregation
-def: "A cellular process phenotype in which the occurrence of chromosome segregation is decreased." [PomBase:mah]
-synonym: "chromosome segregation: decreased" EXACT [SGD:phenotype_annotation]
+name: decreased mitotic sister chromatid segregation
+def: "A cellular process phenotype in which the occurrence of mitotic sister chromatid segregation is decreased." [PomBase:mah]
+synonym: "chromosome segregation: decreased" BROAD [SGD:phenotype_annotation]
 synonym: "decreased chromosome segregation during vegetative growth" EXACT [PomBase:mah]
-synonym: "reduced chromosome segregation" EXACT [PomBase:mah]
-is_a: FYPO:0001359 ! abnormal chromosome segregation during vegetative growth
+synonym: "decreased mitotic chromosome segregation" EXACT [GO:0000070]
+synonym: "reduced mitotic sister chromatid segregation" EXACT [PomBase:mah]
+is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0007059
+intersection_of: inheres_in GO:0000070
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000416
-name: premature chromosome segregation
-def: "A cellular process phenotype in which chromosome segregation occurs prematurely." [PomBase:mah]
-synonym: "chromosome segregation: premature" EXACT [SGD:phenotype_annotation]
+name: premature mitotic sister chromatid segregation
+def: "A cellular process phenotype in which mitotic sister chromatid segregation occurs prematurely." [PomBase:mah]
+synonym: "chromosome segregation: premature" BROAD [SGD:phenotype_annotation]
 synonym: "premature chromosome segregation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001359 ! abnormal chromosome segregation during vegetative growth
+synonym: "premature mitotic chromosome segregation" EXACT [GO:0000070]
+is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: PATO:0000694
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0007059
+intersection_of: inheres_in GO:0000070
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
@@ -5851,7 +5862,7 @@ name: abnormal centromeric sister chromatid cohesion
 def: "A cellular process phenotype in which cohesion between centromeres of sister chromatids is abnormal." [PomBase:mah]
 synonym: "abnormal centromeric sister chromatid cohesion during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal sister chromatid cohesion at centromere" EXACT [GO:0070601, PomBase:mah]
-is_a: FYPO:0001359 ! abnormal chromosome segregation during vegetative growth
+is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0070601
@@ -8632,13 +8643,14 @@ creation_date: 2011-11-11T10:46:47Z
 
 [Term]
 id: FYPO:0000670
-name: abnormal chromosome separation
-def: "A cellular process phenotype in which chromosome separation is abnormal." [PomBase:mah]
+name: abnormal mitotic chromosome separation
+def: "A cellular process phenotype in which mitotic chromosome separation is abnormal." [PomBase:mah]
 synonym: "abnormal chromosome separation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001359 ! abnormal chromosome segregation during vegetative growth
+synonym: "abnormal mitotic sister chromatid separation" EXACT [GO:0051306]
+is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0051304
+intersection_of: inheres_in GO:0051306
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-11-11T01:51:59Z
@@ -8646,10 +8658,11 @@ creation_date: 2011-11-11T01:51:59Z
 [Term]
 id: FYPO:0000671
 name: abnormal rDNA separation
-def: "A cellular process phenotype in which chromosome separation at the rDNA repeat regions is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which mitotic chromosome separation at the rDNA repeat regions is abnormal." [PomBase:mah]
+synonym: "abnormal rDNA separation during mitosis" EXACT [PomBase:mah]
 synonym: "abnormal rDNA separation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal segregation of nucleolar rDNA" RELATED [PomBase:mah]
-is_a: FYPO:0000670 ! abnormal chromosome separation
+is_a: FYPO:0000670 ! abnormal mitotic chromosome separation
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0034500
@@ -18104,20 +18117,6 @@ created_by: midori
 creation_date: 2012-08-01T18:21:02Z
 
 [Term]
-id: FYPO:0001359
-name: abnormal chromosome segregation during vegetative growth
-def: "A cellular process phenotype in which chromosome segregation is abnormal in the vegetative growth phase of the life cycle. Chromosome segregation begins with the alignment of chromosomes at the metaphase plate, includes chromosome separation, and ends when chromosomes have completed movement to the spindle poles." [GO:0007059, PomBase:mah]
-synonym: "centromere function defective during vegetative growth" RELATED [PomBase:mah]
-synonym: "chromosome segregation defects during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000029 ! abnormal chromosome segregation
-intersection_of: PATO:0000001
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0007059
-intersection_of: qualifier PATO:0000460
-created_by: midori
-creation_date: 2012-08-02T14:47:20Z
-
-[Term]
 id: FYPO:0001360
 name: decreased amino acid import during vegetative growth
 def: "A cellular process phenotype in which the import of one or more amino acids into the cell occurs to a lower extent than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
@@ -20908,7 +20907,7 @@ name: decreased cellular threonine level
 alt_id: FYPO:0001614
 def: "A cell phenotype in which the amount of L-threonine measured in a cell is lower than normal." [PomBase:mah]
 synonym: "decreased cellular L-threonine level" EXACT [PomBase:mah]
-synonym: "decreased cellular threonine level" EXACT []
+synonym: "decreased cellular threonine level" EXACT [PomBase:mah]
 synonym: "decreased cellular threonine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased level of threonine in cell" EXACT [PomBase:mah]
 synonym: "decreased threonine accumulation" RELATED [PomBase:al]
@@ -20961,7 +20960,7 @@ name: decreased cellular glutamate level
 alt_id: FYPO:0001615
 def: "A cell phenotype in which the amount of L-glutamate measured in a cell is lower than normal." [PomBase:mah]
 synonym: "decreased cellular glutamate level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased cellular glutamic acid level" RELATED []
+synonym: "decreased cellular glutamic acid level" RELATED [PomBase:mah]
 synonym: "decreased cellular L-glutamate level" EXACT [PomBase:mah]
 synonym: "decreased glutamate accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular glutamate level" EXACT [PomBase:mah]
@@ -21623,8 +21622,8 @@ name: decreased vacuolar aspartate level
 def: "A cell phenotype in which the amount of L-aspartate measured in the vacuole is lower than normal." [PomBase:mah]
 synonym: "decreased level of aspartate in vacuole" EXACT [PomBase:mah]
 synonym: "decreased vacuolar aspartate level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased vacuolar aspartic acid level" RELATED []
-synonym: "decreased vacuolar L-aspartate level" EXACT []
+synonym: "decreased vacuolar aspartic acid level" RELATED [PomBase:mah]
+synonym: "decreased vacuolar L-aspartate level" EXACT [PomBase:mah]
 synonym: "reduced level of aspartate in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar aspartate level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
@@ -21641,8 +21640,8 @@ name: decreased vacuolar glutamate level
 def: "A cell phenotype in which the amount of L-glutamate measured in the vacuole is lower than normal." [PomBase:mah]
 synonym: "decreased level of glutamate in vacuole" EXACT [PomBase:mah]
 synonym: "decreased vacuolar glutamate level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased vacuolar glutamic acid level" RELATED []
-synonym: "decreased vacuolar L-glutamate level" EXACT []
+synonym: "decreased vacuolar glutamic acid level" RELATED [PomBase:mah]
+synonym: "decreased vacuolar L-glutamate level" EXACT [PomBase:mah]
 synonym: "reduced level of glutamate in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar glutamate level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
@@ -21658,7 +21657,7 @@ id: FYPO:0001609
 name: decreased vacuolar ornithine level
 def: "A cell phenotype in which the amount of L-ornithine measured in the vacuole is lower than normal." [PomBase:mah]
 synonym: "decreased level of ornithine in vacuole" EXACT [PomBase:mah]
-synonym: "decreased vacuolar L-ornithine level" EXACT []
+synonym: "decreased vacuolar L-ornithine level" EXACT [PomBase:mah]
 synonym: "decreased vacuolar ornithine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced level of ornithine in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar ornithine level" EXACT [PomBase:mah]
@@ -21675,7 +21674,7 @@ id: FYPO:0001610
 name: decreased vacuolar lysine level
 def: "A cell phenotype in which the amount of L-lysine measured in the vacuole is lower than normal." [PomBase:mah]
 synonym: "decreased level of lysine in vacuole" EXACT [PomBase:mah]
-synonym: "decreased vacuolar L-lysine level" EXACT []
+synonym: "decreased vacuolar L-lysine level" EXACT [PomBase:mah]
 synonym: "decreased vacuolar lysine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced level of lysine in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar lysine level" EXACT [PomBase:mah]
@@ -21693,7 +21692,7 @@ name: decreased vacuolar histidine level
 def: "A cell phenotype in which the amount of L-histidine measured in the vacuole is lower than normal." [PomBase:mah]
 synonym: "decreased level of histidine in vacuole" EXACT [PomBase:mah]
 synonym: "decreased vacuolar histidine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased vacuolar L-histidine level" EXACT []
+synonym: "decreased vacuolar L-histidine level" EXACT [PomBase:mah]
 synonym: "reduced level of histidine in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar histidine level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
@@ -21710,7 +21709,7 @@ name: decreased vacuolar arginine level
 def: "A cell phenotype in which the amount of L-arginine measured in the vacuole is lower than normal." [PomBase:mah]
 synonym: "decreased level of arginine in vacuole" EXACT [PomBase:mah]
 synonym: "decreased vacuolar arginine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased vacuolar L-arginine level" EXACT []
+synonym: "decreased vacuolar L-arginine level" EXACT [PomBase:mah]
 synonym: "reduced level of arginine in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar arginine level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
@@ -21725,8 +21724,8 @@ creation_date: 2012-09-27T13:42:12Z
 id: FYPO:0001613
 name: decreased cellular aspartate level
 def: "A cell phenotype in which the amount of L-aspartate measured in the cell is lower than normal." [PomBase:mah]
-synonym: "decreased cellular aspartic acid level" RELATED []
-synonym: "decreased cellular L-aspartate level" EXACT []
+synonym: "decreased cellular aspartic acid level" RELATED [PomBase:mah]
+synonym: "decreased cellular L-aspartate level" EXACT [PomBase:mah]
 synonym: "decreased cellular level aspartate level" EXACT [PomBase:mah]
 synonym: "decreased level of aspartate in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular aspartate level" EXACT [PomBase:mah]
@@ -21743,7 +21742,7 @@ creation_date: 2012-09-27T13:57:23Z
 id: FYPO:0001616
 name: decreased cellular valine level
 def: "A cell phenotype in which the amount of L-valine measured in the cell is lower than normal." [PomBase:mah]
-synonym: "decreased cellular L-valine level" EXACT []
+synonym: "decreased cellular L-valine level" EXACT [PomBase:mah]
 synonym: "decreased cellular valine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased level of valine in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular valine level" EXACT [PomBase:mah]
@@ -21760,9 +21759,9 @@ creation_date: 2012-09-27T14:00:08Z
 id: FYPO:0001617
 name: decreased cellular isoleucine level
 def: "A cell phenotype in which the amount of L-isoleucine measured in the cell is lower than normal." [PomBase:mah]
-synonym: "<new synonym>" RELATED []
+synonym: "<new synonym>" RELATED [PomBase:mah]
 synonym: "decreased cellular isoleucine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased cellular L-isoleucine level" EXACT []
+synonym: "decreased cellular L-isoleucine level" EXACT [PomBase:mah]
 synonym: "decreased level of isoleucine in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular isoleucine level" EXACT [PomBase:mah]
 synonym: "reduced level of isoleucine in cell" EXACT [PomBase:mah]
@@ -21778,7 +21777,7 @@ creation_date: 2012-09-27T14:02:19Z
 id: FYPO:0001619
 name: decreased cellular lysine level
 def: "A cell phenotype in which the amount of L-lysine measured in the cell is lower than normal." [PomBase:mah]
-synonym: "decreased cellular L-lysine level" EXACT []
+synonym: "decreased cellular L-lysine level" EXACT [PomBase:mah]
 synonym: "decreased cellular lysine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased level of lysine in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular lysine level" EXACT [PomBase:mah]
@@ -21796,7 +21795,7 @@ id: FYPO:0001621
 name: decreased cellular arginine level
 def: "A cell phenotype in which the amount of L-arginine measured in the cell is lower than normal." [PomBase:mah]
 synonym: "decreased cellular arginine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased cellular L-arginine level" EXACT []
+synonym: "decreased cellular L-arginine level" EXACT [PomBase:mah]
 synonym: "decreased level of arginine in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular arginine level" EXACT [PomBase:mah]
 synonym: "reduced level of arginine in cell" EXACT [PomBase:mah]
@@ -21813,7 +21812,7 @@ id: FYPO:0001622
 name: normal vacuolar threonine level
 def: "A cell phenotype in which the amount of L-threonine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of threonine in vacuole" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-threonine level" EXACT []
+synonym: "normal vacuolar L-threonine level" EXACT [PomBase:mah]
 synonym: "normal vacuolar threonine level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
@@ -21829,7 +21828,7 @@ id: FYPO:0001623
 name: normal vacuolar serine level
 def: "A cell phenotype in which the amount of L-serine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of serine in vacuole" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-serine level" EXACT []
+synonym: "normal vacuolar L-serine level" EXACT [PomBase:mah]
 synonym: "normal vacuolar serine level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
@@ -21846,7 +21845,7 @@ name: normal vacuolar asparagine level
 def: "A cell phenotype in which the amount of L-asparagine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of asparagine in vacuole" EXACT [PomBase:mah]
 synonym: "normal vacuolar asparagine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-asparagine level" EXACT []
+synonym: "normal vacuolar L-asparagine level" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
 intersection_of: exists_during GO:0072690
@@ -21862,7 +21861,7 @@ name: normal vacuolar glutamine level
 def: "A cell phenotype in which the amount of L-glutamine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of glutamine in vacuole" EXACT [PomBase:mah]
 synonym: "normal vacuolar glutamine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-glutamine level" EXACT []
+synonym: "normal vacuolar L-glutamine level" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
 intersection_of: exists_during GO:0072690
@@ -21893,7 +21892,7 @@ name: normal vacuolar alanine level
 def: "A cell phenotype in which the amount of L-alanine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of alanine in vacuole" EXACT [PomBase:mah]
 synonym: "normal vacuolar alanine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-alanine level" EXACT []
+synonym: "normal vacuolar L-alanine level" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
 intersection_of: exists_during GO:0072690
@@ -21908,7 +21907,7 @@ id: FYPO:0001628
 name: normal vacuolar valine level
 def: "A cell phenotype in which the amount of L-valine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of valine in vacuole" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-valine level" EXACT []
+synonym: "normal vacuolar L-valine level" EXACT [PomBase:mah]
 synonym: "normal vacuolar valine level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
@@ -21924,7 +21923,7 @@ id: FYPO:0001629
 name: normal vacuolar methionine level
 def: "A cell phenotype in which the amount of L-methionine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of methionine in vacuole" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-methionine level" EXACT []
+synonym: "normal vacuolar L-methionine level" EXACT [PomBase:mah]
 synonym: "normal vacuolar methionine level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
@@ -21941,7 +21940,7 @@ name: normal vacuolar isoleucine level
 def: "A cell phenotype in which the amount of L-isoleucine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of isoleucine in vacuole" EXACT [PomBase:mah]
 synonym: "normal vacuolar isoleucine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-isoleucine level" EXACT []
+synonym: "normal vacuolar L-isoleucine level" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
 intersection_of: exists_during GO:0072690
@@ -21956,7 +21955,7 @@ id: FYPO:0001631
 name: normal vacuolar leucine level
 def: "A cell phenotype in which the amount of L-leucine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of leucine in vacuole" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-leucine level" EXACT []
+synonym: "normal vacuolar L-leucine level" EXACT [PomBase:mah]
 synonym: "normal vacuolar leucine level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
@@ -21972,7 +21971,7 @@ id: FYPO:0001632
 name: normal vacuolar tyrosine level
 def: "A cell phenotype in which the amount of L-tyrosine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of tyrosine in vacuole" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-tyrosine level" EXACT []
+synonym: "normal vacuolar L-tyrosine level" EXACT [PomBase:mah]
 synonym: "normal vacuolar tyrosine level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
@@ -21988,7 +21987,7 @@ id: FYPO:0001633
 name: normal vacuolar phenylalanine level
 def: "A cell phenotype in which the amount of L-phenylalanine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of phenylalanine in vacuole" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-phenylalanine level" EXACT []
+synonym: "normal vacuolar L-phenylalanine level" EXACT [PomBase:mah]
 synonym: "normal vacuolar phenylalanine level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
@@ -22018,7 +22017,7 @@ creation_date: 2012-09-27T14:21:05Z
 id: FYPO:0001635
 name: normal cellular serine level
 def: "A cell phenotype in which the amount of L-serine measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular L-serine level" EXACT []
+synonym: "normal cellular L-serine level" EXACT [PomBase:mah]
 synonym: "normal cellular serine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal level of serine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
@@ -22035,7 +22034,7 @@ id: FYPO:0001636
 name: normal cellular glutamine level
 def: "A cell phenotype in which the amount of L-glutamine measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular glutamine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal cellular L-glutamine level" EXACT []
+synonym: "normal cellular L-glutamine level" EXACT [PomBase:mah]
 synonym: "normal level of glutamine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
 intersection_of: PATO:0001159
@@ -22051,7 +22050,7 @@ id: FYPO:0001637
 name: normal cellular glycine level
 def: "A cell phenotype in which the amount of L-glycine measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular glycine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal cellular L-glycine level" EXACT []
+synonym: "normal cellular L-glycine level" EXACT [PomBase:mah]
 synonym: "normal level of glycine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
 intersection_of: PATO:0001159
@@ -22067,7 +22066,7 @@ id: FYPO:0001638
 name: normal cellular alanine level
 def: "A cell phenotype in which the amount of L-alanine measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular alanine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal cellular L-alanine level" EXACT []
+synonym: "normal cellular L-alanine level" EXACT [PomBase:mah]
 synonym: "normal level of alanine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
 intersection_of: PATO:0001159
@@ -22082,7 +22081,7 @@ creation_date: 2012-09-27T14:44:07Z
 id: FYPO:0001639
 name: normal cellular methionine level
 def: "A cell phenotype in which the amount of L-methionine measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular L-methionine level" EXACT []
+synonym: "normal cellular L-methionine level" EXACT [PomBase:mah]
 synonym: "normal cellular methionine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal level of methionine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
@@ -22098,7 +22097,7 @@ creation_date: 2012-09-27T14:44:34Z
 id: FYPO:0001640
 name: normal cellular leucine level
 def: "A cell phenotype in which the amount of L-leucine measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular L-leucine level" EXACT []
+synonym: "normal cellular L-leucine level" EXACT [PomBase:mah]
 synonym: "normal cellular leucine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal level of leucine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
@@ -22114,7 +22113,7 @@ creation_date: 2012-09-27T14:44:59Z
 id: FYPO:0001641
 name: normal cellular tyrosine level
 def: "A cell phenotype in which the amount of L-tyrosine measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular L-tyrosine level" EXACT []
+synonym: "normal cellular L-tyrosine level" EXACT [PomBase:mah]
 synonym: "normal cellular tyrosine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal level of tyrosine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
@@ -22130,7 +22129,7 @@ creation_date: 2012-09-27T14:45:39Z
 id: FYPO:0001642
 name: normal cellular phenylalanine level
 def: "A cell phenotype in which the amount of L-phenylalanine measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular L-phenylalanine level" EXACT []
+synonym: "normal cellular L-phenylalanine level" EXACT [PomBase:mah]
 synonym: "normal cellular phenylalanine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal level of phenylalanine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
@@ -23065,7 +23064,7 @@ creation_date: 2012-11-08T11:24:40Z
 id: FYPO:0001710
 name: stabilized iron-sulfur cluster binding
 def: "A molecular function phenotype in which occurrence of iron-sulfur cluster binding by a mutated gene product is stabilized, i.e. interactions between the iron-sulfur cluster and the gene product last longer than in wild type under any given set of conditions." [PomBase:mah]
-synonym: "increased duration of iron-sulfur cluster binding" EXACT []
+synonym: "increased duration of iron-sulfur cluster binding" EXACT [PomBase:mah]
 synonym: "stabilised iron-sulfur cluster binding" EXACT [PomBase:mah]
 is_a: FYPO:0001709 ! abnormal iron-sulfur cluster binding
 intersection_of: PATO:0000498
@@ -23077,7 +23076,7 @@ creation_date: 2012-11-08T11:26:12Z
 id: FYPO:0001711
 name: destabilized iron-sulfur cluster binding
 def: "A molecular function phenotype in which occurrence of iron-sulfur cluster binding by a mutated gene product is stabilized, i.e. interactions between the iron-sulfur cluster and the gene product do not last as long as in wild type under any given set of conditions." [PomBase:mah]
-synonym: "decreased duration of iron-sulfur cluster binding" EXACT []
+synonym: "decreased duration of iron-sulfur cluster binding" EXACT [PomBase:mah]
 synonym: "destabilised iron-sulfur cluster binding" EXACT [PomBase:mah]
 is_a: FYPO:0001709 ! abnormal iron-sulfur cluster binding
 intersection_of: PATO:0000499
@@ -23107,7 +23106,7 @@ name: abnormal malate import
 def: "A cellular process phenotype in which the import of malate into the cell is abnormal." [PomBase:mah]
 synonym: "abnormal malate import during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal malate import into cell" EXACT [PomBase:al]
-synonym: "abnormal malate uptake" EXACT []
+synonym: "abnormal malate uptake" EXACT [PomBase:mah]
 synonym: "abnormal malic acid import" RELATED [PomBase:al]
 is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
@@ -23141,7 +23140,7 @@ name: abnormal succinate import
 def: "A cellular process phenotype in which the import of succinate into the cell is abnormal." [PomBase:mah]
 synonym: "abnormal succinate import during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal succinate import into cell" EXACT [PomBase:al]
-synonym: "abnormal succinate uptake" EXACT []
+synonym: "abnormal succinate uptake" EXACT [PomBase:mah]
 synonym: "abnormal succinic acid import" RELATED [PomBase:al]
 is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
@@ -23176,7 +23175,7 @@ def: "A cellular process phenotype in which the import of malonic acid into the 
 synonym: "abnormal malonate import" RELATED [PomBase:mah]
 synonym: "abnormal malonic acid import during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal malonic acid import into cell" EXACT [PomBase:al]
-synonym: "abnormal malonic acid uptake" EXACT []
+synonym: "abnormal malonic acid uptake" EXACT [PomBase:mah]
 is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
 is_a: FYPO:0001720 ! abnormal transport
@@ -23236,7 +23235,7 @@ def: "A cellular process phenotype in which the export of sodium ions out of a c
 synonym: "abnormal cellular sodium export" EXACT [PomBase:al]
 synonym: "abnormal sodium export during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal sodium export from cell" NARROW [PomBase:mah]
-synonym: "abnormal sodium ion export" EXACT []
+synonym: "abnormal sodium ion export" EXACT [PomBase:mah]
 is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
 is_a: FYPO:0001720 ! abnormal transport
@@ -23254,8 +23253,8 @@ def: "A cellular process phenotype in which the export of sodium ions out of a c
 synonym: "decreased cellular sodium export" EXACT [PomBase:al]
 synonym: "decreased sodium export during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased sodium export from cell" NARROW [PomBase:mah]
-synonym: "decreased sodium ion export" EXACT []
-synonym: "reduced sodium export" EXACT []
+synonym: "decreased sodium ion export" EXACT [PomBase:mah]
+synonym: "reduced sodium export" EXACT [PomBase:mah]
 is_a: FYPO:0001721 ! abnormal sodium export
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
@@ -23293,8 +23292,8 @@ id: FYPO:0001725
 name: normal cellular aspartate level
 def: "A cell phenotype in which the amount of L-aspartate measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular aspartate level during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal cellular aspartic acid level" RELATED []
-synonym: "normal cellular L-aspartate level" EXACT []
+synonym: "normal cellular aspartic acid level" RELATED [PomBase:mah]
+synonym: "normal cellular L-aspartate level" EXACT [PomBase:mah]
 synonym: "normal level of aspartate in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
 intersection_of: PATO:0001159
@@ -23310,7 +23309,7 @@ id: FYPO:0001726
 name: normal cellular cysteine level
 def: "A cell phenotype in which the amount of L-cysteine measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular cysteine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal cellular L-cysteine level" EXACT []
+synonym: "normal cellular L-cysteine level" EXACT [PomBase:mah]
 synonym: "normal level of cysteine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
 intersection_of: PATO:0001159
@@ -23326,7 +23325,7 @@ id: FYPO:0001727
 name: decreased cellular glutamine level
 def: "A cell phenotype in which the amount of L-glutamine measured in the cell is lower than normal." [PomBase:mah]
 synonym: "decreased cellular glutamine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased cellular L-glutamine level" EXACT []
+synonym: "decreased cellular L-glutamine level" EXACT [PomBase:mah]
 synonym: "decreased level of glutamine in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular glutamine level" EXACT [PomBase:mah]
 synonym: "reduced level of glutamine in cell" EXACT [PomBase:mah]
@@ -23359,7 +23358,7 @@ name: normal vacuolar cysteine level
 def: "A cell phenotype in which the amount of L-cysteine measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of cysteine in vacuole" EXACT [PomBase:mah]
 synonym: "normal vacuolar cysteine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal vacuolar L-cysteine level" EXACT []
+synonym: "normal vacuolar L-cysteine level" EXACT [PomBase:mah]
 is_a: FYPO:0001603 ! normal level of substance in vacuole
 intersection_of: PATO:0001159
 intersection_of: exists_during GO:0072690
@@ -23391,7 +23390,7 @@ def: "A cell phenotype in which the amount of L-glutamate measured in the vacuol
 synonym: "increased level of glutamate in vacuole" EXACT [PomBase:mah]
 synonym: "increased vacuolar glutamate level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased vacuolar glutamic acid level" RELATED [PomBase:mah]
-synonym: "increased vacuolar L-glutamate level" EXACT []
+synonym: "increased vacuolar L-glutamate level" EXACT [PomBase:mah]
 is_a: FYPO:0001730 ! increased level of substance in vacuole
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
@@ -23406,7 +23405,7 @@ name: decreased vacuolar glutamine level
 def: "A cell phenotype in which the amount of L-glutamine measured in the vacuole is lower than normal." [PomBase:mah]
 synonym: "decreased level of glutamine in vacuole" EXACT [PomBase:mah]
 synonym: "decreased vacuolar glutamine level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased vacuolar L-glutamine level" EXACT []
+synonym: "decreased vacuolar L-glutamine level" EXACT [PomBase:mah]
 synonym: "reduced level of glutamine in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar glutamine level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
@@ -23416,6 +23415,494 @@ intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:18050
 created_by: midori
 creation_date: 2012-11-08T15:38:07Z
+
+[Term]
+id: FYPO:0001733
+name: abnormal spindle pole body separation
+def: "A cellular process phenotype in which spindle pole body separation is abnormal. Spindle pole body separation is the process in which duplicated spindle pole bodies detach and migrate apart within the nuclear membrane." [PomBase:mah]
+synonym: "abnormal spindle pole body separation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000073
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-14T11:49:37Z
+
+[Term]
+id: FYPO:0001734
+name: spindle pole body separation abolished
+def: "A cell adhesion phenotype in which duplicated spindle pole bodies do not separate." [PomBase:mah]
+synonym: "clustered spindle pole bodies" RELATED [PomBase:al]
+synonym: "spindle pole body separation abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001733 ! abnormal spindle pole body separation
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0000073
+created_by: midori
+creation_date: 2012-11-14T11:49:54Z
+
+[Term]
+id: FYPO:0001735
+name: abnormal iron-sulfur cluster transfer
+def: "A cellular process phenotype in which the movement of an assembled iron-sulfur cluster from a scaffold protein to an acceptor protein is abnormal." [PomBase:mah]
+synonym: "abnormal iron-sulfur cluster transfer during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+created_by: midori
+creation_date: 2012-11-14T12:03:16Z
+
+[Term]
+id: FYPO:0001736
+name: decreased iron-sulfur cluster transfer
+def: "A cellular process phenotype in which the movement of an assembled iron-sulfur cluster from a scaffold protein to an acceptor protein occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased iron-sulfur cluster transfer during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased iron-sulfur cluster transfer to ferredoxin" NARROW [PomBase:al]
+synonym: "reduced iron-sulfur cluster transfer" EXACT [PomBase:mah]
+is_a: FYPO:0001735 ! abnormal iron-sulfur cluster transfer
+created_by: midori
+creation_date: 2012-11-14T12:03:45Z
+
+[Term]
+id: FYPO:0001737
+name: abnormal pantothenate import
+def: "A cellular process phenotype in which the import of pantothenate into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal pantothenate import during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal pantothenate import into cell" EXACT [PomBase:al]
+synonym: "abnormal pantothenate uptake" EXACT [PomBase:mah]
+synonym: "abnormal pantothenic acid import" RELATED [PomBase:al]
+is_a: FYPO:0001336 ! transport phenotype during vegetative growth
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+is_a: FYPO:0001720 ! abnormal transport
+created_by: midori
+creation_date: 2012-11-14T12:23:05Z
+
+[Term]
+id: FYPO:0001738
+name: decreased pantothenate import
+def: "A cellular process phenotype in which the import of pantothenate into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased pantothenate import during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased pantothenate import into cell" EXACT [PomBase:al]
+synonym: "decreased pantothenate uptake" EXACT [GO:0043090]
+synonym: "decreased pantothenic acid import" RELATED [PomBase:al]
+synonym: "reduced pantothenate import" EXACT [PomBase:mah]
+is_a: FYPO:0001737 ! abnormal pantothenate import
+created_by: midori
+creation_date: 2012-11-14T12:23:13Z
+
+[Term]
+id: FYPO:0001739
+name: increased pantothenate import
+def: "A cellular process phenotype in which the import of pantothenate into the cell occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased pantothenate  uptake" EXACT [GO:0043090]
+synonym: "increased pantothenate import during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased pantothenate import into cell" EXACT [PomBase:al]
+synonym: "increased pantothenic acid import" RELATED [PomBase:al]
+is_a: FYPO:0001737 ! abnormal pantothenate import
+created_by: midori
+creation_date: 2012-11-14T12:23:34Z
+
+[Term]
+id: FYPO:0001740
+name: increased gross chromosomal rearrangement
+def: "A cell phenotype in which large chromosomal rearrangements occur more frequently than in wild type cells. Chromosomal rearrangements may include deletions, duplications, inversions, and translocations." [http://www.ncbi.nlm.nih.gov/books/NBK21367/, PMID:18923422, PomBase:mah]
+synonym: "increased occurrence of gross chromosomal rearrangement" EXACT [PomBase:mah]
+is_a: FYPO:0000641 ! abnormal chromosome organization
+created_by: midori
+creation_date: 2012-11-14T13:36:27Z
+
+[Term]
+id: FYPO:0001741
+name: increased chromosomal translocation
+def: "A cell phenotype in which chromosomal translocations occur more frequently than in wild type cells. In a chromosomal translocation, chromosome parts are exchanged between non-homologous chromosomes." [PMID:18923422, PomBase:al, PomBase:mah]
+synonym: "increased occurrence of chromosomal translocation" EXACT [PomBase:mah]
+is_a: FYPO:0001740 ! increased gross chromosomal rearrangement
+created_by: midori
+creation_date: 2012-11-14T14:01:18Z
+
+[Term]
+id: FYPO:0001742
+name: increased isochromosome formation
+def: "A cell phenotype in which isochromosome formation occurs more frequently than in wild type cells. In isochromosome formation, one chromosome arm is lost and the other arm is duplicated in its place." [PMID:18923422, PomBase:al, PomBase:mah]
+comment: In S. pombe, isochromosome formation is most commonly observed with chromosome 3.
+synonym: "increased occurrence of isochromosome formation" EXACT [PomBase:mah]
+is_a: FYPO:0001740 ! increased gross chromosomal rearrangement
+created_by: midori
+creation_date: 2012-11-14T14:05:03Z
+
+[Term]
+id: FYPO:0001743
+name: increased isochromosome formation with preferential breakage in the imr region
+def: "A cell phenotype in which isochromosome formation occurs more frequently than in wild type cells, and in which the break point is located in the imr region in the majority of cases. In isochromosome formation, one chromosome arm is lost and the other arm is duplicated in its place." [PMID:18923422, PomBase:al, PomBase:mah]
+comment: In S. pombe, isochromosome formation is most commonly observed with chromosome 3. When wild type cells form isochromosomes, the break-point is formed half the time in the imr region and half the time in the otr-irc region.
+synonym: "increased occurrence of isochromosome formation with preferential breakage in the imr region" EXACT [PomBase:mah]
+is_a: FYPO:0001742 ! increased isochromosome formation
+created_by: midori
+creation_date: 2012-11-14T14:11:30Z
+
+[Term]
+id: FYPO:0001744
+name: abnormal biotin import
+def: "A cellular process phenotype in which the import of biotin into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal biotin import during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal biotin import into cell" EXACT [PomBase:al]
+synonym: "abnormal biotin uptake" EXACT [PomBase:mah]
+is_a: FYPO:0001336 ! transport phenotype during vegetative growth
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+is_a: FYPO:0001720 ! abnormal transport
+created_by: midori
+creation_date: 2012-11-14T14:16:45Z
+
+[Term]
+id: FYPO:0001745
+name: increased biotin import
+def: "A cellular process phenotype in which the import of biotin into the cell occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased biotin import during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased biotin import into cell" EXACT [PomBase:al]
+synonym: "increased biotin uptake" EXACT [GO:0043090]
+is_a: FYPO:0001744 ! abnormal biotin import
+created_by: midori
+creation_date: 2012-11-14T14:17:14Z
+
+[Term]
+id: FYPO:0001746
+name: abolished biotin import
+def: "A cellular process phenotype in which the import of biotin into the cell is abolished." [PomBase:mah]
+synonym: "abolished biotin import during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished biotin import into cell" EXACT [PomBase:al]
+synonym: "abolished biotin uptake" EXACT [GO:0043090]
+synonym: "absent biotin import" EXACT [PomBase:al]
+is_a: FYPO:0001744 ! abnormal biotin import
+created_by: midori
+creation_date: 2012-11-14T14:17:27Z
+
+[Term]
+id: FYPO:0001747
+name: abnormal nickel import
+def: "A cellular process phenotype in which the import of nickel ions into a cell is abnormal." [PomBase:mah]
+synonym: "abnormal cellular nickel import" EXACT [PomBase:al]
+synonym: "abnormal nickel cation import" EXACT [PomBase:mah]
+synonym: "abnormal nickel import during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal nickel import into cell" EXACT [PomBase:mah]
+is_a: FYPO:0001336 ! transport phenotype during vegetative growth
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+is_a: FYPO:0001720 ! abnormal transport
+created_by: midori
+creation_date: 2012-11-14T14:26:34Z
+
+[Term]
+id: FYPO:0001748
+name: decreased nickel import
+def: "A cellular process phenotype in which the import of nickel ions into a cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased cellular nickel import" EXACT [PomBase:al]
+synonym: "decreased nickel cation import" EXACT [PomBase:mah]
+synonym: "decreased nickel import during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased nickel import into cell" NARROW [PomBase:mah]
+synonym: "reduced nickel import" EXACT [PomBase:mah]
+is_a: FYPO:0001747 ! abnormal nickel import
+created_by: midori
+creation_date: 2012-11-14T14:26:41Z
+
+[Term]
+id: FYPO:0001749
+name: sensitive to tacrolimus during salt stress
+def: "A phenotype in which cells show increased sensitivity to tacrolimus when the cell is subject to salt stress." [PomBase:mah]
+synonym: "sensitive to FK506 during salt stress" EXACT [CHEBI:61057, PomBase:mah]
+synonym: "sensitive to tacrolimus during salt stress during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000086 ! sensitive to tacrolimus
+intersection_of: PATO:0001551
+intersection_of: during GO:0071472
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:61057
+created_by: midori
+creation_date: 2012-11-14T14:38:07Z
+
+[Term]
+id: FYPO:0001750
+name: abnormal homocitrate synthase activity
+def: "A molecular function phenotype in which the observed rate of homocitrate synthase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004410
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-14T14:42:55Z
+
+[Term]
+id: FYPO:0001751
+name: increased homocitrate synthase activity
+def: "A molecular function phenotype in which the observed rate of homocitrate synthase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001750 ! abnormal homocitrate synthase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004410
+created_by: midori
+creation_date: 2012-11-14T14:43:03Z
+
+[Term]
+id: FYPO:0001752
+name: decreased homocitrate synthase activity
+def: "A molecular function phenotype in which the observed rate of homocitrate synthase activity is decreased." [PomBase:mah]
+synonym: "reduced homocitrate synthase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001750 ! abnormal homocitrate synthase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004410
+created_by: midori
+creation_date: 2012-11-14T14:45:33Z
+
+[Term]
+id: FYPO:0001753
+name: normal anaerobic cell growth
+def: "A cellular process phenotype in which cells grow normally under anaerobic conditions." [PomBase:mah]
+is_a: FYPO:0000047 ! normal cell growth
+created_by: midori
+creation_date: 2012-11-14T14:52:46Z
+
+[Term]
+id: FYPO:0001754
+name: growth auxotrophic for lysine and methionine
+def: "Auxotrophy in which lysine and methionine are required for cell growth." [PomBase:mah]
+synonym: "growth auxotrophic for lysine and methionine during vegetative growth" EXACT [PomBase:mah]
+synonym: "lysine and methionine auxotrophy" EXACT [PomBase:mah]
+is_a: FYPO:0000039 ! growth auxotrophic for lysine
+is_a: FYPO:0000040 ! growth auxotrophic for methionine
+intersection_of: PATO:0000422
+intersection_of: during GO:0072690
+intersection_of: towards CHEBI:16643
+intersection_of: towards CHEBI:18019
+created_by: midori
+creation_date: 2012-11-14T14:54:20Z
+
+[Term]
+id: FYPO:0001755
+name: growth auxotrophic for lysine and cysteine
+def: "Auxotrophy in which lysine and cysteine are required for cell growth." [PomBase:mah]
+synonym: "growth auxotrophic for lysine and cysteine during vegetative growth" EXACT [PomBase:mah]
+synonym: "lysine and cysteine auxotrophy" EXACT [PomBase:mah]
+is_a: FYPO:0000037 ! growth auxotrophic for cysteine
+is_a: FYPO:0000039 ! growth auxotrophic for lysine
+intersection_of: PATO:0000422
+intersection_of: during GO:0072690
+intersection_of: towards CHEBI:17561
+intersection_of: towards CHEBI:18019
+created_by: midori
+creation_date: 2012-11-14T14:55:06Z
+
+[Term]
+id: FYPO:0001756
+name: abnormal protein phosphatase activity
+def: "A molecular function phenotype in which the observed rate of protein phosphatase activity is abnormal." [PomBase:mah]
+synonym: "abnormal phosphoprotein phosphatase activity" EXACT [GO:0004721, PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004721
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-14T15:02:25Z
+
+[Term]
+id: FYPO:0001757
+name: decreased protein phosphatase activity
+def: "A molecular function phenotype in which the observed rate of a protein phosphatase activity is decreased." [PomBase:mah]
+synonym: "decreased phosphoprotein phosphatase activity" EXACT [GO:0004721, PomBase:mah]
+synonym: "reduced protein phosphatase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001756 ! abnormal protein phosphatase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004721
+created_by: midori
+creation_date: 2012-11-14T15:02:37Z
+
+[Term]
+id: FYPO:0001758
+name: increased protein phosphatase activity
+def: "A molecular function phenotype in which the observed rate of a protein phosphatase activity is increased." [PomBase:mah]
+synonym: "increased phosphoprotein phosphatase activity" EXACT [GO:0004721, PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001756 ! abnormal protein phosphatase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004721
+created_by: midori
+creation_date: 2012-11-14T15:02:48Z
+
+[Term]
+id: FYPO:0001759
+name: normal protein phosphatase activity
+def: "A molecular function phenotype in which the observed rate of a protein phosphatase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal phosphoprotein phosphatase activity" EXACT [GO:0004721]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004721
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-14T15:03:21Z
+
+[Term]
+id: FYPO:0001760
+name: normal cytokinetic cell separation
+def: "A cellular process phenotype in which cytokinetic cell separation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cell separation during cytokinesis" RELATED [GO:0000920]
+synonym: "normal cytokinetic cell separation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal cytokinetic cell separation following mitosis" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000920
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-14T15:25:43Z
+
+[Term]
+id: FYPO:0001761
+name: normal cell cycle progression through mitotic G1/S phase transition
+def: "A cellular process phenotype in which the G1/S transition of the mitotic cell cycle is normal." [PomBase:mah]
+synonym: "normal cell cycle progression through mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000411 ! normal cell cycle progression
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000082
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-14T15:28:02Z
+
+[Term]
+id: FYPO:0001762
+name: normal tRNA modification
+def: "A cellular process phenotype in which tRNA modification, the covalent alteration of one or more nucleotides within a tRNA molecule, is normal (i.e. indistinguishable from wild type)." [GO:0006400, PomBase:mah]
+synonym: "normal tRNA modification during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006400
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-14T17:09:21Z
+
+[Term]
+id: FYPO:0001763
+name: normal tRNA methylation
+def: "A cellular process phenotype in which tRNA methylation, the posttranscriptional addition of methyl groups to specific residues in a tRNA molecule, is normal (i.e. indistinguishable from wild type)." [GO:0030488, PomBase:mah]
+synonym: "normal tRNA methylation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001762 ! normal tRNA modification
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030488
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-14T17:11:06Z
+
+[Term]
+id: FYPO:0001764
+name: normal tRNA-Asp C48, C49, C60, C61 and C62 methylation
+def: "A cellular process phenotype in which the posttranscriptional addition of methyl groups to the C48, C49, C60, C61 and C62 residues in a tRNA-Asp molecule, is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal tRNA-Asp C48, C49, C60, C61 and C62 methylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal tRNA-Asp methylation on C48, C49, C60, C61 and C62" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+created_by: midori
+creation_date: 2012-11-14T17:12:31Z
+
+[Term]
+id: FYPO:0001765
+name: abnormal tRNA modification
+def: "A cellular process phenotype in which tRNA modification, the covalent alteration of one or more nucleotides within a tRNA molecule, is abnormal." [GO:0006400, PomBase:mah]
+synonym: "abnormal tRNA modification during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000370 ! abnormal RNA modification
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006400
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-14T17:16:05Z
+
+[Term]
+id: FYPO:0001766
+name: abnormal tRNA methylation
+def: "A cellular process phenotype in which tRNA methylation, the posttranscriptional addition of methyl groups to specific residues in a tRNA molecule, is abnormal." [GO:0030488, PomBase:mah]
+synonym: "abnormal tRNA methylation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001765 ! abnormal tRNA modification
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030488
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-14T17:16:35Z
+
+[Term]
+id: FYPO:0001767
+name: decreased tRNA-Asp C48, C49, C60, C61 and C62 methylation
+def: "A cellular process phenotype in which the posttranscriptional addition of methyl groups to the C48, C49, C60, C61 and C62 residues in a tRNA-Asp molecule, occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased tRNA-Asp C48, C49, C60, C61 and C62 methylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased tRNA-Asp methylation on C48, C49, C60, C61 and C62" EXACT [PomBase:mah]
+synonym: "reduced tRNA-Asp C48, C49, C60, C61 and C62 methylation" EXACT [PomBase:mah]
+is_a: FYPO:0001766 ! abnormal tRNA methylation
+created_by: midori
+creation_date: 2012-11-14T17:17:12Z
+
+[Term]
+id: FYPO:0001768
+name: abolished tRNA-Asp C48 methylation
+def: "A cellular process phenotype in which the posttranscriptional addition of methyl groups to the C48 residue in a tRNA-Asp molecule, is abolished." [PomBase:mah]
+synonym: "abolished tRNA-Asp C48 methylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished tRNA-Asp methylation on C48" EXACT [PomBase:mah]
+is_a: FYPO:0001766 ! abnormal tRNA methylation
+created_by: midori
+creation_date: 2012-11-14T17:18:18Z
+
+[Term]
+id: FYPO:0001769
+name: increased tRNA-Asp C48 methylation
+def: "A cellular process phenotype in which the posttranscriptional addition of methyl groups to the C48 residue in a tRNA-Asp molecule, occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased tRNA-Asp C48 methylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased tRNA-Asp methylation on C48" EXACT [PomBase:mah]
+is_a: FYPO:0001766 ! abnormal tRNA methylation
+created_by: midori
+creation_date: 2012-11-14T17:21:25Z
+
+[Term]
+id: FYPO:0001770
+name: normal tRNA methyltransferase activity
+def: "A molecular function phenotype in which the observed rate of a tRNA methyltransferase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0008175
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-14T17:30:11Z
+
+[Term]
+id: FYPO:0001771
+name: abnormal tRNA methyltransferase activity
+def: "A molecular function phenotype in which the observed rate of a tRNA methyltransferase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0008175
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-14T17:31:31Z
+
+[Term]
+id: FYPO:0001772
+name: decreased tRNA methyltransferase activity
+def: "A molecular function phenotype in which the observed rate of a tRNA methyltransferase activity is decreased." [PomBase:mah]
+synonym: "reduced tRNA methyltransferase activity" EXACT [PomBase:al]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001771 ! abnormal tRNA methyltransferase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0008175
+created_by: midori
+creation_date: 2012-11-14T17:31:42Z
+
+[Term]
+id: FYPO:0001773
+name: abolished tRNA methyltransferase activity
+def: "A molecular function phenotype in which a tRNA methyltransferase activity is absent." [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001771 ! abnormal tRNA methyltransferase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0008175
+created_by: midori
+creation_date: 2012-11-14T17:31:46Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
