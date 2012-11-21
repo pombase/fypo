@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 14:11:2012 17:38
+date: 21:11:2012 16:44
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -4496,7 +4496,7 @@ creation_date: 2011-07-14T05:04:23Z
 [Term]
 id: FYPO:0000353
 name: abnormal endomembrane system morphology
-def: "A cellular structure phenotype in which the morphology of the endomembrane system is abnormal." [PomBase:mah]
+def: "A cellular structure phenotype in which the morphology of all or part of the endomembrane system is abnormal." [PomBase:mah]
 comment: Note that an abnormal endomembrane system organization process may, but does not necessarily, result in abnormal endomembrane system morphology.
 synonym: "abnormal endomembrane system morphology during vegetative growth" EXACT [PomBase:mah]
 synonym: "endomembrane system morphology: abnormal" EXACT [SGD:phenotype_annotation]
@@ -9043,6 +9043,7 @@ id: FYPO:0000703
 name: normal protein binding
 def: "A molecular function phenotype in which the binding of one protein to another is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 comment: This term can be used for any protein-protein interaction that is tested in a mutant, whether or not the mutated gene product is one of the interacting proteins. We recommend noting which proteins were used in the assay when annotating to this term.
+synonym: "normal protein-protein interaction" EXACT [PomBase:mah]
 is_a: FYPO:0000702 ! protein binding phenotype
 is_a: FYPO:0000706 ! normal molecular function
 intersection_of: PATO:0000001
@@ -9912,6 +9913,7 @@ comment: Note that an abnormal nuclear envelope organization process may, but do
 synonym: "abnormal nuclear envelope morphology during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal nuclear membrane morphology" NARROW [PomBase:mah]
 is_a: FYPO:0000062 ! abnormal nuclear morphology
+is_a: FYPO:0000353 ! abnormal endomembrane system morphology
 intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005635
@@ -18490,7 +18492,7 @@ creation_date: 2012-08-10T14:06:51Z
 id: FYPO:0001386
 name: increased haploidization
 def: "A cell phenotype in which non-sporulating diploid cells become haploid by chromosome loss at a higher frequency than normal." [PMID:9914167, PomBase:mah]
-is_a: FYPO:0001320 ! vegetative cell phenotype
+is_a: FYPO:0001781 ! unstable diploid
 created_by: midori
 creation_date: 2012-08-10T14:51:16Z
 
@@ -22618,7 +22620,6 @@ intersection_of: exists_during GO:0000084
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CHEBI:36080
 intersection_of: towards GO:0005634
-relationship: output_of FYPO:0001129 ! abnormal protein localization to nucleus
 created_by: midori
 creation_date: 2012-10-11T16:20:13Z
 
@@ -23903,6 +23904,371 @@ intersection_of: PATO:0001558
 intersection_of: towards GO:0008175
 created_by: midori
 creation_date: 2012-11-14T17:31:46Z
+
+[Term]
+id: FYPO:0001774
+name: abnormal protein localization to linear eisosome
+def: "A cell phenotype in which the localization of a protein to the linear eisosome is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to linear eisosome" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to linear eisosome during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+created_by: midori
+creation_date: 2012-11-21T13:53:15Z
+
+[Term]
+id: FYPO:0001775
+name: abolished protein localization to linear eisosome
+def: "A cell phenotype in which the localization of a protein to the linear eisosome is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to linear eisosome" EXACT [PomBase:mah]
+synonym: "abolished protein localization to linear eisosome during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001774 ! abnormal protein localization to linear eisosome
+created_by: midori
+creation_date: 2012-11-21T13:55:52Z
+
+[Term]
+id: FYPO:0001776
+name: normal protein localization to linear eisosome
+def: "A cell phenotype in which the localization of a protein to the linear eisosome is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to linear eisosome" EXACT [PomBase:mah]
+synonym: "normal protein localization to linear eisosome during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+created_by: midori
+creation_date: 2012-11-21T14:04:30Z
+
+[Term]
+id: FYPO:0001777
+name: short linear eisosome
+def: "A cellular structure phenotype in which the linear eisosome is shorter than normal." [PomBase:mah]
+synonym: "short linear eisosome during vegetative growth" EXACT [PomBase:mah]
+synonym: "short linear eisosomes" EXACT [PomBase:al]
+is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+is_a: FYPO:0001574 ! abnormal bipolar mitotic spindle
+intersection_of: PATO:0000574
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0036286
+created_by: midori
+creation_date: 2012-11-21T14:05:30Z
+
+[Term]
+id: FYPO:0001778
+name: abnormal kinetochore localization
+def: "A cell phenotype in which the localization of one or more kinetochore(s) is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the cell cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal centromere localization" RELATED [PomBase:al]
+synonym: "abnormal kinetochore localisation" EXACT [PomBase:mah]
+synonym: "abnormal kinetochore localization during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001440 ! abnormal protein complex localization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072765
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-21T14:24:28Z
+
+[Term]
+id: FYPO:0001779
+name: abnormal kinetochore clustering at spindle pole body
+def: "A cell phenotype in which the localization of kinetochores into a cluster near the spindle pole body is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the cell cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal centromere-SPB clustering" RELATED [GO:0072766]
+synonym: "abnormal kinetochore clustering at SPB" EXACT [GO:0072766]
+synonym: "abnormal kinetochore clustering at spindle pole body during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal kinetochore localization at spindle pole body" EXACT [GO:0072766]
+synonym: "mislocalized, scattered centromeres" RELATED [PomBase:al]
+synonym: "unclustered kinetochores" RELATED [PomBase:al]
+is_a: FYPO:0001778 ! abnormal kinetochore localization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072766
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-21T14:33:41Z
+
+[Term]
+id: FYPO:0001780
+name: abnormal kinetochore clustering at spindle pole body during mitosis
+def: "A cell phenotype in which the localization of kinetochores into a cluster near the spindle pole body is abnormal during mitosis." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the cell cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal centromere-SPB clustering during mitosis" RELATED [GO:0072766]
+synonym: "abnormal kinetochore clustering at SPB during mitosis" EXACT [GO:0072766]
+synonym: "abnormal kinetochore clustering at spindle pole body during mitosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal kinetochore localization at spindle pole body during mitosis" EXACT [GO:0072766]
+synonym: "mislocalized, scattered centromeres during mitosis" RELATED [PomBase:al]
+synonym: "unclustered kinetochores during mitosis" RELATED [PomBase:al]
+is_a: FYPO:0001779 ! abnormal kinetochore clustering at spindle pole body
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0007067
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072766
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-21T14:38:36Z
+
+[Term]
+id: FYPO:0001781
+name: unstable diploid
+def: "A cell phenotype in which cells are unable to maintain a diploid state. Cells may die or become aneuplaid or haploid." [PomBase:al]
+is_a: FYPO:0001320 ! vegetative cell phenotype
+created_by: midori
+creation_date: 2012-11-21T14:45:29Z
+
+[Term]
+id: FYPO:0001782
+name: constricted nucleus
+def: "A cellular structure phenotype in which the nucleus is constricted in the middle, resembling a figure 8." [PomBase:mah]
+synonym: "constricted nucleus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000062 ! abnormal nuclear morphology
+intersection_of: PATO:0001847
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005634
+created_by: midori
+creation_date: 2012-11-21T14:49:49Z
+
+[Term]
+id: FYPO:0001783
+name: elongated, constricted nucleus
+def: "A cellular structure phenotype in which the nucleus is constricted in the middle, resembling a figure 8." [PomBase:mah]
+synonym: "elongated, constricted nucleus during vegetative growth" EXACT [PomBase:mah]
+synonym: "long constricted nucleus" EXACT [PomBase:vw]
+is_a: FYPO:0000832 ! elongated nucleus
+is_a: FYPO:0001782 ! constricted nucleus
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: has_part FYPO:0000832 ! elongated nucleus
+intersection_of: has_part FYPO:0001782 ! constricted nucleus
+intersection_of: exists_during GO:0072690
+created_by: midori
+creation_date: 2012-11-21T14:51:08Z
+
+[Term]
+id: FYPO:0001784
+name: excess endoplasmic reticulum membrane present
+def: "A cellular structure phenotype in which cells contain more endoplasmic reticulum (ER) membrane than normal. Excess ER membranes may form abnormal structures." [PomBase:al, PomBase:mah]
+synonym: "endoplasmic reticulum membrane present in greater amount" EXACT [PomBase:mah]
+synonym: "excess ER membrane present" EXACT [PomBase:mah]
+synonym: "increased endoplasmic reticulum membrane proliferation" RELATED [PomBase:mah]
+synonym: "overdeveloped ER membrane" EXACT [PomBase:al]
+is_a: FYPO:0000353 ! abnormal endomembrane system morphology
+is_a: FYPO:0000354 ! abnormal endoplasmic reticulum morphology
+intersection_of: PATO:0002002
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005789
+created_by: midori
+creation_date: 2012-11-21T14:59:30Z
+
+[Term]
+id: FYPO:0001785
+name: abnormal sterol binding
+def: "A molecular function phenotype in which occurrence of sterol binding by a mutated gene product is abnormal." [PomBase:mah]
+comment: This term can be used for any protein-protein interaction that is affected by a mutation, whether or not the mutated gene product is one of the interacting proteins. We recommend noting which proteins were used in the assay when annotating to this term.
+synonym: "abnormal cholesterol binding" NARROW [PomBase:mah]
+synonym: "abnormal ergosterol binding" NARROW [PomBase:mah]
+is_a: FYPO:0000702 ! protein binding phenotype
+is_a: FYPO:0000707 ! abnormal molecular function
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0032934
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-21T15:17:31Z
+
+[Term]
+id: FYPO:0001786
+name: abolished sterol binding
+def: "A molecular function phenotype in which sterol binding by a mutated gene product does not occur." [PomBase:mah]
+comment: This term can be used for any protein-protein interaction that is affected by a mutation, whether or not the mutated gene product is one of the interacting proteins. We recommend noting which proteins were used in the assay when annotating to this term.
+synonym: "abolished cholesterol binding" NARROW [PomBase:mah]
+synonym: "abolished ergosterol binding" NARROW [PomBase:mah]
+is_a: FYPO:0001785 ! abnormal sterol binding
+intersection_of: PATO:0001558
+intersection_of: towards GO:0032934
+created_by: midori
+creation_date: 2012-11-21T15:17:39Z
+
+[Term]
+id: FYPO:0001787
+name: normal sterol binding
+def: "A molecular function phenotype in which occurrence of sterol binding by a mutated gene product is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cholesterol binding" NARROW [PomBase:mah]
+synonym: "normal ergosterol binding" NARROW [PomBase:mah]
+is_a: FYPO:0000706 ! normal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0032934
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-21T15:20:15Z
+
+[Term]
+id: FYPO:0001788
+name: normal protein localization to cytoplasm
+def: "A cell phenotype in which the localization of a protein to all or part of the cytoplasm is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to cytoplasm" EXACT [PomBase:mah]
+synonym: "normal protein localization to cytoplasm during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+created_by: midori
+creation_date: 2012-11-21T15:36:24Z
+
+[Term]
+id: FYPO:0001789
+name: normal protein localization to nucleus during cellular response to oxidative stress
+def: "A cell phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type) normal protein localization to nucleus during a cellular response to oxidative stress." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to nucleus during cellular response to oxidative stress" EXACT [PomBase:mah]
+synonym: "normal protein localization to nucleus during cellular response to oxidative stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to nucleus during oxidative stress" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0000838 ! normal protein localization to nucleus
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0034599
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034504
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-21T15:39:01Z
+
+[Term]
+id: FYPO:0001790
+name: normal plasmid loss
+def: "A cell phenotype in which plasmids are lost at the same frequency as in wild-type cells. Plasmid loss occurs when one or both daughter cells do not inherit copies of a plasmid from the mother cell, and may result from failure of plasmid replication or segregation." [PomBase:mah]
+is_a: FYPO:0001312 ! normal vegetative phenotype
+created_by: midori
+creation_date: 2012-11-21T15:52:33Z
+
+[Term]
+id: FYPO:0001791
+name: abnormal spindle pole body duplication
+def: "A cellular process phenotype in which spindle pole body duplication is abnormal." [PomBase:mah]
+synonym: "abnormal spindle pole body duplication during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030474
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-21T16:01:35Z
+
+[Term]
+id: FYPO:0001792
+name: spindle pole body duplication abolished
+def: "A cell adhesion phenotype in which spindle pole body duplication does not occur, leaving the cell with a single spindle pole body later in the cell cycle than normal." [PomBase:mah]
+synonym: "single spindle pole body" RELATED [PomBase:al]
+synonym: "spindle pole body duplication abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001791 ! abnormal spindle pole body duplication
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0030474
+created_by: midori
+creation_date: 2012-11-21T16:07:06Z
+
+[Term]
+id: FYPO:0001793
+name: resistant to cell wall digestion
+def: "A cell phenotype in which a cell shows increased resistance to conditions that degrade the cell wall." [PomBase:mah]
+is_a: FYPO:0001320 ! vegetative cell phenotype
+created_by: midori
+creation_date: 2012-11-21T16:14:26Z
+
+[Term]
+id: FYPO:0001794
+name: normal RNA level during cellular response to purvalanol A
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to purvalanol A is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal mRNA level during cellular response to purvalanol A" NARROW [PomBase:mah]
+synonym: "normal RNA accumulation during cellular response to purvalanol A" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to purvalanol A during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072754
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2012-11-21T16:19:01Z
+
+[Term]
+id: FYPO:0001795
+name: normal cellular response to purvalanol A
+def: "A cellular response phenotype in which the cellular response to purvalanol A is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to purvalanol A during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072754
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-21T16:22:34Z
+
+[Term]
+id: FYPO:0001796
+name: protein mislocalized to centromere
+def: "A cell phenotype in which a protein that is not normally found at the centromeric region of a chromosome is observed there." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "protein mislocalised to centromere" EXACT [PomBase:mah]
+synonym: "protein mislocalised to centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to chromosome, centromeric region" EXACT [GO:0000775]
+is_a: FYPO:0000782 ! mislocalized protein
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0000775
+relationship: output_of FYPO:0001129 ! abnormal protein localization to nucleus
+created_by: midori
+creation_date: 2012-11-21T16:25:51Z
+
+[Term]
+id: FYPO:0001797
+name: abnormal translation
+def: "A metabolism phenotype in which translation is abnormal. Translation is the synthesis of a protein using the sequence of a mature mRNA molecule to specify the sequence of amino acids in a polypeptide chain" [GO:0006412, PomBase:mah]
+comment: Note that this term should be used only when an experiment measures protein synthesis directly, e.g. by measuring incorporation of a radiolabeled amino acid. Consider annotating to 'altered protein level' (FYPO:0000834) or one of its descendants.
+synonym: "abnormal protein biosynthesis" EXACT [GO:0006412]
+synonym: "abnormal protein synthesis" EXACT [GO:0006412]
+synonym: "abnormal translation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000291 ! translation phenotype
+is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006412
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-21T16:31:14Z
+
+[Term]
+id: FYPO:0001798
+name: decreased translation
+def: "A cellular process phenotype in which the occurrence of translation is decreased." [PomBase:mah]
+comment: Note that this term should be used only when an experiment measures protein synthesis directly, e.g. by measuring incorporation of a radiolabeled amino acid. Consider annotating to 'decreased protein level' (FYPO:0000835) or one of its descendants.
+synonym: "decreased protein biosynthesis" EXACT [GO:0006412]
+synonym: "decreased protein synthesis" EXACT [GO:0006412]
+synonym: "decreased rate of protein synthesis" NARROW [PomBase:al]
+synonym: "decreased translation during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced translation" EXACT [PomBase:mah]
+is_a: FYPO:0001797 ! abnormal translation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006412
+created_by: midori
+creation_date: 2012-11-21T16:33:39Z
+
+[Term]
+id: FYPO:0001799
+name: cell cycle arrest in mitotic G2 phase during response to DNA damage
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G2 phase during a cellular response to DNA damage." [PMID:19366728, PomBase:mah]
+synonym: "cell cycle arrest in mitotic G2 phase during DNA damage" EXACT [PomBase:mah]
+synonym: "mitotic G2 phase arrest during response to DNA damage" EXACT [PomBase:mah]
+is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
+intersection_of: PATO:0001561
+intersection_of: happens_during GO:0000085
+intersection_of: happens_during GO:0006974
+intersection_of: towards GO:0071850
+created_by: midori
+creation_date: 2012-11-21T16:40:19Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
