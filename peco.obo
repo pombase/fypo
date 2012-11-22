@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 13:11:2012 12:51
+date: 22:11:2012 20:40
 saved-by: antonialock
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Grouping_terms "The grouping terms are high level terms not used for direct annotation but for grouping purposes in the ontology."
@@ -81,6 +81,7 @@ synonym: "21 degrees Celsius" NARROW []
 synonym: "22 degrees Celsius" NARROW []
 synonym: "23 degrees Celsius" NARROW []
 synonym: "24 degrees Celsius" NARROW []
+synonym: "cold" RELATED []
 is_a: PECO:0000002 ! temperature
 disjoint_from: PECO:0000004 ! high temperature
 created_by: antonialock
@@ -1474,7 +1475,7 @@ id: PECO:0000156
 name: rhodamine-phalloidin added
 def: "An experimental condition in which rhodamine-phalloidin was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "rhodamine phalloidin" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-07-25T09:00:20Z
 
@@ -1516,7 +1517,7 @@ id: PECO:0000161
 name: Hoechst stain added
 def: "An experimental condition in which Hoechst stain was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "bisBenzimide added" NARROW []
-is_a: PECO:0000109 ! excess chemical added
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-08-13T13:22:44Z
 
@@ -1532,7 +1533,7 @@ creation_date: 2012-08-14T11:45:05Z
 id: PECO:0000163
 name: FITC-conjugated lectin added
 def: "An experimental condition in which FITC-conjugated lectin was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-08-17T11:59:55Z
 
@@ -1540,7 +1541,7 @@ creation_date: 2012-08-17T11:59:55Z
 id: PECO:0000164
 name: anti-tubulin antibodies added
 synonym: "anti-tubulin antibody added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-08-17T14:08:21Z
 
@@ -1769,7 +1770,7 @@ id: PECO:0000190
 name: DAPI added
 def: "An experimental condition in which diethyl maleate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "4',6-diamidino-2-phenylindole added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-11-07T09:34:15Z
 
@@ -1864,6 +1865,32 @@ is_a: PECO:0000080 ! rich medium
 is_a: PECO:0000137 ! glucose rich medium
 created_by: antonialock
 creation_date: 2012-11-13T12:40:59Z
+
+[Term]
+id: PECO:0000202
+name: chilled cells
+def: "Cells were chilled by placing them on ice." []
+synonym: "cold" RELATED []
+synonym: "ice" RELATED []
+is_a: PECO:0000002 ! temperature
+created_by: antonialock
+creation_date: 2012-11-15T17:01:01Z
+
+[Term]
+id: PECO:0000203
+name: cell type
+subset: Grouping_terms
+is_a: PECO:0000001 ! phenotype condition
+created_by: antonialock
+creation_date: 2012-11-22T20:39:13Z
+
+[Term]
+id: PECO:0000204
+name: diploid cells
+def: "An experimental condition in which a phenotype is observed in diploid cells." []
+is_a: PECO:0000203 ! cell type
+created_by: antonialock
+creation_date: 2012-11-22T20:39:53Z
 
 [Typedef]
 id: part_of
