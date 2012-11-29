@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 28:11:2012 14:50
+date: 29:11:2012 16:26
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -638,7 +638,7 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000049
 name: inviable
-def: "A viability phenotype in which cells are unable to survive under normal conditions." [PomBase:mah]
+def: "A viability phenotype in which cells are unable to survive under conditions in which wild type cells survive." [PomBase:mah]
 comment: Viability is usually determined under standard laboratory conditions, i.e. a cell is generally considered inviable if it cannot grow in rich medium under normal conditions such as temperature, pressure, oxygen level, pH, etc.
 synonym: "essential" RELATED [PomBase:mah]
 synonym: "lethal" EXACT [PomBase:mah]
@@ -1096,6 +1096,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000082
 name: sensitive to high temperature
 def: "A cell phenotype in which cells show increased sensitivity to heat. For example, cells may fail to grow or grow more slowly than normal at high temperatures." [PomBase:mah]
+comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
 synonym: "heat sensitive" EXACT [PomBase:mah]
 synonym: "heat sensitivity: increased" EXACT [SGD:phenotype_annotation]
 synonym: "sensitive to heat" EXACT [PomBase:mah]
@@ -1977,7 +1978,7 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000147
 name: abnormal activation of bipolar cell growth
 def: "A regulation phenotype in which activation of bipolar cell growth is abnormal; results in abnormal new end take-off." [PomBase:mah]
-synonym: "abnormal activation of bipolar cell growth during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal activation of bipolar vegetative cell growth" EXACT [PomBase:mah]
 synonym: "abnormal NETO" EXACT [PomBase:mah]
 synonym: "abnormal new end take off" EXACT [PomBase:mah]
 is_a: FYPO:0000191 ! abnormal regulation of establishment or maintenance of cell polarity
@@ -2109,7 +2110,7 @@ creation_date: 2011-04-13T03:34:54Z
 [Term]
 id: FYPO:0000158
 name: DNA content increased
-def: "A cell phenotype in which a cell contains more DNA than normal." [PomBase:mah]
+def: "A cell phenotype in which the total amount of DNA in a cell is graeter than normal." [PomBase:mah]
 synonym: "DNA content increased during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 intersection_of: PATO:0001162
@@ -2895,7 +2896,7 @@ is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in CL:0000334
 intersection_of: qualifier PATO:0001162
-intersection_of: towards SO:0001914
+intersection_of: towards SO:0001905
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3177,6 +3178,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000244
 name: loss of viability upon nutrient depletion
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when cells are deprived of nutrients such as carbon or nitrogen." [PomBase:mah]
+comment: Use this term to annotate experiments in which a culture is grown under nutrient-depleted conditions, and then the number of cells viable enough to form a colony upon return to nutrient-replete conditions is measured and compared to wild type.
 synonym: "growth defect, required during nutrient depletion" RELATED [PomBase:mah]
 synonym: "loss of viability upon nutrient starvation" EXACT [PomBase:al]
 synonym: "sensitive to nitrogen starvation" RELATED [PomBase:al]
@@ -3189,6 +3191,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000245
 name: loss of viability in stationary phase
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable after entering stationary phase." [PomBase:mah]
+comment: Use this term to annotate experiments in which a culture is grown to stationary phase, and then the number of cells viable enough to form a colony upon return to conditions supporting vegetative growth is measured and compared to wild type.
 synonym: "decreased viability in stationary phase" EXACT [PomBase:mah]
 synonym: "growth defect, required for stationary phase" RELATED [PomBase:mah]
 synonym: "reduced viability in stationary phase" EXACT [PomBase:mah]
@@ -3200,7 +3203,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000246
 name: antioxidant required for growth
 def: "A cell growth phenotype in which a cell grows only in the presence of an antioxidant." [PomBase:mah]
-synonym: "antioxidant required for growth during vegetative growth" EXACT [PomBase:mah]
+synonym: "antioxidant required for vegetative cell growth" EXACT [PomBase:mah]
 synonym: "growth auxotrophic for antioxidant" EXACT [PomBase:al]
 synonym: "growth defect, requires antioxidant for growth" EXACT [PomBase:mah]
 is_a: FYPO:0001356 ! abnormal vegetative cell growth
@@ -3216,11 +3219,12 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000247
 name: decreased growth at high temperature
 def: "A cell growth phenotype in which cell growth is decreased relative to normal at a high temperature." [PomBase:mah]
-comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "decreased growth at high temperature during vegetative growth" EXACT [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise. For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
+synonym: "decreased vegetative cell growth at high temperature" EXACT [PomBase:mah]
 synonym: "growth defect, slow growth at high temperatures" NARROW [PomBase:mah]
 synonym: "reduced growth at high temperature" RELATED [PomBase:mah]
 synonym: "slow growth at high temperature" NARROW [PomBase:mah]
+is_a: FYPO:0000082 ! sensitive to high temperature
 is_a: FYPO:0001355 ! decreased vegetative cell growth
 intersection_of: FYPO:0000046 ! decreased cell growth
 intersection_of: happens_during GO:0072690
@@ -3235,7 +3239,7 @@ name: decreased cell growth on ammonia nitrogen source
 alt_id: FYPO:0000248
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing ammonia as the nitrogen source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "decreased cell growth on ammonia nitrogen source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased vegetative cell growth on ammonia nitrogen source" EXACT [PomBase:mah]
 synonym: "growth defect, slow growth in minimal media" RELATED [PomBase:mah]
 synonym: "growth defect, slow growth with ammonia nitrogen source" NARROW [PomBase:mah]
 synonym: "reduced cell growth on ammonia nitrogen source" EXACT [PomBase:mah]
@@ -3255,7 +3259,7 @@ id: FYPO:0000250
 name: decreased cell growth on proline nitrogen source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing L-proline as the nitrogen source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "decreased cell growth on proline nitrogen source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased vegetative cell growth on proline nitrogen source" EXACT [PomBase:mah]
 synonym: "growth defect, slow growth with proline nitrogen source" RELATED [PomBase:mah]
 synonym: "reduced cell growth on proline nitrogen source" RELATED [PomBase:mah]
 synonym: "slow cell growth on proline nitrogen source" NARROW [PomBase:mah]
@@ -3273,7 +3277,7 @@ id: FYPO:0000251
 name: decreased cell growth on galactose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing galactose as the carbon source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "decreased cell growth on galactose carbon source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased vegetative cell growth on galactose carbon source" EXACT [PomBase:mah]
 synonym: "growth defects, growth inhibition in galactose-based medium" RELATED [PomBase:mah]
 synonym: "reduced cell growth on galactose carbon source" EXACT [PomBase:mah]
 synonym: "slow cell growth on galactose carbon source" NARROW [PomBase:mah]
@@ -5607,7 +5611,7 @@ name: decreased cell growth on glycerol/ethanol carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing glycerol and ethanol as the carbon sources." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "decreased cell growth on glycerol plus ethanol" EXACT [PomBase:mah]
-synonym: "decreased cell growth on glycerol/ethanol carbon source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased vegetative cell growth on glycerol/ethanol carbon source" EXACT [PomBase:mah]
 synonym: "reduced cell growth on glycerol/ethanol carbon source" RELATED [PomBase:mah]
 synonym: "slow cell growth on glycerol/ethanol carbon source" NARROW [PomBase:mah]
 is_a: FYPO:0001355 ! decreased vegetative cell growth
@@ -8262,7 +8266,7 @@ def: "A cell growth phenotype in which cells grow at a faster rate than normal i
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "enhanced growth on glucose" RELATED [PomBase:mah]
 synonym: "fast cell growth on glucose carbon source" EXACT [PomBase:mah]
-synonym: "increased cell growth rate on glucose carbon source during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased vegetative cell growth rate on glucose carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0000636 ! increased cell growth rate
 intersection_of: FYPO:0000636 ! increased cell growth rate
 intersection_of: happens_during GO:0072690
@@ -8830,7 +8834,7 @@ id: FYPO:0000684
 name: decreased cell growth on glycerol carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing glycerol as the carbon source." [PomBase:al, PomBase:mah]
 comment: Note that trace amounts of another carbon source are usually required for S. pombe growth on glycerol; yeast extract-based rich medium supplies the trace substance, but minimal medium must be supplemented. It is therefore important to annotate the growth medium as an experimental condition when using this term. Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "decreased cell growth on glycerol carbon source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased vegetative cell growth on glycerol carbon source" EXACT [PomBase:mah]
 synonym: "reduced cell growth on glycerol carbon source" EXACT [PomBase:mah]
 synonym: "slow cell growth on glycerol carbon source" NARROW [PomBase:mah]
 is_a: FYPO:0001355 ! decreased vegetative cell growth
@@ -13460,7 +13464,7 @@ id: FYPO:0001017
 name: premature activation of bipolar cell growth
 def: "A cellular process phenotype in which activation of bipolar cell growth occurs prematurely; results in early occurrence of new end take-off." [PomBase:mah]
 synonym: "early NETO" EXACT [PomBase:mah]
-synonym: "premature activation of bipolar cell growth during vegetative growth" EXACT [PomBase:mah]
+synonym: "premature activation of bipolar vegetative cell growth" EXACT [PomBase:mah]
 synonym: "premature NETO" EXACT [PomBase:mah]
 synonym: "premature new end take-off" EXACT [PomBase:mah]
 is_a: FYPO:0000147 ! abnormal activation of bipolar cell growth
@@ -13474,7 +13478,7 @@ creation_date: 2012-04-30T11:46:57Z
 id: FYPO:0001018
 name: abolished activation of bipolar cell growth
 def: "A cellular process phenotype in which activation of bipolar cell growth does not occur; results in absence of new end take-off." [PomBase:mah]
-synonym: "abolished activation of bipolar cell growth during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished activation of bipolar vegetative cell growth" EXACT [PomBase:mah]
 synonym: "abolished NETO" EXACT [PomBase:mah]
 synonym: "abolished new end take-off" EXACT [PomBase:mah]
 synonym: "absence of NETO" EXACT [PomBase:vw]
@@ -13497,9 +13501,10 @@ creation_date: 2012-04-30T02:17:33Z
 
 [Term]
 id: FYPO:0001020
-name: normal cellular response to calcium
-def: "A cellular response phenotype in which the cellular response to calcium is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular response to calcium during vegetative growth" EXACT [PomBase:mah]
+name: normal cellular response to calcium ion
+def: "A cellular response phenotype in which the cellular response to calcium ions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to calcium" EXACT [PomBase:mah]
+synonym: "normal cellular response to calcium ion during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -15445,7 +15450,7 @@ creation_date: 2012-06-15T14:04:54Z
 id: FYPO:0001161
 name: decreased aerobic cell growth on glucose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal under aerobic conditions and in a medium containing glucose as the carbon source." [PomBase:mah]
-synonym: "decreased aerobic cell growth on glucose carbon source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased aerobic vegetative cell growth on glucose carbon source" EXACT [PomBase:mah]
 synonym: "reduced aerobic cell growth on glucose carbon source" EXACT [PomBase:mah]
 synonym: "slow aerobic cell growth on glucose carbon source" NARROW [PomBase:mah]
 is_a: FYPO:0001407 ! decreased cell growth on glucose carbon source
@@ -15458,7 +15463,7 @@ name: decreased cell growth on raffinose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal under aerobic conditions and in a medium containing raffinose as the carbon source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "decreased aerobic cell growth on raffinose carbon source" NARROW [PomBase:mah]
-synonym: "decreased cell growth on raffinose carbon source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased vegetative cell growth on raffinose carbon source" EXACT [PomBase:mah]
 synonym: "reduced cell growth on raffinose carbon source" EXACT [PomBase:mah]
 synonym: "slow aerobic cell growth on raffinose carbon source" NARROW [PomBase:mah]
 is_a: FYPO:0001355 ! decreased vegetative cell growth
@@ -15474,7 +15479,7 @@ creation_date: 2012-06-15T14:21:23Z
 id: FYPO:0001163
 name: decreased hypoxic cell growth on glucose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal under semi-anaerobic conditions and in a medium containing glucose as the carbon source." [PomBase:mah]
-synonym: "decreased hypoxic cell growth on glucose carbon source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased hypoxic vegetative cell growth on glucose carbon source" EXACT [PomBase:mah]
 synonym: "decreased semi-anaerobic cell growth on glucose carbon source" EXACT [PomBase:al]
 synonym: "sensitive to hypoxia" RELATED [PomBase:community_curation]
 synonym: "slow semi-anaerobic cell growth on glucose carbon source" NARROW [PomBase:mah]
@@ -15502,7 +15507,7 @@ id: FYPO:0001165
 name: inviable following anaerobic growth
 def: "A cell phenotype in which cells that are exposed to anaerobic conditions fail to grow upon being returned to aerobic conditions." [PomBase:mah]
 synonym: "essential following anaerobic growth" RELATED [PomBase:mah]
-synonym: "inviable following anaerobic growth during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable following anaerobic vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000049 ! inviable
 is_a: FYPO:0001320 ! vegetative cell phenotype
 created_by: midori
@@ -15654,7 +15659,7 @@ id: FYPO:0001176
 name: decreased cell growth on sucrose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing sucrose as the carbon source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "decreased cell growth on sucrose carbon source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased vegetative cell growth on sucrose carbon source" EXACT [PomBase:mah]
 synonym: "reduced cell growth on sucrose carbon source" RELATED [PomBase:mah]
 synonym: "slow cell growth on sucrose carbon source" NARROW [PomBase:mah]
 is_a: FYPO:0001355 ! decreased vegetative cell growth
@@ -15671,7 +15676,7 @@ id: FYPO:0001177
 name: decreased cell growth on trehalose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing trehalose as the carbon source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "decreased cell growth on trehalose carbon source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased vegetative cell growth on trehalose carbon source" EXACT [PomBase:mah]
 synonym: "reduced cell growth on trehalose carbon source" EXACT [PomBase:mah]
 synonym: "slow cell growth on trehalose carbon source" NARROW [PomBase:mah]
 is_a: FYPO:0001355 ! decreased vegetative cell growth
@@ -15687,6 +15692,7 @@ creation_date: 2012-06-21T11:13:29Z
 id: FYPO:0001178
 name: loss of viability in stationary phase upon nitrogen depletion
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when cells in a culture in stationary phase are deprived of nitrogen." [PomBase:mah]
+comment: Use this term to annotate experiments in which a culture is grown to stationary phase under nitrogen-depleted conditions, and then the number of cells viable enough to form a colony upon return to conditions supporting vegetative growth is measured and compared to wild type.
 synonym: "loss of viability upon nitrogen starvation" EXACT [PomBase:al]
 synonym: "sensitive to nitrogen starvation" RELATED [PomBase:al]
 is_a: FYPO:0000244 ! loss of viability upon nutrient depletion
@@ -16439,7 +16445,7 @@ comment: Use this term when growth rate, e.g. as measured by population doubling
 synonym: "decreased cell growth rate" EXACT [PomBase:mah]
 synonym: "growth defect, slow growth" EXACT [PomBase:mah]
 synonym: "reduced cell growth rate" EXACT [PomBase:mah]
-synonym: "slow cell growth during vegetative growth" EXACT [PomBase:mah]
+synonym: "slow vegetative cell growth" EXACT [PomBase:mah]
 is_a: FYPO:0001355 ! decreased vegetative cell growth
 intersection_of: PATO:0000911
 intersection_of: happens_during GO:0072690
@@ -18506,7 +18512,7 @@ creation_date: 2012-08-10T14:51:16Z
 id: FYPO:0001387
 name: loss of viability at high temperature
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when are grown at a temperature higher than standard." [PomBase:mah]
-comment: For S. pombe, high temperature usually means above 32 degrees C. This term can be used when a population of heat-sensitive cells loses viability when grown at the restrictive temperature.
+comment: For S. pombe, high temperature usually means above 32 degrees C. Use this term to annotate experiments in which a culture is grown at high temperature, and then the number of cells viable enough to form a colony upon return to standard or low temperature is measured and compared to wild type.
 synonym: "loss of viability at restrictive temperature" RELATED [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
 relationship: includes_cells_with_phenotype FYPO:0000713 ! abnormal cellular response to starvation
@@ -18619,7 +18625,7 @@ creation_date: 2012-08-15T13:35:02Z
 id: FYPO:0001396
 name: normal activation of bipolar cell growth
 def: "A regulation phenotype in which activation of bipolar cell growth is normal; results in normal new end take-off." [PomBase:mah]
-synonym: "normal activation of bipolar cell growth during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal activation of bipolar vegetative cell growth" EXACT [PomBase:mah]
 synonym: "normal NETO" EXACT [PomBase:mah]
 synonym: "normal new end take off" EXACT [PomBase:mah]
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
@@ -18757,7 +18763,7 @@ id: FYPO:0001407
 name: decreased cell growth on glucose carbon source
 def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing glucose as the carbon source." [PomBase:mah]
 comment: Note that this term encompasses growth under aerobic or semi-anaerobic conditions, whereas most cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "decreased cell growth on glucose carbon source during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased vegetative cell growth on glucose carbon source" EXACT [PomBase:mah]
 synonym: "reduced cell growth on glucose carbon source" EXACT [PomBase:mah]
 synonym: "slow cell growth on glucose carbon source" NARROW [PomBase:mah]
 is_a: FYPO:0001355 ! decreased vegetative cell growth
@@ -21107,7 +21113,7 @@ id: FYPO:0001572
 name: abolished cell growth on methionine nitrogen source
 def: "A cell growth phenotype in which cells do not grow in a medium containing L-methionine as the nitrogen source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "abolished cell growth on methionine nitrogen source during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished vegetative cell growth on methionine nitrogen source" EXACT [PomBase:mah]
 synonym: "abolished methionine utilization" RELATED [PomBase:mah, PomBase:vw]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: FYPO:0001575 ! vegetative cell growth abolished
@@ -21159,7 +21165,7 @@ id: FYPO:0001576
 name: abolished cell growth on dipeptide nitrogen source
 def: "A cell growth phenotype in which cells do not grow in a medium containing a dipeptide such as Leu-Ala as the nitrogen source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "abolished cell growth on dipeptide nitrogen source during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished vegetative cell growth on dipeptide nitrogen source" EXACT [PomBase:mah]
 synonym: "abolished dipeptide utilization" RELATED [PomBase:mah, PomBase:vw]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: FYPO:0001575 ! vegetative cell growth abolished
@@ -21174,7 +21180,7 @@ id: FYPO:0001577
 name: abolished cell growth on tetrapeptide nitrogen source
 def: "A cell growth phenotype in which cells do not grow in a medium containing a tetrapeptide such as Leu-Ser-Lys-Leu as the nitrogen source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "abolished cell growth on tetrapeptide nitrogen source during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished vegetative cell growth on tetrapeptide nitrogen source" EXACT [PomBase:mah]
 synonym: "abolished tetrapeptide utilization" RELATED [PomBase:mah, PomBase:vw]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: FYPO:0001575 ! vegetative cell growth abolished
@@ -21443,9 +21449,6 @@ synonym: "decreased serine uptake" EXACT [GO:0036232]
 synonym: "reduced serine import" EXACT [PomBase:mah]
 is_a: FYPO:0001360 ! decreased amino acid import during vegetative growth
 is_a: FYPO:0001657 ! abnormal serine import
-intersection_of: PATO:0002052
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0090478
 created_by: midori
 creation_date: 2012-09-27T12:01:24Z
 
@@ -24030,7 +24033,7 @@ creation_date: 2012-11-21T14:38:36Z
 [Term]
 id: FYPO:0001781
 name: unstable diploid
-def: "A cell phenotype in which cells are unable to maintain a diploid state. Cells may die or become aneuplaid or haploid." [PomBase:al]
+def: "A cell phenotype in which cells are unable to maintain a diploid state. Cells may die or become aneuploid or haploid." [PomBase:al]
 is_a: FYPO:0001320 ! vegetative cell phenotype
 created_by: midori
 creation_date: 2012-11-21T14:45:29Z
@@ -24174,7 +24177,7 @@ creation_date: 2012-11-21T16:01:35Z
 [Term]
 id: FYPO:0001792
 name: spindle pole body duplication abolished
-def: "A cell adhesion phenotype in which spindle pole body duplication does not occur, leaving the cell with a single spindle pole body later in the cell cycle than normal." [PomBase:mah]
+def: "A cellular process phenotype in which spindle pole body duplication does not occur, leaving the cell with a single spindle pole body later in the cell cycle than normal." [PomBase:mah]
 synonym: "single spindle pole body" RELATED [PomBase:al]
 synonym: "spindle pole body duplication abolished during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001791 ! abnormal spindle pole body duplication
@@ -24288,6 +24291,439 @@ intersection_of: happens_during GO:0006974
 intersection_of: towards GO:0071850
 created_by: midori
 creation_date: 2012-11-21T16:40:19Z
+
+[Term]
+id: FYPO:0001800
+name: abolished protein localization to cell tip, with protein distributed in plasma membrane or cortex
+def: "A cell phenotype in which the localization of a protein to the cell tip is abolished, and the protein is instead detected distributed througout the plasma membrane and/or cell cortex." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to cell tip,, with protein distributed in plasma membrane or cortex" EXACT [PomBase:mah]
+synonym: "abolished protein localization to cell tip during vegetative growth, with protein distributed in plasma membrane or cortex" EXACT [PomBase:mah]
+synonym: "abolished protein localization to cell tip, with protein distributed in cell cortex" NARROW [PomBase:mah]
+synonym: "abolished protein localization to cell tip, with protein distributed in cell membrane or cortex" EXACT [PomBase:mah]
+synonym: "abolished protein localization to cell tip, with protein distributed in plasma membrane" NARROW [PomBase:mah]
+is_a: FYPO:0001585 ! abolished protein localization to cell tip
+created_by: midori
+creation_date: 2012-11-29T10:18:01Z
+
+[Term]
+id: FYPO:0001801
+name: inviable at high temperature
+def: "A viability phenotype in which cells are unable to survive at a high temperature at which wild-type cells survive." [PomBase:mah]
+comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
+synonym: "essential at high temperature" RELATED [PomBase:mah]
+synonym: "lethal at high temperature" EXACT [PomBase:mah]
+is_a: FYPO:0000049 ! inviable
+created_by: midori
+creation_date: 2012-11-29T10:41:00Z
+
+[Term]
+id: FYPO:0001802
+name: elongated cells during cellular response to caffeine
+def: "A cell morphology phenotype in which cells are elongated during a cellular response to caffeine." [PomBase:mah]
+synonym: "elongated cells during cellular response to caffeine during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated in response to caffeine" EXACT [PomBase:al]
+is_a: FYPO:0001122 ! elongated vegetative cells
+intersection_of: FYPO:0000017
+intersection_of: exists_during GO:0071313
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+created_by: midori
+creation_date: 2012-11-29T11:18:42Z
+
+[Term]
+id: FYPO:0001803
+name: multiseptate cells during cellular response to caffeine
+def: "A cell morphology phenotype in which cells have more than one septum apiece during a cellular response to caffeine." [PomBase:mah]
+synonym: "multiseptate cells during cellular response to caffeine during vegetative growth" EXACT [PomBase:mah]
+synonym: "multiseptate in response to caffeine" EXACT [PomBase:al]
+is_a: FYPO:0000118 ! multiseptate
+intersection_of: FYPO:0000118
+intersection_of: exists_during GO:0071313
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+created_by: midori
+creation_date: 2012-11-29T11:20:49Z
+
+[Term]
+id: FYPO:0001804
+name: cell lysis during cellular response to caffeine
+def: "An inviable phenotype in which cells lyse, i.e. the plasma membrane ruptures and cytoplasm is lost, during a cellular response to caffeine. Note that in fission yeast cell lysis, the integrity of the cell wall is also compromised." [PomBase:mah]
+synonym: "cell lysis during cellular response to caffeine during vegetative growth" EXACT [PomBase:mah]
+synonym: "cytolysis during cellular response to caffeine" EXACT [PomBase:mah]
+synonym: "inviable, lysed cells during cellular response to caffeine" EXACT [PomBase:mah]
+synonym: "lysed cells in response to caffeine" EXACT [PomBase:al]
+is_a: FYPO:0000647 ! cell lysis
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0071313
+intersection_of: inheres_in GO:0019835
+relationship: has_part FYPO:0000049 ! inviable
+created_by: midori
+creation_date: 2012-11-29T11:22:54Z
+
+[Term]
+id: FYPO:0001805
+name: normal adenine import
+def: "A cellular process phenotype in which adenine import into the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal adenine import during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal adenine import into cell" EXACT [PomBase:al]
+synonym: "normal adenine uptake" EXACT [GO:0043091]
+is_a: FYPO:0001071 ! normal transport
+is_a: FYPO:0001336 ! transport phenotype during vegetative growth
+created_by: midori
+creation_date: 2012-11-29T11:51:44Z
+
+[Term]
+id: FYPO:0001806
+name: normal guanine import
+def: "A cellular process phenotype in which guanine import into the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal guanine import during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal guanine import into cell" EXACT [PomBase:al]
+synonym: "normal guanine uptake" EXACT [GO:0043091]
+is_a: FYPO:0001071 ! normal transport
+is_a: FYPO:0001336 ! transport phenotype during vegetative growth
+created_by: midori
+creation_date: 2012-11-29T11:52:06Z
+
+[Term]
+id: FYPO:0001807
+name: abnormal adenine import
+def: "A cellular process phenotype in which the import of adenine into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal adenine import during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal adenine import into cell" EXACT [PomBase:al]
+synonym: "abnormal adenine uptake" EXACT [GO:0036232]
+is_a: FYPO:0001720 ! abnormal transport
+created_by: midori
+creation_date: 2012-11-29T11:56:11Z
+
+[Term]
+id: FYPO:0001808
+name: decreased adenine import
+def: "A cellular process phenotype in which the import of adenine into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased adenine import during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased adenine import into cell" EXACT [PomBase:al]
+synonym: "decreased adenine uptake" EXACT [GO:0036232]
+synonym: "reduced adenine import" EXACT [PomBase:mah]
+is_a: FYPO:0001807 ! abnormal adenine import
+created_by: midori
+creation_date: 2012-11-29T11:56:22Z
+
+[Term]
+id: FYPO:0001809
+name: abnormal guanine import
+def: "A cellular process phenotype in which the import of guanine into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal guanine import during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal guanine import into cell" EXACT [PomBase:al]
+synonym: "abnormal guanine uptake" EXACT [GO:0036232]
+is_a: FYPO:0001720 ! abnormal transport
+created_by: midori
+creation_date: 2012-11-29T11:57:55Z
+
+[Term]
+id: FYPO:0001810
+name: decreased guanine import
+def: "A cellular process phenotype in which the import of guanine into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased guanine import during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased guanine import into cell" EXACT [PomBase:al]
+synonym: "decreased guanine uptake" EXACT [GO:0036232]
+synonym: "reduced guanine import" EXACT [PomBase:mah]
+is_a: FYPO:0001809 ! abnormal guanine import
+created_by: midori
+creation_date: 2012-11-29T11:58:01Z
+
+[Term]
+id: FYPO:0001811
+name: altered 5-phosphoribosyl diphosphate level
+def: "A cell phenotype in which the amount of 5-phosphoribosyl diphosphate measured in a cell differs from normal." [PomBase:mah]
+synonym: "abnormal 5-phosphoribosyl diphosphate level" EXACT [PomBase:mah]
+synonym: "altered 5-O-phosphono-alpha-D-ribofuranosyl diphosphate level" EXACT [CHEBI:17111]
+synonym: "altered 5-phosphoribosyl diphosphate level during vegetative growth" EXACT [PomBase:mah]
+synonym: "altered cellular 5-phosphoribosyl diphosphate level" EXACT [PomBase:mah]
+is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:17111
+created_by: midori
+creation_date: 2012-11-29T12:03:30Z
+
+[Term]
+id: FYPO:0001812
+name: increased 5-phosphoribosyl diphosphate level
+def: "A cell phenotype in which the amount of 5-phosphoribosyl diphosphate measured in a cell is greater than normal." [PomBase:mah]
+synonym: "increased 5-O-phosphono-alpha-D-ribofuranosyl diphosphate level" EXACT [CHEBI:17111]
+synonym: "increased 5-phosphoribosyl diphosphate accumulation" RELATED [PomBase:mah]
+synonym: "increased 5-phosphoribosyl diphosphate level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased cellular 5-phosphoribosyl diphosphate level" EXACT [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+is_a: FYPO:0001811 ! altered 5-phosphoribosyl diphosphate level
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:17111
+created_by: midori
+creation_date: 2012-11-29T12:03:40Z
+
+[Term]
+id: FYPO:0001813
+name: sensitive to N-methyl-N'-nitro-N-nitrosoguanidine
+def: "A phenotype in which cells show increased sensitivity to N-methyl-N'-nitro-N-nitrosoguanidine." [PomBase:mah]
+synonym: "sensitive to N-methyl-N'-nitro-N-nitrosoguanidine during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to nitrosoguanidine" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:21759
+created_by: midori
+creation_date: 2012-11-29T12:47:51Z
+
+[Term]
+id: FYPO:0001814
+name: normal cell growth during iron starvation
+def: "A cell growth phenotype in which cell growth is normal (i.e. indistinguishable from wild type) under iron starvation conditions." [PomBase:mah]
+is_a: FYPO:0000047 ! normal cell growth
+intersection_of: FYPO:0000047 ! normal cell growth
+intersection_of: during GO:0010106
+created_by: midori
+creation_date: 2012-11-29T13:50:46Z
+
+[Term]
+id: FYPO:0001815
+name: accumulation of Okazaki fragments
+def: "A cell phenotype in which Okazaki fragments, the DNA segments produced by discontinuous synthesis of the lagging strand during DNA replication, are present at greater levels than normal." [PomBase:mah]
+synonym: "increased level of Okazaki fragments" EXACT [PomBase:mah]
+synonym: "Okazaki fragment accumulation" EXACT [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+created_by: midori
+creation_date: 2012-11-29T14:28:40Z
+
+[Term]
+id: FYPO:0001816
+name: abnormal phosphoribosylamine-glycine ligase activity
+def: "A molecular function phenotype in which the observed rate of phosphoribosylamine-glycine ligase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004637
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-29T14:32:55Z
+
+[Term]
+id: FYPO:0001817
+name: abolished phosphoribosylamine-glycine ligase activity
+def: "A molecular function phenotype in which phosphoribosylamine-glycine ligase activity is absent." [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001816 ! abnormal phosphoribosylamine-glycine ligase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004637
+created_by: midori
+creation_date: 2012-11-29T14:33:03Z
+
+[Term]
+id: FYPO:0001818
+name: abnormal phosphoribosylformylglycinamidine cyclo-ligase activity
+def: "A molecular function phenotype in which the observed rate of phosphoribosylformylglycinamidine cyclo-ligase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004641
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-29T14:34:56Z
+
+[Term]
+id: FYPO:0001819
+name: abolished phosphoribosylformylglycinamidine cyclo-ligase activity
+def: "A molecular function phenotype in which phosphoribosylformylglycinamidine cyclo-ligase activity is absent." [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001818 ! abnormal phosphoribosylformylglycinamidine cyclo-ligase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004641
+created_by: midori
+creation_date: 2012-11-29T14:35:04Z
+
+[Term]
+id: FYPO:0001820
+name: normal cellular response to lithium ion
+def: "A cellular response phenotype in which the cellular response to lithium ions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to lithium" EXACT [PomBase:mah]
+synonym: "normal cellular response to lithium ion during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071285
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-29T14:51:06Z
+
+[Term]
+id: FYPO:0001821
+name: increased number of heterothallic h+ cells
+def: "A cell population phenotype in which greater than normal number of cells in an originally homothallic (h90) population express P-specific information from the mat1 locus." [PomBase:al]
+synonym: "increased amount of heterothallic H+ cells" EXACT [PomBase:al]
+is_a: FYPO:0000003 ! cell population phenotype
+created_by: midori
+creation_date: 2012-11-29T14:56:17Z
+
+[Term]
+id: FYPO:0001822
+name: mating cassette duplication
+def: "A cell phenotype in which one or more of the mating cassettes is duplicated." [PomBase:mah]
+is_a: FYPO:0000641 ! abnormal chromosome organization
+created_by: midori
+creation_date: 2012-11-29T15:05:18Z
+
+[Term]
+id: FYPO:0001823
+name: sensitive to chlorpromazine
+def: "A phenotype in which cells show increased sensitivity to chlorpromazine." [PomBase:mah]
+synonym: "sensitive to chlorpromazine during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:3647
+created_by: midori
+creation_date: 2012-11-29T15:16:28Z
+
+[Term]
+id: FYPO:0001824
+name: sensitive to trifluoperazine
+def: "A phenotype in which cells show increased sensitivity to trifluoperazine." [PomBase:mah]
+synonym: "sensitive to trifluoperazine during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: towards CHEBI:45951
+created_by: midori
+creation_date: 2012-11-29T15:16:45Z
+
+[Term]
+id: FYPO:0001825
+name: increased sodium export
+def: "A cellular process phenotype in which the export of sodium ions out of a cell or organelle occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased cellular sodium export" EXACT [PomBase:al]
+synonym: "increased sodium export during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased sodium export from cell" NARROW [PomBase:mah]
+synonym: "increased sodium ion export" EXACT [PomBase:mah]
+is_a: FYPO:0001721 ! abnormal sodium export
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071436
+created_by: midori
+creation_date: 2012-11-29T15:25:30Z
+
+[Term]
+id: FYPO:0001826
+name: sodium export abolished
+def: "A cellular process phenotype in which the export of sodium ions out of a cell or organelle does not occur." [PomBase:mah]
+synonym: "sodium export abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001721 ! abnormal sodium export
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0071436
+created_by: midori
+creation_date: 2012-11-29T15:26:28Z
+
+[Term]
+id: FYPO:0001827
+name: abnormal glucose import
+def: "A cellular process phenotype in which the import of glucose into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal glucose import during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal glucose import into cell" EXACT [PomBase:al]
+synonym: "abnormal glucose uptake" EXACT [GO:0036232]
+is_a: FYPO:0001720 ! abnormal transport
+created_by: midori
+creation_date: 2012-11-29T15:31:47Z
+
+[Term]
+id: FYPO:0001828
+name: glucose import abolished
+def: "A cellular process phenotype in which the import of guanine into the cell does not occur." [PomBase:mah]
+synonym: "abolished glucose import into cell" EXACT [PomBase:al]
+synonym: "abolished glucose uptake" EXACT [GO:0036232]
+synonym: "glucose import abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001827 ! abnormal glucose import
+created_by: midori
+creation_date: 2012-11-29T15:31:54Z
+
+[Term]
+id: FYPO:0001829
+name: normal cell growth on gluconate carbon source
+def: "A cell growth phenotype in which cells grow normally in a medium containing gluconate as the carbon source." [PomBase:mah]
+synonym: "normal vegetative cell growth on gluconate carbon source" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell growth
+intersection_of: FYPO:0000047 ! normal cell growth
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:24265
+created_by: midori
+creation_date: 2012-11-29T15:40:50Z
+
+[Term]
+id: FYPO:0001830
+name: decreased cell growth on gluconate carbon source
+def: "A cell growth phenotype in which cell growth is decreased relative to normal in a medium containing gluconate as the carbon source." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+synonym: "decreased vegetative cell growth on gluconate carbon source" EXACT [PomBase:mah]
+synonym: "reduced cell growth on gluconate carbon source" EXACT [PomBase:mah]
+synonym: "slow cell growth on gluconate carbon source" NARROW [PomBase:mah]
+is_a: FYPO:0001355 ! decreased vegetative cell growth
+intersection_of: FYPO:0000046 ! decreased cell growth
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:24265
+created_by: midori
+creation_date: 2012-11-29T15:45:12Z
+
+[Term]
+id: FYPO:0001831
+name: abnormal phosphoglycerate mutase activity
+def: "A molecular function phenotype in which the observed rate of phosphoglycerate mutase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004619
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-11-29T15:47:47Z
+
+[Term]
+id: FYPO:0001832
+name: abolished phosphoglycerate mutase activity
+def: "A molecular function phenotype in which phosphoglycerate mutase activity is absent." [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001831 ! abnormal phosphoglycerate mutase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004619
+created_by: midori
+creation_date: 2012-11-29T15:48:02Z
+
+[Term]
+id: FYPO:0001833
+name: increased phosphoglycerate mutase activity
+def: "A molecular function phenotype in which the observed rate of phosphoglycerate mutase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001831 ! abnormal phosphoglycerate mutase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004619
+created_by: midori
+creation_date: 2012-11-29T15:48:26Z
+
+[Term]
+id: FYPO:0001834
+name: normal phosphoglycerate mutase activity
+def: "A molecular function phenotype in which the observed rate of phosphoglycerate mutase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004619
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-11-29T15:50:29Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
