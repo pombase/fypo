@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 29:11:2012 16:26
+date: 06:12:2012 16:14
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 default-namespace: fission_yeast_phenotype
@@ -2884,7 +2884,7 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000220
 name: accumulation of centromeric outer repeat transcripts
-def: "A cellular metabolism phenotype in which small interfering RNA transcripts derived from the centromere outer repeat region are present at greater levels than normal." [PMID:20211136, PomBase:mah]
+def: "A cell phenotype in which small interfering RNA transcripts derived from the centromere outer repeat region are present at greater levels than normal." [PMID:20211136, PomBase:mah]
 synonym: "accumulation of centromeric outer repeat transcripts during vegetative growth" EXACT [PomBase:mah]
 synonym: "accumulation of non-coding outer repeat transcripts" EXACT [PomBase:vw]
 synonym: "accumulation of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
@@ -2892,8 +2892,6 @@ synonym: "increased centromeric outer repeat transcript level" EXACT [PomBase:ma
 synonym: "increased level of centromeric outer repeat transcripts" EXACT [PomBase:mah]
 synonym: "increased level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 is_a: FYPO:0000825 ! increased RNA level
-is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
-intersection_of: happens_during GO:0072690
 intersection_of: inheres_in CL:0000334
 intersection_of: qualifier PATO:0001162
 intersection_of: towards SO:0001905
@@ -12442,6 +12440,7 @@ synonym: "protein absent from to spindle pole body" RELATED [PomBase:mah]
 synonym: "protein localisation to spindle pole body abolished" EXACT [PomBase:mah]
 synonym: "protein localization to spindle pole body abolished during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
+is_a: FYPO:0000939 ! abnormal protein localization to spindle pole body
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0071988
@@ -18503,8 +18502,11 @@ creation_date: 2012-08-10T14:06:51Z
 [Term]
 id: FYPO:0001386
 name: increased haploidization
-def: "A cell phenotype in which non-sporulating diploid cells become haploid by chromosome loss at a higher frequency than normal." [PMID:9914167, PomBase:mah]
-is_a: FYPO:0001781 ! unstable diploid
+alt_id: FYPO:0001781
+def: "A cell phenotype in which non-sporulating diploid cells become haploid, without undergoing meiosis, at a higher frequency than normal." [PMID:9914167, PomBase:al, PomBase:mah]
+comment: Diploid cells may become haploid by chromosome loss, or by undergoing premature mitosis. Chromosome loss may also cause aneuploidy or cell death.
+synonym: "unstable diploid" EXACT []
+is_a: FYPO:0001320 ! vegetative cell phenotype
 created_by: midori
 creation_date: 2012-08-10T14:51:16Z
 
@@ -20164,7 +20166,7 @@ creation_date: 2012-09-04T17:02:28Z
 [Term]
 id: FYPO:0001509
 name: normal protein localization to chromatin
-def: "A cell phenotype in which the localization of a protein to the chromatin is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A cell phenotype in which the localization of a protein to chromatin is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to chromatin" EXACT [PomBase:mah]
 synonym: "normal protein localization to chromatin during vegetative growth" EXACT [PomBase:mah]
@@ -21113,8 +21115,8 @@ id: FYPO:0001572
 name: abolished cell growth on methionine nitrogen source
 def: "A cell growth phenotype in which cells do not grow in a medium containing L-methionine as the nitrogen source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "abolished vegetative cell growth on methionine nitrogen source" EXACT [PomBase:mah]
 synonym: "abolished methionine utilization" RELATED [PomBase:mah, PomBase:vw]
+synonym: "abolished vegetative cell growth on methionine nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: inheres_in BTO:0000316
@@ -21165,8 +21167,8 @@ id: FYPO:0001576
 name: abolished cell growth on dipeptide nitrogen source
 def: "A cell growth phenotype in which cells do not grow in a medium containing a dipeptide such as Leu-Ala as the nitrogen source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "abolished vegetative cell growth on dipeptide nitrogen source" EXACT [PomBase:mah]
 synonym: "abolished dipeptide utilization" RELATED [PomBase:mah, PomBase:vw]
+synonym: "abolished vegetative cell growth on dipeptide nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: inheres_in BTO:0000316
@@ -21180,8 +21182,8 @@ id: FYPO:0001577
 name: abolished cell growth on tetrapeptide nitrogen source
 def: "A cell growth phenotype in which cells do not grow in a medium containing a tetrapeptide such as Leu-Ser-Lys-Leu as the nitrogen source." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "abolished vegetative cell growth on tetrapeptide nitrogen source" EXACT [PomBase:mah]
 synonym: "abolished tetrapeptide utilization" RELATED [PomBase:mah, PomBase:vw]
+synonym: "abolished vegetative cell growth on tetrapeptide nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: FYPO:0001575 ! vegetative cell growth abolished
 intersection_of: inheres_in BTO:0000316
@@ -23995,7 +23997,6 @@ creation_date: 2012-11-21T14:24:28Z
 id: FYPO:0001779
 name: abnormal kinetochore clustering at spindle pole body
 def: "A cell phenotype in which the localization of kinetochores into a cluster near the spindle pole body is abnormal." [PomBase:mah]
-comment: Encompasses both presence of proteins not normally found at the cell cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal centromere-SPB clustering" RELATED [GO:0072766]
 synonym: "abnormal kinetochore clustering at SPB" EXACT [GO:0072766]
 synonym: "abnormal kinetochore clustering at spindle pole body during vegetative growth" EXACT [PomBase:mah]
@@ -24029,14 +24030,6 @@ intersection_of: inheres_in GO:0072766
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2012-11-21T14:38:36Z
-
-[Term]
-id: FYPO:0001781
-name: unstable diploid
-def: "A cell phenotype in which cells are unable to maintain a diploid state. Cells may die or become aneuploid or haploid." [PomBase:al]
-is_a: FYPO:0001320 ! vegetative cell phenotype
-created_by: midori
-creation_date: 2012-11-21T14:45:29Z
 
 [Term]
 id: FYPO:0001782
@@ -24324,7 +24317,7 @@ def: "A cell morphology phenotype in which cells are elongated during a cellular
 synonym: "elongated cells during cellular response to caffeine during vegetative growth" EXACT [PomBase:mah]
 synonym: "elongated in response to caffeine" EXACT [PomBase:al]
 is_a: FYPO:0001122 ! elongated vegetative cells
-intersection_of: FYPO:0000017
+intersection_of: FYPO:0000017 ! elongated cells
 intersection_of: exists_during GO:0071313
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -24338,7 +24331,7 @@ def: "A cell morphology phenotype in which cells have more than one septum apiec
 synonym: "multiseptate cells during cellular response to caffeine during vegetative growth" EXACT [PomBase:mah]
 synonym: "multiseptate in response to caffeine" EXACT [PomBase:al]
 is_a: FYPO:0000118 ! multiseptate
-intersection_of: FYPO:0000118
+intersection_of: FYPO:0000118 ! multiseptate
 intersection_of: exists_during GO:0071313
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -24355,8 +24348,8 @@ synonym: "inviable, lysed cells during cellular response to caffeine" EXACT [Pom
 synonym: "lysed cells in response to caffeine" EXACT [PomBase:al]
 is_a: FYPO:0000647 ! cell lysis
 intersection_of: PATO:0002051
-intersection_of: happens_during GO:0072690
 intersection_of: happens_during GO:0071313
+intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0019835
 relationship: has_part FYPO:0000049 ! inviable
 created_by: midori
@@ -24724,6 +24717,94 @@ intersection_of: inheres_in GO:0004619
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-11-29T15:50:29Z
+
+[Term]
+id: FYPO:0001836
+name: normal protein localization to spindle pole body
+def: "A cell phenotype in which the localization of a protein to the spindle pole body is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to spindle pole body" EXACT [PomBase:mah]
+synonym: "normal protein localization to spindle pole body during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071988
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2012-12-06T15:30:01Z
+
+[Term]
+id: FYPO:0001837
+name: increased duration of protein localization to spindle pole body
+def: "A cell phenotype in which one or more proteins is localized to the spindle pole body for a longer time than normal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased duration of protein localisation to spindle pole body" EXACT [PomBase:mah]
+synonym: "increased duration of protein localization to spindle pole body during vegetative growth" EXACT [PomBase:mah]
+synonym: "prolonged protein localization to spindle pole body" EXACT [PomBase:vw]
+is_a: FYPO:0000939 ! abnormal protein localization to spindle pole body
+intersection_of: PATO:0000498
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071988
+created_by: midori
+creation_date: 2012-12-06T15:31:27Z
+
+[Term]
+id: FYPO:0001838
+name: decreased protein phosphorylation
+def: "A cellular process phenotype in which the phosphorylation of one or more specific proteins occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased protein phosphorylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein phosphorylation" EXACT [PomBase:mah]
+is_a: FYPO:0000775 ! abnormal protein phosphorylation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2012-12-06T15:37:32Z
+
+[Term]
+id: FYPO:0001839
+name: normal minichromosome loss
+def: "A cell phenotype in which minichromosomes are lost at the same frequency as in wild-type cells. Minichromosome loss occurs when one or both daughter cells do not inherit copies of a minichromosome from the mother cell, and may result from failure of minichromosome replication or segregation." [PomBase:mah]
+comment: In fission yeast, a minichromosome is a large portion of a chromosome, usually about half of chromosome 3, that replicates and segregates autonomously. For smaller autonomously replicating and segregating constructs, consider 'normal plasmid loss' (FYPO:0001790).
+is_a: FYPO:0001312 ! normal vegetative phenotype
+created_by: midori
+creation_date: 2012-12-06T16:04:43Z
+
+[Term]
+id: FYPO:0001840
+name: increased minichromosome loss
+def: "A cell phenotype in which minichromosomes are lost at a higher frequency than normal. Minichromosome loss occurs when one or both daughter cells do not inherit copies of a minichromosome from the mother cell, and may result from failure of minichromosome replication or segregation." [PomBase:mah]
+comment: In fission yeast, a minichromosome is a large portion of a chromosome, usually about half of chromosome 3, that replicates and segregates autonomously. For smaller autonomously replicating and segregating constructs, consider 'increased plasmid loss' (FYPO:0000786).
+synonym: "increased plasmid loss during vegetative growth" EXACT [PomBase:mah]
+synonym: "minichromosome maintenance defect" RELATED [PomBase:mah]
+is_a: FYPO:0001320 ! vegetative cell phenotype
+created_by: midori
+creation_date: 2012-12-06T16:08:24Z
+
+[Term]
+id: FYPO:0001841
+name: abnormal adenylyl cyclase activity
+def: "A molecular function phenotype in which the observed rate of adenylyl cyclase activity is abnormal." [PomBase:mah]
+synonym: "abnormal adenylate cyclase activity" EXACT [GO:0004016]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004016
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2012-12-06T16:11:23Z
+
+[Term]
+id: FYPO:0001842
+name: increased adenylyl cyclase activity
+def: "A molecular function phenotype in which the observed rate of adenylyl cyclase activity is increased." [PomBase:mah]
+synonym: "increased adenylate cyclase activity" EXACT [GO:0004016]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001841 ! abnormal adenylyl cyclase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004016
+created_by: midori
+creation_date: 2012-12-06T16:11:34Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
