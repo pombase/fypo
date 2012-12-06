@@ -30,12 +30,18 @@ OUT_DIR=`pwd`/oort.tmp
 OORT_LOG_FILE=$CURRENT_DIR/ontology-release-runner.log
 
 FYPO_OBO=`pwd`/fypo_edit.obo
-GO_OBO=http://viewvc.geneontology.org/viewvc/GO-SVN/trunk/ontology/editors/gene_ontology_write.obo
-PATO_OBO=http://obo.cvs.sourceforge.net/viewvc/obo/obo/ontology/phenotype/quality.obo
-CHEBI_OBO=http://build.berkeleybop.org/job/build-chebi/lastSuccessfulBuild/artifact/main/chebi-simple.obo
-CELL_TYPE_OBO=http://obo.cvs.sourceforge.net/viewvc/obo/obo/ontology/anatomy/cell_type/cell.edit.obo
-BRENDA_TISSUE_OBO=/data/pombase/sources/BTO_is-a_only.obo
-SO_OBO=http://song.svn.sourceforge.net/viewvc/song/trunk/so-xp.obo
+CHEBI_OBO=http://build.berkeleybop.org/job/build-chebi/lastSuccessfulBuild/artifact/main/chebi-simple.obo # special non-purl location for super-simplified chebi file (is_a only)
+BRENDA_TISSUE_OBO=/data/pombase/sources/BTO_is-a_only.obo # special location for locally massaged file (is_a only)
+GO_OBO=http://purl.obolibrary.org/obo/go.obo
+CELL_TYPE_OBO=http://purl.obolibrary.org/obo/cl.obo
+PATO_OBO=http://purl.obolibrary.org/obo/pato.obo
+SO_OBO=http://purl.obolibrary.org/obo/so-xp.obo
+
+# old URLs noted for reference, and in case anything goes awry with PURLs
+# GO_OBO=http://viewvc.geneontology.org/viewvc/GO-SVN/trunk/ontology/editors/gene_ontology_write.obo
+# CELL_TYPE_OBO=http://obo.cvs.sourceforge.net/viewvc/obo/obo/ontology/anatomy/cell_type/cell.edit.obo
+# PATO_OBO=http://obo.cvs.sourceforge.net/viewvc/obo/obo/ontology/phenotype/quality.obo
+# SO_OBO=http://song.svn.sourceforge.net/viewvc/song/trunk/so-xp.obo
 
 echo running ontology-release-runner
 /usr/local/OBOReleaseManager-0.4.0/scripts/ontology-release-runner -outdir $OUT_DIR \
