@@ -15,16 +15,9 @@ username=$1
 
 CURRENT_DIR=`pwd`
 
-TEMP_DIR=/tmp/release_fypo.$RANDOM.$$
+cd /data/pombase/sources/phenotype_ontology
 
-rm -rf $TEMP_DIR
-mkdir $TEMP_DIR
-
-cd $TEMP_DIR
-
-# svn checkout https://pombase.svn.sourceforge.net/svnroot/pombase/phenotype_ontology
-svn checkout http://svn.code.sf.net/p/pombase/code/ pombase
-cd pombase/phenotype_ontology
+svn update
 
 OUT_DIR=`pwd`/oort.tmp
 
@@ -82,5 +75,3 @@ rm releases/latest
 svn commit --username=$username -m 'FYPO release' releases
 
 cp $new_release_dir/* /var/www/pombase/ontologies/fypo/latest/
-
-rm -rf $TEMP_DIR
