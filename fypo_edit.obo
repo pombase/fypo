@@ -1,7 +1,8 @@
 format-version: 1.2
-date: 09:01:2013 15:48
+date: 10:01:2013 16:44
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
+subsetdef: high_level_annotation_qc "High-level terms not to be used for direct annotation"
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
 ontology: fypo
@@ -16,7 +17,8 @@ creation_date: 2011-03-16T03:59:25Z
 id: FYPO:0000002
 name: cell phenotype
 def: "A phenotype that is observed at the level of an individual cell." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 is_a: FYPO:0000001 ! phenotype
 created_by: midori
 creation_date: 2011-03-16T04:25:28Z
@@ -1918,7 +1920,8 @@ creation_date: 2011-04-12T05:41:15Z
 id: FYPO:0000142
 name: gene expression phenotype
 def: "A cellular process phenotype that affects gene expression. Gene expression includes transcription, RNA processing, and, for protein-coding genes, translation and protein maturation." [GO:0010467, PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0010467
@@ -1955,7 +1958,8 @@ creation_date: 2011-04-12T05:48:37Z
 id: FYPO:0000145
 name: regulation phenotype
 def: "A cellular process phenotype that affects the regulation of a molecular function, biological process, or biological quality." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: inheres_in GO:0065007
@@ -3356,7 +3360,8 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000257
 name: normal phenotype
 def: "A cell phenotype that shows no detectable differences from normal." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 synonym: "no obvious phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
 intersection_of: PATO:0000001
@@ -3661,7 +3666,6 @@ id: FYPO:0000282
 name: viable at high temperature
 def: "A viability phenotype observed in the vegetative growth phase of the life cycle in which cells are able to survive at a high temperature." [PomBase:mah]
 synonym: "viable at high temperature during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001320 ! vegetative cell phenotype
 is_a: FYPO:0001491 ! viable vegetative cells
 intersection_of: FYPO:0000124 ! viable
 intersection_of: exists_during GO:0072690
@@ -3718,7 +3722,8 @@ creation_date: 2011-04-21T11:18:18Z
 id: FYPO:0000288
 name: gene expression regulation phenotype
 def: "A regulation phenotype that affects the regulation of gene expression." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 is_a: FYPO:0000142 ! gene expression phenotype
 is_a: FYPO:0000145 ! regulation phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -3854,7 +3859,8 @@ creation_date: 2011-04-26T02:13:39Z
 id: FYPO:0000300
 name: biological process phenotype
 def: "A phenotype that affects a biological process." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 is_a: FYPO:0000001 ! phenotype
 intersection_of: FYPO:0000001 ! phenotype
 intersection_of: inheres_in GO:0008150
@@ -8082,7 +8088,8 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000623
 name: abnormal positive regulation of transcription
 def: "A transcription regulation phenotype in which any process of positive regulation of transcription is abnormal." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype. There may be enough evidence to support annotation to a more specific term such as 'abnormal transcriptional response to pheromone' (FYPO:0000984); if not, it is safer to annotate to 'increased transcription' (FYPO:0000780) or 'decreased transcription' (FYPO:0000781) rather than explicitly claiming that an effect on regulation was observed.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. There may be enough evidence to support annotation to a more specific term such as 'abnormal transcriptional response to pheromone' (FYPO:0000984); if not, it is safer to annotate to 'increased transcription' (FYPO:0000780) or 'decreased transcription' (FYPO:0000781) rather than explicitly claiming that an effect on regulation was observed.
+subset: high_level_annotation_qc
 synonym: "abnormal activation of gene-specific transcription" RELATED [GO:0045893, PomBase:mah]
 synonym: "abnormal activation of transcription, DNA-dependent" NARROW [GO:0045893, PomBase:mah]
 synonym: "abnormal positive regulation of cellular transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
@@ -8107,7 +8114,8 @@ creation_date: 2011-08-19T03:38:05Z
 id: FYPO:0000624
 name: abnormal negative regulation of transcription
 def: "A transcription regulation phenotype in which any process of negative regulation of transcription is abnormal." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype. There may be enough evidence to support annotation to a more specific term such as 'abnormal chromatin silencing' (FYPO:0000144); if not, it is safer to annotate to 'increased transcription' (FYPO:0000780) or 'decreased transcription' (FYPO:0000781) rather than explicitly claiming that an effect on regulation was observed.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. There may be enough evidence to support annotation to a more specific term such as 'abnormal chromatin silencing' (FYPO:0000144); if not, it is safer to annotate to 'increased transcription' (FYPO:0000780) or 'decreased transcription' (FYPO:0000781) rather than explicitly claiming that an effect on regulation was observed.
+subset: high_level_annotation_qc
 synonym: "abnormal down regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
 synonym: "abnormal down regulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
 synonym: "abnormal down-regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
@@ -8476,7 +8484,8 @@ creation_date: 2011-10-13T03:07:53Z
 id: FYPO:0000652
 name: molecular function phenotype
 def: "A phenotype that affects a molecular function such as binding or catalytic activity." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 synonym: "molecular function phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
 intersection_of: FYPO:0000001 ! phenotype
@@ -8499,7 +8508,8 @@ creation_date: 2011-11-11T10:43:39Z
 id: FYPO:0000654
 name: catalytic activity phenotype
 def: "A phenotype that affects a catalytic activity." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 synonym: "enzymatic activity phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000652 ! molecular function phenotype
 intersection_of: FYPO:0000001 ! phenotype
@@ -9073,7 +9083,8 @@ creation_date: 2011-12-05T01:59:12Z
 id: FYPO:0000702
 name: protein binding phenotype
 def: "A phenotype that protein affects the binding of one protein to another." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 is_a: FYPO:0001092 ! binding phenotype
 intersection_of: FYPO:0000001 ! phenotype
 intersection_of: inheres_in GO:0005515
@@ -16323,7 +16334,7 @@ creation_date: 2012-07-12T14:39:54Z
 
 [Term]
 id: FYPO:0001218
-name: abolished nuclear export during response to nitrogen starvation
+name: abolished nuclear export during cellular response to nitrogen starvation
 def: "A cellular process phenotype in which nuclear export does not occur when the cell is subject to nitrogen starvation. Nuclear export is the directed movement of any substance out of the nucleus; export of all substances or a specific substance may be affected." [PomBase:mah]
 synonym: "absent nuclear export during response to nitrogen starvation" EXACT [PomBase:mah]
 synonym: "nuclear export during response to nitrogen starvation abolished" EXACT [PomBase:mah]
@@ -16981,8 +16992,7 @@ id: FYPO:0001265
 name: increased protein phosphorylation during cellular hyperosmotic response
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins occurs to a greater extent than normal during a cellular hyperosmotic response." [PomBase:mah]
 synonym: "increased protein phosphorylation during cellular hyperosmotic response during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000547 ! increased protein modification
-is_a: FYPO:0000775 ! abnormal protein phosphorylation
+is_a: FYPO:0001038 ! increased protein phosphorylation
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0071474
 intersection_of: happens_during GO:0072690
@@ -17908,7 +17918,8 @@ creation_date: 2012-08-01T16:31:58Z
 id: FYPO:0001333
 name: gene expression regulation phenotype during vegetative growth
 def: "A regulation phenotype that affects the regulation of gene expression in the vegetative growth phase of the life cycle." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 is_a: FYPO:0000288 ! gene expression regulation phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
@@ -17920,7 +17931,8 @@ creation_date: 2012-08-01T16:33:19Z
 id: FYPO:0001334
 name: regulation phenotype during vegetative growth
 def: "A cellular process phenotype that affects the regulation of a molecular function, biological process, or biological quality in the vegetative growth phase of the life cycle." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will seldom be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 is_a: FYPO:0000145 ! regulation phenotype
 is_a: FYPO:0001331 ! cellular process phenotype during vegetative growth
 intersection_of: exists_during GO:0072690
@@ -21327,6 +21339,7 @@ id: FYPO:0001575
 name: abolished vegetative cell growth
 def: "A cellular process phenotype in which vegetative cell growth does not occur, although cells remain viable." [PomBase:mah]
 comment: This term's primary purpose is to organize terms beneath it in the ontology, and we recommend that it not be used for direct annotations. Please consider using one of the more specific terms, which mention carbon or nitrogen sources, to annotate each phenotype, as cells that do not grow on any media would be considered inviable.
+subset: high_level_annotation_qc
 synonym: "vegetative cell growth abolished" EXACT [PomBase:mah]
 synonym: "vegetative growth abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001355 ! decreased vegetative cell growth
@@ -24375,7 +24388,6 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "normal protein localisation to nucleus during cellular response to oxidative stress" EXACT [PomBase:mah]
 synonym: "normal protein localization to nucleus during cellular response to oxidative stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal protein localization to nucleus during oxidative stress" EXACT [PomBase:mah]
-is_a: FYPO:0000644 ! normal protein localization
 is_a: FYPO:0000838 ! normal protein localization to nucleus
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0034599
@@ -24491,7 +24503,6 @@ synonym: "abnormal protein biosynthesis" EXACT [GO:0006412]
 synonym: "abnormal protein synthesis" EXACT [GO:0006412]
 synonym: "abnormal translation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000291 ! translation phenotype
-is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006412
