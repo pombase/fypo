@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 26:11:2012 16:40
+date: 12:12:2012 14:22
 saved-by: antonialock
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Grouping_terms "The grouping terms are high level terms not used for direct annotation but for grouping purposes in the ontology."
@@ -19,7 +19,7 @@ id: PECO:0000002
 name: temperature
 def: "Any experimental condition specifying the temperature at which the experiment was performed." []
 subset: Grouping_terms
-is_a: PECO:0000132 ! experimental environment
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-02-07T12:00:23Z
 
@@ -46,7 +46,7 @@ synonym: "40 degrees Celsius" NARROW []
 synonym: "41 degrees Celsius" RELATED []
 synonym: "42 degrees Celsius" RELATED []
 synonym: "43 degrees Celsius" RELATED []
-is_a: PECO:0000002 ! temperature
+is_a: PECO:0000132 ! grouping experimental environment
 created_by: antonialock
 creation_date: 2012-02-07T12:17:29Z
 
@@ -63,7 +63,7 @@ synonym: "30 degrees Celsius" NARROW []
 synonym: "31 degrees Celsius" NARROW []
 synonym: "32 degrees Celsius" NARROW []
 synonym: "normal temperature" EXACT []
-is_a: PECO:0000002 ! temperature
+is_a: PECO:0000132 ! grouping experimental environment
 disjoint_from: PECO:0000004 ! high temperature
 disjoint_from: PECO:0000006 ! low temperature
 created_by: antonialock
@@ -82,7 +82,7 @@ synonym: "22 degrees Celsius" NARROW []
 synonym: "23 degrees Celsius" NARROW []
 synonym: "24 degrees Celsius" NARROW []
 synonym: "cold" RELATED []
-is_a: PECO:0000002 ! temperature
+is_a: PECO:0000132 ! grouping experimental environment
 disjoint_from: PECO:0000004 ! high temperature
 created_by: antonialock
 creation_date: 2012-02-07T12:17:29Z
@@ -123,59 +123,33 @@ creation_date: 2012-02-07T02:22:00Z
 
 [Term]
 id: PECO:0000011
-name: limited chemical added
-def: "An experimental condition in which a chemical was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
+name: grouping limited
+def: "This is a grouping term, do not use for annotation." []
 subset: Grouping_terms
 is_a: PECO:0000059 ! chemical added or excluded
 created_by: antonialock
 creation_date: 2012-02-07T02:23:26Z
 
 [Term]
-id: PECO:0000012
-name: standard glucose rich medium
-def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is typically around 2-3%." []
-comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
-synonym: "complex medium" RELATED []
-synonym: "standard dextrose rich medium" EXACT []
-synonym: "YE" NARROW []
-synonym: "YE4S" NARROW []
-synonym: "YES" NARROW []
-is_a: PECO:0000137 ! glucose rich medium
-created_by: antonialock
-creation_date: 2012-02-07T12:39:25Z
-
-[Term]
 id: PECO:0000013
-name: minimal medium
-def: "Experiments were performed in medium containing a carbon source, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
-comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+name: grouping -MM
+def: "This is a grouping term, do not use for annotations." []
+comment: This is a grouping term, do not use for annotations.
 subset: Grouping_terms
 synonym: "phenotype condition" RELATED []
-is_a: PECO:0000100 ! medium components
+is_a: PECO:0000009 ! growth medium
 created_by: antonialock
 creation_date: 2012-02-07T12:41:33Z
 
 [Term]
-id: PECO:0000014
-name: standard glucose minimal medium
-def: "Experiments were performed in medium containing glucose (typically <2% w/v), salts and water." []
-comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
-synonym: "EMM" NARROW []
-synonym: "normal glucose minimal medium" EXACT []
-synonym: "normal glucose MM" EXACT []
-is_a: PECO:0000126 ! glucose minimal medium
-created_by: antonialock
-creation_date: 2012-02-07T12:50:21Z
-
-[Term]
 id: PECO:0000015
 name: sporulation medium
-def: "Experiments were performed in medium promoting mating and sporulation." []
+def: "Experiments were performed in defined medium promoting mating and sporulation." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "malt extract medium" EXACT []
 synonym: "mating medium" RELATED []
 synonym: "SPA medium" RELATED []
-is_a: PECO:0000013 ! minimal medium
+is_a: PECO:0000013 ! grouping -MM
 created_by: antonialock
 creation_date: 2012-02-07T01:35:35Z
 
@@ -185,7 +159,7 @@ name: high glucose minimal medium
 def: "Experiments were performed in minimal medium containing a high concentration of glucose (~5-8% typically) as carbon source, salts and water." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "high glucose MM" EXACT []
-is_a: PECO:0000126 ! glucose minimal medium
+is_a: PECO:0000013 ! grouping -MM
 created_by: antonialock
 creation_date: 2012-02-07T12:51:06Z
 
@@ -195,7 +169,7 @@ name: limited adenine added
 def: "An experimental condition in which adenine was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
 comment: Example: 5 mg/L adenine compared to 100 mg/L
 xref: PMID:7565608
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-02-07T02:34:30Z
 
@@ -220,7 +194,7 @@ id: PECO:0000024
 name: sugar added
 def: "An experimental condition in which a sugar was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-07T03:09:38Z
 
@@ -229,7 +203,7 @@ id: PECO:0000025
 name: sorbitol added
 def: "An experimental condition in which sorbitol was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000041 ! sugar alcohol added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-07T03:09:38Z
 
@@ -239,7 +213,7 @@ name: vanadate added
 def: "An experimental condition in which vanadate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "sodium orthovanadate added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-07T03:09:38Z
 
@@ -256,7 +230,7 @@ id: PECO:0000028
 name: TBC added
 def: "An experimental condition in which TBC was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-07T03:09:38Z
 
@@ -265,7 +239,7 @@ id: PECO:0000029
 name: tacrolimus added
 def: "An experimental condition in which tacrolimus was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-07T03:09:38Z
 
@@ -275,7 +249,7 @@ name: ions added
 def: "An experimental condition in which ions were added to the assay buffer in excess compared to standard assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 subset: Grouping_terms
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-07T03:09:38Z
 
@@ -386,7 +360,7 @@ name: sugar alcohol added
 def: "An experimental condition in which a sugar alcohol was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 subset: Grouping_terms
-is_a: PECO:0000109 ! excess chemical added
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-02-07T03:11:16Z
 
@@ -396,7 +370,7 @@ name: fatty acid added
 def: "An experimental condition in which a fatty acid was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:alock]
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 subset: Grouping_terms
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-07T03:14:49Z
 
@@ -502,10 +476,12 @@ creation_date: 2012-02-07T03:17:47Z
 [Term]
 id: PECO:0000054
 name: glycerol minimal medium
-def: "Experiments were performed in minimal medium where glycerol is the main carbon source." []
-comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+alt_id: PECO:0000077
+def: "Experiments were performed in minimal medium where glycerol is the sole carbon source (e.g. NO addition of glucose/ethanol etc at all)." []
+comment: MERGED COMMENT:\nTARGET COMMENT: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.\n--------------------\nSOURCE COMMENT: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 subset: Grouping_terms
-is_a: PECO:0000013 ! minimal medium
+synonym: "glycerol MM" EXACT []
+is_a: PECO:0000013 ! grouping -MM
 created_by: antonialock
 creation_date: 2012-02-07T03:29:51Z
 
@@ -521,11 +497,11 @@ creation_date: 2012-02-07T03:37:43Z
 
 [Term]
 id: PECO:0000056
-name: 3'5'-cyclic AMP added
+name: 3,5-cyclic AMP added
 def: "An experimental condition in which 3'5'-cyclic AMP was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [CHEBI:17489]
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 xref: CHEBI:17489 "3',5'-cyclic AMP"
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-07T05:07:31Z
 
@@ -543,7 +519,7 @@ name: mating pheromone added
 def: "An experimental condition in which mating pheromone (M factor and P factor) was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 subset: Grouping_terms
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-07T05:25:01Z
 
@@ -574,7 +550,7 @@ id: PECO:0000061
 name: xenobiotic substrate added
 def: "An experimental condition in which a xenobiotic substrate was added to the medium or assay buffer in excess compared to standard medium or assay buffers. A xenobiotic substrate is a macromolecular substrate which is not synthesised by S. pombe." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-10T11:50:01Z
 
@@ -599,7 +575,7 @@ id: PECO:0000064
 name: inositol added
 def: "An experimental condition in which inositol was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-13T02:35:48Z
 
@@ -642,7 +618,7 @@ id: PECO:0000069
 name: caffeine added
 def: "An experimental condition in which caffeine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-15T12:28:11Z
 
@@ -662,17 +638,17 @@ comment: Note that this term can be used both when the chemical is not normally 
 synonym: "1-Na-PP1 present" EXACT []
 synonym: "4-amino-1-tert-butyl-3-(1'-naphthyl)pyrazolo[3,4-d]pyrimidine added" EXACT []
 synonym: "4-amino-1-tert-butyl-3-(1'-naphthyl)pyrazolo[3,4-d]pyrimidine present" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-19T10:45:53Z
 
 [Term]
 id: PECO:0000072
-name: glycerol main carbon source + very low glucose minimal medium
+name: glycerol minimal medium with trace glucose
 def: "Experiments were performed in minimal medium where glycerol is the main carbon source, but the medium also contained trace amounts of glucose (<0.1%)." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "glycerol main carbon source + very low glucose MM" EXACT []
-is_a: PECO:0000054 ! glycerol minimal medium
+is_a: PECO:0000013 ! grouping -MM
 created_by: antonialock
 creation_date: 2012-02-27T12:12:17Z
 
@@ -681,9 +657,10 @@ id: PECO:0000073
 name: DHA minimal medium
 def: "Experiments were performed in minimal medium where DHA (dihydroxyacetone) is the main carbon source." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+synonym: "DHA MM" EXACT []
 synonym: "dihydroxyacetone MM" EXACT []
 synonym: "dihydroxyactone minimal medium" EXACT []
-is_a: PECO:0000013 ! minimal medium
+is_a: PECO:0000013 ! grouping -MM
 created_by: antonialock
 creation_date: 2012-02-27T12:15:46Z
 
@@ -692,7 +669,7 @@ id: PECO:0000074
 name: NAD+ added
 def: "An experimental condition in which NAD+ was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-27T01:14:00Z
 
@@ -701,7 +678,7 @@ id: PECO:0000075
 name: NADP+ added
 def: "An experimental condition in which NADP+ was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-27T01:14:35Z
 
@@ -711,19 +688,9 @@ name: dihydroxyacetone added
 def: "An experimental condition in which dihydroxyacetone was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "DHA added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-27T04:02:57Z
-
-[Term]
-id: PECO:0000077
-name: glycerol sole carbon source minimal medium
-def: "Experiments were performed in minimal medium where glycerol is the sole carbon source (e.g. NO addition of glucose/ethanol etc at all)." []
-comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
-synonym: "glycerol sole carbon source MM" EXACT []
-is_a: PECO:0000054 ! glycerol minimal medium
-created_by: antonialock
-creation_date: 2012-02-27T04:32:45Z
 
 [Term]
 id: PECO:0000078
@@ -731,7 +698,7 @@ name: hydrogen peroxide added
 def: "An experimental condition in which hydrogen peroxide was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "H2O2 added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-02-29T03:06:23Z
 
@@ -741,17 +708,17 @@ name: thiabendazole added
 def: "An experimental condition in which thiabendazole was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "TBZ added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-03-12T02:59:23Z
 
 [Term]
 id: PECO:0000080
-name: rich medium
-comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+name: grouping YE
+def: "This is a grouping term, do not use for annotations." []
+comment: This is a grouping term, do not use for annotations.
 subset: Grouping_terms
-is_a: PECO:0000100 ! medium components
-disjoint_from: PECO:0000013 ! minimal medium
+is_a: PECO:0000009 ! growth medium
 created_by: antonialock
 creation_date: 2012-03-14T01:33:58Z
 
@@ -761,7 +728,7 @@ name: low glucose rich medium
 def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is very low (eg around 0.1%)." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "low glucose YE" RELATED []
-is_a: PECO:0000137 ! glucose rich medium
+is_a: PECO:0000080 ! grouping YE
 created_by: antonialock
 creation_date: 2012-03-14T01:35:45Z
 
@@ -770,28 +737,16 @@ id: PECO:0000082
 name: arginine added
 def: "An experimental condition in which arginine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-03-22T08:21:12Z
-
-[Term]
-id: PECO:0000083
-name: glycerol sole carbon source rich medium
-def: "Experiments were performed in rich medium containing glycerol as the sole carbon source, yeast extract and other components. The concentration of glycerol is typically around 2%." []
-comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
-synonym: "glycerol sole carbon source YE" RELATED []
-synonym: "non-fermentable glycerol sole carbon source rich medium" EXACT []
-synonym: "nonfermentable glycerol sole carbon source rich medium" RELATED []
-is_a: PECO:0000138 ! glycerol rich medium
-created_by: antonialock
-creation_date: 2012-03-22T08:23:14Z
 
 [Term]
 id: PECO:0000084
 name: glutamate added
 def: "An experimental condition in which glutamate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-03-22T08:28:47Z
 
@@ -800,7 +755,7 @@ id: PECO:0000085
 name: glutamine added
 def: "An experimental condition in which glutamine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-03-22T08:29:26Z
 
@@ -809,7 +764,7 @@ id: PECO:0000086
 name: ornithine added
 def: "An experimental condition in which ornithine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-03-22T08:29:44Z
 
@@ -818,7 +773,7 @@ id: PECO:0000087
 name: proline added
 def: "An experimental condition in which proline was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-03-22T08:30:19Z
 
@@ -830,7 +785,7 @@ comment: Note that this term includes both when the chemical is not normally pre
 synonym: "2-OG present" EXACT []
 synonym: "2-oxoglutarate added" EXACT []
 synonym: "2-oxoglutarate present" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-03-22T08:30:35Z
 
@@ -848,7 +803,7 @@ creation_date: 2012-03-22T08:52:53Z
 id: PECO:0000090
 name: limited nitrogen added
 def: "An experimental condition in which nitrogen was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-03-26T11:47:41Z
 
@@ -857,7 +812,7 @@ id: PECO:0000091
 name: cisplatin added
 def: "An experimental condition in which cisplatin was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-04-18T05:05:41Z
 
@@ -933,30 +888,19 @@ created_by: antonialock
 creation_date: 2012-04-25T12:31:19Z
 
 [Term]
-id: PECO:0000100
-name: medium components
-def: "Any experimental condition specifying the nutritional composition of the growth medium." []
-comment: Use this term to specify the general type of growth medium. \nIf certain chemicals not normally found in the medium were added, please also use the 'excess chemical added' conditions, for instance 'caffeine added' or 'thiamine added'.\n If a chemical was added in a much lower quantity than normal, please also use the 'limited chemical added' conditions, for instance 'limited adenine added'.
-subset: Grouping_terms
-synonym: "medium composition" RELATED []
-is_a: PECO:0000009 ! growth medium
-created_by: antonialock
-creation_date: 2012-05-04T07:48:31Z
-
-[Term]
 id: PECO:0000101
 name: medium texture
 def: "Any experimental condition specifying the physical texture of the growth medium." []
 subset: Grouping_terms
-is_a: PECO:0000009 ! growth medium
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-05-04T07:51:30Z
 
 [Term]
 id: PECO:0000102
-name: solid agar plates
-def: "Cells were grown on solid agar plates." []
-is_a: PECO:0000101 ! medium texture
+name: agar plates
+def: "Cells were grown on agar plates." []
+is_a: PECO:0000009 ! growth medium
 disjoint_from: PECO:0000103 ! liquid culture
 created_by: antonialock
 creation_date: 2012-05-04T07:53:03Z
@@ -965,7 +909,7 @@ creation_date: 2012-05-04T07:53:03Z
 id: PECO:0000103
 name: liquid culture
 def: "Cells were grown in liquid culture." []
-is_a: PECO:0000101 ! medium texture
+is_a: PECO:0000009 ! growth medium
 created_by: antonialock
 creation_date: 2012-05-04T07:53:10Z
 
@@ -975,6 +919,7 @@ name: low glucose minimal medium
 def: "Experiments were performed in minimal medium containing a low concentration of glucose (~0.5%)  as carbon source, salts and water." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "low glucose MM" EXACT []
+is_a: PECO:0000013 ! grouping -MM
 is_a: PECO:0000126 ! glucose minimal medium
 created_by: antonialock
 creation_date: 2012-05-11T02:53:00Z
@@ -984,7 +929,7 @@ id: PECO:0000105
 name: limited thiamine added
 def: "An experimental condition in which thiamine was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." [PMID:12653111]
 xref: PMID:12653111
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-05-11T03:00:02Z
 
@@ -993,7 +938,7 @@ id: PECO:0000106
 name: thiamine added
 def: "An experimental condition in which thiamine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-05-11T03:02:06Z
 
@@ -1002,7 +947,7 @@ id: PECO:0000107
 name: aminopyrimidine added
 def: "An experimental condition in which aminopyrimidine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-05-11T03:02:21Z
 
@@ -1011,14 +956,14 @@ id: PECO:0000108
 name: thiazole added
 def: "An experimental condition in which thiazole was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-05-11T03:03:12Z
 
 [Term]
 id: PECO:0000109
-name: excess chemical added
-def: "An experimental condition in which a chemical was added to the medium or assay buffers in excess compared to standard medium or assay buffers." []
+name: grouping excess
+def: "This is a grouping term, do not use for annotation." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 subset: Grouping_terms
 is_a: PECO:0000059 ! chemical added or excluded
@@ -1041,7 +986,7 @@ def: "An experimental condition in which myo-inositol was added to the medium or
 comment: Mating and sporulation is very inefficient in media containing 1 mg/L of myo-inositol, compared to 10 mg/L which is the most efficient myo-inositol concentration observed for mating and sporulation.
 synonym: "limited inositol added" RELATED []
 xref: PMID:9560432
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-05-17T12:11:53Z
 
@@ -1049,7 +994,7 @@ creation_date: 2012-05-17T12:11:53Z
 id: PECO:0000112
 name: limited phosphate added
 def: "An experimental condition in which phosphate was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-05-18T09:21:48Z
 
@@ -1057,7 +1002,7 @@ creation_date: 2012-05-18T09:21:48Z
 id: PECO:0000113
 name: calcofluor white added
 def: "An experimental condition in which calcofluor white was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-05-18T05:06:48Z
 
@@ -1065,7 +1010,7 @@ creation_date: 2012-05-18T05:06:48Z
 id: PECO:0000114
 name: cyclosporin A added
 def: "An experimental condition in which cyclosporin A was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-05-22T01:47:47Z
 
@@ -1074,7 +1019,7 @@ id: PECO:0000115
 name: guanosine triphosphate added
 def: "An experimental condition in which guanosine triphosphate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "GTP added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-05-22T03:25:08Z
 
@@ -1089,8 +1034,9 @@ creation_date: 2012-05-23T11:01:03Z
 
 [Term]
 id: PECO:0000117
-name: heat shock for 20-30 min at 48 degrees C, preceeded and followed by growth at normal temperature
-def: "Cells are initially cultured at 25-32 degrees C. This is followed by a heat shock where the temperature is increased to 48 degrees for 20 minutes." []
+name: heat shock and recovery at normal temperature
+def: "Cells are initially cultured at a normal growth temperature. This is followed by a heat shock where the temperature is increased to a very high temperature followed by recovery at the initial temperature." []
+synonym: "heat shock for 20-30 min at 48 degrees C, preceeded and followed by growth at normal temperature" NARROW []
 is_a: PECO:0000116 ! heat shock
 created_by: antonialock
 creation_date: 2012-05-23T11:07:16Z
@@ -1101,7 +1047,7 @@ name: glutathione added
 def: "An experimental condition in which glutathione was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "GSH added" EXACT []
 synonym: "L-gamma-glutamyl-L-cysteinylglycine added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-05-30T05:18:17Z
 
@@ -1111,14 +1057,14 @@ name: N-acetyl-L-cysteine added
 def: "An experimental condition in which N-acetyl-L-cysteine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "acetylcysteine added" EXACT []
 synonym: "NAC added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-05-30T05:18:44Z
 
 [Term]
 id: PECO:0000120
-name: chemical absent
-def: "An experimental condition in which a chemical, which is normally a component of a medium, is completely excluded." []
+name: grouping absent
+def: "This is a grouping term, do not use for annotation." []
 subset: Grouping_terms
 is_a: PECO:0000059 ! chemical added or excluded
 created_by: antonialock
@@ -1129,14 +1075,14 @@ id: PECO:0000121
 name: methylamine added
 def: "An experimental condition in which methylamine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PMID:10467002]
 comment: Methylamine is a nitrogen analogue that Schizosaccharomyces pombe cannot utilize as a nitrogen source.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-06-13T16:49:55Z
 
 [Term]
 id: PECO:0000122
-name: growth timing
-def: "The timing of growth that cells were subjected to." []
+name: grouping growth timing
+def: "This is a grouping term, do not use for annotation." []
 subset: Grouping_terms
 is_a: PECO:0000001 ! phenotype condition
 created_by: antonialock
@@ -1147,7 +1093,7 @@ id: PECO:0000123
 name: growth to stationary phase
 def: "Cells were grown to stationary phase." [PMID:10467002]
 comment: Typically, cells grown in glucose minimal medium will be in stationary phase at 23h.
-is_a: PECO:0000122 ! growth timing
+is_a: PECO:0000122 ! grouping growth timing
 created_by: antonialock
 creation_date: 2012-06-14T09:26:40Z
 
@@ -1156,7 +1102,7 @@ id: PECO:0000124
 name: growth to late exponential phase
 def: "Cells were grown to late exponential phase." [PMID:10467002]
 comment: Typically, cells grown in glucose minimal medium will be in late exponential phase at 16h.
-is_a: PECO:0000122 ! growth timing
+is_a: PECO:0000122 ! grouping growth timing
 created_by: antonialock
 creation_date: 2012-06-14T09:30:11Z
 
@@ -1164,17 +1110,22 @@ creation_date: 2012-06-14T09:30:11Z
 id: PECO:0000125
 name: growth to exponential phase
 def: "Cells were grown to exponential phase." []
-is_a: PECO:0000122 ! growth timing
+is_a: PECO:0000122 ! grouping growth timing
 created_by: antonialock
 creation_date: 2012-06-14T09:31:28Z
 
 [Term]
 id: PECO:0000126
 name: glucose minimal medium
-def: "Experiments were performed in medium containing glucose, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
-comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+alt_id: PECO:0000014
+def: "Experiments were performed in medium containing glucose (typically <2% w/v), salts and water." []
+comment: MERGED COMMENT:\nTARGET COMMENT: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.\n--------------------\nSOURCE COMMENT: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 subset: Grouping_terms
-is_a: PECO:0000013 ! minimal medium
+synonym: "EMM" NARROW []
+synonym: "normal glucose minimal medium" EXACT []
+synonym: "normal glucose MM" EXACT []
+synonym: "standard glucose minimal medium" EXACT []
+is_a: PECO:0000013 ! grouping -MM
 created_by: antonialock
 creation_date: 2012-06-14T11:28:33Z
 
@@ -1186,7 +1137,7 @@ comment: Note that the medium type should also be specified, for instance 'gluco
 synonym: "-N" EXACT []
 synonym: "nitrogen excluded" RELATED []
 synonym: "nitrogen free" EXACT []
-is_a: PECO:0000120 ! chemical absent
+is_a: PECO:0000120 ! grouping absent
 created_by: antonialock
 creation_date: 2012-06-14T11:36:47Z
 
@@ -1195,26 +1146,20 @@ id: PECO:0000128
 name: pH
 def: "Any experimental condition where the pH of the medium or assay buffer is significantly different than the standard pombe growth medium with a pH of ~5.6." [PMID:10467002]
 subset: Grouping_terms
-is_a: PECO:0000132 ! experimental environment
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-06-14T12:02:27Z
 
 [Term]
 id: PECO:0000129
 name: high pH
-def: "Any experimental condition where the pH of the medium or assay buffer is higher than the standard pombe growth medium of pH of ~5.6." [PMID:10467002]
+alt_id: PECO:0000130
+def: "MERGED DEFINITION:\nTARGET DEFINITION: Any experimental condition where the pH of the medium or assay buffer is higher than the standard pombe growth medium of pH of ~5.6.\n--------------------\nSOURCE DEFINITION: Cells were grown in a medium or experiments were performed in a buffer with pH 6.8. Standard Schizosaccharomyces pombe growth medium has pH 5.6 and this medium/buffer is therefore much less acidic." [PMID:10467002]
 subset: Grouping_terms
-is_a: PECO:0000128 ! pH
+synonym: "pH 6.8" EXACT []
+is_a: PECO:0000132 ! grouping experimental environment
 created_by: antonialock
 creation_date: 2012-06-14T12:04:38Z
-
-[Term]
-id: PECO:0000130
-name: pH 6.8
-def: "Cells were grown in a medium or experiments were performed in a buffer with pH 6.8. Standard Schizosaccharomyces pombe growth medium has pH 5.6 and this medium/buffer is therefore much less acidic." [PMID:10467002]
-is_a: PECO:0000129 ! high pH
-created_by: antonialock
-creation_date: 2012-06-14T12:05:40Z
 
 [Term]
 id: PECO:0000131
@@ -1222,14 +1167,14 @@ name: ubiquinone Q6 added
 def: "An experimental condition in which ubiquinone Q6 was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term can be used both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
 synonym: "coenzyme Q6" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-06-14T15:21:19Z
 
 [Term]
 id: PECO:0000132
-name: experimental environment
-def: "Set of conditions affecting the physical environment of the experiment." []
+name: grouping experimental environment
+def: "This is a grouping term, do not use for annotation." []
 subset: Grouping_terms
 is_a: PECO:0000001 ! phenotype condition
 created_by: antonialock
@@ -1240,7 +1185,7 @@ id: PECO:0000133
 name: oxygen level
 def: "Describes experimental conditions in which the amount of oxygen available during growth or the assay was controlled." []
 subset: Grouping_terms
-is_a: PECO:0000132 ! experimental environment
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-06-14T20:21:38Z
 
@@ -1254,7 +1199,7 @@ synonym: "-O" EXACT []
 synonym: "-oxygen" EXACT []
 synonym: "anaerobiosis" EXACT []
 synonym: "minus oxygen" EXACT []
-is_a: PECO:0000133 ! oxygen level
+is_a: PECO:0000132 ! grouping experimental environment
 created_by: antonialock
 creation_date: 2012-06-14T20:22:49Z
 
@@ -1269,7 +1214,7 @@ synonym: "semi aerobic environment" EXACT []
 synonym: "semi-anaerobic environment" EXACT []
 synonym: "semiaerobic environment" RELATED []
 synonym: "semianaerobic environment" RELATED []
-is_a: PECO:0000133 ! oxygen level
+is_a: PECO:0000132 ! grouping experimental environment
 created_by: antonialock
 creation_date: 2012-06-14T20:26:46Z
 
@@ -1279,42 +1224,53 @@ name: raffinose rich medium
 def: "Experiments were performed in rich medium containing raffinose as the carbon source, yeast extract and other components. The concentration of raffinose is typically around 2%." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "raffinose YE" RELATED []
-is_a: PECO:0000080 ! rich medium
+is_a: PECO:0000080 ! grouping YE
 created_by: antonialock
 creation_date: 2012-06-14T20:32:52Z
 
 [Term]
 id: PECO:0000137
 name: glucose rich medium
-def: "Experiments were performed in rich medium  containing glucose as the sole carbon source, yeast extract and other components." []
-comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+alt_id: PECO:0000012
+def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is typically around 2-3%." []
+comment: MERGED COMMENT:\nTARGET COMMENT: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.\n--------------------\nSOURCE COMMENT: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 subset: Grouping_terms
-is_a: PECO:0000080 ! rich medium
+synonym: "complex medium" RELATED []
+synonym: "standard dextrose rich medium" EXACT []
+synonym: "standard glucose rich medium" EXACT []
+synonym: "YE" NARROW []
+synonym: "YE4S" NARROW []
+synonym: "YES" NARROW []
+is_a: PECO:0000080 ! grouping YE
 created_by: antonialock
 creation_date: 2012-06-14T20:35:20Z
 
 [Term]
 id: PECO:0000138
 name: glycerol rich medium
-def: "Experiments were performed in rich medium containing glycerol as the main carbon source, yeast extract and other components." []
-comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
+alt_id: PECO:0000083
+def: "Experiments were performed in rich medium containing glycerol as the sole carbon source, yeast extract and other components. The concentration of glycerol is typically around 2%." []
+comment: MERGED COMMENT:\nTARGET COMMENT: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.\n--------------------\nSOURCE COMMENT: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 subset: Grouping_terms
-is_a: PECO:0000080 ! rich medium
+synonym: "glycerol sole carbon source rich medium" EXACT []
+synonym: "glycerol sole carbon source YE" RELATED []
+synonym: "non-fermentable glycerol sole carbon source rich medium" EXACT []
+synonym: "nonfermentable glycerol sole carbon source rich medium" RELATED []
+is_a: PECO:0000080 ! grouping YE
 created_by: antonialock
 creation_date: 2012-06-14T20:38:23Z
 
 [Term]
 id: PECO:0000139
-name: glycerol + ethanol rich medium
+name: glycerol and ethanol rich medium
 def: "Experiments were performed in rich medium containing glycerol and ethanol as the carbon sources, yeast extract and other components. The concentration of glycerol is typically around 2-3%, whereas the concentration of ethanol is around 1%." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "glycerol + ethanol YE" RELATED []
-synonym: "glycerol and ethanol rich medium" EXACT []
 synonym: "glycerol and ethanol YE" RELATED []
 synonym: "non-fermentable glycerol and ethanol rich medium" EXACT []
 synonym: "nonfermentable glycerol and ethanol rich medium" EXACT []
 synonym: "YCEG" NARROW []
-is_a: PECO:0000138 ! glycerol rich medium
+is_a: PECO:0000080 ! grouping YE
 created_by: antonialock
 creation_date: 2012-06-14T20:39:24Z
 
@@ -1322,7 +1278,7 @@ creation_date: 2012-06-14T20:39:24Z
 id: PECO:0000140
 name: in vitro
 def: "The experiment was carried out in vitro." []
-is_a: PECO:0000132 ! experimental environment
+is_a: PECO:0000132 ! grouping experimental environment
 created_by: antonialock
 creation_date: 2012-06-18T08:38:33Z
 
@@ -1330,7 +1286,7 @@ creation_date: 2012-06-18T08:38:33Z
 id: PECO:0000141
 name: in vivo
 def: "The experiment was carried out in vivo." []
-is_a: PECO:0000132 ! experimental environment
+is_a: PECO:0000132 ! grouping experimental environment
 created_by: antonialock
 creation_date: 2012-06-18T08:38:37Z
 
@@ -1338,7 +1294,7 @@ creation_date: 2012-06-18T08:38:37Z
 id: PECO:0000142
 name: adenine added
 def: "An experimental condition in which adenine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-06-18T12:39:39Z
 
@@ -1347,7 +1303,7 @@ id: PECO:0000143
 name: antimycin A added
 def: "An experimental condition in which antimycin A was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-06-19T15:23:58Z
 
@@ -1357,7 +1313,7 @@ name: sucrose rich medium
 def: "Experiments were performed in rich medium containing raffinose as the carbon source, yeast extract and other components. The concentration of sucrose is typically around 2%." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "sucrose YE" RELATED []
-is_a: PECO:0000080 ! rich medium
+is_a: PECO:0000080 ! grouping YE
 created_by: antonialock
 creation_date: 2012-06-19T15:26:15Z
 
@@ -1367,39 +1323,39 @@ name: maltose minimal medium
 def: "Experiments were performed in medium containing maltose, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "maltose MM" EXACT []
-is_a: PECO:0000013 ! minimal medium
+is_a: PECO:0000013 ! grouping -MM
 created_by: antonialock
 creation_date: 2012-06-19T16:25:41Z
 
 [Term]
 id: PECO:0000146
 name: trehalose minimal medium
-def: "Experiments were performed in medium containing trehalose, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
+def: "Experiments were performed in defined medium containing trehalose, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "trehalose MM" EXACT []
-is_a: PECO:0000013 ! minimal medium
+is_a: PECO:0000013 ! grouping -MM
 created_by: antonialock
 creation_date: 2012-06-19T16:26:05Z
 
 [Term]
 id: PECO:0000147
 name: sucrose minimal medium
-def: "Experiments were performed in medium containing sucrose, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
+def: "Experiments were performed in defined medium containing sucrose, salts and water. May be supplemented with a set of amino acids as per the auxotrophic requirements of the strain." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "sucrose MM" EXACT []
-is_a: PECO:0000013 ! minimal medium
+is_a: PECO:0000013 ! grouping -MM
 created_by: antonialock
 creation_date: 2012-06-19T16:26:22Z
 
 [Term]
 id: PECO:0000148
-name: galactose main carbon source + very low glucose rich medium
+name: galactose rich medium with trace glucose
 def: "Experiments were performed in rich medium containing galactose and glucose as the carbon sources, yeast extract and other components. The concentration of galactose is typically around 2%, whereas the concentration of glucose is very low - around 0.1%." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "non-fermentable galactose and very low glucose rich medium" EXACT []
 synonym: "nonfermentable galactose and very low glucose rich medium" EXACT []
 synonym: "YpGalA" NARROW []
-is_a: PECO:0000080 ! rich medium
+is_a: PECO:0000080 ! grouping YE
 created_by: antonialock
 creation_date: 2012-06-20T11:48:39Z
 
@@ -1410,7 +1366,7 @@ def: "An experimental condition in which dihydroxyacetone was added to the mediu
 synonym: "1-DNJ added" EXACT []
 synonym: "deoxynojirimycin added" EXACT []
 synonym: "DNJ added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-06-28T12:22:14Z
 
@@ -1418,7 +1374,7 @@ creation_date: 2012-06-28T12:22:14Z
 id: PECO:0000150
 name: calcium absent
 def: "Calcium ions were completely excluded from the experimental medium/buffer." []
-is_a: PECO:0000120 ! chemical absent
+is_a: PECO:0000120 ! grouping absent
 created_by: antonialock
 creation_date: 2012-07-03T14:48:27Z
 
@@ -1436,7 +1392,7 @@ creation_date: 2012-07-03T15:19:48Z
 id: PECO:0000152
 name: mannose added
 def: "An experimental condition in which mannose was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-07-12T08:07:09Z
 
@@ -1446,7 +1402,7 @@ name: diethyl maleate added
 def: "An experimental condition in which diethyl maleate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 comment: Diethyl maleate is an agent that leads to the depletion of the antioxidant glutathione in cells.
 synonym: "diethylmaleate added" RELATED []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-07-19T12:36:56Z
 
@@ -1458,7 +1414,7 @@ synonym: "2-aminoethanol added" EXACT []
 synonym: "ETA added" EXACT []
 synonym: "MEA added" EXACT []
 synonym: "monoethanolamine added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-07-20T13:27:44Z
 
@@ -1466,7 +1422,7 @@ creation_date: 2012-07-20T13:27:44Z
 id: PECO:0000155
 name: choline added
 def: "An experimental condition in which choline was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-07-20T14:15:26Z
 
@@ -1508,7 +1464,7 @@ id: PECO:0000160
 name: tacrolimus added
 def: "An experimental condition in which tacrolimus was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "FK506 added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-07-26T16:18:18Z
 
@@ -1525,7 +1481,7 @@ creation_date: 2012-08-13T13:22:44Z
 id: PECO:0000162
 name: high glucose rich medium
 def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is high low (eg around 8%)." []
-is_a: PECO:0000137 ! glucose rich medium
+is_a: PECO:0000080 ! grouping YE
 created_by: antonialock
 creation_date: 2012-08-14T11:45:05Z
 
@@ -1550,7 +1506,7 @@ id: PECO:0000165
 name: sodium sulfide added
 def: "An experimental condition in which sodium sulfide (Na2S) was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "Na2S added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-08-22T13:22:34Z
 
@@ -1559,7 +1515,7 @@ id: PECO:0000166
 name: sodium chloride added
 def: "An experimental condition in which sodium chloride (NaCl) was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "NaCl added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-08-23T13:35:40Z
 
@@ -1568,14 +1524,15 @@ id: PECO:0000167
 name: SDS added
 def: "An experimental condition in which SDS (sodium dodecyl sulfate) was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "sodium dodecyl sulfate added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-08-29T17:04:57Z
 
 [Term]
 id: PECO:0000168
-name: heat shock for 20-30 min at 48 degrees C, preceeded and followed by growth at high temperature
-def: "Cells are initially cultured at 33-37 degrees C. This is followed by a heat shock where the temperature is increased to 48 degrees for 5-20 minutes." []
+name: heat shock and recovery at high temperature
+def: "Cells are initially cultured at a high temperature. This is followed by a heat shock where the temperature is increased to a higher temperature, followed by recovery at the initial temperature." []
+synonym: "heat shock for 20-30 min at 48 degrees C, preceeded and followed by growth at high temperature" NARROW []
 is_a: PECO:0000116 ! heat shock
 created_by: antonialock
 creation_date: 2012-08-30T16:10:36Z
@@ -1584,7 +1541,7 @@ creation_date: 2012-08-30T16:10:36Z
 id: PECO:0000169
 name: limited ethanolamine added
 def: "An experimental condition in which ethanolamine was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-08-30T17:39:24Z
 
@@ -1593,7 +1550,7 @@ id: PECO:0000170
 name: hydroxyurea added
 def: "An experimental condition in which hydroxyurea was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "HU added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-09-03T15:38:10Z
 
@@ -1601,7 +1558,7 @@ creation_date: 2012-09-03T15:38:10Z
 id: PECO:0000171
 name: sorbitol absent
 def: "Sorbitol was completely excluded from the experimental medium/buffer." []
-is_a: PECO:0000120 ! chemical absent
+is_a: PECO:0000120 ! grouping absent
 created_by: antonialock
 creation_date: 2012-09-20T12:50:07Z
 
@@ -1619,7 +1576,7 @@ id: PECO:0000173
 name: zinc chloride added
 def: "An experimental condition in which zinc chloride was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "ZnCl2 added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-09-12T13:54:08Z
 
@@ -1629,7 +1586,7 @@ name: iron chloride added
 def: "An experimental condition in which iron chloride was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "FeCl2 added" RELATED []
 synonym: "iron(II) chloride" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-09-12T13:55:55Z
 
@@ -1638,7 +1595,7 @@ id: PECO:0000175
 name: cadmium chloride added
 def: "An experimental condition in which cadmium chloride was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "CaCl2 added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-09-12T13:57:22Z
 
@@ -1647,7 +1604,7 @@ id: PECO:0000176
 name: ethylenediaminetetraacetic acid added
 def: "An experimental condition in which ethylenediaminetetraacetic acid (EDTA) was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "EDTA added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-09-12T13:58:30Z
 
@@ -1656,7 +1613,7 @@ id: PECO:0000177
 name: limited zinc added
 def: "An experimental condition in which zinc was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
 synonym: "limited Zn added" EXACT []
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-09-13T09:15:03Z
 
@@ -1666,7 +1623,7 @@ name: methionine added
 def: "An experimental condition in which methionine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "M added" RELATED []
 synonym: "Met added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-09-14T07:57:07Z
 
@@ -1676,7 +1633,7 @@ name: cysteine added
 def: "An experimental condition in which cysteine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "C added" EXACT []
 synonym: "Cys added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-09-14T08:12:02Z
 
@@ -1685,7 +1642,7 @@ id: PECO:0000180
 name: limited sulphur added
 def: "An experimental condition in which sulphur was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
 synonym: "limited sulfur added" EXACT []
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-09-14T15:29:44Z
 
@@ -1693,7 +1650,7 @@ creation_date: 2012-09-14T15:29:44Z
 id: PECO:0000181
 name: glucose added
 def: "An experimental condition in which glucose was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-10-03T16:55:50Z
 
@@ -1702,7 +1659,7 @@ id: PECO:0000182
 name: asparagine added
 def: "An experimental condition in which asparagine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "asp added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-10-03T16:56:23Z
 
@@ -1710,7 +1667,7 @@ creation_date: 2012-10-03T16:56:23Z
 id: PECO:0000183
 name: alpha-tocopherol added
 def: "An experimental condition in which alpha-tocopherol was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-10-24T18:01:22Z
 
@@ -1719,7 +1676,7 @@ id: PECO:0000184
 name: copper chloride added
 def: "An experimental condition in which copper chloride was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "CuCl2 added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-10-26T13:32:50Z
 
@@ -1727,7 +1684,7 @@ creation_date: 2012-10-26T13:32:50Z
 id: PECO:0000185
 name: limited sodium added
 def: "An experimental condition in which sodium was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-10-26T18:09:39Z
 
@@ -1737,7 +1694,7 @@ name: iron sulfate added
 def: "An experimental condition in which iron sulfate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "FeSO4 added" EXACT []
 synonym: "iron sulphate added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-10-30T18:01:16Z
 
@@ -1745,7 +1702,7 @@ creation_date: 2012-10-30T18:01:16Z
 id: PECO:0000187
 name: pantothenate absent
 def: "Pantothenate was completely excluded from the experimental medium/buffer." []
-is_a: PECO:0000120 ! chemical absent
+is_a: PECO:0000120 ! grouping absent
 created_by: antonialock
 creation_date: 2012-11-06T17:52:03Z
 
@@ -1753,7 +1710,7 @@ creation_date: 2012-11-06T17:52:03Z
 id: PECO:0000188
 name: pantothenate added
 def: "An experimental condition in which pantothenate was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-11-06T17:52:53Z
 
@@ -1761,7 +1718,7 @@ creation_date: 2012-11-06T17:52:53Z
 id: PECO:0000189
 name: limited pantothenate added
 def: "An experimental condition in which pantothenate was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-11-06T17:53:36Z
 
@@ -1778,7 +1735,7 @@ creation_date: 2012-11-07T09:34:15Z
 id: PECO:0000191
 name: biotin added
 def: "An experimental condition in which biotin was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-11-08T14:23:51Z
 
@@ -1786,7 +1743,7 @@ creation_date: 2012-11-08T14:23:51Z
 id: PECO:0000192
 name: biotin absent
 def: "Biotin was completely excluded from the experimental medium/buffer." []
-is_a: PECO:0000120 ! chemical absent
+is_a: PECO:0000120 ! grouping absent
 created_by: antonialock
 creation_date: 2012-11-08T14:24:28Z
 
@@ -1795,7 +1752,7 @@ id: PECO:0000193
 name: dethiobiotin added
 def: "An experimental condition in which dethiobiotin was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "desthiobiotin added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-11-08T14:27:59Z
 
@@ -1803,7 +1760,7 @@ creation_date: 2012-11-08T14:27:59Z
 id: PECO:0000194
 name: limited biotin added
 def: "An experimental condition in which biotin was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-11-08T14:29:02Z
 
@@ -1812,14 +1769,16 @@ id: PECO:0000195
 name: limited dethiobiotin added
 def: "An experimental condition in which dethiobiotin was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
 synonym: "limited desthiobiotin added" EXACT []
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-11-08T14:29:19Z
 
 [Term]
 id: PECO:0000196
-name: standard glucose minimal medium, urea nitrogen source
+name: glucose minimal medium, urea nitrogen source
 def: "Experiments were performed in medium containing glucose (typically <2% w/v), salts, water and with urea as the nitrogen source." []
+synonym: "standard glucose minimal medium, urea nitrogen source" RELATED []
+is_a: PECO:0000013 ! grouping -MM
 is_a: PECO:0000126 ! glucose minimal medium
 created_by: antonialock
 creation_date: 2012-11-08T18:22:08Z
@@ -1828,7 +1787,7 @@ creation_date: 2012-11-08T18:22:08Z
 id: PECO:0000197
 name: limited nickel added
 def: "An experimental condition in which nickel was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
-is_a: PECO:0000011 ! limited chemical added
+is_a: PECO:0000011 ! grouping limited
 created_by: antonialock
 creation_date: 2012-11-08T18:23:55Z
 
@@ -1844,7 +1803,7 @@ creation_date: 2012-11-08T19:06:15Z
 id: PECO:0000199
 name: lysine added
 def: "An experimental condition in which lysine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-11-08T19:41:42Z
 
@@ -1852,7 +1811,7 @@ creation_date: 2012-11-08T19:41:42Z
 id: PECO:0000200
 name: peptone added
 def: "An experimental condition in which peptone was added to the medium or assay buffer in excess. Peptone is a mixture of nutrients generated by proteolytic digestion of animal protein with pepsin and serves as a nitrogen and amino acid source in some culture media. Peptone is not normally added to S. pombe growth media." []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-11-13T12:38:35Z
 
@@ -1861,8 +1820,8 @@ id: PECO:0000201
 name: glucose rich medium, peptone/YE nitrogen source
 def: "Experiments were performed in rich medium containing peptone, yeast extract and other components. The concentration of glucose is typically around 2-3%. Note that peptone, which is a mixture of nutrients generated by proteolytic digestion of animal protein with trypsin, is not normally a component of S. pombe rich media (it is however normally present in S. cerevisiae rich media)." []
 synonym: "YPD medium" NARROW []
-is_a: PECO:0000080 ! rich medium
-is_a: PECO:0000137 ! glucose rich medium
+is_a: PECO:0000001 ! phenotype condition
+is_a: PECO:0000080 ! grouping YE
 created_by: antonialock
 creation_date: 2012-11-13T12:40:59Z
 
@@ -1872,32 +1831,27 @@ name: chilled cells
 def: "Cells were chilled by placing them on ice." []
 synonym: "cold" RELATED []
 synonym: "ice" RELATED []
-is_a: PECO:0000002 ! temperature
+is_a: PECO:0000132 ! grouping experimental environment
 created_by: antonialock
 creation_date: 2012-11-15T17:01:01Z
 
 [Term]
 id: PECO:0000203
-name: cell type
+name: diploid
+alt_id: PECO:0000204
+def: "An experimental condition in which a phenotype is observed in diploid cells." []
 subset: Grouping_terms
+synonym: "2N cells" EXACT []
 is_a: PECO:0000001 ! phenotype condition
 created_by: antonialock
 creation_date: 2012-11-22T20:39:13Z
-
-[Term]
-id: PECO:0000204
-name: diploid cells
-def: "An experimental condition in which a phenotype is observed in diploid cells." []
-is_a: PECO:0000203 ! cell type
-created_by: antonialock
-creation_date: 2012-11-22T20:39:53Z
 
 [Term]
 id: PECO:0000205
 name: sodium sulfate added
 def: "An experimental condition in which sodium sulfate (Na2SO4) was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "Na2SO4 added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-11-26T16:28:39Z
 
@@ -1907,7 +1861,7 @@ name: caesium chloride added
 def: "An experimental condition in which caesium chloride was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "cesium chloride added" EXACT []
 synonym: "CsCl added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-11-26T16:36:59Z
 
@@ -1916,7 +1870,7 @@ id: PECO:0000207
 name: potassium chloride added
 def: "An experimental condition in which potassium chloride was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "KCl added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-11-26T16:38:19Z
 
@@ -1925,9 +1879,26 @@ id: PECO:0000208
 name: ammonium chloride added
 def: "An experimental condition in which ammonium chloride was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
 synonym: "NH4Cl added" EXACT []
-is_a: PECO:0000109 ! excess chemical added
+is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-11-26T16:39:07Z
+
+[Term]
+id: PECO:0000209
+name: biochanin A added
+def: "An experimental condition in which biochanin A (BCA) was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
+synonym: "BCA added" EXACT []
+is_a: PECO:0000109 ! grouping excess
+created_by: antonialock
+creation_date: 2012-11-29T12:46:27Z
+
+[Term]
+id: PECO:0000210
+name: limited glucose added
+def: "An experimental condition in which glucose was added to the medium or assay buffers in a limiting quantity compared to standard medium or assay buffers." []
+is_a: PECO:0000011 ! grouping limited
+created_by: antonialock
+creation_date: 2012-11-30T11:01:55Z
 
 [Typedef]
 id: part_of
