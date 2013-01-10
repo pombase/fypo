@@ -69,10 +69,6 @@ do
     (echo failed to move $file to release directory 1>&2; exit 1)
 done
 
-rm releases/latest
-
-(cd releases; ln -s $release latest)
-
 svn commit --username=$username -m 'FYPO release' releases
 
 cp $new_release_dir/* /var/www/pombase/ontologies/fypo/latest/
