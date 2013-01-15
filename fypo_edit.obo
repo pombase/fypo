@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 10:01:2013 16:44
+date: 15:01:2013 11:51
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 subsetdef: high_level_annotation_qc "High-level terms not to be used for direct annotation"
@@ -19102,7 +19102,6 @@ creation_date: 2012-08-22T13:05:17Z
 id: FYPO:0001420
 name: normal vegetative cell growth rate
 def: "A cellular process phenotype in which cells grow at the same rate as wild type in the vegetative growth phase of the life cycle." [PomBase:mah]
-is_a: FYPO:0001357 ! normal vegetative cell growth
 is_a: FYPO:0001419 ! normal cell growth rate
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0072690
@@ -20623,7 +20622,8 @@ creation_date: 2012-09-13T14:53:26Z
 [Term]
 id: FYPO:0001528
 name: abnormal GTP binding
-def: "A molecular function phenotype in which occurrence of GTP binding by a mutated gene product is abnormal." [PomBase:mah]
+def: "A molecular function phenotype in which occurrence of GTP binding by a gene product (usually a protein) in a mutant is abnormal." [PomBase:mah]
+comment: This term can mean that the mutated gene product itself binds GTP differently from wild type, or that a mutation in one gene affects GTP binding by a second gene product. When using this term, it is therefore recommended to note the specific protein(s) affected.
 is_a: FYPO:0000707 ! abnormal molecular function
 is_a: FYPO:0001092 ! binding phenotype
 intersection_of: PATO:0000001
@@ -20635,7 +20635,8 @@ creation_date: 2012-09-13T14:54:29Z
 [Term]
 id: FYPO:0001529
 name: decreased GTP binding
-def: "A molecular function phenotype in which occurrence of GTP binding by a mutated gene product is decreased." [PomBase:mah]
+def: "A molecular function phenotype in which occurrence of GTP binding  by a gene product (usually a protein) in a mutant is decreased." [PomBase:mah]
+comment: This term can mean that the mutated gene product itself binds GTP less than wild type, or that a mutation in one gene decreases GTP binding by a second gene product. When using this term, it is therefore recommended to note the specific protein(s) affected.
 synonym: "reduced GTP binding" EXACT [PomBase:mah]
 is_a: FYPO:0001528 ! abnormal GTP binding
 intersection_of: PATO:0002052
@@ -23512,7 +23513,8 @@ creation_date: 2012-11-08T14:29:13Z
 [Term]
 id: FYPO:0001724
 name: increased GTP binding
-def: "A molecular function phenotype in which occurrence of GTP binding by a mutated gene product is increased." [PomBase:mah]
+def: "A molecular function phenotype in which occurrence of GTP binding  by a gene product (usually a protein) in a mutant is increased." [PomBase:mah]
+comment: This term can mean that the mutated gene product itself binds GTP more than wild type, or that a mutation in one gene increases GTP binding by a second gene product. When using this term, it is therefore recommended to note the specific protein(s) affected.
 is_a: FYPO:0001528 ! abnormal GTP binding
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0005255
@@ -25199,7 +25201,7 @@ is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
 is_a: FYPO:0001720 ! abnormal transport
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0033216
+intersection_of: inheres_in GO:0097461
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2012-12-18T13:37:37Z
@@ -25216,7 +25218,7 @@ synonym: "reduced ferric iron import" EXACT [PomBase:mah]
 is_a: FYPO:0001849 ! abnormal ferric iron import
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:033216
+intersection_of: inheres_in GO:0097461
 created_by: midori
 creation_date: 2012-12-18T13:37:47Z
 
@@ -25230,7 +25232,7 @@ synonym: "normal ferrous iron import into cell" EXACT [PomBase:al]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0070627
+intersection_of: inheres_in GO:0097460
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-12-18T13:57:53Z
@@ -25387,6 +25389,9 @@ def: "A molecular function phenotype in which leptomycin B binding by a mutated 
 synonym: "abolished LMB binding" EXACT [PomBase:al]
 synonym: "leptomycin B binding abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001092 ! binding phenotype
+intersection_of: PATO:0001558
+intersection_of: happens_during GO:0010106
+intersection_of: towards GO:1901707
 created_by: midori
 creation_date: 2012-12-18T15:04:38Z
 
