@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2013-01-10
-date: 10:01:2013 16:44
+data-version: 2013-01-31
+date: 31:01:2013 16:15
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -52,13 +52,13 @@ subsetdef: upper_level "abstract upper-level terms not directly useful for analy
 subsetdef: upper_ontology_conflict "Terms in this subset group together terms from different anatomy ontologies that have conflicting upper ontology/CARO assignments. For example, in FMA the naris is immaterial and in ZFA it is an organism subdivision."
 subsetdef: value_slim "Value slim"
 subsetdef: vertebrate_core "core classes typically found across vertebrates. one purpose is to create a rough set of terms that could be used to start a new vertebrate AO"
+subsetdef: vessel_or_tree "A term classified differently in FMA due to its treatment of branching structures - to be reviewed and revised by editors"
 subsetdef: virus_checked "Viral overhaul terms"
 synonymtypedef: aa1 "amino acid 1 letter code" 
 synonymtypedef: aa3 "amino acid 3 letter code" 
 synonymtypedef: AAMOD "amino acid modification" 
 synonymtypedef: ABBREVIATION "abbreviation" 
 synonymtypedef: ATTRIBUTION_REQUIRED "expert consultation and attribution required" 
-synonymtypedef: BRAND_NAME "BRAND NAME"
 synonymtypedef: BRAND_NAME "BRAND NAME" 
 synonymtypedef: BS "biosapiens" 
 synonymtypedef: dbsnp "dbsnp variant terms" 
@@ -67,32 +67,26 @@ synonymtypedef: DEPRECATED "A historic synonym, no longer encouraged"
 synonymtypedef: DEVELOPMENTAL "developmental term" 
 synonymtypedef: DUBIOUS "dubious or contested synonym" 
 synonymtypedef: ebi_variants "ensembl variant terms" 
-synonymtypedef: FORMULA "FORMULA"
 synonymtypedef: FORMULA "FORMULA" 
-synonymtypedef: GE "LANGUAGE GERMAN"
+synonymtypedef: GE "LANGUAGE GERMAN" 
 synonymtypedef: HOMOLOGY "a synonym made on the basis of a possibly homologous structure in another species" 
 synonymtypedef: HUMAN_PREFERRED "preferred term when talking about an instance of this class in Homo sapiens" 
 synonymtypedef: InChI "InChI" 
-synonymtypedef: InChI "InChI"
-synonymtypedef: InChIKey "InChIKey"
 synonymtypedef: InChIKey "InChIKey" 
 synonymtypedef: INCONSISTENT "indicates that a synonym is used in an inconsistent or confusing way, typically between species" 
 synonymtypedef: INN "INN" 
-synonymtypedef: INN "INN"
 synonymtypedef: IUPAC_NAME "IUPAC NAME" 
-synonymtypedef: IUPAC_NAME "IUPAC NAME"
 synonymtypedef: LATIN "latin term" 
 synonymtypedef: PLURAL "plural term" 
 synonymtypedef: PRO-short-label "Unique short label for PRO terms for display purposes" EXACT
 synonymtypedef: PSI-MOD-label "Unique short label curated by PSI-MOD" EXACT
 synonymtypedef: RNAMOD "RNA modification" EXACT
-synonymtypedef: SCI "SCIENTIFIC NAME"
+synonymtypedef: SCI "SCIENTIFIC NAME" 
 synonymtypedef: SENSU "taxonomic disambiguation" 
 synonymtypedef: SMILES "SMILES" 
-synonymtypedef: SMILES "SMILES"
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 149 $
+remark: svn version: $Revision: 569 $
 ontology: fypo
 
 [Term]
@@ -245,7 +239,6 @@ comment: A T-shaped cell may septate perpendicular to the normal septation axis,
 synonym: "cell morphology, T shaped" EXACT [PomBase:mah]
 synonym: "T-shaped cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001118 ! abnormal vegetative cell morphology
-is_a: FYPO:0001126 ! abnormal cell shape
 is_a: FYPO:0001491 ! viable vegetative cells
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
@@ -280,7 +273,6 @@ synonym: "bent cells" EXACT [PomBase:mah]
 synonym: "cell morphology, curved" EXACT [PomBase:mah]
 synonym: "curved cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001118 ! abnormal vegetative cell morphology
-is_a: FYPO:0001126 ! abnormal cell shape
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -291,7 +283,6 @@ def: "A cell morphology phenotype in which cells are longer than normal, i.e. th
 synonym: "cell morphology, elongated cells" EXACT [PomBase:mah]
 synonym: "long cells" EXACT [PomBase:vw]
 is_a: FYPO:0001126 ! abnormal cell shape
-is_a: FYPO:0001127 ! abnormal cell size
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -322,6 +313,7 @@ id: FYPO:0000022
 name: shmoos with long tips
 def: "A cell morphology phenotype in which a cell forms a mating projection with a longer tip than normal." [PomBase:mah]
 synonym: "cell morphology, shmoos with long tips" EXACT [PomBase:mah]
+synonym: "conjugation tubes with long tips" EXACT [PomBase:mah]
 synonym: "mating projections with long tips" EXACT [PomBase:mah]
 is_a: FYPO:0000357 ! abnormal shmoo morphology
 created_by: midori
@@ -671,11 +663,11 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000055
 name: long microtubules
-def: "A microtubule organization phenotype observed in the vegetative growth phase of the life cycle in which cells form microtubules that are longer than normal." [PomBase:mah]
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells form microtubules that are longer than normal." [PomBase:mah]
+synonym: "elongated microtubules" EXACT [PomBase:mah]
 synonym: "long microtubules during vegetative growth" EXACT [PomBase:mah]
 synonym: "microtubule organization defects, long microtubules" EXACT [PomBase:mah]
-is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
-is_a: FYPO:0001350 ! abnormal microtubule cytoskeleton organization during vegetative growth
+is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -703,6 +695,7 @@ name: mitochondrial nucleoid decreased number
 def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which a cell contains fewer mitochondrial nucleoids than normal." [PomBase:mah]
 synonym: "mitochondrial nucleoid decreased number during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitochondrial nucleoid reduced number" EXACT [PomBase:mah]
+synonym: "mitochondrial nucleoids present in decreased number" RELATED [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
@@ -925,7 +918,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000079
 name: sensitive to caspofungin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to caspofungin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to caspofungin. Cells stop growing (and may die) at a concentration of caspofungin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to caspofungin" EXACT [PomBase:mah]
 synonym: "sensitive to caspofungin during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to glucan synthase inhibitor" BROAD [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -938,6 +932,7 @@ name: sensitive to cold
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cold; cells fail to grow or grow more slowly than normal at low temperatures." [PomBase:mah]
 synonym: "cold sensitive" EXACT [PomBase:mah]
 synonym: "cold sensitivity: increased" EXACT [SGD:phenotype_annotation]
+synonym: "hypersensitive to cold" EXACT [PomBase:mah]
 synonym: "sensitive to cold during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress
 created_by: midori
@@ -948,6 +943,7 @@ id: FYPO:0000081
 name: sensitive to high osmolarity
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to conditions of high osmolarity." [PomBase:mah]
 synonym: "hyperosmotic stress resistance: decreased" EXACT [SGD:phenotype_annotation]
+synonym: "hypersensitive to high osmolarity" EXACT [PomBase:mah]
 synonym: "sensitive to high osmolarity during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to hyperosmotic conditions" EXACT [PomBase:mah]
 is_a: FYPO:0000270 ! sensitive to osmotic stress
@@ -961,6 +957,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
 synonym: "heat sensitive" EXACT [PomBase:mah]
 synonym: "heat sensitivity: increased" EXACT [SGD:phenotype_annotation]
+synonym: "hypersensitive to high temperature" EXACT [PomBase:mah]
 synonym: "sensitive to heat" EXACT [PomBase:mah]
 synonym: "sensitive to high temperature during vegetative growth" EXACT [PomBase:mah]
 synonym: "temperature sensitive" RELATED [PomBase:mah]
@@ -972,7 +969,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000083
 name: sensitive to enfumafungin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to enfumafungin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to enfumafungin. Cells stop growing (and may die) at a concentration of enfumafungin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to enfumafungin" EXACT [PomBase:mah]
 synonym: "sensitive to enfumafungin during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to glucan synthase inhibitor" BROAD [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -982,7 +980,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000084
 name: sensitive to 6-azauracil
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 6-azauracil." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 6-azauracil. Cells stop growing (and may die) at a concentration of 6-azauracil that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to 6-azauracil" EXACT [PomBase:mah]
 synonym: "sensitive to 6-azauracil during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -991,7 +990,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000085
 name: sensitive to camptothecin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to camptothecin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to camptothecin. Cells stop growing (and may die) at a concentration of camptothecin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to camptothecin" EXACT [PomBase:mah]
 synonym: "sensitive to camptothecin during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to CPT" EXACT [CHEBI:27656, PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1001,7 +1001,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000086
 name: sensitive to tacrolimus
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tacrolimus." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tacrolimus. Cells stop growing (and may die) at a concentration of tacrolimus that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to tacrolimus" EXACT [PomBase:mah]
 synonym: "sensitive to FK506" EXACT [CHEBI:61057, PomBase:mah]
 synonym: "sensitive to tacrolimus during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1011,7 +1012,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000087
 name: sensitive to hydrogen peroxide
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to hydrogen peroxide." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to hydrogen peroxide. Cells stop growing (and may die) at a concentration of hydrogen peroxide that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to hydrogen peroxide" EXACT [PomBase:mah]
 synonym: "sensitive to H2O2" EXACT [PomBase:mah]
 synonym: "sensitive to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1021,7 +1023,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000088
 name: sensitive to hydroxyurea
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to hydroxyurea." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to hydroxyurea. Cells stop growing (and may die) at a concentration of hydroxyurea that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to hydroxyurea" EXACT [PomBase:mah]
 synonym: "sensitive to HU" EXACT [PomBase:mah]
 synonym: "sensitive to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1031,7 +1034,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000089
 name: sensitive to methyl methanesulfonate
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to methyl methanesulfonate." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to methyl methanesulfonate. Cells stop growing (and may die) at a concentration of methyl methanesulfonate that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to methyl methanesulfonate" EXACT [PomBase:mah]
 synonym: "sensitive to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to MMS" EXACT [CHEBI:25255, PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1041,7 +1045,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000090
 name: sensitive to N-ethylmaleimide
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to N-ethylmaleimide." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to N-ethylmaleimide. Cells stop growing (and may die) at a concentration of N-ethylmaleimide that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to N-ethylmaleimide" EXACT [PomBase:mah]
 synonym: "sensitive to N-ethylmaleimide during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to NEM" EXACT [CHEBI:44485, PomBase:al]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1051,7 +1056,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000091
 name: sensitive to thiabendazole
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to thiabendazole." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to thiabendazole. Cells stop growing (and may die) at a concentration of thiabendazole that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to thiabendazole" EXACT [PomBase:mah]
 synonym: "sensitive to TBZ" EXACT [CHEBI:45979, PomBase:mah]
 synonym: "sensitive to thiabendazole during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1061,7 +1067,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000092
 name: sensitive to amiodarone
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to amiodarone." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to amiodarone. Cells stop growing (and may die) at a concentration of amiodarone that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to amiodarone" EXACT [PomBase:mah]
 synonym: "sensitive to amiodarone during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1070,7 +1077,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000093
 name: sensitive to arsenic
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to arsenic." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to arsenic. Cells stop growing (and may die) at a concentration of arsenic that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to arsenic" EXACT [PomBase:mah]
 synonym: "sensitive to arsenic during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1079,7 +1087,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000094
 name: sensitive to benomyl
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to benomyl." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to benomyl. Cells stop growing (and may die) at a concentration of benomyl that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to benomyl" EXACT [PomBase:mah]
 synonym: "sensitive to benomyl during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1088,7 +1097,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000095
 name: sensitive to bleomycin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to bleomycin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to bleomycin. Cells stop growing (and may die) at a concentration of bleomycin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to bleomycin" EXACT [PomBase:mah]
 synonym: "sensitive to bleomycin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1097,7 +1107,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000096
 name: sensitive to cadmium
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cadmium." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cadmium. Cells stop growing (and may die) at a concentration of cadmium that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to cadmium" EXACT [PomBase:mah]
 synonym: "sensitive to cadmium during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1106,7 +1117,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000097
 name: sensitive to caffeine
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to caffeine." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to caffeine. Cells stop growing (and may die) at a concentration of caffeine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to caffeine" EXACT [PomBase:mah]
 synonym: "sensitive to caffeine during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1115,7 +1127,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000098
 name: sensitive to calcium
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to calcium." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to calcium. Cells stop growing (and may die) at a concentration of calcium ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to calcium" EXACT [PomBase:mah]
 synonym: "sensitive to calcium during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to calcium ions" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1125,7 +1138,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000099
 name: sensitive to canavanine
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to canavanine." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to canavanine. Cells stop growing (and may die) at a concentration of canavanine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to canavanine" EXACT [PomBase:mah]
 synonym: "sensitive to canavanine during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1134,7 +1148,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000100
 name: sensitive to chloramphenicol
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to chloramphenicol." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to chloramphenicol. Cells stop growing (and may die) at a concentration of chloramphenicol that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to chloramphenicol" EXACT [PomBase:mah]
 synonym: "sensitive to chloramphenicol during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1143,7 +1158,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000101
 name: sensitive to chlorpropham
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to chlorpropham." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to chlorpropham. Cells stop growing (and may die) at a concentration of chlorpropham that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to chlorpropham" EXACT [PomBase:mah]
 synonym: "sensitive to chlorpropham during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to isopropyl N-3-chlorophenyl carbamate" EXACT [PomBase:mah]
 synonym: "sensitive to spindle poison" BROAD [PomBase:mah]
@@ -1154,7 +1170,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000102
 name: sensitive to cisplatin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cisplatin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cisplatin. Cells stop growing (and may die) at a concentration of cisplatin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to cisplatin" EXACT [PomBase:mah]
 synonym: "sensitive to cis-DDP" EXACT [CHEBI:27899]
 synonym: "sensitive to cisplatin during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to DDP" BROAD [CHEBI:27899, PomBase:al]
@@ -1165,7 +1182,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000103
 name: sensitive to copper
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to copper ions." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to copper ions. Cells stop growing (and may die) at a concentration of copper ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to copper" EXACT [PomBase:mah]
 synonym: "sensitive to copper during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to copper ions" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1175,7 +1193,8 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000104
 name: sensitive to cycloheximide
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cycloheximide." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cycloheximide. Cells stop growing (and may die) at a concentration of cycloheximide that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to cycloheximide" EXACT [PomBase:mah]
 synonym: "sensitive to cycloheximide during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1184,7 +1203,8 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000105
 name: sensitive to cyclosporin A
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cyclosporin A." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cyclosporin A. Cells stop growing (and may die) at a concentration of cyclosporin A that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to cyclosporin A" EXACT [PomBase:mah]
 synonym: "sensitive to cyclosporin A during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to cyclosporine" EXACT [CHEBI:4031, PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1194,7 +1214,8 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000106
 name: sensitive to hygromycin B
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to hygromycin B." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to hygromycin B. Cells stop growing (and may die) at a concentration of hygromycin B that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to hygromycin B" EXACT [PomBase:mah]
 synonym: "sensitive to hygromycin B during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1203,7 +1224,8 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000107
 name: sensitive to latrunculin A
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to latrunculin A." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to latrunculin A. Cells stop growing (and may die) at a concentration of latrunculin A that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to latrunculin A" EXACT [PomBase:mah]
 synonym: "sensitive to latrunculin A during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1212,7 +1234,8 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000108
 name: sensitive to menadione
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to menadione." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to menadione. Cells stop growing (and may die) at a concentration of menadione that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to menadione" EXACT [PomBase:mah]
 synonym: "sensitive to menadione during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to vitamin K3" RELATED [PomBase:al]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1222,7 +1245,8 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000109
 name: sensitive to papulacandin B
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to papulacandin B." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to papulacandin B. Cells stop growing (and may die) at a concentration of papulacandin B that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to papulacandin B" EXACT [PomBase:mah]
 synonym: "sensitive to papulacandin B during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1231,7 +1255,8 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000110
 name: sensitive to pravastatin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to pravastatin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to pravastatin. Cells stop growing (and may die) at a concentration of pravastatin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to pravastatin" EXACT [PomBase:mah]
 synonym: "sensitive to pravastatin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1240,7 +1265,8 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000111
 name: sensitive to rapamycin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to rapamycin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to rapamycin. Cells stop growing (and may die) at a concentration of rapamycin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to rapamycin" EXACT [PomBase:mah]
 synonym: "sensitive to rapamycin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1249,7 +1275,8 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000112
 name: sensitive to sorbitol
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to sorbitol." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to sorbitol. Cells stop growing (and may die) at a concentration of sorbitol that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to sorbitol" EXACT [PomBase:mah]
 synonym: "sensitive to glucitol" EXACT [CHEBI:30911, PomBase:mah]
 synonym: "sensitive to sorbitol during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1259,7 +1286,8 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000113
 name: sensitive to staurosporine
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to staurosporine." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to staurosporine. Cells stop growing (and may die) at a concentration of staurosporine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to staurosporine" EXACT [PomBase:mah]
 synonym: "sensitive to staurosporine during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1277,7 +1305,8 @@ creation_date: 2011-04-12T12:00:38Z
 [Term]
 id: FYPO:0000115
 name: sensitive to valproic acid
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to valproic acid." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to valproic acid. Cells stop growing (and may die) at a concentration of valproic acid that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to valproic acid" EXACT [PomBase:mah]
 synonym: "sensitive to valproic acid during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -1286,7 +1315,8 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000116
 name: sensitive to zinc
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to zinc ions." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to zinc ions. Cells stop growing (and may die) at a concentration of zinc ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to zinc" EXACT [PomBase:mah]
 synonym: "sensitive to zinc during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to zinc ions" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -1409,7 +1439,7 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000127
 name: increased sensitivity to chemical
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which a cell shows decreased resistance to a chemical stimulus. Resistance to a chemical is measured by determining the maximum concentration of the chemical at which cells grow and divide." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which a cell shows decreased resistance to a chemical stimulus. Resistance to a chemical is measured by determining the maximum concentration of the chemical at which cells grow and divide. Typically, cells are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type cells to grow." [PomBase:mah]
 synonym: "increased sensitivity to chemical during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistance to chemicals: decreased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0001358 ! cell growth phenotype during vegetative growth
@@ -1720,6 +1750,7 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000157
 name: abnormal response to DNA damage stimulus
 def: "A stress response phenotype observed in the vegetative growth phase of the life cycle in which the response to DNA damage is abnormal." [PomBase:mah]
+comment: Also consider specific phenotype terms for sensitivity to substances or other stimuli that can damage DNA, e.g. 'sensitive to DNA damaging agents' (FYPO:0000266), 'sensitive to methyl methanesulfonate' (FYPO:0000089), 'sensitive to UV' (FYPO:0000268), etc.
 synonym: "abnormal response to DNA damage stimulus during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
 created_by: midori
@@ -1827,7 +1858,6 @@ def: "A cellular process phenotype in which the frequency of DNA recombination a
 synonym: "DNA recombination defect, at mitotic DNA replication fork barriers, elevated" EXACT [PomBase:mah]
 synonym: "increased DNA recombination at mitotic DNA replication fork barriers during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001345 ! abnormal DNA recombination during vegetative growth
-is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -1900,6 +1930,7 @@ synonym: "abnormal spore wall formation" RELATED [PomBase:mah]
 synonym: "spore wall formation: abnormal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000336 ! abnormal cellular component assembly
 is_a: FYPO:0000679 ! developmental process phenotype
+relationship: part_of FYPO:0000121 ! abnormal sporulation
 created_by: midori
 creation_date: 2011-04-13T03:34:54Z
 
@@ -1962,7 +1993,6 @@ synonym: "crossover abolished" EXACT [PomBase:mah]
 synonym: "crossover abolished during vegetative growth" EXACT [PomBase:mah]
 synonym: "DNA recombination defects, crossover, abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001345 ! abnormal DNA recombination during vegetative growth
-is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2004,7 +2034,6 @@ synonym: "decreased gene conversion during vegetative growth" EXACT [PomBase:mah
 synonym: "DNA recombination defects, gene conversion, reduced" EXACT [PomBase:mah]
 synonym: "reduced gene conversion" EXACT [PomBase:mah]
 is_a: FYPO:0001345 ! abnormal DNA recombination during vegetative growth
-is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
 creation_date: 2011-04-19T02:59:38Z
 
 [Term]
@@ -2095,11 +2124,14 @@ creation_date: 2011-04-13T03:41:10Z
 
 [Term]
 id: FYPO:0000196
-name: abnormal prospore formation
+name: abnormal forespore formation
 def: "A sporulation phenotype in which prospore formation is abnormal." [PomBase:mah]
+synonym: "abnormal ascospore-type prospore assembly" EXACT [GO:0031321]
 synonym: "abnormal ascospore-type prospore formation" EXACT [PomBase:mah]
+synonym: "abnormal prospore formation" EXACT [PomBase:mah]
 is_a: FYPO:0000336 ! abnormal cellular component assembly
 is_a: FYPO:0000679 ! developmental process phenotype
+relationship: part_of FYPO:0000121 ! abnormal sporulation
 created_by: midori
 creation_date: 2011-04-13T03:41:10Z
 
@@ -2130,7 +2162,6 @@ def: "A DNA recombination phenotype observed in the vegetative growth phase of t
 synonym: "DNA recombination defects, long tract gene conversion, increased" EXACT [PomBase:mah]
 synonym: "increased long tract gene conversion during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001345 ! abnormal DNA recombination during vegetative growth
-is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2322,7 +2353,7 @@ synonym: "accumulation of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 synonym: "increased centromeric outer repeat transcript level" EXACT [PomBase:mah]
 synonym: "increased level of centromeric outer repeat transcripts" EXACT [PomBase:mah]
 synonym: "increased level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
-is_a: FYPO:0000825 ! increased RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2367,7 +2398,6 @@ def: "A cell morphology phenotype in which a spore assumes a snowman shape, havi
 synonym: "cell morphology, snowman during sporulation" RELATED [PomBase:mah]
 synonym: "snowman during sporulation" RELATED [PomBase:mah]
 is_a: FYPO:0000348 ! abnormal spore morphology
-is_a: FYPO:0001126 ! abnormal cell shape
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2385,11 +2415,11 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000228
 name: lagging chromosomes
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which sister chromatids do not move towards the spindle poles at the same time during mitosis, but instead one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has segregated. Mitotic sister chromatid segregation stops before completing separation of chromosomes." [PMID:11809834, PMID:20211136, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which sister chromatids do not move towards the spindle poles at the same time during mitosis, but instead one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has separated. Mitotic sister chromatid segregation stops before completing separation of chromosomes." [PMID:11809834, PMID:20211136, PomBase:mah]
 synonym: "chromosome segregation defects, lagging chromosomes" EXACT [PomBase:mah]
 synonym: "lagging chromosomes during vegetative growth" EXACT [PomBase:mah]
 synonym: "lagging mitotic sister chromatids" EXACT [PomBase:mah]
-is_a: FYPO:0001271 ! incomplete, unequal mitotic sister chromatid segregation
+is_a: FYPO:0001271 ! incomplete, unequal mitotic sister chromatid separation
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2435,10 +2465,12 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000232
 name: actomyosin contractile ring splitting
 def: "A cytokinesis phenotype observed in the vegetative growth phase of the life cycle in which the contractile ring splits upon initiation of contraction during anaphase B, resulting in the formation of a primary ring that undergoes constriction and a secondary ring that does not constrict." [PMID:18272786, PomBase:mah]
+synonym: "abnormal contractile ring contraction with contractile ring splitting" EXACT [PomBase:mah]
 synonym: "actomyosin contractile ring splitting during vegetative growth" EXACT [PomBase:mah]
+synonym: "actomyosin contractile ring splitting upon contraction" EXACT [PomBase:mah]
 synonym: "cytokinesis defects, splitting of the actinomyosin ring" RELATED [PomBase:mah]
-is_a: FYPO:0000032 ! abnormal cytokinesis
-is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+is_a: FYPO:0001364 ! abnormal contractile ring contraction
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2682,8 +2714,8 @@ synonym: "localization defects, nuclear accumulation of Pap1 and Sty1" NARROW [P
 synonym: "nuclear accumulation of Pap1 and Sty1" NARROW [PomBase:mah]
 synonym: "nuclear accumulation of protein" EXACT [PomBase:mah]
 synonym: "nuclear protein accumulation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000062 ! abnormal nuclear morphology
 is_a: FYPO:0000762 ! protein accumulation
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -2774,6 +2806,8 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000265
 name: sensitive to DNA damage
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to DNA damage." [PomBase:mah]
+comment: Also consider specific phenotype terms for sensitivity to substances or other stimuli that can damage DNA, e.g. 'sensitive to DNA damaging agents' (FYPO:0000266), 'sensitive to methyl methanesulfonate' (FYPO:0000089), 'sensitive to UV' (FYPO:0000268), etc.
+synonym: "hypersensitive to DNA damage" EXACT [PomBase:mah]
 synonym: "sensitive to DNA damage during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000157 ! abnormal response to DNA damage stimulus
 is_a: FYPO:0000304 ! sensitive to stress
@@ -2783,7 +2817,8 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000266
 name: sensitive to DNA damaging agents
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a genotoxin, any chemical compound that can act to induce direct or indirect DNA damage." [CHEBI:50902, PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a genotoxin, any chemical compound that can act to induce direct or indirect DNA damage. Cells stop growing (and may die) at a concentration of a DNA damaging agent that allows wild type cells to grow." [CHEBI:50902, PomBase:mah]
+synonym: "hypersensitive to DNA damaging agents" EXACT [PomBase:mah]
 synonym: "sensitive to DNA damaging agents during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -2793,6 +2828,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000267
 name: sensitive to ionizing radiation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to ionizing radiation." [PomBase:mah]
+synonym: "hypersensitive to ionizing radiation" EXACT [PomBase:mah]
 synonym: "sensitive to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to IR" EXACT [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress
@@ -2803,6 +2839,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000268
 name: sensitive to UV
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to ultraviolet light." [PomBase:mah]
+synonym: "hypersensitive to UV" EXACT [PomBase:mah]
 synonym: "increased sensitivity to UV irradiation" EXACT [PomBase:vw]
 synonym: "sensitive to ultraviolet light" EXACT [PomBase:mah]
 synonym: "sensitive to UV during vegetative growth" EXACT [PomBase:mah]
@@ -2814,7 +2851,8 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000269
 name: sensitive to microtubule depolymerizing drugs
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a microtubule-destabilizing substance." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a microtubule-destabilizing substance. Cells stop growing (and may die) at a concentration of a microtubule-depolymerizing drug that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to microtubule depolymerizing drugs" EXACT [PomBase:mah]
 synonym: "sensitive to microtubule depolymerizing drugs during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -2824,6 +2862,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000270
 name: sensitive to osmotic stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to osmotic stress." [PomBase:mah]
+synonym: "hypersensitive to osmotic stress" EXACT [PomBase:mah]
 synonym: "osmotic stress resistance: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "sensitive to osmotic stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
@@ -2835,6 +2874,7 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000271
 name: sensitive to salt stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a salt stress." [PomBase:mah]
+synonym: "hypersensitive to salt stress" EXACT [PomBase:mah]
 synonym: "ionic stress resistance: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "sensitive to salt stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000270 ! sensitive to osmotic stress
@@ -2920,8 +2960,10 @@ creation_date: 2011-04-19T04:37:01Z
 
 [Term]
 id: FYPO:0000279
-name: formation of azygotic asci upon sporulation
+name: formation of azygotic ascus upon sporulation
 def: "A sporulation phenotype in which azygotic asci form following conjugation and subsequent sporulation. Azygotic ascus formation occurs when meiosis takes place within a diploid cell rather than in a zygote produced by sporulation. Zygotes can resume vegetative growth and form colonies of diploid cells if returned to rich media before commitment to meiosis; under nitrogen starvation, diploid cells heterozygous for mating type will undergo azygotic meiosis. Azygotic asci have a characteristic linear morphology resembling that of a single vegetatively growing cell." [PMID:16169489, PMID:18780734, PMID:20404563, PomBase:mah]
+synonym: "abnormal sporulation resulting in formation of azygotic asci" EXACT [PomBase:mah]
+synonym: "formation of azygotic asci upon sporulation" EXACT [PomBase:mah]
 synonym: "sporulation defects, azygotic asci" EXACT [PomBase:mah]
 is_a: FYPO:0000121 ! abnormal sporulation
 created_by: midori
@@ -2966,7 +3008,7 @@ synonym: "chromosome fragmentation upon segregation during mitosis" EXACT [PomBa
 synonym: "chromosome fragmentation upon segregation during vegetative growth" EXACT [PomBase:mah]
 synonym: "chromosome segregation defects, chromosome fragmentation" EXACT [PomBase:mah]
 is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -2983,6 +3025,7 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000286
 name: sensitive to manganese depletion
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cells grow poorly in medium that has a low concentration of manganese (Mn2+)." [PMID:14723709, PomBase:mah]
+synonym: "hypersensitive to manganese depletion" EXACT [PomBase:mah]
 synonym: "sensitive to manganese depletion during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001356 ! abnormal vegetative cell growth
 created_by: midori
@@ -3155,6 +3198,7 @@ creation_date: 2011-04-26T02:40:00Z
 id: FYPO:0000304
 name: sensitive to stress
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a stress." [PomBase:mah]
+synonym: "hypersensitive to stress" EXACT [PomBase:mah]
 synonym: "sensitive to stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "stress resistance: decreased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
@@ -3701,6 +3745,7 @@ creation_date: 2011-07-14T05:04:23Z
 id: FYPO:0000357
 name: abnormal shmoo morphology
 def: "A cellular structure phenotype in which the morphology of the mating projection is abnormal." [PomBase:mah]
+synonym: "abnormal conjugation tube morphology" EXACT [PomBase:mah]
 synonym: "abnormal mating projection morphology" EXACT [PomBase:mah]
 synonym: "mating projection morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000287 ! abnormal subcellular structure
@@ -4510,7 +4555,8 @@ creation_date: 2011-07-14T06:45:37Z
 [Term]
 id: FYPO:0000440
 name: sensitive to antimycin A
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to antimycin A." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to antimycin A. Cells stop growing (and may die) at a concentration of antimycin A that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to antimycin A" EXACT [PomBase:mah]
 synonym: "sensitive to antimycin A during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -4890,7 +4936,7 @@ id: FYPO:0000475
 name: arrested meiosis
 def: "A cellular process phenotype in which meiosis is arrested." [PomBase:mah]
 synonym: "meiosis: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000476 ! decreased meiosis
+is_a: FYPO:0000051 ! abnormal meiosis
 created_by: midori
 creation_date: 2011-08-15T10:19:32Z
 
@@ -5938,6 +5984,7 @@ creation_date: 2011-08-15T11:41:34Z
 id: FYPO:0000568
 name: abnormal shmoo formation
 def: "A cellular process phenotype in which mating projection assembly is abnormal." [PomBase:mah]
+synonym: "abnormal conjugation tube formation" EXACT [PomBase:mah]
 synonym: "abnormal mating projection assembly" EXACT [PomBase:mah]
 synonym: "abnormal mating projection formation" EXACT [PomBase:mah]
 synonym: "abnormal shmoo assembly" EXACT [PomBase:mah]
@@ -5951,6 +5998,7 @@ creation_date: 2011-08-15T11:41:34Z
 id: FYPO:0000569
 name: abolished shmoo formation
 def: "A cellular process phenotype in which mating projection assembly does not occur." [PomBase:mah]
+synonym: "abolished conjugation tube formation" EXACT [PomBase:mah]
 synonym: "absent shmoo formation" EXACT [PomBase:mah]
 synonym: "mating projection assembly abolished" EXACT [PomBase:mah]
 synonym: "mating projection formation abolished" EXACT [PomBase:mah]
@@ -5965,6 +6013,7 @@ creation_date: 2011-08-15T11:41:34Z
 id: FYPO:0000570
 name: decreased shmoo formation
 def: "A cellular process phenotype in which the occurrence of mating projection assembly is decreased." [PomBase:mah]
+synonym: "decreased conjugation tube formation" EXACT [PomBase:mah]
 synonym: "decreased mating projection assembly" EXACT [PomBase:mah]
 synonym: "decreased mating projection formation" EXACT [PomBase:mah]
 synonym: "decreased shmoo assembly" EXACT [PomBase:mah]
@@ -5978,6 +6027,7 @@ creation_date: 2011-08-15T11:41:34Z
 id: FYPO:0000571
 name: decreased rate of shmoo formation
 def: "A cellular process phenotype in which the rate of mating projection assembly is decreased." [PomBase:mah]
+synonym: "decreased rate of conjugation tube formation" EXACT [PomBase:mah]
 synonym: "decreased rate of mating projection assembly" EXACT [PomBase:mah]
 synonym: "decreased rate of mating projection formation" EXACT [PomBase:mah]
 synonym: "decreased rate of shmoo assembly" EXACT [PomBase:mah]
@@ -5991,6 +6041,7 @@ creation_date: 2011-08-15T11:41:34Z
 id: FYPO:0000572
 name: increased rate of shmoo formation
 def: "A cellular process phenotype in which the rate of mating projection assembly is increased." [PomBase:mah]
+synonym: "increased rate of conjugation tube formation" EXACT [PomBase:mah]
 synonym: "increased rate of mating projection assembly" EXACT [PomBase:mah]
 synonym: "increased rate of mating projection formation" EXACT [PomBase:mah]
 synonym: "increased rate of shmoo assembly" EXACT [PomBase:mah]
@@ -6003,6 +6054,7 @@ creation_date: 2011-08-15T11:41:34Z
 id: FYPO:0000573
 name: normal shmoo formation
 def: "A cellular process phenotype in which mating projection assembly is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal conjugation tube formation" EXACT [PomBase:mah]
 synonym: "normal mating projection assembly" EXACT [PomBase:mah]
 synonym: "normal mating projection formation" EXACT [PomBase:mah]
 synonym: "normal shmoo assembly" EXACT [PomBase:mah]
@@ -6635,7 +6687,8 @@ creation_date: 2011-08-23T04:58:17Z
 [Term]
 id: FYPO:0000633
 name: sensitive to G418
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to G418." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to G418. Cells stop growing (and may die) at a concentration of G418 that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to G418" EXACT [PomBase:mah]
 synonym: "sensitive to G418 during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to Geneticin" EXACT [CHEBI:459363, PomBase:al]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -6791,7 +6844,7 @@ creation_date: 2011-10-10T03:28:02Z
 id: FYPO:0000648
 name: small viable vegetative cells
 def: "A cell morphology phenotype in which vegetatively growing cells are viable but have an abnormally low volume. Note that small viable cells result from a cell cycle size regulation defect." [PomBase:mah]
-synonym: "small viable vegetative cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "small viable cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "wee" EXACT [PomBase:jh, PomBase:mah]
 is_a: FYPO:0000645 ! small vegetative cells
 is_a: FYPO:0001491 ! viable vegetative cells
@@ -7000,6 +7053,8 @@ name: abnormal mitotic chromosome separation
 def: "A cellular process phenotype in which mitotic chromosome separation is abnormal." [PomBase:mah]
 synonym: "abnormal chromosome separation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal mitotic sister chromatid separation" EXACT [GO:0051306]
+synonym: "aneuploidy" RELATED [PomBase:vw]
+synonym: "mitotic chromosome nondisjunction" EXACT [PomBase:mah]
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
 relationship: part_of FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 created_by: midori
@@ -7106,6 +7161,7 @@ id: FYPO:0000681
 name: abnormal sporulation resulting in formation of two-spore ascus
 def: "A sporulation phenotype that results in the formation of an ascus that has abnormal morphology and contains two diploid spores." [PMID:11156975, PomBase:mah, PomBase:vw]
 synonym: "abnormal ascospore formation resulting in formation of two-spore ascus" EXACT [GO:0030437, PomBase:mah]
+synonym: "abnormal sporulation resulting in formation of two-spore asci" EXACT [PomBase:mah]
 is_a: FYPO:0000121 ! abnormal sporulation
 created_by: midori
 creation_date: 2011-12-01T01:29:02Z
@@ -7422,7 +7478,8 @@ creation_date: 2011-12-06T12:25:40Z
 [Term]
 id: FYPO:0000714
 name: sensitive to leptomycin B
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to leptomycin B." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to leptomycin B. Cells stop growing (and may die) at a concentration of leptomycin B that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to leptomycin B" EXACT [PomBase:mah]
 synonym: "sensitive to leptomycin B during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to LMB" EXACT [CHEBI:52646, PomBase:al]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -7432,7 +7489,8 @@ creation_date: 2011-12-06T12:31:38Z
 [Term]
 id: FYPO:0000715
 name: sensitive to K-252a
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to K-252a." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to K-252a. Cells stop growing (and may die) at a concentration of K-252a that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to K-252a" EXACT [PomBase:mah]
 synonym: "sensitive to K-252a during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -7441,7 +7499,8 @@ creation_date: 2011-12-06T12:31:38Z
 [Term]
 id: FYPO:0000716
 name: sensitive to valinomycin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to valinomycin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to valinomycin. Cells stop growing (and may die) at a concentration of valinomycin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to valinomycin" EXACT [PomBase:mah]
 synonym: "sensitive to valinomycin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -7450,7 +7509,8 @@ creation_date: 2011-12-06T12:31:38Z
 [Term]
 id: FYPO:0000717
 name: sensitive to actinomycin D
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to actinomycin D." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to actinomycin D. Cells stop growing (and may die) at a concentration of actinomycin D that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to actinomycin D" EXACT [PomBase:mah]
 synonym: "sensitive to actinomycin D during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -7459,7 +7519,8 @@ creation_date: 2011-12-06T12:31:38Z
 [Term]
 id: FYPO:0000718
 name: sensitive to trisodium vanadate
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to trisodium vanadate (also known as sodium orthovanadate)." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to trisodium vanadate (also known as sodium orthovanadate). Cells stop growing (and may die) at a concentration of trisodium vanadate that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to trisodium vanadate" EXACT [PomBase:mah]
 synonym: "sensitive to sodium orthovanadate" EXACT [CHEBI:35607, PomBase:al]
 synonym: "sensitive to trisodium vanadate during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -7500,6 +7561,7 @@ name: sensitive to acidity
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to acidic pH." [PomBase:mah]
 comment: In chemistry, acid pH is below 7.0. This term, however, is most useful for annotating phenotypes observed at any pH lower than that of standard fission yeast media, about 5.8.
 synonym: "acid pH resistance: decreased" EXACT [SGD:phenotype_annotation]
+synonym: "hypersensitive to acidity" EXACT [PomBase:mah]
 synonym: "sensitive to acidity during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000721 ! abnormal cellular response to pH
 created_by: midori
@@ -7511,6 +7573,7 @@ name: sensitive to alkalinity
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to alkaline pH." [PomBase:mah]
 comment: In chemistry, alkaline pH is over 7.0. This term, however, is most useful for annotating phenotypes observed at any pH higher than that of standard fission yeast media, about 5.8.
 synonym: "alkaline pH resistance: decreased" EXACT [SGD:phenotype_annotation]
+synonym: "hypersensitive to alkalinity" EXACT [PomBase:mah]
 synonym: "sensitive to alkalinity during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000721 ! abnormal cellular response to pH
 created_by: midori
@@ -7544,6 +7607,7 @@ creation_date: 2011-12-07T11:28:32Z
 id: FYPO:0000726
 name: sensitive to oxidative stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to oxidative stress." [PomBase:mah]
+synonym: "hypersensitive to oxidative stress" EXACT [PomBase:mah]
 synonym: "oxidative stress resistance: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "sensitive to oxidative stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress
@@ -7771,7 +7835,8 @@ creation_date: 2012-01-11T01:59:50Z
 [Term]
 id: FYPO:0000748
 name: sensitive to mercury
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to mercury ions." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to mercury ions. Cells stop growing (and may die) at a concentration of mercury ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to mercury" EXACT [PomBase:mah]
 synonym: "sensitive to mercury during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to mercury ions" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -7781,7 +7846,8 @@ creation_date: 2012-01-11T02:03:34Z
 [Term]
 id: FYPO:0000749
 name: sensitive to selenite ion
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to selenite ((SeO3)2-) ions." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to selenite ((SeO3)2-) ions. Cells stop growing (and may die) at a concentration of selenite ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to selenite ion" EXACT [PomBase:mah]
 synonym: "sensitive to selenite ion during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to selenite ions" EXACT [PomBase:mah]
 synonym: "sensitive to selenium" RELATED [PomBase:mah]
@@ -7792,7 +7858,8 @@ creation_date: 2012-01-11T02:09:20Z
 [Term]
 id: FYPO:0000750
 name: sensitive to silver
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to silver ions." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to silver ions. Cells stop growing (and may die) at a concentration of silver ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to silver" EXACT [PomBase:mah]
 synonym: "sensitive to silver during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to silver ions" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -7802,7 +7869,8 @@ creation_date: 2012-01-11T02:23:17Z
 [Term]
 id: FYPO:0000751
 name: sensitive to nickel
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to nickel ions." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to nickel ions. Cells stop growing (and may die) at a concentration of nickel ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to nickel" EXACT [PomBase:mah]
 synonym: "sensitive to nickel during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to nickel ions" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -7848,7 +7916,8 @@ creation_date: 2012-01-11T02:34:31Z
 [Term]
 id: FYPO:0000756
 name: sensitive to bafilomycin A1
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to bafilomycin A1." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to bafilomycin A1. Cells stop growing (and may die) at a concentration of bafilomycin A1 that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to bafilomycin A1" EXACT [PomBase:mah]
 synonym: "sensitive to bafilomycin A" RELATED [PomBase:mah]
 synonym: "sensitive to bafilomycin A1 during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -7858,7 +7927,8 @@ creation_date: 2012-01-12T11:24:11Z
 [Term]
 id: FYPO:0000757
 name: sensitive to nigericin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to nigericin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to nigericin. Cells stop growing (and may die) at a concentration of nigericin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to nigericin" EXACT [PomBase:mah]
 synonym: "sensitive to nigericin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -7867,7 +7937,8 @@ creation_date: 2012-01-12T11:25:08Z
 [Term]
 id: FYPO:0000758
 name: sensitive to bismuth
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to bismuth." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to bismuth. Cells stop growing (and may die) at a concentration of bismuth that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to bismuth" EXACT [PomBase:mah]
 synonym: "sensitive to bismuth during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -7876,7 +7947,8 @@ creation_date: 2012-01-18T03:00:13Z
 [Term]
 id: FYPO:0000759
 name: sensitive to lead
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to lead ions." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to lead ions. Cells stop growing (and may die) at a concentration of lead ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to lead" EXACT [PomBase:mah]
 synonym: "sensitive to lead during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to lead ions" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -7913,7 +7985,6 @@ name: protein accumulation
 def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which specific proteins abnormally accumulate in the cell, or in a part of the cell such as within an organelle." [PomBase:mah]
 synonym: "protein accumulation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
-is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 created_by: midori
 creation_date: 2012-02-09T02:50:56Z
 
@@ -8100,7 +8171,7 @@ comment: Use this term if there is evidence, such as labeled nucleotide incorpor
 synonym: "increased transcription during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000290 ! transcription phenotype
 is_a: FYPO:0001335 ! transcription regulation phenotype during vegetative growth
-relationship: has_output FYPO:0000825 ! increased RNA level
+relationship: has_output FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2012-02-28T03:56:27Z
 
@@ -8157,7 +8228,8 @@ creation_date: 2012-02-29T12:50:40Z
 [Term]
 id: FYPO:0000785
 name: sensitive to formamide
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to formamide." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to formamide. Cells stop growing (and may die) at a concentration of formamide that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to formamide" EXACT [PomBase:mah]
 synonym: "sensitive to formamide during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -8198,7 +8270,8 @@ creation_date: 2012-02-29T01:46:18Z
 [Term]
 id: FYPO:0000789
 name: sensitive to 1-NA-PP1
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 1-NA-PP1." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 1-NA-PP1. Cells stop growing (and may die) at a concentration of 1-NA-PP1 that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to 1-NA-PP1" EXACT [PomBase:mah]
 synonym: "sensitive to 1-NA-PP1 during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to 1-tert-butyl-3-naphthalen-1-yl-1H-pyrazolo[3,4-d]pyrimidin-4-amine " EXACT [CHEBI:52310, PomBase:mah]
 synonym: "sensitive to 4-amino-1-tert-butyl-3-(1'-naphthyl)pyrazolo[3,4-d]pyrimidine " EXACT [CHEBI:52310, PomBase:mah]
@@ -8276,7 +8349,8 @@ creation_date: 2012-02-29T03:27:58Z
 [Term]
 id: FYPO:0000797
 name: sensitive to t-BOOH
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tert-butyl hydroperoxide (t-BOOH)." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tert-butyl hydroperoxide (t-BOOH). Cells stop growing (and may die) at a concentration of t-BOOH that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to t-BOOH" EXACT [PomBase:mah]
 synonym: "sensitive to 2-methyl-prop-2-yl-hydroperoxide" EXACT [CHEBI:365419]
 synonym: "sensitive to t-BOOH during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to tert-butyl hydroperoxide" EXACT [PomBase:al]
@@ -8287,7 +8361,8 @@ creation_date: 2012-02-29T03:49:47Z
 [Term]
 id: FYPO:0000798
 name: sensitive to anisomycin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to anisomycin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to anisomycin. Cells stop growing (and may die) at a concentration of anisomycin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to anisomycin" EXACT [PomBase:mah]
 synonym: "sensitive to anisomycin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -8296,7 +8371,8 @@ creation_date: 2012-02-29T03:54:43Z
 [Term]
 id: FYPO:0000799
 name: sensitive to diamide
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to N,N,N',N'-tetramethyldiazene-1,2-dicarboxamide, also known as diamide." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to N,N,N',N'-tetramethyldiazene-1,2-dicarboxamide, also known as diamide. Cells stop growing (and may die) at a concentration of diamide that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to diamide" EXACT [PomBase:mah]
 synonym: "sensitive to diamide during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to N,N,N',N'-tetramethyldiazene-1,2-dicarboxamide" EXACT [CHEBI:48958]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -8592,19 +8668,19 @@ creation_date: 2012-03-08T03:02:56Z
 
 [Term]
 id: FYPO:0000825
-name: increased RNA level
+name: increased RNA level during vegetative growth
 alt_id: FYPO:0001247
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
-synonym: "increased cellular mRNA level" NARROW [PomBase:vw]
-synonym: "increased cellular RNA level" EXACT [PomBase:mah]
+synonym: "increased cellular mRNA level during vegetative growth" NARROW [PomBase:vw]
+synonym: "increased cellular RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased mRNA level during vegetative growth" NARROW [PomBase:mah]
-synonym: "increased RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased RNA accumulation during vegetative growth" RELATED [PomBase:mah]
 synonym: "increased RNA level during vegetative growth" EXACT [PomBase:mah]
-synonym: "RNA accumulation: increased" RELATED [SGD:phenotype_annotation]
+synonym: "RNA accumulation: increased during vegetative growth" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0001326 ! altered RNA level during vegetative growth
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+is_a: FYPO:0001890 ! increased RNA level
 created_by: midori
 creation_date: 2012-03-08T03:15:26Z
 
@@ -8685,7 +8761,7 @@ def: "A cellular structure phenotype observed in the vegetative growth phase of 
 synonym: "elongated nuclei" EXACT [PomBase:vw]
 synonym: "elongated nucleus during vegetative growth" EXACT [PomBase:mah]
 synonym: "long nucleus" EXACT [PomBase:vw]
-is_a: FYPO:0000344 ! enlarged nucleus
+is_a: FYPO:0000062 ! abnormal nuclear morphology
 created_by: midori
 creation_date: 2012-03-09T03:40:40Z
 
@@ -8788,7 +8864,8 @@ creation_date: 2012-03-14T12:06:03Z
 [Term]
 id: FYPO:0000841
 name: sensitive to sodium dodecyl sulfate
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to sodium dodecyl sulfate (SDS)." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to sodium dodecyl sulfate (SDS). Cells stop growing (and may die) at a concentration of SDS that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to sodium dodecyl sulfate" EXACT [PomBase:mah]
 synonym: "sensitive to SDS" EXACT [CHEBI:8984]
 synonym: "sensitive to sodium dodecyl sulfate during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to sodium dodecyl sulphate" EXACT [CHEBI:8984]
@@ -8799,7 +8876,8 @@ creation_date: 2012-03-14T01:14:35Z
 [Term]
 id: FYPO:0000842
 name: sensitive to ethanol
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to ethanol." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to ethanol. Cells stop growing (and may die) at a concentration of ethanol that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to ethanol" EXACT [PomBase:mah]
 synonym: "sensitive to ethanol during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to ethyl alcohol" EXACT [CHEBI:16236]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -8809,7 +8887,8 @@ creation_date: 2012-03-14T01:25:07Z
 [Term]
 id: FYPO:0000843
 name: sensitive to dithiothreitol
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 1,4-dithiothreitol (DTT)." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 1,4-dithiothreitol (DTT). Cells stop growing (and may die) at a concentration of dithiothreitol that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to dithiothreitol" EXACT [PomBase:mah]
 synonym: "sensitive to 1,4-dithiothreitol" EXACT [CHEBI:18320]
 synonym: "sensitive to dithiothreitol during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to DTT" EXACT [PomBase:al]
@@ -8820,7 +8899,8 @@ creation_date: 2012-03-14T01:26:35Z
 [Term]
 id: FYPO:0000844
 name: sensitive to mercaptoethanol
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to mercaptoethanol." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to mercaptoethanol. Cells stop growing (and may die) at a concentration of mercaptoethanol that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to mercaptoethanol" EXACT [PomBase:mah]
 synonym: "sensitive to 2-sulfanylethanol" EXACT [CHEBI:41218]
 synonym: "sensitive to mercaptoethanol during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -8881,7 +8961,7 @@ def: "A localization phenotype observed in the vegetative growth phase of the li
 synonym: "cytoplasmic accumulation of protein" EXACT [PomBase:mah]
 synonym: "cytoplasmic protein accumulation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000762 ! protein accumulation
-is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-03-14T04:24:49Z
 
@@ -9584,7 +9664,6 @@ name: RNA accumulation
 def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which specific RNA molecules abnormally accumulate in the cell, or in a part of the cell such as within an organelle." [PomBase:mah]
 synonym: "RNA accumulation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000360 ! abnormal RNA localization
-is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 created_by: midori
 creation_date: 2012-03-29T04:00:37Z
 
@@ -9594,8 +9673,8 @@ name: nuclear RNA accumulation
 def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which specific RNA molecules abnormally accumulate, and are constitutively located in, the nucleus." [PMID:12896976, PomBase:mah]
 synonym: "nuclear accumulation of RNA" EXACT [PomBase:mah]
 synonym: "nuclear RNA accumulation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000062 ! abnormal nuclear morphology
 is_a: FYPO:0000910 ! RNA accumulation
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-03-29T04:01:15Z
 
@@ -9615,10 +9694,11 @@ creation_date: 2012-03-30T04:14:39Z
 
 [Term]
 id: FYPO:0000913
-name: abnormal sporulation resulting in formation ascus containing non-uniform spores
+name: abnormal sporulation resulting in formation of ascus containing non-uniform spores
 def: "A sporulation phenotype that results in the formation of an ascus that contains spores of non-uniform size and DNA content." [PMID:20298435, PomBase:mah, PomBase:vw]
 synonym: "abnormal ascospore formation resulting in formation ascus containing non-uniform spores" EXACT [GO:0030437, PomBase:mah]
-is_a: FYPO:0000680 ! abnormal ascus development
+synonym: "abnormal sporulation resulting in formation of asci containing non-uniform spores" RELATED [PomBase:mah]
+is_a: FYPO:0000121 ! abnormal sporulation
 created_by: midori
 creation_date: 2012-04-02T12:04:59Z
 
@@ -9835,7 +9915,7 @@ name: protein localization to microtubule cytoskeleton abolished
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the microtubule cytoskeleton does not occur." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abolished protein localization to microtubule cytoskeleton" EXACT [PomBase:mah]
-synonym: "protein absent from to microtubule cytoskeleton" RELATED [PomBase:mah]
+synonym: "protein absent from microtubule cytoskeleton" RELATED [PomBase:mah]
 synonym: "protein localisation to microtubule cytoskeleton abolished" EXACT [PomBase:mah]
 synonym: "protein localization to microtubule cytoskeleton abolished during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
@@ -9918,13 +9998,13 @@ creation_date: 2012-04-02T03:52:49Z
 
 [Term]
 id: FYPO:0000941
-name: protein localization to spindle pole body abolished
+name: abolished protein localization to spindle pole body
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the spindle pole body does not occur." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abolished protein localization to spindle pole body" EXACT [PomBase:mah]
-synonym: "protein absent from to spindle pole body" RELATED [PomBase:mah]
+synonym: "protein absent from spindle pole body" RELATED [PomBase:mah]
 synonym: "protein localisation to spindle pole body abolished" EXACT [PomBase:mah]
 synonym: "protein localization to SPB abolished" EXACT [PomBase:mah]
+synonym: "protein localization to spindle pole body abolished" EXACT [PomBase:mah]
 synonym: "protein localization to spindle pole body abolished during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000939 ! abnormal protein localization to spindle pole body
 is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
@@ -10262,7 +10342,8 @@ creation_date: 2012-04-19T01:25:40Z
 [Term]
 id: FYPO:0000970
 name: sensitive to mitomycin C
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to mitomycin C." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to mitomycin C. Cells stop growing (and may die) at a concentration of mitomycin C that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to mitomycin C" EXACT [PomBase:mah]
 synonym: "sensitive to mitomycin C during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -10559,8 +10640,8 @@ id: FYPO:0001000
 name: normal cell cycle arrest in mitotic G1 phase during nitrogen starvation
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested normally in G1 phase when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
 synonym: "mitotic G1 phase arrest during nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000298 ! cellular response phenotype
 is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
-is_a: FYPO:0000711 ! decreased cell cycle arrest in response to nitrogen starvation
 is_a: FYPO:0001025 ! normally arrested cell cycle progression
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
 created_by: midori
@@ -10571,7 +10652,7 @@ id: FYPO:0001001
 name: abnormal cell cycle arrest in mitotic G2 phase during nitrogen starvation
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in G2 phase, instead of the normal G1 phase, when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
 synonym: "mitotic G2 phase arrest during nitrogen starvation" EXACT [PomBase:mah]
-is_a: FYPO:0000711 ! decreased cell cycle arrest in response to nitrogen starvation
+is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
 is_a: FYPO:0001151 ! cell cycle arrest in mitotic G2 phase during starvation
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
 created_by: midori
@@ -11495,9 +11576,8 @@ synonym: "decreased cell wall alpha-D-glucan level" EXACT [CHEBI:22385, PomBase:
 synonym: "decreased cell wall alpha-glucan accumulation" RELATED [PomBase:mah]
 synonym: "decreased cell wall alpha-glucan level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced cell wall alpha-glucan level" EXACT [PomBase:mah]
-is_a: FYPO:0000027 ! abnormal cell wall
 is_a: FYPO:0001080 ! decreased polysaccharide level
-is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-05-31T16:35:00Z
 
@@ -11509,9 +11589,8 @@ synonym: "decreased cell wall beta-D-glucan level" EXACT [CHEBI:28793, PomBase:m
 synonym: "decreased cell wall beta-glucan accumulation" RELATED [PomBase:mah]
 synonym: "decreased cell wall beta-glucan level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced cell wall beta-glucan level" EXACT [PomBase:mah]
-is_a: FYPO:0000027 ! abnormal cell wall
 is_a: FYPO:0001080 ! decreased polysaccharide level
-is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-05-31T16:36:19Z
 
@@ -11534,9 +11613,8 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "increased cell wall alpha-D-glucan level" EXACT [CHEBI:22385, PomBase:mah]
 synonym: "increased cell wall alpha-glucan accumulation" RELATED [PomBase:mah]
 synonym: "increased cell wall alpha-glucan level during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000027 ! abnormal cell wall
 is_a: FYPO:0001083 ! increased polysaccharide level
-is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-05-31T16:37:12Z
 
@@ -11657,7 +11735,8 @@ creation_date: 2012-06-01T14:32:55Z
 [Term]
 id: FYPO:0001097
 name: sensitive to amitrole
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to amitrole." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to amitrole. Cells stop growing (and may die) at a concentration of amitrole that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to amitrole" EXACT [PomBase:mah]
 synonym: "sensitive to 3-amino-1,2,4-triazole" EXACT [CHEBI:40036, PomBase:al]
 synonym: "sensitive to amitrole during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -11667,7 +11746,8 @@ creation_date: 2012-06-01T14:35:59Z
 [Term]
 id: FYPO:0001098
 name: sensitive to 4-nitroquinoline N-oxide
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 4-nitroquinoline N-oxide." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 4-nitroquinoline N-oxide. Cells stop growing (and may die) at a concentration of 4-nitroquinoline N-oxide that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to 4-nitroquinoline N-oxide" EXACT [PomBase:mah]
 synonym: "sensitive to 4-nitroquinoline N-oxide during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -12057,7 +12137,7 @@ comment: Consider annotating to a term describing abnormal transcription or abno
 synonym: "increased 35S rRNA precursor accumulation" RELATED [PomBase:mah]
 synonym: "increased 35S rRNA precursor level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased 35S rRNA primary transcript level" EXACT [PomBase:mah, SO:0000325]
-is_a: FYPO:0000825 ! increased RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2012-06-08T16:40:54Z
 
@@ -12068,7 +12148,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "increased 27S rRNA precursor accumulation" RELATED [PomBase:mah]
 synonym: "increased 27S rRNA precursor level during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000825 ! increased RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2012-06-08T16:44:25Z
 
@@ -12232,7 +12312,8 @@ creation_date: 2012-06-14T16:33:06Z
 [Term]
 id: FYPO:0001150
 name: sensitive to methylamine
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to methylamine." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to methylamine. Cells stop growing (and may die) at a concentration of methylamine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to methylamine" EXACT [PomBase:mah]
 synonym: "sensitive to methylamine during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -12634,7 +12715,8 @@ creation_date: 2012-07-05T14:04:36Z
 [Term]
 id: FYPO:0001188
 name: sensitive to Calcofluor White
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to Calcofluor White." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to Calcofluor White. Cells stop growing (and may die) at a concentration of Calcofluor White that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to Calcofluor White" EXACT [PomBase:mah]
 synonym: "sensitive to Calcofluor White during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -12643,8 +12725,9 @@ creation_date: 2012-07-05T14:32:40Z
 [Term]
 id: FYPO:0001189
 name: sensitive to cilofungin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cilofungin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cilofungin. Cells stop growing (and may die) at a concentration of cilofungin that allows wild type cells to grow." [PomBase:mah]
 comment: Cilofungin is an echinocandin antibiotic, related to echinocandin B.
+synonym: "hypersensitive to cilofungin" EXACT [PomBase:mah]
 synonym: "sensitive to cilofungin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -12653,7 +12736,8 @@ creation_date: 2012-07-05T14:34:21Z
 [Term]
 id: FYPO:0001190
 name: sensitive to Zymolyase
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to Zymolyase (beta-1,3-glucan laminaripentaohydrolase, an enzyme that degrades cell wall polysaccharides)." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to Zymolyase (beta-1,3-glucan laminaripentaohydrolase, an enzyme that degrades cell wall polysaccharides). Cells stop growing (and may die) at a concentration of Zymolyase that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to Zymolyase" EXACT [PomBase:mah]
 synonym: "sensitive to beta-1,3-glucan laminaripentaohydrolase" EXACT [PomBase:al, PomBase:mah]
 synonym: "sensitive to Zymolyase during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -12663,7 +12747,8 @@ creation_date: 2012-07-05T14:41:18Z
 [Term]
 id: FYPO:0001191
 name: sensitive to Novozyme 234
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to Novozyme 234 (a formerly-available commercial enzyme preparation that degrades cell wall polysaccharides)." [PMID:1909713, PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to Novozyme 234 (a formerly-available commercial enzyme preparation that degrades cell wall polysaccharides). Cells stop growing (and may die) at a concentration of Novozyme 234 that allows wild type cells to grow." [PMID:1909713, PomBase:mah]
+synonym: "hypersensitive to Novozyme 234" EXACT [PomBase:mah]
 synonym: "sensitive to lysing enzymes from Trichoderma harzianum" RELATED [PomBase:al]
 synonym: "sensitive to Novozyme 234 during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -12702,9 +12787,8 @@ synonym: "increased beta-D-glucan level" EXACT [CHEBI:28793, PomBase:mah]
 synonym: "increased beta-glucan accumulation" RELATED [PomBase:mah]
 synonym: "increased beta-glucan level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased cellular beta-glucan level" EXACT [PomBase:mah]
-is_a: FYPO:0000027 ! abnormal cell wall
 is_a: FYPO:0001083 ! increased polysaccharide level
-is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-07-05T15:53:01Z
 
@@ -12782,6 +12866,7 @@ creation_date: 2012-07-05T16:38:24Z
 id: FYPO:0001201
 name: sensitive to calcium starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to calcium starvation." [PomBase:mah]
+synonym: "hypersensitive to calcium starvation" EXACT [PomBase:mah]
 synonym: "sensitive to calcium ion starvation" EXACT [GO:0072732, PomBase:mah]
 synonym: "sensitive to calcium starvation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress
@@ -12843,7 +12928,8 @@ creation_date: 2012-07-09T17:13:55Z
 [Term]
 id: FYPO:0001207
 name: sensitive to raffinose
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to raffinose." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to raffinose. Cells stop growing (and may die) at a concentration of raffinose that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to raffinose" EXACT [PomBase:mah]
 synonym: "sensitive to raffinose during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -12851,10 +12937,10 @@ creation_date: 2012-07-12T10:30:03Z
 
 [Term]
 id: FYPO:0001208
-name: substance absent from cell
+name: substance absent from cell during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of a specific substance measured in a cell is too low to detect." [PomBase:mah]
-synonym: "substance absent from cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+is_a: FYPO:0001888 ! substance absent from cell
 created_by: midori
 creation_date: 2012-07-12T12:09:35Z
 
@@ -12864,7 +12950,7 @@ name: polysaccharide absent from cell
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of a polysaccharide measured in a cell is too low to detect." [PomBase:mah]
 synonym: "polysaccharide absent from cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001080 ! decreased polysaccharide level
-is_a: FYPO:0001208 ! substance absent from cell
+is_a: FYPO:0001208 ! substance absent from cell during vegetative growth
 created_by: midori
 creation_date: 2012-07-12T12:12:20Z
 
@@ -12923,7 +13009,8 @@ creation_date: 2012-07-12T12:17:32Z
 [Term]
 id: FYPO:0001214
 name: sensitive to potassium chloride
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to potassium chloride." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to potassium chloride. Cells stop growing (and may die) at a concentration of potassium chloride that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to potassium chloride" EXACT [PomBase:mah]
 synonym: "sensitive to potassium chloride during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -13229,7 +13316,7 @@ comment: Consider annotating to a term describing abnormal transcription or abno
 synonym: "increased mRNA level during cellular response to adenine starvation" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to adenine starvation" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to adenine starvation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000825 ! increased RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2012-07-16T15:56:42Z
 
@@ -13242,7 +13329,7 @@ synonym: "increased mRNA level during cellular response to vitamin B1" NARROW [P
 synonym: "increased RNA accumulation during cellular response to vitamin B1" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to thiamine" EXACT [GO:0071301, PomBase:mah]
 synonym: "increased RNA level during cellular response to vitamin B1 during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000825 ! increased RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2012-07-16T15:57:59Z
 
@@ -13264,6 +13351,7 @@ creation_date: 2012-07-16T16:01:16Z
 id: FYPO:0001245
 name: sensitive to cobalt
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cobalt ions." [PomBase:mah]
+synonym: "hypersensitive to cobalt" EXACT [PomBase:mah]
 synonym: "sensitive to cobalt during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to cobalt ions" EXACT [CHEBI:23336]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -13517,39 +13605,43 @@ creation_date: 2012-07-19T16:54:02Z
 
 [Term]
 id: FYPO:0001270
-name: complete but unequal mitotic sister chromatid segregation
-def: "A cellular process phenotype in which mitotic sister chromatid segregation results in the separation of chromosomes into two distinct unequal masses, located at or near the ends of an elongated mitotic spindle." [PMID:22711988, PomBase:mah]
-synonym: "complete but unequal mitotic chromosome segregation" EXACT [PomBase:mah]
-synonym: "complete but unequal mitotic sister chromatid segregation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+name: complete but unequal mitotic sister chromatid separation
+def: "A cellular process phenotype in which mitotic sister chromatid separation results in the separation of chromosomes into two distinct unequal masses, located at or near the ends of an elongated mitotic spindle." [PMID:22711988, PomBase:mah]
+synonym: "complete but unequal mitotic chromosome separation" EXACT [PomBase:mah]
+synonym: "complete but unequal mitotic sister chromatid segregation" RELATED [PomBase:mah]
+synonym: "complete but unequal mitotic sister chromatid separation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000670 ! abnormal mitotic chromosome separation
 created_by: midori
 creation_date: 2012-07-19T17:05:51Z
 
 [Term]
 id: FYPO:0001271
-name: incomplete, unequal mitotic sister chromatid segregation
-def: "A cellular process phenotype in which mitotic sister chromatid segregation stops before completing separation of chromosomes; some, but not all, DNA may be moved towards the ends of an elongated mitotic spindle. Chromosomes do not segregate into two equal masses." [PMID:22711988, PomBase:mah]
-synonym: "incomplete, unequal mitotic chromosome segregation" EXACT [PomBase:mah]
-synonym: "incomplete, unequal mitotic sister chromatid segregation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+name: incomplete, unequal mitotic sister chromatid separation
+def: "A cellular process phenotype in which mitotic sister chromatid separation stops before completing separation of chromosomes; some, but not all, DNA may be moved towards the ends of an elongated mitotic spindle. Chromosomes do not segregate into two equal masses." [PMID:22711988, PomBase:mah]
+synonym: "incomplete, unequal mitotic chromosome separation" EXACT [PomBase:mah]
+synonym: "incomplete, unequal mitotic sister chromatid segregation" RELATED [PomBase:mah]
+synonym: "incomplete, unequal mitotic sister chromatid separation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000670 ! abnormal mitotic chromosome separation
 created_by: midori
 creation_date: 2012-07-19T17:09:10Z
 
 [Term]
 id: FYPO:0001272
-name: incomplete, unequal mitotic sister chromatid segregation, with smeared DNA
-def: "A cellular process phenotype in which mitotic sister chromatid segregation stops before completing separation of chromosomes, and DNA becomes spread into an indistinct mass along much of the length of the mitotic spindle." [PMID:22711988, PomBase:mah]
-synonym: "incomplete, unequal mitotic sister chromatid segregation, with smeared DNA during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001271 ! incomplete, unequal mitotic sister chromatid segregation
+name: incomplete, unequal mitotic sister chromatid separation, with smeared DNA
+def: "A cellular process phenotype in which mitotic sister chromatid separation stops before completing separation of chromosomes, and DNA becomes spread into an indistinct mass along much of the length of the mitotic spindle." [PMID:22711988, PomBase:mah]
+synonym: "incomplete, unequal mitotic sister chromatid segregation, with smeared DNA" RELATED [PomBase:mah]
+synonym: "incomplete, unequal mitotic sister chromatid separation, with smeared DNA during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001271 ! incomplete, unequal mitotic sister chromatid separation
 created_by: midori
 creation_date: 2012-07-19T17:15:07Z
 
 [Term]
 id: FYPO:0001273
-name: incomplete, unequal mitotic sister chromatid segregation, with unseparated DNA
-def: "A cellular process phenotype in which mitotic sister chromatid segregation stops before completing separation of chromosomes, and DNA remains in a single mass at or near the midpoint of the mitotic spindle." [PMID:22711988, PomBase:mah]
-synonym: "incomplete, unequal mitotic sister chromatid segregation, with unseparated DNA during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001271 ! incomplete, unequal mitotic sister chromatid segregation
+name: incomplete, unequal mitotic sister chromatid separation, with unseparated DNA
+def: "A cellular process phenotype in which mitotic sister chromatid separation stops before completing separation of chromosomes, and DNA remains in a single mass at or near the midpoint of the mitotic spindle." [PMID:22711988, PomBase:mah]
+synonym: "incomplete, unequal mitotic sister chromatid segregation, with unseparated DNA" RELATED [PomBase:mah]
+synonym: "incomplete, unequal mitotic sister chromatid separation, with unseparated DNA during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001271 ! incomplete, unequal mitotic sister chromatid separation
 created_by: midori
 creation_date: 2012-07-19T17:15:33Z
 
@@ -13618,7 +13710,7 @@ synonym: "increased RNA accumulation during cellular response to oxidative stres
 synonym: "increased RNA level during cellular response to DEM" NARROW [PomBase:al]
 synonym: "increased RNA level during cellular response to diethyl maleate" NARROW [PomBase:mah]
 synonym: "increased RNA level during cellular response to oxidative stress during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000825 ! increased RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2012-07-26T10:59:25Z
 
@@ -13675,7 +13767,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "phosphatidyl-L-serine absent from cell" EXACT [CHEBI:18303]
 synonym: "phosphatidylserine absent from cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "PS absent from cell" EXACT [PomBase:mah]
-is_a: FYPO:0001208 ! substance absent from cell
+is_a: FYPO:0001208 ! substance absent from cell during vegetative growth
 is_a: FYPO:0001289 ! decreased phospholipid level
 created_by: midori
 creation_date: 2012-07-26T12:20:15Z
@@ -14569,7 +14661,7 @@ name: mislocalized actomyosin contractile ring
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms an actomyosin contractile ring in an abnormal location. The normal location is at the midpoint of, and perpendicular to, the long axis of the cell." [PomBase:mah]
 synonym: "contractile ring displaced from cell centre" EXACT [PomBase:vw]
 synonym: "mislocalised actomyosin contractile ring" EXACT [PomBase:mah]
-synonym: "mislocalized actomyosin contractile ring during vegetative growth" EXACT []
+synonym: "mislocalized actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
 relationship: output_of FYPO:0000033 ! abnormal contractile ring localization
 created_by: midori
@@ -14833,7 +14925,7 @@ id: FYPO:0001394
 name: activation of monopolar cell growth at either end
 def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which the activation of monopolar cell growth may occur at either the new or old end of the cell, instead of exclusively at the old end, following cell division. A population of cells with this phenotype has a 1:1 mix of cells initiating growth at the new end and cells initiating growth at the old end." [PomBase:mah]
 synonym: "abnormal initiation of growth from either old or new end following cell division" EXACT [PomBase:al]
-synonym: "activation of monopolar vegetative cell growth at either end" EXACT []
+synonym: "activation of monopolar vegetative cell growth at either end" EXACT [PomBase:mah]
 is_a: FYPO:0001393 ! abnormal activation of monopolar cell growth
 created_by: midori
 creation_date: 2012-08-15T13:23:28Z
@@ -14842,7 +14934,7 @@ creation_date: 2012-08-15T13:23:28Z
 id: FYPO:0001395
 name: normal activation of monopolar cell growth
 def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which the activation of monopolar cell growth, i.e. the initiation of growth at the old end of a cell following cell division, is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal activation of monopolar vegetative cell growth" EXACT []
+synonym: "normal activation of monopolar vegetative cell growth" EXACT [PomBase:mah]
 synonym: "normal initiation of growth from old end following cell division" EXACT [PomBase:al]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
@@ -14893,7 +14985,7 @@ creation_date: 2012-08-15T14:29:30Z
 [Term]
 id: FYPO:0001400
 name: normal interphase cytoplasmic microtubules
-def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the structure of cytoplasmic microtubules is normal during interphase of the mitotic cell cycle." [PomBase:mah]
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the structure of cytoplasmic microtubules is normal (i.e. indistinguishable from wild type) during interphase of the mitotic cell cycle." [PomBase:mah]
 synonym: "normal cytoplasmic microtubules during interphase" EXACT [PomBase:mah]
 synonym: "normal interphase cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001313 ! normal subcellular structure during vegetative growth
@@ -14954,7 +15046,7 @@ name: increased septum thickness
 def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum that is thicker than normal." [PomBase:mah]
 synonym: "increased septum thickness during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000117 ! abnormal septation
-is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-08-15T15:43:42Z
 
@@ -14974,6 +15066,7 @@ creation_date: 2012-08-16T15:53:30Z
 id: FYPO:0001408
 name: sensitive to heat shock
 def: "A cell phenotype in which cells show increased sensitivity to heat shock. Heat shock is a form of heat stress in which cells are briefly exposed to a very high temperature." [PomBase:mah]
+synonym: "hypersensitive to heat shock" EXACT [PomBase:mah]
 is_a: FYPO:0000082 ! sensitive to high temperature
 created_by: midori
 creation_date: 2012-08-16T16:02:56Z
@@ -15046,7 +15139,8 @@ creation_date: 2012-08-16T16:56:12Z
 [Term]
 id: FYPO:0001414
 name: sensitive to sulfide
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to sulfide (S2-)." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to sulfide (S2-). Cells stop growing (and may die) at a concentration of sulfide ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to sulfide" EXACT [PomBase:mah]
 synonym: "sensitive to sulfide during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -15109,7 +15203,6 @@ creation_date: 2012-08-22T13:05:17Z
 id: FYPO:0001420
 name: normal vegetative cell growth rate
 def: "A cellular process phenotype in which cells grow at the same rate as wild type in the vegetative growth phase of the life cycle." [PomBase:mah]
-is_a: FYPO:0001357 ! normal vegetative cell growth
 is_a: FYPO:0001419 ! normal cell growth rate
 created_by: midori
 creation_date: 2012-08-22T13:07:40Z
@@ -15518,14 +15611,15 @@ synonym: "increased RNA accumulation during cellular response to endoplasmic ret
 synonym: "increased RNA level during cellular response to endoplasmic reticulum stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased RNA level during response to ER stress" EXACT [GO:0034976, PomBase:mah]
 synonym: "increased RNA level under ER stress-inducing conditions" RELATED [PomBase:vw]
-is_a: FYPO:0000825 ! increased RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2012-08-23T16:26:07Z
 
 [Term]
 id: FYPO:0001457
 name: sensitive to tunicamycin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tunicamycin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tunicamycin. Cells stop growing (and may die) at a concentration of tunicamycin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to tunicamycin" EXACT [PomBase:mah]
 synonym: "sensitive to tunicamycin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -15568,7 +15662,7 @@ creation_date: 2012-08-29T14:14:33Z
 id: FYPO:0001461
 name: normal immediate intracellular calcium spike following extracellular calcium stimulus
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the intracellular calcium ion (Ca2+) concentration briefly increases normally immediately following an extracellular Ca2+  stimulus. Normally, the intracellular Ca2+ concentration increases to a peak in a \"burst\" within one minute, and then decreases to a new steady-state concentration." [PMID:21811607, PomBase:mah]
-synonym: "normal immediate intracellular calcium spike following extracellular calcium stimulus during vegetative growth" EXACT []
+synonym: "normal immediate intracellular calcium spike following extracellular calcium stimulus during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001199 ! normal cellular calcium level
 created_by: midori
 creation_date: 2012-08-29T14:47:54Z
@@ -15864,7 +15958,8 @@ creation_date: 2012-08-30T13:09:03Z
 [Term]
 id: FYPO:0001488
 name: sensitive to protamine sulfate
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to protamine sulfate. A protamine is any of a group of simple proteins that yield basic amino acids on hydrolysis, and forms a complex with heparin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to protamine sulfate. A protamine is any of a group of simple proteins that yield basic amino acids on hydrolysis, and forms a complex with heparin. Cells stop growing (and may die) at a concentration of protamine sulfate that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to protamine sulfate" EXACT [PomBase:mah]
 synonym: "sensitive to protamine sulfate during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -15973,7 +16068,7 @@ creation_date: 2012-08-30T14:32:53Z
 [Term]
 id: FYPO:0001497
 name: elongated inviable vegetative cells with mitotic cell cycle arrest in S phase
-def: "A cell morphology phenotype in which vegetative cells are inviable and longer than normal, and progression through the mitotic cell cycle is arrested in S phase." [PomBase:mah]
+def: "A cell morphology phenotype in which vegetative cells are inviable and longer than normal, and progress through the mitotic cell cycle is arrested in S phase." [PomBase:mah]
 comment: A population of cells with this phenotype usually shows a marginal increase in cell number before all cells die. Cells arrested in S phase typically have more than 1C, but less than 2C, DNA content.
 synonym: "elongated inviable cells with mitotic cell cycle arrest in S phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "essential; elongated vegetative cells with mitotic cell cycle arrest in S phase" RELATED [PomBase:mah]
@@ -15989,7 +16084,8 @@ creation_date: 2012-08-30T14:37:31Z
 [Term]
 id: FYPO:0001498
 name: sensitive to cytochalasin B
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cytochalasin B." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cytochalasin B. Cells stop growing (and may die) at a concentration of cytochalasin B that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to cytochalasin B" EXACT [PomBase:mah]
 synonym: "sensitive to cytochalasin B during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -16018,7 +16114,8 @@ creation_date: 2012-08-30T15:25:41Z
 [Term]
 id: FYPO:0001501
 name: sensitive to brefeldin A
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to brefeldin A." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to brefeldin A. Cells stop growing (and may die) at a concentration of brefeldin A that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to brefeldin A" EXACT [PomBase:mah]
 synonym: "sensitive to BFA" EXACT [PomBase:mah]
 synonym: "sensitive to brefeldin A during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -16187,8 +16284,9 @@ name: abnormal telomere tethering at nuclear periphery
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which telomere tethering at the nuclear periphery is abnormal." [PomBase:mah]
 synonym: "abnormal telomere anchoring at nuclear periphery" EXACT [PomBase:vw]
 synonym: "abnormal telomere tethering at nuclear periphery during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000641 ! abnormal chromosome organization
 is_a: FYPO:0001337 ! localization phenotype during vegetative growth
-is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+is_a: FYPO:0001353 ! abnormal cellular component organization during vegetative growth
 created_by: midori
 creation_date: 2012-09-13T11:46:25Z
 
@@ -16297,7 +16395,8 @@ creation_date: 2012-09-13T14:36:42Z
 [Term]
 id: FYPO:0001525
 name: sensitive to L-thialysine
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to L-thialysine." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to L-thialysine. Cells stop growing (and may die) at a concentration of L-thialysine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to L-thialysine" EXACT [PomBase:mah]
 synonym: "sensitive to L-thialysine during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to thialysine" BROAD [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -16328,7 +16427,8 @@ creation_date: 2012-09-13T14:53:26Z
 [Term]
 id: FYPO:0001528
 name: abnormal GTP binding
-def: "A molecular function phenotype in which occurrence of GTP binding by a mutated gene product is abnormal." [PomBase:mah]
+def: "A molecular function phenotype in which occurrence of GTP binding by a gene product (usually a protein) in a mutant is abnormal." [PomBase:mah]
+comment: This term can mean that the mutated gene product itself binds GTP differently from wild type, or that a mutation in one gene affects GTP binding by a second gene product. When using this term, it is therefore recommended to note the specific protein(s) affected.
 is_a: FYPO:0000707 ! abnormal molecular function
 is_a: FYPO:0001092 ! binding phenotype
 created_by: midori
@@ -16337,7 +16437,8 @@ creation_date: 2012-09-13T14:54:29Z
 [Term]
 id: FYPO:0001529
 name: decreased GTP binding
-def: "A molecular function phenotype in which occurrence of GTP binding by a mutated gene product is decreased." [PomBase:mah]
+def: "A molecular function phenotype in which occurrence of GTP binding  by a gene product (usually a protein) in a mutant is decreased." [PomBase:mah]
+comment: This term can mean that the mutated gene product itself binds GTP less than wild type, or that a mutation in one gene decreases GTP binding by a second gene product. When using this term, it is therefore recommended to note the specific protein(s) affected.
 synonym: "reduced GTP binding" EXACT [PomBase:mah]
 is_a: FYPO:0001528 ! abnormal GTP binding
 created_by: midori
@@ -16373,6 +16474,7 @@ creation_date: 2012-09-13T15:28:30Z
 id: FYPO:0001533
 name: sensitive to zinc starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to zinc starvation." [PomBase:mah]
+synonym: "hypersensitive to zinc starvation" EXACT [PomBase:mah]
 synonym: "sensitive to zinc ion starvation" EXACT [PomBase:mah]
 synonym: "sensitive to zinc starvation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress
@@ -16535,7 +16637,7 @@ synonym: "increased mRNA level during cellular response to zinc ion starvation" 
 synonym: "increased RNA accumulation during cellular response to zinc ion starvation" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to zinc ion starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased RNA level during cellular response to zinc starvation" EXACT [PomBase:mah]
-is_a: FYPO:0000825 ! increased RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2012-09-14T14:28:30Z
 
@@ -16622,7 +16724,7 @@ name: formation of abnormal tRNA processing intermediates
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the intermediate RNAs formed during tRNA processing differ from wild type in size." [PomBase:al, PomBase:mah]
 comment: Note that the mature tRNA may be of normal or abnormal size.
 synonym: "abnormal tRNA maturation intermediates" EXACT [PomBase:al]
-synonym: "formation of abnormal tRNA processing intermediates during vegetative growth" EXACT []
+synonym: "formation of abnormal tRNA processing intermediates during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001554 ! abnormal tRNA processing
 created_by: midori
 creation_date: 2012-09-14T15:12:24Z
@@ -16631,7 +16733,7 @@ creation_date: 2012-09-14T15:12:24Z
 id: FYPO:0001556
 name: excess nuclear envelope present
 def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells contain more nuclear envelope than normal. Excess nuclear envelopes may take the form of intranuclear membrane stacks or small cytoplasmic spheres that are attached to the nucleus, have double lipid bilayer membranes, and may structures resembling nuclear pores." [PMID:22156749, PomBase:mah]
-synonym: "excess nuclear envelope present during vegetative growth" EXACT []
+synonym: "excess nuclear envelope present during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased nuclear envelope proliferation" RELATED [PMID:22156749, PomBase:vw]
 synonym: "nuclear envelope present in greater amount" EXACT [PomBase:mah]
 is_a: FYPO:0000769 ! abnormal nuclear envelope morphology
@@ -16842,7 +16944,7 @@ comment: Consider annotating to a term describing abnormal transcription or abno
 synonym: "increased mRNA level during cellular response to rapamycin" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to rapamycin" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to rapamycin during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000825 ! increased RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2012-09-20T14:11:44Z
 
@@ -16927,7 +17029,7 @@ id: FYPO:0001581
 name: vacuolated
 def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which vacuoles are more visible (usually by microscopy) than normal. A vacuolated phenotype may be due to the presence of more vacuoles in a cell than normal, or to vacuoles located nearer the cell surface (and hence more visible) than normal." [PomBase:mah]
 comment: Also see 'abnormal vacuole morphology (FYPO:0000368)' and 'vacuoles present in greater numbers' (FYPO:0000952).
-synonym: "vacuolated during vegetative growth" EXACT []
+synonym: "vacuolated during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
 created_by: midori
 creation_date: 2012-09-20T15:57:31Z
@@ -17332,7 +17434,7 @@ creation_date: 2012-09-27T13:42:12Z
 id: FYPO:0001613
 name: decreased cellular aspartate level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of L-aspartate measured in the cell is lower than normal." [PomBase:mah]
-synonym: "decreased cellular aspartate level during vegetative growth" EXACT []
+synonym: "decreased cellular aspartate level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased cellular aspartic acid level" RELATED [PomBase:mah]
 synonym: "decreased cellular L-aspartate level" EXACT [PomBase:mah]
 synonym: "decreased cellular level aspartate level" EXACT [PomBase:mah]
@@ -17843,7 +17945,7 @@ id: FYPO:0001661
 name: increased cellular cAMP level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of cyclic AMP measured in a cell is higher than normal." [PomBase:mah]
 synonym: "increased cAMP accumulation" RELATED [PomBase:mah]
-synonym: "increased cellular cAMP level during vegetative growth" EXACT []
+synonym: "increased cellular cAMP level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased cellular cyclic AMP level" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 is_a: FYPO:0001659 ! altered cellular cAMP level
@@ -18098,7 +18200,7 @@ comment: Consider annotating to a term describing abnormal transcription or abno
 synonym: "increased mRNA level during cellular response to purvalanol A" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to purvalanol A" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to purvalanol A during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000825 ! increased RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2012-11-02T15:39:06Z
 
@@ -18176,7 +18278,8 @@ creation_date: 2012-11-02T15:54:56Z
 [Term]
 id: FYPO:0001692
 name: sensitive to purvalanol A
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to purvalanol A." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to purvalanol A. Cells stop growing (and may die) at a concentration of purvalanol A that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to purvalanol A" EXACT [PomBase:mah]
 synonym: "sensitive to purvalanol A during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -18185,7 +18288,8 @@ creation_date: 2012-11-02T16:20:15Z
 [Term]
 id: FYPO:0001693
 name: sensitive to reversine
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to reversine." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to reversine. Cells stop growing (and may die) at a concentration of reversine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to reversine" EXACT [PomBase:mah]
 synonym: "sensitive to reversine during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -18194,7 +18298,8 @@ creation_date: 2012-11-02T16:22:48Z
 [Term]
 id: FYPO:0001694
 name: sensitive to hesperadin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to hesperadin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to hesperadin. Cells stop growing (and may die) at a concentration of hesperadin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to hesperadin" EXACT [PomBase:mah]
 synonym: "sensitive to hesperadin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -18203,7 +18308,8 @@ creation_date: 2012-11-02T16:25:02Z
 [Term]
 id: FYPO:0001695
 name: sensitive to protease inhibitor
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a protease inhibitor." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a protease inhibitor. Cells stop growing (and may die) at a concentration of a protease inhibitor that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to protease inhibitor" EXACT [PomBase:mah]
 synonym: "sensitive to protease inhibitor during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -18212,7 +18318,8 @@ creation_date: 2012-11-02T16:28:37Z
 [Term]
 id: FYPO:0001696
 name: sensitive to protein kinase inhibitor
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a protein kinase inhibitor." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a protein kinase inhibitor. Cells stop growing (and may die) at a concentration of a protein kinase inhibitor that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to protein kinase inhibitor" EXACT [PomBase:mah]
 synonym: "sensitive to protein kinase inhibitor during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -18221,7 +18328,8 @@ creation_date: 2012-11-02T16:29:18Z
 [Term]
 id: FYPO:0001697
 name: sensitive to topoisomerase inhibitor
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a topoisomerase inhibitor." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a topoisomerase inhibitor. Cells stop growing (and may die) at a concentration of a topoisomerase inhibitor that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to topoisomerase inhibitor" EXACT [PomBase:mah]
 synonym: "sensitive to topoisomerase inhibitor during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -18230,7 +18338,8 @@ creation_date: 2012-11-02T16:36:04Z
 [Term]
 id: FYPO:0001698
 name: sensitive to capsazepine
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to capsazepine." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to capsazepine. Cells stop growing (and may die) at a concentration of capsazepine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to capsazepine" EXACT [PomBase:mah]
 synonym: "sensitive to capsazepine during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -18239,7 +18348,8 @@ creation_date: 2012-11-02T16:43:31Z
 [Term]
 id: FYPO:0001699
 name: sensitive to PPT
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 4,4',4''-(4-propylpyrazole-1,3,5-triyl)trisphenol (PPT)." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 4,4',4''-(4-propylpyrazole-1,3,5-triyl)trisphenol (PPT). Cells stop growing (and may die) at a concentration of PPT that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to PPT" EXACT [PomBase:mah]
 synonym: "sensitive to 4,4',4''-(4-propylpyrazole-1,3,5-triyl)trisphenol" EXACT [CHEBI:64110]
 synonym: "sensitive to PPT during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -18249,7 +18359,8 @@ creation_date: 2012-11-02T16:44:51Z
 [Term]
 id: FYPO:0001700
 name: sensitive to GW 7647
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to the receptor agonist GW 7647." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to the receptor agonist GW 7647. Cells stop growing (and may die) at a concentration of GW 7647 that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to GW 7647" EXACT [PomBase:mah]
 synonym: "sensitive to GW 7647 during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -18258,7 +18369,8 @@ creation_date: 2012-11-02T16:46:27Z
 [Term]
 id: FYPO:0001701
 name: sensitive to bortezomib
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to bortezomib." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to bortezomib. Cells stop growing (and may die) at a concentration of bortezomib that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to bortezomib" EXACT [PomBase:mah]
 synonym: "sensitive to bortezomib during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to Velcade" EXACT [CHEBI:52717]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -18268,7 +18380,8 @@ creation_date: 2012-11-02T16:56:50Z
 [Term]
 id: FYPO:0001702
 name: sensitive to nocodazole
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to nocodazole." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to nocodazole. Cells stop growing (and may die) at a concentration of nocodazole that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to nocodazole" EXACT [PomBase:mah]
 synonym: "sensitive to nocodazole during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -18370,7 +18483,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "coenzyme Q10 absent from cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "ubiquinone 10 absent from cell" EXACT [CHEBI:46245]
 synonym: "UQ-10 absent from cell" EXACT [PomBase:al]
-is_a: FYPO:0001208 ! substance absent from cell
+is_a: FYPO:0001208 ! substance absent from cell during vegetative growth
 is_a: FYPO:0001289 ! decreased phospholipid level
 created_by: midori
 creation_date: 2012-11-08T13:08:43Z
@@ -18459,7 +18572,8 @@ creation_date: 2012-11-08T13:39:31Z
 [Term]
 id: FYPO:0001719
 name: sensitive to lithium
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to lithium ions." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to lithium ions. Cells stop growing (and may die) at a concentration of lithium ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to lithium" EXACT [PomBase:mah]
 synonym: "sensitive to lithium during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to lithium ions" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -18508,7 +18622,7 @@ name: ferrichrome absent from cell
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more ferrichromes measured in a cell is too low to detect." [PomBase:mah]
 synonym: "ferrichrome absent from cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "siderophore absent from cell" BROAD [PomBase:al]
-is_a: FYPO:0001208 ! substance absent from cell
+is_a: FYPO:0001208 ! substance absent from cell during vegetative growth
 is_a: FYPO:0001289 ! decreased phospholipid level
 created_by: midori
 creation_date: 2012-11-08T14:29:13Z
@@ -18516,7 +18630,8 @@ creation_date: 2012-11-08T14:29:13Z
 [Term]
 id: FYPO:0001724
 name: increased GTP binding
-def: "A molecular function phenotype in which occurrence of GTP binding by a mutated gene product is increased." [PomBase:mah]
+def: "A molecular function phenotype in which occurrence of GTP binding  by a gene product (usually a protein) in a mutant is increased." [PomBase:mah]
+comment: This term can mean that the mutated gene product itself binds GTP more than wild type, or that a mutation in one gene increases GTP binding by a second gene product. When using this term, it is therefore recommended to note the specific protein(s) affected.
 is_a: FYPO:0001528 ! abnormal GTP binding
 created_by: midori
 creation_date: 2012-11-08T14:35:53Z
@@ -18804,6 +18919,7 @@ creation_date: 2012-11-14T14:26:41Z
 id: FYPO:0001749
 name: sensitive to tacrolimus during salt stress
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tacrolimus when the cell is subject to salt stress." [PomBase:mah]
+synonym: "hypersensitive to tacrolimus during salt stress" EXACT [PomBase:mah]
 synonym: "sensitive to FK506 during salt stress" EXACT [CHEBI:61057, PomBase:mah]
 synonym: "sensitive to tacrolimus during salt stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000086 ! sensitive to tacrolimus
@@ -19050,7 +19166,7 @@ comment: Encompasses both presence of proteins not normally found associated wit
 synonym: "abnormal protein localisation to eisosome filament" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to eisosome filament during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to linear eisosome" EXACT [PomBase:mah]
-is_a: FYPO:0000928 ! abnormal protein localization to cell cortex
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 created_by: midori
 creation_date: 2012-11-21T13:53:15Z
 
@@ -19062,8 +19178,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "abolished protein localisation to eisosome filament" EXACT [PomBase:mah]
 synonym: "abolished protein localization to eisosome filament during vegetative growth" EXACT [PomBase:mah]
 synonym: "abolished protein localization to linear eisosome" EXACT [PomBase:mah]
-synonym: "protein localization to linear eisosome abolished" EXACT [PomBase:mah]
-is_a: FYPO:0000930 ! protein localization to cell cortex abolished
+synonym: "protein localization to eisosome filament abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001774 ! abnormal protein localization to eisosome filament
 created_by: midori
 creation_date: 2012-11-21T13:55:52Z
@@ -19076,7 +19191,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "normal protein localisation to eisosome filament" EXACT [PomBase:mah]
 synonym: "normal protein localization to eisosome filament during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal protein localization to linear eisosome" EXACT [PomBase:mah]
-is_a: FYPO:0001402 ! normal protein localization to cell cortex
+is_a: FYPO:0000644 ! normal protein localization
 created_by: midori
 creation_date: 2012-11-21T14:04:30Z
 
@@ -19114,11 +19229,11 @@ synonym: "abnormal centromere clustering at SPB" RELATED [PomBase:mah]
 synonym: "abnormal centromere clustering at spindle pole body" RELATED [GO:0072766, PomBase:mah]
 synonym: "abnormal centromere-SPB clustering" RELATED [GO:0072766]
 synonym: "abnormal kinetochore clustering at SPB" RELATED [GO:0072766]
+synonym: "abnormal kinetochore clustering at spindle pole body" RELATED [PomBase:mah]
 synonym: "abnormal kinetochore localization at spindle pole body" RELATED [GO:0072766]
 synonym: "mislocalized, scattered centromeres" RELATED [PomBase:al]
 synonym: "unclustered kinetochores" RELATED [PomBase:al]
-is_a: FYPO:0001337 ! localization phenotype during vegetative growth
-is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+is_a: FYPO:0001778 ! abnormal kinetochore localization
 created_by: midori
 creation_date: 2012-11-21T14:33:41Z
 
@@ -19151,7 +19266,7 @@ id: FYPO:0001784
 name: excess endoplasmic reticulum membrane present
 def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells contain more endoplasmic reticulum (ER) membrane than normal. Excess ER membranes may form abnormal structures." [PomBase:al, PomBase:mah]
 synonym: "endoplasmic reticulum membrane present in greater amount" EXACT [PomBase:mah]
-synonym: "excess endoplasmic reticulum membrane present during vegetative growth" EXACT []
+synonym: "excess endoplasmic reticulum membrane present during vegetative growth" EXACT [PomBase:mah]
 synonym: "excess ER membrane present" EXACT [PomBase:mah]
 synonym: "increased endoplasmic reticulum membrane proliferation" RELATED [PomBase:mah]
 synonym: "overdeveloped ER membrane" EXACT [PomBase:al]
@@ -19251,7 +19366,7 @@ creation_date: 2012-11-21T16:07:06Z
 id: FYPO:0001793
 name: resistant to cell wall digestion
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell shows increased resistance to conditions that degrade the cell wall." [PomBase:mah]
-synonym: "resistant to cell wall digestion during vegetative growth" EXACT []
+synonym: "resistant to cell wall digestion during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001320 ! vegetative cell phenotype
 created_by: midori
 creation_date: 2012-11-21T16:14:26Z
@@ -19490,7 +19605,8 @@ creation_date: 2012-11-29T12:03:40Z
 [Term]
 id: FYPO:0001813
 name: sensitive to N-methyl-N'-nitro-N-nitrosoguanidine
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to N-methyl-N'-nitro-N-nitrosoguanidine." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to N-methyl-N'-nitro-N-nitrosoguanidine. Cells stop growing (and may die) at a concentration of N-methyl-N'-nitro-N-nitrosoguanidine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to N-methyl-N'-nitro-N-nitrosoguanidine" EXACT [PomBase:mah]
 synonym: "sensitive to N-methyl-N'-nitro-N-nitrosoguanidine during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to nitrosoguanidine" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
@@ -19509,7 +19625,7 @@ creation_date: 2012-11-29T13:50:46Z
 id: FYPO:0001815
 name: accumulation of Okazaki fragments
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which Okazaki fragments, the DNA segments produced by discontinuous synthesis of the lagging strand during DNA replication, are present at greater levels than normal." [PomBase:mah]
-synonym: "accumulation of Okazaki fragments during vegetative growth" EXACT []
+synonym: "accumulation of Okazaki fragments during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased level of Okazaki fragments" EXACT [PomBase:mah]
 synonym: "Okazaki fragment accumulation" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
@@ -19588,7 +19704,8 @@ creation_date: 2012-11-29T15:05:18Z
 [Term]
 id: FYPO:0001823
 name: sensitive to chlorpromazine
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to chlorpromazine." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to chlorpromazine. Cells stop growing (and may die) at a concentration of chlorpromazine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to chlorpromazine" EXACT [PomBase:mah]
 synonym: "sensitive to chlorpromazine during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -19597,7 +19714,8 @@ creation_date: 2012-11-29T15:16:28Z
 [Term]
 id: FYPO:0001824
 name: sensitive to trifluoperazine
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to trifluoperazine." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to trifluoperazine. Cells stop growing (and may die) at a concentration of trifluoperazine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to trifluoperazine" EXACT [PomBase:mah]
 synonym: "sensitive to trifluoperazine during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -19794,7 +19912,8 @@ creation_date: 2012-12-06T16:11:34Z
 [Term]
 id: FYPO:0001843
 name: sensitive to rhizoxin
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to rhizoxin." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to rhizoxin. Cells stop growing (and may die) at a concentration of rhizoxin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to rhizoxin" EXACT [PomBase:mah]
 synonym: "sensitive to rhizoxin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -19803,7 +19922,8 @@ creation_date: 2012-12-13T12:08:25Z
 [Term]
 id: FYPO:0001844
 name: sensitive to ansamitocin P-3
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to ansamitocin P-3." [PomBase:mah]
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to ansamitocin P-3. Cells stop growing (and may die) at a concentration of ansamitocin P-3 that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to ansamitocin P-3" EXACT [PomBase:mah]
 synonym: "sensitive to ansamitocin P-3 during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
@@ -19882,7 +20002,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "normal ferrous ion import" EXACT [PomBase:mah]
 synonym: "normal ferrous iron import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal ferrous iron import into cell" EXACT [PomBase:al]
-is_a: FYPO:0001071 ! normal transport
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 created_by: midori
 creation_date: 2012-12-18T13:57:53Z
 
@@ -20049,6 +20169,18 @@ created_by: midori
 creation_date: 2013-01-09T15:30:04Z
 
 [Term]
+id: FYPO:0001867
+name: increased shmoo formation
+def: "A cellular process phenotype in which the occurrence of mating projection assembly is increased." [PomBase:mah]
+synonym: "increased conjugation tube formation" EXACT [PMID:1905818, PomBase:mah]
+synonym: "increased mating projection assembly" EXACT [PomBase:mah]
+synonym: "increased mating projection formation" EXACT [PomBase:mah]
+synonym: "increased shmoo assembly" EXACT [PomBase:mah]
+is_a: FYPO:0000568 ! abnormal shmoo formation
+created_by: midori
+creation_date: 2013-01-28T13:42:55Z
+
+[Term]
 id: FYPO:0001868
 name: decreased adenylyl cyclase activity
 def: "A molecular function phenotype in which the observed rate of adenylyl cyclase activity is decreased." [PomBase:mah]
@@ -20081,9 +20213,9 @@ synonym: "normal centromere clustering at SPB" RELATED [PomBase:mah]
 synonym: "normal centromere clustering at spindle pole body" RELATED [GO:0072766, PomBase:mah]
 synonym: "normal centromere-SPB clustering" RELATED [GO:0072766]
 synonym: "normal kinetochore clustering at SPB" RELATED [GO:0072766]
+synonym: "normal kinetochore clustering at spindle pole body" RELATED [PomBase:mah]
 synonym: "normal kinetochore localization at spindle pole body" RELATED [GO:0072766]
-is_a: FYPO:0001319 ! normal cellular process during vegetative growth
-is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+is_a: FYPO:0000644 ! normal protein localization
 created_by: midori
 creation_date: 2013-01-09T15:36:22Z
 
@@ -20104,6 +20236,475 @@ synonym: "adhesion defects" EXACT [PomBase:mah]
 is_a: FYPO:0000628 ! abnormal cellular process
 created_by: midori
 creation_date: 2013-01-09T15:42:54Z
+
+[Term]
+id: FYPO:0001873
+name: shmoo formation in absence of opposite mating type
+def: "A cellular process phenotype in which mating projection assembly takes place despite the absence of cells of the opposite mating type." [PMID:1905818, PomBase:mah]
+synonym: "conjugation tube formation in absence of opposite mating type" RELATED [PMID:1905818, PomBase:mah]
+synonym: "mating projection assembly in absence of opposite mating type" EXACT [PomBase:mah]
+synonym: "mating projection formation in absence of opposite mating type" EXACT [PomBase:mah]
+is_a: FYPO:0000568 ! abnormal shmoo formation
+created_by: midori
+creation_date: 2013-01-28T13:48:16Z
+
+[Term]
+id: FYPO:0001874
+name: abnormal asymmetric protein localization to the old or new mitotic spindle pole body
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the preferential localization of a protein to the either the old or new spindle pole body is is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the spindle pole body and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal asymmetric protein localisation to the old or new mitotic spindle pole body" EXACT [PomBase:mah]
+synonym: "abnormal asymmetric protein localization to the old or new mitotic SPB" EXACT [PomBase:mah]
+synonym: "abnormal asymmetric protein localization to the old or new mitotic spindle pole body during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000939 ! abnormal protein localization to spindle pole body
+created_by: midori
+creation_date: 2013-01-30T11:45:04Z
+
+[Term]
+id: FYPO:0001875
+name: decreased asymmetric protein localization to the old or new mitotic spindle pole body
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the preferential localization of a protein to the either the old or new spindle pole body is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased asymmetric protein localisation to the old or new mitotic spindle pole body" EXACT [PomBase:mah]
+synonym: "decreased asymmetric protein localization to the old or new mitotic SPB" EXACT [PomBase:mah]
+synonym: "decreased asymmetric protein localization to the old or new mitotic spindle pole body during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced asymmetric protein localization to the old or new mitotic spindle pole body" EXACT [PomBase:mah]
+is_a: FYPO:0000940 ! decreased protein localization to spindle pole body
+is_a: FYPO:0001874 ! abnormal asymmetric protein localization to the old or new mitotic spindle pole body
+created_by: midori
+creation_date: 2013-01-30T11:46:48Z
+
+[Term]
+id: FYPO:0001876
+name: abolished asymmetric protein localization to the old or new mitotic spindle pole body
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the preferential localization of a protein to the either the old or new spindle pole body is does not occur." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished asymmetric protein localization to the old or new mitotic SPB" EXACT [PomBase:mah]
+synonym: "asymmetric protein localization to the old or new mitotic spindle pole body abolished" EXACT [PomBase:mah]
+synonym: "asymmetric protein localization to the old or new mitotic spindle pole body abolished during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein absent from old or new spindle pole body" RELATED [PomBase:mah]
+synonym: "protein localization to spindle pole body abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000941 ! abolished protein localization to spindle pole body
+is_a: FYPO:0001874 ! abnormal asymmetric protein localization to the old or new mitotic spindle pole body
+created_by: midori
+creation_date: 2013-01-30T11:47:20Z
+
+[Term]
+id: FYPO:0001877
+name: thin viable vegetative cells
+def: "A cell morphology phenotype in which vegetatively growing cells are viable but have an abnormally low thickness or diameter." [PomBase:mah]
+synonym: "thin viable cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+is_a: FYPO:0001491 ! viable vegetative cells
+is_a: FYPO:0001879 ! thin cells
+relationship: has_part FYPO:0001491 ! viable vegetative cells
+relationship: has_part FYPO:0001879 ! thin cells
+created_by: midori
+creation_date: 2013-01-30T12:02:41Z
+
+[Term]
+id: FYPO:0001878
+name: thin, elongated viable vegetative cells
+def: "A cell morphology phenotype in which vegetatively growing cells are viable but are longer than normal and have an abnormally low thickness or diameter." [PomBase:mah]
+synonym: "thin, elongated viable cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001492 ! elongated viable vegetative cells
+is_a: FYPO:0001877 ! thin viable vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0001491 ! viable vegetative cells
+relationship: has_part FYPO:0001879 ! thin cells
+created_by: midori
+creation_date: 2013-01-30T12:05:15Z
+
+[Term]
+id: FYPO:0001879
+name: thin cells
+def: "A cell morphology phenotype in which cells have an abnormally low thickness or diameter." [PomBase:mah]
+is_a: FYPO:0001127 ! abnormal cell size
+created_by: midori
+creation_date: 2013-01-30T12:06:48Z
+
+[Term]
+id: FYPO:0001880
+name: abolished protein localization to cell division site
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the site of cell division is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to cell division site" EXACT [PomBase:mah]
+synonym: "abolished protein localization to cell division site during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to cell division site abolished" EXACT [PomBase:mah]
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
+is_a: FYPO:0001401 ! abnormal protein localization to cell division site
+created_by: midori
+creation_date: 2013-01-30T12:18:16Z
+
+[Term]
+id: FYPO:0001881
+name: elongated actin filaments
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells form actin filaments that are longer than normal." [PomBase:mah]
+synonym: "elongated actin filaments during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated microfilaments" RELATED [PomBase:mah]
+synonym: "long actin filaments" EXACT [PomBase:mah]
+is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
+created_by: midori
+creation_date: 2013-01-30T12:21:19Z
+
+[Term]
+id: FYPO:0001882
+name: resistance to Zymolyase
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of Zymolyase (beta-1,3-glucan laminaripentaohydrolase, an enzyme that degrades cell wall polysaccharides) than normal." [PomBase:mah]
+synonym: "resistance to Zymolyase during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to Zymolyase" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+created_by: midori
+creation_date: 2013-01-30T12:30:20Z
+
+[Term]
+id: FYPO:0001883
+name: normal cell growth on caspofungin
+def: "A cell phenotype in which vegetative cell growth is normal (i.e. indistinguishable from wild type) in a medium containing caspofungin." [PomBase:mah]
+synonym: "normal cell growth in presence of caspofungin" EXACT [PomBase:mah]
+synonym: "normal cell growth on glucan synthase inhibitor" BROAD [PomBase:mah]
+synonym: "normal cellular response to caspofungin" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell growth on caspofungin" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell growth
+created_by: midori
+creation_date: 2013-01-30T12:48:29Z
+
+[Term]
+id: FYPO:0001884
+name: resistance to Calcofluor White
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of Calcofluor White than normal." [PomBase:mah]
+synonym: "resistance to Calcofluor White during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+created_by: midori
+creation_date: 2013-01-30T12:50:20Z
+
+[Term]
+id: FYPO:0001885
+name: decreased protein phosphorylation during salt stress
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins occurs to a lower extent than normal when the cell is subject to salt stress." [PomBase:mah]
+synonym: "decreased protein phosphorylation during salt stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein phosphorylation during salt stress" EXACT [PomBase:mah]
+is_a: FYPO:0001838 ! decreased protein phosphorylation
+created_by: midori
+creation_date: 2013-01-30T12:58:39Z
+
+[Term]
+id: FYPO:0001886
+name: meiosis in haploid
+def: "A cellular process phenotype in which haploid cells undergo meiotic division." [DOI:10.1007/BF00332932, PomBase:mah]
+synonym: "haploid meiosis" EXACT [PomBase:al]
+is_a: FYPO:0000051 ! abnormal meiosis
+created_by: midori
+creation_date: 2013-01-30T13:14:48Z
+
+[Term]
+id: FYPO:0001887
+name: sporulation in haploid
+def: "A cellular process phenotype in which haploid cells that have undergone a meiotic division attempt to sporulate. Spores produced from a haploid cell have poor viability and appear to contain only 1/2C DNA on average." [DOI:10.1007/BF00332932, PomBase:mah]
+synonym: "haploid sporulation" EXACT [PomBase:al]
+is_a: FYPO:0000121 ! abnormal sporulation
+created_by: midori
+creation_date: 2013-01-30T13:19:08Z
+
+[Term]
+id: FYPO:0001888
+name: substance absent from cell
+def: "A cell phenotype in which the amount of a specific substance measured in a cell is too low to detect." [PomBase:mah]
+is_a: FYPO:0000991 ! decreased level of substance in cell
+created_by: midori
+creation_date: 2013-01-30T15:19:23Z
+
+[Term]
+id: FYPO:0001889
+name: RNA absent from cell
+def: "A cell phenotype in which the amount of RNA measured in a cell is too low to detect. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+synonym: "undetectable cellular RNA level" EXACT [PomBase:al]
+is_a: FYPO:0000826 ! decreased RNA level
+is_a: FYPO:0001888 ! substance absent from cell
+created_by: midori
+creation_date: 2013-01-30T15:26:28Z
+
+[Term]
+id: FYPO:0001890
+name: increased RNA level
+def: "A cell phenotype in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased cellular mRNA level" NARROW [PomBase:vw]
+synonym: "increased cellular RNA level" EXACT [PomBase:mah]
+synonym: "increased RNA accumulation" RELATED [PomBase:mah]
+synonym: "RNA accumulation: increased" RELATED [SGD:phenotype_annotation]
+is_a: FYPO:0000824 ! altered RNA level
+is_a: FYPO:0000990 ! increased level of substance in cell
+created_by: midori
+creation_date: 2013-01-30T15:36:51Z
+
+[Term]
+id: FYPO:0001891
+name: increased level of middle meiotic gene RNA during late meiosis
+def: "A cell phenotype observed in late meiosis in which the amount of RNA transcribed from middle meiotic genes measured in a cell is higher than normal. Middle meiotic genes are normally transcribed during meiotic division." [PomBase:al, PomBase:mah]
+synonym: "increased RNA level of middle meiotic genes during late meiosis" EXACT [PomBase:al]
+is_a: FYPO:0001890 ! increased RNA level
+created_by: midori
+creation_date: 2013-01-30T15:43:26Z
+
+[Term]
+id: FYPO:0001892
+name: decreased level of middle meiotic gene RNA during late meiosis
+def: "A cell phenotype observed in late meiosis in which the amount of RNA transcribed from middle meiotic genes measured in a cell is lower than normal. Middle meiotic genes are normally transcribed during meiotic division." [PomBase:al, PomBase:mah]
+synonym: "decreased RNA level of middle meiotic genes during late meiosis" EXACT [PomBase:al]
+synonym: "reduced level of middle meiotic gene RNA during late meiosis" EXACT [PomBase:mah]
+is_a: FYPO:0000826 ! decreased RNA level
+created_by: midori
+creation_date: 2013-01-30T15:46:28Z
+
+[Term]
+id: FYPO:0001893
+name: abnormal sporulation resulting in formation of azygotic ascus with more or fewer than four spores
+def: "A sporulation phenotype in which azygotic asci that contain more or fewer than four spores form following conjugation and subsequent sporulation. Azygotic ascus formation occurs when meiosis takes place within a diploid cell rather than in a zygote produced by sporulation. Zygotes can resume vegetative growth and form colonies of diploid cells if returned to rich media before commitment to meiosis; under nitrogen starvation, diploid cells heterozygous for mating type will undergo azygotic meiosis. Azygotic asci have a characteristic linear morphology resembling that of a single vegetatively growing cell." [PomBase:mah]
+synonym: "abnormal sporulation resulting in formation of azygotic asci with more or fewer than four spores" EXACT [PomBase:mah]
+synonym: "sporulation defects, azygotic asci with more or fewer than four spores" EXACT [PomBase:mah]
+is_a: FYPO:0000279 ! formation of azygotic ascus upon sporulation
+created_by: midori
+creation_date: 2013-01-30T15:54:57Z
+
+[Term]
+id: FYPO:0001894
+name: abnormal sporulation resulting in formation of ascus with more or fewer than four spores
+def: "A sporulation phenotype in which asci that contain more or fewer than four spores form following conjugation and subsequent sporulation." [PomBase:al, PomBase:mah]
+synonym: "abnormal ascospore formation resulting in formation of asci with more or fewer than four spores" EXACT [GO:0030437, PomBase:mah]
+synonym: "abnormal sporulation resulting in formation of asci with more or fewer than four spores" EXACT [PomBase:mah]
+is_a: FYPO:0000121 ! abnormal sporulation
+created_by: midori
+creation_date: 2013-01-30T15:57:25Z
+
+[Term]
+id: FYPO:0001895
+name: P-bodies present in greater numbers
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells contain more cytoplasmic mRNA processing bodies (P-bodies) than normal." [PomBase:mah]
+synonym: "additional P-bodies present" EXACT [PomBase:mah]
+synonym: "cytoplasmic mRNA processing bodies present in greater numbers" EXACT [GO:0000932]
+synonym: "enhanced P-body formation" RELATED [PomBase:al]
+synonym: "extra P-bodies" EXACT [PomBase:mah]
+synonym: "P bodies present in greater numbers" EXACT [GO:0000932]
+synonym: "P-bodies present in greater numbers during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+created_by: midori
+creation_date: 2013-01-30T16:38:10Z
+
+[Term]
+id: FYPO:0001896
+name: enlarged P-bodies
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cytoplasmic mRNA processing bodies (P-bodies) are larger than normal." [PomBase:mah]
+synonym: "enhanced P-body formation" RELATED [PomBase:al]
+synonym: "enlarged cytoplasmic mRNA processing bodies" EXACT [GO:0000932]
+synonym: "enlarged P bodies" EXACT [GO:0000932]
+synonym: "enlarged P-bodies during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+created_by: midori
+creation_date: 2013-01-30T16:40:40Z
+
+[Term]
+id: FYPO:0001897
+name: P-bodies present in decreased numbers during vegetative growth
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer cytoplasmic mRNA processing bodies (P-bodies) than normal." [PomBase:mah]
+synonym: "cytoplasmic mRNA processing bodies present in decreased numbers during vegetative growth" EXACT [GO:0000932]
+synonym: "decreased P-body formation during vegetative growth" RELATED [PomBase:al]
+synonym: "fewer P-bodies present during vegetative growth" EXACT [PomBase:mah]
+synonym: "P bodies present in greater numbers during vegetative growth" EXACT [GO:0000932]
+is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+is_a: FYPO:0001898 ! P-bodies present in decreased numbers
+created_by: midori
+creation_date: 2013-01-30T16:59:10Z
+
+[Term]
+id: FYPO:0001898
+name: P-bodies present in decreased numbers
+def: "A cellular structure phenotype in which cells contain fewer cytoplasmic mRNA processing bodies (P-bodies) than normal." [PomBase:mah]
+synonym: "cytoplasmic mRNA processing bodies present in decreased numbers" EXACT [GO:0000932]
+synonym: "decreased P-body formation" RELATED [PomBase:al]
+synonym: "fewer P-bodies present" EXACT [PomBase:mah]
+synonym: "P bodies present in decreased numbers" EXACT [GO:0000932]
+synonym: "P-bodies present in reduced numbers" EXACT [PomBase:mah]
+is_a: FYPO:0000287 ! abnormal subcellular structure
+created_by: midori
+creation_date: 2013-01-30T16:59:23Z
+
+[Term]
+id: FYPO:0001899
+name: P-bodies present in decreased numbers during glucose starvation
+def: "A cellular structure phenotype in which cells contain fewer cytoplasmic mRNA processing bodies (P-bodies) than normal when the cell is subject to glucose starvation." [PomBase:mah]
+synonym: "cytoplasmic mRNA processing bodies present in decreased numbers during glucose starvation" EXACT [GO:0000932]
+synonym: "decreased P-body formation during glucose starvation" RELATED [PomBase:al]
+synonym: "fewer P-bodies present during glucose starvation" EXACT [PomBase:mah]
+synonym: "P bodies present in greater numbers during glucose starvation" EXACT [GO:0000932]
+is_a: FYPO:0001898 ! P-bodies present in decreased numbers
+created_by: midori
+creation_date: 2013-01-30T17:03:35Z
+
+[Term]
+id: FYPO:0001900
+name: small P-bodies
+def: "A cellular structure phenotype in which cytoplasmic mRNA processing bodies (P-bodies) are smaller than normal." [PomBase:mah]
+synonym: "decreased P-body formation" RELATED [PomBase:al]
+synonym: "small cytoplasmic mRNA processing bodies" EXACT [GO:0000932]
+synonym: "small P bodies" EXACT [GO:0000932]
+is_a: FYPO:0000287 ! abnormal subcellular structure
+created_by: midori
+creation_date: 2013-01-30T17:07:32Z
+
+[Term]
+id: FYPO:0001901
+name: small P-bodies during vegetative growth
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cytoplasmic mRNA processing bodies (P-bodies) are smaller than normal." [PomBase:mah]
+synonym: "decreased P-body formation during vegetative growth" RELATED [PomBase:al]
+synonym: "small cytoplasmic mRNA processing bodies during vegetative growth" EXACT [GO:0000932]
+synonym: "small P bodies during vegetative growth" EXACT [GO:0000932]
+is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+is_a: FYPO:0001900 ! small P-bodies
+created_by: midori
+creation_date: 2013-01-30T17:07:49Z
+
+[Term]
+id: FYPO:0001902
+name: small P-bodies during glucose starvation
+def: "A cellular structure phenotype in which cytoplasmic mRNA processing bodies (P-bodies) are smaller than normal when the cell is subject to glucose starvation." [PomBase:mah]
+synonym: "decreased P-body formation during glucose starvation" RELATED [PomBase:al]
+synonym: "small cytoplasmic mRNA processing bodies during glucose starvation" EXACT [GO:0000932]
+synonym: "small P bodies during glucose starvation" EXACT [GO:0000932]
+is_a: FYPO:0001900 ! small P-bodies
+created_by: midori
+creation_date: 2013-01-30T17:12:02Z
+
+[Term]
+id: FYPO:0001903
+name: normal septation index
+def: "A cell population phenotype in which the septation index is normal (i.e. indistinguishable from wild type). The septation index is the proportion of the population undergoing septation at any given time, and is usually around 10% (varying between 7-15%) for wild type." [PomBase:mah, PomBase:vw]
+synonym: "normal septation" RELATED [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0000257 ! normal phenotype
+created_by: midori
+creation_date: 2013-01-30T17:14:13Z
+
+[Term]
+id: FYPO:0001904
+name: actomyosin contractile ring collapse
+def: "A cytokinesis phenotype observed in the vegetative growth phase of the life cycle in which the contractile ring collapses or disassembles upon initiation of contraction during anaphase B. Septum formation typically does not occur in cells in which the contractile ring has collapsed." [PMID:22174761, PomBase:mah]
+synonym: "abnormal contractile ring contraction with contractile ring collapse" EXACT [PomBase:mah]
+synonym: "actomyosin contractile ring collapse during vegetative growth" EXACT [PomBase:mah]
+synonym: "actomyosin contractile ring collapse upon contraction" EXACT [PomBase:mah]
+synonym: "cytokinesis defects, collapse of the actinomyosin ring" RELATED [PomBase:mah]
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+is_a: FYPO:0001364 ! abnormal contractile ring contraction
+created_by: midori
+creation_date: 2013-01-30T17:33:34Z
+
+[Term]
+id: FYPO:0001905
+name: normal mitotic spindle microtubules
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the structure of microtubules in the mitotic spindle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal mitotic spindle microtubules" EXACT [PomBase:mah]
+synonym: "normal mitotic spindle microtubules during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular structure during vegetative growth
+relationship: part_of FYPO:0001399 ! normal mitotic spindle
+created_by: midori
+creation_date: 2013-01-30T17:47:11Z
+
+[Term]
+id: FYPO:0001906
+name: abnormal cellular response to thiamine starvation
+def: "A stress response phenotype observed in the vegetative growth phase of the life cycle in which the response to thiamine starvation is abnormal." [PomBase:mah]
+synonym: "abnormal cellular response to thiamin starvation" EXACT [GO:0036225]
+synonym: "abnormal cellular response to thiamine starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cellular response to vitamin B1 starvation" EXACT [GO:0036225]
+is_a: FYPO:0001339 ! abnormal cellular response to starvation during vegetative growth
+created_by: midori
+creation_date: 2013-01-31T14:27:28Z
+
+[Term]
+id: FYPO:0001907
+name: sensitive to thiamine starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to thiamine starvation." [PomBase:mah]
+synonym: "hypersensitive to thiamine starvation" EXACT [PomBase:mah]
+synonym: "sensitive to thiamin starvation" EXACT [GO:0036225, PomBase:mah]
+synonym: "sensitive to thiamine starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to vitamin B1 starvation" EXACT [GO:0036225]
+is_a: FYPO:0000304 ! sensitive to stress
+is_a: FYPO:0001906 ! abnormal cellular response to thiamine starvation
+created_by: midori
+creation_date: 2013-01-31T14:27:37Z
+
+[Term]
+id: FYPO:0001909
+name: normal protein glycosylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein glycosylation is normal (i.e. indistinguishable from wild type). Protein glycosylation is the addition of a carbohydrate or carbohydrate derivative unit to a protein amino acid." [GO:0006486, PomBase:mah]
+synonym: "normal protein glycosylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein/peptide glycosylation" EXACT [PomBase:mah]
+is_a: FYPO:0000549 ! normal protein modification
+created_by: midori
+creation_date: 2013-01-31T14:53:52Z
+
+[Term]
+id: FYPO:0001910
+name: abnormal protein glycosylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the glycosylation of one or more specific proteins is abnormal. Protein glycosylation is the addition of a carbohydrate or carbohydrate derivative unit to a protein amino acid." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "abnormal protein glycosylation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000329 ! abnormal protein modification
+created_by: midori
+creation_date: 2013-01-31T14:55:43Z
+
+[Term]
+id: FYPO:0001911
+name: decreased protein glycosylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the glycosylation of one or more specific proteins occurs to a lower extent than normal. Protein glycosylation is the addition of a carbohydrate or carbohydrate derivative unit to a protein amino acid." [GO:0006486, PomBase:mah]
+synonym: "decreased protein glycosylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein glycosylation" EXACT [PomBase:mah]
+is_a: FYPO:0000545 ! decreased protein modification
+is_a: FYPO:0001910 ! abnormal protein glycosylation
+created_by: midori
+creation_date: 2013-01-31T14:55:50Z
+
+[Term]
+id: FYPO:0001912
+name: abnormal ubiquitin ligase activity
+def: "A molecular function phenotype in which the observed rate of ubiquitin ligase activity is abnormal." [PomBase:mah]
+synonym: "abnormal ubiquitin-protein ligase activity" EXACT [GO:0004842]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+created_by: midori
+creation_date: 2013-01-31T15:09:44Z
+
+[Term]
+id: FYPO:0001913
+name: abolished ubiquitin ligase activity
+def: "A molecular function phenotype in which ubiquitin ligase activity is absent." [PomBase:mah]
+synonym: "abolished ubiquitin-protein ligase activity" EXACT [GO:0004842]
+synonym: "ubiquitin ligase activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001912 ! abnormal ubiquitin ligase activity
+created_by: midori
+creation_date: 2013-01-31T15:09:55Z
+
+[Term]
+id: FYPO:0001914
+name: abnormal forespore membrane formation
+def: "A cellular process phenotype in which forespore membrane assembly is abnormal. In forespore membrane assembly, the nascent membrane forms at the meiotic outer plaque and grows until closure occurs and forespores, or prospores, are formed." [GO:0032120, PomBase:mah]
+synonym: "abnormal ascospore-type prospore membrane assembly" EXACT [GO:0032120]
+synonym: "abnormal prospore membrane formation" EXACT [PomBase:mah]
+is_a: FYPO:0000196 ! abnormal forespore formation
+is_a: FYPO:0001013 ! abnormal membrane organization
+created_by: midori
+creation_date: 2013-01-31T15:42:32Z
+
+[Term]
+id: FYPO:0001915
+name: abolished forespore membrane formation
+def: "A cellular process phenotype in which forespore membrane formation does not occur." [PomBase:mah]
+synonym: "abolished ascospore-type prospore membrane assembly" EXACT [GO:0032120]
+synonym: "abolished prospore membrane formation" EXACT [GO:0032120]
+synonym: "forespore membrane formation abolished" EXACT [PomBase:mah]
+is_a: FYPO:0001914 ! abnormal forespore membrane formation
+created_by: midori
+creation_date: 2013-01-31T15:47:54Z
 
 [Typedef]
 id: adjacent_to
@@ -20144,16 +20745,6 @@ created_by: kareneilbeck
 creation_date: 2010-10-14T01:32:15Z
 
 [Typedef]
-id: decreased_in_magnitude_relative_to
-name: decreased_in_magnitude_relative_to
-namespace: quality
-def: "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
-comment: This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-is_transitive: true
-is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
-
-[Typedef]
 id: derives_from
 name: derives_from
 namespace: sequence
@@ -20167,23 +20758,6 @@ name: develops_from
 namespace: RO
 xref: RO:0002202
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
-
-[Typedef]
-id: different_in_magnitude_relative_to
-name: different_in_magnitude_relative_to
-namespace: quality
-def: "q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-
-[Typedef]
-id: directly_associated_with
-name: directly_associated_with
-namespace: quality
-def: "q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
-comment: Example: 'Lewy bodies increased number related to dystrophic neurite increased number' (from annotation of PMID:8740227 in http://ccdb.ucsd.edu/1.0/NDPO.owl#ndpo_404). Here the increase in the number of lewy bodies is directly_associated_with the increase in the number of dystrophic neurites.\nAssociation is weaker than correlation or proportionality. These relations may be later added to PATO.
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-created_by: cjm
-creation_date: 2009-08-26T02:50:08Z
 
 [Typedef]
 id: during
@@ -20204,28 +20778,6 @@ id: has_completed
 name: has_completed
 namespace: cl
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
-
-[Typedef]
-id: has_cross_section
-name: has_cross_section
-namespace: quality
-def: "s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2." [PATOC:CJM]
-comment: Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round.
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-
-[Typedef]
-id: has_dividend_quality
-name: has_dividend_quality
-namespace: quality
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-is_a: has_ratio_quality ! has_ratio_quality
-
-[Typedef]
-id: has_divisor_quality
-name: has_divisor_quality
-namespace: quality
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-is_a: has_ratio_quality ! has_ratio_quality
 
 [Typedef]
 id: has_high_plasma_membrane_amount
@@ -20296,12 +20848,6 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/so-xp.obo.owl
 
 [Typedef]
-id: has_ratio_quality
-name: has_ratio_quality
-namespace: quality
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-
-[Typedef]
 id: includes_cells_with_phenotype
 name: includes cells with phenotype
 def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in some or all of the individual cells in the population." [PomBase:mah]
@@ -20310,29 +20856,9 @@ created_by: midori
 creation_date: 2011-04-26T02:10:32Z
 
 [Typedef]
-id: increased_in_magnitude_relative_to
-name: increased_in_magnitude_relative_to
-namespace: quality
-def: "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
-comment: This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-is_transitive: true
-is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
-
-[Typedef]
 id: inheres_in
 name: inheres_in
 xref: BFO:0000052
-
-[Typedef]
-id: inversely_associated_with
-name: inversely_associated_with
-namespace: quality
-def: "q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
-comment: Association is weaker than correlation or proportionality. These relations may be later added to PATO.
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-created_by: cjm
-creation_date: 2009-08-26T02:50:24Z
 
 [Typedef]
 id: is_preceded_by
@@ -20431,14 +20957,6 @@ name: qualifier
 comment: placeholder relation to indicate normality/abnormality.
 
 [Typedef]
-id: reciprocal_of
-name: reciprocal_of
-namespace: quality
-def: "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e." [PATOC:CJM]
-comment: There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality.
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-
-[Typedef]
 id: regulates
 name: regulates
 xref: RO:0002211
@@ -20450,8 +20968,6 @@ name: results_in
 namespace: gene_ontology
 comment: This relation is currently used to connect two regulation processes p1 and p2, such that if r1 regulates p1 and r2 regulates p2, and r1 results_in r2 then the regulation of p1 is required for the regulation of p2. For an example of use, see GO:0035958 'regulation of glyoxylate cycle by regulation of transcription from RNA polymerase II promoter'. Note that a precise definition of this relation is under discussion. After it has been formalized it will be added to RO, where it will have a RO ID. Note that the existing identifier and label are subject to change.
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
-created_by: cjm
-creation_date: 2012-03-14T10:35:44Z
 
 [Typedef]
 id: results_in_formation_of
@@ -20460,19 +20976,10 @@ xref: RO:0002297
 is_a: has_output ! has_output
 
 [Typedef]
-id: similar_in_magnitude_relative_to
-name: similar_in_magnitude_relative_to
-namespace: quality
-def: "q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-
-[Typedef]
 id: towards
 name: towards
-namespace: quality
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
 xref: OBO_REL:towards
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
 
 [Typedef]
 id: transcribed_from
