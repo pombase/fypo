@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2013-01-31
-date: 31:01:2013 16:15
+data-version: 2013-02-06
+date: 06:02:2013 18:43
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -55,7 +55,7 @@ subsetdef: vertebrate_core "core classes typically found across vertebrates. one
 subsetdef: vessel_or_tree "A term classified differently in FMA due to its treatment of branching structures - to be reviewed and revised by editors"
 subsetdef: virus_checked "Viral overhaul terms"
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 569 $
+remark: svn version: $Revision: 572 $
 ontology: fypo
 
 [Term]
@@ -541,6 +541,7 @@ synonym: "reduced aerobic cell growth" NARROW [PomBase:mah]
 synonym: "reduced cell growth" EXACT [PomBase:mah]
 synonym: "slow aerobic cell growth" NARROW [PomBase:mah]
 is_a: FYPO:0000045 ! abnormal cell growth
+is_a: FYPO:0000124 ! viable
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -2590,7 +2591,7 @@ synonym: "decreased vegetative cell growth at high temperature" EXACT [PomBase:m
 synonym: "growth defect, slow growth at high temperatures" NARROW [PomBase:mah]
 synonym: "reduced growth at high temperature" RELATED [PomBase:mah]
 synonym: "slow growth at high temperature" NARROW [PomBase:mah]
-is_a: FYPO:0000082 ! sensitive to high temperature
+is_a: FYPO:0000282 ! viable at high temperature
 is_a: FYPO:0001355 ! decreased vegetative cell growth
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -3568,8 +3569,8 @@ creation_date: 2011-06-15T03:45:06Z
 [Term]
 id: FYPO:0000345
 name: abnormal protein export from nucleus
-def: "A transport phenotype observed in the vegetative growth phase of the life cycle in which the export of protein from the nucleus is abnormal." [PomBase:mah]
-comment: Encompasses both export of proteins normally retained in the nucleus and nuclear retention of normally exported proteins.
+def: "A transport phenotype observed in the vegetative growth phase of the life cycle in which the export of protein from the nucleus is abnormal. Export of all proteins or a specific protein may be affected." [PomBase:mah]
+comment: Encompasses both export of proteins normally retained in the nucleus and nuclear retention of normally exported proteins. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein export from nucleus during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000215 ! abnormal intracellular protein transport
 is_a: FYPO:0000506 ! abnormal nuclear export
@@ -4052,8 +4053,7 @@ def: "A cellular process phenotype in which traversing the start control point o
 synonym: "cell cycle passage through START: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal mitotic cell cycle passage through START" EXACT [PomBase:mah]
 synonym: "normal passage through START of mitotic cell cycle during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000411 ! normal cell cycle progression
-is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
+is_a: FYPO:0001928 ! normal regulation of mitotic cell cycle
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
@@ -4065,7 +4065,7 @@ synonym: "abnormal cell cycle arrest at mitotic metaphase/anaphase transition" E
 synonym: "cell cycle arrest at mitotic metaphase/anaphase transition during vegetative growth" EXACT [PomBase:mah]
 synonym: "cell cycle passage through the metaphase-anaphase transition: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic metaphase/anaphase arrest" EXACT [PomBase:mah]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
@@ -4089,8 +4089,7 @@ synonym: "cell cycle progression through the G1/S phase transition: arrested" EX
 synonym: "mitotic cell cycle arrest at G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic G1/S phase arrest" EXACT [PomBase:mah]
 is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
-is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
@@ -6409,8 +6408,8 @@ comment: Cells arrested in S phase typically have more than 1C, but less than 2C
 synonym: "abnormal mitotic cell cycle arrest in S phase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest in S phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in S phase: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
 is_a: FYPO:0000610 ! abnormal mitotic S phase progression
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
@@ -6478,7 +6477,7 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 synonym: "abnormal mitotic cell cycle arrest in late anaphase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest in late anaphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in late anaphase: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
@@ -6489,7 +6488,7 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 synonym: "abnormal mitotic cell cycle arrest in metaphase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest in metaphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in metaphase: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
@@ -6512,7 +6511,7 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 synonym: "abnormal mitotic cell cycle arrest in telophase" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest in telophase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in telophase: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
@@ -7624,6 +7623,7 @@ creation_date: 2011-12-07T05:16:57Z
 id: FYPO:0000732
 name: short mitotic spindle
 def: "A spindle phenotype in which the mitotic spindle is shorter than normal." [PomBase:mah]
+comment: Note that short mitotic spindles are usually not parallel to the long axis of the cell, because short spindle formation takes place before spindle orientation is established (see GO:0000132).
 synonym: "short bipolar mitotic spindle" EXACT [PomBase:vw]
 synonym: "short mitotic spindle during vegetative growth" EXACT [PomBase:mah]
 synonym: "short mitotic spindles" EXACT [PomBase:mah]
@@ -8787,12 +8787,12 @@ creation_date: 2012-03-12T03:24:23Z
 
 [Term]
 id: FYPO:0000839
-name: elongated mononucleate cells
-def: "A cell phenotype in which cells contain one nucleus apiece and are elongated." [PomBase:mah]
-synonym: "elongated mononucleate cells during vegetative growth" EXACT [PomBase:mah]
-synonym: "long mononucleate cells" EXACT [PomBase:vw]
-is_a: FYPO:0000060 ! mononucleate
+name: elongated mononucleate aseptate cells
+def: "A cell phenotype in which cells contain one nucleus apiece, lack septa, and are elongated." [PomBase:mah]
+synonym: "elongated mononucleate aseptate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "long aseptate mononucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000950 ! elongated aseptate cells
+is_a: FYPO:0001916 ! elongated mononucleate cells
 created_by: midori
 creation_date: 2012-03-12T03:25:38Z
 
@@ -10198,7 +10198,6 @@ name: normal cell growth on hydroxyurea
 def: "A cell phenotype in which vegetative cell growth is normal (i.e. indistinguishable from wild type) in a medium containing hydroxyurea." [PomBase:mah]
 synonym: "normal cell growth in presence of hydroxyurea" EXACT [PomBase:mah]
 synonym: "normal cell growth on HU" EXACT [PomBase:mah]
-synonym: "normal cellular response to hydroxyurea" RELATED [PomBase:al, PomBase:mah]
 synonym: "normal vegetative cell growth on hydroxyurea" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell growth
 created_by: midori
@@ -12629,49 +12628,36 @@ creation_date: 2012-07-05T14:34:21Z
 
 [Term]
 id: FYPO:0001190
-name: sensitive to Zymolyase
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to Zymolyase (beta-1,3-glucan laminaripentaohydrolase, an enzyme that degrades cell wall polysaccharides). Cells stop growing (and may die) at a concentration of Zymolyase that allows wild type cells to grow." [PomBase:mah]
-synonym: "hypersensitive to Zymolyase" EXACT [PomBase:mah]
-synonym: "sensitive to beta-1,3-glucan laminaripentaohydrolase" EXACT [PomBase:al, PomBase:mah]
-synonym: "sensitive to Zymolyase during vegetative growth" EXACT [PomBase:mah]
+name: sensitive to cell wall-degrading enzymes
+alt_id: FYPO:0001191
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to one or more enzymes that degrades cell wall polysaccharides. Cells stop growing (and may die) at a concentration of such enzymes that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to cell wall-degrading enzymes" EXACT [PomBase:mah]
+synonym: "sensitive to beta-1,3-glucan laminaripentaohydrolase" NARROW [PomBase:al, PomBase:mah]
+synonym: "sensitive to cell wall-degrading enzymes during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to lysing enzymes from Trichoderma harzianum" NARROW [PomBase:al]
+synonym: "sensitive to Lyticase" NARROW [PomBase:mah]
+synonym: "sensitive to Novozyme 234" NARROW [PomBase:mah]
+synonym: "sensitive to Zymolyase" NARROW [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 created_by: midori
 creation_date: 2012-07-05T14:41:18Z
 
 [Term]
-id: FYPO:0001191
-name: sensitive to Novozyme 234
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to Novozyme 234 (a formerly-available commercial enzyme preparation that degrades cell wall polysaccharides). Cells stop growing (and may die) at a concentration of Novozyme 234 that allows wild type cells to grow." [PMID:1909713, PomBase:mah]
-synonym: "hypersensitive to Novozyme 234" EXACT [PomBase:mah]
-synonym: "sensitive to lysing enzymes from Trichoderma harzianum" RELATED [PomBase:al]
-synonym: "sensitive to Novozyme 234 during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000127 ! increased sensitivity to chemical
-created_by: midori
-creation_date: 2012-07-05T15:07:33Z
-
-[Term]
 id: FYPO:0001192
-name: normal cell growth on Zymolyase
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which vegetative cell growth is normal (i.e. indistinguishable from wild type) in a medium containing Zymolyase (beta-1,3-glucan laminaripentaohydrolase, an enzyme that degrades cell wall polysaccharides." [PomBase:mah]
-synonym: "normal cell growth in presence of Zymolyase" EXACT [PomBase:mah]
-synonym: "normal cell growth on beta-1,3-glucan laminaripentaohydrolase" EXACT [PomBase:al, PomBase:mah]
-synonym: "normal cellular response to Zymolyase" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal vegetative cell growth on Zymolyase" EXACT [PomBase:mah]
+name: normal cell growth on cell wall-degrading enzymes
+alt_id: FYPO:0001193
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which vegetative cell growth is normal (i.e. indistinguishable from wild type) in a medium containing one or more enzymes that degrades cell wall polysaccharides." [PomBase:mah]
+synonym: "normal cell growth in presence of cell wall-degrading enzymes" EXACT [PomBase:mah]
+synonym: "normal cell growth on beta-1,3-glucan laminaripentaohydrolase" NARROW [PomBase:al, PomBase:mah]
+synonym: "normal cell growth on lysing enzymes from Trichoderma harzianum" NARROW [PomBase:al]
+synonym: "normal cell growth on Lyticase" NARROW [PomBase:mah]
+synonym: "normal cell growth on Novozyme 234" NARROW [PomBase:mah]
+synonym: "normal cell growth on Zymolyase" NARROW [PomBase:mah]
+synonym: "normal cellular response to cell wall-degrading enzymes" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell growth on cell wall-degrading enzymes" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell growth
 created_by: midori
 creation_date: 2012-07-05T15:35:28Z
-
-[Term]
-id: FYPO:0001193
-name: normal cell growth on Novozyme 234
-def: "A cell phenotype in which vegetative cell growth is normal (i.e. indistinguishable from wild type) in a medium containing Novozyme 234 (a formerly-available commercial enzyme preparation that degrades cell wall polysaccharides." [PomBase:mah]
-synonym: "normal cell growth in presence of Novozyme 234" EXACT [PomBase:mah]
-synonym: "normal cell growth on lysing enzymes from Trichoderma harzianum" RELATED [PomBase:al]
-synonym: "normal cellular response to Novozyme 234" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal vegetative cell growth on Novozyme 234" EXACT [PomBase:mah]
-is_a: FYPO:0001357 ! normal vegetative cell growth
-created_by: midori
-creation_date: 2012-07-05T15:36:56Z
 
 [Term]
 id: FYPO:0001194
@@ -13113,7 +13099,7 @@ synonym: "decreased cell growth rate" EXACT [PomBase:mah]
 synonym: "growth defect, slow growth" EXACT [PomBase:mah]
 synonym: "reduced cell growth rate" EXACT [PomBase:mah]
 synonym: "slow vegetative cell growth" EXACT [PomBase:mah]
-is_a: FYPO:0001355 ! decreased vegetative cell growth
+is_a: FYPO:0001356 ! abnormal vegetative cell growth
 created_by: midori
 creation_date: 2012-07-16T14:20:51Z
 
@@ -14394,6 +14380,7 @@ synonym: "reduced vegetative cell growth" EXACT [PomBase:mah]
 synonym: "slow vegetative aerobic cell growth" NARROW [PomBase:mah]
 is_a: FYPO:0000046 ! decreased cell growth
 is_a: FYPO:0001356 ! abnormal vegetative cell growth
+is_a: FYPO:0001491 ! viable vegetative cells
 created_by: midori
 creation_date: 2012-08-01T18:16:46Z
 
@@ -14715,7 +14702,7 @@ id: FYPO:0001385
 name: inviable germinating spore, cell cycle arrest with replicated DNA
 def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest with replicated DNA." [PMID:9705504, PomBase:mah]
 synonym: "essential; germinating spore, cell cycle arrest with replicated DNA" RELATED [PomBase:mah]
-is_a: FYPO:0000316 ! inviable germinating spore
+is_a: FYPO:0001924 ! inviable germinating spore, cell cycle arrest
 created_by: midori
 creation_date: 2012-08-10T14:06:51Z
 
@@ -16818,7 +16805,7 @@ comment: This term's primary purpose is to organize terms beneath it in the onto
 subset: high_level_annotation_qc
 synonym: "vegetative cell growth abolished" EXACT [PomBase:mah]
 synonym: "vegetative growth abolished" EXACT [PomBase:mah]
-is_a: FYPO:0001355 ! decreased vegetative cell growth
+is_a: FYPO:0001356 ! abnormal vegetative cell growth
 created_by: midori
 creation_date: 2012-09-20T14:52:12Z
 
@@ -18278,8 +18265,10 @@ id: FYPO:0001706
 name: normal DNA damage checkpoint during gamma irradiation
 def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal when the cell is subject to gamma irradiation. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
 synonym: "normal DNA damage checkpoint activation during gamma irradiation" EXACT [PomBase:al]
+synonym: "normal DNA damage checkpoint during cellular response to gamma radiation" EXACT [PomBase:mah]
 synonym: "normal DNA damage checkpoint during gamma irradiation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001705 ! normal DNA damage checkpoint
+is_a: FYPO:0001927 ! normal cell cycle regulation during cellular response to gamma radiation
 created_by: midori
 creation_date: 2012-11-07T16:41:15Z
 
@@ -20195,10 +20184,13 @@ creation_date: 2013-01-30T12:21:19Z
 
 [Term]
 id: FYPO:0001882
-name: resistance to Zymolyase
-def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of Zymolyase (beta-1,3-glucan laminaripentaohydrolase, an enzyme that degrades cell wall polysaccharides) than normal." [PomBase:mah]
-synonym: "resistance to Zymolyase during vegetative growth" EXACT [PomBase:mah]
-synonym: "resistant to Zymolyase" EXACT [PomBase:mah]
+name: resistance to cell wall-degrading enzymes
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of one or more enzymes that degrades cell wall polysaccharides than normal." [PomBase:mah]
+synonym: "resistance to cell wall-degrading enzymes during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to Lyticase" NARROW [PomBase:mah]
+synonym: "resistance to Novozyme 234" NARROW [PomBase:mah]
+synonym: "resistance to Zymolyase" NARROW [PomBase:mah]
+synonym: "resistant to cell wall-degrading enzymes" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 created_by: midori
 creation_date: 2013-01-30T12:30:20Z
@@ -20480,6 +20472,19 @@ created_by: midori
 creation_date: 2013-01-31T14:27:37Z
 
 [Term]
+id: FYPO:0001908
+name: increased pre-mRNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any unspliced or incompletely spliced mRNA precursor measured in a cell is higher than normal." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "accumlation of pre-mRNA transcripts" RELATED [PomBase:vw]
+synonym: "increased pre-mRNA accumulation" RELATED [PomBase:mah]
+synonym: "increased pre-mRNA level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+relationship: output_of FYPO:0000189 ! abnormal nuclear mRNA splicing, via spliceosome
+created_by: midori
+creation_date: 2013-02-06T11:39:09Z
+
+[Term]
 id: FYPO:0001909
 name: normal protein glycosylation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein glycosylation is normal (i.e. indistinguishable from wild type). Protein glycosylation is the addition of a carbohydrate or carbohydrate derivative unit to a protein amino acid." [GO:0006486, PomBase:mah]
@@ -20551,6 +20556,328 @@ synonym: "forespore membrane formation abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001914 ! abnormal forespore membrane formation
 created_by: midori
 creation_date: 2013-01-31T15:47:54Z
+
+[Term]
+id: FYPO:0001916
+name: elongated mononucleate cells
+def: "A cell phenotype in which cells contain one nucleus apiece and are elongated." [PomBase:mah]
+synonym: "elongated mononucleate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "long mononucleate cells" EXACT [PomBase:vw]
+is_a: FYPO:0000060 ! mononucleate
+is_a: FYPO:0001122 ! elongated vegetative cells
+created_by: midori
+creation_date: 2013-02-06T11:57:40Z
+
+[Term]
+id: FYPO:0001917
+name: elongated mononucleate monoseptate cells
+def: "A cell phenotype in which cells contain a single septum, have nucleus in the septated cell, and are elongated." [PomBase:mah]
+synonym: "elongated mononucleate monoseptate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "long monoseptate mononucleate cells" EXACT [PomBase:vw]
+is_a: FYPO:0001225 ! monoseptate
+is_a: FYPO:0001916 ! elongated mononucleate cells
+created_by: midori
+creation_date: 2013-02-06T12:00:33Z
+
+[Term]
+id: FYPO:0001918
+name: normal cell growth on trifluoperazine
+def: "A cell phenotype in which vegetative cell growth is normal (i.e. indistinguishable from wild type) in a medium containing trifluoperazine." [PomBase:mah]
+synonym: "normal cell growth in presence of trifluoperazine" EXACT [PomBase:mah]
+synonym: "normal cellular response to trifluoperazine" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell growth on trifluoperazine" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell growth
+created_by: midori
+creation_date: 2013-02-06T12:08:16Z
+
+[Term]
+id: FYPO:0001919
+name: fragmented nucleus
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which nucleus is broken into multiple small fragments that are smaller than a normal nucleus." [PomBase:mah]
+synonym: "fragmented nucleus during vegetative growth" EXACT [PomBase:mah]
+synonym: "loss of nuclear integrity" RELATED [PomBase:al]
+is_a: FYPO:0000062 ! abnormal nuclear morphology
+created_by: midori
+creation_date: 2013-02-06T14:32:47Z
+
+[Term]
+id: FYPO:0001920
+name: decreased protein export from nucleus
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein export from nucleus is decreased. Export of all proteins or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein export from nucleus during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein export from nucleus" EXACT [PomBase:mah]
+is_a: FYPO:0000345 ! abnormal protein export from nucleus
+is_a: FYPO:0000508 ! decreased nuclear export
+is_a: FYPO:0000541 ! decreased protein transport
+created_by: midori
+creation_date: 2013-02-06T14:35:44Z
+
+[Term]
+id: FYPO:0001921
+name: abolished protein export from nucleus
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein export from the nucleus does not occur. Export of all proteins or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "absent protein export from nucleus" EXACT [PomBase:mah]
+synonym: "protein export from nucleus abolished" EXACT [PomBase:mah]
+synonym: "protein export from nucleus abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000345 ! abnormal protein export from nucleus
+is_a: FYPO:0000507 ! abolished nuclear export
+created_by: midori
+creation_date: 2013-02-06T14:37:54Z
+
+[Term]
+id: FYPO:0001922
+name: normal protein dephosphorylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein dephosphorylation is normal (i.e. indistinguishable from wild type). Protein dephosphorylation is the removal of a phosphate group from a protein amino acid." [GO:0006470, PomBase:mah]
+synonym: "normal protein dephosphorylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein/peptide dephosphorylation" EXACT [PomBase:mah]
+is_a: FYPO:0000549 ! normal protein modification
+created_by: midori
+creation_date: 2013-02-06T14:58:05Z
+
+[Term]
+id: FYPO:0001923
+name: normal protein dephosphorylation during mitotic G2/M transition
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein dephosphorylation is normal (i.e. indistinguishable from wild type) during the G2/M phase transition of the mitotic cell cycle. Protein dephosphorylation is the removal of a phosphate group from a protein amino acid." [GO:0006470, PomBase:mah]
+synonym: "normal protein dephosphorylation during G2/M phase transition" EXACT [PomBase:al]
+synonym: "normal protein dephosphorylation during G2/M transition during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein dephosphorylation during G2/M transition of mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "normal protein/peptide dephosphorylation during mitotic G2/M transition" EXACT [PomBase:mah]
+is_a: FYPO:0001922 ! normal protein dephosphorylation
+created_by: midori
+creation_date: 2013-02-06T15:00:26Z
+
+[Term]
+id: FYPO:0001924
+name: inviable germinating spore, cell cycle arrest
+def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest." [PomBase:mah]
+synonym: "essential; germinating spore, cell cycle arrest" RELATED [PomBase:mah]
+is_a: FYPO:0000316 ! inviable germinating spore
+created_by: midori
+creation_date: 2013-02-06T15:14:31Z
+
+[Term]
+id: FYPO:0001925
+name: normal cellular response to gamma radiation
+def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to gamma radiation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular response to gamma radiation" EXACT [PomBase:mah]
+synonym: "normal cellular response to gamma radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal sensitivity to gamma radiation" EXACT [PomBase:vw]
+is_a: FYPO:0000968 ! normal cellular response to stress
+created_by: midori
+creation_date: 2013-02-06T15:19:50Z
+
+[Term]
+id: FYPO:0001926
+name: normal cellular response to hydroxyurea
+def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to hydroxyurea is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: Note: Use this term only if a specific response, such as cell cycle delay, is measured. If only cell growth in the presence of hydroxyurea is assayed, use 'normal cell growth on hydroxyurea' (FYPO:000063).
+synonym: "normal cellular response to HU" EXACT [GO:0071280]
+synonym: "normal cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+created_by: midori
+creation_date: 2013-02-06T15:26:30Z
+
+[Term]
+id: FYPO:0001927
+name: normal cell cycle regulation during cellular response to gamma radiation
+def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to gamma radiation is normal (i.e. indistinguishable from wild type). Normally, cell cycle progression is slowed or arrested transiently following exposure to gamma radiation." [PomBase:mah]
+synonym: "normal cell cycle delay following gamma radiation" EXACT [PomBase:al]
+synonym: "normal cell cycle regulation in response to gamma radiation" EXACT [PomBase:mah]
+synonym: "normal mitotic cell cycle regulation during cellular response to gamma radiation" EXACT [PomBase:mah]
+is_a: FYPO:0001925 ! normal cellular response to gamma radiation
+is_a: FYPO:0001928 ! normal regulation of mitotic cell cycle
+created_by: midori
+creation_date: 2013-02-06T15:30:14Z
+
+[Term]
+id: FYPO:0001928
+name: normal regulation of mitotic cell cycle
+def: "A regulation phenotype in which regulation of the mitotic cell cycle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000411 ! normal cell cycle progression
+is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
+created_by: midori
+creation_date: 2013-02-06T15:31:52Z
+
+[Term]
+id: FYPO:0001929
+name: normal cell cycle regulation during cellular response to hydroxyurea
+def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to hydroxyurea is normal (i.e. indistinguishable from wild type). Normally, cell cycle progression is slowed or arrested transiently following exposure to hydroxyurea." [PomBase:mah]
+synonym: "normal cell cycle delay following hydroxyurea exposure" EXACT [PomBase:al]
+synonym: "normal cell cycle regulation in response to hydroxyurea" EXACT [PomBase:mah]
+synonym: "normal mitotic cell cycle regulation during cellular response to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0001926 ! normal cellular response to hydroxyurea
+is_a: FYPO:0001928 ! normal regulation of mitotic cell cycle
+created_by: midori
+creation_date: 2013-02-06T15:43:31Z
+
+[Term]
+id: FYPO:0001930
+name: abnormal cellular response to gamma radiation
+def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to gamma radiation is abnormal." [PomBase:mah]
+synonym: "abnormal cellular response to gamma radiation" EXACT [PomBase:mah]
+synonym: "abnormal cellular response to gamma radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal sensitivity to gamma radiation" EXACT [PomBase:vw]
+is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
+created_by: midori
+creation_date: 2013-02-06T15:55:54Z
+
+[Term]
+id: FYPO:0001931
+name: abnormal cell cycle regulation during cellular response to gamma radiation
+def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to gamma radiation is abnormal. Normally, cell cycle progression is slowed or arrested transiently following exposure to gamma radiation. The most common abnormality is for the cell cycle to progress as in the absence of gamma radiation." [PomBase:mah]
+synonym: "abnormal cell cycle delay following gamma radiation" EXACT [PomBase:al]
+synonym: "abnormal cell cycle regulation in response to gamma radiation" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle regulation during cellular response to gamma radiation" EXACT [PomBase:mah]
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+is_a: FYPO:0001930 ! abnormal cellular response to gamma radiation
+created_by: midori
+creation_date: 2013-02-06T15:56:28Z
+
+[Term]
+id: FYPO:0001932
+name: abnormal cellular response to hydroxyurea
+def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to hydroxyurea is abnormal." [PomBase:mah]
+comment: Note: Use this term only if a specific response, such as cell cycle delay, is measured. If only cell growth in the presence of hydroxyurea is assayed, use 'sensitive to hydroxyurea' (FYPO:0000088) if applicable.
+synonym: "abnormal cellular response to HU" EXACT [GO:0071280]
+synonym: "abnormal cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001342 ! cellular response phenotype during vegetative growth
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+created_by: midori
+creation_date: 2013-02-06T16:01:04Z
+
+[Term]
+id: FYPO:0001933
+name: abnormal cell cycle regulation during cellular response to hydroxyurea
+def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to hydroxyurea is abnormal. Normally, cell cycle progression is slowed or arrested transiently following exposure to hydroxyurea. The most common abnormality is for the cell cycle to progress as in the absence of hydroxyurea." [PomBase:mah]
+synonym: "abnormal cell cycle delay following hydroxyurea exposure" EXACT [PomBase:al]
+synonym: "abnormal cell cycle regulation in response to hydroxyurea" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle regulation during cellular response to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+is_a: FYPO:0001932 ! abnormal cellular response to hydroxyurea
+created_by: midori
+creation_date: 2013-02-06T16:01:24Z
+
+[Term]
+id: FYPO:0001934
+name: abolished cell growth on glycerol carbon source
+def: "A vegetative cell growth phenotype in which cells do not grow in a medium containing a glycerol as the carbon source." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+synonym: "abolished glycerol utilization" RELATED [PomBase:mah, PomBase:vw]
+synonym: "abolished vegetative cell growth on glycerol carbon source" EXACT [PomBase:mah]
+synonym: "cell growth on glycerol carbon source abolished" EXACT [PomBase:mah]
+is_a: FYPO:0001575 ! abolished vegetative cell growth
+created_by: midori
+creation_date: 2013-02-06T16:08:06Z
+
+[Term]
+id: FYPO:0001935
+name: abnormal hydrogen ion transporting ATP synthase activity, rotational mechanism
+def: "A molecular function phenotype in which the observed rate of hydrogen ion transporting ATP synthase activity by a rotational mechanism is abnormal." [PomBase:mah]
+synonym: "abnormal hydrogen ion transporting ATP synthase activity" RELATED [PomBase:mah]
+synonym: "abnormal mitochondrial hydrogen ion transporting ATP synthase activity" NARROW [PomBase:vw]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+created_by: midori
+creation_date: 2013-02-06T16:22:30Z
+
+[Term]
+id: FYPO:0001936
+name: decreased hydrogen ion transporting ATP synthase activity, rotational mechanism
+def: "A molecular function phenotype in which the observed rate of hydrogen ion transporting ATP synthase activity by a rotational mechanism is decreased." [PomBase:mah]
+synonym: "decreased hydrogen ion transporting ATP synthase activity" RELATED [PomBase:mah]
+synonym: "decreased mitochondrial hydrogen ion transporting ATP synthase activity" NARROW [PomBase:vw]
+synonym: "reduced hydrogen ion transporting ATP synthase activity, rotational mechanism" EXACT [PomBase:mah]
+synonym: "reduced mitochondrial hydrogen ion transporting ATP synthase activity" NARROW [PomBase:vw]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001935 ! abnormal hydrogen ion transporting ATP synthase activity, rotational mechanism
+created_by: midori
+creation_date: 2013-02-06T16:22:37Z
+
+[Term]
+id: FYPO:0001937
+name: abnormal cytochrome-c oxidase activity
+def: "A molecular function phenotype in which the observed rate of cytochrome-c oxidase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000689 ! abnormal oxidoreductase activity
+created_by: midori
+creation_date: 2013-02-06T16:26:21Z
+
+[Term]
+id: FYPO:0001938
+name: decreased cytochrome-c oxidase activity
+def: "A molecular function phenotype in which the observed rate of cytochrome-c oxidase activity is decreased." [PomBase:mah]
+synonym: "reduced cytochrome-c oxidase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000690 ! decreased oxidoreductase activity
+is_a: FYPO:0001937 ! abnormal cytochrome-c oxidase activity
+created_by: midori
+creation_date: 2013-02-06T16:26:27Z
+
+[Term]
+id: FYPO:0001939
+name: abnormal ubiquinol-cytochrome-c reductase activity
+def: "A molecular function phenotype in which the observed rate of ubiquinol-cytochrome-c reductase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000689 ! abnormal oxidoreductase activity
+created_by: midori
+creation_date: 2013-02-06T16:37:49Z
+
+[Term]
+id: FYPO:0001940
+name: decreased ubiquinol-cytochrome-c reductase activity
+def: "A molecular function phenotype in which the observed rate of ubiquinol-cytochrome-c reductase activity is decreased." [PomBase:mah]
+synonym: "reduced ubiquinol-cytochrome-c reductase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000690 ! decreased oxidoreductase activity
+is_a: FYPO:0001939 ! abnormal ubiquinol-cytochrome-c reductase activity
+created_by: midori
+creation_date: 2013-02-06T16:37:57Z
+
+[Term]
+id: FYPO:0001941
+name: resistance to cerulenin
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of cerulenin than normal." [PomBase:mah]
+synonym: "resistance to cerulenin during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to cerulenin" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+created_by: midori
+creation_date: 2013-02-06T16:51:46Z
+
+[Term]
+id: FYPO:0001942
+name: increased duration of lag phase
+def: "A cell population phenotype in which a population in a culture remains in lag phase longer than normal. The onset of exponential growth is thus delayed." [PomBase:mah]
+synonym: "delayed exponential growth" EXACT [PomBase:al]
+synonym: "prolonged lag phase" EXACT [PomBase:al]
+is_a: FYPO:0000003 ! cell population phenotype
+created_by: midori
+creation_date: 2013-02-06T16:55:57Z
+
+[Term]
+id: FYPO:0001943
+name: abnormal microtubule binding
+def: "A molecular function phenotype in which occurrence of microtubule binding by a mutated gene product is abnormal." [PomBase:mah]
+comment: This term can be used for any protein-protein interaction that is affected by a mutation, whether or not the mutated gene product is one of the interacting proteins. We recommend noting which proteins were used in the assay when annotating to this term.
+is_a: FYPO:0000704 ! abnormal protein binding
+created_by: midori
+creation_date: 2013-02-06T17:06:58Z
+
+[Term]
+id: FYPO:0001944
+name: abolished microtubule binding
+def: "A molecular function phenotype in which microtubule binding by a mutated gene product does not occur." [PomBase:mah]
+comment: This term can be used for any protein-protein interaction that is affected by a mutation, whether or not the mutated gene product is one of the interacting proteins. We recommend noting which proteins were used in the assay when annotating to this term.
+synonym: "microtubule binding abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000705 ! abolished protein binding
+is_a: FYPO:0001943 ! abnormal microtubule binding
+created_by: midori
+creation_date: 2013-02-06T17:07:06Z
+
+[Term]
+id: FYPO:0001945
+name: normal protein secretion
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein secretion is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal protein secretion during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001071 ! normal transport
+created_by: midori
+creation_date: 2013-02-06T17:11:58Z
 
 [Typedef]
 id: adjacent_to
