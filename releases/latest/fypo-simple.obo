@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2013-02-07
-date: 07:02:2013 16:26
+data-version: 2013-02-08
+date: 08:02:2013 17:17
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -86,7 +86,7 @@ synonymtypedef: SENSU "taxonomic disambiguation"
 synonymtypedef: SMILES "SMILES" 
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 575 $
+remark: svn version: $Revision: 579 $
 ontology: fypo
 
 [Term]
@@ -12289,7 +12289,7 @@ synonym: "decreased misfolded glycoprotein catabolic process" EXACT [GO:0030163,
 synonym: "decreased misfolded glycoprotein catabolism" EXACT [PomBase:mah]
 synonym: "decreased misfolded glycoprotein degradation during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced protein degradation" EXACT [PomBase:mah]
-is_a: FYPO:0000845 ! abnormal protein degradation
+is_a: FYPO:0000846 ! decreased protein degradation
 created_by: midori
 creation_date: 2012-06-14T16:04:32Z
 
@@ -21404,15 +21404,23 @@ is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
 created_by: midori
 creation_date: 2013-02-07T16:08:34Z
 
+[Term]
+id: FYPO:0001978
+name: bent mitotic spindle
+def: "A spindle phenotype in which the mitotic spindle is not straight, but instead forms an angle where microtubules from opposite poles interdigitate." [PMID:1538784, PMID:2145514, PomBase:mah]
+comment: Note that short mitotic spindles are usually not parallel to the long axis of the cell, because short spindle formation takes place before spindle orientation is established (see GO:0000132).
+synonym: "bent bipolar mitotic spindle" EXACT [PomBase:vw]
+synonym: "bent mitotic spindle during vegetative growth" EXACT [PomBase:mah]
+synonym: "V-shaped bipolar mitotic spindle" EXACT [PomBase:vw]
+is_a: FYPO:0001574 ! abnormal bipolar mitotic spindle
+created_by: midori
+creation_date: 2013-02-08T17:13:24Z
+
 [Typedef]
 id: adjacent_to
 name: adjacent_to
 namespace: cl
-namespace: sequence
-def: "A geometric operator, specified in Egenhofer 1989. Two features meet if they share a junction on the sequence. X adjacent_to Y iff X and Y share a boundary but do not overlap." [PMID:20226267, SO:ke]
-subset: SOFA
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/so-xp.obo.owl
 
 [Typedef]
 id: capable_of
@@ -21430,17 +21438,6 @@ synonym: "includes only cells with phenotype" EXACT [PomBase:mah]
 is_a: includes_cells_with_phenotype ! includes cells with phenotype
 created_by: midori
 creation_date: 2012-02-29T01:46:18Z
-
-[Typedef]
-id: contains
-name: contains
-namespace: sequence
-def: "The inverse of contained_by." [PMID:20226267]
-comment: Example: pre_miRNA contains miRNA_loop.
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/so-xp.obo.owl
-is_transitive: true
-created_by: kareneilbeck
-creation_date: 2010-10-14T01:32:15Z
 
 [Typedef]
 id: derives_from
@@ -21498,12 +21495,6 @@ namespace: RO
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
 
 [Typedef]
-id: has_origin
-name: has_origin
-namespace: sequence
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/so-xp.obo.owl
-
-[Typedef]
 id: has_output
 name: has_output
 def: "p has_output c iff c participates_in p at the end of p and c is in some way changed by p or created by p." [GOC:curators]
@@ -21538,12 +21529,9 @@ expand_expression_to: "http://purl.obolibrary.org/obo/BFO_0000051 some (http://p
 id: has_quality
 name: has_quality
 namespace: RO
-namespace: sequence
 alt_id: OBO_REL:0000029
-comment: The relationship between a feature and an attribute.
 xref: OBO_REL:has_quality
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/so-xp.obo.owl
 
 [Typedef]
 id: includes_cells_with_phenotype
@@ -21678,26 +21666,6 @@ id: towards
 name: towards
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
 xref: OBO_REL:towards
-
-[Typedef]
-id: transcribed_from
-name: transcribed_from
-namespace: sequence
-def: "X is transcribed_from Y if X is synthesized from template Y." [http://precedings.nature.com/documents/3495/version/1]
-comment: Example: primary_transcript transcribed_from gene.
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/so-xp.obo.owl
-created_by: kareneilbeck
-creation_date: 2009-08-19T12:05:39Z
-
-[Typedef]
-id: transcribed_to
-name: transcribed_to
-namespace: sequence
-def: "Inverse of transcribed_from." [http://precedings.nature.com/documents/3495/version/1]
-comment: Example: gene transcribed_to primary_transcript.
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/so-xp.obo.owl
-created_by: kareneilbeck
-creation_date: 2009-08-19T12:08:24Z
 
 [Typedef]
 id: variant_of
