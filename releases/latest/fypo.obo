@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2013-02-08
-date: 08:02:2013 17:17
+data-version: 2013-02-13
+date: 13:02:2013 18:25
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -86,7 +86,7 @@ synonymtypedef: SENSU "taxonomic disambiguation"
 synonymtypedef: SMILES "SMILES" 
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 579 $
+remark: svn version: $Revision: 583 $
 ontology: fypo
 
 [Term]
@@ -10549,6 +10549,33 @@ is_a: CHEBI:16389 ! ubiquinones
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
 
 [Term]
+id: CHEBI:46345
+name: 5-fluorouracil
+namespace: chebi_ontology
+alt_id: CHEBI:2054
+alt_id: CHEBI:46343
+def: "A nucleobase analogue that has formula C4H3FN2O2." []
+synonym: "5-fluoropyrimidine-2,4(1H,3H)-dione" EXACT IUPAC_NAME [IUPAC:]
+synonym: "5-Fluoropyrimidine-2,4-dione" RELATED [ChemIDplus:]
+synonym: "5-Fluorouracil" EXACT [KEGG COMPOUND:]
+synonym: "5-fluorouracil" EXACT IUPAC_NAME [IUPAC:]
+synonym: "5-FU" RELATED [KEGG COMPOUND:]
+synonym: "C4H3FN2O2" RELATED FORMULA [KEGG COMPOUND:]
+synonym: "Fc1c[nH]c(=O)[nH]c1=O" RELATED SMILES [ChEBI:]
+synonym: "Fluorouracil" RELATED [KEGG COMPOUND:]
+synonym: "InChI=1S/C4H3FN2O2/c5-2-1-6-4(9)7-3(2)8/h1H,(H2,6,7,8,9)" RELATED InChI [ChEBI:]
+synonym: "InChIKey=GHASVSINZRGABV-UHFFFAOYSA-N" RELATED InChIKey [ChEBI:]
+xref: Beilstein:127172 "Beilstein Registry Number"
+xref: ChemIDplus:51-21-8 "CAS Registry Number"
+xref: DrugBank:DB00544 "DrugBank"
+xref: KEGG COMPOUND:51-21-8 "CAS Registry Number"
+xref: KEGG COMPOUND:C07649 "KEGG COMPOUND"
+xref: Wikipedia:Fluorouracil "Wikipedia"
+is_a: CHEBI:37143 ! organofluorine compound
+is_a: CHEBI:67142 ! nucleobase analogue
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
+
+[Term]
 id: CHEBI:46733
 name: oxabicycloalkane
 namespace: chebi_ontology
@@ -12206,6 +12233,22 @@ def: "A carbohydrate derivative that is any derivative of a polysaccharide." []
 synonym: "polysaccharide derivatives" RELATED [ChEBI:]
 is_a: CHEBI:33694 ! biomacromolecule
 is_a: CHEBI:63299 ! carbohydrate derivative
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
+
+[Term]
+id: CHEBI:67142
+name: nucleobase analogue
+namespace: chebi_ontology
+def: "A molecule that can substitute for a normal nucleobase in nucleic acids." []
+synonym: "base analog" RELATED [ChEBI:]
+synonym: "base analogs" RELATED [ChEBI:]
+synonym: "base analogue" RELATED [ChEBI:]
+synonym: "base analogues" RELATED [ChEBI:]
+synonym: "nucleobase analog" RELATED [ChEBI:]
+synonym: "nucleobase analogs" RELATED [ChEBI:]
+synonym: "nucleobase analogues" RELATED [ChEBI:]
+xref: Wikipedia:Base_analog "Wikipedia"
+is_a: CHEBI:33832 ! organic cyclic compound
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
 
 [Term]
@@ -16745,7 +16788,7 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000257
 name: normal phenotype
-def: "A cell phenotype that shows no detectable differences from normal." [PomBase:mah]
+def: "A phenotype that shows no detectable differences from normal. In fission yeast, the characteristics of wild type cells of the sequenced strain (972 h-) or the isogenic h+ or h90 strains are regarded as normal." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: high_level_annotation_qc
 synonym: "no obvious phenotype" EXACT [PomBase:mah]
@@ -17873,7 +17916,7 @@ creation_date: 2011-06-03T01:43:41Z
 [Term]
 id: FYPO:0000339
 name: mislocalized septum
-def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum in an abnormal location. The normal location is at the midpoint of the long axis of the cell." [PomBase:mah]
+def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell has a septum in an abnormal location. The normal location is at the midpoint of the long axis of the cell." [PomBase:mah]
 synonym: "abnormal barrier septum site selection" RELATED [PomBase:mah]
 synonym: "abnormal septum localization" RELATED [PomBase:mah]
 synonym: "abnormal septum location" EXACT [PomBase:mah]
@@ -23818,8 +23861,8 @@ creation_date: 2011-12-06T02:45:18Z
 [Term]
 id: FYPO:0000722
 name: sensitive to acidity
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to acidic pH." [PomBase:mah]
-comment: In chemistry, acid pH is below 7.0. This term, however, is most useful for annotating phenotypes observed at any pH lower than that of standard fission yeast media, about 5.8.
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to acidic pH. Cells stop growing (and may die) at a pH that allows wild type cells to grow." [PomBase:mah]
+comment: In chemistry, acid pH is below 7.0. This term, however, is most useful for annotating phenotypes observed at any pH lower than that of standard fission yeast media, about 5.8. Also see 'sensitive to low pH' (FYPO:0001989).
 synonym: "acid pH resistance: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "hypersensitive to acidity" EXACT [PomBase:mah]
 synonym: "sensitive to acidity during vegetative growth" EXACT [PomBase:mah]
@@ -23836,8 +23879,8 @@ creation_date: 2011-12-06T02:47:00Z
 [Term]
 id: FYPO:0000723
 name: sensitive to alkalinity
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to alkaline pH." [PomBase:mah]
-comment: In chemistry, alkaline pH is over 7.0. This term, however, is most useful for annotating phenotypes observed at any pH higher than that of standard fission yeast media, about 5.8.
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to alkaline pH. Cells stop growing (and may die) at a pH that allows wild type cells to grow." [PomBase:mah]
+comment: In chemistry, alkaline pH is over 7.0. This term, however, is most useful for annotating phenotypes observed at any pH higher than that of standard fission yeast media, about 5.8. Also see 'sensitive to high pH' (FYPO:0001987).
 synonym: "alkaline pH resistance: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "hypersensitive to alkalinity" EXACT [PomBase:mah]
 synonym: "sensitive to alkalinity during vegetative growth" EXACT [PomBase:mah]
@@ -27824,8 +27867,8 @@ synonym: "additional vacuoles present" EXACT [PomBase:mah]
 synonym: "extra vacuoles" EXACT [PomBase:mah]
 synonym: "vacuoles present in greater numbers during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
-is_a: PATO:0002002
-intersection_of: PATO:0002002
+is_a: PATO:0000470
+intersection_of: PATO:0000470
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
 intersection_of: inheres_in GO:0000324 ! fungal-type vacuole
 relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
@@ -29378,7 +29421,7 @@ creation_date: 2012-05-11T01:34:45Z
 [Term]
 id: FYPO:0001048
 name: mitotic catastrophe with cut
-def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), and then undergoes septation and subsequently die." [PomBase:mah]
+def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), and then undergo septation and subsequently die." [PomBase:mah]
 synonym: "cut with mitotic catastrophe" EXACT [PomBase:mah]
 synonym: "mitotic catastrophe with cut during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000229 ! cut
@@ -29465,7 +29508,7 @@ creation_date: 2012-05-11T02:16:25Z
 [Term]
 id: FYPO:0001052
 name: mitotic catastrophe with cut, small cells
-def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are smaller than wild type, and then undergoes septation and subsequently die." [PomBase:mah]
+def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are smaller than wild type, and then undergo septation and subsequently die." [PomBase:mah]
 synonym: "cut with mitotic catastrophe, small cells" EXACT [PomBase:mah]
 synonym: "mitotic catastrophe with cut, small cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001048 ! mitotic catastrophe with cut
@@ -29489,7 +29532,7 @@ creation_date: 2012-05-11T02:38:12Z
 [Term]
 id: FYPO:0001053
 name: mitotic catastrophe with cut, normal size cells
-def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are the same size as wild type, and then undergoes septation and subsequently die." [PomBase:mah]
+def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are the same size as wild type, and then undergo septation and subsequently die." [PomBase:mah]
 synonym: "cut with mitotic catastrophe, normal size cells" EXACT [PomBase:mah]
 synonym: "mitotic catastrophe with cut, normal size cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001048 ! mitotic catastrophe with cut
@@ -29513,7 +29556,7 @@ creation_date: 2012-05-11T02:39:40Z
 [Term]
 id: FYPO:0001054
 name: mitotic catastrophe with cut, elongated cells
-def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are longer than wild type, and then undergoes septation and subsequently die." [PomBase:mah]
+def: "An inviable phenotype in which cells undergo mitotic catastrophe (i.e. enter mitosis prematurely and with defective chromosome segregation), entering mitosis when the cells are longer than wild type, and then undergo septation and subsequently die." [PomBase:mah]
 synonym: "cut with mitotic catastrophe, elongated cells" EXACT [PomBase:mah]
 synonym: "mitotic catastrophe with cut, elongated cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic catastrophe with cut, long cells" EXACT [PomBase:vw]
@@ -37836,8 +37879,8 @@ synonym: "excess nuclear envelope present during vegetative growth" EXACT [PomBa
 synonym: "increased nuclear envelope proliferation" RELATED [PMID:22156749, PomBase:vw]
 synonym: "nuclear envelope present in greater amount" EXACT [PomBase:mah]
 is_a: FYPO:0000769 ! abnormal nuclear envelope morphology
-is_a: PATO:0002002
-intersection_of: PATO:0002002
+is_a: PATO:0000470
+intersection_of: PATO:0000470
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
 intersection_of: inheres_in GO:0005635 ! nuclear envelope
 relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
@@ -41462,8 +41505,7 @@ id: FYPO:0001762
 name: normal tRNA modification
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which tRNA modification, the covalent alteration of one or more nucleotides within a tRNA molecule, is normal (i.e. indistinguishable from wild type)." [GO:0006400, PomBase:mah]
 synonym: "normal tRNA modification during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000294 ! RNA metabolism phenotype
-is_a: FYPO:0000859 ! normal metabolic process
+is_a: FYPO:0001980 ! normal RNA processing
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690 ! vegetative growth of a single-celled organism
 intersection_of: inheres_in GO:0006400 ! tRNA modification
@@ -41783,8 +41825,8 @@ synonym: "excess ER membrane present" EXACT [PomBase:mah]
 synonym: "increased endoplasmic reticulum membrane proliferation" RELATED [PomBase:mah]
 synonym: "overdeveloped ER membrane" EXACT [PomBase:al]
 is_a: FYPO:0000354 ! abnormal endoplasmic reticulum morphology
-is_a: PATO:0002002
-intersection_of: PATO:0002002
+is_a: PATO:0000470
+intersection_of: PATO:0000470
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
 intersection_of: inheres_in GO:0005789 ! endoplasmic reticulum membrane
 relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
@@ -43513,8 +43555,8 @@ synonym: "extra P-bodies" EXACT [PomBase:mah]
 synonym: "P bodies present in greater numbers" EXACT [GO:0000932]
 synonym: "P-bodies present in greater numbers during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
-is_a: PATO:0002002
-intersection_of: PATO:0002002
+is_a: PATO:0000470
+intersection_of: PATO:0000470
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
 intersection_of: inheres_in GO:0000932 ! cytoplasmic mRNA processing body
 relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
@@ -43550,7 +43592,7 @@ synonym: "fewer P-bodies present during vegetative growth" EXACT [PomBase:mah]
 synonym: "P bodies present in greater numbers during vegetative growth" EXACT [GO:0000932]
 is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
 is_a: FYPO:0001898 ! P-bodies present in decreased numbers
-intersection_of: PATO:0002001
+intersection_of: PATO:0001997
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
 intersection_of: inheres_in GO:0000932 ! cytoplasmic mRNA processing body
 relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
@@ -43568,8 +43610,8 @@ synonym: "fewer P-bodies present" EXACT [PomBase:mah]
 synonym: "P bodies present in decreased numbers" EXACT [GO:0000932]
 synonym: "P-bodies present in reduced numbers" EXACT [PomBase:mah]
 is_a: FYPO:0000287 ! abnormal subcellular structure
-is_a: PATO:0002001
-intersection_of: PATO:0002001
+is_a: PATO:0001997
+intersection_of: PATO:0001997
 intersection_of: inheres_in GO:0000932 ! cytoplasmic mRNA processing body
 relationship: inheres_in GO:0000932 ! cytoplasmic mRNA processing body
 created_by: midori
@@ -43584,7 +43626,7 @@ synonym: "decreased P-body formation during glucose starvation" RELATED [PomBase
 synonym: "fewer P-bodies present during glucose starvation" EXACT [PomBase:mah]
 synonym: "P bodies present in greater numbers during glucose starvation" EXACT [GO:0000932]
 is_a: FYPO:0001898 ! P-bodies present in decreased numbers
-intersection_of: PATO:0002001
+intersection_of: PATO:0001997
 intersection_of: exists_during GO:0042149 ! cellular response to glucose starvation
 intersection_of: inheres_in GO:0000932 ! cytoplasmic mRNA processing body
 relationship: exists_during GO:0042149 ! cellular response to glucose starvation
@@ -43869,7 +43911,7 @@ creation_date: 2013-02-06T11:57:40Z
 [Term]
 id: FYPO:0001917
 name: elongated mononucleate monoseptate cells
-def: "A cell phenotype in which cells contain a single septum, have nucleus in the septated cell, and are elongated." [PomBase:mah]
+def: "A cell phenotype in which cells contain a single septum, have one nucleus in the septated cell, and are elongated." [PomBase:mah]
 synonym: "elongated mononucleate monoseptate cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "long monoseptate mononucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0001225 ! monoseptate
@@ -44862,6 +44904,182 @@ relationship: exists_during GO:0072690 ! vegetative growth of a single-celled or
 relationship: inheres_in GO:0072686 ! mitotic spindle
 created_by: midori
 creation_date: 2013-02-08T17:13:24Z
+
+[Term]
+id: FYPO:0001979
+name: accumulation of lariat introns
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which excised introns in lariat form (i.e. not linearized) are present at greater levels than normal." [PomBase:al, PomBase:mah]
+synonym: "accumulation of lariat introns during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased lariat intron level" EXACT [PomBase:mah]
+synonym: "increased level of lariat introns" EXACT [PomBase:vw]
+synonym: "lariat intron accumulation" EXACT [PomBase:vw]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+created_by: midori
+creation_date: 2013-02-13T14:38:24Z
+
+[Term]
+id: FYPO:0001980
+name: normal RNA processing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which RNA processing is normal (i.e. indistinguishable from wild type). RNA processing is the conversion of one or more primary RNA transcripts into one or more mature RNA molecules." [GO:0006396, PomBase:mah]
+synonym: "normal RNA processing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000142 ! gene expression phenotype
+is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0000859 ! normal metabolic process
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0006396 ! RNA processing
+intersection_of: qualifier PATO:0000461
+relationship: happens_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0006396 ! RNA processing
+relationship: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-02-13T14:50:30Z
+
+[Term]
+id: FYPO:0001981
+name: decreased rate of DNA replication
+def: "A cellular process phenotype in which the rate of DNA replication is decreased." [PomBase:mah]
+synonym: "reduced rate of DNA replication" EXACT [PomBase:mah]
+is_a: FYPO:0000217 ! abnormal DNA replication
+is_a: PATO:0000911
+intersection_of: PATO:0000911
+intersection_of: inheres_in GO:0006261 ! DNA-dependent DNA replication
+relationship: inheres_in GO:0006261 ! DNA-dependent DNA replication
+created_by: midori
+creation_date: 2013-02-13T14:54:35Z
+
+[Term]
+id: FYPO:0001982
+name: decreased rate of DNA replication during vegetative growth
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the rate of DNA replication is decreased." [PomBase:mah]
+synonym: "reduced rate of DNA replication during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001343 ! abnormal DNA replication during vegetative growth
+is_a: FYPO:0001981 ! decreased rate of DNA replication
+intersection_of: PATO:0000911
+intersection_of: happens_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0006261 ! DNA-dependent DNA replication
+relationship: happens_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0006261 ! DNA-dependent DNA replication
+created_by: midori
+creation_date: 2013-02-13T14:54:57Z
+
+[Term]
+id: FYPO:0001983
+name: protein absent from cell
+def: "A cell phenotype in which the amount of protein measured in a cell is too low to detect. Total protein or a specific protein may be affected." [PomBase:mah]
+synonym: "undetectable cellular protein level" EXACT [PomBase:al]
+is_a: FYPO:0000835 ! decreased protein level
+is_a: FYPO:0001888 ! substance absent from cell
+intersection_of: PATO:0002000
+intersection_of: inheres_in CL:0000000 ! cell
+intersection_of: towards CHEBI:36080 ! protein
+relationship: inheres_in CL:0000000 ! cell
+relationship: towards CHEBI:36080 ! protein
+created_by: midori
+creation_date: 2013-02-13T15:06:40Z
+
+[Term]
+id: FYPO:0001984
+name: protein absent from cell during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell is too low to detect. Total protein or a specific protein may be affected." [PomBase:mah]
+synonym: "undetectable cellular protein level during vegetative growth" EXACT [PomBase:al]
+is_a: FYPO:0001208 ! substance absent from cell during vegetative growth
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+is_a: FYPO:0001983 ! protein absent from cell
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
+intersection_of: towards CHEBI:36080 ! protein
+relationship: during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
+relationship: towards CHEBI:36080 ! protein
+created_by: midori
+creation_date: 2013-02-13T15:07:15Z
+
+[Term]
+id: FYPO:0001985
+name: abnormal phenotype
+def: "A phenotype that shows detectable differences from normal. In fission yeast, the characteristics of wild type cells of the sequenced strain (972 h-) or the isogenic h+ or h90 strains are regarded as normal." [PomBase:mah]
+is_a: FYPO:0000001 ! phenotype
+is_a: PATO:0000001
+intersection_of: PATO:0000001
+intersection_of: inheres_in FYPO:0000001 ! phenotype
+intersection_of: qualifier PATO:0000460
+relationship: inheres_in FYPO:0000001 ! phenotype
+relationship: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-02-13T15:39:55Z
+
+[Term]
+id: FYPO:0001986
+name: resistance to 5-fluorouracil
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of 5-fluorouracil than normal." [PomBase:mah]
+synonym: "resistance to 5-fluorouracil during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to 5-FU" EXACT [PomBase:al]
+synonym: "resistant to 5-fluorouracil" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0016049 ! cell growth
+intersection_of: towards CHEBI:46345 ! 5-fluorouracil
+relationship: during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0016049 ! cell growth
+relationship: towards CHEBI:46345 ! 5-fluorouracil
+created_by: midori
+creation_date: 2013-02-13T16:51:16Z
+
+[Term]
+id: FYPO:0001987
+name: sensitive to high pH
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to pH higher than that of standard S. pombe growth media (about 5.8). Cells stop growing (and may die) at a pH that allows wild type cells to grow." [PomBase:mah]
+comment: Also see 'sensitive to alkalinity' (FYPO:0000723).
+synonym: "hypersensitive to high pH" EXACT [PomBase:mah]
+synonym: "sensitive to high pH during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000721 ! abnormal cellular response to pH
+created_by: midori
+creation_date: 2013-02-13T17:07:12Z
+
+[Term]
+id: FYPO:0001988
+name: normal growth at high pH
+def: "A cell growth phenotype in which vegetative cells grow normally at a pH higher than that of standard S. pombe growth medium (abut 5.8)." [PomBase:mah]
+synonym: "normal vegetative growth at high pH" EXACT [PomBase:mah]
+is_a: FYPO:0000674 ! normal growth at high temperature
+created_by: midori
+creation_date: 2013-02-13T17:11:42Z
+
+[Term]
+id: FYPO:0001989
+name: sensitive to low pH
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to pH lower than that of standard S. pombe growth media (about 5.8). Cells stop growing (and may die) at a pH that allows wild type cells to grow." [PomBase:mah]
+comment: Also see 'sensitive to acidity' (FYPO:0000722).
+synonym: "hypersensitive to low pH" EXACT [PomBase:mah]
+synonym: "sensitive to low pH during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000721 ! abnormal cellular response to pH
+created_by: midori
+creation_date: 2013-02-13T17:18:14Z
+
+[Term]
+id: FYPO:0001990
+name: normal growth at low pH
+def: "A cell growth phenotype in which vegetative cells grow normally at a pH lower than that of standard S. pombe growth medium (abut 5.8)." [PomBase:mah]
+synonym: "normal vegetative growth at low pH" EXACT [PomBase:mah]
+is_a: FYPO:0000674 ! normal growth at high temperature
+created_by: midori
+creation_date: 2013-02-13T17:20:01Z
+
+[Term]
+id: FYPO:0001991
+name: inviable after spore germination, without cell division
+def: "A phenotype in which a spore germinates to produce a cell that dies without undergoing cell division." [PomBase:al, PomBase:mah]
+synonym: "essential; germinating spore, without cell division" RELATED [PomBase:mah]
+synonym: "inviable after spore germination, no cell division" EXACT [PomBase:al]
+synonym: "inviable following spore germination, without cell division" EXACT [PomBase:mah]
+synonym: "inviable germinating spore, multiple cell divisions during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable germinating spore, without cell division" RELATED [PomBase:mah]
+is_a: FYPO:0000316 ! inviable after spore germination
+created_by: midori
+creation_date: 2013-02-13T17:25:34Z
 
 [Term]
 id: GO:0000001
