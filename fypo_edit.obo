@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 20:02:2013 18:30
+date: 25:02:2013 16:56
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 subsetdef: high_level_annotation_qc "High-level terms not to be used for direct annotation"
@@ -1850,13 +1850,11 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "elongated multinucleate cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "long multinucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000061 ! multinucleate
-is_a: FYPO:0000949 ! aseptate
 is_a: FYPO:0001122 ! elongated vegetative cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000061 ! multinucleate
-intersection_of: has_part FYPO:0000949 ! aseptate
 relationship: output_of FYPO:0000032 ! abnormal cytokinesis
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
@@ -3552,6 +3550,8 @@ id: FYPO:0000267
 name: sensitive to ionizing radiation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to ionizing radiation." [PomBase:mah]
 synonym: "hypersensitive to ionizing radiation" EXACT [PomBase:mah]
+synonym: "sensitive to gamma irradiation" NARROW [PomBase:al]
+synonym: "sensitive to gamma radiation" NARROW [PomBase:al]
 synonym: "sensitive to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to IR" EXACT [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress
@@ -3993,9 +3993,9 @@ creation_date: 2011-04-26T02:36:20Z
 id: FYPO:0000303
 name: decreased conjugation frequency
 def: "A conjugation phenotype in which conjugation occurs less frequently than normal." [PomBase:mah]
+comment: Note that this term refers specifically to conjugation, whereas experiments that measure mating efficiency often do so by counting zygotes plus asci, sometimes also including spores. For such experiments, we recommend using 'decreased mating efficiency' (FYPO:0000708).
 synonym: "decreased conjugation efficiency" EXACT [PomBase:mah]
 synonym: "decreased occurrence of conjugation" EXACT [PomBase:mah]
-synonym: "mating efficiency: decreased" RELATED [SGD:phenotype_annotation]
 synonym: "reduced conjugation efficiency" EXACT [PomBase:mah]
 synonym: "reduced conjugation frequency" EXACT [PomBase:mah]
 synonym: "reduced zygote formation" RELATED [PomBase:mah]
@@ -8660,7 +8660,7 @@ creation_date: 2011-11-11T10:45:30Z
 [Term]
 id: FYPO:0000656
 name: abnormal DNA binding
-def: "A molecular function phenotype in which occurrence of DNA binding by a mutated gene product is abnormal." [PomBase:mah]
+def: "A molecular function phenotype in which occurrence of DNA binding by a gene product is abnormal, when the gene product or the bound DNA sequence is mutated." [PomBase:mah]
 is_a: FYPO:0000653 ! DNA binding phenotype
 is_a: FYPO:0000707 ! abnormal molecular function
 intersection_of: PATO:0000001
@@ -8672,7 +8672,7 @@ creation_date: 2011-11-11T10:45:30Z
 [Term]
 id: FYPO:0000657
 name: increased DNA binding
-def: "A molecular function phenotype in which occurrence of DNA binding by a mutated gene product is increased." [PomBase:mah]
+def: "A molecular function phenotype in which occurrence of DNA binding by a gene product is increased, when the gene product or the bound DNA sequence is mutated." [PomBase:mah]
 is_a: FYPO:0000656 ! abnormal DNA binding
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0003677
@@ -8682,7 +8682,7 @@ creation_date: 2011-11-11T10:45:30Z
 [Term]
 id: FYPO:0000658
 name: decreased DNA binding
-def: "A molecular function phenotype in which occurrence of DNA binding by a mutated gene product is decreased." [PomBase:mah]
+def: "A molecular function phenotype in which occurrence of DNA binding by a gene product is decreased, when the gene product or the bound DNA sequence is mutated." [PomBase:mah]
 synonym: "reduced DNA binding" EXACT [PomBase:mah]
 is_a: FYPO:0000656 ! abnormal DNA binding
 intersection_of: PATO:0002052
@@ -8693,7 +8693,7 @@ creation_date: 2011-11-11T10:45:30Z
 [Term]
 id: FYPO:0000659
 name: abolished DNA binding
-def: "A molecular function phenotype in which DNA binding by a mutated gene product does not occur." [PomBase:mah]
+def: "A molecular function phenotype in which DNA binding by a gene product does not occur, when the gene product or the bound DNA sequence is mutated." [PomBase:mah]
 synonym: "DNA binding abolished" EXACT [PomBase:mah]
 is_a: FYPO:0000656 ! abnormal DNA binding
 intersection_of: PATO:0001558
@@ -9295,6 +9295,7 @@ id: FYPO:0000708
 name: decreased mating efficiency
 def: "A biological process phenotype in which the observed mating efficiency is lower than normal." [PMID:15300681, PMID:16598689, PomBase:al, PomBase:mah]
 comment: Note that mating efficiency is often measured by counting zygotes plus asci, sometimes also including spores, so a change in measured mating efficiency may reflect a change in conjugation frequency (see FYPO:0000031 and its descendants), a change in sporulation (see FYPO:0000121 and its descendants), or both. For this reason, this term is not a child of 'mating phenotype' (FYPO:0000031).
+synonym: "mating efficiency: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "reduced mating efficiency" EXACT [PomBase:mah]
 is_a: FYPO:0000300 ! biological process phenotype
 created_by: midori
@@ -10014,10 +10015,10 @@ creation_date: 2012-01-18T03:02:59Z
 id: FYPO:0000761
 name: increased conjugation frequency
 def: "A conjugation phenotype in which conjugation occurs more frequently than normal." [PomBase:mah]
+comment: Note that this term refers specifically to conjugation, whereas experiments that measure mating efficiency often do so by counting zygotes plus asci, sometimes also including spores. For such experiments, we recommend using 'increased mating efficiency' (FYPO:0001043).
 synonym: "increased conjugation efficiency" EXACT [PomBase:mah]
 synonym: "increased occurrence of conjugation" EXACT [PomBase:mah]
 synonym: "increased zygote formation" RELATED [PomBase:mah]
-synonym: "mating efficiency: increased" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000031 ! abnormal conjugation
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0000747
@@ -11144,7 +11145,7 @@ creation_date: 2012-03-12T03:24:23Z
 [Term]
 id: FYPO:0000839
 name: elongated mononucleate aseptate cells
-def: "A cell phenotype in which cells contain one nucleus apiece, lack septa, and are elongated." [PomBase:mah]
+def: "A cell phenotype in which cells contain one nucleus apiece, lack septa, are elongated, and are inviable." [PomBase:mah]
 synonym: "elongated mononucleate aseptate cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "long aseptate mononucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000060 ! mononucleate
@@ -14070,6 +14071,7 @@ id: FYPO:0001043
 name: increased mating efficiency
 def: "A biological process phenotype in which the observed mating efficiency is higher than normal." [PomBase:al, PomBase:mah]
 comment: Note that mating efficiency is often measured by counting zygotes plus asci, sometimes also including spores, so a change in measured mating efficiency may reflect a change in conjugation frequency (see FYPO:0000031 and its descendants), a change in sporulation (see FYPO:0000121 and its descendants), or both. For this reason, this term is not a child of 'mating phenotype' (FYPO:0000031).
+synonym: "mating efficiency: increased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000300 ! biological process phenotype
 created_by: midori
 creation_date: 2012-05-09T05:15:28Z
@@ -14830,7 +14832,7 @@ creation_date: 2012-06-01T14:23:10Z
 [Term]
 id: FYPO:0001095
 name: abolished DNA replication origin binding
-def: "A molecular function phenotype in which DNA binding at a replication origin by a mutated gene product does not occur." [PomBase:mah]
+def: "A molecular function phenotype in which DNA binding at a replication origin by a gene product does not occur, when the gene product or the bound DNA sequence is mutated." [PomBase:mah]
 synonym: "abolished origin binding" EXACT [PomBase:mah]
 synonym: "DNA replication origin binding abolished" EXACT [PomBase:mah]
 is_a: FYPO:0000659 ! abolished DNA binding
@@ -15789,7 +15791,7 @@ creation_date: 2012-06-15T14:22:57Z
 [Term]
 id: FYPO:0001165
 name: inviable following anaerobic growth
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells that are exposed to anaerobic conditions fail to grow upon being returned to aerobic conditions." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells that are exposed to anaerobic conditions fail to grow upon being returned to aerobic conditions, and eventually die." [PomBase:mah]
 synonym: "essential following anaerobic growth" RELATED [PomBase:mah]
 synonym: "inviable following anaerobic vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000049 ! inviable
@@ -23475,13 +23477,14 @@ creation_date: 2012-11-07T16:37:55Z
 
 [Term]
 id: FYPO:0001706
-name: normal DNA damage checkpoint during gamma irradiation
-def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal when the cell is subject to gamma irradiation. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
-synonym: "normal DNA damage checkpoint activation during gamma irradiation" EXACT [PomBase:al]
-synonym: "normal DNA damage checkpoint during cellular response to gamma radiation" EXACT [PomBase:mah]
-synonym: "normal DNA damage checkpoint during gamma irradiation during vegetative growth" EXACT [PomBase:mah]
+name: normal DNA damage checkpoint during cellular response to ionizing radiation
+def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal when the cell is exposed to ionizing radiation. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
+synonym: "normal DNA damage checkpoint activation during cellular response to ionizing radiation" EXACT [PomBase:al]
+synonym: "normal DNA damage checkpoint during cellular response to gamma radiation" NARROW [PomBase:al, PomBase:mah]
+synonym: "normal DNA damage checkpoint during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal DNA damage checkpoint during gamma irradiation" NARROW [PomBase:al]
 is_a: FYPO:0001705 ! normal DNA damage checkpoint
-is_a: FYPO:0001927 ! normal cell cycle regulation during cellular response to gamma radiation
+is_a: FYPO:0001927 ! normal cell cycle regulation during cellular response to ionizing radiation
 created_by: midori
 creation_date: 2012-11-07T16:41:15Z
 
@@ -26502,11 +26505,12 @@ creation_date: 2013-02-06T15:26:30Z
 
 [Term]
 id: FYPO:0001927
-name: normal cell cycle regulation during cellular response to gamma radiation
-def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to gamma radiation is normal (i.e. indistinguishable from wild type). Normally, cell cycle progression is slowed or arrested transiently following exposure to gamma radiation." [PomBase:mah]
-synonym: "normal cell cycle delay following gamma radiation" EXACT [PomBase:al]
-synonym: "normal cell cycle regulation in response to gamma radiation" EXACT [PomBase:mah]
-synonym: "normal mitotic cell cycle regulation during cellular response to gamma radiation" EXACT [PomBase:mah]
+name: normal cell cycle regulation during cellular response to ionizing radiation
+def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to ionizing radiation is normal (i.e. indistinguishable from wild type). Normally, cell cycle progression is slowed or arrested transiently following exposure to ionizing radiation." [PomBase:mah]
+synonym: "normal cell cycle delay following ionizing radiation" EXACT [PomBase:al]
+synonym: "normal cell cycle regulation during cellular response to gamma radiation" NARROW [PomBase:al, PomBase:mah]
+synonym: "normal cell cycle regulation in response to ionizing radiation" EXACT [PomBase:mah]
+synonym: "normal mitotic cell cycle regulation during cellular response to ionizing radiation" EXACT [PomBase:mah]
 is_a: FYPO:0001925 ! normal cellular response to gamma radiation
 is_a: FYPO:0001928 ! normal regulation of mitotic cell cycle
 intersection_of: PATO:0000001
@@ -27283,6 +27287,8 @@ creation_date: 2013-02-13T15:07:15Z
 id: FYPO:0001985
 name: abnormal phenotype
 def: "A phenotype that shows detectable differences from normal. In fission yeast, the characteristics of wild type cells of the sequenced strain (972 h-) or the isogenic h+ or h90 strains are regarded as normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: high_level_annotation_qc
 synonym: "fission yeast abnormal phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
 intersection_of: PATO:0000001
@@ -27432,6 +27438,69 @@ intersection_of: has_part FYPO:0001391 ! mislocalized septum, near non-growing e
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cells
 created_by: midori
 creation_date: 2013-02-20T17:01:11Z
+
+[Term]
+id: FYPO:0001995
+name: normal cell growth on polymyxin B
+def: "A cell phenotype in which vegetative cell growth is normal (i.e. indistinguishable from wild type) in a medium containing polymyxin B." [PomBase:mah]
+synonym: "normal cell growth in presence of polymyxin B" EXACT [PomBase:mah]
+synonym: "normal cellular response to polymyxin B" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell growth on papulacandin B" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell growth
+intersection_of: FYPO:0001357 ! normal vegetative cell growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:59063
+created_by: midori
+creation_date: 2013-02-25T16:25:59Z
+
+[Term]
+id: FYPO:0001996
+name: RNA absent from cell during nitrogen starvation 
+def: "A cell phenotype in which the amount of RNA measured in a cell is too low to detect when the cell is subject to nitrogen starvation. Total RNA or a specific RNA may be affected." [PomBase:mah]
+synonym: "undetectable cellular RNA level during nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0001152 ! decreased RNA level during nitrogen starvation
+is_a: FYPO:0001889 ! RNA absent from cell
+intersection_of: PATO:0002000
+intersection_of: during GO:0006995
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2013-02-25T16:35:43Z
+
+[Term]
+id: FYPO:0001997
+name: abnormal nucleoside diphosphate kinase activity
+def: "A molecular function phenotype in which the observed rate of nucleoside diphosphate kinase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004550
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-02-25T16:53:52Z
+
+[Term]
+id: FYPO:0001998
+name: decreased nucleoside diphosphate kinase activity
+def: "A molecular function phenotype in which the observed rate of nucleoside diphosphate kinase activity is decreased." [PomBase:mah]
+synonym: "reduced glucosyltransferase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001997 ! abnormal nucleoside diphosphate kinase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004550
+created_by: midori
+creation_date: 2013-02-25T16:53:59Z
+
+[Term]
+id: FYPO:0001999
+name: increased nucleoside diphosphate kinase activity
+def: "A molecular function phenotype in which the observed rate of nucleoside diphosphate kinase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001997 ! abnormal nucleoside diphosphate kinase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004550
+created_by: midori
+creation_date: 2013-02-25T16:54:09Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
