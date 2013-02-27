@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2013-02-25
-date: 25:02:2013 16:56
+data-version: 2013-02-27
+date: 27:02:2013 16:03
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -55,7 +55,7 @@ subsetdef: vertebrate_core "core classes typically found across vertebrates. one
 subsetdef: vessel_or_tree "A term classified differently in FMA due to its treatment of branching structures - to be reviewed and revised by editors"
 subsetdef: virus_checked "Viral overhaul terms"
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 595 $
+remark: svn version: $Revision: 598 $
 ontology: fypo
 
 [Term]
@@ -2317,6 +2317,9 @@ id: FYPO:0000219
 name: increased protein oxidation
 def: "A cellular metabolism phenotype observed in the vegetative growth phase of the life cycle in which protein oxidation is increased, resulting in the accumulation of proteins with oxidative modifications including carbonylated proteins." [PomBase:mah]
 synonym: "accumulation of carbonylated proteins" RELATED [PomBase:mah]
+synonym: "increased level of disulfides" RELATED [PomBase:al]
+synonym: "increased level of oxidised thiols in proteins" RELATED [PomBase:al]
+synonym: "increased level of oxidized protein thiols" RELATED [PomBase:mah]
 synonym: "increased protein oxidation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000547 ! increased protein modification
 created_by: midori
@@ -8856,10 +8859,12 @@ id: FYPO:0000839
 name: elongated mononucleate aseptate cells
 def: "A cell phenotype in which cells contain one nucleus apiece, lack septa, are elongated, and are inviable." [PomBase:mah]
 synonym: "elongated mononucleate aseptate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate aseptate cells" EXACT [PomBase:mah, PomBase:vw]
 synonym: "long aseptate mononucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000950 ! elongated aseptate cells
 is_a: FYPO:0001490 ! elongated inviable vegetative cells
 is_a: FYPO:0001916 ! elongated mononucleate cells
+relationship: output_of FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
 created_by: midori
 creation_date: 2012-03-12T03:25:38Z
 
@@ -13101,8 +13106,8 @@ synonym: "mononucleate with asymmetric septum" EXACT [PomBase:mah]
 synonym: "mononucleate with asymmetrically located septum" EXACT [PomBase:mah]
 synonym: "mononucleate with mislocalised septum" EXACT [PomBase:mah]
 synonym: "mononucleate with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000060 ! mononucleate
 is_a: FYPO:0000339 ! mislocalized septum
+is_a: FYPO:0002000 ! septated mononucleate cells
 created_by: midori
 creation_date: 2012-07-12T15:44:34Z
 
@@ -13382,7 +13387,7 @@ id: FYPO:0001254
 name: multinucleate multiseptate cells, septa grouped
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which cells have two or more nuclei and more than one septum per cell, and the septa are grouped together between two compartments, one or more of which may contain multiple nuclei." [PomBase:mah]
 synonym: "multinucleate multiseptate cells, septa grouped during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001252 ! multinucleate multiseptate cells
+is_a: FYPO:0002002 ! multiseptate cells, septa grouped
 created_by: midori
 creation_date: 2012-07-19T15:41:59Z
 
@@ -18126,6 +18131,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "abolished mitotic spindle assembly during vegetative growth" EXACT [PomBase:mah]
 synonym: "spindle assembly involved in mitosis abolished" EXACT [PomBase:mah]
 is_a: FYPO:0000177 ! abnormal mitotic spindle assembly
+relationship: has_output FYPO:0002018 ! mitotic spindle absent from cell
 created_by: midori
 creation_date: 2012-11-02T15:04:44Z
 
@@ -21453,7 +21459,7 @@ id: FYPO:0001988
 name: normal growth at high pH
 def: "A cell growth phenotype in which vegetative cells grow normally at a pH higher than that of standard S. pombe growth medium (abut 5.8)." [PomBase:mah]
 synonym: "normal vegetative growth at high pH" EXACT [PomBase:mah]
-is_a: FYPO:0000674 ! normal growth at high temperature
+is_a: FYPO:0001357 ! normal vegetative cell growth
 created_by: midori
 creation_date: 2013-02-13T17:11:42Z
 
@@ -21473,7 +21479,7 @@ id: FYPO:0001990
 name: normal growth at low pH
 def: "A cell growth phenotype in which vegetative cells grow normally at a pH lower than that of standard S. pombe growth medium (abut 5.8)." [PomBase:mah]
 synonym: "normal vegetative growth at low pH" EXACT [PomBase:mah]
-is_a: FYPO:0000674 ! normal growth at high temperature
+is_a: FYPO:0001357 ! normal vegetative cell growth
 created_by: midori
 creation_date: 2013-02-13T17:20:01Z
 
@@ -21541,6 +21547,7 @@ is_a: FYPO:0000646 ! swollen vegetative cells
 is_a: FYPO:0001391 ! mislocalized septum, near non-growing end
 is_a: FYPO:0001429 ! swollen elongated cells
 is_a: FYPO:0001993 ! inviable elongated mononucleate cells with mislocalized septum
+relationship: output_of FYPO:0002017 ! abnormal cell cycle arrest in mitotic interphase before NETO
 created_by: midori
 creation_date: 2013-02-20T17:01:11Z
 
@@ -21593,6 +21600,221 @@ is_a: FYPO:0000662 ! increased catalytic activity
 is_a: FYPO:0001997 ! abnormal nucleoside diphosphate kinase activity
 created_by: midori
 creation_date: 2013-02-25T16:54:09Z
+
+[Term]
+id: FYPO:0002000
+name: septated mononucleate cells
+def: "A cell phenotype in which a cell contains one nucleus and one or more septa. This phenotype results from septation taking place without prior nuclear division." [PomBase:mah]
+synonym: "cytokinesis in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "cytokinesis without nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "premature septation" RELATED [PomBase:al, PomBase:vw]
+synonym: "septated mononucleate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
+is_a: FYPO:0000060 ! mononucleate
+created_by: midori
+creation_date: 2013-02-27T13:08:58Z
+
+[Term]
+id: FYPO:0002001
+name: mononucleate multiseptate cells
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which cells have one nucleus and more than one septum per cell." [PomBase:mah]
+synonym: "cytokinesis in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "cytokinesis without nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "mononucleate multiseptate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "premature septation" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
+is_a: FYPO:0000118 ! multiseptate
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+is_a: FYPO:0002000 ! septated mononucleate cells
+created_by: midori
+creation_date: 2013-02-27T13:11:43Z
+
+[Term]
+id: FYPO:0002002
+name: multiseptate cells, septa grouped
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which cells have one or more nuclei and more than one septum per cell, and the septa are grouped together between two compartments, one or more of which may contain one or multiple nuclei." [PomBase:mah]
+synonym: "cytokinesis in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "cytokinesis without nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "multiseptate cells, septa grouped, during vegetative growth" EXACT [PomBase:mah]
+synonym: "premature septation" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
+is_a: FYPO:0000118 ! multiseptate
+created_by: midori
+creation_date: 2013-02-27T13:18:22Z
+
+[Term]
+id: FYPO:0002003
+name: abolished RNA polymerase II core promoter proximal region sequence-specific DNA binding
+def: "A molecular function phenotype in which DNA binding at an RNA polymerase II core promoter proximal region by a gene product does not occur, when the gene product or the bound DNA sequence is mutated. An RNA polymerase II core promoter proximal region is a sequence of DNA that is in cis with and relatively close to a core promoter for RNA polymerase II." [GO:0000978, PomBase:mah]
+synonym: "abolished origin binding" EXACT [PomBase:mah]
+synonym: "abolished transcription factor binding to promoter region" RELATED [PomBase:al]
+synonym: "RNA polymerase II core promoter proximal region sequence-specific DNA binding abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000659 ! abolished DNA binding
+created_by: midori
+creation_date: 2013-02-27T13:45:01Z
+
+[Term]
+id: FYPO:0002004
+name: microtubules absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain detectable microtubules." [PomBase:mah]
+synonym: "absent microtubules" EXACT [PomBase:mah]
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology
+created_by: midori
+creation_date: 2013-02-27T13:50:36Z
+
+[Term]
+id: FYPO:0002005
+name: lobate nuclear envelope
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the nuclear envelope has a lobate cross-section, i.e. one in which the edge has deep indentations or undulations that form lobes." [http://en.wikipedia.org/wiki/File:Leaf_morphology.svg, PMID:2211869, PomBase:mah]
+synonym: "leaf-like nuclear envelope morphology" RELATED [PomBase:al]
+synonym: "lobate nuclear envelope during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000769 ! abnormal nuclear envelope morphology
+created_by: midori
+creation_date: 2013-02-27T14:11:12Z
+
+[Term]
+id: FYPO:0002006
+name: increased cellular iron level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of iron ions measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular iron ion level" EXACT [PomBase:mah]
+synonym: "increased cellular iron level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased iron accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T14:37:50Z
+
+[Term]
+id: FYPO:0002008
+name: decreased aconitate hydratase activity
+def: "A molecular function phenotype in which the observed rate of aconitate hydratase activity is decreased." [PomBase:mah]
+synonym: "reduced aconitate hydratase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0000920 ! abnormal aconitate hydratase activity
+created_by: midori
+creation_date: 2013-02-27T14:47:26Z
+
+[Term]
+id: FYPO:0002009
+name: decreased oxygen consumption
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the amount of oxygen consumed by cells in a given time is lower than in wild type." [PomBase:mah]
+comment: Also see 'decreased cellular respiration' (FYPO:0000342).
+is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T14:50:33Z
+
+[Term]
+id: FYPO:0002010
+name: increased level of iron ion starvation-induced proteins
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein encoded by genes normally induced during iron ion starvation measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased level of proteins expressed during iron ion starvation" EXACT [PomBase:mah]
+synonym: "increased level of proteins induced by iron ion starvation" EXACT [PomBase:mah]
+synonym: "increased protein level of genes (normally) induced during iron starvation" EXACT [PomBase:al]
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T14:56:22Z
+
+[Term]
+id: FYPO:0002011
+name: increased level of hydrogen peroxide-induced proteins
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein encoded by genes normally induced by exposure to hydrogen peroxide measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased level of proteins expressed during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+synonym: "increased level of proteins induced by hydrogen peroxide" EXACT [PomBase:mah]
+synonym: "increased protein level of genes (normally) induced during H202 stress" EXACT [PomBase:al]
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T14:59:57Z
+
+[Term]
+id: FYPO:0002012
+name: decreased level of iron ion starvation-repressed proteins
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein encoded by genes normally repressed during iron ion starvation measured in a cell is higher than normal." [PomBase:mah]
+synonym: "decreased level of proteins repressed by iron ion starvation" EXACT [PomBase:mah]
+synonym: "decreased level of proteins repressed during iron ion starvation" EXACT [PomBase:mah]
+synonym: "decreased protein level of genes (normally) repressed during iron starvation" EXACT [PomBase:al]
+synonym: "reduced level of iron ion starvation-repressed proteins" EXACT [PomBase:mah]
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T15:03:13Z
+
+[Term]
+id: FYPO:0002013
+name: normal protein oxidation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein oxidation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal protein oxidation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein/peptide oxidation" EXACT [PomBase:mah]
+is_a: FYPO:0000549 ! normal protein modification
+created_by: midori
+creation_date: 2013-02-27T15:20:19Z
+
+[Term]
+id: FYPO:0002014
+name: increased RNA level during cellular response to iron ion starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to iron ion starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased mRNA level during cellular response to iron ion starvation" NARROW [PomBase:mah]
+synonym: "increased RNA accumulation during cellular response to iron ion starvation" RELATED [PomBase:mah]
+synonym: "increased RNA level during cellular response to iron ion starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased RNA level during cellular response to iron starvation" EXACT [PomBase:mah]
+synonym: "increased RNA level during iron ion starvation" EXACT [PomBase:al]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T15:22:02Z
+
+[Term]
+id: FYPO:0002015
+name: sensitive to iron ion starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to iron ion starvation." [PomBase:mah]
+synonym: "hypersensitive to iron ion starvation" EXACT [PomBase:mah]
+synonym: "sensitive to iron ion starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to iron starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000304 ! sensitive to stress
+is_a: FYPO:0001339 ! abnormal cellular response to starvation during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T15:24:45Z
+
+[Term]
+id: FYPO:0002016
+name: sensitive to oxygen
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to oxygen. Cells stop growing (and may die) at a level of oxygen that allows wild type cells to grow." [PomBase:mah]
+comment: Also consider the term 'sensitive to oxidative stress' (FYPO:0000726).
+synonym: "hypersensitive to oxygen" EXACT [PomBase:mah]
+synonym: "sensitive to elemental oxygen" EXACT [CHEBI:33262, PomBase:mah]
+synonym: "sensitive to oxygen during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+created_by: midori
+creation_date: 2013-02-27T15:36:25Z
+
+[Term]
+id: FYPO:0002017
+name: abnormal cell cycle arrest in mitotic interphase before NETO
+def: "A cellular process phenotype in which the mitotic cell cycle is arrested during G2 phase, before new end take-off (NETO) has occurred." [PomBase:mah]
+synonym: "abnormal cell cycle arrest in mitotic interphase before activation of bipolar cell growth" EXACT [GO:0051519]
+synonym: "abnormal cell cycle arrest in mitotic interphase before NETO during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cell cycle arrest in mitotic interphase before new end take-off" RELATED [GO:0051519]
+synonym: "cell cycle arrest in mitotic interphase before NETO" BROAD [PomBase:vw]
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
+is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+created_by: midori
+creation_date: 2013-02-27T15:46:41Z
+
+[Term]
+id: FYPO:0002018
+name: mitotic spindle absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain a detectable detectable mitotic spindle." [PomBase:mah]
+synonym: "absent mitotic spindle" EXACT [PomBase:mah]
+is_a: FYPO:0000338 ! abnormal mitotic spindle
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+created_by: midori
+creation_date: 2013-02-27T15:54:06Z
 
 [Typedef]
 id: RO:0002215

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2013-02-25
-date: 25:02:2013 16:56
+data-version: 2013-02-27
+date: 27:02:2013 16:03
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -86,7 +86,7 @@ synonymtypedef: SENSU "taxonomic disambiguation"
 synonymtypedef: SMILES "SMILES" 
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 595 $
+remark: svn version: $Revision: 598 $
 ontology: fypo
 
 [Term]
@@ -7173,6 +7173,15 @@ synonym: "organosulfur compounds" RELATED [ChEBI:]
 xref: Wikipedia:Organosulfur_compounds "Wikipedia"
 is_a: CHEBI:26835 ! sulfur molecular entity
 is_a: CHEBI:36962 ! organochalcogen compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
+
+[Term]
+id: CHEBI:33262
+name: elemental oxygen
+namespace: chebi_ontology
+is_a: CHEBI:24835 ! inorganic molecular entity
+is_a: CHEBI:25806 ! oxygen molecular entity
+is_a: CHEBI:33259 ! elemental molecular entity
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
 
 [Term]
@@ -16265,6 +16274,9 @@ id: FYPO:0000219
 name: increased protein oxidation
 def: "A cellular metabolism phenotype observed in the vegetative growth phase of the life cycle in which protein oxidation is increased, resulting in the accumulation of proteins with oxidative modifications including carbonylated proteins." [PomBase:mah]
 synonym: "accumulation of carbonylated proteins" RELATED [PomBase:mah]
+synonym: "increased level of disulfides" RELATED [PomBase:al]
+synonym: "increased level of oxidised thiols in proteins" RELATED [PomBase:al]
+synonym: "increased level of oxidized protein thiols" RELATED [PomBase:mah]
 synonym: "increased protein oxidation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000547 ! increased protein modification
 intersection_of: PATO:0002051
@@ -25919,6 +25931,7 @@ id: FYPO:0000839
 name: elongated mononucleate aseptate cells
 def: "A cell phenotype in which cells contain one nucleus apiece, lack septa, are elongated, and are inviable." [PomBase:mah]
 synonym: "elongated mononucleate aseptate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate aseptate cells" EXACT [PomBase:mah, PomBase:vw]
 synonym: "long aseptate mononucleate cells" EXACT [PomBase:vw]
 is_a: FYPO:0000950 ! elongated aseptate cells
 is_a: FYPO:0001490 ! elongated inviable vegetative cells
@@ -25934,6 +25947,7 @@ relationship: has_part FYPO:0000017 ! elongated cells
 relationship: has_part FYPO:0000060 ! mononucleate
 relationship: has_part FYPO:0000949 ! aseptate
 relationship: has_part FYPO:0001489 ! inviable vegetative cells
+relationship: output_of FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
 created_by: midori
 creation_date: 2012-03-12T03:25:38Z
 
@@ -32447,8 +32461,8 @@ synonym: "mononucleate with asymmetric septum" EXACT [PomBase:mah]
 synonym: "mononucleate with asymmetrically located septum" EXACT [PomBase:mah]
 synonym: "mononucleate with mislocalised septum" EXACT [PomBase:mah]
 synonym: "mononucleate with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000060 ! mononucleate
 is_a: FYPO:0000339 ! mislocalized septum
+is_a: FYPO:0002000 ! septated mononucleate cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
 intersection_of: has_part FYPO:0000060 ! mononucleate
@@ -32891,7 +32905,7 @@ id: FYPO:0001254
 name: multinucleate multiseptate cells, septa grouped
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which cells have two or more nuclei and more than one septum per cell, and the septa are grouped together between two compartments, one or more of which may contain multiple nuclei." [PomBase:mah]
 synonym: "multinucleate multiseptate cells, septa grouped during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001252 ! multinucleate multiseptate cells
+is_a: FYPO:0002002 ! multiseptate cells, septa grouped
 created_by: midori
 creation_date: 2012-07-19T15:41:59Z
 
@@ -40263,6 +40277,7 @@ intersection_of: PATO:0001558
 intersection_of: during GO:0072690 ! vegetative growth of a single-celled organism
 intersection_of: towards GO:0090307 ! spindle assembly involved in mitosis
 relationship: during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: has_output FYPO:0002018 ! mitotic spindle absent from cell
 relationship: towards GO:0090307 ! spindle assembly involved in mitosis
 created_by: midori
 creation_date: 2012-11-02T15:04:44Z
@@ -45157,7 +45172,7 @@ id: FYPO:0001988
 name: normal growth at high pH
 def: "A cell growth phenotype in which vegetative cells grow normally at a pH higher than that of standard S. pombe growth medium (abut 5.8)." [PomBase:mah]
 synonym: "normal vegetative growth at high pH" EXACT [PomBase:mah]
-is_a: FYPO:0000674 ! normal growth at high temperature
+is_a: FYPO:0001357 ! normal vegetative cell growth
 created_by: midori
 creation_date: 2013-02-13T17:11:42Z
 
@@ -45177,7 +45192,7 @@ id: FYPO:0001990
 name: normal growth at low pH
 def: "A cell growth phenotype in which vegetative cells grow normally at a pH lower than that of standard S. pombe growth medium (abut 5.8)." [PomBase:mah]
 synonym: "normal vegetative growth at low pH" EXACT [PomBase:mah]
-is_a: FYPO:0000674 ! normal growth at high temperature
+is_a: FYPO:0001357 ! normal vegetative cell growth
 created_by: midori
 creation_date: 2013-02-13T17:20:01Z
 
@@ -45284,6 +45299,7 @@ relationship: has_part FYPO:0000060 ! mononucleate
 relationship: has_part FYPO:0001225 ! monoseptate
 relationship: has_part FYPO:0001391 ! mislocalized septum, near non-growing end
 relationship: has_part FYPO:0001489 ! inviable vegetative cells
+relationship: output_of FYPO:0002017 ! abnormal cell cycle arrest in mitotic interphase before NETO
 created_by: midori
 creation_date: 2013-02-20T17:01:11Z
 
@@ -45361,6 +45377,300 @@ intersection_of: inheres_in GO:0004550 ! nucleoside diphosphate kinase activity
 relationship: inheres_in GO:0004550 ! nucleoside diphosphate kinase activity
 created_by: midori
 creation_date: 2013-02-25T16:54:09Z
+
+[Term]
+id: FYPO:0002000
+name: septated mononucleate cells
+def: "A cell phenotype in which a cell contains one nucleus and one or more septa. This phenotype results from septation taking place without prior nuclear division." [PomBase:mah]
+synonym: "cytokinesis in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "cytokinesis without nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "premature septation" RELATED [PomBase:al, PomBase:vw]
+synonym: "septated mononucleate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
+is_a: FYPO:0000060 ! mononucleate
+created_by: midori
+creation_date: 2013-02-27T13:08:58Z
+
+[Term]
+id: FYPO:0002001
+name: mononucleate multiseptate cells
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which cells have one nucleus and more than one septum per cell." [PomBase:mah]
+synonym: "cytokinesis in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "cytokinesis without nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "mononucleate multiseptate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "premature septation" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
+is_a: FYPO:0000118 ! multiseptate
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+is_a: FYPO:0002000 ! septated mononucleate cells
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000118 ! multiseptate
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: has_part FYPO:0000060 ! mononucleate
+relationship: has_part FYPO:0000118 ! multiseptate
+created_by: midori
+creation_date: 2013-02-27T13:11:43Z
+
+[Term]
+id: FYPO:0002002
+name: multiseptate cells, septa grouped
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which cells have one or more nuclei and more than one septum per cell, and the septa are grouped together between two compartments, one or more of which may contain one or multiple nuclei." [PomBase:mah]
+synonym: "cytokinesis in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "cytokinesis without nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "multiseptate cells, septa grouped, during vegetative growth" EXACT [PomBase:mah]
+synonym: "premature septation" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
+is_a: FYPO:0000118 ! multiseptate
+created_by: midori
+creation_date: 2013-02-27T13:18:22Z
+
+[Term]
+id: FYPO:0002003
+name: abolished RNA polymerase II core promoter proximal region sequence-specific DNA binding
+def: "A molecular function phenotype in which DNA binding at an RNA polymerase II core promoter proximal region by a gene product does not occur, when the gene product or the bound DNA sequence is mutated. An RNA polymerase II core promoter proximal region is a sequence of DNA that is in cis with and relatively close to a core promoter for RNA polymerase II." [GO:0000978, PomBase:mah]
+synonym: "abolished origin binding" EXACT [PomBase:mah]
+synonym: "abolished transcription factor binding to promoter region" RELATED [PomBase:al]
+synonym: "RNA polymerase II core promoter proximal region sequence-specific DNA binding abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000659 ! abolished DNA binding
+intersection_of: PATO:0001558
+intersection_of: towards GO:0000978 ! RNA polymerase II core promoter proximal region sequence-specific DNA binding
+relationship: towards GO:0000978 ! RNA polymerase II core promoter proximal region sequence-specific DNA binding
+created_by: midori
+creation_date: 2013-02-27T13:45:01Z
+
+[Term]
+id: FYPO:0002004
+name: microtubules absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain detectable microtubules." [PomBase:mah]
+synonym: "absent microtubules" EXACT [PomBase:mah]
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology
+is_a: PATO:0002000
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
+intersection_of: towards GO:0005874 ! microtubule
+relationship: during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
+relationship: towards GO:0005874 ! microtubule
+created_by: midori
+creation_date: 2013-02-27T13:50:36Z
+
+[Term]
+id: FYPO:0002005
+name: lobate nuclear envelope
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the nuclear envelope has a lobate cross-section, i.e. one in which the edge has deep indentations or undulations that form lobes." [http://en.wikipedia.org/wiki/File:Leaf_morphology.svg, PMID:2211869, PomBase:mah]
+synonym: "leaf-like nuclear envelope morphology" RELATED [PomBase:al]
+synonym: "lobate nuclear envelope during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000769 ! abnormal nuclear envelope morphology
+is_a: PATO:0001367
+intersection_of: PATO:0001367
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0005637 ! nuclear inner membrane
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0005637 ! nuclear inner membrane
+created_by: midori
+creation_date: 2013-02-27T14:11:12Z
+
+[Term]
+id: FYPO:0002006
+name: increased cellular iron level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of iron ions measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular iron ion level" EXACT [PomBase:mah]
+synonym: "increased cellular iron level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased iron accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:24875 ! iron cation
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
+relationship: qualifier PATO:0001162
+relationship: towards CHEBI:24875 ! iron cation
+created_by: midori
+creation_date: 2013-02-27T14:37:50Z
+
+[Term]
+id: FYPO:0002008
+name: decreased aconitate hydratase activity
+def: "A molecular function phenotype in which the observed rate of aconitate hydratase activity is decreased." [PomBase:mah]
+synonym: "reduced aconitate hydratase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0000920 ! abnormal aconitate hydratase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003994 ! aconitate hydratase activity
+relationship: inheres_in GO:0003994 ! aconitate hydratase activity
+created_by: midori
+creation_date: 2013-02-27T14:47:26Z
+
+[Term]
+id: FYPO:0002009
+name: decreased oxygen consumption
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the amount of oxygen consumed by cells in a given time is lower than in wild type." [PomBase:mah]
+comment: Also see 'decreased cellular respiration' (FYPO:0000342).
+is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T14:50:33Z
+
+[Term]
+id: FYPO:0002010
+name: increased level of iron ion starvation-induced proteins
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein encoded by genes normally induced during iron ion starvation measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased level of proteins expressed during iron ion starvation" EXACT [PomBase:mah]
+synonym: "increased level of proteins induced by iron ion starvation" EXACT [PomBase:mah]
+synonym: "increased protein level of genes (normally) induced during iron starvation" EXACT [PomBase:al]
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T14:56:22Z
+
+[Term]
+id: FYPO:0002011
+name: increased level of hydrogen peroxide-induced proteins
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein encoded by genes normally induced by exposure to hydrogen peroxide measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased level of proteins expressed during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+synonym: "increased level of proteins induced by hydrogen peroxide" EXACT [PomBase:mah]
+synonym: "increased protein level of genes (normally) induced during H202 stress" EXACT [PomBase:al]
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T14:59:57Z
+
+[Term]
+id: FYPO:0002012
+name: decreased level of iron ion starvation-repressed proteins
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein encoded by genes normally repressed during iron ion starvation measured in a cell is higher than normal." [PomBase:mah]
+synonym: "decreased level of proteins repressed by iron ion starvation" EXACT [PomBase:mah]
+synonym: "decreased level of proteins repressed during iron ion starvation" EXACT [PomBase:mah]
+synonym: "decreased protein level of genes (normally) repressed during iron starvation" EXACT [PomBase:al]
+synonym: "reduced level of iron ion starvation-repressed proteins" EXACT [PomBase:mah]
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+created_by: midori
+creation_date: 2013-02-27T15:03:13Z
+
+[Term]
+id: FYPO:0002013
+name: normal protein oxidation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein oxidation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal protein oxidation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein/peptide oxidation" EXACT [PomBase:mah]
+is_a: FYPO:0000549 ! normal protein modification
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0018158 ! protein oxidation
+intersection_of: qualifier PATO:0000461
+relationship: happens_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0018158 ! protein oxidation
+relationship: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-02-27T15:20:19Z
+
+[Term]
+id: FYPO:0002014
+name: increased RNA level during cellular response to iron ion starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to iron ion starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased mRNA level during cellular response to iron ion starvation" NARROW [PomBase:mah]
+synonym: "increased RNA accumulation during cellular response to iron ion starvation" RELATED [PomBase:mah]
+synonym: "increased RNA level during cellular response to iron ion starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased RNA level during cellular response to iron starvation" EXACT [PomBase:mah]
+synonym: "increased RNA level during iron ion starvation" EXACT [PomBase:al]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: exists_during GO:0010106 ! cellular response to iron ion starvation
+intersection_of: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:33697 ! ribonucleic acid
+relationship: exists_during GO:0010106 ! cellular response to iron ion starvation
+relationship: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
+relationship: qualifier PATO:0001162
+relationship: towards CHEBI:33697 ! ribonucleic acid
+created_by: midori
+creation_date: 2013-02-27T15:22:02Z
+
+[Term]
+id: FYPO:0002015
+name: sensitive to iron ion starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to iron ion starvation." [PomBase:mah]
+synonym: "hypersensitive to iron ion starvation" EXACT [PomBase:mah]
+synonym: "sensitive to iron ion starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to iron starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000304 ! sensitive to stress
+is_a: FYPO:0001339 ! abnormal cellular response to starvation during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0010106 ! cellular response to iron ion starvation
+relationship: during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0010106 ! cellular response to iron ion starvation
+created_by: midori
+creation_date: 2013-02-27T15:24:45Z
+
+[Term]
+id: FYPO:0002016
+name: sensitive to oxygen
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to oxygen. Cells stop growing (and may die) at a level of oxygen that allows wild type cells to grow." [PomBase:mah]
+comment: Also consider the term 'sensitive to oxidative stress' (FYPO:0000726).
+synonym: "hypersensitive to oxygen" EXACT [PomBase:mah]
+synonym: "sensitive to elemental oxygen" EXACT [CHEBI:33262, PomBase:mah]
+synonym: "sensitive to oxygen during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0016049 ! cell growth
+intersection_of: towards CHEBI:33262 ! elemental oxygen
+relationship: during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0016049 ! cell growth
+relationship: towards CHEBI:33262 ! elemental oxygen
+created_by: midori
+creation_date: 2013-02-27T15:36:25Z
+
+[Term]
+id: FYPO:0002017
+name: abnormal cell cycle arrest in mitotic interphase before NETO
+def: "A cellular process phenotype in which the mitotic cell cycle is arrested during G2 phase, before new end take-off (NETO) has occurred." [PomBase:mah]
+synonym: "abnormal cell cycle arrest in mitotic interphase before activation of bipolar cell growth" EXACT [GO:0051519]
+synonym: "abnormal cell cycle arrest in mitotic interphase before NETO during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cell cycle arrest in mitotic interphase before new end take-off" RELATED [GO:0051519]
+synonym: "cell cycle arrest in mitotic interphase before NETO" BROAD [PomBase:vw]
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
+is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+intersection_of: PATO:0001561
+intersection_of: happens_during GO:0000085 ! G2 phase of mitotic cell cycle
+intersection_of: happens_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: precedes GO:0051519 ! activation of bipolar cell growth
+intersection_of: towards GO:0071850 ! mitotic cell cycle arrest
+relationship: happens_during GO:0000085 ! G2 phase of mitotic cell cycle
+relationship: happens_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: precedes GO:0051519 ! activation of bipolar cell growth
+relationship: towards GO:0071850 ! mitotic cell cycle arrest
+created_by: midori
+creation_date: 2013-02-27T15:46:41Z
+
+[Term]
+id: FYPO:0002018
+name: mitotic spindle absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain a detectable detectable mitotic spindle." [PomBase:mah]
+synonym: "absent mitotic spindle" EXACT [PomBase:mah]
+is_a: FYPO:0000338 ! abnormal mitotic spindle
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+is_a: PATO:0002000
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
+intersection_of: towards GO:0072686 ! mitotic spindle
+relationship: during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
+relationship: towards GO:0072686 ! mitotic spindle
+created_by: midori
+creation_date: 2013-02-27T15:54:06Z
 
 [Term]
 id: GO:0000001
@@ -46445,6 +46755,80 @@ namespace: cellular_component
 def: "A septum which spans a cell and does not allow exchange of organelles or cytoplasm between compartments." [GOC:clt]
 synonym: "complete septum" EXACT []
 is_a: GO:0030428 ! cell septum
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0000975
+name: regulatory region DNA binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a DNA region that regulates a DNA-based process. Such processes include transcription, DNA replication, and DNA repair." [GOC:txnOH]
+is_a: GO:0001067 ! regulatory region nucleic acid binding
+is_a: GO:0003677 ! DNA binding
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0000976
+name: transcription regulatory region sequence-specific DNA binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a specific sequence of DNA that is part of a regulatory region that controls transcription of that section of the DNA. The transcribed region might be described as a gene, cistron, or operon." [GOC:txnOH]
+comment: The word "promoter" is used variously in the literature to describe the core promoter specifically or the entire proximal regulatory region (excluding any distal enhancers) including both the core promoter and the upstream region where activating transcription factors such as Gal4 in S. cerevisiae or catabolite activator protein (CAP) in E. coli bind. To minimize ambiguity in the use of the word "promoter" in GO, we have chosen the phrase "transcription regulatory region" in order to refer to all of the regulatory regions. Regulatory regions in the DNA which control initiation may include the "core promoter" where the basal transcription machinery binds, the "core promoter proximal region" where regulatory factors other than the basal machinery bind, and "enhancer" regions which are typically more distal from the core promoter. There are also additional regulatory regions, in both the DNA and the RNA transcript, which regulate elongation or termination of transcription. ANNOTATION NOTE: Regarding annotation to "transcription regulatory region DNA binding" (GO:0044212) and any of its is_a children, note that annotation to these terms specifies DNA binding only without any statement about transcription factor activity. To make an annotation about a function of transcription factor activity, consider "sequence-specific DNA binding transcription factor activity" (GO:0003700) or its is_a children which have has_part relationships to the appropriate kind of "transcription regulatory region DNA binding".
+is_a: GO:0043565 ! sequence-specific DNA binding
+is_a: GO:0044212 ! transcription regulatory region DNA binding
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0000977
+name: RNA polymerase II regulatory region sequence-specific DNA binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a specific sequence of DNA that is part of a regulatory region that controls the transcription of a gene or cistron by RNA polymerase II." [GOC:txnOH]
+comment: The word "promoter" is used variously in the literature to describe the core promoter specifically or the entire proximal regulatory region (excluding any distal enhancers) including both the core promoter and the upstream region where activating transcription factors such as Gal4 in S. cerevisiae or catabolite activator protein (CAP) in E. coli bind. To minimize ambiguity in the use of the word "promoter" in GO, we have chosen the phrase "transcription regulatory region" in order to refer to all of the regulatory regions. Regulatory regions in the DNA which control initiation may include the "core promoter" where the basal transcription machinery binds, the "core promoter proximal region" where regulatory factors other than the basal machinery bind, and "enhancer" regions which are typically more distal from the core promoter. There are also additional regulatory regions, in both the DNA and the RNA transcript, which regulate elongation or termination of transcription. ANNOTATION NOTE: Regarding annotation to "transcription regulatory region DNA binding" (GO:0044212) and any of its is_a children, note that annotation to these terms specifies DNA binding only without any statement about transcription factor activity. To make an annotation about a function of transcription factor activity, consider "sequence-specific DNA binding transcription factor activity" (GO:0003700) or its is_a children which have has_part relationships to the appropriate kind of "transcription regulatory region DNA binding".
+is_a: GO:0000976 ! transcription regulatory region sequence-specific DNA binding
+is_a: GO:0001012 ! RNA polymerase II regulatory region DNA binding
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0000978
+name: RNA polymerase II core promoter proximal region sequence-specific DNA binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a sequence of DNA that is in cis with and relatively close to a core promoter for RNA polymerase II." [GOC:txnOH]
+comment: Note that the phrase "upstream activating sequence", or UAS is often used in S. cerevisiae literature to refer to regulatory sequences that occur in the region upstream and proximal to the core promoter. In contrast, in bacteria such as E. coli, the phrase "upstream activating sequence", or UAS is a synonym for "enhancer".
+synonym: "RNA polymerase II upstream activating sequence (UAS) sequence-specific DNA binding" RELATED []
+is_a: GO:0000977 ! RNA polymerase II regulatory region sequence-specific DNA binding
+is_a: GO:0000987 ! core promoter proximal region sequence-specific DNA binding
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0000987
+name: core promoter proximal region sequence-specific DNA binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a sequence of DNA that is in cis with and relatively close to the core promoter. The transcribed region might be described as a gene, cistron, or operon." [GOC:txnOH]
+comment: The word "promoter" is used variously in the literature to describe the core promoter specifically or the entire proximal regulatory region (excluding any distal enhancers) including both the core promoter and the upstream region where activating transcription factors such as Gal4 in S. cerevisiae or catabolite activator protein (CAP) in E. coli bind. To minimize ambiguity in the use of the word "promoter" in GO, we have chosen the phrase "transcription regulatory region" in order to refer to all of the regulatory regions. Regulatory regions in the DNA which control initiation may include the "core promoter" where the basal transcription machinery binds, the "core promoter proximal region" where regulatory factors other than the basal machinery bind, and "enhancer" regions which are typically more distal from the core promoter. There are also additional regulatory regions, in both the DNA and the RNA transcript, which regulate elongation or termination of transcription. ANNOTATION NOTE: Regarding annotation to "transcription regulatory region DNA binding" (GO:0044212) and any of its is_a children, note that annotation to these terms specifies DNA binding only without any statement about transcription factor activity. To make an annotation about a function of transcription factor activity, consider "sequence-specific DNA binding transcription factor activity" (GO:0003700) or its is_a children which have has_part relationships to the appropriate kind of "transcription regulatory region DNA binding".
+is_a: GO:0000976 ! transcription regulatory region sequence-specific DNA binding
+is_a: GO:0001159 ! core promoter proximal region DNA binding
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0001012
+name: RNA polymerase II regulatory region DNA binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a DNA region that controls the transcription of a region of DNA by RNA polymerase II. Binding may occur as a sequence specific interaction or as an interaction observed only once a factor has been recruited to the DNA by other factors." [GOC:txnOH, GOC:vw]
+is_a: GO:0044212 ! transcription regulatory region DNA binding
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0001067
+name: regulatory region nucleic acid binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a nucleic acid region that regulates a nucleic acid-based process. Such processes include transcription, DNA replication, and DNA repair." [GOC:txnOH]
+is_a: GO:0003676 ! nucleic acid binding
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0001159
+name: core promoter proximal region DNA binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a region of DNA that is in cis with and relatively close to the core promoter. The transcribed region might be described as a gene, cistron, or operon." [GOC:txnOH]
+is_a: GO:0044212 ! transcription regulatory region DNA binding
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
@@ -59634,6 +60018,15 @@ name: filamentous growth of a population of unicellular organisms
 namespace: biological_process
 def: "The process in which a group of unicellular organisms grow in a threadlike, filamentous shape." [GOC:mtg_cambridge_2009]
 is_a: GO:0030447 ! filamentous growth
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0044212
+name: transcription regulatory region DNA binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a DNA region that regulates the transcription of a region of DNA, which may be a gene, cistron, or operon. Binding may occur as a sequence specific interaction or as an interaction observed only once a factor has been recruited to the DNA by other factors." [GOC:jl, GOC:txnOH, SO:0005836]
+comment: The word "promoter" is used variously in the literature to describe the core promoter specifically or the entire proximal regulatory region (excluding any distal enhancers) including both the core promoter and the upstream region where activating transcription factors such as Gal4 in S. cerevisiae or catabolite activator protein (CAP) in E. coli bind. To minimize ambiguity in the use of the word "promoter" in GO, we have chosen the phrase "transcription regulatory region" in order to refer to all of the regulatory regions. Regulatory regions in the DNA which control initiation may include the "core promoter" where the basal transcription machinery binds, the "core promoter proximal region" where regulatory factors other than the basal machinery bind, and "enhancer" regions which are typically more distal from the core promoter. There are also additional regulatory regions, in both the DNA and the RNA transcript, which regulate elongation or termination of transcription. ANNOTATION NOTE: Regarding annotation to "transcription regulatory region DNA binding" (GO:0044212) and any of its is_a children, note that annotation to these terms specifies DNA binding only without any statement about transcription factor activity. To make an annotation about a function of transcription factor activity, consider "sequence-specific DNA binding transcription factor activity" (GO:0003700) or its is_a children which have has_part relationships to the appropriate kind of "transcription regulatory region DNA binding".
+is_a: GO:0000975 ! regulatory region DNA binding
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
