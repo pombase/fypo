@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2013-02-27
-date: 27:02:2013 16:03
+data-version: 2013-02-28
+date: 28:02:2013 17:01
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -86,7 +86,7 @@ synonymtypedef: SENSU "taxonomic disambiguation"
 synonymtypedef: SMILES "SMILES" 
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 598 $
+remark: svn version: $Revision: 601 $
 ontology: fypo
 
 [Term]
@@ -17998,8 +17998,7 @@ synonym: "asymmetric septum" EXACT [PomBase:mah]
 synonym: "asymmetrically located septum" EXACT [PomBase:mah]
 synonym: "mislocalised septum" EXACT [PomBase:mah]
 synonym: "mislocalized septum during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000117 ! abnormal septation
-is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+is_a: FYPO:0002023 ! abnormal septum morphology
 is_a: PATO:0000628
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
@@ -18246,7 +18245,7 @@ def: "A cellular structure phenotype observed in the vegetative growth phase of 
 synonym: "endoplasmic reticulum morphology: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal endoplasmic reticulum morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001313 ! normal subcellular structure during vegetative growth
-intersection_of: PATO:0000001
+intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
 intersection_of: inheres_in GO:0005783 ! endoplasmic reticulum
 intersection_of: qualifier PATO:0000461
@@ -21199,10 +21198,11 @@ creation_date: 2011-08-16T10:03:01Z
 
 [Term]
 id: FYPO:0000544
-name: protein modification abolished
+name: abolished protein modification
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein modification does not occur." [PomBase:mah]
 synonym: "abolished protein/peptide modification" EXACT [PomBase:mah]
 synonym: "absent protein/peptide modification" EXACT [PomBase:mah]
+synonym: "protein modification abolished" EXACT [PomBase:mah]
 synonym: "protein modification abolished during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein/peptide modification: absent" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000329 ! abnormal protein modification
@@ -27296,7 +27296,7 @@ synonym: "abolished protein ubiquitination during vegetative growth" EXACT [PomB
 synonym: "abolished protein ubiquitinylation" RELATED [GO:0016567, PomBase:mah]
 synonym: "abolished protein ubiquitylation" EXACT [GO:0016567, PomBase:mah]
 synonym: "protein ubiquitination abolished" EXACT [PomBase:mah]
-is_a: FYPO:0000544 ! protein modification abolished
+is_a: FYPO:0000544 ! abolished protein modification
 is_a: FYPO:0000905 ! abnormal protein ubiquitination
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690 ! vegetative growth of a single-celled organism
@@ -27901,6 +27901,7 @@ intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled
 intersection_of: inheres_in GO:0000935 ! barrier septum
 relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
 relationship: inheres_in GO:0000935 ! barrier septum
+relationship: output_of FYPO:0000272 ! abolished septum formation
 created_by: midori
 creation_date: 2012-04-03T03:38:09Z
 
@@ -32462,6 +32463,7 @@ synonym: "mononucleate with asymmetrically located septum" EXACT [PomBase:mah]
 synonym: "mononucleate with mislocalised septum" EXACT [PomBase:mah]
 synonym: "mononucleate with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000339 ! mislocalized septum
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 is_a: FYPO:0002000 ! septated mononucleate cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
@@ -35043,7 +35045,7 @@ name: normal nuclear morphology during vegetative growth
 def: "A cellular structure phenotype in which the morphology of the nucleus is normal (i.e. indistinguishable from wild type) in the vegetative growth phase of the life cycle." [PomBase:mah]
 is_a: FYPO:0001313 ! normal subcellular structure during vegetative growth
 is_a: FYPO:0001673 ! normal nuclear morphology
-intersection_of: PATO:0000001
+intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
 intersection_of: inheres_in GO:0005634 ! nucleus
 intersection_of: qualifier PATO:0000461
@@ -35183,8 +35185,7 @@ def: "A septation phenotype observed in the vegetative growth phase of the life 
 synonym: "abnormal septum orientation" EXACT [PomBase:mah]
 synonym: "misoriented septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "tilted septum" EXACT [PomBase:al]
-is_a: FYPO:0000117 ! abnormal septation
-is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+is_a: FYPO:0002023 ! abnormal septum morphology
 is_a: PATO:0000133
 intersection_of: PATO:0000133
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
@@ -35198,14 +35199,21 @@ creation_date: 2012-08-15T13:03:09Z
 
 [Term]
 id: FYPO:0001391
-name: mislocalized septum, near non-growing end
-def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum closer to the non-growing end of the cell, instead of at the midpoint of the long axis." [PomBase:mah]
-synonym: "abnormal septum location, near non-growing end" EXACT [PomBase:mah]
-synonym: "abnormal septum position, near non-growing end" EXACT [PomBase:mah]
-synonym: "asymmetric septum, near non-growing end" EXACT [PomBase:mah]
-synonym: "asymmetrically located septum, near non-growing end" EXACT [PomBase:mah]
-synonym: "mislocalised septum, near non-growing end" EXACT [PomBase:mah]
-synonym: "mislocalized septum, near non-growing end, during vegetative growth" EXACT [PomBase:mah]
+name: mislocalized septum, near new end
+def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum closer to the new end of the cell (when the new end is not yet growing), instead of at the midpoint of the long axis." [PomBase:mah]
+synonym: "abnormal septum location, near new end" EXACT [PomBase:mah]
+synonym: "abnormal septum location, near non-growing end" NARROW [PomBase:mah]
+synonym: "abnormal septum position, near new end" EXACT [PomBase:mah]
+synonym: "abnormal septum position, near non-growing end" NARROW [PomBase:mah]
+synonym: "asymmetric septum, near new end" EXACT [PomBase:mah]
+synonym: "asymmetric septum, near non-growing end" NARROW [PomBase:mah]
+synonym: "asymmetrically located septum, near new end" EXACT [PomBase:mah]
+synonym: "asymmetrically located septum, near non-growing end" NARROW [PomBase:mah]
+synonym: "mislocalised septum, near new end" EXACT [PomBase:mah]
+synonym: "mislocalised septum, near non-growing end" NARROW [PomBase:mah]
+synonym: "mislocalized septum, near new end, during vegetative growth" EXACT [PomBase:mah]
+synonym: "mislocalized septum, near non-growing end" NARROW [PomBase:mah]
+synonym: "mislocalized septum, near non-growing end, during vegetative growth" NARROW [PomBase:mah]
 is_a: FYPO:0000339 ! mislocalized septum
 created_by: midori
 creation_date: 2012-08-15T13:08:14Z
@@ -35420,8 +35428,7 @@ id: FYPO:0001406
 name: increased septum thickness
 def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum that is thicker than normal." [PomBase:mah]
 synonym: "increased septum thickness during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000117 ! abnormal septation
-is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+is_a: FYPO:0002023 ! abnormal septum morphology
 is_a: PATO:0000591
 intersection_of: PATO:0000591
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
@@ -36823,9 +36830,10 @@ creation_date: 2012-08-30T14:17:56Z
 
 [Term]
 id: FYPO:0001493
-name: elongated multinucleate inviable vegetative cells
+name: inviable elongated multinucleate vegetative cells
 def: "A cell morphology phenotype in which vegetative cells are inviable, longer than normal, and contain more than one nucleus apiece." [PomBase:mah]
 synonym: "elongated inviable multinucleate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated multinucleate inviable vegetative cells" EXACT [PomBase:mah]
 synonym: "essential; elongated multinucleate vegetative cells" RELATED [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate cells
 is_a: FYPO:0001490 ! elongated inviable vegetative cells
@@ -36863,9 +36871,10 @@ creation_date: 2012-08-30T14:30:53Z
 
 [Term]
 id: FYPO:0001495
-name: elongated multinucleate viable vegetative cells
+name: viable elongated multinucleate vegetative cells
 def: "A cell morphology phenotype in which vegetative cells are viable, longer than normal, and contain more than one nucleus apiece." [PomBase:mah]
 synonym: "elongated multinucleate viable cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated multinucleate viable vegetative cells" EXACT [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate cells
 is_a: FYPO:0001492 ! elongated viable vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -40119,7 +40128,7 @@ id: FYPO:0001673
 name: normal nuclear morphology
 def: "A cellular structure phenotype in which the morphology of the nucleus is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 is_a: FYPO:0001233 ! normal subcellular structure
-intersection_of: PATO:0000001
+intersection_of: PATO:0000051
 intersection_of: inheres_in GO:0005634 ! nucleus
 intersection_of: qualifier PATO:0000461
 relationship: inheres_in GO:0005634 ! nucleus
@@ -45221,7 +45230,6 @@ synonym: "elongated mononucleate cells with mislocalised septum" EXACT [PomBase:
 synonym: "elongated mononucleate cells with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "long mononucleate cells with mislocalized septum" EXACT [PomBase:vw]
 is_a: FYPO:0001226 ! mononucleate with mislocalized septum
-is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
 is_a: FYPO:0001917 ! elongated mononucleate monoseptate cells
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
@@ -45269,19 +45277,29 @@ creation_date: 2013-02-20T16:58:42Z
 
 [Term]
 id: FYPO:0001994
-name: swollen elongated mononucleate cells with mislocalized septum near non-growing end
+name: swollen elongated mononucleate cells with mislocalized septum near new end
 def: "A cell phenotype in which cells contain a single septum, have one nucleus, are elongated, and are inviable. The septum is in an abnormal location, and the nucleus is located in one compartment of the septated cell. The cell compartment containing the nucleus is swollen (i.e. has a larger diameter than the other compartment)." [PomBase:mah, PomBase:vw]
-synonym: "inviable swollen elongated mononucleate cells with mislocalized septum near non-growing end" EXACT [PomBase:mah]
-synonym: "long swollen mononucleate cells with mislocalized septum near non-growing end" EXACT [PomBase:vw]
-synonym: "swollen elongated mononucleate cells with abnormal septum location near non-growing end" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate cells with abnormal septum position near non-growing end" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate cells with asymmetric septum near non-growing end" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate cells with asymmetrically located septum near non-growing end" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate cells with mislocalised septum near non-growing end" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate cells with mislocalized septum near non-growing end during vegetative growth" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate vegetative cells with mislocalized septum near non-growing end" EXACT [PomBase:mah]
+synonym: "inviable swollen elongated mononucleate cells with mislocalized septum near new end" EXACT [PomBase:mah]
+synonym: "inviable swollen elongated mononucleate cells with mislocalized septum near non-growing end" NARROW [PomBase:mah]
+synonym: "long swollen mononucleate cells with mislocalized septum near new end" EXACT [PomBase:vw]
+synonym: "long swollen mononucleate cells with mislocalized septum near non-growing end" NARROW [PomBase:vw]
+synonym: "swollen elongated mononucleate cells with abnormal septum location near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with abnormal septum location near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with abnormal septum position near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with abnormal septum position near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with asymmetric septum near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with asymmetric septum near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with asymmetrically located septum near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with asymmetrically located septum near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with mislocalised septum near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with mislocalised septum near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with mislocalized septum near new end during vegetative growth" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with mislocalized septum near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with mislocalized septum near non-growing end during vegetative growth" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate vegetative cells with mislocalized septum near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate vegetative cells with mislocalized septum near non-growing end" NARROW [PomBase:mah]
 is_a: FYPO:0000646 ! swollen vegetative cells
-is_a: FYPO:0001391 ! mislocalized septum, near non-growing end
+is_a: FYPO:0001391 ! mislocalized septum, near new end
 is_a: FYPO:0001429 ! swollen elongated cells
 is_a: FYPO:0001993 ! inviable elongated mononucleate cells with mislocalized septum
 intersection_of: FYPO:0000136 ! cellular structure phenotype
@@ -45290,14 +45308,14 @@ intersection_of: has_part FYPO:0000017 ! elongated cells
 intersection_of: has_part FYPO:0000025 ! swollen cells
 intersection_of: has_part FYPO:0000060 ! mononucleate
 intersection_of: has_part FYPO:0001225 ! monoseptate
-intersection_of: has_part FYPO:0001391 ! mislocalized septum, near non-growing end
+intersection_of: has_part FYPO:0001391 ! mislocalized septum, near new end
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cells
 relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
 relationship: has_part FYPO:0000017 ! elongated cells
 relationship: has_part FYPO:0000025 ! swollen cells
 relationship: has_part FYPO:0000060 ! mononucleate
 relationship: has_part FYPO:0001225 ! monoseptate
-relationship: has_part FYPO:0001391 ! mislocalized septum, near non-growing end
+relationship: has_part FYPO:0001391 ! mislocalized septum, near new end
 relationship: has_part FYPO:0001489 ! inviable vegetative cells
 relationship: output_of FYPO:0002017 ! abnormal cell cycle arrest in mitotic interphase before NETO
 created_by: midori
@@ -45467,7 +45485,7 @@ creation_date: 2013-02-27T13:50:36Z
 [Term]
 id: FYPO:0002005
 name: lobate nuclear envelope
-def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the nuclear envelope has a lobate cross-section, i.e. one in which the edge has deep indentations or undulations that form lobes." [http://en.wikipedia.org/wiki/File:Leaf_morphology.svg, PMID:2211869, PomBase:mah]
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the nuclear envelope has a lobate cross-section, i.e. one in which the edge has deep indentations or undulations that form lobes." [http://en.wikipedia.org/wiki/File:Leaf_morphology.svg&oldid=313835870, PMID:2211869, PomBase:mah]
 synonym: "leaf-like nuclear envelope morphology" RELATED [PomBase:al]
 synonym: "lobate nuclear envelope during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000769 ! abnormal nuclear envelope morphology
@@ -45498,6 +45516,15 @@ relationship: qualifier PATO:0001162
 relationship: towards CHEBI:24875 ! iron cation
 created_by: midori
 creation_date: 2013-02-27T14:37:50Z
+
+[Term]
+id: FYPO:0002007
+name: abnormal chromosome morphology, single irregular mass
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which chromosomes form a single, irregularly-shaped mass in the nucleus." [PMID:19074598, PomBase:mah]
+synonym: "abnormal chromatin organization with single irregular mass of chromatin" RELATED [PomBase:vw]
+is_a: FYPO:0000848 ! abnormal chromosome morphology
+created_by: midori
+creation_date: 2013-02-28T12:01:30Z
 
 [Term]
 id: FYPO:0002008
@@ -45671,6 +45698,301 @@ relationship: inheres_in CL:0000334 ! vegetative cell (sensu Fungi)
 relationship: towards GO:0072686 ! mitotic spindle
 created_by: midori
 creation_date: 2013-02-27T15:54:06Z
+
+[Term]
+id: FYPO:0002019
+name: elongated telomeres
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells form telomeres that are longer than normal." [PomBase:mah]
+synonym: "elongated telomeres during vegetative growth" EXACT [PomBase:mah]
+synonym: "long telomeres" EXACT [PomBase:mah]
+is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology
+is_a: PATO:0000573
+intersection_of: PATO:0000573
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0000781 ! chromosome, telomeric region
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0000781 ! chromosome, telomeric region
+created_by: midori
+creation_date: 2013-02-28T13:34:43Z
+
+[Term]
+id: FYPO:0002020
+name: increased RNA level during nitrogen starvation
+def: "A cell phenotype in which the amount of RNA measured in a cell when the cell is subject to nitrogen starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased RNA accumulation during nitrogen starvation" RELATED [PomBase:mah]
+is_a: FYPO:0001890 ! increased RNA level
+intersection_of: exists_during GO:0006995 ! cellular response to nitrogen starvation
+intersection_of: inheres_in CL:0000000 ! cell
+intersection_of: qualifier PATO:0001162
+intersection_of: towards CHEBI:33697 ! ribonucleic acid
+relationship: exists_during GO:0006995 ! cellular response to nitrogen starvation
+relationship: inheres_in CL:0000000 ! cell
+relationship: qualifier PATO:0001162
+relationship: towards CHEBI:33697 ! ribonucleic acid
+created_by: midori
+creation_date: 2013-02-28T13:42:00Z
+
+[Term]
+id: FYPO:0002021
+name: dispersed actin cortical patch localization
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patches are localized throughout the cell cortex (rather than concentrated at the cell ends as in wild type cells)." [PMID:8834798, PomBase:mah]
+synonym: "dispersed actin cortical patch localisation" EXACT [PomBase:mah]
+is_a: FYPO:0000190 ! abnormal actin cortical patch localization
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+is_a: PATO:0001630
+intersection_of: PATO:0001630
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0030479 ! actin cortical patch
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0030479 ! actin cortical patch
+created_by: midori
+creation_date: 2013-02-28T13:54:07Z
+
+[Term]
+id: FYPO:0002022
+name: normal actin cortical patch morphology
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the morphology of actin cortical patches is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal actin cortical patch morphology during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular structure during vegetative growth
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0030479 ! actin cortical patch
+intersection_of: qualifier PATO:0000461
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0030479 ! actin cortical patch
+relationship: part_of FYPO:0001314 ! normal cell cortex morphology during vegetative growth
+relationship: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-02-28T13:57:25Z
+
+[Term]
+id: FYPO:0002023
+name: abnormal septum morphology
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the morphology of the septum is abnormal." [PomBase:mah]
+comment: Note that an abnormal nucleolus organization process may, but does not necessarily, result in abnormal nucleolar morphology.
+synonym: "abnormal septum morphology during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+is_a: PATO:0001617
+intersection_of: PATO:0001617
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0000935 ! barrier septum
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0000935 ! barrier septum
+relationship: output_of FYPO:0000117 ! abnormal septation
+created_by: midori
+creation_date: 2013-02-28T14:08:39Z
+
+[Term]
+id: FYPO:0002024
+name: inviable elongated multinucleate aseptate vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are inviable, longer than normal, lack septa, and contain more than one nucleus apiece." [PomBase:mah]
+synonym: "elongated multinucleate aseptate inviable vegetative cells" EXACT [PomBase:mah]
+synonym: "essential; elongated multinucleate inviable vegetative cells" RELATED [PomBase:mah]
+synonym: "inviable elongated multinucleate aseptate cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000950 ! elongated aseptate cells
+is_a: FYPO:0001493 ! inviable elongated multinucleate vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000949 ! aseptate
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000049 ! inviable
+relationship: has_part FYPO:0000061 ! multinucleate
+relationship: has_part FYPO:0000949 ! aseptate
+created_by: midori
+creation_date: 2013-02-28T14:14:17Z
+
+[Term]
+id: FYPO:0002025
+name: inviable elongated multinucleate vegetative cells with abnormal septum morphology
+def: "A cell morphology phenotype in which vegetative cells are inviable, longer than normal, contain abnormal septa, and contain more than one nucleus apiece." [PMID:8834798, PomBase:mah]
+comment: In cells with this phenotype, an abnormal septum forms on the surface from one side of the cell and then extends in a disorganized manner into the interior.
+synonym: "elongated multinucleate aseptate inviable vegetative cells with abnormal septum morphology" EXACT [PomBase:mah]
+synonym: "essential; elongated multinucleate inviable vegetative cells with abnormal septum morphology" RELATED [PomBase:mah]
+synonym: "inviable elongated multinucleate aseptate cells with abnormal septum morphology during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002024 ! inviable elongated multinucleate aseptate vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000049 ! inviable
+intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000949 ! aseptate
+intersection_of: has_part FYPO:0002023 ! abnormal septum morphology
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000049 ! inviable
+relationship: has_part FYPO:0000061 ! multinucleate
+relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0002023 ! abnormal septum morphology
+created_by: midori
+creation_date: 2013-02-28T14:18:31Z
+
+[Term]
+id: FYPO:0002026
+name: actomyosin contractile ring displaced from midpoint
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms an actomyosin contractile ring that is perpendicular to the long axis of the cell, but is not located at the midpoint of the long axis." [PMID:8834798, PomBase:mah]
+synonym: "actomyosin contractile ring displaced from cell center" EXACT [PomBase:mah]
+synonym: "actomyosin contractile ring displaced from cell centre" EXACT [PomBase:mah]
+is_a: FYPO:0001369 ! mislocalized actomyosin contractile ring
+created_by: midori
+creation_date: 2013-02-28T15:34:27Z
+
+[Term]
+id: FYPO:0002027
+name: angled actomyosin contractile ring
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms an actomyosin contractile ring that is not perpendicular to the long axis of the cell." [PMID:8834798, PomBase:mah]
+synonym: "actomyosin contractile ring not orthogonal to long axis of cell" EXACT [PomBase:mah]
+synonym: "actomyosin contractile ring not perpendicular to long axis of cell" RELATED [PomBase:mah]
+synonym: "tilted actomyosin contractile ring" EXACT [PMID:8834798]
+is_a: FYPO:0001369 ! mislocalized actomyosin contractile ring
+created_by: midori
+creation_date: 2013-02-28T15:43:06Z
+
+[Term]
+id: FYPO:0002028
+name: multiple actomyosin contractile rings present
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more than one actomyosin contractile ring." [PMID:8834798, PomBase:mah]
+synonym: "actomyosin contractile rings present in greater numbers" EXACT [PomBase:mah]
+is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
+is_a: PATO:0000470
+intersection_of: PATO:0000470
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0005826 ! actomyosin contractile ring
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0005826 ! actomyosin contractile ring
+created_by: midori
+creation_date: 2013-02-28T15:45:46Z
+
+[Term]
+id: FYPO:0002029
+name: abnormal cell division, large and small daughter cells
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cell division results in the formation of daughter cells that are not the same size." [PMID:8834798, PomBase:mah]
+is_a: FYPO:0000186 ! abnormal cell division
+relationship: output_of FYPO:0000033 ! abnormal contractile ring localization
+created_by: midori
+creation_date: 2013-02-28T15:54:13Z
+
+[Term]
+id: FYPO:0002030
+name: abnormal actin cable organization
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cable organization is abnormal. The process normally results in the assembly, arrangement of constituent parts, or disassembly of an actin cable. Actin cables are the form of actin filament bundles found in yeasts." [GO:0032432, PomBase:mah]
+synonym: "abnormal actin cable organisation" EXACT [PomBase:mah]
+synonym: "abnormal actin cable organization during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actin filament bundle organization" EXACT [GO:0032432]
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
+is_a: FYPO:0001354 ! abnormal cellular component assembly during vegetative growth
+created_by: midori
+creation_date: 2013-02-28T16:07:31Z
+
+[Term]
+id: FYPO:0002031
+name: abnormal actin cable morphology
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the morphology of actin cables is abnormal. Actin cables are the form of actin filament bundles found in yeasts." [PomBase:mah]
+synonym: "abnormal actin cable morphology during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actin filament bundle morphology" EXACT [GO:0032432]
+synonym: "disorganized actin cables" EXACT [PomBase:vw]
+is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
+intersection_of: PATO:0001617
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0032432 ! actin filament bundle
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0032432 ! actin filament bundle
+relationship: output_of FYPO:0002030 ! abnormal actin cable organization
+created_by: midori
+creation_date: 2013-02-28T16:07:51Z
+
+[Term]
+id: FYPO:0002032
+name: abnormal actin cable morphology during mitosis
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the morphology of actin cables is abnormal during mitosis. Actin cables are the form of actin filament bundles found in yeasts." [PomBase:mah]
+synonym: "abnormal actin cable morphology during mitosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actin filament bundle morphology during mitosis" EXACT [GO:0032432]
+synonym: "disorganized actin cables during mitosis" EXACT [PomBase:vw]
+is_a: FYPO:0002031 ! abnormal actin cable morphology
+intersection_of: PATO:0001617
+intersection_of: exists_during GO:0007067 ! mitosis
+intersection_of: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: inheres_in GO:0032432 ! actin filament bundle
+relationship: exists_during GO:0007067 ! mitosis
+relationship: exists_during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: inheres_in GO:0032432 ! actin filament bundle
+created_by: midori
+creation_date: 2013-02-28T16:27:15Z
+
+[Term]
+id: FYPO:0002033
+name: abolished protein phosphorylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins does not occur." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "abolished protein phosphorylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein phosphorylation abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000544 ! abolished protein modification
+is_a: FYPO:0000775 ! abnormal protein phosphorylation
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690 ! vegetative growth of a single-celled organism
+intersection_of: towards GO:0006468 ! protein phosphorylation
+relationship: during GO:0072690 ! vegetative growth of a single-celled organism
+relationship: towards GO:0006468 ! protein phosphorylation
+created_by: midori
+creation_date: 2013-02-28T16:31:47Z
+
+[Term]
+id: FYPO:0002034
+name: abnormal DNA topoisomerase type I activity
+def: "A molecular function phenotype in which the observed rate of DNA topoisomerase type I activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000656 ! abnormal DNA binding
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003917 ! DNA topoisomerase type I activity
+intersection_of: qualifier PATO:0000460
+relationship: inheres_in GO:0003917 ! DNA topoisomerase type I activity
+relationship: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-02-28T16:34:22Z
+
+[Term]
+id: FYPO:0002035
+name: decreased DNA topoisomerase type I activity
+def: "A molecular function phenotype in which the observed rate of DNA topoisomerase type I activity is decreased." [PomBase:mah]
+synonym: "reduced DNA topoisomerase type I activity" EXACT [PomBase:mah]
+is_a: FYPO:0000658 ! decreased DNA binding
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0002034 ! abnormal DNA topoisomerase type I activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003917 ! DNA topoisomerase type I activity
+relationship: inheres_in GO:0003917 ! DNA topoisomerase type I activity
+created_by: midori
+creation_date: 2013-02-28T16:34:29Z
+
+[Term]
+id: FYPO:0002036
+name: abnormal endodeoxyribonuclease activity
+def: "A molecular function phenotype in which the observed rate of an endodeoxyribonuclease activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004520 ! endodeoxyribonuclease activity
+intersection_of: qualifier PATO:0000460
+relationship: inheres_in GO:0004520 ! endodeoxyribonuclease activity
+relationship: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-02-28T16:37:28Z
+
+[Term]
+id: FYPO:0002037
+name: decreased endodeoxyribonuclease activity
+def: "A molecular function phenotype in which the observed rate of an endodeoxyribonuclease activity is decreased." [PomBase:mah]
+synonym: "reduced endodeoxyribonuclease activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0002036 ! abnormal endodeoxyribonuclease activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004520 ! endodeoxyribonuclease activity
+relationship: inheres_in GO:0004520 ! endodeoxyribonuclease activity
+created_by: midori
+creation_date: 2013-02-28T16:37:38Z
 
 [Term]
 id: GO:0000001
@@ -46560,6 +46882,16 @@ relationship: part_of GO:0000775 ! chromosome, centromeric region
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
+id: GO:0000781
+name: chromosome, telomeric region
+namespace: cellular_component
+def: "The terminal region of a linear chromosome that includes the telomeric DNA repeats and associated proteins." [GOC:elh]
+comment: Note that this term can be used in place of the obsolete cellular component term 'telomere ; GO:0005696'. Use with caution because this term refers to a specific region of the chromosome and not a protein complex.
+synonym: "telomere" RELATED []
+is_a: GO:0044427 ! chromosomal part
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
 id: GO:0000785
 name: chromatin
 namespace: cellular_component
@@ -47115,6 +47447,41 @@ synonym: "DNA-3-methyladenine glycosylase II" RELATED [EC:3.2.2.21]
 xref: EC:3.2.2.21
 xref: MetaCyc:3.2.2.21-RXN
 is_a: GO:0019104 ! DNA N-glycosylase activity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0003916
+name: DNA topoisomerase activity
+namespace: molecular_function
+alt_id: GO:0009387
+def: "Catalysis of the transient cleavage and passage of individual DNA strands or double helices through one another, resulting a topological transformation in double-stranded DNA." [GOC:mah, PMID:8811192]
+subset: gosubset_prok
+xref: EC:5.99.1.-
+xref: MetaCyc:5.99.1.2-RXN
+is_a: GO:0003677 ! DNA binding
+is_a: GO:0016853 ! isomerase activity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0003917
+name: DNA topoisomerase type I activity
+namespace: molecular_function
+def: "Catalysis of a DNA topological transformation by transiently cleaving one DNA strand at a time to allow passage of another strand; changes the linking number by +1 per catalytic cycle." [PMID:8811192]
+comment: Note that a further distinction, between type IA and type IB topoisomerases, is based on sequence or structural similarity between gene products that possess type I catalytic activity.
+subset: gosubset_prok
+synonym: "deoxyribonucleate topoisomerase" BROAD [EC:5.99.1.2]
+synonym: "DNA topoisomerase I activity" NARROW []
+synonym: "nicking-closing enzyme activity" RELATED [EC:5.99.1.2]
+synonym: "omega-protein activity" RELATED [EC:5.99.1.2]
+synonym: "relaxing enzyme activity" RELATED [EC:5.99.1.2]
+synonym: "swivelase activity" RELATED [EC:5.99.1.2]
+synonym: "topoisomerase" BROAD [EC:5.99.1.2]
+synonym: "type I DNA topoisomerase activity" EXACT []
+synonym: "type I topoisomerase activity" EXACT []
+synonym: "untwisting enzyme activity" RELATED [EC:5.99.1.2]
+xref: EC:5.99.1.2
+xref: MetaCyc:5.99.1.2-RXN
+is_a: GO:0003916 ! DNA topoisomerase activity
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
@@ -48094,6 +48461,152 @@ xref: Reactome:REACT_99260 "3,7,24THCA is conjugated with Coenzyme A (SLC27A5 BA
 xref: Reactome:REACT_9970 "3,7,24THCA is conjugated with Coenzyme A (SLC27A2 VLCS), Homo sapiens"
 xref: UM-BBD_enzymeID:e0025
 is_a: GO:0015645 ! fatty acid ligase activity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0004518
+name: nuclease activity
+namespace: molecular_function
+def: "Catalysis of the hydrolysis of ester linkages within nucleic acids." [ISBN:0198547684]
+comment: Note that 'tRNA nucleotidyltransferase activity ; GO:0009022', also known as 'ribonuclease PH', does not have parentage in the 'nuclease activity' branch of the ontology because both GO and the Enzyme Commission define nuclease activity as a type of hydrolysis.
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+xref: EC:3.1.-.-
+is_a: GO:0016788 ! hydrolase activity, acting on ester bonds
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0004519
+name: endonuclease activity
+namespace: molecular_function
+def: "Catalysis of the hydrolysis of ester linkages within nucleic acids by creating internal breaks." [GOC:mah, ISBN:0198547684]
+subset: gosubset_prok
+xref: Reactome:REACT_100654 "3'- incision of DNA by XPG in GG-NER, Arabidopsis thaliana"
+xref: Reactome:REACT_101397 "3'- incision of DNA by XPG in GG-NER, Danio rerio"
+xref: Reactome:REACT_103600 "3'- incision of DNA by XPG in GG-NER, Gallus gallus"
+xref: Reactome:REACT_106502 "3'- incision of DNA by XPG in GG-NER, Rattus norvegicus"
+xref: Reactome:REACT_108614 "3'- incision of DNA by XPG in GG-NER, Taeniopygia guttata"
+xref: Reactome:REACT_110731 "3'- incision of DNA by XPG in GG-NER, Xenopus tropicalis"
+xref: Reactome:REACT_112366 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Danio rerio"
+xref: Reactome:REACT_1124 "3'- incision of DNA by XPG in GG-NER, Homo sapiens"
+xref: Reactome:REACT_112509 "Cleavage of mRNA at the 3'-end, Arabidopsis thaliana"
+xref: Reactome:REACT_112615 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Rattus norvegicus"
+xref: Reactome:REACT_112782 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Xenopus tropicalis"
+xref: Reactome:REACT_113127 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Taeniopygia guttata"
+xref: Reactome:REACT_113480 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Gallus gallus"
+xref: Reactome:REACT_113819 "Cleavage of mRNA at the 3'-end, Drosophila melanogaster"
+xref: Reactome:REACT_114931 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Canis familiaris"
+xref: Reactome:REACT_115221 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Mus musculus"
+xref: Reactome:REACT_115226 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Bos taurus"
+xref: Reactome:REACT_115382 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Sus scrofa"
+xref: Reactome:REACT_115937 "Displacement of DNA glycosylase and endonucleolytic cleavage by DNA-lyase, Gallus gallus"
+xref: Reactome:REACT_116011 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Gallus gallus"
+xref: Reactome:REACT_1914 "Cleavage of mRNA at the 3'-end, Homo sapiens"
+xref: Reactome:REACT_34610 "Cleavage of mRNA at the 3'-end, Bos taurus"
+xref: Reactome:REACT_6746 "Removal of 3'-phosphate moiety from DSB ends, Homo sapiens"
+xref: Reactome:REACT_6774 "Removal of 3'-phosphoglycolate (PG) moiety from DSB ends, Homo sapiens"
+xref: Reactome:REACT_77706 "Cleavage of mRNA at the 3'-end, Taeniopygia guttata"
+xref: Reactome:REACT_78624 "3'- incision of DNA by XPG in GG-NER, Canis familiaris"
+xref: Reactome:REACT_79198 "Cleavage of mRNA at the 3'-end, Canis familiaris"
+xref: Reactome:REACT_80387 "3'- incision of DNA by XPG in GG-NER, Caenorhabditis elegans"
+xref: Reactome:REACT_80628 "3'- incision of DNA by XPG in GG-NER, Saccharomyces cerevisiae"
+xref: Reactome:REACT_80681 "3'- incision of DNA by XPG in GG-NER, Bos taurus"
+xref: Reactome:REACT_80797 "Cleavage of mRNA at the 3'-end, Mus musculus"
+xref: Reactome:REACT_81714 "3'- incision of DNA by XPG in GG-NER, Oryza sativa"
+xref: Reactome:REACT_87541 "Cleavage of mRNA at the 3'-end, Xenopus tropicalis"
+xref: Reactome:REACT_89800 "3'- incision of DNA by XPG in GG-NER, Schizosaccharomyces pombe"
+xref: Reactome:REACT_90034 "3'- incision of DNA by XPG in GG-NER, Mus musculus"
+xref: Reactome:REACT_90935 "3'- incision of DNA by XPG in GG-NER, Sus scrofa"
+xref: Reactome:REACT_92894 "3'- incision of DNA by XPG in GG-NER, Drosophila melanogaster"
+is_a: GO:0004518 ! nuclease activity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0004520
+name: endodeoxyribonuclease activity
+namespace: molecular_function
+def: "Catalysis of the hydrolysis of ester linkages within deoxyribonucleic acid by creating internal breaks." [GOC:mah, ISBN:0198547684]
+subset: gosubset_prok
+synonym: "DNA nicking activity" RELATED [GOC:mah]
+synonym: "endonuclease G activity" RELATED []
+xref: Reactome:REACT_101184 "5'-incision of DNA by ERCC1-XPF in GG-NER, Danio rerio"
+xref: Reactome:REACT_101250 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Caenorhabditis elegans"
+xref: Reactome:REACT_101987 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Dictyostelium discoideum"
+xref: Reactome:REACT_103441 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Rattus norvegicus"
+xref: Reactome:REACT_103771 "3' incision of the lesioned strand of DNA in TC-NER, Xenopus tropicalis"
+xref: Reactome:REACT_104010 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Danio rerio"
+xref: Reactome:REACT_104673 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Schizosaccharomyces pombe"
+xref: Reactome:REACT_104703 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Taeniopygia guttata"
+xref: Reactome:REACT_104968 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Sus scrofa"
+xref: Reactome:REACT_106756 "3' incision of the lesioned strand of DNA in TC-NER, Drosophila melanogaster"
+xref: Reactome:REACT_109040 "3' incision of the lesioned strand of DNA in TC-NER, Canis familiaris"
+xref: Reactome:REACT_109537 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Xenopus tropicalis"
+xref: Reactome:REACT_109692 "3' incision of the lesioned strand of DNA in TC-NER, Sus scrofa"
+xref: Reactome:REACT_110386 "3' incision of the lesioned strand of DNA in TC-NER, Danio rerio"
+xref: Reactome:REACT_112122 "5'-incision of DNA by ERCC1-XPF in GG-NER, Xenopus tropicalis"
+xref: Reactome:REACT_112152 "3' incision of the lesioned strand of DNA in TC-NER, Taeniopygia guttata"
+xref: Reactome:REACT_115154 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Gallus gallus"
+xref: Reactome:REACT_115463 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Taeniopygia guttata"
+xref: Reactome:REACT_115479 "3' incision of the lesioned strand of DNA in TC-NER, Gallus gallus"
+xref: Reactome:REACT_1274 "3' incision of the lesioned strand of DNA in TC-NER, Homo sapiens"
+xref: Reactome:REACT_1311 "5'-incision of DNA by ERCC1-XPF in GG-NER, Homo sapiens"
+xref: Reactome:REACT_1964 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Homo sapiens"
+xref: Reactome:REACT_27164 "Removal of SPO11 and Resection of 5' Ends of DNA (yeast), Saccharomyces cerevisiae"
+xref: Reactome:REACT_27209 "Removal of SPO11 and Resection of 5' Ends of DNA, Homo sapiens"
+xref: Reactome:REACT_28610 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Bos taurus"
+xref: Reactome:REACT_28960 "3' incision of the lesioned strand of DNA in TC-NER, Rattus norvegicus"
+xref: Reactome:REACT_30718 "3' incision of the lesioned strand of DNA in TC-NER, Dictyostelium discoideum"
+xref: Reactome:REACT_31162 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Arabidopsis thaliana"
+xref: Reactome:REACT_31548 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Caenorhabditis elegans"
+xref: Reactome:REACT_31660 "3' incision of the lesioned strand of DNA in TC-NER, Schizosaccharomyces pombe"
+xref: Reactome:REACT_31823 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Oryza sativa"
+xref: Reactome:REACT_32833 "3' incision of the lesioned strand of DNA in TC-NER, Saccharomyces cerevisiae"
+xref: Reactome:REACT_33043 "3' incision of the lesioned strand of DNA in TC-NER, Bos taurus"
+xref: Reactome:REACT_78421 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Sus scrofa"
+xref: Reactome:REACT_79265 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Dictyostelium discoideum"
+xref: Reactome:REACT_80173 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Mus musculus"
+xref: Reactome:REACT_80298 "3' incision of the lesioned strand of DNA in TC-NER, Caenorhabditis elegans"
+xref: Reactome:REACT_80967 "3' incision of the lesioned strand of DNA in TC-NER, Oryza sativa"
+xref: Reactome:REACT_811 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Homo sapiens"
+xref: Reactome:REACT_81197 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Mus musculus"
+xref: Reactome:REACT_82925 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Canis familiaris"
+xref: Reactome:REACT_83838 "5'-incision of DNA by ERCC1-XPF in GG-NER, Rattus norvegicus"
+xref: Reactome:REACT_85019 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Drosophila melanogaster"
+xref: Reactome:REACT_88339 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Rattus norvegicus"
+xref: Reactome:REACT_90087 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Danio rerio"
+xref: Reactome:REACT_92741 "3' incision of the lesioned strand of DNA in TC-NER, Arabidopsis thaliana"
+xref: Reactome:REACT_94592 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Drosophila melanogaster"
+xref: Reactome:REACT_94820 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Canis familiaris"
+xref: Reactome:REACT_95903 "5'-incision of DNA by ERCC1-XPF in GG-NER, Mus musculus"
+xref: Reactome:REACT_97114 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Xenopus tropicalis"
+xref: Reactome:REACT_98405 "5' incision leading to excision of DNA fragment with lesion in TC-NER, Saccharomyces cerevisiae"
+xref: Reactome:REACT_98417 "APE1 mediated endonucleolytic cleavage at the 5' side of the base-free deoxyribose residue, Bos taurus"
+xref: Reactome:REACT_99783 "3' incision of the lesioned strand of DNA in TC-NER, Mus musculus"
+is_a: GO:0004519 ! endonuclease activity
+is_a: GO:0004536 ! deoxyribonuclease activity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0004536
+name: deoxyribonuclease activity
+namespace: molecular_function
+alt_id: GO:0004537
+def: "Catalysis of the hydrolysis of ester linkages within deoxyribonucleic acid." [GOC:mah, ISBN:0198547684]
+subset: gosubset_prok
+synonym: "caspase-activated deoxyribonuclease activity" NARROW []
+xref: Reactome:REACT_100642 "Cleavage of DNA by DFF40, Xenopus tropicalis"
+xref: Reactome:REACT_101208 "Cleavage of DNA by DFF40, Bos taurus"
+xref: Reactome:REACT_110575 "Cleavage of DNA by DFF40, Sus scrofa"
+xref: Reactome:REACT_13702 "Cleavage of DNA by DFF40, Homo sapiens"
+xref: Reactome:REACT_29722 "Cleavage of DNA by DFF40, Danio rerio"
+xref: Reactome:REACT_31853 "Cleavage of DNA by DFF40, Taeniopygia guttata"
+xref: Reactome:REACT_90424 "Cleavage of DNA by DFF40, Gallus gallus"
+xref: Reactome:REACT_95359 "Cleavage of DNA by DFF40, Rattus norvegicus"
+xref: Reactome:REACT_98682 "Cleavage of DNA by DFF40, Canis familiaris"
+is_a: GO:0004518 ! nuclease activity
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
@@ -58119,6 +58632,18 @@ synonym: "negative regulation of DNA replication initiation" BROAD [GOC:vw]
 is_a: GO:0030174 ! regulation of DNA-dependent DNA replication initiation
 is_a: GO:2000104 ! negative regulation of DNA-dependent DNA replication
 relationship: negatively_regulates GO:0006270 ! DNA replication initiation
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0032432
+name: actin filament bundle
+namespace: cellular_component
+alt_id: GO:0000141
+alt_id: GO:0030482
+def: "An assembly of actin filaments that are on the same axis but may be oriented with the same or opposite polarities and may be packed with different levels of tightness." [GOC:mah]
+synonym: "actin cable" RELATED [GOC:mah]
+is_a: GO:0044430 ! cytoskeletal part
+relationship: part_of GO:0015629 ! actin cytoskeleton
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2013-02-27
-date: 27:02:2013 16:03
+data-version: 2013-02-28
+date: 28:02:2013 17:01
 saved-by: midori
 auto-generated-by: OBO-Edit 2.2
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -86,7 +86,7 @@ synonymtypedef: SENSU "taxonomic disambiguation"
 synonymtypedef: SMILES "SMILES" 
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 598 $
+remark: svn version: $Revision: 601 $
 ontology: fypo
 
 [Term]
@@ -3609,8 +3609,7 @@ synonym: "asymmetric septum" EXACT [PomBase:mah]
 synonym: "asymmetrically located septum" EXACT [PomBase:mah]
 synonym: "mislocalised septum" EXACT [PomBase:mah]
 synonym: "mislocalized septum during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000117 ! abnormal septation
-is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+is_a: FYPO:0002023 ! abnormal septum morphology
 created_by: midori
 creation_date: 2011-06-13T02:57:21Z
 
@@ -5751,10 +5750,11 @@ creation_date: 2011-08-16T10:03:01Z
 
 [Term]
 id: FYPO:0000544
-name: protein modification abolished
+name: abolished protein modification
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein modification does not occur." [PomBase:mah]
 synonym: "abolished protein/peptide modification" EXACT [PomBase:mah]
 synonym: "absent protein/peptide modification" EXACT [PomBase:mah]
+synonym: "protein modification abolished" EXACT [PomBase:mah]
 synonym: "protein modification abolished during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein/peptide modification: absent" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000329 ! abnormal protein modification
@@ -9760,7 +9760,7 @@ synonym: "abolished protein ubiquitination during vegetative growth" EXACT [PomB
 synonym: "abolished protein ubiquitinylation" RELATED [GO:0016567, PomBase:mah]
 synonym: "abolished protein ubiquitylation" EXACT [GO:0016567, PomBase:mah]
 synonym: "protein ubiquitination abolished" EXACT [PomBase:mah]
-is_a: FYPO:0000544 ! protein modification abolished
+is_a: FYPO:0000544 ! abolished protein modification
 is_a: FYPO:0000905 ! abnormal protein ubiquitination
 created_by: midori
 creation_date: 2012-03-30T04:14:39Z
@@ -10178,6 +10178,7 @@ def: "A cellular structure phenotype observed in the vegetative growth phase of 
 synonym: "absent septum" EXACT [PomBase:mah]
 synonym: "aseptate during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+relationship: output_of FYPO:0000272 ! abolished septum formation
 created_by: midori
 creation_date: 2012-04-03T03:38:09Z
 
@@ -13218,6 +13219,7 @@ synonym: "mononucleate with asymmetrically located septum" EXACT [PomBase:mah]
 synonym: "mononucleate with mislocalised septum" EXACT [PomBase:mah]
 synonym: "mononucleate with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000339 ! mislocalized septum
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 is_a: FYPO:0002000 ! septated mononucleate cells
 relationship: has_part FYPO:0000060 ! mononucleate
 relationship: has_part FYPO:0000339 ! mislocalized septum
@@ -14984,21 +14986,27 @@ def: "A septation phenotype observed in the vegetative growth phase of the life 
 synonym: "abnormal septum orientation" EXACT [PomBase:mah]
 synonym: "misoriented septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "tilted septum" EXACT [PomBase:al]
-is_a: FYPO:0000117 ! abnormal septation
-is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+is_a: FYPO:0002023 ! abnormal septum morphology
 created_by: midori
 creation_date: 2012-08-15T13:03:09Z
 
 [Term]
 id: FYPO:0001391
-name: mislocalized septum, near non-growing end
-def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum closer to the non-growing end of the cell, instead of at the midpoint of the long axis." [PomBase:mah]
-synonym: "abnormal septum location, near non-growing end" EXACT [PomBase:mah]
-synonym: "abnormal septum position, near non-growing end" EXACT [PomBase:mah]
-synonym: "asymmetric septum, near non-growing end" EXACT [PomBase:mah]
-synonym: "asymmetrically located septum, near non-growing end" EXACT [PomBase:mah]
-synonym: "mislocalised septum, near non-growing end" EXACT [PomBase:mah]
-synonym: "mislocalized septum, near non-growing end, during vegetative growth" EXACT [PomBase:mah]
+name: mislocalized septum, near new end
+def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum closer to the new end of the cell (when the new end is not yet growing), instead of at the midpoint of the long axis." [PomBase:mah]
+synonym: "abnormal septum location, near new end" EXACT [PomBase:mah]
+synonym: "abnormal septum location, near non-growing end" NARROW [PomBase:mah]
+synonym: "abnormal septum position, near new end" EXACT [PomBase:mah]
+synonym: "abnormal septum position, near non-growing end" NARROW [PomBase:mah]
+synonym: "asymmetric septum, near new end" EXACT [PomBase:mah]
+synonym: "asymmetric septum, near non-growing end" NARROW [PomBase:mah]
+synonym: "asymmetrically located septum, near new end" EXACT [PomBase:mah]
+synonym: "asymmetrically located septum, near non-growing end" NARROW [PomBase:mah]
+synonym: "mislocalised septum, near new end" EXACT [PomBase:mah]
+synonym: "mislocalised septum, near non-growing end" NARROW [PomBase:mah]
+synonym: "mislocalized septum, near new end, during vegetative growth" EXACT [PomBase:mah]
+synonym: "mislocalized septum, near non-growing end" NARROW [PomBase:mah]
+synonym: "mislocalized septum, near non-growing end, during vegetative growth" NARROW [PomBase:mah]
 is_a: FYPO:0000339 ! mislocalized septum
 created_by: midori
 creation_date: 2012-08-15T13:08:14Z
@@ -15147,8 +15155,7 @@ id: FYPO:0001406
 name: increased septum thickness
 def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum that is thicker than normal." [PomBase:mah]
 synonym: "increased septum thickness during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000117 ! abnormal septation
-is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+is_a: FYPO:0002023 ! abnormal septum morphology
 created_by: midori
 creation_date: 2012-08-15T15:43:42Z
 
@@ -16116,9 +16123,10 @@ creation_date: 2012-08-30T14:17:56Z
 
 [Term]
 id: FYPO:0001493
-name: elongated multinucleate inviable vegetative cells
+name: inviable elongated multinucleate vegetative cells
 def: "A cell morphology phenotype in which vegetative cells are inviable, longer than normal, and contain more than one nucleus apiece." [PomBase:mah]
 synonym: "elongated inviable multinucleate cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated multinucleate inviable vegetative cells" EXACT [PomBase:mah]
 synonym: "essential; elongated multinucleate vegetative cells" RELATED [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate cells
 is_a: FYPO:0001490 ! elongated inviable vegetative cells
@@ -16144,9 +16152,10 @@ creation_date: 2012-08-30T14:30:53Z
 
 [Term]
 id: FYPO:0001495
-name: elongated multinucleate viable vegetative cells
+name: viable elongated multinucleate vegetative cells
 def: "A cell morphology phenotype in which vegetative cells are viable, longer than normal, and contain more than one nucleus apiece." [PomBase:mah]
 synonym: "elongated multinucleate viable cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated multinucleate viable vegetative cells" EXACT [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate cells
 is_a: FYPO:0001492 ! elongated viable vegetative cells
 relationship: has_part FYPO:0000017 ! elongated cells
@@ -21671,7 +21680,6 @@ synonym: "elongated mononucleate cells with mislocalised septum" EXACT [PomBase:
 synonym: "elongated mononucleate cells with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "long mononucleate cells with mislocalized septum" EXACT [PomBase:vw]
 is_a: FYPO:0001226 ! mononucleate with mislocalized septum
-is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
 is_a: FYPO:0001917 ! elongated mononucleate monoseptate cells
 relationship: has_part FYPO:0000017 ! elongated cells
 relationship: has_part FYPO:0000060 ! mononucleate
@@ -21704,26 +21712,36 @@ creation_date: 2013-02-20T16:58:42Z
 
 [Term]
 id: FYPO:0001994
-name: swollen elongated mononucleate cells with mislocalized septum near non-growing end
+name: swollen elongated mononucleate cells with mislocalized septum near new end
 def: "A cell phenotype in which cells contain a single septum, have one nucleus, are elongated, and are inviable. The septum is in an abnormal location, and the nucleus is located in one compartment of the septated cell. The cell compartment containing the nucleus is swollen (i.e. has a larger diameter than the other compartment)." [PomBase:mah, PomBase:vw]
-synonym: "inviable swollen elongated mononucleate cells with mislocalized septum near non-growing end" EXACT [PomBase:mah]
-synonym: "long swollen mononucleate cells with mislocalized septum near non-growing end" EXACT [PomBase:vw]
-synonym: "swollen elongated mononucleate cells with abnormal septum location near non-growing end" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate cells with abnormal septum position near non-growing end" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate cells with asymmetric septum near non-growing end" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate cells with asymmetrically located septum near non-growing end" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate cells with mislocalised septum near non-growing end" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate cells with mislocalized septum near non-growing end during vegetative growth" EXACT [PomBase:mah]
-synonym: "swollen elongated mononucleate vegetative cells with mislocalized septum near non-growing end" EXACT [PomBase:mah]
+synonym: "inviable swollen elongated mononucleate cells with mislocalized septum near new end" EXACT [PomBase:mah]
+synonym: "inviable swollen elongated mononucleate cells with mislocalized septum near non-growing end" NARROW [PomBase:mah]
+synonym: "long swollen mononucleate cells with mislocalized septum near new end" EXACT [PomBase:vw]
+synonym: "long swollen mononucleate cells with mislocalized septum near non-growing end" NARROW [PomBase:vw]
+synonym: "swollen elongated mononucleate cells with abnormal septum location near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with abnormal septum location near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with abnormal septum position near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with abnormal septum position near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with asymmetric septum near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with asymmetric septum near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with asymmetrically located septum near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with asymmetrically located septum near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with mislocalised septum near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with mislocalised septum near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with mislocalized septum near new end during vegetative growth" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with mislocalized septum near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cells with mislocalized septum near non-growing end during vegetative growth" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate vegetative cells with mislocalized septum near new end" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate vegetative cells with mislocalized septum near non-growing end" NARROW [PomBase:mah]
 is_a: FYPO:0000646 ! swollen vegetative cells
-is_a: FYPO:0001391 ! mislocalized septum, near non-growing end
+is_a: FYPO:0001391 ! mislocalized septum, near new end
 is_a: FYPO:0001429 ! swollen elongated cells
 is_a: FYPO:0001993 ! inviable elongated mononucleate cells with mislocalized septum
 relationship: has_part FYPO:0000017 ! elongated cells
 relationship: has_part FYPO:0000025 ! swollen cells
 relationship: has_part FYPO:0000060 ! mononucleate
 relationship: has_part FYPO:0001225 ! monoseptate
-relationship: has_part FYPO:0001391 ! mislocalized septum, near non-growing end
+relationship: has_part FYPO:0001391 ! mislocalized septum, near new end
 relationship: has_part FYPO:0001489 ! inviable vegetative cells
 relationship: output_of FYPO:0002017 ! abnormal cell cycle arrest in mitotic interphase before NETO
 created_by: midori
@@ -21852,7 +21870,7 @@ creation_date: 2013-02-27T13:50:36Z
 [Term]
 id: FYPO:0002005
 name: lobate nuclear envelope
-def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the nuclear envelope has a lobate cross-section, i.e. one in which the edge has deep indentations or undulations that form lobes." [http://en.wikipedia.org/wiki/File:Leaf_morphology.svg, PMID:2211869, PomBase:mah]
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the nuclear envelope has a lobate cross-section, i.e. one in which the edge has deep indentations or undulations that form lobes." [http://en.wikipedia.org/wiki/File:Leaf_morphology.svg&oldid=313835870, PMID:2211869, PomBase:mah]
 synonym: "leaf-like nuclear envelope morphology" RELATED [PomBase:al]
 synonym: "lobate nuclear envelope during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000769 ! abnormal nuclear envelope morphology
@@ -21869,6 +21887,15 @@ synonym: "increased iron accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 created_by: midori
 creation_date: 2013-02-27T14:37:50Z
+
+[Term]
+id: FYPO:0002007
+name: abnormal chromosome morphology, single irregular mass
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which chromosomes form a single, irregularly-shaped mass in the nucleus." [PMID:19074598, PomBase:mah]
+synonym: "abnormal chromatin organization with single irregular mass of chromatin" RELATED [PomBase:vw]
+is_a: FYPO:0000848 ! abnormal chromosome morphology
+created_by: midori
+creation_date: 2013-02-28T12:01:30Z
 
 [Term]
 id: FYPO:0002008
@@ -21995,6 +22022,214 @@ is_a: FYPO:0000338 ! abnormal mitotic spindle
 is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 created_by: midori
 creation_date: 2013-02-27T15:54:06Z
+
+[Term]
+id: FYPO:0002019
+name: elongated telomeres
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells form telomeres that are longer than normal." [PomBase:mah]
+synonym: "elongated telomeres during vegetative growth" EXACT [PomBase:mah]
+synonym: "long telomeres" EXACT [PomBase:mah]
+is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology
+created_by: midori
+creation_date: 2013-02-28T13:34:43Z
+
+[Term]
+id: FYPO:0002020
+name: increased RNA level during nitrogen starvation
+def: "A cell phenotype in which the amount of RNA measured in a cell when the cell is subject to nitrogen starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased RNA accumulation during nitrogen starvation" RELATED [PomBase:mah]
+is_a: FYPO:0001890 ! increased RNA level
+created_by: midori
+creation_date: 2013-02-28T13:42:00Z
+
+[Term]
+id: FYPO:0002021
+name: dispersed actin cortical patch localization
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patches are localized throughout the cell cortex (rather than concentrated at the cell ends as in wild type cells)." [PMID:8834798, PomBase:mah]
+synonym: "dispersed actin cortical patch localisation" EXACT [PomBase:mah]
+is_a: FYPO:0000190 ! abnormal actin cortical patch localization
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+created_by: midori
+creation_date: 2013-02-28T13:54:07Z
+
+[Term]
+id: FYPO:0002022
+name: normal actin cortical patch morphology
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the morphology of actin cortical patches is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal actin cortical patch morphology during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular structure during vegetative growth
+relationship: part_of FYPO:0001314 ! normal cell cortex morphology during vegetative growth
+created_by: midori
+creation_date: 2013-02-28T13:57:25Z
+
+[Term]
+id: FYPO:0002023
+name: abnormal septum morphology
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the morphology of the septum is abnormal." [PomBase:mah]
+comment: Note that an abnormal nucleolus organization process may, but does not necessarily, result in abnormal nucleolar morphology.
+synonym: "abnormal septum morphology during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+relationship: output_of FYPO:0000117 ! abnormal septation
+created_by: midori
+creation_date: 2013-02-28T14:08:39Z
+
+[Term]
+id: FYPO:0002024
+name: inviable elongated multinucleate aseptate vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are inviable, longer than normal, lack septa, and contain more than one nucleus apiece." [PomBase:mah]
+synonym: "elongated multinucleate aseptate inviable vegetative cells" EXACT [PomBase:mah]
+synonym: "essential; elongated multinucleate inviable vegetative cells" RELATED [PomBase:mah]
+synonym: "inviable elongated multinucleate aseptate cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000950 ! elongated aseptate cells
+is_a: FYPO:0001493 ! inviable elongated multinucleate vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000049 ! inviable
+relationship: has_part FYPO:0000061 ! multinucleate
+relationship: has_part FYPO:0000949 ! aseptate
+created_by: midori
+creation_date: 2013-02-28T14:14:17Z
+
+[Term]
+id: FYPO:0002025
+name: inviable elongated multinucleate vegetative cells with abnormal septum morphology
+def: "A cell morphology phenotype in which vegetative cells are inviable, longer than normal, contain abnormal septa, and contain more than one nucleus apiece." [PMID:8834798, PomBase:mah]
+comment: In cells with this phenotype, an abnormal septum forms on the surface from one side of the cell and then extends in a disorganized manner into the interior.
+synonym: "elongated multinucleate aseptate inviable vegetative cells with abnormal septum morphology" EXACT [PomBase:mah]
+synonym: "essential; elongated multinucleate inviable vegetative cells with abnormal septum morphology" RELATED [PomBase:mah]
+synonym: "inviable elongated multinucleate aseptate cells with abnormal septum morphology during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002024 ! inviable elongated multinucleate aseptate vegetative cells
+relationship: has_part FYPO:0000017 ! elongated cells
+relationship: has_part FYPO:0000049 ! inviable
+relationship: has_part FYPO:0000061 ! multinucleate
+relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0002023 ! abnormal septum morphology
+created_by: midori
+creation_date: 2013-02-28T14:18:31Z
+
+[Term]
+id: FYPO:0002026
+name: actomyosin contractile ring displaced from midpoint
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms an actomyosin contractile ring that is perpendicular to the long axis of the cell, but is not located at the midpoint of the long axis." [PMID:8834798, PomBase:mah]
+synonym: "actomyosin contractile ring displaced from cell center" EXACT [PomBase:mah]
+synonym: "actomyosin contractile ring displaced from cell centre" EXACT [PomBase:mah]
+is_a: FYPO:0001369 ! mislocalized actomyosin contractile ring
+created_by: midori
+creation_date: 2013-02-28T15:34:27Z
+
+[Term]
+id: FYPO:0002027
+name: angled actomyosin contractile ring
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms an actomyosin contractile ring that is not perpendicular to the long axis of the cell." [PMID:8834798, PomBase:mah]
+synonym: "actomyosin contractile ring not orthogonal to long axis of cell" EXACT [PomBase:mah]
+synonym: "actomyosin contractile ring not perpendicular to long axis of cell" RELATED [PomBase:mah]
+synonym: "tilted actomyosin contractile ring" EXACT [PMID:8834798]
+is_a: FYPO:0001369 ! mislocalized actomyosin contractile ring
+created_by: midori
+creation_date: 2013-02-28T15:43:06Z
+
+[Term]
+id: FYPO:0002028
+name: multiple actomyosin contractile rings present
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more than one actomyosin contractile ring." [PMID:8834798, PomBase:mah]
+synonym: "actomyosin contractile rings present in greater numbers" EXACT [PomBase:mah]
+is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
+created_by: midori
+creation_date: 2013-02-28T15:45:46Z
+
+[Term]
+id: FYPO:0002029
+name: abnormal cell division, large and small daughter cells
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cell division results in the formation of daughter cells that are not the same size." [PMID:8834798, PomBase:mah]
+is_a: FYPO:0000186 ! abnormal cell division
+relationship: output_of FYPO:0000033 ! abnormal contractile ring localization
+created_by: midori
+creation_date: 2013-02-28T15:54:13Z
+
+[Term]
+id: FYPO:0002030
+name: abnormal actin cable organization
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cable organization is abnormal. The process normally results in the assembly, arrangement of constituent parts, or disassembly of an actin cable. Actin cables are the form of actin filament bundles found in yeasts." [GO:0032432, PomBase:mah]
+synonym: "abnormal actin cable organisation" EXACT [PomBase:mah]
+synonym: "abnormal actin cable organization during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actin filament bundle organization" EXACT [GO:0032432]
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
+is_a: FYPO:0001354 ! abnormal cellular component assembly during vegetative growth
+created_by: midori
+creation_date: 2013-02-28T16:07:31Z
+
+[Term]
+id: FYPO:0002031
+name: abnormal actin cable morphology
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the morphology of actin cables is abnormal. Actin cables are the form of actin filament bundles found in yeasts." [PomBase:mah]
+synonym: "abnormal actin cable morphology during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actin filament bundle morphology" EXACT [GO:0032432]
+synonym: "disorganized actin cables" EXACT [PomBase:vw]
+is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
+relationship: output_of FYPO:0002030 ! abnormal actin cable organization
+created_by: midori
+creation_date: 2013-02-28T16:07:51Z
+
+[Term]
+id: FYPO:0002032
+name: abnormal actin cable morphology during mitosis
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the morphology of actin cables is abnormal during mitosis. Actin cables are the form of actin filament bundles found in yeasts." [PomBase:mah]
+synonym: "abnormal actin cable morphology during mitosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actin filament bundle morphology during mitosis" EXACT [GO:0032432]
+synonym: "disorganized actin cables during mitosis" EXACT [PomBase:vw]
+is_a: FYPO:0002031 ! abnormal actin cable morphology
+created_by: midori
+creation_date: 2013-02-28T16:27:15Z
+
+[Term]
+id: FYPO:0002033
+name: abolished protein phosphorylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins does not occur." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "abolished protein phosphorylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein phosphorylation abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000544 ! abolished protein modification
+is_a: FYPO:0000775 ! abnormal protein phosphorylation
+created_by: midori
+creation_date: 2013-02-28T16:31:47Z
+
+[Term]
+id: FYPO:0002034
+name: abnormal DNA topoisomerase type I activity
+def: "A molecular function phenotype in which the observed rate of DNA topoisomerase type I activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000656 ! abnormal DNA binding
+is_a: FYPO:0000661 ! abnormal catalytic activity
+created_by: midori
+creation_date: 2013-02-28T16:34:22Z
+
+[Term]
+id: FYPO:0002035
+name: decreased DNA topoisomerase type I activity
+def: "A molecular function phenotype in which the observed rate of DNA topoisomerase type I activity is decreased." [PomBase:mah]
+synonym: "reduced DNA topoisomerase type I activity" EXACT [PomBase:mah]
+is_a: FYPO:0000658 ! decreased DNA binding
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0002034 ! abnormal DNA topoisomerase type I activity
+created_by: midori
+creation_date: 2013-02-28T16:34:29Z
+
+[Term]
+id: FYPO:0002036
+name: abnormal endodeoxyribonuclease activity
+def: "A molecular function phenotype in which the observed rate of an endodeoxyribonuclease activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+created_by: midori
+creation_date: 2013-02-28T16:37:28Z
+
+[Term]
+id: FYPO:0002037
+name: decreased endodeoxyribonuclease activity
+def: "A molecular function phenotype in which the observed rate of an endodeoxyribonuclease activity is decreased." [PomBase:mah]
+synonym: "reduced endodeoxyribonuclease activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0002036 ! abnormal endodeoxyribonuclease activity
+created_by: midori
+creation_date: 2013-02-28T16:37:38Z
 
 [Typedef]
 id: RO:0002215
