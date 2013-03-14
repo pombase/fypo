@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 08:03:2013 11:39
+date: 14:03:2013 16:43
 saved-by: midori
-auto-generated-by: OBO-Edit 2.2
+auto-generated-by: OBO-Edit 2.3
 subsetdef: high_level_annotation_qc "High-level terms not to be used for direct annotation"
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
@@ -7719,6 +7719,7 @@ id: FYPO:0000584
 name: decreased sporulation
 def: "A cellular process phenotype in which the occurrence of ascospore formation is decreased." [PomBase:mah]
 synonym: "decreased ascospore formation" EXACT [PomBase:mah]
+synonym: "decreased sporulation frequency" EXACT [PomBase:mah]
 synonym: "reduced sporulation" EXACT [PomBase:mah]
 synonym: "sporulation: decreased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000121 ! abnormal sporulation
@@ -9794,7 +9795,7 @@ creation_date: 2012-01-11T01:47:11Z
 
 [Term]
 id: FYPO:0000745
-name: delayed abnormal actin cortical patch internalization
+name: delayed actin cortical patch internalization
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patch internalization is delayed." [PomBase:mah]
 synonym: "delayed abnormal actin cortical patch internalization during vegetative growth" EXACT [PomBase:mah]
 synonym: "delayed actin cortical patch internalisation" EXACT [PomBase:mah]
@@ -11319,12 +11320,11 @@ creation_date: 2012-03-14T04:24:49Z
 
 [Term]
 id: FYPO:0000850
-name: resistance to stress
+name: resistance to stress during vegetative growth
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show decreased sensitivity to a stress." [PomBase:mah]
-synonym: "resistant to stress" EXACT [PomBase:mah]
 synonym: "resistant to stress during vegetative growth" EXACT [PomBase:mah]
-synonym: "stress resistance: increased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
+is_a: FYPO:0002046 ! resistance to stress
 intersection_of: PATO:0001552
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0033554
@@ -11338,7 +11338,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "resistance to osmotic stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to osmotic stress" EXACT [PomBase:mah]
 is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
-is_a: FYPO:0000850 ! resistance to stress
+is_a: FYPO:0000850 ! resistance to stress during vegetative growth
 intersection_of: PATO:0001552
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0071470
@@ -14782,11 +14782,11 @@ creation_date: 2012-05-31T16:42:35Z
 
 [Term]
 id: FYPO:0001090
-name: resistance to heat shock
+name: resistance to heat shock during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show decreased sensitivity to heat shock. Heat shock is a form of heat stress in which cells are briefly exposed to a very high temperature." [PomBase:mah]
-synonym: "resistance to heat shock during vegetative growth" EXACT [PomBase:mah]
-synonym: "resistant to heat shock" EXACT [PomBase:mah]
-is_a: FYPO:0000850 ! resistance to stress
+synonym: "resistant to heat shock during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000850 ! resistance to stress during vegetative growth
+is_a: FYPO:0002045 ! resistance to heat shock
 created_by: midori
 creation_date: 2012-06-01T13:48:51Z
 
@@ -15354,7 +15354,7 @@ id: FYPO:0001133
 name: normal DNA replication
 def: "A cellular process phenotype in which DNA replication is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal DNA replication during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006261
@@ -19747,7 +19747,7 @@ name: resistance to cold
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show decreased sensitivity to cold." [PomBase:mah]
 synonym: "resistance to cold during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to cold" EXACT [PomBase:mah]
-is_a: FYPO:0000850 ! resistance to stress
+is_a: FYPO:0000850 ! resistance to stress during vegetative growth
 intersection_of: PATO:0001552
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0070417
@@ -19775,7 +19775,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "resistance to water deprivation during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to dehydration" EXACT [GO:0009414, PomBase:al]
 synonym: "resistant to water deprivation" EXACT [PomBase:mah]
-is_a: FYPO:0000850 ! resistance to stress
+is_a: FYPO:0000850 ! resistance to stress during vegetative growth
 intersection_of: PATO:0001552
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0042631
@@ -27776,7 +27776,7 @@ creation_date: 2013-02-27T15:46:41Z
 [Term]
 id: FYPO:0002018
 name: mitotic spindle absent from cell
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain a detectable detectable mitotic spindle." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain a detectable mitotic spindle." [PomBase:mah]
 synonym: "absent mitotic spindle" EXACT [PomBase:mah]
 is_a: FYPO:0000338 ! abnormal mitotic spindle
 intersection_of: PATO:0002000
@@ -27863,6 +27863,7 @@ synonym: "inviable elongated multinucleate aseptate cells during vegetative grow
 is_a: FYPO:0000950 ! elongated aseptate cells
 is_a: FYPO:0001490 ! elongated inviable vegetative cells
 is_a: FYPO:0001493 ! inviable elongated multinucleate vegetative cells
+is_a: FYPO:0002049 ! elongated multinucleate aseptate vegetative cells
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cells
@@ -28088,6 +28089,142 @@ intersection_of: during GO:0072690
 intersection_of: towards GO:0031087
 created_by: midori
 creation_date: 2013-03-08T11:33:48Z
+
+[Term]
+id: FYPO:0002042
+name: decreased RNA level during cellular response to iron ion starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to iron ion starvation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mRNA level during cellular response to iron ion starvation" NARROW [PomBase:mah]
+synonym: "decreased RNA accumulation during cellular response to iron ion starvation" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to iron ion starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased RNA level during cellular response to iron starvation" EXACT [GO:0036225, PomBase:mah]
+synonym: "decreased RNA level during iron ion starvation" EXACT [PomBase:al]
+synonym: "reduced RNA level during cellular response to iron ion starvation" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: exists_during GO:0010106
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2013-03-14T15:30:48Z
+
+[Term]
+id: FYPO:0002043
+name: normal premeiotic DNA replication
+def: "A cellular process phenotype in which premeiotic DNA replication is normal." [PomBase:mah]
+synonym: "abnormal premeiotic DNA synthesis" RELATED [GO:0006279, GOC:mah]
+synonym: "normal meiotic DNA replication" RELATED [GO:0006279, GOC:mah]
+synonym: "normal meiotic DNA synthesis" RELATED [GO:0006279, GOC:mah]
+is_a: FYPO:0001133 ! normal DNA replication
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006279
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-03-14T15:45:15Z
+
+[Term]
+id: FYPO:0002044
+name: abolished premeiotic DNA replication
+def: "A cellular process phenotype in which premeiotic DNA replication does not occur." [PomBase:mah]
+synonym: "absent premeiotic DNA replication" EXACT [PomBase:mah]
+synonym: "premeiotic DNA replication abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000625 ! abnormal premeiotic DNA replication
+intersection_of: PATO:0001558
+intersection_of: towards GO:0006279
+created_by: midori
+creation_date: 2013-03-14T15:48:07Z
+
+[Term]
+id: FYPO:0002045
+name: resistance to heat shock
+def: "A cell phenotype in which cells show decreased sensitivity to heat shock. Heat shock is a form of heat stress in which cells are briefly exposed to a very high temperature." [PomBase:mah]
+synonym: "resistant to heat shock" EXACT [PomBase:mah]
+is_a: FYPO:0002046 ! resistance to stress
+created_by: midori
+creation_date: 2013-03-14T15:54:13Z
+
+[Term]
+id: FYPO:0002046
+name: resistance to stress
+def: "A phenotype in which cells show decreased sensitivity to a stress." [PomBase:mah]
+synonym: "resistant to stress" EXACT [PomBase:mah]
+synonym: "stress resistance: increased" EXACT [SGD:phenotype_annotation]
+is_a: FYPO:0000162 ! abnormal cellular response to stress
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0033554
+created_by: midori
+creation_date: 2013-03-14T15:56:42Z
+
+[Term]
+id: FYPO:0002047
+name: resistance to heat shock during nitrogen starvation
+def: "A cell phenotype in which cells show decreased sensitivity to heat shock, when the cell is also subject to nitrogen starvation. Heat shock is a form of heat stress in which cells are briefly exposed to a very high temperature." [PomBase:mah]
+synonym: "resistant to heat shock during nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0002045 ! resistance to heat shock
+created_by: midori
+creation_date: 2013-03-14T16:00:03Z
+
+[Term]
+id: FYPO:0002048
+name: normal cell morphology during nitrogen starvation
+def: "A cell phenotype characterized by normal cell morphology when the cell subject to nitrogen starvation." [PomBase:mah]
+is_a: FYPO:0000672 ! normal cell morphology
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-03-14T16:29:43Z
+
+[Term]
+id: FYPO:0002049
+name: elongated multinucleate aseptate vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are longer than normal, lack septa, and contain more than one nucleus apiece." [PomBase:mah]
+synonym: "elongated multinucleate aseptate cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000133 ! elongated multinucleate cells
+is_a: FYPO:0000950 ! elongated aseptate cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000949 ! aseptate
+created_by: midori
+creation_date: 2013-03-14T16:36:18Z
+
+[Term]
+id: FYPO:0002050
+name: branched elongated multinucleate aseptate vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are branched, longer than normal, lack septa, and contain more than one nucleus apiece." [PomBase:mah]
+synonym: "branched elongated multinucleate aseptate cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000015 ! branched cells
+is_a: FYPO:0002049 ! elongated multinucleate aseptate vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000015 ! branched cells
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000949 ! aseptate
+created_by: midori
+creation_date: 2013-03-14T16:40:20Z
+
+[Term]
+id: FYPO:0002051
+name: swollen elongated multinucleate aseptate vegetative cells
+def: "A cell morphology phenotype in which vegetative cells are swollen, longer than normal, lack septa, and contain more than one nucleus apiece." [PomBase:mah]
+synonym: "swollen elongated multinucleate aseptate cells during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000646 ! swollen vegetative cells
+is_a: FYPO:0001512 ! branched, elongated cells
+is_a: FYPO:0002049 ! elongated multinucleate aseptate vegetative cells
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! elongated cells
+intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000025 ! swollen cells
+intersection_of: has_part FYPO:0000949 ! aseptate
+created_by: midori
+creation_date: 2013-03-14T16:41:21Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
