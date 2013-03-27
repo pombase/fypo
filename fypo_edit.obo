@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 26:03:2013 15:54
+date: 27:03:2013 17:00
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3
 subsetdef: high_level_annotation_qc "High-level terms not to be used for direct annotation"
@@ -230,6 +230,7 @@ name: curved cells
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which cells are curved along the long axis. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
 synonym: "bent cells" EXACT [PomBase:mah]
 synonym: "cell morphology, curved" EXACT [PomBase:mah]
+synonym: "comma-shaped cells" EXACT [PomBase:vw]
 synonym: "curved cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 intersection_of: PATO:0000406
@@ -23150,7 +23151,6 @@ creation_date: 2012-11-02T14:52:25Z
 id: FYPO:0001683
 name: abolished mitotic spindle assembly
 def: "A cell phenotype in which mitotic spindle assembly abolished." [PomBase:mah]
-comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abolished mitotic spindle assembly during vegetative growth" EXACT [PomBase:mah]
 synonym: "spindle assembly involved in mitosis abolished" EXACT [PomBase:mah]
 is_a: FYPO:0000177 ! abnormal mitotic spindle assembly
@@ -26807,6 +26807,7 @@ synonym: "mitotic cell cycle arrest  in anaphase, with unseparated, condensed ch
 synonym: "mitotic cell cycle arrest  in anaphase, with unseparated, condensed sister chromatids" EXACT [PomBase:mah, PomBase:vw]
 synonym: "mitotic cell cycle arrest in anaphase, with unseparated sister chromatids, during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
+is_a: FYPO:0000616 ! abnormal mitotic anaphase progression
 intersection_of: FYPO:0000502 ! abnormally arrested mitotic cell cycle
 intersection_of: happens_during GO:0000090
 intersection_of: happens_during GO:0072690
@@ -28249,6 +28250,47 @@ intersection_of: inheres_in GO:0061505
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2013-03-26T15:48:36Z
+
+[Term]
+id: FYPO:0002054
+name: cut during cellular response to hydroxyurea
+def: "A cut phenotype that is observed when cells are exposed to hydroxyurea. In a cut phenotype, a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells." [PomBase:mah]
+synonym: "cut during cellular response to HU" EXACT [PomBase:mah]
+synonym: "cut during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000229 ! cut
+intersection_of: FYPO:0000229
+intersection_of: during GO:0072711
+created_by: midori
+creation_date: 2013-03-27T16:33:44Z
+
+[Term]
+id: FYPO:0002055
+name: inviable at low temperature
+def: "A viability phenotype in which cells are unable to survive at a low temperature at which wild-type cells survive." [PomBase:mah]
+comment: For fission yeast, low temperature usually corresponds to below 25 degrees Celsius.
+synonym: "essential at low temperature" RELATED [PomBase:mah]
+synonym: "lethal at low temperature" EXACT [PomBase:mah]
+is_a: FYPO:0000049 ! inviable
+created_by: midori
+creation_date: 2013-03-27T16:52:52Z
+
+[Term]
+id: FYPO:0002056
+name: decreased mitochondrial translation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of mitochondrial translation is decreased." [PomBase:mah]
+comment: Note that this term should be used only when an experiment measures mitochondrial protein synthesis directly, e.g. by measuring incorporation of a radiolabeled amino acid. Consider annotating to 'decreased protein level' (FYPO:0000835) or one of its descendants.
+synonym: "decreased mitochondrial protein biosynthesis" EXACT [GO:0032543]
+synonym: "decreased mitochondrial protein synthesis" EXACT [GO:0032543]
+synonym: "decreased mitochondrial translation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased rate of mitochondrial protein synthesis" NARROW [PomBase:mah]
+synonym: "reduced mitochondrial translation" EXACT [PomBase:mah]
+is_a: FYPO:0000632 ! mitochondrial translation phenotype
+is_a: FYPO:0001798 ! decreased translation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0032543
+created_by: midori
+creation_date: 2013-03-27T16:55:57Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
