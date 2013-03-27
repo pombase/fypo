@@ -53,10 +53,6 @@ then
   exit 1
 fi
 
-new_release_dir=./releases/$release
-svn mkdir $new_release_dir ||
-  (echo "error: can't make new release directory: $new_release_dir" 1>&2; exit 1)
-
 grep -v '^relationship: has_part' $release_path/fypo-simple.obo | 
   grep -v '^relationship: inheres_in' | grep -v '^synonymtypedef: ' > $release_path/fypo-basic.obo
 
@@ -64,10 +60,12 @@ files_to_move="fypo.obo fypo-merged.obo fypo-simple.obo fypo-basic.obo"
 
 for file in $files_to_move
 do
-  svn cp releases/latest/$file $new_release_dir/$file
-  mv $release_path/$file $new_release_dir/ ||
-    (echo failed to move $file to release directory 1>&2; exit 1)
+  mv $release_path/$file releases/latest
 done
+
+new_release_dir=./releases/$release
+svn cp releases/latest $new_release_dir ||
+  (echo "error: can't make new release directory: $new_release_dir" 1>&2; exit 1)
 
 svn commit --username=$username -m 'FYPO release' releases
 
