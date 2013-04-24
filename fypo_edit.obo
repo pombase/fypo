@@ -1,17 +1,19 @@
 format-version: 1.2
-date: 19:04:2013 16:26
+date: 24:04:2013 16:16
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
-subsetdef: high_level_annotation_qc "High-level terms not to be used for direct annotation"
+subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
+subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
-gformat-version: 1.2
 ontology: fypo
 
 [Term]
 id: FYPO:0000001
 name: phenotype
 def: "Any of the set of observable characteristics of an organism resulting from the interaction of its genotype with the environment." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast phenotype" EXACT [PomBase:mah]
 creation_date: 2011-03-16T03:59:25Z
 
@@ -20,7 +22,7 @@ id: FYPO:0000002
 name: cell phenotype
 def: "A phenotype that is observed at the level of an individual cell." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast cell phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
 created_by: midori
@@ -52,6 +54,8 @@ id: FYPO:0000005
 name: abnormal cell morphology
 alt_id: FYPO:0000019
 def: "A cell phenotype characterized by altered cell morphology." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "cell morphology, misshapen cells" RELATED [PomBase:mah]
 synonym: "cellular morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000136 ! cellular structure phenotype
@@ -202,6 +206,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000014
 name: bottle-shaped cell
 def: "A cell morphology phenotype in which the cell tapers at one end to a diameter smaller than the other." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "cell morphology, bottle/skittle" EXACT [PomBase:mah]
 synonym: "skittle-shaped cell" EXACT [PomBase:mah]
 is_a: FYPO:0001126 ! abnormal cell shape
@@ -244,6 +250,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000017
 name: elongated cell
 def: "A cell morphology phenotype in which cells are longer than normal, i.e. the maximum distance between the cell ends is greater than normal." [PomBase:mah, PomBase:vw]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "cell morphology, elongated cell" EXACT [PomBase:mah]
 synonym: "long cell" EXACT [PomBase:vw]
 is_a: FYPO:0001126 ! abnormal cell shape
@@ -256,7 +264,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000020
 name: pear-shaped cell
 def: "A cell morphology phenotype in which a cell is shaped in the form of a pear." [PomBase:mah]
-comment: Discussing what this means; may rename.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "cell morphology, pear shaped" EXACT [PomBase:mah]
 is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0002240
@@ -296,6 +305,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000023
 name: small cell
 def: "A cell morphology phenotype in which a cell has an abnormally low volume." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "cell size: decreased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0001127 ! abnormal cell size
 intersection_of: PATO:0000596
@@ -321,6 +332,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000025
 name: swollen cell
 def: "A cell morphology phenotype in which a cell has a larger volume than normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "cell morphology, swollen cells" EXACT [PomBase:mah]
 is_a: FYPO:0001127 ! abnormal cell size
 intersection_of: PATO:0000595
@@ -594,7 +607,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000045
 name: abnormal cell population growth
 def: "A cell population phenotype in which a population of cells grow abnormally." [PomBase:mah]
-comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "growth defect" RELATED [PomBase:mah]
 is_a: FYPO:0000139 ! cell population growth phenotype
 is_a: FYPO:0000300 ! biological process phenotype
@@ -606,7 +620,8 @@ id: FYPO:0000046
 name: decreased cell population growth
 alt_id: FYPO:0000222
 def: "A cell population phenotype in which cell population growth is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both." [PomBase:mah]
-comment: Note that cell population growth terms refer to growth under aerobic conditions unless stated otherwise.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "aerobic growth defects" RELATED [PomBase:mah]
 synonym: "decreased aerobic cell population growth" NARROW [PomBase:mah]
 synonym: "decreased growth" BROAD [PomBase:mah]
@@ -622,6 +637,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000047
 name: normal cell population growth
 def: "A cell population phenotype in which a population of cells grow normally." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "growth normal" BROAD [PomBase:mah]
 is_a: FYPO:0000139 ! cell population growth phenotype
 is_a: FYPO:0002058 ! viable cell population
@@ -647,7 +664,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000049
 name: inviable cell
 def: "A viability phenotype in which a cell is unable to survive under conditions in which wild type cells survive." [PomBase:mah]
-comment: Viability is usually determined under standard laboratory conditions, i.e. a cell is generally considered inviable if it cannot grow in rich medium under normal conditions such as temperature, pressure, oxygen level, pH, etc. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+comment: Viability is usually determined under standard laboratory conditions, i.e. a cell is generally considered inviable if it cannot grow in rich medium under normal conditions such as temperature, pressure, oxygen level, pH, etc. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants. This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "essential" RELATED [PomBase:mah]
 synonym: "lethal" EXACT [PomBase:mah]
 is_a: FYPO:0000004 ! cell viability
@@ -703,7 +721,8 @@ id: FYPO:0000054
 name: abnormal microtubule cytoskeleton organization
 alt_id: FYPO:0000053
 def: "A phenotype that affects the organization of the microtubule cytoskeleton. Microtubule cytoskeleton organization is a cellular process that results in the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures comprising microtubules and their associated proteins." [GO:0000226, PomBase:mah]
-comment: Note that an abnormal microtubule cytoskeleton organization process may, but does not necessarily, result in abnormal microtubule cytoskeleton morphology.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that an abnormal microtubule cytoskeleton organization process may, but does not necessarily, result in abnormal microtubule cytoskeleton morphology.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal microtubule cytoskeleton organisation" EXACT [PomBase:mah]
 synonym: "abnormal microtubule organisation" RELATED [PomBase:mah]
 synonym: "abnormal microtubule organization" RELATED [PomBase:mah]
@@ -800,6 +819,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000061
 name: multinucleate
 def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more than one nucleus." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "multinucleate cells" EXACT [PomBase:al]
 synonym: "multinucleate during vegetative growth" EXACT [PomBase:mah]
 synonym: "multiple nuclei" EXACT [PomBase:al]
@@ -831,6 +852,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000063
 name: abnormal DNA recombination
 def: "A cellular process phenotype in which DNA recombination is abnormal. DNA recombination is a process that results in reassortment of genes, producing gene combinations different from those that were present in the parents." [GO:0006310, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "recombination defects" EXACT [PomBase:mah]
 is_a: FYPO:0000293 ! DNA metabolism phenotype
 is_a: FYPO:0000628 ! abnormal cellular process
@@ -1535,6 +1558,8 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000114
 name: cellular process phenotype
 def: "A phenotype that affects a cellular process." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast cellular process phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 is_a: FYPO:0000300 ! biological process phenotype
@@ -1583,7 +1608,7 @@ is_a: FYPO:0000032 ! abnormal cytokinesis
 is_a: FYPO:0001354 ! abnormal cellular component assembly during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0071937
+intersection_of: inheres_in GO:0000917
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
@@ -1608,6 +1633,8 @@ id: FYPO:0000119
 name: abnormal spindle assembly
 alt_id: FYPO:0000285
 def: "A cellular process phenotype in which spindle assembly is abnormal. Spindle assembly is the aggregation, arrangement and bonding together of a set of components to form the spindle." [GO:0051225, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000054 ! abnormal microtubule cytoskeleton organization
 is_a: FYPO:0000336 ! abnormal cellular component assembly
 intersection_of: PATO:0000001
@@ -1677,7 +1704,8 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000124
 name: viable cell
 def: "A viability phenotype in which a cell is able to survive under the specified conditions." [PomBase:mah]
-comment: Viability is usually determined under standard laboratory conditions, i.e. a cell is generally considered viable if it can grow in rich medium under normal conditions such as temperature, pressure, oxygen level, pH, etc. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000004 ! cell viability
 intersection_of: PATO:0000719
 intersection_of: inheres_in CL:0000000
@@ -1843,6 +1871,8 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000136
 name: cellular structure phenotype
 def: "A phenotype that affects the structure of a cell or a cellular component." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast cellular structure phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0001241
@@ -1866,6 +1896,8 @@ creation_date: 2011-04-12T12:55:38Z
 id: FYPO:0000138
 name: localization phenotype
 def: "A cell phenotype that affects the localization of a structure or substance in a cell." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast localization phenotype" EXACT [PomBase:mah]
 synonym: "localisation phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
@@ -1878,6 +1910,8 @@ creation_date: 2011-04-12T02:16:04Z
 id: FYPO:0000139
 name: cell population growth phenotype
 def: "A cell phenotype that affects the rate or extent of cell population growth." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast cell population growth phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
 created_by: midori
@@ -1887,6 +1921,8 @@ creation_date: 2011-04-12T02:22:51Z
 id: FYPO:0000140
 name: cellular metabolism phenotype
 def: "A cellular process phenotype that affects metabolism in the cell." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast cellular metabolism phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -1919,7 +1955,7 @@ id: FYPO:0000142
 name: gene expression phenotype
 def: "A cellular process phenotype that affects gene expression. Gene expression includes transcription, RNA processing, and, for protein-coding genes, translation and protein maturation." [GO:0010467, PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast gene expression phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -1931,6 +1967,8 @@ creation_date: 2011-04-12T05:46:51Z
 id: FYPO:0000143
 name: transcription regulation phenotype
 def: "A gene expression phenotype that affects the regulation of DNA-dependent transcription." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast transcription regulation phenotype" EXACT [PomBase:mah]
 synonym: "gene-specific transcription regulation phenotype" RELATED [GO:0006355, PomBase:mah]
 synonym: "transcriptional control phenotype" BROAD [GO:0006355, PomBase:mah]
@@ -1959,7 +1997,7 @@ id: FYPO:0000145
 name: regulation phenotype
 def: "A cellular process phenotype that affects the regulation of a molecular function, biological process, or biological quality." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast regulation phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -2011,6 +2049,8 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000149
 name: transport phenotype
 def: "A cell process phenotype that affects a transport process." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast transport phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000138 ! localization phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -2181,6 +2221,8 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000162
 name: abnormal cellular response to stress
 def: "A cellular response phenotype in which a cellular response to stress is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000298 ! cellular response phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0033554
@@ -2351,6 +2393,8 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000176
 name: abnormal DNA replication initiation
 def: "A cellular process phenotype in which the initiation of DNA replication is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal DNA-dependent DNA replication initiation" EXACT [PomBase:mah]
 is_a: FYPO:0000217 ! abnormal DNA replication
 intersection_of: PATO:0000001
@@ -2408,6 +2452,8 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000180
 name: abnormal cellular response to oxidative stress
 def: "A stress response phenotype in which a cellular response to oxidative stress is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000162 ! abnormal cellular response to stress
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0034599
@@ -2862,6 +2908,8 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000217
 name: abnormal DNA replication
 def: "A cellular process phenotype in which DNA replication is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal DNA-dependent DNA replication" EXACT [PomBase:mah]
 is_a: FYPO:0000293 ! DNA metabolism phenotype
 is_a: FYPO:0000860 ! abnormal metabolic process
@@ -3382,7 +3430,7 @@ id: FYPO:0000257
 name: normal phenotype
 def: "A phenotype that shows no detectable differences from normal. In fission yeast, the characteristics of wild type cells of the sequenced strain (972 h-) or the isogenic h+ or h90 strains are regarded as normal." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast normal phenotype" EXACT [PomBase:mah]
 synonym: "no obvious phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
@@ -3445,6 +3493,8 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000263
 name: abnormal regulation of translation in response to stress
 def: "A gene expression phenotype in which regulation of translation in response to stress is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "protein synthesis after stress, defective" RELATED [PomBase:mah]
 is_a: FYPO:0000162 ! abnormal cellular response to stress
 is_a: FYPO:0000289 ! translation regulation phenotype
@@ -3747,6 +3797,8 @@ creation_date: 2011-04-20T01:42:21Z
 id: FYPO:0000287
 name: abnormal subcellular structure
 def: "A cellular structure phenotype in which the amount, distribution, or morphology of a cell part is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 is_a: FYPO:0000136 ! cellular structure phenotype
 is_a: FYPO:0001985 ! abnormal phenotype
 intersection_of: PATO:0000051
@@ -3760,7 +3812,7 @@ id: FYPO:0000288
 name: gene expression regulation phenotype
 def: "A regulation phenotype that affects the regulation of gene expression." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast gene expression regulation phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000142 ! gene expression phenotype
 is_a: FYPO:0000145 ! regulation phenotype
@@ -3784,6 +3836,8 @@ creation_date: 2011-04-21T02:25:06Z
 id: FYPO:0000290
 name: transcription phenotype
 def: "A cellular process phenotype that affects DNA-dependent transcription." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast transcription phenotype" EXACT [PomBase:mah]
 synonym: "transcription phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000142 ! gene expression phenotype
@@ -3798,6 +3852,8 @@ creation_date: 2011-04-21T02:31:20Z
 id: FYPO:0000291
 name: translation phenotype
 def: "A cellular process phenotype that affects translation." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast translation phenotype" EXACT [PomBase:mah]
 synonym: "translation phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000142 ! gene expression phenotype
@@ -3812,6 +3868,8 @@ creation_date: 2011-04-21T02:31:20Z
 id: FYPO:0000292
 name: nucleic acid metabolism phenotype
 def: "A cellular process phenotype that affects any nucleic acid metabolic process." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast nucleic acid metabolism phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000140 ! cellular metabolism phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -3823,6 +3881,8 @@ creation_date: 2011-04-21T02:31:20Z
 id: FYPO:0000293
 name: DNA metabolism phenotype
 def: "A cellular process phenotype that affects any DNA metabolic process." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast DNA metabolism phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000292 ! nucleic acid metabolism phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -3834,6 +3894,8 @@ creation_date: 2011-04-21T02:31:20Z
 id: FYPO:0000294
 name: RNA metabolism phenotype
 def: "A cellular process phenotype that affects any RNA metabolic process." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast RNA metabolism phenotype" EXACT [PomBase:mah]
 synonym: "RNA metabolism phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
@@ -3887,6 +3949,8 @@ creation_date: 2011-04-21T02:31:20Z
 id: FYPO:0000298
 name: cellular response phenotype
 def: "A cellular process phenotype that affects a response to a stimulus." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 synonym: "fission yeast cellular response phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -3909,7 +3973,7 @@ id: FYPO:0000300
 name: biological process phenotype
 def: "A phenotype that affects a biological process." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast biological process phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
 intersection_of: FYPO:0000001 ! phenotype
@@ -4132,6 +4196,7 @@ creation_date: 2011-04-27T01:32:52Z
 id: FYPO:0000318
 name: inviable mixed population including long cells
 def: "A mixed population phenotype in which a microcolony forms, and all cells in the population divide once upon spore germination but are inviable, and some cells are longer than normal." [PomBase:jh, PomBase:mah]
+comment: Consider also annotating to 'elongated inviable vegetative cell' (FYPO:0001490) or one of its descendants, to describe the phenotype of the individual elongated cells in the population.
 synonym: "essential; mixed population including long cells" RELATED [PomBase:mah]
 synonym: "long low penetrance" EXACT [PomBase:jh, PomBase:vw]
 is_a: FYPO:0000299 ! microcolony formation
@@ -4333,6 +4398,8 @@ creation_date: 2011-06-03T11:55:29Z
 id: FYPO:0000335
 name: abnormal cellular component organization
 def: "A cellular process phenotype in which any process of cellular component organization at the cellular level is abnormal." [GO:0071842, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal cellular component organisation" EXACT [PomBase:mah]
 synonym: "abnormal cellular component organization at cellular level" EXACT [PomBase:mah]
 is_a: FYPO:0000334 ! cellular component organization phenotype
@@ -4346,6 +4413,8 @@ creation_date: 2011-06-03T11:57:14Z
 id: FYPO:0000336
 name: abnormal cellular component assembly
 def: "A cellular process phenotype in which any process of cellular component assembly at the cellular level is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal cellular component assembly at cellular level" EXACT [PomBase:mah]
 is_a: FYPO:0000335 ! abnormal cellular component organization
 intersection_of: PATO:0000001
@@ -6675,6 +6744,8 @@ creation_date: 2011-08-15T11:08:30Z
 id: FYPO:0000517
 name: abnormal nucleus localization
 def: "A cellular process phenotype in which nucleus localization is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal nuclear localization" EXACT [PomBase:mah]
 synonym: "abnormal nucleus localisation" EXACT [PomBase:mah]
 is_a: FYPO:0000138 ! localization phenotype
@@ -7425,7 +7496,7 @@ synonym: "septum formation: decreased" BROAD [SGD:phenotype_annotation]
 is_a: FYPO:0000117 ! abnormal septation
 intersection_of: PATO:0000499
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0071937
+intersection_of: inheres_in GO:0000917
 created_by: midori
 creation_date: 2011-08-15T11:41:34Z
 
@@ -8157,7 +8228,7 @@ id: FYPO:0000623
 name: abnormal positive regulation of transcription
 def: "A transcription regulation phenotype in which any process of positive regulation of transcription is abnormal." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. There may be enough evidence to support annotation to a more specific term such as 'abnormal transcriptional response to pheromone' (FYPO:0000984); if not, it is safer to annotate to 'increased transcription' (FYPO:0000780) or 'decreased transcription' (FYPO:0000781) rather than explicitly claiming that an effect on regulation was observed.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "abnormal activation of gene-specific transcription" RELATED [GO:0045893, PomBase:mah]
 synonym: "abnormal activation of transcription, DNA-dependent" NARROW [GO:0045893, PomBase:mah]
 synonym: "abnormal positive regulation of cellular transcription, DNA-dependent" EXACT [GO:0045893, PomBase:mah]
@@ -8183,7 +8254,7 @@ id: FYPO:0000624
 name: abnormal negative regulation of transcription
 def: "A transcription regulation phenotype in which any process of negative regulation of transcription is abnormal." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. There may be enough evidence to support annotation to a more specific term such as 'abnormal chromatin silencing' (FYPO:0000144); if not, it is safer to annotate to 'increased transcription' (FYPO:0000780) or 'decreased transcription' (FYPO:0000781) rather than explicitly claiming that an effect on regulation was observed.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "abnormal down regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
 synonym: "abnormal down regulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
 synonym: "abnormal down-regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
@@ -8238,6 +8309,8 @@ creation_date: 2011-08-19T03:49:02Z
 id: FYPO:0000627
 name: normal cellular process
 def: "A phenotype in which a specific cellular process is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0000257 ! normal phenotype
 intersection_of: PATO:0000001
@@ -8250,6 +8323,8 @@ creation_date: 2011-08-19T04:05:16Z
 id: FYPO:0000628
 name: abnormal cellular process
 def: "A phenotype in which a specific cellular process is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0001985 ! abnormal phenotype
 intersection_of: PATO:0000001
@@ -8392,7 +8467,7 @@ synonym: "delayed septum formation" BROAD [PomBase:mah]
 is_a: FYPO:0000117 ! abnormal septation
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0071937
+intersection_of: inheres_in GO:0000917
 created_by: midori
 creation_date: 2011-08-31T02:55:54Z
 
@@ -8430,6 +8505,8 @@ creation_date: 2011-09-28T12:10:13Z
 id: FYPO:0000642
 name: abnormal chromatin organization
 def: "A cellular process phenotype in which any process of chromatin organization is abnormal. Chromatin organization results in the specification, formation or maintenance of the physical structure of eukaryotic chromatin." [GO:0006325, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal chromatin organisation" EXACT [PomBase:mah]
 is_a: FYPO:0000641 ! abnormal chromosome organization
 intersection_of: PATO:0000001
@@ -8548,7 +8625,7 @@ synonym: "increased septum formation" RELATED [PomBase:mah]
 is_a: FYPO:0000117 ! abnormal septation
 intersection_of: PATO:0000498
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0071937
+intersection_of: inheres_in GO:0000917
 created_by: midori
 creation_date: 2011-10-13T03:07:53Z
 
@@ -8557,7 +8634,7 @@ id: FYPO:0000652
 name: molecular function phenotype
 def: "A phenotype that affects a molecular function such as binding or catalytic activity." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast molecular function phenotype" EXACT [PomBase:mah]
 synonym: "molecular function phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
@@ -8583,7 +8660,7 @@ id: FYPO:0000654
 name: catalytic activity phenotype
 def: "A phenotype that affects a catalytic activity." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "enzymatic activity phenotype" EXACT [PomBase:mah]
 synonym: "fission yeast catalytic activity phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000652 ! molecular function phenotype
@@ -8802,6 +8879,8 @@ creation_date: 2011-11-11T01:59:59Z
 id: FYPO:0000672
 name: normal cell morphology
 def: "A cell phenotype characterized by normal cell morphology." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "cellular morphology: normal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000136 ! cellular structure phenotype
 is_a: FYPO:0000257 ! normal phenotype
@@ -8819,7 +8898,7 @@ synonym: "normal septation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0071937
+intersection_of: inheres_in GO:0000917
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2011-11-11T02:53:07Z
@@ -9165,7 +9244,7 @@ id: FYPO:0000702
 name: protein binding phenotype
 def: "A phenotype that protein affects the binding of one protein to another." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast protein binding phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0001092 ! binding phenotype
 intersection_of: FYPO:0000001 ! phenotype
@@ -9304,6 +9383,8 @@ creation_date: 2011-12-06T12:16:53Z
 id: FYPO:0000713
 name: abnormal cellular response to starvation
 def: "A stress response phenotype in which the response to starvation for one or more nutrients is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000162 ! abnormal cellular response to stress
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0009267
@@ -10512,7 +10593,8 @@ creation_date: 2012-03-01T02:05:28Z
 id: FYPO:0000802
 name: abnormal cytoskeleton organization
 def: "A cellular process phenotype in which cytoskeleton organization is abnormal." [GO:0007010, PomBase:mah]
-comment: Consider annotating to 'abnormal cytoskeleton morphology' (FYPO:0000352), but note that an abnormal cytoskeleton organization process may, but does not necessarily, result in abnormal cytoskeleton morphology.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal cytoskeleton organisation" EXACT [PomBase:mah]
 is_a: FYPO:0000335 ! abnormal cellular component organization
 intersection_of: PATO:0000001
@@ -10833,7 +10915,8 @@ creation_date: 2012-03-07T04:15:24Z
 id: FYPO:0000824
 name: altered RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell differs from normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal RNA level" EXACT [PomBase:mah]
 synonym: "altered cellular mRNA level" NARROW [PomBase:vw]
 synonym: "altered cellular RNA level" EXACT [PomBase:mah]
@@ -10873,7 +10956,8 @@ creation_date: 2012-03-08T03:15:26Z
 id: FYPO:0000826
 name: decreased RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+subset: qc_do_not_manually_annotate
 synonym: "decreased cellular mRNA level" NARROW [PomBase:vw]
 synonym: "decreased cellular RNA level" EXACT [PomBase:mah]
 synonym: "decreased RNA accumulation" RELATED [PomBase:mah]
@@ -10990,7 +11074,8 @@ creation_date: 2012-03-09T03:50:03Z
 id: FYPO:0000834
 name: altered protein level
 def: "A cell phenotype in which the amount of protein measured in a cell differs from normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal protein level" EXACT [PomBase:mah]
 synonym: "altered cellular protein level" EXACT [PomBase:mah]
 synonym: "protein/peptide accumulation: abnormal" RELATED [SGD:phenotype_annotation]
@@ -11007,7 +11092,8 @@ creation_date: 2012-03-09T03:50:50Z
 id: FYPO:0000835
 name: decreased protein level
 def: "A cell phenotype in which the amount of protein measured in a cell is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+subset: qc_do_not_manually_annotate
 synonym: "decreased protein accumulation" RELATED [PomBase:mah]
 synonym: "protein/peptide accumulation: decreased" RELATED [SGD:phenotype_annotation]
 synonym: "reduced protein level" EXACT [PomBase:mah]
@@ -11023,7 +11109,8 @@ creation_date: 2012-03-09T03:50:57Z
 id: FYPO:0000836
 name: increased protein level
 def: "A cell phenotype in which the amount of protein measured in a cell is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+subset: qc_do_not_manually_annotate
 synonym: "increased protein accumulation" RELATED [PomBase:mah]
 synonym: "protein/peptide accumulation: increased" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000834 ! altered protein level
@@ -11087,7 +11174,8 @@ creation_date: 2012-03-12T03:25:38Z
 id: FYPO:0000840
 name: normal RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+subset: qc_do_not_manually_annotate
 synonym: "normal cellular RNA level" EXACT [PomBase:mah]
 synonym: "normal mRNA level" NARROW [PomBase:mah]
 synonym: "RNA accumulation: normal" RELATED [SGD:phenotype_annotation]
@@ -11380,6 +11468,8 @@ creation_date: 2012-03-20T12:10:04Z
 id: FYPO:0000860
 name: abnormal metabolic process
 def: "A cellular process phenotype in which a cellular metabolic process is abnormal. A metabolic process is any set of chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances." [GO:0044237, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal cellular metabolic process" EXACT [GO:0044237, PomBase:mah]
 synonym: "abnormal metabolism" EXACT [GO:0044237, PomBase:mah]
 is_a: FYPO:0000140 ! cellular metabolism phenotype
@@ -12751,6 +12841,8 @@ creation_date: 2012-04-03T04:18:23Z
 id: FYPO:0000953
 name: normal cellular response to chemical stimulus
 def: "A cellular response phenotype in which the cellular response to a chemical stimulus is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0070887
@@ -13003,16 +13095,15 @@ creation_date: 2012-04-19T01:25:21Z
 
 [Term]
 id: FYPO:0000969
-name: normal cellular response to UV
-def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to ultraviolet light is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular response to ultraviolet light" EXACT [PomBase:mah]
-synonym: "normal cellular response to UV during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal sensitivity to UV irradiation" EXACT [PomBase:vw]
-is_a: FYPO:0000968 ! normal cellular response to stress
-intersection_of: PATO:0000001
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0034644
-intersection_of: qualifier PATO:0000461
+name: normal cell population growth during cellular response to UV
+def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to ultraviolet light." [PomBase:mah]
+synonym: "normal cell population growth during cellular response to ultraviolet light" EXACT [PomBase:mah]
+synonym: "normal cellular response to UV" RELATED [PomBase:mah]
+synonym: "normal sensitivity to UV irradiation" RELATED [PomBase:vw]
+synonym: "normal vegetative cell population growth during cellular response to UV" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: happens_during GO:0034644
 created_by: midori
 creation_date: 2012-04-19T01:25:40Z
 
@@ -13257,6 +13348,8 @@ creation_date: 2012-04-25T01:27:55Z
 id: FYPO:0000989
 name: altered level of substance in cell
 def: "A cell phenotype in which the amount of a specific substance measured in a cell differs from normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal level of substance in cell" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 is_a: FYPO:0001985 ! abnormal phenotype
@@ -13271,6 +13364,8 @@ creation_date: 2012-04-25T02:06:49Z
 id: FYPO:0000990
 name: increased level of substance in cell
 def: "A cell phenotype in which the amount of a specific substance measured in a cell is higher than normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "increased accumulation of substance in cell" RELATED [PomBase:mah]
 is_a: FYPO:0000989 ! altered level of substance in cell
 intersection_of: inheres_in CL:0000000
@@ -13283,6 +13378,8 @@ creation_date: 2012-04-25T02:07:28Z
 id: FYPO:0000991
 name: decreased level of substance in cell
 def: "A cell phenotype in which the amount of a specific substance measured in a cell is lower than normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "reduced level of substance in cell" EXACT [PomBase:mah]
 is_a: FYPO:0000989 ! altered level of substance in cell
 intersection_of: inheres_in CL:0000000
@@ -13590,6 +13687,8 @@ creation_date: 2012-04-26T12:15:11Z
 id: FYPO:0001013
 name: abnormal membrane organization
 def: "A cellular process phenotype in which cellular membrane organization is abnormal. Cellular membrane organization results in the assembly, arrangement of constituent parts, or disassembly of a lipid bilayer membrane, such as the plasma membrane or an organelle membrane." [GO:0016044, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal cellular membrane organization" EXACT [GO:0016044, PomBase:mah]
 synonym: "abnormal membrane organisation" EXACT [PomBase:mah]
 is_a: FYPO:0000335 ! abnormal cellular component organization
@@ -13706,28 +13805,26 @@ creation_date: 2012-04-30T02:48:06Z
 
 [Term]
 id: FYPO:0001021
-name: normal cellular response to osmotic stress
-def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to osmotic stress is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular response to osmotic stress during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000968 ! normal cellular response to stress
-intersection_of: PATO:0000001
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0071470
-intersection_of: qualifier PATO:0000461
+name: normal cell population growth during cellular response to osmotic stress
+def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to osmotic stress." [PomBase:mah]
+synonym: "normal cellular response to osmotic stress" RELATED [PomBase:mah]
+synonym: "normal vegetative cell population growth during cellular response to osmotic stress" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: happens_during GO:0071470
 created_by: midori
 creation_date: 2012-04-30T02:50:20Z
 
 [Term]
 id: FYPO:0001022
-name: normal cellular response to high osmolarity
-def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to high osmolarity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular response to high osmolarity during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal cellular response to hyperosmotic conditions" EXACT [PomBase:mah]
-is_a: FYPO:0001021 ! normal cellular response to osmotic stress
-intersection_of: PATO:0000001
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0071474
-intersection_of: qualifier PATO:0000461
+name: normal cell population growth during cellular response to high osmolarity
+def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to high osmolarity." [PomBase:mah]
+synonym: "normal cell population growth during cellular response to hyperosmotic conditions" EXACT [PomBase:mah]
+synonym: "normal cellular response to high osmolarity" RELATED [PomBase:mah]
+synonym: "normal vegetative cell population growth during cellular response to high osmolarity" EXACT [PomBase:mah]
+is_a: FYPO:0001021 ! normal cell population growth during cellular response to osmotic stress
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: happens_during GO:0071474
 created_by: midori
 creation_date: 2012-04-30T02:50:58Z
 
@@ -13923,16 +14020,15 @@ creation_date: 2012-05-09T04:45:40Z
 
 [Term]
 id: FYPO:0001037
-name: normal cellular response to salt stress
-def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to salt stress is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular response to ionic osmotic stress" EXACT [GO:0071472, PomBase:mah]
-synonym: "normal cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal cellular salinity response" EXACT [GO:0071472, PomBase:mah]
-is_a: FYPO:0001021 ! normal cellular response to osmotic stress
-intersection_of: PATO:0000001
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0071472
-intersection_of: qualifier PATO:0000461
+name: normal cell population growth during cellular response to salt stress
+def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to salt stress." [PomBase:mah]
+synonym: "normal cell population growth during cellular response to ionic osmotic stress" EXACT [GO:0071472, PomBase:mah]
+synonym: "normal cellular response to salt stress" RELATED [PomBase:mah]
+synonym: "normal cellular salinity response" RELATED [GO:0071472, PomBase:mah]
+synonym: "normal vegetative cell population growth during cellular response to salt stress" EXACT [PomBase:mah]
+is_a: FYPO:0001021 ! normal cell population growth during cellular response to osmotic stress
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: happens_during GO:0071472
 created_by: midori
 creation_date: 2012-05-09T04:57:53Z
 
@@ -14219,6 +14315,8 @@ creation_date: 2012-05-11T03:49:08Z
 id: FYPO:0001057
 name: abnormal amino acid import
 def: "A cellular process phenotype in which the import of one or more amino acids into the cell is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal amino acid import into cell" EXACT [PomBase:al]
 synonym: "abnormal amino acid uptake" EXACT [GO:0043090]
 is_a: FYPO:0000628 ! abnormal cellular process
@@ -14233,6 +14331,8 @@ creation_date: 2012-05-11T03:54:42Z
 id: FYPO:0001058
 name: decreased amino acid import
 def: "A cellular process phenotype in which the import of one or more amino acids into the cell occurs to a lower extent than normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "decreased amino acid import into cell" EXACT [PomBase:al]
 synonym: "decreased amino acid uptake" EXACT [GO:0043090]
 synonym: "reduced amino acid import" EXACT [PomBase:mah]
@@ -14515,6 +14615,8 @@ creation_date: 2012-05-31T16:05:26Z
 id: FYPO:0001076
 name: normal level of substance in cell
 def: "A cell phenotype in which the amount of a specific substance measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000002 ! cell phenotype
 is_a: FYPO:0000257 ! normal phenotype
 intersection_of: PATO:0001159
@@ -14848,7 +14950,7 @@ synonym: "normal cell population growth in presence of Gentian violet" EXACT [Po
 synonym: "normal cell population growth on crystal violet" EXACT [PomBase:mah]
 synonym: "normal cell population growth on {4-[Bis-(4-dimethylamino-phenyl)-methylene]-cyclohexa-2,5-dienylidene}-dimethyl-ammonium chloride" EXACT [CHEBI:198346]
 synonym: "normal vegetative cell population growth on Gentian violet" EXACT [PomBase:mah]
-is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
+is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
 creation_date: 2012-06-01T14:39:48Z
 
@@ -15189,6 +15291,8 @@ creation_date: 2012-06-07T15:28:36Z
 id: FYPO:0001126
 name: abnormal cell shape
 def: "A cell morphology phenotype in which a cell has an abnormal shape." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000052
 intersection_of: inheres_in CL:0000000
@@ -16640,7 +16744,8 @@ creation_date: 2012-07-16T13:52:15Z
 id: FYPO:0001231
 name: normal cell cortex morphology
 def: "A cellular structure phenotype in which the morphology of all or part of the cell cortex is normal (i.e. indistinguishable from wild type). The cell cortex is the region of a cell that lies just beneath the plasma membrane." [GO:0005938, PomBase:mah]
-comment: Note that an abnormal cell cortex organization process may, but does not necessarily, result in abnormal cell cortex morphology.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype: Note that an abnormal cell cortex organization process may, but does not necessarily, result in abnormal cell cortex morphology.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0001233 ! normal subcellular structure
 intersection_of: PATO:0000051
 intersection_of: inheres_in GO:0005938
@@ -16665,6 +16770,8 @@ creation_date: 2012-07-16T13:56:11Z
 id: FYPO:0001233
 name: normal subcellular structure
 def: "A cell phenotype in which the amount, distribution, or morphology of a cell part is normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "normal cellular pH level" EXACT [PomBase:al]
 is_a: FYPO:0000136 ! cellular structure phenotype
 is_a: FYPO:0000257 ! normal phenotype
@@ -18057,7 +18164,7 @@ id: FYPO:0001333
 name: gene expression regulation phenotype during vegetative growth
 def: "A regulation phenotype that affects the regulation of gene expression in the vegetative growth phase of the life cycle." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast gene expression regulation phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000288 ! gene expression regulation phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -18071,7 +18178,7 @@ id: FYPO:0001334
 name: regulation phenotype during vegetative growth
 def: "A cellular process phenotype that affects the regulation of a molecular function, biological process, or biological quality in the vegetative growth phase of the life cycle." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast regulation phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000145 ! regulation phenotype
 is_a: FYPO:0001331 ! cellular process phenotype during vegetative growth
@@ -18573,7 +18680,8 @@ creation_date: 2012-08-07T13:31:19Z
 id: FYPO:0001370
 name: abnormal protein localization
 def: "A cell phenotype that affects the localization of a protein in a cell. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." [PomBase:mah]
-comment: We recommend using one of the more specific terms instead of annotating to this term directly, if possible. If this term is used, we recommend noting which protein(s) were used in the assay.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal cellular protein localisation" EXACT [PomBase:mah]
 synonym: "abnormal cellular protein localization" EXACT [PomBase:mah]
 synonym: "abnormal protein localisation" EXACT [PomBase:mah]
@@ -18618,7 +18726,8 @@ creation_date: 2012-08-07T13:49:04Z
 id: FYPO:0001373
 name: abnormal protein localization to medial cortex
 def: "A cell phenotype in which the localization of a protein to the medial cortex is abnormal." [PomBase:mah]
-comment: Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal protein localisation to medial cortex" EXACT [GO:0071574, PomBase:mah]
 synonym: "abnormal protein localization to medial ring" EXACT [GO:0031097, GO:0071574]
 is_a: FYPO:0001370 ! abnormal protein localization
@@ -18647,7 +18756,8 @@ creation_date: 2012-08-07T13:56:10Z
 id: FYPO:0001375
 name: protein localization abolished
 def: "A cell phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found." [PomBase:mah]
-comment: We recommend using one of the more specific terms instead of annotating to this term directly, if possible. If this term is used, we recommend noting which protein(s) were used in the assay.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. If this term is used, we recommend noting which protein(s) were used in the assay.
+subset: qc_do_not_manually_annotate
 synonym: "abolished protein localization" EXACT [PomBase:mah]
 synonym: "protein absent from specific location in cell" RELATED [PomBase:mah]
 is_a: FYPO:0001370 ! abnormal protein localization
@@ -19251,6 +19361,8 @@ creation_date: 2012-08-22T12:00:57Z
 id: FYPO:0001419
 name: normal cell population growth rate
 def: "A cell population phenotype in which a population of cells grows at the same rate as wild type." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "normal growth rate" BROAD [PomBase:mah]
 is_a: FYPO:0002058 ! viable cell population
 created_by: midori
@@ -19737,15 +19849,14 @@ creation_date: 2012-08-23T15:50:53Z
 
 [Term]
 id: FYPO:0001454
-name: normal cellular response to freezing
-def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to freezing is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+name: normal cell population growth during cellular response to freezing
+def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to freezing conditions." [PomBase:mah]
 synonym: "normal cellular response to freeze-thawing" RELATED [PomBase:al]
-synonym: "normal cellular response to freezing during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000968 ! normal cellular response to stress
-intersection_of: PATO:0000001
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0071497
-intersection_of: qualifier PATO:0000461
+synonym: "normal cellular response to freezing" RELATED [PomBase:mah]
+synonym: "normal vegetavite cell population growth during cellular response to freezing" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: happens_during GO:0071497
 created_by: midori
 creation_date: 2012-08-23T15:54:30Z
 
@@ -21516,7 +21627,7 @@ id: FYPO:0001575
 name: abolished vegetative cell population growth
 def: "A cellular process phenotype in which vegetative cell population growth does not occur, although cells remain viable." [PomBase:mah]
 comment: This term's primary purpose is to organize terms beneath it in the ontology, and we recommend that it not be used for direct annotations. Please consider using one of the more specific terms, which mention carbon or nitrogen sources, to annotate each phenotype, as cells that do not grow on any media would be considered inviable.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "vegetative cell population growth abolished" EXACT [PomBase:mah]
 synonym: "vegetative population growth abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001355 ! decreased vegetative cell population growth
@@ -22578,6 +22689,8 @@ creation_date: 2012-09-27T14:50:07Z
 id: FYPO:0001646
 name: abnormal glutamate import
 def: "A cellular process phenotype in which the import of glutamate into the cell is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051938
@@ -22620,6 +22733,8 @@ creation_date: 2012-09-27T15:54:34Z
 id: FYPO:0001649
 name: decreased glutamate import
 def: "A cellular process phenotype in which the import of glutamate into the cell occurs to a lower extent than normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "decreased glutamate import into cell" EXACT [PomBase:al]
 synonym: "decreased glutamate uptake" EXACT [GO:0036232]
 synonym: "decreased L-glutamate import" NARROW [PomBase:mah]
@@ -22635,6 +22750,8 @@ creation_date: 2012-09-27T15:56:47Z
 id: FYPO:0001650
 name: decreased lysine import
 def: "A cellular process phenotype in which the import of lysine into the cell occurs to a lower extent than normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "decreased L-lysine import" NARROW [PomBase:mah]
 synonym: "decreased lysine import into cell" EXACT [PomBase:al]
 synonym: "decreased lysine uptake" EXACT [GO:0036232]
@@ -22650,6 +22767,8 @@ creation_date: 2012-09-27T15:59:41Z
 id: FYPO:0001651
 name: abnormal lysine import
 def: "A cellular process phenotype in which the import of lysine into the cell is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0034226
@@ -22970,6 +23089,8 @@ creation_date: 2012-10-03T16:35:01Z
 id: FYPO:0001673
 name: normal nuclear morphology
 def: "A cellular structure phenotype in which the morphology of the nucleus is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0001233 ! normal subcellular structure
 intersection_of: PATO:0000051
 intersection_of: inheres_in GO:0005634
@@ -23034,7 +23155,8 @@ creation_date: 2012-10-29T11:40:14Z
 id: FYPO:0001678
 name: abolished protein localization to chromatin
 def: "A cell phenotype in which the localization of a protein to chromatin is abolished." [PomBase:mah]
-comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "abolished protein localisation to chromatin" EXACT [PomBase:mah]
 synonym: "protein localization to chromatin abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001679 ! abnormal protein localization to chromatin
@@ -23642,6 +23764,8 @@ creation_date: 2012-11-08T13:56:37Z
 id: FYPO:0001720
 name: abnormal transport
 def: "A phenotype in which a specific transport process is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000149 ! transport phenotype
 is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
@@ -25022,15 +25146,18 @@ creation_date: 2012-11-29T14:35:04Z
 
 [Term]
 id: FYPO:0001820
-name: normal cellular response to lithium ion
-def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to lithium ions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cellular response to lithium" EXACT [PomBase:mah]
-synonym: "normal cellular response to lithium ion during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001318 ! normal cellular response to chemical stimulus during vegetative growth
-intersection_of: PATO:0000001
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0071285
-intersection_of: qualifier PATO:0000461
+name: normal cell population growth on lithium ion
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing lithium ions." [PomBase:mah]
+synonym: "normal cell population growth in presence of lithium ions" EXACT [PomBase:mah]
+synonym: "normal cell population growth on lithium" EXACT [PomBase:mah]
+synonym: "normal cellular response to lithium ion" RELATED [PomBase:mah]
+synonym: "normal growth on lithium ion" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on lithium ion" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:49713
 created_by: midori
 creation_date: 2012-11-29T14:51:06Z
 
@@ -25541,7 +25668,8 @@ creation_date: 2012-12-18T14:33:31Z
 id: FYPO:0001859
 name: increased minichromosome loss
 def: "A cell phenotype in which minichromosomes are lost at a higher frequency than normal. Minichromosome loss occurs when one or both daughter cells do not inherit copies of a minichromosome from the mother cell, and may result from failure of minichromosome replication or segregation." [PomBase:mah]
-comment: Note that in budding yeast, increased plasmid loss is often called a minichromosome maintenance defect, because "minichromosome" is roughly synonymous with an autonomously replicated and segregated plasmid in that organism. In fission yeast, a minichromosome is a large portion of a chromosome, usually about half of chromosome 3, that replicates and segregates autonomously. For smaller autonomously replicating and segregating constructs, consider 'increased plasmid loss' (FYPO:0000786).
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that in budding yeast, increased plasmid loss is often called a minichromosome maintenance defect, because "minichromosome" is roughly synonymous with an autonomously replicated and segregated plasmid in that organism. In fission yeast, a minichromosome is a large portion of a chromosome, usually about half of chromosome 3, that replicates and segregates autonomously. For smaller autonomously replicating and segregating constructs, consider 'increased plasmid loss' (FYPO:0000786).
+subset: qc_do_not_manually_annotate
 synonym: "minichromosome maintenance defect" RELATED [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
 is_a: FYPO:0001985 ! abnormal phenotype
@@ -25710,6 +25838,8 @@ creation_date: 2013-01-09T15:41:12Z
 id: FYPO:0001872
 name: abnormal cell adhesion
 def: "A cellular process phenotype in which adhesion of a cell to a substrate or another cell is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "adhesion defects" EXACT [PomBase:mah]
 is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
@@ -25814,6 +25944,8 @@ creation_date: 2013-01-30T12:05:15Z
 id: FYPO:0001879
 name: thin cell
 def: "A cell morphology phenotype in which a cell has an abnormally low thickness or diameter." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0001127 ! abnormal cell size
 intersection_of: PATO:0000592
 intersection_of: inheres_in CL:0000000
@@ -25927,6 +26059,8 @@ creation_date: 2013-01-30T13:19:08Z
 id: FYPO:0001888
 name: substance absent from cell
 def: "A cell phenotype in which the amount of a specific substance measured in a cell is too low to detect." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000991 ! decreased level of substance in cell
 intersection_of: PATO:0002000
 intersection_of: inheres_in CL:0000000
@@ -25951,7 +26085,8 @@ creation_date: 2013-01-30T15:26:28Z
 id: FYPO:0001890
 name: increased RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+subset: qc_do_not_manually_annotate
 synonym: "increased cellular mRNA level" NARROW [PomBase:vw]
 synonym: "increased cellular RNA level" EXACT [PomBase:mah]
 synonym: "increased RNA accumulation" RELATED [PomBase:mah]
@@ -26055,6 +26190,8 @@ creation_date: 2013-01-30T16:59:10Z
 id: FYPO:0001898
 name: P-bodies present in decreased numbers
 def: "A cellular structure phenotype in which cells contain fewer cytoplasmic mRNA processing bodies (P-bodies) than normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "cytoplasmic mRNA processing bodies present in decreased numbers" EXACT [GO:0000932]
 synonym: "decreased P-body formation" RELATED [PomBase:al]
 synonym: "fewer P-bodies present" EXACT [PomBase:mah]
@@ -26085,6 +26222,8 @@ creation_date: 2013-01-30T17:03:35Z
 id: FYPO:0001900
 name: small P-bodies
 def: "A cellular structure phenotype in which cytoplasmic mRNA processing bodies (P-bodies) are smaller than normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "decreased P-body formation" RELATED [PomBase:al]
 synonym: "small cytoplasmic mRNA processing bodies" EXACT [GO:0000932]
 synonym: "small P bodies" EXACT [GO:0000932]
@@ -26885,6 +27024,8 @@ creation_date: 2013-02-07T13:12:30Z
 id: FYPO:0001955
 name: spheroid cell
 def: "A cell morphology phenotype in which a cell is shaped in the form of a spheroid. In spheroid cells, there is much less difference between the long and short axes of the cell than in wild type. Spheroid cells may shorter than normal, with approximately the same diameter as normal, or they may be enlarged." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "cell morphology, round cells" RELATED [PomBase:mah]
 synonym: "cell morphology, rounded cells" RELATED [PomBase:mah]
 is_a: FYPO:0001126 ! abnormal cell shape
@@ -26897,6 +27038,8 @@ creation_date: 2013-02-07T13:58:40Z
 id: FYPO:0001956
 name: spherical cell
 def: "A cell morphology phenotype in which a cell is formed in the shape of a sphere." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "orb" EXACT [PomBase:jh, PomBase:vw]
 is_a: FYPO:0001955 ! spheroid cell
 intersection_of: PATO:0001499
@@ -27196,6 +27339,8 @@ creation_date: 2013-02-13T14:50:30Z
 id: FYPO:0001981
 name: decreased rate of DNA replication
 def: "A cellular process phenotype in which the rate of DNA replication is decreased." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "reduced rate of DNA replication" EXACT [PomBase:mah]
 is_a: FYPO:0000217 ! abnormal DNA replication
 intersection_of: PATO:0000911
@@ -27220,6 +27365,8 @@ creation_date: 2013-02-13T14:54:57Z
 id: FYPO:0001983
 name: protein absent from cell
 def: "A cell phenotype in which the amount of protein measured in a cell is too low to detect. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "undetectable cellular protein level" EXACT [PomBase:al]
 is_a: FYPO:0000835 ! decreased protein level
 is_a: FYPO:0001888 ! substance absent from cell
@@ -27249,7 +27396,7 @@ id: FYPO:0001985
 name: abnormal phenotype
 def: "A phenotype that shows detectable differences from normal. In fission yeast, the characteristics of wild type cells of the sequenced strain (972 h-) or the isogenic h+ or h90 strains are regarded as normal." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: high_level_annotation_qc
+subset: qc_do_not_annotate
 synonym: "fission yeast abnormal phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
 intersection_of: PATO:0000001
@@ -27329,28 +27476,7 @@ creation_date: 2013-02-13T17:25:34Z
 [Term]
 id: FYPO:0001992
 name: elongated mononucleate cell with mislocalized septum
-def: "A cell phenotype in which a cell contains a single septum, has one nucleus, and is elongated. The septum is in an abnormal location, and the nucleus is located in one compartment of the septated cell." [PomBase:mah, PomBase:vw]
-synonym: "elongated mononucleate cell with abnormal septum location" EXACT [PomBase:mah]
-synonym: "elongated mononucleate cell with abnormal septum position" EXACT [PomBase:mah]
-synonym: "elongated mononucleate cell with asymmetric septum" EXACT [PomBase:mah]
-synonym: "elongated mononucleate cell with asymmetrically located septum" EXACT [PomBase:mah]
-synonym: "elongated mononucleate cell with mislocalised septum" EXACT [PomBase:mah]
-synonym: "elongated mononucleate cell with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
-synonym: "long mononucleate cell with mislocalized septum" EXACT [PomBase:vw]
-is_a: FYPO:0001226 ! mononucleate with mislocalized septum
-is_a: FYPO:0001917 ! elongated mononucleate monoseptate cell
-intersection_of: FYPO:0000136 ! cellular structure phenotype
-intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000060 ! mononucleate
-intersection_of: has_part FYPO:0000339 ! mislocalized septum
-intersection_of: has_part FYPO:0001225 ! monoseptate
-created_by: midori
-creation_date: 2013-02-20T16:55:53Z
-
-[Term]
-id: FYPO:0001993
-name: inviable elongated mononucleate cell with mislocalized septum
+alt_id: FYPO:0001993
 def: "A cell phenotype in which a cell contains a single septum, has one nucleus, is elongated, and is inviable. The septum is in an abnormal location, and the nucleus is located in one compartment of the septated cell." [PomBase:mah, PomBase:vw]
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
 synonym: "inviable elongated mononucleate cell with abnormal septum location" EXACT [PomBase:mah]
@@ -27358,11 +27484,13 @@ synonym: "inviable elongated mononucleate cell with abnormal septum position" EX
 synonym: "inviable elongated mononucleate cell with asymmetric septum" EXACT [PomBase:mah]
 synonym: "inviable elongated mononucleate cell with asymmetrically located septum" EXACT [PomBase:mah]
 synonym: "inviable elongated mononucleate cell with mislocalised septum" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate cell with mislocalized septum" EXACT [PomBase:mah]
 synonym: "inviable elongated mononucleate cell with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable long mononucleate cell with mislocalized septum" EXACT [PomBase:vw]
 synonym: "inviable vegetative elongated mononucleate cell with mislocalized septum" EXACT [PomBase:mah]
+is_a: FYPO:0001226 ! mononucleate with mislocalized septum
 is_a: FYPO:0001490 ! elongated inviable vegetative cell
-is_a: FYPO:0001992 ! elongated mononucleate cell with mislocalized septum
+is_a: FYPO:0001917 ! elongated mononucleate monoseptate cell
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
@@ -27371,7 +27499,7 @@ intersection_of: has_part FYPO:0000339 ! mislocalized septum
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
-creation_date: 2013-02-20T16:58:42Z
+creation_date: 2013-02-20T16:55:53Z
 
 [Term]
 id: FYPO:0001994
@@ -27398,7 +27526,7 @@ synonym: "swollen elongated mononucleate cell with mislocalized septum near non-
 synonym: "swollen elongated mononucleate vegetative cell with mislocalized septum near new end" EXACT [PomBase:mah]
 synonym: "swollen elongated mononucleate vegetative cell with mislocalized septum near non-growing end" NARROW [PomBase:mah]
 is_a: FYPO:0001391 ! mislocalized septum, near new end
-is_a: FYPO:0001993 ! inviable elongated mononucleate cell with mislocalized septum
+is_a: FYPO:0001992 ! elongated mononucleate cell with mislocalized septum
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
@@ -27492,6 +27620,7 @@ intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 intersection_of: has_part FYPO:0002069 ! mislocalized nucleus
 relationship: output_of FYPO:0001973 ! abnormal cytokinetic cell separation, with abnormal nuclear division
 created_by: midori
@@ -27726,6 +27855,7 @@ intersection_of: happens_during GO:0000085
 intersection_of: happens_during GO:0072690
 intersection_of: precedes GO:0051519
 intersection_of: towards GO:0071850
+relationship: has_output FYPO:0001018 ! abolished activation of bipolar cell growth
 created_by: midori
 creation_date: 2013-02-27T15:46:41Z
 
@@ -28093,6 +28223,8 @@ creation_date: 2013-03-14T15:48:07Z
 id: FYPO:0002045
 name: resistance to heat shock
 def: "A cell phenotype in which cells show decreased sensitivity to heat shock. Heat shock is a form of heat stress in which cells are briefly exposed to a very high temperature." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "resistant to heat shock" EXACT [PomBase:mah]
 is_a: FYPO:0002046 ! resistance to stress
 created_by: midori
@@ -28102,6 +28234,8 @@ creation_date: 2013-03-14T15:54:13Z
 id: FYPO:0002046
 name: resistance to stress
 def: "A phenotype in which cells show decreased sensitivity to a stress." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
 synonym: "resistant to stress" EXACT [PomBase:mah]
 synonym: "stress resistance: increased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000162 ! abnormal cellular response to stress
@@ -28399,10 +28533,10 @@ creation_date: 2013-04-17T16:12:37Z
 id: FYPO:0002070
 name: normal nucleus location
 def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which a cell has a nucleus in the normal location at the midpoint of the long axis of the cell." [PomBase:mah]
-synonym: "normal nuclear location" EXACT []
-synonym: "normal nucleus location during vegetative growth" EXACT []
-synonym: "normal nucleus position" EXACT []
-synonym: "normally localized nucleus" EXACT []
+synonym: "normal nuclear location" EXACT [PomBase:mah]
+synonym: "normal nucleus location during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal nucleus position" EXACT [PomBase:mah]
+synonym: "normally localized nucleus" EXACT [PomBase:mah]
 is_a: FYPO:0001233 ! normal subcellular structure
 intersection_of: PATO:0000140
 intersection_of: inheres_in GO:0005634
@@ -28441,7 +28575,7 @@ synonym: "displaced nucleus in prospore" EXACT [PomBase:vw]
 synonym: "displaced nucleus prospore" EXACT [PomBase:vw]
 synonym: "mislocalised nucleus in prospore" EXACT [PomBase:mah]
 synonym: "mislocalized nucleus in prospore" EXACT [PomBase:mah]
-synonym: "mislocalized prospore nucleus" EXACT []
+synonym: "mislocalized prospore nucleus" EXACT [PomBase:mah]
 synonym: "misplaced prospore nuclei" EXACT [PomBase:vw]
 synonym: "misplaced prospore nucleus" EXACT [PomBase:vw]
 is_a: FYPO:0002069 ! mislocalized nucleus
@@ -28451,6 +28585,118 @@ intersection_of: part_of GO:0042764
 relationship: output_of FYPO:0000942 ! abnormal nucleus localization in prospore
 created_by: midori
 creation_date: 2013-04-17T16:23:48Z
+
+[Term]
+id: FYPO:0002073
+name: protein mislocalized to nucleus during cellular response to copper
+def: "A cell phenotype in which a protein that is not normally found in the nucleus is observed there during a cellular response to copper ions." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "nuclear protein accumulation in response to copper" RELATED [PomBase:al]
+synonym: "protein mislocalised to nucleus during cellular response to copper" EXACT [PomBase:mah]
+synonym: "protein mislocalised to nucleus during cellular response to copper ion during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nucleus during cellular response to copper ion" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nucleus during cellular response to copper ion during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000784 ! protein mislocalized to nucleus
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0071280
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005634
+created_by: midori
+creation_date: 2013-04-24T12:06:43Z
+
+[Term]
+id: FYPO:0002074
+name: inviable cell population at high temperature
+def: "A cell population phenotype in which none of the cells in the population are viable at a high temperature." [PomBase:mah]
+comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
+is_a: FYPO:0002059 ! inviable cell population
+created_by: midori
+creation_date: 2013-04-24T12:29:02Z
+
+[Term]
+id: FYPO:0002075
+name: inviable vegetative cell population at high temperature
+def: "A cell population phenotype in which none of the cells in the population are viable at a high temperature in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
+is_a: FYPO:0002061 ! inviable vegetative cell population
+is_a: FYPO:0002074 ! inviable cell population at high temperature
+created_by: midori
+creation_date: 2013-04-24T12:31:01Z
+
+[Term]
+id: FYPO:0002076
+name: elongated inviable cell with fragmented nucleus and increased septum thickness
+def: "A cell phenotype in which a cell is elongated, has a nucleus that is broken into multiple small fragments, forms a septum that is thicker than normal, and is inviable." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "elongated inviable cell with fragmented nuclear material and increased septum thickness" EXACT [PomBase:al]
+synonym: "elongated inviable cell with fragmented nuclei and increased septum thickness" EXACT [PomBase:al]
+synonym: "elongated inviable cell with fragmented nucleus and increased septum thickness during vegetative growth" EXACT [PomBase:mah]
+synonym: "long inviable cell with fragmented nucleus and increased septum thickness" EXACT [PomBase:vw]
+is_a: FYPO:0001406 ! increased septum thickness
+is_a: FYPO:0001490 ! elongated inviable vegetative cell
+is_a: FYPO:0001919 ! fragmented nucleus
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0001406 ! increased septum thickness
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0001919 ! fragmented nucleus
+relationship: output_of FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+created_by: midori
+creation_date: 2013-04-24T12:48:44Z
+
+[Term]
+id: FYPO:0002077
+name: sensitive to low osmolarity
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to conditions of low osmolarity." [PomBase:mah]
+synonym: "hypersensitive to low osmolarity" EXACT [PomBase:mah]
+synonym: "sensitive to hypo-osmotic conditions" EXACT [PomBase:mah]
+synonym: "sensitive to hypoosmotic conditions" EXACT [PomBase:al]
+synonym: "sensitive to hypotonic conditions" RELATED [PomBase:mah]
+synonym: "sensitive to low osmolarity during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000270 ! sensitive to osmotic stress
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0071476
+created_by: midori
+creation_date: 2013-04-24T14:41:45Z
+
+[Term]
+id: FYPO:0002078
+name: sensitive to calcium during cellular hypotonic response
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to calcium during a cellular hypotonic response. Cells stop growing (and may die) at a concentration of calcium ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to calcium during cellular hypotonic response" EXACT [PomBase:mah]
+synonym: "sensitive to calcium during cellular hypoosmotic response" EXACT [PomBase:al]
+synonym: "sensitive to calcium during cellular hypotonic response during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to calcium ions during cellular hypotonic response" EXACT [PomBase:mah]
+is_a: FYPO:0000098 ! sensitive to calcium
+intersection_of: PATO:0001551
+intersection_of: during GO:0071476
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:29108
+created_by: midori
+creation_date: 2013-04-24T14:57:12Z
+
+[Term]
+id: FYPO:0002079
+name: normal cell population growth on calcium ion during cellular hypotonic response
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing calcium ions during a cellular hypotonic response." [PomBase:mah]
+synonym: "normal cell population growth in presence of calcium ions during cellular hypotonic response" EXACT [PomBase:mah]
+synonym: "normal cell population growth on calcium during cellular hypotonic response" EXACT [PomBase:mah]
+synonym: "normal cell population growth on calcium ion during cellular hypoosmotic response" EXACT [PomBase:al]
+synonym: "normal cell population growth on excess calcium during cellular hypotonic response" EXACT [PomBase:al]
+synonym: "normal cellular response to calcium ion during cellular hypotonic response" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on calcium ion during cellular hypotonic response" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on calcium ion during cellular hypotonic response" EXACT [PomBase:mah]
+is_a: FYPO:0001020 ! normal cell population growth on calcium ion
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: happens_during GO:0071476
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:29108
+created_by: midori
+creation_date: 2013-04-24T14:59:06Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
