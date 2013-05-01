@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 24:04:2013 16:16
+date: 01:05:2013 17:28
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -3030,12 +3030,13 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000228
-name: lagging chromosomes
+name: lagging mitotic chromosomes
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which sister chromatids do not move towards the spindle poles at the same time during mitosis, but instead one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has separated. Mitotic sister chromatid segregation stops before completing separation of chromosomes." [PMID:11809834, PMID:20211136, PomBase:mah]
-synonym: "chromosome segregation defects, lagging chromosomes" EXACT [PomBase:mah]
+synonym: "chromosome segregation defects, lagging mitotic chromosomes" EXACT [PomBase:mah]
 synonym: "lagging chromosomes during vegetative growth" EXACT [PomBase:mah]
 synonym: "lagging mitotic sister chromatids" EXACT [PomBase:mah]
 is_a: FYPO:0001271 ! incomplete, unequal mitotic sister chromatid separation
+is_a: FYPO:0002090 ! lagging chromosomes
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -4177,7 +4178,7 @@ comment: Note that if you have done an experiment that assays the viability of a
 synonym: "essential in germinating spore" RELATED [PomBase:mah]
 synonym: "inviable after spore germination" EXACT [PomBase:mah]
 synonym: "inviable germinating spore" RELATED [PomBase:mah]
-is_a: FYPO:0000049 ! inviable cell
+is_a: FYPO:0001489 ! inviable vegetative cell
 intersection_of: FYPO:0000049 ! inviable cell
 intersection_of: inheres_in CL:0000596
 intersection_of: is_preceded_by GO:0009847
@@ -6026,9 +6027,9 @@ creation_date: 2011-08-12T03:12:26Z
 id: FYPO:0000460
 name: decreased mitotic centromeric sister chromatid cohesion
 def: "A cellular process phenotype in which cohesion between centromeres of sister chromatids is decreased during mitosis." [PomBase:mah]
-synonym: "abnormal mitotic sister chromatid cohesion, centromeric" EXACT [GO:0071962, PomBase:mah]
-synonym: "abnormal sister chromatid cohesion at centromere during mitosis" EXACT [PomBase:mah]
 synonym: "decreased centromeric sister chromatid cohesion during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased mitotic sister chromatid cohesion, centromeric" EXACT [GO:0071962, PomBase:mah]
+synonym: "decreased sister chromatid cohesion at centromere during mitosis" EXACT [PomBase:mah]
 synonym: "reduced mitotic centromeric sister chromatid cohesion" EXACT [PomBase:mah]
 is_a: FYPO:0000459 ! abnormal mitotic centromeric sister chromatid cohesion
 intersection_of: PATO:0002052
@@ -8905,10 +8906,11 @@ creation_date: 2011-11-11T02:53:07Z
 
 [Term]
 id: FYPO:0000674
-name: normal growth at high temperature
-def: "A cell growth phenotype in which vegetative cells grow normally at a high temperature." [PomBase:mah]
+name: normal cell population growth at high temperature
+def: "A cell population growth phenotype in which vegetative cells grow normally at a high temperature." [PomBase:mah]
 synonym: "heat sensitivity: normal" RELATED [SGD:phenotype_annotation]
-synonym: "normal vegetative growth at high temperature" EXACT [PomBase:mah]
+synonym: "normal growth at high temperature" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth at high temperature" EXACT [PomBase:mah]
 is_a: FYPO:0000282 ! viable cell at high temperature
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: FYPO:0000047 ! normal cell population growth
@@ -8964,7 +8966,7 @@ creation_date: 2011-11-29T05:16:27Z
 id: FYPO:0000678
 name: chromosome nondisjunction at meiosis I
 def: "A cellular process phenotype in which homologous chromosomes fail to segregate properly, or disjoin, during meiosis I." [PomBase:mah]
-is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
+is_a: FYPO:0000925 ! unequal meiotic chromosome segregation
 intersection_of: PATO:0001558
 intersection_of: towards GO:0045143
 created_by: midori
@@ -14090,7 +14092,6 @@ synonym: "essential; germinating spore, single or double cell division" RELATED 
 synonym: "inviable following spore germination, single or double cell division" EXACT [PomBase:mah]
 synonym: "inviable germinating spore, single or double cell division" RELATED [PomBase:mah]
 is_a: FYPO:0000316 ! inviable after spore germination
-is_a: FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2012-05-09T05:12:57Z
 
@@ -14928,7 +14929,7 @@ creation_date: 2012-06-01T14:37:39Z
 [Term]
 id: FYPO:0001099
 name: normal cell population growth on CCCP
-def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing CCCP (carbonyl cyanide m-chlorophenyl hydrazone." [PomBase:mah]
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing carbonyl cyanide m-chlorophenyl hydrazone (CCCP)." [PomBase:mah]
 synonym: "normal cell population growth in presence of CCCP" EXACT [PomBase:mah]
 synonym: "normal cell population growth on carbonyl cyanide m-chlorophenyl hydrazone" EXACT [CHEBI:3259]
 synonym: "normal cellular response to CCCP" RELATED [PomBase:al, PomBase:mah]
@@ -16783,13 +16784,12 @@ creation_date: 2012-07-16T13:59:40Z
 
 [Term]
 id: FYPO:0001234
-name: slow cell population growth
-def: "A cell population phenotype in which cell population growth is slower than normal." [PomBase:mah]
+name: slow vegetative cell population growth
+def: "A cell population phenotype in which vegetative cell population growth is slower than normal." [PomBase:mah]
 comment: Use this term when growth rate, e.g. as measured by population doubling time, is reduced. Note that with growth on plates, growth rate can be difficult to assess, so it may be better to use 'decreased cell growth' (FYPO:0000046). Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
-synonym: "decreased cell population growth rate" EXACT [PomBase:mah]
+synonym: "decreased vegetative cell population growth rate" EXACT [PomBase:mah]
 synonym: "growth defect, slow growth" BROAD [PomBase:mah]
-synonym: "reduced cell population growth rate" EXACT [PomBase:mah]
-synonym: "slow vegetative cell population growth" EXACT [PomBase:mah]
+synonym: "reduced vegetative cell population growth rate" EXACT [PomBase:mah]
 is_a: FYPO:0001356 ! abnormal vegetative cell population growth
 intersection_of: PATO:0000911
 intersection_of: inheres_in GO:0072690
@@ -19501,7 +19501,6 @@ comment: The distinction between this phenotype and dumbbell-shaped cells (FYPO:
 is_a: FYPO:0000017 ! elongated cell
 is_a: FYPO:0000025 ! swollen cell
 intersection_of: FYPO:0000136 ! cellular structure phenotype
-intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
 created_by: midori
@@ -19853,7 +19852,7 @@ name: normal cell population growth during cellular response to freezing
 def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to freezing conditions." [PomBase:mah]
 synonym: "normal cellular response to freeze-thawing" RELATED [PomBase:al]
 synonym: "normal cellular response to freezing" RELATED [PomBase:mah]
-synonym: "normal vegetavite cell population growth during cellular response to freezing" EXACT [PomBase:mah]
+synonym: "normal vegetative cell population growth during cellular response to freezing" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: happens_during GO:0071497
@@ -25912,7 +25911,7 @@ creation_date: 2013-01-30T11:47:20Z
 [Term]
 id: FYPO:0001877
 name: thin viable vegetative cell
-def: "A cell morphology phenotype in which avegetatively growing cell is viable but has an abnormally low thickness or diameter." [PomBase:mah]
+def: "A cell morphology phenotype in which a vegetatively growing cell is viable but has an abnormally low thickness or diameter." [PomBase:mah]
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
 synonym: "thin viable cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001491 ! viable vegetative cell
@@ -27432,10 +27431,10 @@ creation_date: 2013-02-13T17:07:12Z
 
 [Term]
 id: FYPO:0001988
-name: normal growth at high pH
+name: normal cell population growth at high pH
 def: "A cell population growth phenotype in which vegetative cells grow normally at a pH higher than that of standard S. pombe growth medium (abut 5.8)." [PomBase:mah]
-synonym: "normal at high pH" BROAD [PomBase:mah]
-synonym: "normal vegetative growth at high pH" EXACT [PomBase:mah]
+synonym: "normal growth at high pH" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth at high pH" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
 creation_date: 2013-02-13T17:11:42Z
@@ -27453,10 +27452,10 @@ creation_date: 2013-02-13T17:18:14Z
 
 [Term]
 id: FYPO:0001990
-name: normal growth at low pH
+name: normal cell population growth at low pH
 def: "A cell population growth phenotype in which vegetative cells grow normally at a pH lower than that of standard S. pombe growth medium (abut 5.8)." [PomBase:mah]
-synonym: "normal at low pH" BROAD [PomBase:mah]
-synonym: "normal vegetative growth at low pH" EXACT [PomBase:mah]
+synonym: "normal growth at low pH" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth at low pH" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
 creation_date: 2013-02-13T17:20:01Z
@@ -28432,7 +28431,6 @@ def: "A cellular process phenotype in which the growth of a cell is normal. Cell
 comment: Note that this term refers to growth at the level of any individual cell, and that it specifies only that increase in cell size due to metabolism is normal. Other aspects of the cell's biology may be abnormal, and other abnormalities may affect increase in cell number (population growth). Also see 'cell population growth phenotype' (FYPO:0000139) and its descendants.
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
-intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0016049
 intersection_of: qualifier PATO:0000461
 created_by: midori
@@ -28493,7 +28491,7 @@ creation_date: 2013-04-17T14:42:57Z
 id: FYPO:0002067
 name: slow cell population growth during recovery from stationary phase
 def: "A cell population phenotype in which a cell population grows more slowly than normal when the population has been in stationary phase and is then placed in conditions that allow recovery." [PomBase:mah]
-is_a: FYPO:0001234 ! slow cell population growth
+is_a: FYPO:0001234 ! slow vegetative cell population growth
 created_by: midori
 creation_date: 2013-04-17T15:03:47Z
 
@@ -28697,6 +28695,221 @@ intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:29108
 created_by: midori
 creation_date: 2013-04-24T14:59:06Z
+
+[Term]
+id: FYPO:0002080
+name: sensitive to TPCK
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to N-tosyl-L-phenylalanyl chloromethyl ketone (TPCK). Cells stop growing (and may die) at a concentration of TPCK that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to TPCK" EXACT [PomBase:mah]
+synonym: "sensitive to N-tosyl-L-phenylalanyl chloromethyl ketone" EXACT [CHEBI:9642, PomBase:mah]
+synonym: "sensitive to TPCK during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001695 ! sensitive to protease inhibitor
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:9642
+created_by: midori
+creation_date: 2013-05-01T15:43:45Z
+
+[Term]
+id: FYPO:0002081
+name: normal cell population growth on TPCK
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing N-tosyl-L-phenylalanyl chloromethyl ketone (TPCK)." [PomBase:mah]
+synonym: "normal cell population growth in presence of TPCK" EXACT [PomBase:mah]
+synonym: "normal cell population growth on N-tosyl-L-phenylalanyl chloromethyl ketone" EXACT [CHEBI:9642]
+synonym: "normal cellular response to TPCK" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on TPCK" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on TPCK" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:9642
+created_by: midori
+creation_date: 2013-05-01T15:45:35Z
+
+[Term]
+id: FYPO:0002082
+name: increased protein ubiquitination
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein ubiquitination is increased." [PomBase:mah]
+synonym: "increased protein ubiquitination during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein ubiquitinylation" EXACT [GO:0016567, PomBase:mah]
+synonym: "increased protein ubiquitylation" EXACT [GO:0016567, PomBase:mah]
+is_a: FYPO:0000905 ! abnormal protein ubiquitination
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0016567
+created_by: midori
+creation_date: 2013-05-01T15:54:55Z
+
+[Term]
+id: FYPO:0002083
+name: swollen elongated cell with enlarged nucleus
+def: "A cell morphology phenotype in which a cell has a larger volume, and is longer, than normal, and in which the nucleus is larger than normal." [PMID:19074598, PomBase:mah]
+comment: The distinction between this phenotype and dumbbell-shaped cells (FYPO:0000779) is that swollen elongated cells do not have a constriction along the long axis. Swollen elongated cells may have a uniform diameter, or may be swollen only around the nucleus.
+is_a: FYPO:0000344 ! enlarged nucleus
+is_a: FYPO:0001429 ! swollen elongated cell
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0000344 ! enlarged nucleus
+created_by: midori
+creation_date: 2013-05-01T16:06:42Z
+
+[Term]
+id: FYPO:0002084
+name: swollen stubby cell
+def: "A cell morphology phenotype in which a cell has a larger volume and cell diameter, but shorter cell length, than normal." [PomBase:mah]
+comment: The distinction between this phenotype and dumbbell-shaped cells (FYPO:0000779) is that swollen elongated cells do not have a constriction along the long axis. Swollen elongated cells may have a uniform diameter, or may be swollen only around the nucleus.
+is_a: FYPO:0000024 ! stubby cell
+is_a: FYPO:0000025 ! swollen cell
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000024 ! stubby cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+created_by: midori
+creation_date: 2013-05-01T16:10:39Z
+
+[Term]
+id: FYPO:0002085
+name: normal vegetative cell growth
+def: "A cellular process phenotype in which the growth of a cell is normal in the vegetative growth phase of the life cycle. Cell growth is the process in which a cell irreversibly increases in size over time by accretion and biosynthetic production of matter similar to that already present." [GO:0016049, PomBase:mah]
+comment: Note that this term refers to growth at the level of any individual cell, and that it specifies only that increase in cell size due to metabolism is normal. Other aspects of the cell's biology may be abnormal, and other abnormalities may affect increase in cell number (population growth). Also see 'cell population growth phenotype' (FYPO:0000139) and its descendants.
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+is_a: FYPO:0002062 ! normal cell growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-05-01T16:24:01Z
+
+[Term]
+id: FYPO:0002086
+name: exocytic vesicles present in greater numbers
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells contain more exocytic vesicles than normal." [PomBase:mah]
+synonym: "accumulation of exocytic vesicles" RELATED [PomBase:vw]
+synonym: "additional exocytic vesicles present" EXACT [PomBase:mah]
+synonym: "exocytic vesicles present in greater numbers during vegetative growth" EXACT [PomBase:mah]
+synonym: "exocytotic vesicles present in greater numbers" EXACT [GO:0070382]
+synonym: "extra exocytic vesicles" EXACT [PomBase:mah]
+synonym: "post-Golgi secretory vesicles present in greater numbers" RELATED [PomBase:vw]
+is_a: FYPO:0001322 ! abnormal subcellular structure during vegetative growth
+intersection_of: PATO:0000470
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0070382
+relationship: output_of FYPO:0002089 ! abnormal exocytosis
+created_by: midori
+creation_date: 2013-05-01T16:39:50Z
+
+[Term]
+id: FYPO:0002087
+name: exocytic vesicles present in greater numbers at cell tip during cell growth
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells contain more exocytic vesicles at one or both cell tips than normal when the cell is growing." [PomBase:mah]
+synonym: "accumulation of exocytic vesicles at cell tip during cell growth" RELATED [PomBase:vw]
+synonym: "additional exocytic vesicles present at cell tip during cell growth" EXACT [PomBase:mah]
+synonym: "exocytic vesicles present in greater numbers during vegetative growth at cell tip during cell growth" EXACT [PomBase:mah]
+synonym: "exocytotic vesicles present in greater numbers at cell tip during cell growth" EXACT [GO:0070382]
+synonym: "extra exocytic vesicles at cell tip during cell growth" EXACT [PomBase:mah]
+synonym: "post-Golgi secretory vesicles present in greater numbers at cell tip during cell growth" RELATED [PomBase:vw]
+is_a: FYPO:0002086 ! exocytic vesicles present in greater numbers
+intersection_of: PATO:0000470
+intersection_of: exists_during GO:0016049
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0070382
+intersection_of: part_of GO:0035838
+created_by: midori
+creation_date: 2013-05-01T16:43:15Z
+
+[Term]
+id: FYPO:0002088
+name: exocytic vesicles present in greater numbers at barrier septum during septation
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which cells contain more exocytic vesicles than normal near the barrier septum while the cell is undergoing septation." [PomBase:mah]
+synonym: "accumulation of exocytic vesicles at barrier septum during septation" RELATED [PomBase:vw]
+synonym: "additional exocytic vesicles present at barrier septum during septation" EXACT [PomBase:mah]
+synonym: "exocytic vesicles present in greater numbers at barrier septum during septation during vegetative growth" EXACT [PomBase:mah]
+synonym: "exocytotic vesicles present in greater numbers at barrier septum during septation" EXACT [GO:0070382]
+synonym: "extra exocytic vesicles at barrier septum during septation" EXACT [PomBase:mah]
+synonym: "post-Golgi secretory vesicles present in greater numbers at barrier septum during septation" RELATED [PomBase:vw]
+is_a: FYPO:0002086 ! exocytic vesicles present in greater numbers
+intersection_of: PATO:0000470
+intersection_of: exists_during GO:0000917
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0070382
+intersection_of: part_of GO:0000935
+created_by: midori
+creation_date: 2013-05-01T16:44:51Z
+
+[Term]
+id: FYPO:0002089
+name: abnormal exocytosis
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which exocytosis is abnormal. Exocytosis is the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle by fusion of the vesicle with the plasma membrane of a cell." [GO:0006897, PomBase:mah]
+synonym: "abnormal exocytosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "exocytosis defects" EXACT [PomBase:vw]
+is_a: FYPO:0000213 ! abnormal vesicle-mediated transport
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006887
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-05-01T16:47:54Z
+
+[Term]
+id: FYPO:0002090
+name: lagging chromosomes
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which homologous chromosomes or sister chromatids do not move towards the spindle poles at the same time during nuclear division, but instead one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has separated. Segregation stops before completing separation of chromosomes." [PomBase:mah]
+synonym: "chromosome segregation defects, lagging chromosomes" EXACT [PomBase:mah]
+is_a: FYPO:0000029 ! abnormal chromosome segregation
+created_by: midori
+creation_date: 2013-05-01T16:58:26Z
+
+[Term]
+id: FYPO:0002091
+name: lagging meiotic chromosomes
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which homologous chromosomes or sister chromatids do not move towards the spindle poles at the same time during meiosis I or meiosis II, but instead one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has separated. Segregation stops before completing separation of chromosomes." [PomBase:mah]
+synonym: "chromosome segregation defects, lagging meiotic chromosomes" EXACT [PomBase:mah]
+synonym: "lagging chromosomes during meiosis" EXACT [PomBase:mah]
+synonym: "meiotic chromosome segregation defects, lagging chromosomes" EXACT [PomBase:mah]
+is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
+is_a: FYPO:0002090 ! lagging chromosomes
+created_by: midori
+creation_date: 2013-05-01T16:59:42Z
+
+[Term]
+id: FYPO:0002092
+name: abnormal meiotic sister chromatid cohesion
+def: "A cellular process phenotype in which cohesion between sister chromatids is abnormal during meiosis." [PomBase:mah]
+synonym: "abnormal sister chromatid cohesion during meiosis" EXACT [PomBase:mah]
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051177
+intersection_of: qualifier PATO:0000460
+relationship: part_of FYPO:0000151 ! abnormal meiotic chromosome segregation
+created_by: midori
+creation_date: 2013-05-01T17:08:24Z
+
+[Term]
+id: FYPO:0002093
+name: decreased meiotic sister chromatid cohesion
+def: "A cellular process phenotype in which cohesion between sister chromatids is decreased during meiosis." [PomBase:mah]
+synonym: "abnormal sister chromatid cohesion during meiosis" EXACT [PomBase:mah]
+synonym: "reduced meiotic sister chromatid cohesion" EXACT [PomBase:mah]
+is_a: FYPO:0002092 ! abnormal meiotic sister chromatid cohesion
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0051177
+created_by: midori
+creation_date: 2013-05-01T17:09:24Z
+
+[Term]
+id: FYPO:0002094
+name: normal meiotic sister chromatid cohesion
+def: "A cellular process phenotype in which cohesion between sister chromatids is normal (i.e. indistinguishable from wild type) during meiosis." [PomBase:mah]
+synonym: "normal sister chromatid cohesion during meiosis" EXACT [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051177
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-05-01T17:12:15Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
