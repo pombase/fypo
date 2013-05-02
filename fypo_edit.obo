@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 01:05:2013 17:28
+date: 02:05:2013 14:35
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -71,12 +71,13 @@ id: FYPO:0000006
 name: abnormal DNA damage checkpoint
 def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is abnormal. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage. In a mutant, the checkpoint may fail to activate under appropriate conditions, or may occur to a greater or lesser extent than wild type under any specified set of conditions." [PomBase:mah]
 synonym: "abnormal DNA damage checkpoint activation" EXACT [PomBase:mah]
+synonym: "abnormal DNA damage checkpoint during cellular response to DNA damage" EXACT [PomBase:al]
 synonym: "abnormal DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 synonym: "DNA damage checkpoint defects" EXACT [PomBase:mah]
 is_a: FYPO:0000157 ! abnormal response to DNA damage stimulus
 is_a: FYPO:0000643 ! abnormal DNA integrity checkpoint
 intersection_of: PATO:0000001
-intersection_of: exists_during GO:0072690
+intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0000077
 intersection_of: qualifier PATO:0000460
 created_by: midori
@@ -93,7 +94,7 @@ synonym: "abnormal S-phase DNA damage checkpoint during vegetative growth" EXACT
 synonym: "DNA damage checkpoint defects, S-phase" EXACT [PomBase:mah]
 is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
 intersection_of: PATO:0000001
-intersection_of: exists_during GO:0072690
+intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0031573
 intersection_of: qualifier PATO:0000460
 created_by: midori
@@ -3663,7 +3664,7 @@ synonym: "spindle checkpoint activated" RELATED [PomBase:mah]
 is_a: FYPO:0000607 ! abnormal mitotic M phase progression
 is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
 intersection_of: PATO:0000498
-intersection_of: happens_during GO:0072690
+intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0000087
 intersection_of: inheres_in GO:0007091
 created_by: midori
@@ -23520,7 +23521,7 @@ synonym: "normal cell cycle checkpoint activation" EXACT [PomBase:mah]
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
-intersection_of: exists_during GO:0072690
+intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0000075
 intersection_of: qualifier PATO:0000461
 created_by: midori
@@ -23534,7 +23535,7 @@ synonym: "abnormal cell cycle checkpoint activation" EXACT [PomBase:mah]
 is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
 intersection_of: PATO:0000001
-intersection_of: exists_during GO:0072690
+intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0000075
 intersection_of: qualifier PATO:0000460
 created_by: midori
@@ -23546,10 +23547,11 @@ name: normal DNA damage checkpoint
 def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
 synonym: "normal DNA damage checkpoint activation" EXACT [PomBase:mah]
 synonym: "normal DNA damage checkpoint activation under non-stressed conditions" NARROW [PomBase:al]
+synonym: "normal DNA damage checkpoint during cellular response to DNA damage" EXACT [PomBase:al]
 synonym: "normal DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001703 ! normal cell cycle checkpoint
 intersection_of: PATO:0000001
-intersection_of: exists_during GO:0072690
+intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0000077
 intersection_of: qualifier PATO:0000461
 created_by: midori
@@ -23565,6 +23567,11 @@ synonym: "normal DNA damage checkpoint during cellular response to ionizing radi
 synonym: "normal DNA damage checkpoint during gamma irradiation" NARROW [PomBase:al]
 is_a: FYPO:0001705 ! normal DNA damage checkpoint
 is_a: FYPO:0001927 ! normal cell cycle regulation during cellular response to ionizing radiation
+intersection_of: PATO:0000001
+intersection_of: during GO:0071479
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0000077
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-11-07T16:41:15Z
 
@@ -25448,6 +25455,9 @@ def: "A phenotype observed in the vegetative growth phase of the life cycle in w
 synonym: "hypersensitive to rhizoxin" EXACT [PomBase:mah]
 synonym: "sensitive to rhizoxin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:72590
 created_by: midori
 creation_date: 2012-12-13T12:08:25Z
 
@@ -25458,6 +25468,9 @@ def: "A phenotype observed in the vegetative growth phase of the life cycle in w
 synonym: "hypersensitive to ansamitocin P-3" EXACT [PomBase:mah]
 synonym: "sensitive to ansamitocin P-3 during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:29515
 created_by: midori
 creation_date: 2012-12-13T12:20:43Z
 
@@ -27158,6 +27171,9 @@ def: "An increased chemical resistance phenotype observed in the vegetative grow
 synonym: "resistance to papulacandin D during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to papulacandin D" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:72630
 created_by: midori
 creation_date: 2013-02-07T14:40:48Z
 
@@ -27317,6 +27333,10 @@ synonym: "increased lariat intron level" EXACT [PomBase:mah]
 synonym: "increased level of lariat introns" EXACT [PomBase:vw]
 synonym: "lariat intron accumulation" EXACT [PomBase:vw]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0002270
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in CL:0000000
+intersection_of: towards SO:0001958
 created_by: midori
 creation_date: 2013-02-13T14:38:24Z
 
@@ -28910,6 +28930,124 @@ intersection_of: inheres_in GO:0051177
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2013-05-01T17:12:15Z
+
+[Term]
+id: FYPO:0002095
+name: increased protein phosphorylation during cellular response to DNA damage
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins occurs to a greater extent than normal during a cellular response to a DNA damage stimulus." [PomBase:mah]
+synonym: "increased protein phosphorylation during cellular response to DNA damage during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein phosphorylation during cellular response to DNA damaging agent" RELATED [PomBase:al]
+synonym: "increased protein phosphorylation during response to DNA damage stimulus" EXACT [GO:0006974]
+is_a: FYPO:0001038 ! increased protein phosphorylation
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0006974
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2013-05-02T11:57:21Z
+
+[Term]
+id: FYPO:0002096
+name: increased protein phosphorylation during cellular response to hydroxyurea
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins occurs to a greater extent than normal during a cellular response to hydroxyurea." [PomBase:mah]
+comment: Also consider annotating to 'increased protein phosphorylation during cellular response to DNA damage' (FYPO:0002095).
+synonym: "increased protein phosphorylation during cellular response to HU" EXACT [PomBase:mah]
+synonym: "increased protein phosphorylation during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001038 ! increased protein phosphorylation
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0072711
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2013-05-02T12:12:21Z
+
+[Term]
+id: FYPO:0002097
+name: decreased protein kinase activity during cellular response to hydroxyurea
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is decreased during a cellular response to hydroxyurea." [PomBase:mah]
+synonym: "decreased protein kinase activity during cellular response to HU" EXACT [PomBase:mah]
+synonym: "reduced protein kinase activity during cellular response to HU" EXACT [PomBase:mah]
+synonym: "reduced protein kinase activity during cellular response to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0001382 ! decreased protein kinase activity
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072711
+intersection_of: inheres_in GO:0004672
+created_by: midori
+creation_date: 2013-05-02T12:21:11Z
+
+[Term]
+id: FYPO:0002098
+name: decreased protein phosphorylation during cellular response to hydroxyurea
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins occurs to a lower extent than normal during a cellular response to hydroxyurea." [PomBase:mah]
+comment: Also consider annotating to 'increased protein phosphorylation during cellular response to DNA damage' (FYPO:0002095).
+synonym: "decreased protein phosphorylation during cellular response to HU" EXACT [PomBase:mah]
+synonym: "decreased protein phosphorylation during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein phosphorylation during cellular response to HU" EXACT [PomBase:mah]
+synonym: "reduced protein phosphorylation during cellular response to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0001838 ! decreased protein phosphorylation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0072711
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2013-05-02T12:23:07Z
+
+[Term]
+id: FYPO:0002099
+name: normal protein phosphorylation during cellular response to hydroxyurea
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins is normal during a cellular response to hydroxyurea." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "normal protein phosphorylation during cellular response to HU" EXACT [PomBase:mah]
+synonym: "normal protein phosphorylation during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000776 ! normal protein phosphorylation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0072711
+intersection_of: inheres_in GO:0006468
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-05-02T12:25:08Z
+
+[Term]
+id: FYPO:0002100
+name: abnormal ATP-dependent 3'-5' DNA helicase activity
+def: "A molecular function phenotype in which the observed rate of anATP-dependent 3'-5' DNA helicase activity activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0043140
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-05-02T12:39:58Z
+
+[Term]
+id: FYPO:0002101
+name: abolished ATP-dependent 3'-5' DNA helicase activity
+def: "A molecular function phenotype in which an ATP-dependent 3'-5' DNA helicase activity is absent." [PomBase:mah]
+synonym: "ATP-dependent 3'-5' DNA helicase activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0002100 ! abnormal ATP-dependent 3'-5' DNA helicase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0043140
+created_by: midori
+creation_date: 2013-05-02T12:40:04Z
+
+[Term]
+id: FYPO:0002102
+name: normal DNA damage checkpoint during cellular response to UV
+def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal when the cell is exposed to ultraviolet light. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
+synonym: "normal DNA damage checkpoint activation during cellular response to UV" EXACT [PomBase:al]
+synonym: "normal DNA damage checkpoint during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal DNA damage checkpoint during cellular response to ultraviolet light" EXACT [PomBase:mah]
+synonym: "normal DNA damage checkpoint during gamma irradiation" NARROW [PomBase:al]
+is_a: FYPO:0001705 ! normal DNA damage checkpoint
+is_a: FYPO:0001927 ! normal cell cycle regulation during cellular response to ionizing radiation
+intersection_of: PATO:0000001
+intersection_of: during GO:0034644
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0000077
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-05-02T13:15:58Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
