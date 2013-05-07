@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:05:2013 14:35
+date: 07:05:2013 17:13
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -163,26 +163,37 @@ id: FYPO:0000012
 name: mitotic G2/M transition delay
 alt_id: FYPO:0000205
 alt_id: FYPO:0000401
+alt_id: FYPO:0000604
+alt_id: FYPO:0000605
 alt_id: FYPO:0000606
 alt_id: FYPO:0000971
 def: "A cell cycle phenotype in which the G2/M transition of the mitotic cell cycle takes place later than normal. The duration of G2 phase is thus longer than normal." [PomBase:mah]
 comment: A G2/M delay may indicate that a checkpoint, such as the DNA replication checkpoint or the G2/M DNA damage checkpoint, is activated. Checkpoint activation can be tested using checkpoint kinase mutants.
 synonym: "cell cycle progression through the G2/M phase transition: delayed" EXACT [SGD:phenotype_annotation]
-synonym: "cell cycle, G2 delay" EXACT [PomBase:mah]
+synonym: "cell cycle, mitotic G2 delay" RELATED [PomBase:mah]
+synonym: "decreased rate of mitotic G2 phase progression" RELATED [PomBase:mah]
 synonym: "delayed cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
+synonym: "delayed mitotic G2 phase progression" RELATED [PomBase:mah]
 synonym: "DNA replication arrest" RELATED [PomBase:vw]
 synonym: "DNA replication checkpoint activated" RELATED [PomBase:mah]
-synonym: "G2 delay" EXACT [PomBase:mah]
 synonym: "G2/M transition DNA damage checkpoint activated" RELATED [PomBase:mah]
 synonym: "increased duration of mitotic G2 phase" EXACT [PomBase:mah]
-synonym: "increased G2 duration" EXACT [PomBase:mah]
+synonym: "increased duration of mitotic G2 phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased mitotic G2 duration" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle delay at G2/M transition" EXACT [PomBase:mah]
+synonym: "mitotic cell cycle progression in G2 phase: decreased rate" RELATED [SGD:phenotype_annotation]
+synonym: "mitotic cell cycle progression in G2 phase: delayed" RELATED [SGD:phenotype_annotation]
 synonym: "mitotic cell cycle progression in G2 phase: increased duration" EXACT [SGD:phenotype_annotation]
+synonym: "mitotic G2 delay" RELATED [PomBase:mah]
 synonym: "mitotic G2/M transition delay during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced rate of mitotic G2 phase progression" RELATED [PomBase:mah]
 is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
 is_a: FYPO:0000409 ! delayed cell cycle phase transition
+is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
+is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000085
 intersection_of: inheres_in GO:0000086
 intersection_of: qualifier PATO:0001542
 created_by: midori
@@ -235,7 +246,7 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000016
 name: curved cell
-def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which cells are curved along the long axis. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is curved along the long axis. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
 synonym: "bent cell" EXACT [PomBase:mah]
 synonym: "cell morphology, curved" EXACT [PomBase:mah]
 synonym: "comma-shaped cell" EXACT [PomBase:vw]
@@ -4368,16 +4379,28 @@ creation_date: 2011-05-11T03:43:21Z
 id: FYPO:0000333
 name: mitotic G1/S transition delay
 alt_id: FYPO:0000396
-def: "A cell cycle phenotype in which the G1/S transition of the mitotic cell cycle takes place later than normal." [PomBase:mah]
+alt_id: FYPO:0000480
+alt_id: FYPO:0000543
+def: "A cell cycle phenotype in which the G1/S transition of the mitotic cell cycle takes place later than normal. The duration of G1 phase is thus longer than normal." [PomBase:mah]
 comment: A G1/S delay may indicate that a checkpoint, such as the cell size checkpoint or the G1/S DNA damage checkpoint, is activated. Checkpoint activation can be tested using checkpoint kinase mutants.
 synonym: "cell cycle progression through the G1/S phase transition: delayed" EXACT [SGD:phenotype_annotation]
 synonym: "delayed cell cycle progression through mitotic G1/S phase transition" EXACT [PomBase:mah]
+synonym: "delayed mitotic G1 phase progression" RELATED [PomBase:mah]
+synonym: "increased duration of mitotic G1 phase" EXACT [PomBase:mah]
+synonym: "increased duration of mitotic G1 phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased duration of mitotic G1 phase progression" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle delay at G1/S transition" EXACT [PomBase:mah]
+synonym: "mitotic cell cycle delay in G1" RELATED [PomBase:mah]
+synonym: "mitotic cell cycle progression in G1 phase: delayed" RELATED [SGD:phenotype_annotation]
+synonym: "mitotic cell cycle progression in G1 phase: increased duration" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic G1/S transition delay during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
 is_a: FYPO:0000409 ! delayed cell cycle phase transition
+is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
+is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000080
 intersection_of: inheres_in GO:0000082
 intersection_of: qualifier PATO:0001542
 created_by: midori
@@ -7127,25 +7150,6 @@ created_by: midori
 creation_date: 2011-08-15T11:08:30Z
 
 [Term]
-id: FYPO:0000543
-name: increased duration of mitotic G1 phase
-alt_id: FYPO:0000480
-def: "A cellular process phenotype in which the duration of progression through the G1 phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
-synonym: "delayed mitotic G1 phase progression" RELATED [PomBase:mah]
-synonym: "increased duration of mitotic G1 phase during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased duration of mitotic G1 phase progression" EXACT [PomBase:mah]
-synonym: "mitotic cell cycle delay in G1" RELATED [PomBase:mah]
-synonym: "mitotic cell cycle progression in G1 phase: delayed" RELATED [SGD:phenotype_annotation]
-synonym: "mitotic cell cycle progression in G1 phase: increased duration" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
-is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
-intersection_of: PATO:0000498
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000080
-created_by: midori
-creation_date: 2011-08-16T10:03:01Z
-
-[Term]
 id: FYPO:0000544
 name: abolished protein modification
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein modification does not occur." [PomBase:mah]
@@ -8012,25 +8016,6 @@ intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000080
 created_by: midori
 creation_date: 2011-08-15T12:00:20Z
-
-[Term]
-id: FYPO:0000605
-name: increased duration of mitotic G2 phase
-alt_id: FYPO:0000604
-def: "A cellular process phenotype in which the duration of progression through the G2 phase of the mitotic cell cycle is longer than normal." [PomBase:mah]
-synonym: "decreased rate of mitotic G2 phase progression" RELATED [PomBase:mah]
-synonym: "delayed mitotic G2 phase progression" RELATED [PomBase:mah]
-synonym: "increased duration of mitotic G2 phase during vegetative growth" EXACT [PomBase:mah]
-synonym: "mitotic cell cycle progression in G2 phase: decreased rate" EXACT [SGD:phenotype_annotation]
-synonym: "mitotic cell cycle progression in G2 phase: delayed" RELATED [SGD:phenotype_annotation]
-synonym: "reduced rate of mitotic G2 phase progression" RELATED [PomBase:mah]
-is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
-is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
-intersection_of: PATO:0000498
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000085
-created_by: midori
-creation_date: 2011-08-16T10:03:01Z
 
 [Term]
 id: FYPO:0000607
@@ -23642,7 +23627,6 @@ synonym: "coenzyme Q10 absent from cell during vegetative growth" EXACT [PomBase
 synonym: "ubiquinone 10 absent from cell" EXACT [CHEBI:46245]
 synonym: "UQ-10 absent from cell" EXACT [PomBase:al]
 is_a: FYPO:0001208 ! substance absent from cell during vegetative growth
-is_a: FYPO:0001289 ! decreased phospholipid level
 intersection_of: PATO:0002000
 intersection_of: during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -23821,7 +23805,6 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "ferrichrome absent from cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "siderophore absent from cell" BROAD [PomBase:al]
 is_a: FYPO:0001208 ! substance absent from cell during vegetative growth
-is_a: FYPO:0001289 ! decreased phospholipid level
 intersection_of: PATO:0002000
 intersection_of: during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -28318,7 +28301,7 @@ creation_date: 2013-03-14T16:40:20Z
 [Term]
 id: FYPO:0002051
 name: swollen elongated multinucleate aseptate vegetative cell
-def: "A cell morphology phenotype in which vegetative a cell is swollen, longer than normal, has no septum, and contains more than one nucleus." [PomBase:mah]
+def: "A cell morphology phenotype in which a vegetative cell is swollen, longer than normal, has no septum, and contains more than one nucleus." [PomBase:mah]
 synonym: "swollen elongated multinucleate aseptate cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000646 ! swollen vegetative cell
 is_a: FYPO:0001512 ! branched, elongated cell
@@ -28764,22 +28747,29 @@ creation_date: 2013-05-01T15:54:55Z
 [Term]
 id: FYPO:0002083
 name: swollen elongated cell with enlarged nucleus
-def: "A cell morphology phenotype in which a cell has a larger volume, and is longer, than normal, and in which the nucleus is larger than normal." [PMID:19074598, PomBase:mah]
+def: "A cell morphology phenotype in which a vegetative cell is inviable, has a larger volume, and is longer, than normal, and in which the nucleus is larger than normal." [PMID:19074598, PomBase:mah]
 comment: The distinction between this phenotype and dumbbell-shaped cells (FYPO:0000779) is that swollen elongated cells do not have a constriction along the long axis. Swollen elongated cells may have a uniform diameter, or may be swollen only around the nucleus.
+synonym: "inviable swollen elongated cell with enlarged nucleus" EXACT [PomBase:mah]
+synonym: "inviable swollen elongated vegetative cell with enlarged nucleus" EXACT [PomBase:mah]
+synonym: "swollen elongated vegetative cell with enlarged nucleus" EXACT [PomBase:mah]
 is_a: FYPO:0000344 ! enlarged nucleus
+is_a: FYPO:0000646 ! swollen vegetative cell
 is_a: FYPO:0001429 ! swollen elongated cell
+is_a: FYPO:0001489 ! inviable vegetative cell
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
 intersection_of: has_part FYPO:0000344 ! enlarged nucleus
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2013-05-01T16:06:42Z
 
 [Term]
 id: FYPO:0002084
 name: swollen stubby cell
-def: "A cell morphology phenotype in which a cell has a larger volume and cell diameter, but shorter cell length, than normal." [PomBase:mah]
+def: "A cell morphology phenotype in which a vegetative cell has a larger volume and cell diameter, but shorter cell length, than normal." [PomBase:mah]
 comment: The distinction between this phenotype and dumbbell-shaped cells (FYPO:0000779) is that swollen elongated cells do not have a constriction along the long axis. Swollen elongated cells may have a uniform diameter, or may be swollen only around the nucleus.
+synonym: "swollen stubby vegetative cell" RELATED [PomBase:mah]
 is_a: FYPO:0000024 ! stubby cell
 is_a: FYPO:0000025 ! swollen cell
 intersection_of: FYPO:0000136 ! cellular structure phenotype
@@ -29048,6 +29038,522 @@ intersection_of: inheres_in GO:0000077
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2013-05-02T13:15:58Z
+
+[Term]
+id: FYPO:0002103
+name: swollen mononucleate monoseptate cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has one nucleus and one septum, and is swollen and inviable." [PomBase:mah]
+synonym: "inviable swollen mononucleate monoseptate cell" EXACT [PomBase:mah]
+synonym: "inviable swollen mononucleate monoseptate vegetative cell" EXACT [PomBase:mah]
+synonym: "mononucleate monoseptate cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000646 ! swollen vegetative cell
+is_a: FYPO:0001225 ! monoseptate
+is_a: FYPO:0002000 ! septated mononucleate cell
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0001225
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2013-05-07T12:15:31Z
+
+[Term]
+id: FYPO:0002104
+name: viable cell with normal cell shape
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has a normal shape and is viable." [PomBase:mah]
+synonym: "viable vegetative cell with normal cell shape" EXACT [PomBase:mah]
+is_a: FYPO:0001125 ! normal cell shape
+intersection_of: PATO:0000052
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: has_part FYPO:0001491 ! viable vegetative cell
+relationship: has_part FYPO:0001491 ! viable vegetative cell
+created_by: midori
+creation_date: 2013-05-07T12:22:30Z
+
+[Term]
+id: FYPO:0002105
+name: inviable cell with normal cell shape
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has a normal shape but is inviable." [PomBase:mah]
+synonym: "inviable vegetative cell with normal cell shape" EXACT [PomBase:mah]
+is_a: FYPO:0001125 ! normal cell shape
+intersection_of: PATO:0000052
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+relationship: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2013-05-07T12:27:52Z
+
+[Term]
+id: FYPO:0002106
+name: stubby viable cell
+def: "A cell morphology phenotype in which a vegetatively growing cell is viable, but the cell diameter is larger than normal and the cell length is shorter than normal." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
+synonym: "stubby viable cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "stubby viable vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0000024 ! stubby cell
+is_a: FYPO:0001491 ! viable vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000024 ! small cell
+intersection_of: has_part FYPO:0001491 ! viable vegetative cell
+created_by: midori
+creation_date: 2013-05-07T12:34:55Z
+
+[Term]
+id: FYPO:0002107
+name: stubby inviable cell
+def: "A cell morphology phenotype in which a vegetatively growing cell is viable, and the cell diameter is larger than normal and the cell length is shorter than normal." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "essential; stubby vegetative cell" RELATED [PomBase:mah]
+synonym: "stubby inviable cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "stubby inviable vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0000024 ! stubby cell
+is_a: FYPO:0001489 ! inviable vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000024 ! small cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2013-05-07T12:36:29Z
+
+[Term]
+id: FYPO:0002108
+name: bottle-shaped viable cell
+def: "A cell morphology phenotype in which a cell is viable, and tapers at one end to a diameter smaller than the other." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
+is_a: FYPO:0000014 ! bottle-shaped cell
+is_a: FYPO:0000124 ! viable cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000014
+intersection_of: has_part FYPO:0000124 ! viable vegetative cell
+created_by: midori
+creation_date: 2013-05-07T12:41:18Z
+
+[Term]
+id: FYPO:0002109
+name: bottle-shaped inviable cell
+def: "A cell morphology phenotype in which a cell is viable, and tapers at one end to a diameter smaller than the other." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "essential; bottle-shaped cell" RELATED [PomBase:mah]
+is_a: FYPO:0000014 ! bottle-shaped cell
+is_a: FYPO:0000049 ! inviable cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000014
+intersection_of: has_part FYPO:0000049
+created_by: midori
+creation_date: 2013-05-07T12:41:24Z
+
+[Term]
+id: FYPO:0002110
+name: bottle-shaped viable vegetative cell
+def: "A cell morphology phenotype in which a vegetatively growing cell is viable, and tapers at one end to a diameter smaller than the other." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
+synonym: "bottle-shaped viable cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001119 ! bottle-shaped cell during vegetative growth
+is_a: FYPO:0001491 ! viable vegetative cell
+is_a: FYPO:0002108 ! bottle-shaped viable cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000014
+intersection_of: has_part FYPO:0001491 ! viable vegetative cell
+created_by: midori
+creation_date: 2013-05-07T12:42:50Z
+
+[Term]
+id: FYPO:0002111
+name: bottle-shaped inviable vegetative cell
+def: "A cell morphology phenotype in which a vegetatively growing cell is viable, and tapers at one end to a diameter smaller than the other." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "bottle-shaped inviable cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "essential; bottle-shaped vegetative cell" RELATED [PomBase:mah]
+is_a: FYPO:0001119 ! bottle-shaped cell during vegetative growth
+is_a: FYPO:0001489 ! inviable vegetative cell
+is_a: FYPO:0002109 ! bottle-shaped inviable cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000014
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2013-05-07T12:43:02Z
+
+[Term]
+id: FYPO:0002112
+name: curved viable cell
+def: "A cell morphology phenotype in which a vegetatively growing cell is viable, and is curved along the long axis. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
+synonym: "curved viable cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "curved viable vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0000016 ! curved cell
+is_a: FYPO:0001491 ! viable vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000016
+intersection_of: has_part FYPO:0001491 ! viable vegetative cell
+created_by: midori
+creation_date: 2013-05-07T12:50:59Z
+
+[Term]
+id: FYPO:0002113
+name: curved inviable cell
+def: "A cell morphology phenotype in which a vegetatively growing cell is viable, and is curved along the long axis. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "curved inviable cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "essential; curved vegetative cell" RELATED [PomBase:mah]
+synonym: "stubby inviable vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0000016 ! curved cell
+is_a: FYPO:0001489 ! inviable vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000016
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2013-05-07T12:51:07Z
+
+[Term]
+id: FYPO:0002114
+name: transporter activity phenotype
+def: "A phenotype that affects a transporter activity." [PomBase:mah]
+subset: qc_do_not_annotate
+synonym: "fission yeast transporter activity phenotype" EXACT [PomBase:mah]
+is_a: FYPO:0000652 ! molecular function phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0005215
+created_by: midori
+creation_date: 2013-05-07T13:25:10Z
+
+[Term]
+id: FYPO:0002115
+name: normal transporter activity
+def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000706 ! normal molecular function
+is_a: FYPO:0002114 ! transporter activity phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0005215
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-05-07T13:26:31Z
+
+[Term]
+id: FYPO:0002116
+name: abnormal transporter activity
+def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is abnormal." [PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000707 ! abnormal molecular function
+is_a: FYPO:0002114 ! transporter activity phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0005215
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-05-07T13:27:14Z
+
+[Term]
+id: FYPO:0002117
+name: abolished transporter activity
+def: "A molecular function phenotype in which a specified transporter activity is absent." [PomBase:mah]
+subset: qc_do_not_manually_annotate
+synonym: "catalytic activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0002116 ! abnormal transporter activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0005215
+created_by: midori
+creation_date: 2013-05-07T13:27:44Z
+
+[Term]
+id: FYPO:0002118
+name: decreased transporter activity
+def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is decreased." [PomBase:mah]
+subset: qc_do_not_manually_annotate
+synonym: "reduced transporter activity" EXACT [PomBase:mah]
+is_a: FYPO:0002116 ! abnormal transporter activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0005215
+created_by: midori
+creation_date: 2013-05-07T13:28:05Z
+
+[Term]
+id: FYPO:0002119
+name: increased transporter activity
+def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is increased." [PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0002116 ! abnormal transporter activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0005215
+created_by: midori
+creation_date: 2013-05-07T13:28:21Z
+
+[Term]
+id: FYPO:0002120
+name: normal sodium:hydrogen antiporter activity
+def: "A molecular function phenotype in which the observed rate of sodium:hydrogen antiporter activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0002115 ! normal transporter activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0015385
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-05-07T13:30:13Z
+
+[Term]
+id: FYPO:0002121
+name: abnormal sodium:hydrogen antiporter activity
+def: "A molecular function phenotype in which the observed rate of sodium:hydrogen antiporter activity is abnormal." [PomBase:mah]
+is_a: FYPO:0002116 ! abnormal transporter activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0015385
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-05-07T13:39:14Z
+
+[Term]
+id: FYPO:0002122
+name: decreased sodium:hydrogen antiporter activity
+def: "A molecular function phenotype in which the observed rate of sodium:hydrogen antiporter activity is decreased." [PomBase:mah]
+synonym: "reduced sodium:hydrogen antiporter activity" EXACT [PomBase:mah]
+is_a: FYPO:0002118 ! decreased transporter activity
+is_a: FYPO:0002121 ! abnormal sodium:hydrogen antiporter activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0015385
+created_by: midori
+creation_date: 2013-05-07T13:39:50Z
+
+[Term]
+id: FYPO:0002123
+name: pyruvylated galactose absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of 4,6-pyruvylated D-galactose (4,6-O-[(1R)-1-carboxyethylidene]-D-galactose) measured in a cell is too low to detect." [PomBase:mah]
+synonym: " 4,6-pyruvylated D-galactose absent from cell" EXACT [CHEBI:61747]
+synonym: "4,6-O-[(1R)-1-carboxyethylidene]-D-galactose absent from cell" EXACT [CHEBI:61747]
+synonym: "ferrichrome absent from cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001208 ! substance absent from cell during vegetative growth
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:61747
+created_by: midori
+creation_date: 2013-05-07T15:16:42Z
+
+[Term]
+id: FYPO:0002124
+name: sensitive to nitrogen starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to nitrogen starvation." [PomBase:mah]
+synonym: "hypersensitive to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "sensitive to nitrogen starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to vitamin B1 starvation" EXACT [GO:0036225]
+is_a: FYPO:0000304 ! sensitive to stress
+is_a: FYPO:0001906 ! abnormal cellular response to thiamine starvation
+intersection_of: PATO:0001551
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0006995
+created_by: midori
+creation_date: 2013-05-07T16:25:36Z
+
+[Term]
+id: FYPO:0002125
+name: abnormal protein localization to plasma membrane
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the plasma membrane is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the abnormal protein localization to plasma membrane and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to plasma membrane" EXACT [PomBase:mah]
+synonym: "abnormal protein localization in plasma membrane" EXACT [GO:0072659]
+synonym: "abnormal protein localization to cell membrane" EXACT [GO:0005886, PomBase:mah]
+synonym: "abnormal protein localization to chromosome, centric region" EXACT [GO:0071459, PomBase:mah]
+synonym: "abnormal protein localization to plasma membrane during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072659
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-05-07T16:29:31Z
+
+[Term]
+id: FYPO:0002126
+name: abolished protein localization to plasma membrane
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the plasma membrane is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to plasma membrane" EXACT [PomBase:mah]
+synonym: "abolished protein localization in plasma membrane" EXACT [GO:0072659]
+synonym: "abolished protein localization to cell membrane" EXACT [GO:0005886]
+synonym: "abolished protein localization to plasma membrane during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to plasma membrane abolished" EXACT [PomBase:mah]
+is_a: FYPO:0002125 ! abnormal protein localization to plasma membrane
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0072659
+created_by: midori
+creation_date: 2013-05-07T16:32:01Z
+
+[Term]
+id: FYPO:0002127
+name: increased protein localization to plasma membrane
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the plasma membrane is increased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to plasma membrane" EXACT [GO:0034504, PomBase:mah]
+synonym: "increased protein localization in plasma membrane" EXACT [GO:0072659]
+synonym: "increased protein localization to cell membrane" EXACT [GO:0005886]
+synonym: "increased protein localization to plasma membrane during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002125 ! abnormal protein localization to plasma membrane
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072659
+created_by: midori
+creation_date: 2013-05-07T16:32:58Z
+
+[Term]
+id: FYPO:0002128
+name: abolished protein localization to plasma membrane, with protein mislocalized to cytoplasm
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the plasma membrane is abolished, and the protein is present in the cytoplasm instead." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to plasma membrane, with protein mislocalized to cytoplasm" EXACT [PomBase:mah]
+synonym: "abolished protein localization in plasma membrane, with protein mislocalized to cytoplasm" EXACT [GO:0072659]
+synonym: "abolished protein localization to cell membrane, with protein mislocalized to cytoplasm" EXACT [GO:0005886]
+synonym: "abolished protein localization to plasma membrane, with protein mislocalized to cytoplasm, during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to plasma membrane abolished,, with protein mislocalized to cytoplasm" EXACT [PomBase:mah]
+is_a: FYPO:0002126 ! abolished protein localization to plasma membrane
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0072659
+intersection_of: has_part FYPO:0000783
+created_by: midori
+creation_date: 2013-05-07T16:35:01Z
+
+[Term]
+id: FYPO:0002129
+name: increased protein phosphorylation during cellular response to heat
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins occurs to a greater extent than normal during a cellular response to heat." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "increased protein phosphorylation during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein phosphorylation during cellular response to heat shock" NARROW [PomBase:mah]
+is_a: FYPO:0001038 ! increased protein phosphorylation
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0034605
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2013-05-07T16:53:04Z
+
+[Term]
+id: FYPO:0002130
+name: abolished protein phosphorylation during cellular response to heat
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins does not occur during a cellular response to heat." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "abolished protein phosphorylation during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished protein phosphorylation during cellular response to heat shock" NARROW [PomBase:mah]
+synonym: "protein phosphorylation abolished during cellular response to heat" EXACT [PomBase:mah]
+is_a: FYPO:0000544 ! abolished protein modification
+is_a: FYPO:0002033 ! abolished protein phosphorylation
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: during GO:0034605
+intersection_of: towards GO:0006468
+created_by: midori
+creation_date: 2013-05-07T16:53:59Z
+
+[Term]
+id: FYPO:0002131
+name: RNA binding phenotype
+def: "A phenotype that affects RNA binding." [PomBase:mah]
+synonym: "fission yeast DNA binding phenotype" EXACT [PomBase:mah]
+is_a: FYPO:0001092 ! binding phenotype
+intersection_of: FYPO:0000001 ! phenotype
+intersection_of: inheres_in GO:0003723
+created_by: midori
+creation_date: 2013-05-07T16:56:35Z
+
+[Term]
+id: FYPO:0002132
+name: abnormal RNA binding
+def: "A molecular function phenotype in which occurrence of RNA binding by a gene product is abnormal, when the gene product or the bound RNA sequence is mutated." [PomBase:mah]
+is_a: FYPO:0000707 ! abnormal molecular function
+is_a: FYPO:0002131 ! RNA binding phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003723
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-05-07T16:56:52Z
+
+[Term]
+id: FYPO:0002133
+name: abolished RNA binding
+def: "A molecular function phenotype in which RNA binding by a gene product does not occur, when the gene product or the bound RNA sequence is mutated." [PomBase:mah]
+synonym: "DNA binding abolished" EXACT [PomBase:mah]
+is_a: FYPO:0002132 ! abnormal RNA binding
+intersection_of: PATO:0001558
+intersection_of: towards GO:0003723
+created_by: midori
+creation_date: 2013-05-07T16:57:26Z
+
+[Term]
+id: FYPO:0002134
+name: decreased RNA binding
+def: "A molecular function phenotype in which occurrence of RNA binding by a gene product is decreased, when the gene product or the bound RNA sequence is mutated." [PomBase:mah]
+synonym: "reduced DNA binding" EXACT [PomBase:mah]
+is_a: FYPO:0002132 ! abnormal RNA binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003723
+created_by: midori
+creation_date: 2013-05-07T16:57:49Z
+
+[Term]
+id: FYPO:0002135
+name: increased RNA binding
+def: "A molecular function phenotype in which occurrence of RNA binding by a gene product is increased, when the gene product or the bound RNA sequence is mutated." [PomBase:mah]
+is_a: FYPO:0002132 ! abnormal RNA binding
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0003723
+created_by: midori
+creation_date: 2013-05-07T16:58:03Z
+
+[Term]
+id: FYPO:0002136
+name: abnormal RNA catabolic process
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which an RNA catabolic process is abnormal." [GO:0006914, PomBase:mah]
+synonym: "abnormal RNA catabolic process during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal RNA breakdown" EXACT [PomBase:mah]
+synonym: "abnormal RNA catabolism" EXACT [GO:0006401]
+synonym: "abnormal RNA degradation" EXACT [PomBase:mah]
+is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006401
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-05-07T17:08:20Z
+
+[Term]
+id: FYPO:0002137
+name: decreased RNA catabolic process
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of an RNA catabolic process is decreased." [PomBase:mah]
+synonym: "decreased RNA breakdown" EXACT [PomBase:mah]
+synonym: "decreased RNA catabolic process during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased RNA catabolism" EXACT [GO:0006401]
+synonym: "decreased RNA degradation" EXACT [PomBase:mah]
+is_a: FYPO:0002136 ! abnormal RNA catabolic process
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006401
+created_by: midori
+creation_date: 2013-05-07T17:09:04Z
+
+[Term]
+id: FYPO:0002138
+name: increased RNA catabolic process
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of an RNA catabolic process is increased." [PomBase:mah]
+synonym: "increased RNA breakdown" EXACT [PomBase:mah]
+synonym: "increased RNA catabolic process during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased RNA catabolism" EXACT [GO:0006401]
+synonym: "increased RNA degradation" EXACT [PomBase:mah]
+is_a: FYPO:0002136 ! abnormal RNA catabolic process
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006401
+created_by: midori
+creation_date: 2013-05-07T17:09:43Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
