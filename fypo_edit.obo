@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:05:2013 10:29
+date: 10:05:2013 16:38
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -2628,7 +2628,8 @@ creation_date: 2011-04-13T03:41:10Z
 id: FYPO:0000192
 name: abnormal regulation of S phase of mitotic cell cycle
 def: "A regulation phenotype in which regulation of progression through S phase of the mitotic cell cycle is abnormal." [PomBase:mah]
-is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+comment: This term was made obsolete because it was based on a GO term (GO:0007090) that has itself been made obsolete.
+is_obsolete: true
 created_by: midori
 creation_date: 2011-04-13T03:41:10Z
 
@@ -4112,7 +4113,7 @@ def: "A phenotype in which a spore germinates to produce a normal germ tube, but
 synonym: "essential; germinating spore with normal germ tube morphology" RELATED [PomBase:mah]
 synonym: "inviable following spore germination with normal germ tube morphology" EXACT [PomBase:mah]
 synonym: "inviable germinating spore with normal germ tube morphology" RELATED [PomBase:mah]
-is_a: FYPO:0000316 ! inviable after spore germination
+is_a: FYPO:0001991 ! inviable after spore germination, without cell division
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
 
@@ -4146,7 +4147,7 @@ synonym: "essential; germinating spore with abnormal germ tube morphology" RELAT
 synonym: "inviable following spore germination with abnormal germ tube morphology" EXACT [PomBase:mah]
 synonym: "inviable germinating spore with abnormal germ tube morphology" RELATED [PomBase:mah]
 is_a: FYPO:0000287 ! abnormal subcellular structure
-is_a: FYPO:0000316 ! inviable after spore germination
+is_a: FYPO:0001991 ! inviable after spore germination, without cell division
 intersection_of: PATO:0000051
 intersection_of: inheres_in GO:0032172
 intersection_of: qualifier PATO:0000460
@@ -4162,7 +4163,6 @@ synonym: "inviable following spore germination with elongated germ tube" EXACT [
 synonym: "inviable germinating spore with elongated germ tube" RELATED [PomBase:mah]
 synonym: "inviable germinating spore with long germ tube" EXACT [PomBase:vw]
 is_a: FYPO:0000313 ! inviable after spore germination with abnormal germ tube morphology
-is_a: FYPO:0001123 ! elongated spore
 intersection_of: PATO:0000573
 intersection_of: inheres_in GO:0032172
 created_by: midori
@@ -13760,6 +13760,7 @@ is_a: FYPO:0000147 ! abnormal activation of bipolar cell growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0051519
+relationship: has_output FYPO:0001391 ! mislocalized septum, near new end
 created_by: midori
 creation_date: 2012-04-30T11:49:16Z
 
@@ -15062,12 +15063,12 @@ creation_date: 2012-06-01T15:18:55Z
 
 [Term]
 id: FYPO:0001110
-name: inviable after spore germination, multiple cell divisions
+name: inviable after spore germination, multiple cell divisions, normal morphology
 def: "A phenotype in which a spore germinates to produce a cell of normal morphology that undergoes two or more rounds of cell division, and then dies." [PomBase:al, PomBase:mah]
-synonym: "essential; germinating spore, multiple cell divisions" RELATED [PomBase:mah]
-synonym: "inviable following spore germination, multiple cell divisions" EXACT [PomBase:mah]
-synonym: "inviable germinating spore, multiple cell divisions" RELATED [PomBase:mah]
-synonym: "inviable germinating spore, multiple cell divisions during vegetative growth" EXACT [PomBase:mah]
+synonym: "essential; germinating spore, multiple cell divisions, normal morphology" RELATED [PomBase:mah]
+synonym: "inviable following spore germination, multiple cell divisions, normal morphology" EXACT [PomBase:mah]
+synonym: "inviable germinating spore, multiple cell divisions, normal morphology" RELATED [PomBase:mah]
+synonym: "inviable germinating spore, multiple cell divisions, normal morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000316 ! inviable after spore germination
 relationship: has_output FYPO:0000299 ! microcolony formation
 created_by: midori
@@ -16157,7 +16158,7 @@ synonym: "sensitive to cilofungin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001551
 intersection_of: inheres_in GO:0072690
-intersection_of: towards CHEBI:315019
+intersection_of: towards CHEBI:315019<
 created_by: midori
 creation_date: 2012-07-05T14:34:21Z
 
@@ -18967,6 +18968,7 @@ synonym: "mislocalized septum, near new end, during vegetative growth" EXACT [Po
 synonym: "mislocalized septum, near non-growing end" NARROW [PomBase:mah]
 synonym: "mislocalized septum, near non-growing end, during vegetative growth" NARROW [PomBase:mah]
 is_a: FYPO:0000339 ! mislocalized septum
+is_a: FYPO:0001225 ! monoseptate
 created_by: midori
 creation_date: 2012-08-15T13:08:14Z
 
@@ -26560,11 +26562,11 @@ creation_date: 2013-02-06T15:00:26Z
 [Term]
 id: FYPO:0001924
 name: inviable after spore germination, cell cycle arrest
-def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest, and eventually dies." [PomBase:mah]
+def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest, and eventually dies without completing cell division." [PomBase:mah]
 synonym: "essential; germinating spore, cell cycle arrest" RELATED [PomBase:mah]
 synonym: "inviable following spore germination, cell cycle arrest" EXACT [PomBase:mah]
 synonym: "inviable germinating spore, cell cycle arrest" RELATED [PomBase:mah]
-is_a: FYPO:0000316 ! inviable after spore germination
+is_a: FYPO:0001991 ! inviable after spore germination, without cell division
 intersection_of: FYPO:0000316 ! inviable after spore germination
 intersection_of: has_part FYPO:0000407 ! abnormally arrested cell cycle progression
 created_by: midori
@@ -27190,7 +27192,7 @@ name: increased 1,3-beta-D-glucan synthase activity
 def: "A molecular function phenotype in which the observed rate of 1,3-beta-D-glucan synthase activity is increased." [PomBase:mah]
 is_a: FYPO:0000662 ! increased catalytic activity
 is_a: FYPO:0001967 ! abnormal 1,3-beta-D-glucan synthase activity
-intersection_of: PATO:0002052
+intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0003843
 created_by: midori
 creation_date: 2013-02-07T14:57:45Z
@@ -27466,7 +27468,7 @@ creation_date: 2013-02-13T17:20:01Z
 [Term]
 id: FYPO:0001991
 name: inviable after spore germination, without cell division
-def: "A phenotype in which a spore germinates to produce a cell that dies without undergoing cell division." [PomBase:al, PomBase:mah]
+def: "A phenotype in which a spore germinates to produce a cell that dies without completing cell division." [PomBase:al, PomBase:mah]
 synonym: "essential; germinating spore, without cell division" RELATED [PomBase:mah]
 synonym: "inviable after spore germination, no cell division" EXACT [PomBase:al]
 synonym: "inviable following spore germination, without cell division" EXACT [PomBase:mah]
@@ -27992,6 +27994,7 @@ creation_date: 2013-02-28T15:34:27Z
 id: FYPO:0002027
 name: angled actomyosin contractile ring
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms an actomyosin contractile ring that is not perpendicular to the long axis of the cell." [PMID:8834798, PomBase:mah]
+comment: Note that a cell that has this phenotype will usually also subsequently display the phenotype 'binucleate monoseptate cell, with angled septum' (FYPO:0002156).
 synonym: "actomyosin contractile ring not orthogonal to long axis of cell" EXACT [PomBase:mah]
 synonym: "actomyosin contractile ring not perpendicular to long axis of cell" RELATED [PomBase:mah]
 synonym: "tilted actomyosin contractile ring" EXACT [PMID:8834798]
@@ -29001,7 +29004,7 @@ creation_date: 2013-05-02T12:25:08Z
 [Term]
 id: FYPO:0002100
 name: abnormal ATP-dependent 3'-5' DNA helicase activity
-def: "A molecular function phenotype in which the observed rate of anATP-dependent 3'-5' DNA helicase activity activity is abnormal." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of anATP-dependent 3'-5' DNA helicase activity is abnormal." [PomBase:mah]
 is_a: FYPO:0000661 ! abnormal catalytic activity
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0043140
@@ -29677,6 +29680,220 @@ intersection_of: qualifier PATO:0000461
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2013-05-09T10:27:14Z
+
+[Term]
+id: FYPO:0002147
+name: inviable vegetative cell population after spore germination
+def: "A cell population phenotype in which all vegetative cells arising from a population of germinated spores are inviable. The population may be mixed with respect to other phenotypes (e.g. whether cell division occurs)." [PomBase:mah]
+synonym: "cell population inviable after spore germination" EXACT [PomBase:mah]
+is_a: FYPO:0002061 ! inviable vegetative cell population
+relationship: comprises_cells_with_phenotype FYPO:0000316 ! inviable after spore germination
+created_by: midori
+creation_date: 2013-05-10T13:02:05Z
+
+[Term]
+id: FYPO:0002148
+name: inviable after spore germination, multiple cell divisions, abnormal morphology
+def: "A phenotype in which a spore germinates to produce a cell of abnormal morphology that undergoes two or more rounds of cell division, and then dies." [PomBase:al, PomBase:mah]
+synonym: "essential; germinating spore, multiple cell divisions, normal morphology" RELATED [PomBase:mah]
+synonym: "inviable following spore germination, multiple cell divisions, normal morphology" EXACT [PomBase:mah]
+synonym: "inviable germinating spore, multiple cell divisions, normal morphology" RELATED [PomBase:mah]
+synonym: "inviable germinating spore, multiple cell divisions, normal morphology during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000316 ! inviable after spore germination
+relationship: has_output FYPO:0000299 ! microcolony formation
+created_by: midori
+creation_date: 2013-05-10T14:11:52Z
+
+[Term]
+id: FYPO:0002149
+name: elongated inviable vegetative cell population
+def: "A cell population phenotype in which all cells in the population are inviable and longer than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
+is_a: FYPO:0002061 ! inviable vegetative cell population
+relationship: comprises_cells_with_phenotype FYPO:0001490 ! elongated inviable vegetative cell
+created_by: midori
+creation_date: 2013-05-10T14:18:17Z
+
+[Term]
+id: FYPO:0002150
+name: inviable spore population
+def: "A cell population phenotype in which none of the cells in a population of spores are viable. Inviable spores do not germinate." [PomBase:mah]
+synonym: "inviable population of spores" EXACT [PomBase:vw]
+is_a: FYPO:0002059 ! inviable cell population
+relationship: comprises_cells_with_phenotype FYPO:0002151 ! inviable spore
+created_by: midori
+creation_date: 2013-05-10T14:20:09Z
+
+[Term]
+id: FYPO:0002151
+name: inviable spore
+def: "A viability phenotype in which a spore is unable to survive under conditions in which wild type spores survive. An inviable spore does not germinate." [PomBase:mah]
+is_a: FYPO:0000049 ! inviable cell
+created_by: midori
+creation_date: 2013-05-10T14:22:34Z
+
+[Term]
+id: FYPO:0002152
+name: small inviable vegetative cell population
+def: "A cell population phenotype in which all cells in the population are inviable and have a lower volume than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
+is_a: FYPO:0002061 ! inviable vegetative cell population
+relationship: comprises_cells_with_phenotype FYPO:0001490 ! elongated inviable vegetative cell
+created_by: midori
+creation_date: 2013-05-10T14:25:01Z
+
+[Term]
+id: FYPO:0002153
+name: small viable vegetative cell population
+def: "A cell population phenotype in which all cells in the population are viable but have a lower volume than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
+synonym: "wee population" EXACT [PomBase:mah]
+is_a: FYPO:0002060 ! viable vegetative cell population
+relationship: comprises_cells_with_phenotype FYPO:0000648 ! small viable vegetative cell
+created_by: midori
+creation_date: 2013-05-10T14:26:01Z
+
+[Term]
+id: FYPO:0002154
+name: abnormal septum site selection
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which barrier septum assembly takes place in an abnormal location. The site of septum assembly is normally determined by the location of the actomyosin contractile ring." [PomBase:mah]
+synonym: "abnormal barrier septum site selection" EXACT [PomBase:mah]
+synonym: "abnormal contractile ring localization resulting in abnormal septum site selection" RELATED [PomBase:mah]
+synonym: "abnormal contractile ring localization resulting in mislocalized septum" RELATED [PomBase:mah]
+synonym: "abnormal septation during vegetative growth" EXACT [PomBase:mah]
+synonym: "septum site selection defects" EXACT [PomBase:mah]
+is_a: FYPO:0000117 ! abnormal septation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000918
+intersection_of: qualifier PATO:0000460
+relationship: has_output FYPO:0000339 ! mislocalized septum
+created_by: midori
+creation_date: 2013-05-10T15:13:11Z
+
+[Term]
+id: FYPO:0002155
+name: normal telomere structure
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which chromosome structure is normal (i.e. indistinguishable from wild type) at the telomeric regions." [PomBase:mah]
+synonym: "normal chromosome structure at telomere" EXACT [PomBase:mah]
+synonym: "normal chromosome structure at telomeric region" EXACT [GO:0000781, PomBase:mah]
+synonym: "normal telomere morphology" EXACT [PomBase:mah]
+synonym: "normal telomere structure during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal telomeric region structure" EXACT [GO:0000781, PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular structure during vegetative growth
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0000781
+intersection_of: qualifier PATO:0000461
+relationship: part_of FYPO:0001314 ! normal cell cortex morphology during vegetative growth
+created_by: midori
+creation_date: 2013-05-10T15:34:01Z
+
+[Term]
+id: FYPO:0002156
+name: binucleate monoseptate cell, with angled septum
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has two nuclei and one septum, and in which the septum is located between the two nuclei but is not perpendicular to the long axis of the cell." [PomBase:mah]
+comment: Note that a cell that has the phenotype 'angled actomyosin contractile ring' (FYPO:0002027) will usually also subsequently display this phenotype.
+synonym: "binucleate monoseptate cell, with angled septum, during vegetative growth" EXACT [PomBase:mah]
+synonym: "binucleate monoseptate cell, with septum not orthogonal to long axis" RELATED [PomBase:mah]
+is_a: FYPO:0000339 ! mislocalized septum
+is_a: FYPO:0001224 ! binucleate monoseptate cell
+created_by: midori
+creation_date: 2013-05-10T15:43:47Z
+
+[Term]
+id: FYPO:0002157
+name: normal 1,3-beta-D-glucan synthase activity
+def: "A molecular function phenotype in which the observed rate of 1,3-beta-D-glucan synthase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003843
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-05-10T16:01:38Z
+
+[Term]
+id: FYPO:0002159
+name: decreased 1,3-beta-D-glucan synthase activity
+def: "A molecular function phenotype in which the observed rate of 1,3-beta-D-glucan synthase activity is decreased." [PomBase:mah]
+synonym: "reduced 1,3-beta-D-glucan synthase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0002158 ! abnormal 1,3-beta-D-glucan synthase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003843
+created_by: midori
+creation_date: 2013-05-10T16:04:01Z
+
+[Term]
+id: FYPO:0002160
+name: normal cell population growth on cilofungin
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cilofungin." [PomBase:mah]
+synonym: "normal cell population growth in presence of cilofungin" EXACT [PomBase:mah]
+synonym: "normal cellular response to cilofungin" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on cilofungin" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on cilofungin" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:315019
+created_by: midori
+creation_date: 2013-05-10T16:10:52Z
+
+[Term]
+id: FYPO:0002161
+name: normal cell population growth on Calcofluor White
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing Calcofluor White." [PomBase:mah]
+synonym: "normal cell population growth in presence of Calcofluor White" EXACT [PomBase:mah]
+synonym: "normal cellular response to Calcofluor White" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on Calcofluor White" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on cilofungin" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:50011
+created_by: midori
+creation_date: 2013-05-10T16:11:44Z
+
+[Term]
+id: FYPO:0002162
+name: resistance to cilofungin
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of cilofungin than normal." [PomBase:mah]
+synonym: "resistance to cilofungin during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to cilofungin" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:315019
+created_by: midori
+creation_date: 2013-05-10T16:15:33Z
+
+[Term]
+id: FYPO:0002163
+name: decreased cell wall thickness
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which the fungal-type cell wall is thinner than normal." [PomBase:mah]
+synonym: "decreased cell wall thickness during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced cell wall thickness" EXACT [PomBase:mah]
+synonym: "thin cell wall" EXACT [PomBase:al]
+is_a: FYPO:0000351 ! abnormal cell wall morphology
+intersection_of: PATO:0000592
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0009277
+created_by: midori
+creation_date: 2013-05-10T16:26:35Z
+
+[Term]
+id: FYPO:0002164
+name: mislocalized, curved actomyosin contractile ring
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms an actomyosin contractile ring in an abnormal location, and the ring has a curved, or C-shaped, profile. The normal location is at the midpoint of, and perpendicular to, the long axis of the cell." [PomBase:mah]
+comment: Note that the location of the contractile ring is determined by the location of the cell division site, so an abnormality in cell division site determination can be inferred from this phenotype.
+synonym: "actomyosin contractile ring displaced from midpoint and bent" RELATED [PomBase:vw]
+synonym: "actomyosin contractile ring displaced from midpoint and curved" EXACT [PomBase:vw]
+synonym: "contractile ring displaced from cell centre and curved" EXACT [PomBase:vw]
+synonym: "mislocalised, curved actomyosin contractile ring" EXACT [PomBase:mah]
+synonym: "mislocalized, curved actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002026 ! actomyosin contractile ring displaced from midpoint
+relationship: output_of FYPO:0000033 ! abnormal contractile ring localization
+created_by: midori
+creation_date: 2013-05-10T16:32:44Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
