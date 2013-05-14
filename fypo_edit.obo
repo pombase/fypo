@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 10:05:2013 16:38
+date: 14:05:2013 16:20
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -3302,7 +3302,6 @@ id: FYPO:0000247
 name: decreased cell population growth at high temperature
 def: "A vegetative cell population growth phenotype in which cell growth is decreased relative to normal at a high temperature." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise. For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
-synonym: "decreased at high temperature" BROAD [PomBase:mah]
 synonym: "decreased growth at high temperature" BROAD [PomBase:mah]
 synonym: "decreased vegetative cell population growth at high temperature" EXACT [PomBase:mah]
 synonym: "growth defect, slow growth at high temperatures" RELATED [PomBase:mah]
@@ -8896,12 +8895,13 @@ def: "A cell population growth phenotype in which vegetative cells grow normally
 synonym: "heat sensitivity: normal" RELATED [SGD:phenotype_annotation]
 synonym: "normal growth at high temperature" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth at high temperature" EXACT [PomBase:mah]
-is_a: FYPO:0000282 ! viable cell at high temperature
 is_a: FYPO:0001357 ! normal vegetative cell population growth
+is_a: FYPO:0002060 ! viable vegetative cell population
 intersection_of: FYPO:0000047 ! normal cell population growth
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0001305
+relationship: includes_cells_with_phenotype FYPO:0000282 ! viable cell at high temperature
 created_by: midori
 creation_date: 2011-11-11T02:55:04Z
 
@@ -10505,12 +10505,13 @@ creation_date: 2012-02-29T03:27:58Z
 
 [Term]
 id: FYPO:0000797
-name: sensitive to t-BOOH
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tert-butyl hydroperoxide (t-BOOH). Cells stop growing (and may die) at a concentration of t-BOOH that allows wild type cells to grow." [PomBase:mah]
-synonym: "hypersensitive to t-BOOH" EXACT [PomBase:mah]
-synonym: "sensitive to 2-methyl-prop-2-yl-hydroperoxide" EXACT [CHEBI:365419]
-synonym: "sensitive to t-BOOH during vegetative growth" EXACT [PomBase:mah]
-synonym: "sensitive to tert-butyl hydroperoxide" EXACT [PomBase:al]
+name: sensitive to TBPH
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tert-butyl hydroperoxide (TBPH or t-BOOH). Cells stop growing (and may die) at a concentration of TBPH that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to TBPH" EXACT [PomBase:mah]
+synonym: "sensitive to 2-methyl-prop-2-yl-hydroperoxide" EXACT [CHEBI:64090]
+synonym: "sensitive to t-BOOH" EXACT [PomBase:al, PomBase:mah]
+synonym: "sensitive to TBPH during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to tert-butyl hydroperoxide" EXACT [CHEBI:64090, PomBase:al]
 is_a: FYPO:0000127 ! increased sensitivity to chemical
 intersection_of: PATO:0001551
 intersection_of: inheres_in GO:0072690
@@ -18484,7 +18485,7 @@ def: "A cell population phenotype in which a population of cells grows normally 
 synonym: "vegetative growth normal" BROAD [PomBase:mah]
 synonym: "vegetative population growth normal" EXACT [PomBase:mah]
 is_a: FYPO:0000047 ! normal cell population growth
-is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+is_a: FYPO:0001358 ! vegetative cell population growth phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0072690
 intersection_of: qualifier PATO:0000461
@@ -29590,12 +29591,13 @@ name: normal cell population growth at low temperature
 def: "A cell population growth phenotype in which vegetative cells grow normally at a low temperature." [PomBase:mah]
 synonym: "normal growth at low temperature" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth at low temperature" EXACT [PomBase:mah]
-is_a: FYPO:0000282 ! viable cell at high temperature
 is_a: FYPO:0001357 ! normal vegetative cell population growth
+is_a: FYPO:0002060 ! viable vegetative cell population
 intersection_of: FYPO:0000047 ! normal cell population growth
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0001306
+relationship: includes_cells_with_phenotype FYPO:0002171 ! viable cell at low temperature
 created_by: midori
 creation_date: 2013-05-08T15:54:16Z
 
@@ -29812,7 +29814,7 @@ name: decreased 1,3-beta-D-glucan synthase activity
 def: "A molecular function phenotype in which the observed rate of 1,3-beta-D-glucan synthase activity is decreased." [PomBase:mah]
 synonym: "reduced 1,3-beta-D-glucan synthase activity" EXACT [PomBase:mah]
 is_a: FYPO:0000663 ! decreased catalytic activity
-is_a: FYPO:0002158 ! abnormal 1,3-beta-D-glucan synthase activity
+is_a: FYPO:0002158
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0003843
 created_by: midori
@@ -29891,6 +29893,154 @@ is_a: FYPO:0002026 ! actomyosin contractile ring displaced from midpoint
 relationship: output_of FYPO:0000033 ! abnormal contractile ring localization
 created_by: midori
 creation_date: 2013-05-10T16:32:44Z
+
+[Term]
+id: FYPO:0002165
+name: abnormal polynucleotide 3'-phosphatase activity
+def: "A molecular function phenotype in which the observed rate of polynucleotide 3'-phosphatase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0046403
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-05-14T13:31:29Z
+
+[Term]
+id: FYPO:0002166
+name: abolished polynucleotide 3'-phosphatase activity
+def: "A molecular function phenotype in which polynucleotide 3'-phosphatase activity is absent." [PomBase:mah]
+synonym: "polynucleotide 3'-phosphatase activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0002165 ! abnormal polynucleotide 3'-phosphatase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0046403
+created_by: midori
+creation_date: 2013-05-14T13:31:35Z
+
+[Term]
+id: FYPO:0002167
+name: sensitive to ethyl methanesulfonate
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to ethyl methanesulfonate. Cells stop growing (and may die) at a concentration of ethyl methanesulfonate that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to ethyl methanesulfonate" EXACT [PomBase:mah]
+synonym: "sensitive to EMS" EXACT [PomBase:mah]
+synonym: "sensitive to ethyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:23994
+created_by: midori
+creation_date: 2013-05-14T13:34:52Z
+
+[Term]
+id: FYPO:0002168
+name: normal cell population growth on ethyl methanesulfonate
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing ethyl methanesulfonate." [PomBase:mah]
+synonym: "normal cell population growth in presence of ethyl methanesulfonate" EXACT [PomBase:mah]
+synonym: "normal cell population growth on EMS" EXACT [PomBase:mah]
+synonym: "normal cellular response to ethyl methanesulfonate" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on ethyl methanesulfonate" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on ethyl methanesulfonate" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:23994
+created_by: midori
+creation_date: 2013-05-14T13:37:06Z
+
+[Term]
+id: FYPO:0002169
+name: normal cell population growth during cellular response to gamma radiation
+def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to gamma radiation." [PomBase:mah]
+synonym: "normal cell population growth during cellular response to gamma irradiation" EXACT [PomBase:al]
+synonym: "normal cell population growth in response to gamma irradiation" RELATED [PomBase:al]
+synonym: "normal cellular response to gamma radiation" RELATED [PomBase:mah]
+synonym: "normal sensitivity to gamma radiation" RELATED [PomBase:mah]
+synonym: "normal vegetative cell population growth during cellular response to gamma radiation" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: happens_during GO:0071480
+created_by: midori
+creation_date: 2013-05-14T13:52:38Z
+
+[Term]
+id: FYPO:0002170
+name: inviable after spore germination, multiple cell divisions, branched, elongated cell
+def: "A phenotype in which a spore germinates to produce a cell that is elongated and branched, and undergoes two or more rounds of cell division and then dies." [PomBase:al, PomBase:mah]
+synonym: "essential; germinating spore, multiple cell divisions, branched, elongated cell" RELATED [PomBase:mah]
+synonym: "inviable after spore germination, multiple cell divisions, elongated and branched cell" EXACT [PomBase:al]
+synonym: "inviable following spore germination, multiple cell divisions, branched, elongated cell" EXACT [PomBase:mah]
+synonym: "inviable germinating spore, multiple cell divisions, branched, elongated cell" RELATED [PomBase:mah]
+synonym: "inviable germinating spore, multiple cell divisions, branched, elongated cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002148 ! inviable after spore germination, multiple cell divisions, abnormal morphology
+created_by: midori
+creation_date: 2013-05-14T13:55:18Z
+
+[Term]
+id: FYPO:0002171
+name: viable cell at low temperature
+def: "A viability phenotype observed in the vegetative growth phase of the life cycle in which a cell is able to survive at a low temperature." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
+synonym: "cell viable at low temperature" EXACT [PomBase:mah]
+synonym: "viable cell at low temperature during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001491 ! viable vegetative cell
+intersection_of: FYPO:0000124 ! viable cell
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001306
+created_by: midori
+creation_date: 2013-05-14T14:01:04Z
+
+[Term]
+id: FYPO:0002172
+name: increased level of nitrogen starvation gene RNA during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more RNAs that are normally expressed during nitrogen starvation measured in a cell is higher than normal (i.e. higher than observed in wild-type cells during vegetative growth)." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased level of cellular response to nitrogen starvation gene RNA" EXACT [PomBase:al]
+synonym: "increased nitrogen starvation gene RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+relationship: output_of FYPO:0000189 ! abnormal nuclear mRNA splicing, via spliceosome
+created_by: midori
+creation_date: 2013-05-14T15:48:52Z
+
+[Term]
+id: FYPO:0002173
+name: increased level of meiosis gene RNA during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more RNAs that are normally expressed during meiosis measured in a cell is higher than normal (i.e. higher than observed in wild-type cells during vegetative growth)." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased meiosis gene RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+relationship: output_of FYPO:0000189 ! abnormal nuclear mRNA splicing, via spliceosome
+created_by: midori
+creation_date: 2013-05-14T15:52:47Z
+
+[Term]
+id: FYPO:0002174
+name: decreased degradation of DSR-containing RNA
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of an RNA catabolic process that specifically degrades DSR-containing RNA molecules is decreased. A DSR (determinant of selective removal) is a region that is often found near the 3' end of meiosis-specific transcripts, usually contains one or more copies of the motif U(U/C/G)AAAC, and targets RNAs for degradation in vegetatively growing cells." [PMID:22046364, PMID:22645662, PomBase:mah]
+synonym: "decreased catabolism of DSR-containing RNA" EXACT [PomBase:mah]
+synonym: "decreased RNA catabolic process, DSR-containing RNA" EXACT [GO:0006401, PomBase:mah]
+is_a: FYPO:0002137 ! decreased RNA catabolic process
+created_by: midori
+creation_date: 2013-05-14T16:03:57Z
+
+[Term]
+id: FYPO:0002175
+name: decreased cell population growth at low temperature
+def: "A vegetative cell population growth phenotype in which cell growth is decreased relative to normal at a low temperature." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise. For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
+synonym: "decreased growth at low temperature" BROAD [PomBase:mah]
+synonym: "decreased vegetative cell population growth at low temperature" EXACT [PomBase:mah]
+synonym: "growth defect, slow growth at low temperatures" RELATED [PomBase:mah]
+synonym: "reduced growth at low temperature" RELATED [PomBase:mah]
+synonym: "slow growth at low temperature" RELATED [PomBase:mah]
+is_a: FYPO:0001355 ! decreased vegetative cell population growth
+intersection_of: FYPO:0000046 ! decreased cell population growth
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001306
+created_by: midori
+creation_date: 2013-05-14T16:14:51Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
