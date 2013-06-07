@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 06:06:2013 16:44
+date: 07:06:2013 16:07
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -264,7 +264,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000017
 name: elongated cell
 def: "A cell morphology phenotype in which cells are longer than normal, i.e. the maximum distance between the cell ends is greater than normal." [PomBase:mah, PomBase:vw]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that this term is classified as a type of abnormal cell shape, because wild-type cells are never seen with the proportions (length:width ratio) observed in elongated cells. Small cells, in contrast, have the same proportions as a subset of wild-type cells, and simply do not grow to the full length seen in wild type.
 subset: qc_do_not_manually_annotate
 synonym: "cell morphology, elongated cell" EXACT [PomBase:mah]
 synonym: "long cell" EXACT [PomBase:vw]
@@ -320,7 +320,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000023
 name: small cell
 def: "A cell morphology phenotype in which a cell has an abnormally low volume." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that this term is not classified as a type of abnormal cell shape, small cells, have the same proportions as a subset of wild-type cells, and simply do not grow to the full length seen in wild type. Elongated cells, in contrast, have proportions (length:width ratio) that are never observed in wild-type cells, and so are classified under both abnormal cell shape and abnormal cell size.
 subset: qc_do_not_manually_annotate
 synonym: "cell size: decreased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0001127 ! abnormal cell size
@@ -4114,7 +4114,6 @@ name: inviable after spore germination with normal germ tube morphology
 def: "A phenotype in which a spore germinates to produce a normal germ tube, but does not go on to form a viable dividing cell." [PomBase:mah]
 synonym: "essential; germinating spore with normal germ tube morphology" RELATED [PomBase:mah]
 synonym: "inviable following spore germination with normal germ tube morphology" EXACT [PomBase:mah]
-synonym: "inviable germinating spore with normal germ tube morphology" RELATED [PomBase:mah]
 is_a: FYPO:0001991 ! inviable after spore germination, without cell division
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
@@ -4125,7 +4124,6 @@ name: inviable after spore germination with normal, unseptated germ tube morphol
 def: "A phenotype in which a spore germinates to produce a normal germ tube, but does not septate or go on to form a viable dividing cell." [PomBase:mah]
 synonym: "essential; germinating spore with normal, unseptated germ tube morphology" RELATED [PomBase:mah]
 synonym: "inviable following spore germination with normal, unseptated germ tube morphology" EXACT [PomBase:mah]
-synonym: "inviable germinating spore with normal, unseptated germ tube morphology" RELATED [PomBase:mah]
 is_a: FYPO:0000310 ! inviable after spore germination with normal germ tube morphology
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
@@ -4136,7 +4134,6 @@ name: inviable after spore germination with normal, septated germ tube morpholog
 def: "A phenotype in which a spore germinates to produce a normal germ tube, and undergoes septation, but does not go on to form a viable dividing cell." [PomBase:mah]
 synonym: "essential; germinating spore with normal, septated germ tube morphology" RELATED [PomBase:mah]
 synonym: "inviable following spore germination with normal, septated germ tube morphology" EXACT [PomBase:mah]
-synonym: "inviable germinating spore with normal, septated germ tube morphology" RELATED [PomBase:mah]
 is_a: FYPO:0000310 ! inviable after spore germination with normal germ tube morphology
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
@@ -4147,7 +4144,6 @@ name: inviable after spore germination with abnormal germ tube morphology
 def: "A phenotype in which a spore germinates to produce a germ tube with abnormal morphology, and does not go on to form a viable dividing cell." [PomBase:mah]
 synonym: "essential; germinating spore with abnormal germ tube morphology" RELATED [PomBase:mah]
 synonym: "inviable following spore germination with abnormal germ tube morphology" EXACT [PomBase:mah]
-synonym: "inviable germinating spore with abnormal germ tube morphology" RELATED [PomBase:mah]
 is_a: FYPO:0000287 ! abnormal subcellular structure
 is_a: FYPO:0001991 ! inviable after spore germination, without cell division
 intersection_of: PATO:0000051
@@ -4162,8 +4158,6 @@ name: inviable after spore germination with elongated germ tube
 def: "A phenotype in which a spore germinates to produce an elongated germ tube, and does not go on to form a viable dividing cell." [PomBase:mah]
 synonym: "essential; germinating spore with elongated germ tube" RELATED [PomBase:mah]
 synonym: "inviable following spore germination with elongated germ tube" EXACT [PomBase:mah]
-synonym: "inviable germinating spore with elongated germ tube" RELATED [PomBase:mah]
-synonym: "inviable germinating spore with long germ tube" EXACT [PomBase:vw]
 is_a: FYPO:0000313 ! inviable after spore germination with abnormal germ tube morphology
 intersection_of: PATO:0000573
 intersection_of: inheres_in GO:0032172
@@ -4176,8 +4170,6 @@ name: inviable after spore germination with elongated, septated germ tube
 def: "A phenotype in which a spore germinates to produce an elongated germ tube, and undergoes septation, but does not go on to form a viable dividing cell." [PomBase:mah]
 synonym: "essential; germinating spore with elongated, septated germ tube" RELATED [PomBase:mah]
 synonym: "inviable following spore germination with elongated, septated germ tube" EXACT [PomBase:mah]
-synonym: "inviable germinating spore with elongated, septated germ tube" RELATED [PomBase:mah]
-synonym: "inviable germinating spore with long, septated germ tube" EXACT [PomBase:vw]
 is_a: FYPO:0000314 ! inviable after spore germination with elongated germ tube
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
@@ -4241,7 +4233,6 @@ name: inviable after spore germination, single cell division
 def: "A phenotype in which a spore germinates to produce a cell of normal morphology that undergoes a single round of cell division, and then dies." [PomBase:jh, PomBase:mah, PomBase:vw]
 synonym: "essential; germinating spore, single cell division" RELATED [PomBase:mah]
 synonym: "inviable following spore germination, single cell division" EXACT [PomBase:mah]
-synonym: "inviable germinating spore, single cell division" RELATED [PomBase:mah]
 is_a: FYPO:0000316 ! inviable after spore germination
 created_by: midori
 creation_date: 2011-04-27T04:25:13Z
@@ -13480,6 +13471,7 @@ creation_date: 2012-04-25T02:41:20Z
 id: FYPO:0000998
 name: elongated cell during nitrogen starvation
 def: "A cell morphology phenotype in which a cell becomes longer than normal, i.e. the maximum distance between the cell ends is greater than normal, when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
+comment: Note that this term is classified as a type of abnormal cell shape, because wild-type cells are never seen with the proportions (length:width ratio) observed in elongated cells. Small cells, in contrast, have the same proportions as a subset of wild-type cells, and simply do not grow to the full length seen in wild type.
 synonym: "cell morphology, elongated cell during nitrogen starvation" EXACT [PomBase:mah]
 synonym: "long cell during nitrogen starvation" EXACT [PomBase:vw]
 is_a: FYPO:0000017 ! elongated cell
@@ -14090,7 +14082,6 @@ name: inviable after spore germination, single or double cell division
 def: "A phenotype in which a spore germinates to produce a cell of normal morphology that undergoes one or two rounds of cell division, and then dies." [PomBase:al, PomBase:mah]
 synonym: "essential; germinating spore, single or double cell division" RELATED [PomBase:mah]
 synonym: "inviable following spore germination, single or double cell division" EXACT [PomBase:mah]
-synonym: "inviable germinating spore, single or double cell division" RELATED [PomBase:mah]
 is_a: FYPO:0000316 ! inviable after spore germination
 created_by: midori
 creation_date: 2012-05-09T05:12:57Z
@@ -15081,8 +15072,6 @@ name: inviable after spore germination, multiple cell divisions, normal morpholo
 def: "A phenotype in which a spore germinates to produce a cell of normal morphology that undergoes two or more rounds of cell division, and then dies." [PomBase:al, PomBase:mah]
 synonym: "essential; germinating spore, multiple cell divisions, normal morphology" RELATED [PomBase:mah]
 synonym: "inviable following spore germination, multiple cell divisions, normal morphology" EXACT [PomBase:mah]
-synonym: "inviable germinating spore, multiple cell divisions, normal morphology" RELATED [PomBase:mah]
-synonym: "inviable germinating spore, multiple cell divisions, normal morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000316 ! inviable after spore germination
 relationship: has_output FYPO:0000299 ! inviable microcolony
 created_by: midori
@@ -15244,6 +15233,7 @@ creation_date: 2012-06-07T11:56:50Z
 id: FYPO:0001122
 name: elongated vegetative cell
 def: "A cell phenotype in which a cell is elongated in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: Note that this term is classified as a type of abnormal cell shape, because wild-type cells are never seen with the proportions (length:width ratio) observed in elongated cells. Small cells, in contrast, have the same proportions as a subset of wild-type cells, and simply do not grow to the full length seen in wild type.
 synonym: "long vegetative cell" EXACT [PomBase:vw]
 is_a: FYPO:0000017 ! elongated cell
 is_a: FYPO:0001118 ! abnormal vegetative cell morphology
@@ -15256,6 +15246,7 @@ creation_date: 2012-06-07T13:10:57Z
 id: FYPO:0001123
 name: elongated spore
 def: "A cell phenotype in which a spore is longer than normal." [PomBase:mah]
+comment: Note that this term is classified as a type of abnormal cell shape, because wild-type cells are never seen with the proportions (length:width ratio) observed in elongated cells. Small cells, in contrast, have the same proportions as a subset of wild-type cells, and simply do not grow to the full length seen in wild type.
 synonym: "long spores" EXACT [PomBase:vw]
 is_a: FYPO:0000017 ! elongated cell
 is_a: FYPO:0000348 ! abnormal spore morphology
@@ -17902,9 +17893,9 @@ creation_date: 2012-08-01T12:33:02Z
 
 [Term]
 id: FYPO:0001315
-name: normal cell morphology during vegetative growth
+name: normal vegetative cell morphology
 def: "A cell phenotype characterized by normal cell morphology when the cell is in the vegetative growth phase of the life cycle." [PomBase:mah]
-synonym: "normal vegetative cell morphology" EXACT [PomBase:mah]
+synonym: "normal cell morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000672 ! normal cell morphology
 is_a: FYPO:0001312 ! normal vegetative phenotype
 is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
@@ -18898,7 +18889,6 @@ name: inviable after spore germination, cell cycle arrest with replicated DNA
 def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest with replicated DNA, and eventually dies." [PMID:9705504, PomBase:mah]
 synonym: "essential; germinating spore, cell cycle arrest with replicated DNA" RELATED [PomBase:mah]
 synonym: "inviable following spore germination, cell cycle arrest with replicated DNA" EXACT [PomBase:mah]
-synonym: "inviable germinating spore, cell cycle arrest with replicated DNA" RELATED [PomBase:mah]
 is_a: FYPO:0001924 ! inviable after spore germination, cell cycle arrest
 intersection_of: FYPO:0000316 ! inviable after spore germination
 intersection_of: has_part FYPO:0000444 ! cell cycle arrest with replicated DNA
@@ -24076,9 +24066,9 @@ creation_date: 2012-11-14T12:23:13Z
 id: FYPO:0001739
 name: increased pantothenate import
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the import of pantothenate into the cell occurs to a greater extent than normal." [PomBase:mah]
-synonym: "increased pantothenate uptake" EXACT [GO:0043090]
 synonym: "increased pantothenate import during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased pantothenate import into cell" EXACT [PomBase:al]
+synonym: "increased pantothenate uptake" EXACT [GO:0043090]
 synonym: "increased pantothenic acid import" RELATED [PomBase:al]
 is_a: FYPO:0001737 ! abnormal pantothenate import
 intersection_of: PATO:0002051
@@ -26595,7 +26585,6 @@ name: inviable after spore germination, cell cycle arrest
 def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest, and eventually dies without completing cell division." [PomBase:mah]
 synonym: "essential; germinating spore, cell cycle arrest" RELATED [PomBase:mah]
 synonym: "inviable following spore germination, cell cycle arrest" EXACT [PomBase:mah]
-synonym: "inviable germinating spore, cell cycle arrest" RELATED [PomBase:mah]
 is_a: FYPO:0001991 ! inviable after spore germination, without cell division
 intersection_of: FYPO:0000316 ! inviable after spore germination
 intersection_of: has_part FYPO:0000407 ! abnormally arrested cell cycle progression
@@ -26918,9 +26907,9 @@ id: FYPO:0001947
 name: mitotic cell cycle arrest in anaphase, with unseparated sister chromatids
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in anaphase, and sister chromatids have not separated. The unseparated chromosomes remain condensed." [PomBase:mah]
 synonym: "absence of chromosome separation, mitotic anaphase arrest with condensed chromosomes" EXACT [PomBase:vw]
+synonym: "mitotic cell cycle arrest in anaphase, with unseparated sister chromatids, during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest in anaphase, with unseparated, condensed chromosomes" EXACT [PomBase:mah, PomBase:vw]
 synonym: "mitotic cell cycle arrest in anaphase, with unseparated, condensed sister chromatids" EXACT [PomBase:mah, PomBase:vw]
-synonym: "mitotic cell cycle arrest in anaphase, with unseparated sister chromatids, during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
 is_a: FYPO:0000616 ! abnormal mitotic anaphase progression
 intersection_of: FYPO:0000502 ! abnormally arrested mitotic cell cycle
@@ -27502,7 +27491,6 @@ def: "A phenotype in which a spore germinates to produce a cell that dies withou
 synonym: "essential; germinating spore, without cell division" RELATED [PomBase:mah]
 synonym: "inviable after spore germination, no cell division" EXACT [PomBase:al]
 synonym: "inviable following spore germination, without cell division" EXACT [PomBase:mah]
-synonym: "inviable germinating spore, without cell division" RELATED [PomBase:mah]
 is_a: FYPO:0000316 ! inviable after spore germination
 created_by: midori
 creation_date: 2013-02-13T17:25:34Z
@@ -27536,10 +27524,9 @@ creation_date: 2013-02-20T16:55:53Z
 
 [Term]
 id: FYPO:0001994
-name: swollen elongated mononucleate vegetative cell with mislocalized septum near new end
+name: inviable swollen elongated mononucleate vegetative cell with mislocalized septum near new end
 def: "A cell phenotype in which a cell contains a single septum, has one nucleus, is elongated, and is inviable. The septum is in an abnormal location, and the nucleus is located in one compartment of the septated cell. The cell compartment containing the nucleus is swollen (i.e. has a larger diameter than the other compartment)." [PomBase:mah, PomBase:vw]
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
-synonym: "inviable swollen elongated mononucleate cell with mislocalized septum near new end" EXACT [PomBase:mah]
 synonym: "inviable swollen elongated mononucleate cell with mislocalized septum near non-growing end" NARROW [PomBase:mah]
 synonym: "long swollen mononucleate cell with mislocalized septum near new end" EXACT [PomBase:vw]
 synonym: "long swollen mononucleate cell with mislocalized septum near non-growing end" NARROW [PomBase:vw]
@@ -27553,6 +27540,7 @@ synonym: "swollen elongated mononucleate cell with asymmetrically located septum
 synonym: "swollen elongated mononucleate cell with asymmetrically located septum near non-growing end" NARROW [PomBase:mah]
 synonym: "swollen elongated mononucleate cell with mislocalised septum near new end" EXACT [PomBase:mah]
 synonym: "swollen elongated mononucleate cell with mislocalised septum near non-growing end" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cell with mislocalized septum near new end" EXACT [PomBase:mah]
 synonym: "swollen elongated mononucleate cell with mislocalized septum near new end during vegetative growth" EXACT [PomBase:mah]
 synonym: "swollen elongated mononucleate cell with mislocalized septum near non-growing end" NARROW [PomBase:mah]
 synonym: "swollen elongated mononucleate cell with mislocalized septum near non-growing end during vegetative growth" NARROW [PomBase:mah]
@@ -28784,9 +28772,9 @@ synonym: "inviable swollen elongated vegetative cell with enlarged nucleus" EXAC
 synonym: "swollen elongated cell with enlarged nucleus" EXACT [PomBase:mah]
 synonym: "swollen elongated vegetative cell with enlarged nucleus" EXACT [PomBase:mah]
 is_a: FYPO:0000344 ! enlarged nucleus
-is_a: FYPO:0000646 ! swollen vegetative cell
 is_a: FYPO:0001429 ! swollen elongated cell
-is_a: FYPO:0001489 ! inviable vegetative cell
+is_a: FYPO:0001490 ! inviable elongated vegetative cell
+is_a: FYPO:0002251 ! inviable swollen elongated vegetative cell
 intersection_of: FYPO:0000136 ! cellular structure phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
@@ -29032,7 +29020,7 @@ creation_date: 2013-05-02T12:25:08Z
 [Term]
 id: FYPO:0002100
 name: abnormal ATP-dependent 3'-5' DNA helicase activity
-def: "A molecular function phenotype in which the observed rate of anATP-dependent 3'-5' DNA helicase activity is abnormal." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of an ATP-dependent 3'-5' DNA helicase activity is abnormal." [PomBase:mah]
 is_a: FYPO:0000661 ! abnormal catalytic activity
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0043140
@@ -29095,10 +29083,6 @@ name: viable vegetative cell with normal cell shape
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has a normal shape and is viable." [PomBase:mah]
 synonym: "viable cell with normal cell shape during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001491 ! viable vegetative cell
-intersection_of: PATO:0000719
-intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0001125 ! normal vegetative cell shape
-intersection_of: inheres_in CL:0000334
 relationship: has_part FYPO:0001125 ! normal vegetative cell shape
 created_by: midori
 creation_date: 2013-05-07T12:22:30Z
@@ -29109,10 +29093,6 @@ name: inviable vegetative cell with normal cell shape
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has a normal shape but is inviable." [PomBase:mah]
 synonym: "inviable cell with normal cell shape during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001489 ! inviable vegetative cell
-intersection_of: PATO:0000718
-intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0001125 ! normal vegetative cell shape
-intersection_of: inheres_in CL:0000334
 relationship: has_part FYPO:0001125 ! normal vegetative cell shape
 created_by: midori
 creation_date: 2013-05-07T12:27:52Z
@@ -29248,10 +29228,6 @@ synonym: "inviable curved cell" EXACT [PomBase:mah]
 synonym: "inviable curved cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000016 ! curved vegetative cell
 is_a: FYPO:0001489 ! inviable vegetative cell
-intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000016 ! curved vegetative cell
-intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2013-05-07T12:51:07Z
 
@@ -29701,7 +29677,7 @@ creation_date: 2013-05-09T10:17:24Z
 [Term]
 id: FYPO:0002146
 name: normal RNA level during cellular response to DEM
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to diethyl maleate (DEM) is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affectd." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to diethyl maleate (DEM) is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to DEM" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to DEM" RELATED [PomBase:mah]
@@ -29733,8 +29709,6 @@ name: inviable after spore germination, multiple cell divisions, abnormal morpho
 def: "A phenotype in which a spore germinates to produce a cell of abnormal morphology that undergoes two or more rounds of cell division, and then dies." [PomBase:al, PomBase:mah]
 synonym: "essential; germinating spore, multiple cell divisions, abnormal morphology" RELATED [PomBase:mah]
 synonym: "inviable following spore germination, multiple cell divisions, abnormal morphology" EXACT [PomBase:mah]
-synonym: "inviable germinating spore, multiple cell divisions, abnormal morphology" RELATED [PomBase:mah]
-synonym: "inviable germinating spore, multiple cell divisions, abnormal morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000316 ! inviable after spore germination
 relationship: has_output FYPO:0000299 ! inviable microcolony
 created_by: midori
@@ -30008,8 +29982,6 @@ def: "A phenotype in which a spore germinates to produce a cell that is elongate
 synonym: "essential; germinating spore, multiple cell divisions, branched, elongated cell" RELATED [PomBase:mah]
 synonym: "inviable after spore germination, multiple cell divisions, elongated and branched cell" EXACT [PomBase:al]
 synonym: "inviable following spore germination, multiple cell divisions, branched, elongated cell" EXACT [PomBase:mah]
-synonym: "inviable germinating spore, multiple cell divisions, branched, elongated cell" RELATED [PomBase:mah]
-synonym: "inviable germinating spore, multiple cell divisions, branched, elongated cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0002148 ! inviable after spore germination, multiple cell divisions, abnormal morphology
 created_by: midori
 creation_date: 2013-05-14T13:55:18Z
@@ -30086,6 +30058,9 @@ name: viable vegetative cell with normal cell size
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has normal volume and dimensions and is viable." [PomBase:mah]
 synonym: "viable cell with normal cell size during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001491 ! viable vegetative cell
+intersection_of: FYPO:0000124 ! viable cell
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0001124 ! normal vegetative cell size
 created_by: midori
 creation_date: 2013-06-04T12:51:12Z
 
@@ -30095,7 +30070,7 @@ name: viable vegetative cell with normal cell morphology
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell has normal volume, dimensions and shape, and is viable." [PomBase:mah]
 synonym: "viable vegetative cell with normal cell shape and size" EXACT [PomBase:vw]
 is_a: FYPO:0001491 ! viable vegetative cell
-relationship: has_part FYPO:0001315 ! normal cell morphology during vegetative growth
+relationship: has_part FYPO:0001315 ! normal vegetative cell morphology
 created_by: midori
 creation_date: 2013-06-04T12:52:23Z
 
@@ -30133,7 +30108,7 @@ comment: Consider also annotating to 'elongated viable vegetative cell' (FYPO:00
 synonym: "long low penetrance" RELATED [PomBase:jh, PomBase:vw]
 is_a: FYPO:0002178 ! viable mixed population including long cells
 relationship: includes_cells_with_phenotype FYPO:0001122 ! elongated vegetative cell
-relationship: includes_cells_with_phenotype FYPO:0001315 ! normal cell morphology during vegetative growth
+relationship: includes_cells_with_phenotype FYPO:0001315 ! normal vegetative cell morphology
 created_by: midori
 creation_date: 2013-06-04T15:36:23Z
 
@@ -30389,7 +30364,10 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 synonym: "inviable cell with normal cell morphology during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable vegetative cell with normal cell shape and size" EXACT [PomBase:vw]
 is_a: FYPO:0001489 ! inviable vegetative cell
-relationship: has_part FYPO:0001315 ! normal cell morphology during vegetative growth
+intersection_of: FYPO:0000049 ! inviable cell
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0001315 ! normal vegetative cell morphology
+relationship: has_part FYPO:0001315 ! normal vegetative cell morphology
 created_by: midori
 creation_date: 2013-06-05T11:37:33Z
 
@@ -30409,7 +30387,7 @@ creation_date: 2013-06-05T13:23:12Z
 id: FYPO:0002201
 name: viable stubby vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable but the cell diameter is larger than normal and the cell length is shorter than normal, in the vegetative growth phase of the life cycle." [PomBase:mah]
-synonym: "stubby viable vegetative cell population population" EXACT [PomBase:mah]
+synonym: "stubby viable vegetative cell population" EXACT [PomBase:mah]
 is_a: FYPO:0002060 ! viable vegetative cell population
 relationship: comprises_cells_with_phenotype FYPO:0002106 ! viable stubby vegetative cell
 created_by: midori
@@ -30662,7 +30640,7 @@ creation_date: 2013-06-05T16:35:26Z
 [Term]
 id: FYPO:0002223
 name: abnormal cell cycle arrest in meiosis II
-def: "A cellular process phenotype in which progression through the meiotic cell cycle is arrested in meiosis II. Meiosis II is the econd phase of meiosis, in which cells divide and separate the two chromatids in each chromosome." [GO:0007135, PomBase:mah]
+def: "A cellular process phenotype in which progression through the meiotic cell cycle is arrested in meiosis II. Meiosis II is the second phase of meiosis, in which cells divide and separate the two chromatids in each chromosome." [GO:0007135, PomBase:mah]
 is_a: FYPO:0002224 ! abnormally arrested meiotic cell cycle
 intersection_of: PATO:0001561
 intersection_of: happens_during GO:0007135
@@ -30749,7 +30727,7 @@ creation_date: 2013-06-05T17:07:25Z
 [Term]
 id: FYPO:0002230
 name: inviable swollen curved vegetative cell
-def: "A cell morphology phenotype in which a vegetatively growing cell is inviable, hasa larger volume than normal, and is curved along the long axis. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
+def: "A cell morphology phenotype in which a vegetatively growing cell is inviable, has a larger volume than normal, and is curved along the long axis. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
 synonym: "essential; swollen curved vegetative cell" RELATED [PomBase:mah]
 synonym: "inviable swollen curved cell" EXACT [PomBase:mah]
@@ -31003,6 +30981,76 @@ intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0070061
 created_by: midori
 creation_date: 2013-06-06T16:44:19Z
+
+[Term]
+id: FYPO:0002250
+name: inviable curved vacuolated vegetative cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, is curved along the long axis, and in which vacuoles are more visible (usually by microscopy) than normal." [PomBase:mah]
+synonym: "essential; curved vacuolated vegetative cell" RELATED [PomBase:mah]
+synonym: "inviable curved vacuolated cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001321 ! cellular structure phenotype during vegetative growth
+is_a: FYPO:0001581 ! vacuolated
+is_a: FYPO:0002113 ! inviable curved vegetative cell
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000016 ! curved vegetative cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0001581 ! vacuolated
+created_by: midori
+creation_date: 2013-06-07T15:30:03Z
+
+[Term]
+id: FYPO:0002251
+name: inviable swollen elongated vegetative cell
+def: "A cell morphology phenotype in which a vegetative cell is inviable and has a larger volume, and is longer, than normal." [PomBase:mah]
+synonym: "inviable swollen elongated cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000646 ! swollen vegetative cell
+is_a: FYPO:0001429 ! swollen elongated cell
+is_a: FYPO:0001490 ! inviable elongated vegetative cell
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2013-06-07T15:48:12Z
+
+[Term]
+id: FYPO:0002252
+name: inviable swollen elongated mononucleate vegetative cell with normally localized septum
+def: "A cell phenotype in which a cell contains a single septum, has one nucleus, is elongated, and is inviable. The septum is in an abnormal location, and the nucleus is located in one compartment of the septated cell. The cell compartment containing the nucleus is swollen (i.e. has a larger diameter than the other compartment)." [PomBase:mah, PomBase:vw]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "inviable swollen elongated mononucleate vegetative cell with normally localised septum" EXACT [PomBase:mah]
+synonym: "inviable swollen elongated mononucleate vegetative cell with normally positioned septum" EXACT [PomBase:mah]
+synonym: "long swollen mononucleate cell with normally localized septum" EXACT [PomBase:vw]
+synonym: "swollen elongated mononucleate cell with normal septum position" NARROW [PomBase:mah]
+synonym: "swollen elongated mononucleate cell with normally localized septum near new end during vegetative growth" EXACT [PomBase:mah]
+synonym: "swollen elongated mononucleate cell with normally placed septum" EXACT [PomBase:vw]
+is_a: FYPO:0002251 ! inviable swollen elongated vegetative cell
+intersection_of: FYPO:0000136 ! cellular structure phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0001225 ! monoseptate
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0002253 ! normal septum location
+created_by: midori
+creation_date: 2013-06-07T16:00:55Z
+
+[Term]
+id: FYPO:0002253
+name: normal septum location
+def: "A cellular structure phenotype observed in the vegetative growth phase of the life cycle in which a cell has a septum in the normal location at the midpoint of the long axis of the cell." [PomBase:mah]
+synonym: "normal septum location during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal septum position" EXACT [PomBase:mah]
+synonym: "normally localized septum" EXACT [PomBase:mah]
+is_a: FYPO:0001233 ! normal subcellular structure
+intersection_of: PATO:0000140
+intersection_of: inheres_in GO:0000935
+intersection_of: qualifier PATO:0000461
+relationship: output_of FYPO:0001389 ! normal nucleus localization
+created_by: midori
+creation_date: 2013-06-07T16:05:04Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
