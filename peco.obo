@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 07:06:2013 13:16
+date: 09:06:2013 23:53
 saved-by: antonialock
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Grouping_terms "The grouping terms are high level terms not used for direct annotation but for grouping purposes in the ontology."
@@ -34,7 +34,7 @@ creation_date: 2012-02-07T12:23:02Z
 [Term]
 id: PECO:0000004
 name: high temperature
-def: "The experiment was performed, or cells were grown, at a temperature exceeding 32 degrees Celsius." []
+def: "The experiment was performed, or cells were grown, at a high temperature (typically exceeding ~32 degrees Celsius)." []
 synonym: "33 degrees Celsius" NARROW []
 synonym: "34 degrees Celsius" NARROW []
 synonym: "35 degrees Celsius" NARROW []
@@ -53,7 +53,7 @@ creation_date: 2012-02-07T12:17:29Z
 [Term]
 id: PECO:0000005
 name: standard temperature
-def: "The experiment was performed, or cells were grown, at a temperature within the range 25-32 degrees Celsius." []
+def: "The experiment was performed, or cells were grown in a temperature typically in the range between 25+32 degrees Celsius." []
 synonym: "25 degrees Celsius" NARROW []
 synonym: "26 degrees Celsius" NARROW []
 synonym: "27 degrees Celsius" NARROW []
@@ -72,7 +72,7 @@ creation_date: 2012-02-07T12:17:29Z
 [Term]
 id: PECO:0000006
 name: low temperature
-def: "The experiment was performed, or cells were grown, at a temperature lower than 25 degrees Celsius." []
+def: "The experiment was performed, or cells were grown, at a low temperature (typically lower than ~25 degrees Celsius)." []
 synonym: "17 degrees Celsius" NARROW []
 synonym: "18 degrees Celsius" NARROW []
 synonym: "19 degrees Celsius" NARROW []
@@ -705,7 +705,7 @@ creation_date: 2012-03-12T02:59:23Z
 
 [Term]
 id: PECO:0000080
-name: grouping YE
+name: grouping rich medium
 def: "This is a grouping term, do not use for annotations." []
 comment: This is a grouping term, do not use for annotations.
 subset: Grouping_terms
@@ -719,7 +719,7 @@ name: low glucose rich medium
 def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is very low (eg around 0.1%)." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "low glucose YE" RELATED []
-is_a: PECO:0000080 ! grouping YE
+is_a: PECO:0000080 ! grouping rich medium
 created_by: antonialock
 creation_date: 2012-03-14T01:35:45Z
 
@@ -1224,25 +1224,26 @@ name: raffinose rich medium
 def: "Experiments were performed in rich medium containing raffinose as the carbon source, yeast extract and other components. The concentration of raffinose is typically around 2%." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "raffinose YE" RELATED []
-is_a: PECO:0000080 ! grouping YE
+is_a: PECO:0000080 ! grouping rich medium
 created_by: antonialock
 creation_date: 2012-06-14T20:32:52Z
 
 [Term]
 id: PECO:0000137
-name: glucose rich medium
+name: YES
 alt_id: PECO:0000012
-def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is typically around 2-3%." []
+def: "Experiments were performed in rich medium containing yeast extract, glucose, and other components. The concentration of glucose is typically around 2-3%." []
 comment: MERGED COMMENT:\nTARGET COMMENT: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.\n--------------------\nSOURCE COMMENT: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 subset: Grouping_terms
+synonym: "<new synonym>" RELATED []
 synonym: "complex medium" RELATED []
+synonym: "glucose rich medium" EXACT []
 synonym: "normal glucose rich medium" EXACT []
 synonym: "standard dextrose rich medium" EXACT []
 synonym: "standard glucose rich medium" EXACT []
 synonym: "YE" NARROW []
 synonym: "YE4S" NARROW []
-synonym: "YES" NARROW []
-is_a: PECO:0000080 ! grouping YE
+is_a: PECO:0000080 ! grouping rich medium
 created_by: antonialock
 creation_date: 2012-06-14T20:35:20Z
 
@@ -1257,7 +1258,7 @@ synonym: "glycerol sole carbon source rich medium" EXACT []
 synonym: "glycerol sole carbon source YE" RELATED []
 synonym: "non-fermentable glycerol sole carbon source rich medium" EXACT []
 synonym: "nonfermentable glycerol sole carbon source rich medium" RELATED []
-is_a: PECO:0000080 ! grouping YE
+is_a: PECO:0000080 ! grouping rich medium
 created_by: antonialock
 creation_date: 2012-06-14T20:38:23Z
 
@@ -1271,7 +1272,7 @@ synonym: "glycerol and ethanol YE" RELATED []
 synonym: "non-fermentable glycerol and ethanol rich medium" EXACT []
 synonym: "nonfermentable glycerol and ethanol rich medium" EXACT []
 synonym: "YCEG" NARROW []
-is_a: PECO:0000080 ! grouping YE
+is_a: PECO:0000080 ! grouping rich medium
 created_by: antonialock
 creation_date: 2012-06-14T20:39:24Z
 
@@ -1314,7 +1315,7 @@ name: sucrose rich medium
 def: "Experiments were performed in rich medium containing raffinose as the carbon source, yeast extract and other components. The concentration of sucrose is typically around 2%." []
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please  use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "sucrose YE" RELATED []
-is_a: PECO:0000080 ! grouping YE
+is_a: PECO:0000080 ! grouping rich medium
 created_by: antonialock
 creation_date: 2012-06-19T15:26:15Z
 
@@ -1356,7 +1357,7 @@ comment: Use the medium terms to specify the general type of growth medium and i
 synonym: "non-fermentable galactose and very low glucose rich medium" EXACT []
 synonym: "nonfermentable galactose and very low glucose rich medium" EXACT []
 synonym: "YpGalA" NARROW []
-is_a: PECO:0000080 ! grouping YE
+is_a: PECO:0000080 ! grouping rich medium
 created_by: antonialock
 creation_date: 2012-06-20T11:48:39Z
 
@@ -1486,7 +1487,7 @@ creation_date: 2012-08-13T13:22:44Z
 id: PECO:0000162
 name: high glucose rich medium
 def: "Experiments were performed in rich medium containing yeast extract and other components. The concentration of glucose is high low (eg around 8%)." []
-is_a: PECO:0000080 ! grouping YE
+is_a: PECO:0000080 ! grouping rich medium
 created_by: antonialock
 creation_date: 2012-08-14T11:45:05Z
 
@@ -1824,7 +1825,7 @@ id: PECO:0000201
 name: YPD
 def: "Experiments were performed in rich medium containing peptone, yeast extract and other components. The concentration of glucose is typically around 2-3%. Note that peptone, which is a mixture of nutrients generated by proteolytic digestion of animal protein with trypsin, is not normally a component of S. pombe rich media (it is however normally present in S. cerevisiae rich media)." []
 synonym: "glucose rich medium, peptone/YE nitrogen source" BROAD []
-is_a: PECO:0000080 ! grouping YE
+is_a: PECO:0000080 ! grouping rich medium
 created_by: antonialock
 creation_date: 2012-11-13T12:40:59Z
 
