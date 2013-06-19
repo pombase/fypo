@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 17:06:2013 16:35
+date: 19:06:2013 16:10
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -33,6 +33,8 @@ id: FYPO:0000003
 name: cell population phenotype
 def: "A phenotype that is observed at the level of a population of cells." [PomBase:mah]
 comment: note: differentium is population level, and may reflect observation conditions
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast cell population phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000001 ! phenotype
 created_by: midori
@@ -43,6 +45,8 @@ id: FYPO:0000004
 name: cell viability
 def: "A cell phenotype that consists of the cell's disposition to survive and develop normally." [PomBase:mah]
 comment: Viability is usually determined under standard laboratory conditions, i.e. a cell is generally considered viable if it can grow in rich medium under normal conditions such as temperature, pressure, oxygen level, pH, etc.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000002 ! cell phenotype
 intersection_of: PATO:0000169
 intersection_of: inheres_in CL:0000000
@@ -1576,6 +1580,7 @@ id: FYPO:0000114
 name: cellular process phenotype
 def: "A phenotype that affects a cellular process." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast cellular process phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
@@ -3414,16 +3419,17 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000255
-name: nuclear protein accumulation
-def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which specific proteins abnormally accumulate, and are constitutively located in, the nucleus." [PMID:12896976, PomBase:mah]
+name: increased nuclear protein level during vegetative growth
+def: "A cell phenotype in which the amount of protein measured in the cell nucleus is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PMID:12896976, PomBase:mah]
+synonym: "increased protein level in nucleus during vegetative growth" EXACT []
 synonym: "localization defects, nuclear accumulation of Pap1 and Sty1" NARROW [PomBase:mah]
 synonym: "nuclear accumulation of Pap1 and Sty1" NARROW [PomBase:mah]
 synonym: "nuclear accumulation of protein" EXACT [PomBase:mah]
 synonym: "nuclear protein accumulation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000762 ! protein accumulation
-intersection_of: PATO:0002270
-intersection_of: happens_during GO:0072690
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005634
+intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -3841,6 +3847,8 @@ creation_date: 2011-04-21T02:22:36Z
 id: FYPO:0000289
 name: translation regulation phenotype
 def: "A gene expression phenotype that affects the regulation of translation." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast translation regulation phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000288 ! gene expression regulation phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -3925,6 +3933,8 @@ creation_date: 2011-04-21T02:31:20Z
 id: FYPO:0000295
 name: cytoskeleton organization phenotype
 def: "A cellular process phenotype that affects cytoskeleton organization. Cytoskeleton organization results in the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures." [GO:0007010, PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "cytoskeleton organisation phenotype" EXACT [PomBase:mah]
 synonym: "fission yeast cytoskeleton organization phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000334 ! cellular component organization phenotype
@@ -3953,6 +3963,8 @@ creation_date: 2011-04-21T02:31:20Z
 id: FYPO:0000297
 name: microtubule cytoskeleton organization phenotype
 def: "A cellular process phenotype that affects the organization of the microtubule cytoskeleton. Microtubule cytoskeleton organization results in the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures comprising microtubules and associated proteins." [GO:0000226, PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast microtubule cytoskeleton organization phenotype" EXACT [PomBase:mah]
 synonym: "microtubule cytoskeleton organisation phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000295 ! cytoskeleton organization phenotype
@@ -4147,9 +4159,6 @@ def: "A phenotype in which a spore germinates to produce a germ tube with abnorm
 synonym: "essential; germinating spore, without cell division with abnormal germ tube morphology" RELATED [PomBase:mah]
 synonym: "inviable following spore germination, without cell division with abnormal germ tube morphology" EXACT [PomBase:mah]
 is_a: FYPO:0001991 ! inviable after spore germination, without cell division
-intersection_of: PATO:0000051
-intersection_of: inheres_in GO:0032172
-intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
 
@@ -4161,8 +4170,6 @@ synonym: "essential; germinating spore with elongated germ tube" RELATED [PomBas
 synonym: "inviable following spore germination with elongated germ tube" EXACT [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0002281 ! inviable after spore germination with abnormal germ tube morphology
-intersection_of: PATO:0000573
-intersection_of: inheres_in GO:0032172
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
 
@@ -4407,6 +4414,8 @@ creation_date: 2011-05-11T04:08:59Z
 id: FYPO:0000334
 name: cellular component organization phenotype
 def: "A phenotype that affects a process of cellular component organization, i.e. the assembly, arrangement of constituent parts, or disassembly of a cellular component, that occurs at the cellular level." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "cellular component organisation phenotype" EXACT [PomBase:mah]
 synonym: "cellular component organization phenotype at cellular level" EXACT [PomBase:mah]
 synonym: "fission yeast cellular component organization phenotype" EXACT [PomBase:mah]
@@ -8491,6 +8500,7 @@ id: FYPO:0000641
 name: abnormal chromosome organization
 def: "A cellular process phenotype in which any process of chromosome organization is abnormal. Chromosome organization results in the assembly, arrangement of constituent parts, or disassembly of chromosomes." [GO:0051276, PomBase:mah]
 comment: Consider annotating to 'abnormal chromosome morphology' (FYPO:0000848), but note that an abnormal chromosome organization process may, but does not necessarily, result in abnormal chromosome morphology.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal chromosome organisation" EXACT [PomBase:mah]
 is_a: FYPO:0000335 ! abnormal cellular component organization
 intersection_of: PATO:0000001
@@ -9294,6 +9304,8 @@ creation_date: 2011-12-05T02:26:17Z
 id: FYPO:0000706
 name: normal molecular function
 def: "A phenotype in which a specific molecular function is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0000652 ! molecular function phenotype
 intersection_of: PATO:0000001
@@ -9306,6 +9318,8 @@ creation_date: 2011-12-05T03:06:23Z
 id: FYPO:0000707
 name: abnormal molecular function
 def: "A phenotype in which a specific molecular function is abnormal." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000652 ! molecular function phenotype
 is_a: FYPO:0001985 ! abnormal phenotype
 intersection_of: PATO:0000001
@@ -10035,19 +10049,6 @@ intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0000747
 created_by: midori
 creation_date: 2012-01-18T03:03:19Z
-
-[Term]
-id: FYPO:0000762
-name: protein accumulation
-def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which specific proteins abnormally accumulate in the cell, or in a part of the cell such as within an organelle." [PomBase:mah]
-synonym: "protein accumulation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
-intersection_of: PATO:0002270
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in CL:0000334
-intersection_of: towards CHEBI:36080
-created_by: midori
-creation_date: 2012-02-09T02:50:56Z
 
 [Term]
 id: FYPO:0000763
@@ -10932,6 +10933,7 @@ creation_date: 2012-03-08T03:02:56Z
 [Term]
 id: FYPO:0000825
 name: increased RNA level during vegetative growth
+alt_id: FYPO:0000910
 alt_id: FYPO:0001247
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
@@ -10940,6 +10942,7 @@ synonym: "increased cellular RNA level during vegetative growth" EXACT [PomBase:
 synonym: "increased mRNA level during vegetative growth" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during vegetative growth" RELATED [PomBase:mah]
 synonym: "increased RNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "RNA accumulation during vegetative growth" RELATED [PomBase:mah]
 synonym: "RNA accumulation: increased during vegetative growth" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0001326 ! altered RNA level during vegetative growth
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
@@ -11305,14 +11308,15 @@ creation_date: 2012-03-14T03:09:26Z
 
 [Term]
 id: FYPO:0000849
-name: cytoplasmic protein accumulation
-def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which specific proteins abnormally accumulate, and are constitutively located in, the cytoplasm." [PomBase:mah]
+name: increased cytoplasmic protein level during vegetative growth
+def: "A cell phenotype in which the amount of protein measured in the cytoplasm of a cell is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected.." [PomBase:mah]
 synonym: "cytoplasmic accumulation of protein" EXACT [PomBase:mah]
 synonym: "cytoplasmic protein accumulation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000762 ! protein accumulation
-intersection_of: PATO:0002270
-intersection_of: happens_during GO:0072690
+synonym: "increased protein level in cytoplasm during vegetative growth" EXACT []
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005737
+intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-03-14T04:24:49Z
@@ -12235,28 +12239,16 @@ created_by: midori
 creation_date: 2012-03-30T04:48:31Z
 
 [Term]
-id: FYPO:0000910
-name: RNA accumulation
-def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which specific RNA molecules abnormally accumulate in the cell, or in a part of the cell such as within an organelle." [PomBase:mah]
-synonym: "RNA accumulation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000360 ! abnormal RNA localization
-intersection_of: PATO:0002270
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in CL:0000000
-intersection_of: towards CHEBI:33697
-created_by: midori
-creation_date: 2012-03-29T04:00:37Z
-
-[Term]
 id: FYPO:0000911
-name: nuclear RNA accumulation
-def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which specific RNA molecules abnormally accumulate, and are constitutively located in, the nucleus." [PMID:12896976, PomBase:mah]
-synonym: "nuclear accumulation of RNA" EXACT [PomBase:mah]
-synonym: "nuclear RNA accumulation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000910 ! RNA accumulation
-intersection_of: PATO:0002270
-intersection_of: happens_during GO:0072690
+name: increased nuclear RNA level during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in the cell nucleus is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PMID:12896976, PomBase:mah]
+synonym: "increased RNA level in nucleus during vegetative growth" EXACT []
+synonym: "nuclear accumulation of RNA" RELATED [PomBase:mah]
+synonym: "nuclear RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005634
+intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-03-29T04:01:15Z
@@ -14838,6 +14830,8 @@ creation_date: 2012-06-01T13:59:10Z
 id: FYPO:0001092
 name: binding phenotype
 def: "A phenotype that affects the binding of a gene product to another substance." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast binding phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000652 ! molecular function phenotype
 intersection_of: FYPO:0000001 ! phenotype
@@ -15307,6 +15301,7 @@ creation_date: 2012-06-07T15:28:36Z
 id: FYPO:0001127
 name: abnormal cell size
 def: "A cell morphology phenotype in which a cell has a volume or dimensions that differ from normal." [PomBase:mah]
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000117
 intersection_of: inheres_in CL:0000000
@@ -16706,16 +16701,19 @@ creation_date: 2012-07-13T16:15:07Z
 
 [Term]
 id: FYPO:0001228
-name: nuclear protein accumulation during cellular response to hydrogen peroxide
-def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which specific proteins abnormally accumulate, and are constitutively located in, the nucleus during a cellular response to hydrogen peroxide." [PomBase:mah]
+name: increased nuclear protein level during cellular response to hydrogen peroxide
+def: "A cell phenotype observed in vegetative growth phase of the life cycle, in which the amount of protein measured in the cell nucleus is higher than normal during a cellular response to hydrogen peroxide. Total protein or a specific protein may be affected." [PomBase:mah]
+synonym: "increased nuclear protein level during cellular response to hydrogen peroxide during vegetative growth" EXACT []
+synonym: "increased protein level in nucleus during cellular response to hydrogen peroxide" RELATED []
 synonym: "nuclear accumulation of protein during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
-synonym: "nuclear protein accumulation during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
-synonym: "nuclear protein accumulation in response to hydrogen peroxide" EXACT [PomBase:al]
-is_a: FYPO:0000255 ! nuclear protein accumulation
-intersection_of: PATO:0002270
-intersection_of: happens_during GO:0070301
-intersection_of: happens_during GO:0072690
+synonym: "nuclear protein accumulation during cellular response to hydrogen peroxide" RELATED []
+synonym: "nuclear protein accumulation during cellular response to hydrogen peroxide during vegetative growth" RELATED [PomBase:mah]
+synonym: "nuclear protein accumulation in response to hydrogen peroxide" RELATED [PomBase:al]
+is_a: FYPO:0000255 ! increased nuclear protein level during vegetative growth
+intersection_of: exists_during GO:0070301
+intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005634
+intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-07-13T16:39:13Z
@@ -17982,6 +17980,8 @@ creation_date: 2012-08-01T13:42:47Z
 id: FYPO:0001320
 name: vegetative cell phenotype
 def: "A phenotype that is observed at the level of an individual cell, when the cell is in the vegetative growth phase of the cell cycle." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "cell phenotype during vegetative growth" EXACT [PomBase:mah]
 synonym: "fission yeast vegetative cell phenotype" EXACT [PomBase:mah]
 synonym: "vegetative cell phenotype during vegetative growth" EXACT [PomBase:mah]
@@ -17996,6 +17996,8 @@ creation_date: 2012-08-01T13:52:18Z
 id: FYPO:0001321
 name: cellular physical quality phenotype during vegetative growth
 def: "A phenotype that affects any physical object quality, such as morphology, number, location, etc., of a cell or a cellular component in the vegetative growth phase of the life cycle." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "cellular physical object quality phenotype during vegetative growth" EXACT [PATO:0001241]
 synonym: "fission yeast cellular physical object quality phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000136 ! cellular physical quality phenotype
@@ -18010,6 +18012,8 @@ creation_date: 2012-08-01T14:44:55Z
 id: FYPO:0001322
 name: abnormal subcellular component during vegetative growth
 def: "A physical cellular phenotype in which the amount, distribution, or morphology of a cell part is abnormal in the vegetative growth phase of the life cycle." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "abnormal subcellular structure during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000287 ! abnormal subcellular component
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
@@ -18089,9 +18093,11 @@ creation_date: 2012-08-01T15:11:33Z
 [Term]
 id: FYPO:0001327
 name: increased protein level during vegetative growth
+alt_id: FYPO:0000762
 def: "A cell phenotype in which the amount of protein measured in a cell is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "increased protein accumulation during vegetative growth" RELATED [PomBase:mah]
+synonym: "protein accumulation during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000836 ! increased protein level
 is_a: FYPO:0001325 ! altered protein level during vegetative growth
 intersection_of: exists_during GO:0072690
@@ -18148,6 +18154,8 @@ creation_date: 2012-08-01T16:24:14Z
 id: FYPO:0001331
 name: cellular process phenotype during vegetative growth
 def: "A phenotype that affects a cellular process in the vegetative growth phase of the life cycle." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast cellular process phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
 is_a: FYPO:0001320 ! vegetative cell phenotype
@@ -18202,6 +18210,8 @@ creation_date: 2012-08-01T16:33:52Z
 id: FYPO:0001335
 name: transcription regulation phenotype during vegetative growth
 def: "A gene expression phenotype that affects the regulation of DNA-dependent transcription in the vegetative growth phase of the life cycle." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast transcription regulation phenotype during vegetative growth" EXACT [PomBase:mah]
 synonym: "gene-specific transcription regulation phenotype during vegetative growth" RELATED [GO:0006355, PomBase:mah]
 synonym: "transcriptional control phenotype during vegetative growth" BROAD [GO:0006355, PomBase:mah]
@@ -18361,6 +18371,8 @@ creation_date: 2012-08-01T17:38:00Z
 id: FYPO:0001347
 name: nucleic acid metabolism phenotype during vegetative growth
 def: "A cellular process phenotype that affects any nucleic acid metabolic process in the vegetative growth phase of the life cycle." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast nucleic acid metabolism phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000292 ! nucleic acid metabolism phenotype
 is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
@@ -18374,6 +18386,8 @@ creation_date: 2012-08-01T17:39:21Z
 id: FYPO:0001348
 name: cellular metabolism phenotype during vegetative growth
 def: "A cellular process phenotype that affects metabolism in the cell in the vegetative growth phase of the life cycle." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast cellular metabolism phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000140 ! cellular metabolism phenotype
 is_a: FYPO:0001331 ! cellular process phenotype during vegetative growth
@@ -18476,6 +18490,7 @@ id: FYPO:0001355
 name: decreased vegetative cell population growth
 def: "A cell population phenotype in which the growth of a population of cells is decreased relative to normal in the vegetative growth phase of the life cycle. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise (e.g. as for 'decreased cell growth on glucose carbon source' FYPO:0001407).
+subset: qc_do_not_manually_annotate
 synonym: "aerobic vegetative growth defects" RELATED [PomBase:mah]
 synonym: "decreased vegetative aerobic cell population growth" NARROW [PomBase:mah]
 synonym: "reduced vegetative aerobic cell population growth" NARROW [PomBase:mah]
@@ -18493,6 +18508,7 @@ id: FYPO:0001356
 name: abnormal vegetative cell population growth
 def: "A cellular process phenotype in which vegetative cell population growth is abnormal." [PomBase:mah]
 comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+subset: qc_do_not_manually_annotate
 synonym: "vegetative growth defect" RELATED [PomBase:mah]
 is_a: FYPO:0000045 ! abnormal cell population growth
 is_a: FYPO:0001358 ! vegetative cell population growth phenotype
@@ -18522,6 +18538,8 @@ creation_date: 2012-08-01T18:20:01Z
 id: FYPO:0001358
 name: vegetative cell population growth phenotype
 def: "A cell phenotype that affects the rate or extent of cell population growth in the vegetative growth phase of the life cycle." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "cell population growth phenotype during vegetative growth" EXACT [PomBase:mah]
 synonym: "fission yeast cell population growth phenotype during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000139 ! cell population growth phenotype
@@ -18566,6 +18584,8 @@ creation_date: 2012-08-02T14:52:32Z
 id: FYPO:0001362
 name: abnormal cellular process during vegetative growth
 def: "A phenotype in which a specific cellular process is abnormal in the vegetative growth phase of the life cycle." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000628 ! abnormal cellular process
 is_a: FYPO:0001331 ! cellular process phenotype during vegetative growth
 intersection_of: PATO:0000001
@@ -23192,6 +23212,7 @@ id: FYPO:0001679
 name: abnormal protein localization to chromatin
 def: "A cell phenotype in which the localization of a protein to chromatin is abnormal." [PomBase:mah]
 comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal protein localisation to chromatin" EXACT [GO:0071168, PomBase:mah]
 is_a: FYPO:0001370 ! abnormal protein localization
 intersection_of: PATO:0000001
@@ -26361,9 +26382,9 @@ synonym: "growth auxotrophic for thiamine during vegetative growth" EXACT [PomBa
 synonym: "growth auxotrophic for vitamin B1" EXACT [GO:0036225]
 synonym: "thiamine auxotrophy" EXACT [PomBase:mah]
 is_a: FYPO:0000128 ! auxotrophy
-intersection_of: PATO:0001551
+intersection_of: PATO:0000422
 intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0036225
+intersection_of: towards CHEBI:26948
 created_by: midori
 creation_date: 2013-01-31T14:27:37Z
 
@@ -27351,16 +27372,16 @@ creation_date: 2013-02-08T17:13:24Z
 
 [Term]
 id: FYPO:0001979
-name: accumulation of lariat introns
+name: increased lariat intron level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which excised introns in lariat form (i.e. not linearized) are present at greater levels than normal." [PomBase:al, PomBase:mah]
-synonym: "accumulation of lariat introns during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased lariat intron level" EXACT [PomBase:mah]
+synonym: "accumulation of lariat introns" RELATED [PomBase:mah]
+synonym: "increased lariat intron level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased level of lariat introns" EXACT [PomBase:vw]
-synonym: "lariat intron accumulation" EXACT [PomBase:vw]
+synonym: "lariat intron accumulation" RELATED [PomBase:vw]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
-intersection_of: PATO:0002270
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in CL:0000000
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0001162
 intersection_of: towards SO:0001958
 created_by: midori
 creation_date: 2013-02-13T14:38:24Z
@@ -28425,6 +28446,8 @@ creation_date: 2013-03-27T16:55:57Z
 id: FYPO:0002057
 name: cell population viability
 def: "A cell population phenotype that reflects the proportion of the population that survive and develop normally." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0000003 ! cell population phenotype
 created_by: midori
 creation_date: 2013-04-04T13:48:22Z
@@ -28434,6 +28457,7 @@ id: FYPO:0002058
 name: viable cell population
 def: "A cell population phenotype in which cells in the population are viable." [PomBase:mah]
 comment: Note that a viable population may contain individual cells that are inviable. Usually it is difficult to detect inviable cells within an otherwise viable population, especially if population growth is simply assayed by OD increase in liquid culture or by colony formation on plates. If you have done an experiment that detects individual inviable cells, consider using the term 'mixed population including viable and inviable cells' (FYPO:0000908).
+subset: qc_do_not_manually_annotate
 is_a: FYPO:0002057 ! cell population viability
 relationship: includes_cells_with_phenotype FYPO:0000124 ! viable cell
 created_by: midori
@@ -29388,7 +29412,6 @@ synonym: "hypersensitive to nitrogen starvation" EXACT [PomBase:mah]
 synonym: "sensitive to nitrogen starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to vitamin B1 starvation" EXACT [GO:0036225]
 is_a: FYPO:0000304 ! sensitive to stress
-is_a: FYPO:0001906 ! abnormal cellular response to thiamine starvation
 intersection_of: PATO:0001551
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0006995
