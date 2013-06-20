@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 19:06:2013 16:10
+date: 20:06:2013 15:30
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -8657,6 +8657,8 @@ creation_date: 2011-11-11T10:42:36Z
 id: FYPO:0000653
 name: DNA binding phenotype
 def: "A phenotype that affects DNA binding." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast DNA binding phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0001092 ! binding phenotype
 intersection_of: FYPO:0000001 ! phenotype
@@ -8670,6 +8672,7 @@ name: catalytic activity phenotype
 def: "A phenotype that affects a catalytic activity." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "enzymatic activity phenotype" EXACT [PomBase:mah]
 synonym: "fission yeast catalytic activity phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000652 ! molecular function phenotype
@@ -9252,6 +9255,7 @@ name: protein binding phenotype
 def: "A phenotype that protein affects the binding of one protein to another." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast protein binding phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0001092 ! binding phenotype
 intersection_of: FYPO:0000001 ! phenotype
@@ -29287,6 +29291,7 @@ id: FYPO:0002114
 name: transporter activity phenotype
 def: "A phenotype that affects a transporter activity." [PomBase:mah]
 subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast transporter activity phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000652 ! molecular function phenotype
 intersection_of: FYPO:0000001 ! phenotype
@@ -29522,6 +29527,8 @@ creation_date: 2013-05-07T16:53:59Z
 id: FYPO:0002131
 name: RNA binding phenotype
 def: "A phenotype that affects RNA binding." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast DNA binding phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0001092 ! binding phenotype
 intersection_of: FYPO:0000001 ! phenotype
@@ -31688,6 +31695,198 @@ intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0030479
 created_by: midori
 creation_date: 2013-06-13T16:13:52Z
+
+[Term]
+id: FYPO:0002298
+name: inviable mixed population including divided and undivided germinated spores, with elongated germ tubes
+def: "A mixed population phenotype in which all cells in a population are inviable germinated spores with elongated germ tubes, and in which some cells divide once and others do not divide. In the cells that divide once, an inviable cell forms from the growing end of the germ tube, but does not divide further." [PomBase:mah, PomBase:vw]
+comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+synonym: "essential; mixed population including divided and undivided germinated spores, with elongated germ tubes" RELATED [PomBase:mah]
+is_a: FYPO:0000317 ! mixed population
+relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
+relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
+relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+created_by: midori
+creation_date: 2013-06-20T11:41:51Z
+
+[Term]
+id: FYPO:0002299
+name: inviable mixed population including divided and undivided germinated spores, with curved germ tubes
+def: "A mixed population phenotype in which all cells in a population are inviable germinated spores with curved germ tubes, and in which some cells divide once and others do not divide. In the cells that divide once, an inviable cell forms from the growing end of the germ tube, but does not divide further." [PomBase:mah, PomBase:vw]
+comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+synonym: "essential; mixed population including divided and undivided germinated spores, with curved germ tubes" RELATED [PomBase:mah]
+is_a: FYPO:0000317 ! mixed population
+relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
+relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
+relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+created_by: midori
+creation_date: 2013-06-20T11:44:24Z
+
+[Term]
+id: FYPO:0002300
+name: inviable mixed population including germinated spores with elongated germ tubes and elongated cells
+def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of germinated spores with elongated germ tubes and elongated vegetative cells. The elongated cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
+comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+synonym: "essential; mixed population including germinated spores with elongated germ tubes and elongated cells" RELATED [PomBase:mah]
+synonym: "inviable mixed population including germinated spores with elongated germ tubes and long cells" EXACT [PomBase:mah]
+is_a: FYPO:0000317 ! mixed population
+relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
+relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
+relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+created_by: midori
+creation_date: 2013-06-20T11:57:57Z
+
+[Term]
+id: FYPO:0002301
+name: inviable microcolony, curved septated cells
+def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that are curved along the long axis and contain one or more septa. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+synonym: "inviable microcolony, curved septated vegetative cells" EXACT [PomBase:mah]
+is_a: FYPO:0002231 ! inviable microcolony, curved cells
+relationship: comprises_cells_with_phenotype FYPO:0002282 ! inviable curved septated vegetative cell
+created_by: midori
+creation_date: 2013-06-20T13:28:56Z
+
+[Term]
+id: FYPO:0002302
+name: inviable after spore germination, multiple cell divisions, spheroid cell
+def: "A phenotype in which a spore germinates to produce a cell that is spheroid, and undergoes two or more rounds of cell division and then dies." [PomBase:al, PomBase:mah]
+synonym: "essential; germinating spore, multiple cell divisions, spheroid cell" RELATED [PomBase:mah]
+synonym: "inviable following spore germination, multiple cell divisions, spheroid cell" EXACT [PomBase:mah]
+is_a: FYPO:0002148 ! inviable after spore germination, multiple cell divisions, abnormal morphology
+created_by: midori
+creation_date: 2013-06-20T13:52:46Z
+
+[Term]
+id: FYPO:0002303
+name: inviable mononucleate monoseptate vegetative cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cellis inviable, and has one nucleus and one septum." [PomBase:mah]
+synonym: "inviable mononucleate monoseptate cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
+synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
+is_a: FYPO:0001225 ! monoseptate
+is_a: FYPO:0002000 ! inviable septated mononucleate vegetative cell
+intersection_of: FYPO:0000136 ! cellular physical quality phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0001225 ! monoseptate
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2013-06-20T13:59:28Z
+
+[Term]
+id: FYPO:0002304
+name: decreased RNA level during cellular response to salt stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to salt stress is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mRNA level during cellular response to salt stress" NARROW [PomBase:mah]
+synonym: "decreased RNA level during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced RNA level during cellular response to salt stress" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: exists_during GO:0071472
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2013-06-20T14:29:07Z
+
+[Term]
+id: FYPO:0002305
+name: decreased RNA level during cellular response to non-ionic osmotic stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to non-ionic osmotic stress is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mRNA level during cellular response to non-ionic osmotic stress" NARROW [PomBase:mah]
+synonym: "decreased RNA level during cellular response to non-ionic osmotic stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced RNA level during cellular response to non-ionic osmotic stress" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: exists_during GO:0071471
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0001163
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2013-06-20T14:30:30Z
+
+[Term]
+id: FYPO:0002306
+name: abnormal 5-phosphoribose 1-diphosphate binding
+def: "A molecular function phenotype in which occurrence of 5-phosphoribose 1-diphosphate binding by a gene product (usually a protein) in a mutant is abnormal." [PomBase:mah]
+comment: This term can mean that the mutated gene product itself binds GTP differently from wild type, or that a mutation in one gene affects GTP binding by a second gene product. When using this term, it is therefore recommended to note the specific protein(s) affected.
+synonym: "abnormal 5-O-phosphono-alpha-D-ribofuranosyl diphosphate binding" EXACT [CHEBI:17111]
+synonym: "abnormal phosphoribosylpyrophosphate binding" EXACT [PomBase:al]
+is_a: FYPO:0000707 ! abnormal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+created_by: midori
+creation_date: 2013-06-20T15:05:41Z
+
+[Term]
+id: FYPO:0002307
+name: increased 5-phosphoribose 1-diphosphate binding
+def: "A molecular function phenotype in which occurrence of 5-phosphoribose 1-diphosphate binding by a gene product (usually a protein) in a mutant is increased." [PomBase:mah]
+comment: This term can mean that the mutated gene product itself binds GTP more than wild type, or that a mutation in one gene increases GTP binding by a second gene product. When using this term, it is therefore recommended to note the specific protein(s) affected.
+synonym: "increased 5-O-phosphono-alpha-D-ribofuranosyl diphosphate binding" EXACT [CHEBI:17111]
+synonym: "increased phosphoribosylpyrophosphate binding" EXACT [PomBase:al]
+is_a: FYPO:0002306 ! abnormal 5-phosphoribose 1-diphosphate binding
+created_by: midori
+creation_date: 2013-06-20T15:05:50Z
+
+[Term]
+id: FYPO:0002308
+name: abnormal IMP binding
+def: "A molecular function phenotype in which occurrence of IMP binding by a mutated gene product is abnormal." [PomBase:mah]
+is_a: FYPO:0000707 ! abnormal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+created_by: midori
+creation_date: 2013-06-20T15:19:22Z
+
+[Term]
+id: FYPO:0002309
+name: decreased IMP binding
+def: "A molecular function phenotype in which occurrence of IMP binding by a mutated gene product is decreased." [PomBase:mah]
+synonym: "reduced IMP binding" EXACT [PomBase:mah]
+is_a: FYPO:0002308 ! abnormal IMP binding
+created_by: midori
+creation_date: 2013-06-20T15:19:30Z
+
+[Term]
+id: FYPO:0002310
+name: abnormal GMP binding
+def: "A molecular function phenotype in which occurrence of GMP binding by a mutated gene product is abnormal." [PomBase:mah]
+is_a: FYPO:0000707 ! abnormal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0019002
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-06-20T15:21:00Z
+
+[Term]
+id: FYPO:0002311
+name: decreased GMP binding
+def: "A molecular function phenotype in which occurrence of GMP binding by a mutated gene product is decreased." [PomBase:mah]
+synonym: "reduced GMP binding" EXACT [PomBase:mah]
+is_a: FYPO:0002310 ! abnormal GMP binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0019002
+created_by: midori
+creation_date: 2013-06-20T15:21:09Z
+
+[Term]
+id: FYPO:0002312
+name: resistance to ionizing radiation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show decreased sensitivity to ionizing radiation." [PomBase:mah]
+synonym: "resistance to gamma irradiation" NARROW []
+synonym: "resistance to gamma radiation" NARROW []
+synonym: "resistance to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to ionizing radiation" EXACT [GO:0009414, PomBase:al]
+synonym: "resistant to IR" EXACT [PomBase:mah]
+is_a: FYPO:0000850 ! resistance to stress during vegetative growth
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0071479
+created_by: midori
+creation_date: 2013-06-20T15:28:55Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
