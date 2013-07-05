@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 21:06:2013 18:23
+date: 05:07:2013 16:20
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -2979,8 +2979,8 @@ synonym: "increased centromeric outer repeat transcript level" EXACT [PomBase:ma
 synonym: "increased level of centromeric outer repeat transcripts" EXACT [PomBase:mah]
 synonym: "increased level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards SO:0001905
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -3427,9 +3427,9 @@ synonym: "nuclear accumulation of Pap1 and Sty1" NARROW [PomBase:mah]
 synonym: "nuclear accumulation of protein" EXACT [PomBase:mah]
 synonym: "nuclear protein accumulation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005634
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -3800,7 +3800,8 @@ id: FYPO:0000284
 name: large and small daughter nuclei
 def: "A mitosis phenotype observed in the vegetative growth phase of the life cycle in which the nucleus divides unequally to produce one daughter nucleus that is larger than the other." [PMID:8769419, PomBase:mah]
 synonym: "large and small daughter nuclei during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000337 ! abnormal mitosis
+is_a: FYPO:0000062 ! abnormal nuclear morphology during vegetative growth
+relationship: output_of FYPO:0000337 ! abnormal mitosis
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -4519,7 +4520,6 @@ creation_date: 2011-06-13T04:23:38Z
 id: FYPO:0000341
 name: haplosufficient
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a single functional copy of a gene provides sufficient normal function in a diploid cell." [PomBase:mah]
-synonym: "haploproficient" EXACT [PomBase:mah]
 synonym: "haplosufficient during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001320 ! vegetative cell phenotype
 created_by: midori
@@ -8537,14 +8537,14 @@ creation_date: 2011-09-28T12:28:26Z
 
 [Term]
 id: FYPO:0000644
-name: normal protein localization
+name: normal protein localization during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cellular protein localization is normal." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal cellular protein localization" EXACT [PomBase:mah]
 synonym: "normal protein localisation" EXACT [PomBase:mah]
-synonym: "normal protein localization during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
 is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+is_a: FYPO:0002333 ! protein localization phenotype
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0034613
@@ -9819,7 +9819,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to actin cortical patch" EXACT [PomBase:mah]
 synonym: "normal protein localization to actin cortical patch during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0044379
@@ -10160,7 +10160,7 @@ id: FYPO:0000771
 name: normal nuclear pore distribution
 def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which the spatial arrangement of nuclear pores within the nuclear envelope is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal nuclear pore distribution during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0031081
@@ -10318,11 +10318,10 @@ creation_date: 2012-02-28T03:57:44Z
 
 [Term]
 id: FYPO:0000782
-name: mislocalized protein
+name: mislocalized protein during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein is observed in a particular location where it is not normally found." [PomBase:mah]
 comment: The difference between this term and 'abnormal protein localization' (FYPO:0000443) is that 'mislocalized protein' describes a protein that is observed in a place where it is not normally found, whereas 'abnormal protein localization' additionally encompasses the absence of protein from a place where it is normally found. FYPO:0000782 can therefore be used in any case where a protein is in a different location in a mutant compared to wild type, whereas additional information is usually required to support annotation to FYPO:0000443 or its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "mislocalised protein" EXACT [PomBase:mah]
-synonym: "mislocalized protein during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001320 ! vegetative cell phenotype
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
@@ -10338,7 +10337,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: Note that this term can be used to annotate any case where a protein is found in the cytoplasm in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "protein mislocalised to cytoplasm" EXACT [PomBase:mah]
 synonym: "protein mislocalized to cytoplasm during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000782 ! mislocalized protein
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CHEBI:36080
@@ -10355,7 +10354,7 @@ comment: Note that this term can be used to annotate any case where a protein is
 synonym: "protein mislocalised to nucleus" EXACT [PomBase:mah]
 synonym: "protein mislocalised to nucleus during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to nucleus during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000782 ! mislocalized protein
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CHEBI:36080
@@ -10571,8 +10570,8 @@ synonym: "increased accumulation of substance in growth medium" RELATED [PomBase
 synonym: "increased level of substance in growth medium" EXACT [PomBase:mah]
 synonym: "increased release of substance into growth medium" RELATED [PomBase:mah]
 is_a: FYPO:0001155 ! altered effect on growth medium
+intersection_of: PATO:0001162
 intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:24431
 created_by: midori
 creation_date: 2012-03-07T03:41:12Z
@@ -10618,8 +10617,8 @@ synonym: "increased concentration of glycerone in growth medium" EXACT [CHEBI:16
 synonym: "increased level of DHA in growth medium" EXACT [PomBase:mah]
 synonym: "increased release of DHA into growth medium" RELATED [PomBase:mah]
 is_a: FYPO:0000800 ! increased concentration of substance in growth medium
+intersection_of: PATO:0001162
 intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:16016
 created_by: midori
 creation_date: 2012-03-07T03:42:46Z
@@ -10818,8 +10817,8 @@ synonym: "decreased level of substance in growth medium" EXACT [PomBase:mah]
 synonym: "decreased release of substance into growth medium" RELATED [PomBase:mah]
 synonym: "reduced concentration of substance in growth medium" EXACT [PomBase:mah]
 is_a: FYPO:0001155 ! altered effect on growth medium
+intersection_of: PATO:0001163
 intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:24431
 created_by: midori
 creation_date: 2012-03-07T03:47:46Z
@@ -10834,8 +10833,8 @@ synonym: "increased level of pheromone in growth medium" EXACT [PomBase:mah]
 synonym: "increased release of pheromone into growth medium" RELATED [PomBase:mah]
 synonym: "pheromone production: increased" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000800 ! increased concentration of substance in growth medium
+intersection_of: PATO:0001162
 intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:38579
 created_by: midori
 creation_date: 2012-03-07T03:50:03Z
@@ -10848,8 +10847,8 @@ synonym: "increased accumulation of M-factor in growth medium" RELATED [PomBase:
 synonym: "increased level of M-factor in growth medium" EXACT [PomBase:mah]
 synonym: "increased release of M-factor into growth medium" RELATED [PomBase:mah]
 is_a: FYPO:0000817 ! increased concentration of pheromone in growth medium
+intersection_of: PATO:0001162
 intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:64120
 created_by: midori
 creation_date: 2012-03-07T04:12:02Z
@@ -10862,8 +10861,8 @@ synonym: "increased accumulation of P-factor in growth medium" RELATED [PomBase:
 synonym: "increased level of P-factor in growth medium" EXACT [PomBase:mah]
 synonym: "increased release of P-factor into growth medium" RELATED [PomBase:mah]
 is_a: FYPO:0000817 ! increased concentration of pheromone in growth medium
+intersection_of: PATO:0001162
 intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:64121
 created_by: midori
 creation_date: 2012-03-07T04:14:04Z
@@ -10879,8 +10878,8 @@ synonym: "decreased release of pheromone into growth medium" RELATED [PomBase:ma
 synonym: "pheromone production: decreased" RELATED [SGD:phenotype_annotation]
 synonym: "reduced concentration of pheromone in growth medium" EXACT [PomBase:mah]
 is_a: FYPO:0000816 ! decreased concentration of substance in growth medium
+intersection_of: PATO:0001163
 intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:38579
 created_by: midori
 creation_date: 2012-03-07T04:14:58Z
@@ -10894,8 +10893,8 @@ synonym: "decreased level of M-factor in growth medium" EXACT [PomBase:mah]
 synonym: "decreased release of M-factor into growth medium" RELATED [PomBase:mah]
 synonym: "reduced concentration of M-factor in growth medium" EXACT [PomBase:mah]
 is_a: FYPO:0000820 ! decreased concentration of pheromone in growth medium
+intersection_of: PATO:0001163
 intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:64120
 created_by: midori
 creation_date: 2012-03-07T04:15:08Z
@@ -10909,8 +10908,8 @@ synonym: "decreased level of P-factor in growth medium" EXACT [PomBase:mah]
 synonym: "decreased release of P-factor into growth medium" RELATED [PomBase:mah]
 synonym: "reduced concentration of P-factor in growth medium" EXACT [PomBase:mah]
 is_a: FYPO:0000820 ! decreased concentration of pheromone in growth medium
+intersection_of: PATO:0001163
 intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:64121
 created_by: midori
 creation_date: 2012-03-07T04:15:24Z
@@ -10951,9 +10950,9 @@ synonym: "RNA accumulation: increased during vegetative growth" RELATED [SGD:phe
 is_a: FYPO:0001326 ! altered RNA level during vegetative growth
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 is_a: FYPO:0001890 ! increased RNA level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-03-08T03:15:26Z
@@ -10971,8 +10970,8 @@ synonym: "reduced RNA level" EXACT [PomBase:mah]
 synonym: "RNA accumulation: decreased" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000824 ! altered RNA level
 is_a: FYPO:0000991 ! decreased level of substance in cell
+intersection_of: PATO:0001163
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-03-08T03:16:30Z
@@ -11105,8 +11104,8 @@ synonym: "protein/peptide accumulation: decreased" RELATED [SGD:phenotype_annota
 synonym: "reduced protein level" EXACT [PomBase:mah]
 is_a: FYPO:0000834 ! altered protein level
 is_a: FYPO:0000991 ! decreased level of substance in cell
+intersection_of: PATO:0001163
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-03-09T03:50:57Z
@@ -11121,8 +11120,8 @@ synonym: "increased protein accumulation" RELATED [PomBase:mah]
 synonym: "protein/peptide accumulation: increased" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000834 ! altered protein level
 is_a: FYPO:0000990 ! increased level of substance in cell
+intersection_of: PATO:0001162
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-03-09T03:51:05Z
@@ -11146,7 +11145,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to nucleus" EXACT [PomBase:mah]
 synonym: "normal protein localization to nucleus during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -11313,14 +11312,14 @@ creation_date: 2012-03-14T03:09:26Z
 [Term]
 id: FYPO:0000849
 name: increased cytoplasmic protein level during vegetative growth
-def: "A cell phenotype in which the amount of protein measured in the cytoplasm of a cell is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected.." [PomBase:mah]
+def: "A cell phenotype in which the amount of protein measured in the cytoplasm of a cell is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
 synonym: "cytoplasmic accumulation of protein" EXACT [PomBase:mah]
 synonym: "cytoplasmic protein accumulation during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased protein level in cytoplasm during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005737
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-03-14T04:24:49Z
@@ -12250,9 +12249,9 @@ synonym: "increased RNA level in nucleus during vegetative growth" EXACT [PomBas
 synonym: "nuclear accumulation of RNA" RELATED [PomBase:mah]
 synonym: "nuclear RNA accumulation during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005634
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-03-29T04:01:15Z
@@ -13364,8 +13363,8 @@ comment: This is a high-level term whose primary purpose is to organize terms be
 subset: qc_do_not_manually_annotate
 synonym: "increased accumulation of substance in cell" RELATED [PomBase:mah]
 is_a: FYPO:0000989 ! altered level of substance in cell
+intersection_of: PATO:0001162
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:24431
 created_by: midori
 creation_date: 2012-04-25T02:07:28Z
@@ -13378,8 +13377,8 @@ comment: This is a high-level term whose primary purpose is to organize terms be
 subset: qc_do_not_manually_annotate
 synonym: "reduced level of substance in cell" EXACT [PomBase:mah]
 is_a: FYPO:0000989 ! altered level of substance in cell
+intersection_of: PATO:0001163
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:24431
 created_by: midori
 creation_date: 2012-04-25T02:08:00Z
@@ -13411,9 +13410,9 @@ synonym: "decreased PI-3-P accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular phosphatidylinositol-3-phosphate level" EXACT [PomBase:mah]
 is_a: FYPO:0000992 ! altered cellular phosphatidylinositol-3-phosphate level
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:26034
 created_by: midori
 creation_date: 2012-04-25T02:18:12Z
@@ -13427,9 +13426,9 @@ synonym: "increased cellular PI-4-P level" EXACT [PomBase:al]
 synonym: "increased PI-4-P accumulation" RELATED [PomBase:al]
 is_a: FYPO:0001015 ! altered cellular phosphatidylinositol-4-phosphate level
 is_a: FYPO:0001286 ! increased cellular phosphoinositide level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:37530
 created_by: midori
 creation_date: 2012-04-25T02:19:52Z
@@ -14074,9 +14073,9 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "increased cellular thiamine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased thiamine accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:26948
 created_by: midori
 creation_date: 2012-05-09T05:09:40Z
@@ -14680,9 +14679,9 @@ synonym: "decreased polysaccharide level during vegetative growth" EXACT [PomBas
 synonym: "reduced polysaccharide level" EXACT [PomBase:mah]
 is_a: FYPO:0001085 ! altered polysaccharide level
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:18154
 created_by: midori
 creation_date: 2012-05-31T16:33:42Z
@@ -14696,9 +14695,9 @@ synonym: "decreased cell wall alpha-glucan accumulation" RELATED [PomBase:mah]
 synonym: "decreased cell wall alpha-glucan level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced cell wall alpha-glucan level" EXACT [PomBase:mah]
 is_a: FYPO:0002266 ! decreased cell wall polysaccharide level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0009277
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:22385
 created_by: midori
 creation_date: 2012-05-31T16:35:00Z
@@ -14712,9 +14711,9 @@ synonym: "decreased cell wall beta-glucan accumulation" RELATED [PomBase:mah]
 synonym: "decreased cell wall beta-glucan level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced cell wall beta-glucan level" EXACT [PomBase:mah]
 is_a: FYPO:0002266 ! decreased cell wall polysaccharide level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0009277
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:28793
 created_by: midori
 creation_date: 2012-05-31T16:36:19Z
@@ -14728,9 +14727,9 @@ synonym: "increased polysaccharide accumulation" RELATED [PomBase:mah]
 synonym: "increased polysaccharide level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001085 ! altered polysaccharide level
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:18154
 created_by: midori
 creation_date: 2012-05-31T16:37:01Z
@@ -14743,9 +14742,9 @@ synonym: "increased cell wall alpha-D-glucan level" EXACT [CHEBI:22385, PomBase:
 synonym: "increased cell wall alpha-glucan accumulation" RELATED [PomBase:mah]
 synonym: "increased cell wall alpha-glucan level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001083 ! increased polysaccharide level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0009277
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:22385
 created_by: midori
 creation_date: 2012-05-31T16:37:12Z
@@ -14962,10 +14961,10 @@ synonym: "decreased protein level during cellular response to hydrogen peroxide 
 synonym: "reduced protein level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
 is_a: FYPO:0001324 ! decreased protein level during vegetative growth
 is_a: FYPO:0001548 ! altered protein level during cellular response to hydrogen peroxide
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0070301
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-06-01T14:47:37Z
@@ -14979,10 +14978,10 @@ synonym: "increased protein accumulation during cellular response to hydrogen pe
 synonym: "increased protein level during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
 is_a: FYPO:0001548 ! altered protein level during cellular response to hydrogen peroxide
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0070301
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-06-01T14:48:16Z
@@ -15092,9 +15091,9 @@ synonym: "increased cellular GSSG level" EXACT [CHEBI:17858, PomBase:al]
 synonym: "increased cellular oxidised glutathione level" EXACT [CHEBI:17858, PomBase:al]
 synonym: "increased glutathione disulfide accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:17858
 created_by: midori
 creation_date: 2012-06-01T15:26:21Z
@@ -15155,10 +15154,10 @@ synonym: "decreased RNA accumulation during cellular response to hydrogen peroxi
 synonym: "decreased RNA level during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced RNA level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0070301
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-06-07T11:25:57Z
@@ -15174,9 +15173,9 @@ synonym: "decreased RNA accumulation during vegetative growth" RELATED [PomBase:
 synonym: "reduced RNA level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000826 ! decreased RNA level
 is_a: FYPO:0001326 ! altered RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-06-07T11:31:36Z
@@ -15423,9 +15422,9 @@ synonym: "increased 35S rRNA precursor accumulation" RELATED [PomBase:mah]
 synonym: "increased 35S rRNA precursor level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased 35S rRNA primary transcript level" EXACT [PomBase:mah, SO:0000325]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards SO:0000325
 created_by: midori
 creation_date: 2012-06-08T16:40:54Z
@@ -15451,9 +15450,9 @@ synonym: "decreased 25S rRNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased mature 25S rRNA transcript" EXACT [PomBase:vw]
 synonym: "reduced 25S rRNA level" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards SO:0001002
 created_by: midori
 creation_date: 2012-06-08T16:45:47Z
@@ -15468,9 +15467,9 @@ synonym: "decreased 5.8S rRNA level during vegetative growth" EXACT [PomBase:mah
 synonym: "decreased mature 5.8S rRNA transcript" EXACT [PomBase:vw]
 synonym: "reduced 5.8S rRNA level" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards SO:0000375
 created_by: midori
 creation_date: 2012-06-08T16:47:19Z
@@ -15573,9 +15572,9 @@ synonym: "increased Man9GlcNAc accumulation" RELATED [PomBase:mah]
 synonym: "increased Man9GlcNAc level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased Man9GlcNAc2 level" EXACT [PomBase:mah]
 is_a: FYPO:0001083 ! increased polysaccharide level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:59579
 created_by: midori
 creation_date: 2012-06-14T16:00:30Z
@@ -15672,9 +15671,9 @@ comment: Consider annotating to a term describing abnormal transcription or abno
 synonym: "decreased RNA accumulation during nitrogen starvation" RELATED [PomBase:mah]
 synonym: "reduced RNA level during nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000826 ! decreased RNA level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0006995
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-06-14T16:52:51Z
@@ -15701,9 +15700,9 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "increased cellular methylamine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased methylamine accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:16830
 created_by: midori
 creation_date: 2012-06-14T16:55:28Z
@@ -16220,9 +16219,9 @@ synonym: "increased beta-glucan accumulation" RELATED [PomBase:mah]
 synonym: "increased beta-glucan level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased cellular beta-glucan level" EXACT [PomBase:mah]
 is_a: FYPO:0001083 ! increased polysaccharide level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0009277
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:28793
 created_by: midori
 creation_date: 2012-07-05T15:53:01Z
@@ -16236,9 +16235,9 @@ synonym: "decreased galactomannan accumulation" RELATED [PomBase:mah]
 synonym: "decreased galactomannan level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced galactomannan level" EXACT [PomBase:mah]
 is_a: FYPO:0001080 ! decreased polysaccharide level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:27680
 created_by: midori
 creation_date: 2012-07-05T15:54:27Z
@@ -16270,9 +16269,9 @@ synonym: "decreased cellular calcium level during vegetative growth" EXACT [PomB
 synonym: "reduced cellular calcium level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
 is_a: FYPO:0001462 ! altered cellular calcium level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:29108
 created_by: midori
 creation_date: 2012-07-05T16:12:05Z
@@ -16286,9 +16285,9 @@ synonym: "increased cellular calcium ion level" EXACT [PomBase:mah]
 synonym: "increased cellular calcium level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 is_a: FYPO:0001462 ! altered cellular calcium level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:29108
 created_by: midori
 creation_date: 2012-07-05T16:13:54Z
@@ -16484,9 +16483,9 @@ synonym: "decreased Glc1Man9GlcNAc level during vegetative growth" EXACT [PomBas
 synonym: "decreased Glc1Man9GlcNAc2 level" EXACT [PomBase:mah]
 synonym: "reduced Glc1Man9GlcNAc level" EXACT [PomBase:mah]
 is_a: FYPO:0001080 ! decreased polysaccharide level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:59080
 created_by: midori
 creation_date: 2012-07-12T12:16:24Z
@@ -16580,9 +16579,9 @@ def: "A cell phenotype in which the amount of protein measured in a cell during 
 comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "increased protein accumulation during cellular response to nitrogen starvation" RELATED [PomBase:mah]
 is_a: FYPO:0000836 ! increased protein level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0006995
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-07-12T15:10:12Z
@@ -16595,10 +16594,10 @@ comment: Consider annotating to a term describing abnormal translation or abnorm
 synonym: "increased protein accumulation during cellular response to pheromone" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to pheromone during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0071444
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-07-12T15:13:41Z
@@ -16714,10 +16713,10 @@ synonym: "nuclear protein accumulation during cellular response to hydrogen pero
 synonym: "nuclear protein accumulation during cellular response to hydrogen peroxide during vegetative growth" RELATED [PomBase:mah]
 synonym: "nuclear protein accumulation in response to hydrogen peroxide" RELATED [PomBase:al]
 is_a: FYPO:0000255 ! increased nuclear protein level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0070301
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005634
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-07-13T16:39:13Z
@@ -16921,10 +16920,10 @@ synonym: "increased mRNA level during cellular response to adenine starvation" N
 synonym: "increased RNA accumulation during cellular response to adenine starvation" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to adenine starvation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0036223
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-07-16T15:56:42Z
@@ -16939,10 +16938,10 @@ synonym: "increased RNA accumulation during cellular response to vitamin B1" REL
 synonym: "increased RNA level during cellular response to thiamine" EXACT [GO:0071301, PomBase:mah]
 synonym: "increased RNA level during cellular response to vitamin B1 during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0071301
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-07-16T15:57:59Z
@@ -16958,10 +16957,10 @@ synonym: "decreased RNA level during cellular response to thiamine starvation" E
 synonym: "decreased RNA level during cellular response to vitamin B1 starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced RNA level during cellular response to vitamin B1 starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0036225
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-07-16T16:01:16Z
@@ -17071,10 +17070,10 @@ synonym: "increased protein accumulation during cellular response to oxygen" REL
 synonym: "increased protein level during cellular response to oxygen during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased protein level during cellular response to oxygen levels" EXACT [GO:0071453]
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0071453
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-07-19T16:01:11Z
@@ -17090,10 +17089,10 @@ synonym: "increased protein level during cellular response to hypoxia during veg
 synonym: "increased protein level during cellular response to increased oxygen tension" EXACT [GO:0071456]
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
 is_a: FYPO:0001549 ! altered protein level during cellular response to hypoxia
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0071456
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-07-19T16:03:44Z
@@ -17145,10 +17144,10 @@ synonym: "decreased RNA accumulation during cellular response to hypoxia" RELATE
 synonym: "decreased RNA level during cellular response to hyperoxic stress" EXACT [GO:0071456]
 synonym: "decreased RNA level during cellular response to hypoxia during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0071456
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-07-19T16:07:22Z
@@ -17359,10 +17358,10 @@ synonym: "decreased protein level during cellular response to increased oxygen t
 synonym: "reduced protein level during cellular response to hypoxia" EXACT [PomBase:mah]
 is_a: FYPO:0001324 ! decreased protein level during vegetative growth
 is_a: FYPO:0001549 ! altered protein level during cellular response to hypoxia
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0071456
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-07-19T17:21:36Z
@@ -17431,10 +17430,10 @@ synonym: "increased RNA level during cellular response to DEM" NARROW [PomBase:a
 synonym: "increased RNA level during cellular response to diethyl maleate" NARROW [PomBase:mah]
 synonym: "increased RNA level during cellular response to oxidative stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0034599
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-07-26T10:59:25Z
@@ -17451,10 +17450,10 @@ synonym: "decreased RNA level during cellular response to diethyl maleate" NARRO
 synonym: "decreased RNA level during cellular response to oxidative stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced RNA level during cellular response to oxidative stress" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0034599
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-07-26T11:06:41Z
@@ -17496,9 +17495,9 @@ comment: Consider annotating to a term describing abnormal translation or abnorm
 synonym: "decreased protein accumulation during cellular response to nitrogen starvation" RELATED [PomBase:mah]
 synonym: "reduced protein level during cellular response to nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000835 ! decreased protein level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0006995
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-07-26T11:59:16Z
@@ -17528,9 +17527,9 @@ synonym: "decreased cellular phosphatidylethanolamine level during vegetative gr
 synonym: "decreased phosphatidylethanolamine accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular phosphatidylethanolamine level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:16038
 created_by: midori
 creation_date: 2012-07-26T12:25:19Z
@@ -17544,9 +17543,9 @@ synonym: "increased cellular PI level" RELATED [PomBase:al]
 synonym: "increased PI accumulation" RELATED [PomBase:al]
 is_a: FYPO:0001290 ! altered cellular phosphoinositide level
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:18179
 created_by: midori
 creation_date: 2012-07-26T12:26:35Z
@@ -17575,9 +17574,9 @@ synonym: "increased cellular phospholipid level" EXACT [PomBase:mah]
 synonym: "increased phospholipid accumulation" RELATED [PomBase:mah]
 synonym: "increased phospholipid level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001287 ! altered phospholipid level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:16247
 created_by: midori
 creation_date: 2012-07-26T13:21:43Z
@@ -17591,9 +17590,9 @@ synonym: "decreased phospholipid accumulation" RELATED [PomBase:mah]
 synonym: "decreased phospholipid level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced phospholipid level" EXACT [PomBase:mah]
 is_a: FYPO:0001287 ! altered phospholipid level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:16247
 created_by: midori
 creation_date: 2012-07-26T13:22:15Z
@@ -18052,9 +18051,9 @@ synonym: "decreased protein accumulation during vegetative growth" RELATED [PomB
 synonym: "reduced protein level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000835 ! decreased protein level
 is_a: FYPO:0001325 ! altered protein level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-08-01T15:37:56Z
@@ -18104,9 +18103,9 @@ synonym: "increased protein accumulation during vegetative growth" RELATED [PomB
 synonym: "protein accumulation during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000836 ! increased protein level
 is_a: FYPO:0001325 ! altered protein level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-08-01T15:43:39Z
@@ -18133,9 +18132,9 @@ def: "A cell phenotype in which the amount of a specific substance measured in a
 synonym: "reduced level of substance in cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000991 ! decreased level of substance in cell
 is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:24431
 created_by: midori
 creation_date: 2012-08-01T16:23:22Z
@@ -18147,9 +18146,9 @@ def: "A cell phenotype in which the amount of a specific substance measured in a
 synonym: "increased accumulation of substance in cell during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000990 ! increased level of substance in cell
 is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:24431
 created_by: midori
 creation_date: 2012-08-01T16:24:14Z
@@ -18716,15 +18715,15 @@ creation_date: 2012-08-07T13:31:19Z
 [Term]
 id: FYPO:0001370
 name: abnormal protein localization
-def: "A cell phenotype that affects the localization of a protein in a cell. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." [PomBase:mah]
+def: "A cell phenotype in which the localization of a protein in a cell is abnormal. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 synonym: "abnormal cellular protein localisation" EXACT [PomBase:mah]
 synonym: "abnormal cellular protein localization" EXACT [PomBase:mah]
 synonym: "abnormal protein localisation" EXACT [PomBase:mah]
 synonym: "protein/peptide distribution: abnormal" RELATED [SGD:phenotype_annotation]
-is_a: FYPO:0000138 ! localization phenotype
 is_a: FYPO:0000628 ! abnormal cellular process
+is_a: FYPO:0002333 ! protein localization phenotype
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0034613
 intersection_of: qualifier PATO:0000460
@@ -18827,9 +18826,9 @@ synonym: "decreased cellular calcium ion level during cellular response to salt 
 synonym: "decreased cellular calcium level during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced cellular calcium level during cellular response to salt stress" EXACT [PomBase:mah]
 is_a: FYPO:0001197 ! decreased cellular calcium level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0071472
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:29108
 created_by: midori
 creation_date: 2012-08-07T14:58:22Z
@@ -18842,9 +18841,9 @@ synonym: "increased calcium accumulation during cellular response to salt stress
 synonym: "increased cellular calcium ion level during cellular response to salt stress" EXACT [PomBase:mah]
 synonym: "increased cellular calcium level during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001198 ! increased cellular calcium level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0071472
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:29108
 created_by: midori
 creation_date: 2012-08-07T14:58:54Z
@@ -18963,8 +18962,8 @@ id: FYPO:0001388
 name: decreased protein level in germinating spore
 def: "A cell phenotype in which the amount of protein measured in a cell is lower than normal during or just after spore germination. Total protein or a specific protein may be affected." [PomBase:mah]
 is_a: FYPO:0000835 ! decreased protein level
+intersection_of: PATO:0001163
 intersection_of: inheres_in CL:0000596
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-08-10T16:32:24Z
@@ -19160,7 +19159,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to cell cortex" EXACT [PomBase:mah]
 synonym: "normal protein localization to cell cortex during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -19302,9 +19301,9 @@ synonym: "decreased cellular sulphide level" EXACT [PomBase:mah]
 synonym: "reduced cellular sulfide level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
 is_a: FYPO:0001411 ! altered cellular sulfide level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:15138
 created_by: midori
 creation_date: 2012-08-16T16:54:55Z
@@ -19320,9 +19319,9 @@ synonym: "increased cellular sulfide level during vegetative growth" EXACT [PomB
 synonym: "increased cellular sulphide level" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 is_a: FYPO:0001411 ! altered cellular sulfide level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:15138
 created_by: midori
 creation_date: 2012-08-16T16:56:12Z
@@ -19758,9 +19757,9 @@ synonym: "increased cellular trehalose level during vegetative growth" EXACT [Po
 synonym: "increased trehalose accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 is_a: FYPO:0001446 ! altered cellular trehalose level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:27082
 created_by: midori
 creation_date: 2012-08-23T15:18:12Z
@@ -19798,8 +19797,8 @@ synonym: "reduced cellular trehalose level" EXACT [PomBase:mah]
 is_a: FYPO:0000991 ! decreased level of substance in cell
 is_a: FYPO:0001446 ! altered cellular trehalose level
 intersection_of: PATO:0001159
+intersection_of: PATO:0001163
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:27082
 created_by: midori
 creation_date: 2012-08-23T15:24:19Z
@@ -19923,10 +19922,10 @@ synonym: "increased RNA level during cellular response to endoplasmic reticulum 
 synonym: "increased RNA level during response to ER stress" EXACT [GO:0034976, PomBase:mah]
 synonym: "increased RNA level under ER stress-inducing conditions" RELATED [PomBase:vw]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0034976
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-08-23T16:26:07Z
@@ -20563,10 +20562,10 @@ synonym: "increased cellular trehalose level during vegetative growth and during
 synonym: "increased cellular trehalose level in response to osmotic stress" EXACT [PomBase:al]
 synonym: "increased trehalose accumulation during cellular response to osmotic stress" RELATED [PomBase:mah]
 is_a: FYPO:0001444 ! increased cellular trehalose level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0071470
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:27082
 created_by: midori
 creation_date: 2012-08-31T14:27:51Z
@@ -20593,9 +20592,9 @@ synonym: "decreased cellular trehalose accumulation during sporulation" RELATED 
 synonym: "reduced cellular trehalose level during sporulation" EXACT [PomBase:mah]
 is_a: FYPO:0001447 ! decreased cellular trehalose level
 intersection_of: PATO:0001159
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0030437
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:27082
 created_by: midori
 creation_date: 2012-08-31T14:31:44Z
@@ -20609,9 +20608,9 @@ synonym: "increased cellular phosphatidylserine level during vegetative growth" 
 synonym: "increased cellular PS level" EXACT [PomBase:mah]
 synonym: "increased phosphatidylserine accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:18303
 created_by: midori
 creation_date: 2012-08-31T14:45:54Z
@@ -20670,7 +20669,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to chromatin" EXACT [PomBase:mah]
 synonym: "normal protein localization to chromatin during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -20854,9 +20853,9 @@ synonym: "increased cellular L-gamma-glutamyl-L-cysteinylglycine level" EXACT [C
 synonym: "increased cellular reduced glutathione level" EXACT [CHEBI:16856, PomBase:al]
 synonym: "increased glutathione accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:16856
 created_by: midori
 creation_date: 2012-09-13T14:02:16Z
@@ -21033,9 +21032,9 @@ synonym: "decreased cellular zinc level during vegetative growth" EXACT [PomBase
 synonym: "decreased zinc accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular zinc level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:27365
 created_by: midori
 creation_date: 2012-09-13T15:43:51Z
@@ -21226,10 +21225,10 @@ synonym: "decreased RNA accumulation during cellular response to zinc ion" RELAT
 synonym: "decreased RNA level during cellular response to zinc" EXACT [GO:0071456]
 synonym: "decreased RNA level during cellular response to zinc ion during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0071294
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-09-14T14:26:22Z
@@ -21244,9 +21243,9 @@ synonym: "increased RNA accumulation during cellular response to zinc ion starva
 synonym: "increased RNA level during cellular response to zinc ion starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased RNA level during cellular response to zinc starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0034224
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-09-14T14:28:30Z
@@ -21311,10 +21310,10 @@ synonym: "increased protein accumulation during cellular response to zinc ion st
 synonym: "increased protein level during cellular response to zinc ion starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased protein level during cellular response to zinc starvation" EXACT [GO:0071453]
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0034224
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:36080
 created_by: midori
 creation_date: 2012-09-14T14:37:37Z
@@ -21327,9 +21326,9 @@ synonym: "increased cellular zinc ion level" EXACT [PomBase:mah]
 synonym: "increased cellular zinc level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased zinc accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:27365
 created_by: midori
 creation_date: 2012-09-14T14:42:05Z
@@ -21445,9 +21444,9 @@ synonym: "decreased threonine accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular threonine level" EXACT [PomBase:mah]
 synonym: "reduced level of threonine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:16857
 created_by: midori
 creation_date: 2012-09-14T16:44:29Z
@@ -21461,9 +21460,9 @@ synonym: "decreased cellular L-citrulline level" EXACT [PomBase:mah]
 synonym: "decreased citrulline accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular citrulline level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:16349
 created_by: midori
 creation_date: 2012-09-14T16:45:19Z
@@ -21478,9 +21477,9 @@ synonym: "decreased cellular L-histidine level" EXACT [PomBase:mah]
 synonym: "decreased histidine accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular histidine level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:15971
 created_by: midori
 creation_date: 2012-09-14T16:46:05Z
@@ -21496,9 +21495,9 @@ synonym: "decreased cellular L-glutamate level" EXACT [PomBase:mah]
 synonym: "decreased glutamate accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular glutamate level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:29989
 created_by: midori
 creation_date: 2012-09-14T16:46:41Z
@@ -21513,9 +21512,9 @@ synonym: "decreased cellular ornithine level during vegetative growth" EXACT [Po
 synonym: "decreased ornithine accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular ornithine level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:15729
 created_by: midori
 creation_date: 2012-09-14T16:47:41Z
@@ -21528,9 +21527,9 @@ synonym: "increased cellular L-threonine level" EXACT [CHEBI:16856, PomBase:al]
 synonym: "increased cellular threonine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased threonine accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:16857
 created_by: midori
 creation_date: 2012-09-14T16:48:22Z
@@ -21543,9 +21542,9 @@ synonym: "increased cellular citrulline level during vegetative growth" EXACT [P
 synonym: "increased cellular L-citrulline level" EXACT [CHEBI:16856, PomBase:al]
 synonym: "increased citrulline accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:16349
 created_by: midori
 creation_date: 2012-09-14T16:49:05Z
@@ -21558,9 +21557,9 @@ synonym: "increased cellular histidine level during vegetative growth" EXACT [Po
 synonym: "increased cellular L-histidine level" EXACT [CHEBI:16856, PomBase:al]
 synonym: "increased histidine accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:15971
 created_by: midori
 creation_date: 2012-09-14T16:49:35Z
@@ -21573,9 +21572,9 @@ synonym: "increased cellular glutamate level during vegetative growth" EXACT [Po
 synonym: "increased cellular L-glutamate level" EXACT [CHEBI:16856, PomBase:al]
 synonym: "increased glutamate accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:29989
 created_by: midori
 creation_date: 2012-09-14T16:50:25Z
@@ -21588,9 +21587,9 @@ synonym: "increased cellular L-ornithine level" EXACT [CHEBI:16856, PomBase:al]
 synonym: "increased cellular ornithine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased ornithine accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:15729
 created_by: midori
 creation_date: 2012-09-14T16:51:00Z
@@ -21606,9 +21605,9 @@ synonym: "decreased cellular reduced glutathione level" EXACT [CHEBI:16856, PomB
 synonym: "decreased glutathione accumulation" RELATED [PomBase:mah]
 synonym: "reduced cellular glutathione level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:16856
 created_by: midori
 creation_date: 2012-09-14T16:51:27Z
@@ -21651,10 +21650,10 @@ synonym: "increased mRNA level during cellular response to rapamycin" NARROW [Po
 synonym: "increased RNA accumulation during cellular response to rapamycin" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to rapamycin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: exists_during GO:0072752
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2012-09-20T14:11:44Z
@@ -21847,7 +21846,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to cell tip" EXACT [PomBase:mah]
 synonym: "normal protein localization to cell tip during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 created_by: midori
 creation_date: 2012-09-21T15:26:58Z
@@ -22091,9 +22090,9 @@ synonym: "decreased vacuolar level of substance" EXACT [PomBase:mah]
 synonym: "reduced level of substance in vacuole" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
 is_a: FYPO:0001601 ! altered level of substance in vacuole
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:24431
 created_by: midori
 creation_date: 2012-09-27T13:07:26Z
@@ -22139,9 +22138,9 @@ synonym: "decreased level of substance in cytosol during vegetative growth" EXAC
 synonym: "reduced level of substance in cytosol" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
 is_a: FYPO:0001604 ! altered level of substance in cytosol
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005829
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:24431
 created_by: midori
 creation_date: 2012-09-27T13:18:39Z
@@ -22172,9 +22171,9 @@ synonym: "decreased vacuolar L-aspartate level" EXACT [PomBase:mah]
 synonym: "reduced level of aspartate in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar aspartate level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:29993
 created_by: midori
 creation_date: 2012-09-27T13:35:58Z
@@ -22190,9 +22189,9 @@ synonym: "decreased vacuolar L-glutamate level" EXACT [PomBase:mah]
 synonym: "reduced level of glutamate in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar glutamate level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:29989
 created_by: midori
 creation_date: 2012-09-27T13:37:52Z
@@ -22207,9 +22206,9 @@ synonym: "decreased vacuolar ornithine level during vegetative growth" EXACT [Po
 synonym: "reduced level of ornithine in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar ornithine level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:15729
 created_by: midori
 creation_date: 2012-09-27T13:38:40Z
@@ -22224,9 +22223,9 @@ synonym: "decreased vacuolar lysine level during vegetative growth" EXACT [PomBa
 synonym: "reduced level of lysine in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar lysine level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:18019
 created_by: midori
 creation_date: 2012-09-27T13:40:52Z
@@ -22241,9 +22240,9 @@ synonym: "decreased vacuolar L-histidine level" EXACT [PomBase:mah]
 synonym: "reduced level of histidine in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar histidine level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:15971
 created_by: midori
 creation_date: 2012-09-27T13:41:34Z
@@ -22258,9 +22257,9 @@ synonym: "decreased vacuolar L-arginine level" EXACT [PomBase:mah]
 synonym: "reduced level of arginine in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar arginine level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:16467
 created_by: midori
 creation_date: 2012-09-27T13:42:12Z
@@ -22277,9 +22276,9 @@ synonym: "decreased level of aspartate in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular aspartate level" EXACT [PomBase:mah]
 synonym: "reduced level of aspartate in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:29993
 created_by: midori
 creation_date: 2012-09-27T13:57:23Z
@@ -22294,9 +22293,9 @@ synonym: "decreased level of valine in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular valine level" EXACT [PomBase:mah]
 synonym: "reduced level of valine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:16414
 created_by: midori
 creation_date: 2012-09-27T14:00:08Z
@@ -22311,9 +22310,9 @@ synonym: "decreased level of isoleucine in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular isoleucine level" EXACT [PomBase:mah]
 synonym: "reduced level of isoleucine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:17191
 created_by: midori
 creation_date: 2012-09-27T14:02:19Z
@@ -22328,9 +22327,9 @@ synonym: "decreased level of lysine in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular lysine level" EXACT [PomBase:mah]
 synonym: "reduced level of lysine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:18019
 created_by: midori
 creation_date: 2012-09-27T14:03:22Z
@@ -22345,9 +22344,9 @@ synonym: "decreased level of arginine in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular arginine level" EXACT [PomBase:mah]
 synonym: "reduced level of arginine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:16467
 created_by: midori
 creation_date: 2012-09-27T14:04:37Z
@@ -22710,9 +22709,9 @@ synonym: "decreased cellular lithium level during vegetative growth" EXACT [PomB
 synonym: "decreased lithium accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular lithium level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:49713
 created_by: midori
 creation_date: 2012-09-27T14:48:30Z
@@ -22955,8 +22954,8 @@ synonym: "reduced cellular cAMP level" EXACT [PomBase:mah]
 is_a: FYPO:0000991 ! decreased level of substance in cell
 is_a: FYPO:0001659 ! altered cellular cAMP level
 intersection_of: PATO:0001159
+intersection_of: PATO:0001163
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:17489
 created_by: midori
 creation_date: 2012-10-03T15:56:53Z
@@ -22970,8 +22969,8 @@ synonym: "increased cellular cAMP level during vegetative growth" EXACT [PomBase
 synonym: "increased cellular cyclic AMP level" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 is_a: FYPO:0001659 ! altered cellular cAMP level
+intersection_of: PATO:0001162
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:17489
 created_by: midori
 creation_date: 2012-10-03T15:57:15Z
@@ -22985,9 +22984,9 @@ synonym: "decreased cellular cyclic AMP level during cellular response to glucos
 synonym: "reduced cellular cAMP level during glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001660 ! decreased cellular cAMP level
 intersection_of: PATO:0001159
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0042149
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:17489
 created_by: midori
 creation_date: 2012-10-03T15:57:38Z
@@ -23000,9 +22999,9 @@ synonym: "increased cAMP accumulation during cellular response to glucose starva
 synonym: "increased cellular cAMP level in response to glucose starvation" EXACT [PomBase:al]
 synonym: "increased cellular cyclic AMP level and during cellular response to glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001661 ! increased cellular cAMP level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0042149
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:17489
 created_by: midori
 creation_date: 2012-10-03T15:58:30Z
@@ -23015,9 +23014,9 @@ synonym: "increased cAMP accumulation during cellular response to glucose stimul
 synonym: "increased cellular cAMP level in response to glucose stimulus" EXACT [PomBase:al]
 synonym: "increased cellular cyclic AMP level during cellular response to glucose stimulus" EXACT [PomBase:mah]
 is_a: FYPO:0001661 ! increased cellular cAMP level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0071333
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:17489
 created_by: midori
 creation_date: 2012-10-03T16:03:24Z
@@ -23031,9 +23030,9 @@ synonym: "decreased cellular cAMP level in response to glucose stimulus" EXACT [
 synonym: "decreased cellular cyclic AMP level during cellular response to glucose stimulus" EXACT [PomBase:mah]
 synonym: "reduced cellular cAMP level during cellular response to glucose stimulus" EXACT [PomBase:mah]
 is_a: FYPO:0001660 ! decreased cellular cAMP level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0071333
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:17489
 created_by: midori
 creation_date: 2012-10-03T16:07:39Z
@@ -23287,10 +23286,10 @@ synonym: "decreased RNA accumulation during cellular response to purvalanol A" R
 synonym: "decreased RNA level during cellular response to purvalanol A during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced RNA level during cellular response to purvalanol A" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: exists_during GO:0072754
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:47600
 created_by: midori
 creation_date: 2012-11-02T15:37:15Z
@@ -23304,10 +23303,10 @@ synonym: "increased mRNA level during cellular response to purvalanol A" NARROW 
 synonym: "increased RNA accumulation during cellular response to purvalanol A" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to purvalanol A during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: exists_during GO:0072754
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:47600
 created_by: midori
 creation_date: 2012-11-02T15:39:06Z
@@ -23926,9 +23925,9 @@ synonym: "decreased level of glutamine in cell" EXACT [PomBase:mah]
 synonym: "reduced cellular glutamine level" EXACT [PomBase:mah]
 synonym: "reduced level of glutamine in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:18050
 created_by: midori
 creation_date: 2012-11-08T15:16:02Z
@@ -23941,9 +23940,9 @@ synonym: "increased cellular L-serine level" EXACT [CHEBI:16856, PomBase:al]
 synonym: "increased cellular serine level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased serine accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:17115
 created_by: midori
 creation_date: 2012-11-08T15:31:11Z
@@ -23972,9 +23971,9 @@ synonym: "increased level of substance in vacuole during vegetative growth" EXAC
 synonym: "increased vacuolar level of substance" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 is_a: FYPO:0001601 ! altered level of substance in vacuole
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:24431
 created_by: midori
 creation_date: 2012-11-08T15:33:48Z
@@ -23988,9 +23987,9 @@ synonym: "increased vacuolar glutamate level during vegetative growth" EXACT [Po
 synonym: "increased vacuolar glutamic acid level" RELATED [PomBase:mah]
 synonym: "increased vacuolar L-glutamate level" EXACT [PomBase:mah]
 is_a: FYPO:0001730 ! increased level of substance in vacuole
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:29989
 created_by: midori
 creation_date: 2012-11-08T15:35:05Z
@@ -24005,9 +24004,9 @@ synonym: "decreased vacuolar L-glutamine level" EXACT [PomBase:mah]
 synonym: "reduced level of glutamine in vacuole" EXACT [PomBase:mah]
 synonym: "reduced vacuolar glutamine level" EXACT [PomBase:mah]
 is_a: FYPO:0001602 ! decreased level of substance in vacuole
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:18050
 created_by: midori
 creation_date: 2012-11-08T15:38:07Z
@@ -24581,7 +24580,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "normal protein localisation to eisosome filament" EXACT [PomBase:mah]
 synonym: "normal protein localization to eisosome filament during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal protein localization to linear eisosome" EXACT [PomBase:mah]
-is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -24741,7 +24740,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to cytoplasm" EXACT [PomBase:mah]
 synonym: "normal protein localization to cytoplasm during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 created_by: midori
 creation_date: 2012-11-21T15:36:24Z
@@ -24852,7 +24851,7 @@ synonym: "protein mislocalised to centromere" EXACT [PomBase:mah]
 synonym: "protein mislocalised to centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to chromosome, centromeric region" EXACT [GO:0000775]
-is_a: FYPO:0000782 ! mislocalized protein
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CHEBI:36080
@@ -25098,9 +25097,9 @@ synonym: "increased 5-phosphoribosyl diphosphate level during vegetative growth"
 synonym: "increased cellular 5-phosphoribosyl diphosphate level" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 is_a: FYPO:0001811 ! altered 5-phosphoribosyl diphosphate level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:17111
 created_by: midori
 creation_date: 2012-11-29T12:03:40Z
@@ -25408,7 +25407,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "normal protein localisation to spindle pole body" EXACT [PomBase:mah]
 synonym: "normal protein localization to SPB" EXACT [PomBase:mah]
 synonym: "normal protein localization to spindle pole body during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000644 ! normal protein localization
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -26150,8 +26149,8 @@ synonym: "increased RNA accumulation" RELATED [PomBase:mah]
 synonym: "RNA accumulation: increased" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000824 ! altered RNA level
 is_a: FYPO:0000990 ! increased level of substance in cell
+intersection_of: PATO:0001162
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:47600
 created_by: midori
 creation_date: 2013-01-30T15:36:51Z
@@ -26968,9 +26967,9 @@ synonym: "increased level of substance in cytosol during vegetative growth" EXAC
 synonym: "reduced level of substance in cytosol" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 is_a: FYPO:0001604 ! altered level of substance in cytosol
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005829
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:24431
 created_by: midori
 creation_date: 2013-02-07T12:53:32Z
@@ -26984,9 +26983,9 @@ synonym: "increased cytosolic calcium ion level during vegetative growth" EXACT 
 synonym: "increased level of calcium ions in cytosol" EXACT [PomBase:mah]
 synonym: "increased levels of free cytosolic calcium" EXACT [PomBase:vw]
 is_a: FYPO:0001948 ! increased level of substance in cytosol
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005829
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:29108
 created_by: midori
 creation_date: 2013-02-07T12:54:36Z
@@ -27350,9 +27349,9 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "increased cell wall galactomannan accumulation" RELATED [PomBase:mah]
 synonym: "increased cell wall galactomannan level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001083 ! increased polysaccharide level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0009277
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:27680
 created_by: midori
 creation_date: 2013-02-07T16:08:34Z
@@ -27381,9 +27380,9 @@ synonym: "increased lariat intron level during vegetative growth" EXACT [PomBase
 synonym: "increased level of lariat introns" EXACT [PomBase:vw]
 synonym: "lariat intron accumulation" RELATED [PomBase:vw]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards SO:0001958
 created_by: midori
 creation_date: 2013-02-13T14:38:24Z
@@ -27610,7 +27609,7 @@ def: "A phenotype in which vegetative cell population growth is normal (i.e. ind
 synonym: "normal cell population growth in presence of polymyxin B" EXACT [PomBase:mah]
 synonym: "normal cellular response to polymyxin B" RELATED [PomBase:al, PomBase:mah]
 synonym: "normal growth on polymyxin B" BROAD [PomBase:mah]
-synonym: "normal vegetative cell population growth on papulacandin B" EXACT [PomBase:mah]
+synonym: "normal vegetative cell population growth on polymixin B" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: inheres_in BTO:0000316
@@ -27771,9 +27770,9 @@ synonym: "increased cellular iron ion level" EXACT [PomBase:mah]
 synonym: "increased cellular iron level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased iron accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:24875
 created_by: midori
 creation_date: 2013-02-27T14:37:50Z
@@ -27867,9 +27866,9 @@ synonym: "increased RNA level during cellular response to iron ion starvation du
 synonym: "increased RNA level during cellular response to iron starvation" EXACT [PomBase:mah]
 synonym: "increased RNA level during iron ion starvation" EXACT [PomBase:al]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0010106
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2013-02-27T15:22:02Z
@@ -27955,9 +27954,9 @@ def: "A cell phenotype in which the amount of RNA measured in a cell when the ce
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "increased RNA accumulation during nitrogen starvation" RELATED [PomBase:mah]
 is_a: FYPO:0001890 ! increased RNA level
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0006995
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2013-02-28T13:42:00Z
@@ -28251,10 +28250,10 @@ synonym: "decreased RNA level during cellular response to iron starvation" EXACT
 synonym: "decreased RNA level during iron ion starvation" EXACT [PomBase:al]
 synonym: "reduced RNA level during cellular response to iron ion starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0010106
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2013-03-14T15:30:48Z
@@ -29693,9 +29692,9 @@ synonym: "reduced cellular ROS level in stationary phase" EXACT [PomBase:mah]
 is_a: FYPO:0000991 ! decreased level of substance in cell
 is_a: FYPO:0002142 ! altered cellular reactive oxygen species level
 intersection_of: PATO:0001159
+intersection_of: PATO:0001163
 intersection_of: during GO:0060274
 intersection_of: inheres_in CL:0000000
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:26523
 created_by: midori
 creation_date: 2013-05-08T16:20:07Z
@@ -30743,9 +30742,9 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "increased cellular triglyceride level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased triglyceride accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:17855
 created_by: midori
 creation_date: 2013-06-05T17:03:18Z
@@ -30845,9 +30844,9 @@ synonym: "decreased sterol ester accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular sterol ester level" EXACT [PomBase:mah]
 synonym: "reduced level of sterol ester in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:35915
 created_by: midori
 creation_date: 2013-06-06T15:18:37Z
@@ -30859,9 +30858,9 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "increased cellular sterol ester level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased sterol ester accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:35915
 created_by: midori
 creation_date: 2013-06-06T15:20:19Z
@@ -31252,8 +31251,8 @@ synonym: "increased concentration of polysaccharides in growth medium" EXACT [Po
 synonym: "increased level of polysaccharide in growth medium" EXACT [PomBase:mah]
 synonym: "increased release of polysaccharide into growth medium" RELATED [PomBase:mah]
 is_a: FYPO:0000800 ! increased concentration of substance in growth medium
+intersection_of: PATO:0001162
 intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:18154
 created_by: midori
 creation_date: 2013-06-12T14:46:22Z
@@ -31267,9 +31266,9 @@ synonym: "decreased cell wall galactomannan level during vegetative growth" EXAC
 synonym: "reduced cell wall galactomannan level" EXACT [PomBase:mah]
 is_a: FYPO:0001082 ! decreased cell wall beta-glucan level
 is_a: FYPO:0001195 ! decreased galactomannan level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0009277
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:27680
 created_by: midori
 creation_date: 2013-06-12T14:48:20Z
@@ -31282,9 +31281,9 @@ synonym: "decreased cell wall polysaccharide accumulation" RELATED [PomBase:mah]
 synonym: "decreased cell wall polysaccharide level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced cell wall polysaccharide level" EXACT [PomBase:mah]
 is_a: FYPO:0001080 ! decreased polysaccharide level
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0009277
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:18154
 created_by: midori
 creation_date: 2013-06-12T14:48:41Z
@@ -31533,10 +31532,10 @@ synonym: "decreased mRNA level during cellular response to osmotic stress" NARRO
 synonym: "decreased RNA level during cellular response to osmotic stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced RNA level during cellular response to osmotic stress" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0071470
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2013-06-13T13:09:14Z
@@ -31550,10 +31549,10 @@ synonym: "decreased RNA accumulation during cellular response to heat" RELATED [
 synonym: "decreased RNA level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased RNA level during cellular response to heat shock" NARROW [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0034605
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2013-06-13T13:13:48Z
@@ -31756,7 +31755,7 @@ creation_date: 2013-06-20T13:52:46Z
 [Term]
 id: FYPO:0002303
 name: inviable mononucleate monoseptate vegetative cell
-def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cellis inviable, and has one nucleus and one septum." [PomBase:mah]
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, and has one nucleus and one septum." [PomBase:mah]
 synonym: "inviable mononucleate monoseptate cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
 synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
@@ -31780,10 +31779,10 @@ synonym: "decreased mRNA level during cellular response to salt stress" NARROW [
 synonym: "decreased RNA level during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced RNA level during cellular response to salt stress" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0071472
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2013-06-20T14:29:07Z
@@ -31797,10 +31796,10 @@ synonym: "decreased mRNA level during cellular response to non-ionic osmotic str
 synonym: "decreased RNA level during cellular response to non-ionic osmotic stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced RNA level during cellular response to non-ionic osmotic stress" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0071471
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2013-06-20T14:30:30Z
@@ -31966,9 +31965,9 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "increased cellular squalene level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased citrulline accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:15440
 created_by: midori
 creation_date: 2013-06-21T14:48:26Z
@@ -31980,9 +31979,9 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "increased cellular ergosterol level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased ergosterol accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:16933
 created_by: midori
 creation_date: 2013-06-21T14:49:08Z
@@ -31994,9 +31993,9 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "increased cellular lanosterol level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased lanosterol accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001162
 intersection_of: towards CHEBI:16521
 created_by: midori
 creation_date: 2013-06-21T14:49:57Z
@@ -32009,9 +32008,9 @@ synonym: "decreased cellular squalene level during vegetative growth" EXACT [Pom
 synonym: "decreased squalene accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular squalene level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:15440
 created_by: midori
 creation_date: 2013-06-21T14:51:34Z
@@ -32024,9 +32023,9 @@ synonym: "decreased cellular ergosterol level during vegetative growth" EXACT [P
 synonym: "decreased ergosterol accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular squalene level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:16933
 created_by: midori
 creation_date: 2013-06-21T14:52:35Z
@@ -32074,9 +32073,9 @@ synonym: "decreased cellular lanosterol level during vegetative growth" EXACT [P
 synonym: "decreased ergosterol accumulation" RELATED [PomBase:al]
 synonym: "reduced cellular lanosterol level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
-intersection_of: qualifier PATO:0001163
 intersection_of: towards CHEBI:16521
 created_by: midori
 creation_date: 2013-06-21T15:03:47Z
@@ -32190,6 +32189,45 @@ intersection_of: occurs_at SO:0001799
 intersection_of: qualifier PATO:0002051
 created_by: midori
 creation_date: 2013-06-21T17:31:19Z
+
+[Term]
+id: FYPO:0002332
+name: normal protein localization to Golgi apparatus
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the Golgi apparatus is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to Golgi apparatus" EXACT [PomBase:mah]
+synonym: "normal protein localization to Golgi apparatus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034067
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-07-05T15:54:40Z
+
+[Term]
+id: FYPO:0002333
+name: protein localization phenotype
+def: "A cell phenotype that affects the localization of a the localization of a protein in a cell." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+synonym: "cellular protein localization phenotype" EXACT [GO:0034613]
+synonym: "fission yeast protein localization phenotype" EXACT [PomBase:mah]
+synonym: "protein localisation phenotype" EXACT [PomBase:mah]
+is_a: FYPO:0000138 ! localization phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0034613
+created_by: midori
+creation_date: 2013-07-05T15:59:48Z
+
+[Term]
+id: FYPO:0002334
+name: haploproficient
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a diploid cell with a single functional copy of a gene grows faster than a diploid with two (on no) functional copies." [PMID:23531409, PomBase:mah]
+synonym: "haploproficient during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001320 ! vegetative cell phenotype
+created_by: midori
+creation_date: 2013-07-05T16:12:09Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
@@ -32313,4 +32351,3 @@ id: towards
 name: towards
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
 xref: OBO_REL:towards
-
