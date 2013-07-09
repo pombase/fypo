@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 05:07:2013 16:20
+date: 09:07:2013 17:20
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -1643,6 +1643,7 @@ synonym: "multiseptate cells" EXACT [PomBase:al]
 synonym: "multiseptate during vegetative growth" EXACT [PomBase:mah]
 synonym: "septation defects, multiple septa" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+is_a: FYPO:0002342 ! septated cell
 intersection_of: PATO:0000470
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -3685,7 +3686,6 @@ is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
 intersection_of: PATO:0000498
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0000087
-intersection_of: inheres_in GO:0007091
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -4501,6 +4501,7 @@ synonym: "asymmetrically located septum" EXACT [PomBase:mah]
 synonym: "mislocalised septum" EXACT [PomBase:mah]
 synonym: "mislocalized septum during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+is_a: FYPO:0002342 ! septated cell
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -16663,6 +16664,7 @@ name: monoseptate
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell contains a single septum." [PomBase:mah]
 synonym: "monoseptate during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+is_a: FYPO:0002342 ! septated cell
 created_by: midori
 creation_date: 2012-07-12T15:42:41Z
 
@@ -18991,8 +18993,8 @@ def: "A septation phenotype observed in the vegetative growth phase of the life 
 synonym: "abnormal septum orientation" EXACT [PomBase:mah]
 synonym: "misoriented septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "tilted septum" EXACT [PomBase:al]
-is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
 is_a: FYPO:0002023 ! abnormal septum morphology
+is_a: FYPO:0002342 ! septated cell
 intersection_of: PATO:0000133
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -21834,7 +21836,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein localisation to cell tip" EXACT [GO:0034504, PomBase:mah]
 synonym: "decreased protein localization to cell tip during vegetative growth" EXACT [PomBase:mah]
-synonym: "reduced protein localization to nucleus" EXACT [PomBase:mah]
+synonym: "reduced protein localization to cell tip" EXACT [PomBase:mah]
 is_a: FYPO:0001584 ! abnormal protein localization to cell tip
 created_by: midori
 creation_date: 2012-09-21T15:26:32Z
@@ -27595,7 +27597,6 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
 intersection_of: has_part FYPO:0000060 ! mononucleate
-intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001391 ! mislocalized septum, near new end
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: output_of FYPO:0002017 ! abnormal cell cycle arrest in mitotic interphase before NETO
@@ -27685,6 +27686,7 @@ intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000060 ! mononucleate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 intersection_of: has_part FYPO:0002069 ! mislocalized nucleus
+intersection_of: has_part FYPO:0002342 ! septated cell
 relationship: output_of FYPO:0001973 ! abnormal cytokinetic cell separation, with abnormal nuclear division
 created_by: midori
 creation_date: 2013-02-27T13:08:58Z
@@ -30323,6 +30325,12 @@ is_a: FYPO:0000025 ! swollen cell
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
 is_a: FYPO:0002190 ! inviable swollen spheroid vegetative cell
 is_a: FYPO:0002240 ! swollen septated spheroid vegetative cell
+intersection_of: FYPO:0000136 ! cellular physical quality phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000021 ! spheroid vegetative cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0002342 ! septated cell
 created_by: midori
 creation_date: 2013-06-04T17:09:31Z
 
@@ -30433,6 +30441,11 @@ synonym: "essential; stubby septated vegetative cell" RELATED [PomBase:mah]
 synonym: "inviable stubby septated cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "stubby septated inviable vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0002107 ! inviable stubby vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000024 ! stubby cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0002342 ! septated cell
 created_by: midori
 creation_date: 2013-06-05T13:23:12Z
 
@@ -30928,6 +30941,11 @@ name: swollen septated spheroid vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is shaped in the form of a spheroid, has one or more septa, and has a larger volume than normal." [PomBase:mah]
 synonym: "swollen septated rounded vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0000945 ! swollen spheroid vegetative cell
+intersection_of: FYPO:0000136 ! cellular physical quality phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000021 ! spheroid vegetative cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0002342 ! septated cell
 created_by: midori
 creation_date: 2013-06-06T16:24:19Z
 
@@ -30937,6 +30955,11 @@ name: normal volume septated spheroid vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is shaped in the form of a spheroid, has one or more septa, and has a normal volume." [PomBase:mah]
 synonym: "normal volume septated rounded vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0000946 ! normal volume spheroid vegetative cell
+intersection_of: FYPO:0000136 ! cellular physical quality phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000021 ! spheroid vegetative cell
+intersection_of: has_part FYPO:0000926 ! normal volume vegetative cell
+intersection_of: has_part FYPO:0002342 ! septated cell
 created_by: midori
 creation_date: 2013-06-06T16:26:51Z
 
@@ -31472,6 +31495,11 @@ synonym: "essential; curved septated vegetative cell" RELATED [PomBase:mah]
 synonym: "inviable curved septated cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
 is_a: FYPO:0002113 ! inviable curved vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000016 ! curved vegetative cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0002342 ! septated cell
 created_by: midori
 creation_date: 2013-06-12T16:30:43Z
 
@@ -32229,6 +32257,121 @@ is_a: FYPO:0001320 ! vegetative cell phenotype
 created_by: midori
 creation_date: 2013-07-05T16:12:09Z
 
+[Term]
+id: FYPO:0002335
+name: normal chromatin silencing
+def: "A transcription regulation phenotype observed in the vegetative growth phase of the life cycle in which chromatin silencing is normal (i.e. indistinguishable from wild type). Chromatin silencing is repression of transcription by altering the structure of chromatin, e.g. by conversion of large regions of DNA into heterochromatin." [GO:0006342, PomBase:mah]
+synonym: "normal chromatin silencing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000624 ! abnormal negative regulation of transcription
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006342
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-07-09T13:52:25Z
+
+[Term]
+id: FYPO:0002336
+name: normal chromatin silencing at silent mating-type cassette
+def: "A transcription regulation phenotype observed in the vegetative growth phase of the life cycle in which chromatin silencing at the silent mating-type cassettes is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal chromatin silencing at silent mating-type cassette during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002335 ! normal chromatin silencing
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030466
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-07-09T13:52:36Z
+
+[Term]
+id: FYPO:0002337
+name: inviable elongated mononucleate vegetative cell with mislocalized nucleus
+def: "A cell phenotype in which a cell contains a single septum, has one nucleus that is not in the normal location, is elongated, and is inviable." [PomBase:mah, PomBase:vw]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "elongated inviable vegetative cell, with mislocalized mononucleus" EXACT [PomBase:vw]
+synonym: "inviable elongated mononucleate cell with abnormal nucleus location" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate cell with abnormal nucleus position" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate cell with displaced nucleus" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate cell with mislocalised nucleus" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate cell with mislocalized nucleus during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate cell with misplaced nucleus" EXACT [PomBase:mah]
+synonym: "inviable long mononucleate cell with mislocalized nucleus" EXACT [PomBase:vw]
+synonym: "inviable vegetative elongated mononucleate cell with mislocalized nucleus" EXACT [PomBase:mah]
+is_a: FYPO:0001490 ! inviable elongated vegetative cell
+is_a: FYPO:0001916 ! elongated mononucleate cell
+intersection_of: FYPO:0000136 ! cellular physical quality phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0002069 ! mislocalized nucleus
+created_by: midori
+creation_date: 2013-07-09T14:14:25Z
+
+[Term]
+id: FYPO:0002338
+name: abnormal protein localization to nuclear periphery
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nuclear periphery is abnormal. The nuclear periphery is the portion of the nuclear lumen proximal to the inner nuclear membrane." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to nuclear periphery" EXACT [GO:0034504, PomBase:mah]
+synonym: "abnormal protein localization to nuclear periphery during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+created_by: midori
+creation_date: 2013-07-09T14:38:16Z
+
+[Term]
+id: FYPO:0002339
+name: decreased protein localization to nuclear periphery
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nuclear periphery is decreased. The nuclear periphery is the portion of the nuclear lumen proximal to the inner nuclear membrane." [GO:0034399, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to nuclear periphery" EXACT [PomBase:mah]
+synonym: "decreased protein localization to nuclear periphery during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to nuclear periphery" EXACT [PomBase:mah]
+is_a: FYPO:0002338 ! abnormal protein localization to nuclear periphery
+created_by: midori
+creation_date: 2013-07-09T14:39:15Z
+
+[Term]
+id: FYPO:0002340
+name: decreased DNA recombination
+def: "A cellular process phenotype in which the occurrence of DNA recombination is decreased." [PomBase:mah]
+synonym: "decreased DNA recombination during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased DNA recombination frequency" EXACT [PomBase:mah]
+synonym: "decreased DNA recombination rate" RELATED [PomBase:mah]
+is_a: FYPO:0001345 ! abnormal DNA recombination during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006310
+created_by: midori
+creation_date: 2013-07-09T15:19:36Z
+
+[Term]
+id: FYPO:0002341
+name: increased duration of DNA damage checkpoint
+def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint remains activated longer than in wild type under any specified set of conditions." [PomBase:mah]
+synonym: "delayed DNA damage checkpoint deactivation" EXACT [PomBase:mah]
+is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+intersection_of: PATO:0000498
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0000077
+created_by: midori
+creation_date: 2013-07-09T15:43:06Z
+
+[Term]
+id: FYPO:0002342
+name: septated cell
+def: "A physical cellular phenotype in which the cell contains one or more septa." [PomBase:mah]
+synonym: "septated cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "septum present" EXACT [PomBase:mah]
+is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+intersection_of: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000467
+intersection_of: towards GO:0000935
+created_by: midori
+creation_date: 2013-07-09T16:05:43Z
+
 [Typedef]
 id: comprises_cells_with_phenotype
 name: comprises cells with phenotype
@@ -32351,3 +32494,4 @@ id: towards
 name: towards
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
 xref: OBO_REL:towards
+
