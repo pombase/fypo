@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:07:2013 17:20
+date: 12:07:2013 15:43
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -4195,7 +4195,7 @@ synonym: "inviable after spore germination" EXACT [PomBase:mah]
 synonym: "inviable germinating spore" RELATED [PomBase:mah]
 is_a: FYPO:0001489 ! inviable vegetative cell
 intersection_of: FYPO:0000049 ! inviable cell
-intersection_of: inheres_in CL:0000596
+intersection_of: inheres_in CL:0000334
 intersection_of: is_preceded_by GO:0009847
 created_by: midori
 creation_date: 2011-04-27T01:13:41Z
@@ -21172,7 +21172,7 @@ creation_date: 2012-09-13T16:10:13Z
 [Term]
 id: FYPO:0001543
 name: normal cellular phosphorus level
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of phosphorus measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of a phosphorus-containing substance measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular phosphorus accumulation" RELATED [PomBase:mah]
 synonym: "normal cellular phosphorus level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
@@ -27682,7 +27682,6 @@ synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
 is_a: FYPO:0000060 ! mononucleate
 intersection_of: FYPO:0000136 ! cellular physical quality phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000060 ! mononucleate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 intersection_of: has_part FYPO:0002069 ! mislocalized nucleus
@@ -32262,7 +32261,6 @@ id: FYPO:0002335
 name: normal chromatin silencing
 def: "A transcription regulation phenotype observed in the vegetative growth phase of the life cycle in which chromatin silencing is normal (i.e. indistinguishable from wild type). Chromatin silencing is repression of transcription by altering the structure of chromatin, e.g. by conversion of large regions of DNA into heterochromatin." [GO:0006342, PomBase:mah]
 synonym: "normal chromatin silencing during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000624 ! abnormal negative regulation of transcription
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -32316,7 +32314,11 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to nuclear periphery" EXACT [GO:0034504, PomBase:mah]
 synonym: "abnormal protein localization to nuclear periphery during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+is_a: FYPO:0001129 ! abnormal protein localization to nucleus
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990139
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2013-07-09T14:38:16Z
 
@@ -32328,7 +32330,11 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "decreased protein localisation to nuclear periphery" EXACT [PomBase:mah]
 synonym: "decreased protein localization to nuclear periphery during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced protein localization to nuclear periphery" EXACT [PomBase:mah]
+is_a: FYPO:0001514 ! decreased protein localization to nucleus
 is_a: FYPO:0002338 ! abnormal protein localization to nuclear periphery
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990139
 created_by: midori
 creation_date: 2013-07-09T14:39:15Z
 
@@ -32371,6 +32377,45 @@ intersection_of: qualifier PATO:0000467
 intersection_of: towards GO:0000935
 created_by: midori
 creation_date: 2013-07-09T16:05:43Z
+
+[Term]
+id: FYPO:0002343
+name: normal cell population growth on terbinafine
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing terbinafine." [PomBase:mah]
+synonym: "normal cell population growth in presence of terbinafine" EXACT [PomBase:mah]
+synonym: "normal cellular response to terbinafine" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on terbinafine" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on terbinafine" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:156831
+created_by: midori
+creation_date: 2013-07-12T13:23:16Z
+
+[Term]
+id: FYPO:0002344
+name: sensitive to phleomycin
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity phleomycin. Cells stop growing (and may die) at a concentration of phleomycin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to phleomycin" EXACT [PomBase:mah]
+synonym: "sensitive to phleomycin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+created_by: midori
+creation_date: 2013-07-12T14:33:03Z
+
+[Term]
+id: FYPO:0002345
+name: sensitive to oxaliplatin
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to oxaliplatin. Cells stop growing (and may die) at a concentration of oxaliplatin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to oxaliplatin" EXACT [PomBase:mah]
+synonym: "sensitive to oxaliplatin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:31941
+created_by: midori
+creation_date: 2013-07-12T14:43:28Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
