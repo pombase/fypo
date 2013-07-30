@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 30:07:2013 15:41
+date: 30:07:2013 18:14
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -742,7 +742,7 @@ id: FYPO:0000054
 name: abnormal microtubule cytoskeleton organization
 alt_id: FYPO:0000053
 def: "A phenotype that affects the organization of the microtubule cytoskeleton. Microtubule cytoskeleton organization is a cellular process that results in the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures comprising microtubules and their associated proteins." [GO:0000226, PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that an abnormal microtubule cytoskeleton organization process may, but does not necessarily, result in abnormal microtubule cytoskeleton morphology.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that an abnormal microtubule cytoskeleton organization process may, but does not necessarily, result in a physically abnormal abnormal microtubule cytoskeleton.
 subset: qc_do_not_manually_annotate
 synonym: "abnormal microtubule cytoskeleton organisation" EXACT [PomBase:mah]
 synonym: "abnormal microtubule organisation" RELATED [PomBase:mah]
@@ -4650,6 +4650,7 @@ comment: Note that an abnormal actin cytoskeleton organization process may, but 
 synonym: "abnormal actin cytoskeleton morphology during vegetative growth" EXACT [PomBase:mah]
 synonym: "actin cytoskeleton morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000352 ! abnormal cytoskeleton morphology
+is_a: FYPO:0002398 ! abnormal actin cytoskeleton
 intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0015629
@@ -4679,12 +4680,11 @@ def: "A physical cellular phenotype observed in the vegetative growth phase of t
 comment: Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in abnormal cytoskeleton morphology.
 synonym: "abnormal cytoskeleton morphology during vegetative growth" EXACT [PomBase:mah]
 synonym: "cytoskeleton morphology: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000287 ! abnormal subcellular component
+is_a: FYPO:0002397 ! abnormal cytoskeleton
 intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005856
 intersection_of: qualifier PATO:0000460
-relationship: output_of FYPO:0000802 ! abnormal cytoskeleton organization
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -8550,8 +8550,9 @@ name: normal protein localization during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cellular protein localization is normal." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal cellular protein localization" EXACT [PomBase:mah]
-synonym: "normal protein localisation" EXACT [PomBase:mah]
+synonym: "normal protein localisation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 is_a: FYPO:0001337 ! localization phenotype during vegetative growth
 is_a: FYPO:0002333 ! protein localization phenotype
 intersection_of: PATO:0000001
@@ -10589,7 +10590,7 @@ creation_date: 2012-03-07T03:41:12Z
 id: FYPO:0000801
 name: abnormal actin cytoskeleton organization
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cytoskeleton organization is abnormal." [GO:0030036, PMID:19713940, PomBase:mah]
-comment: Consider annotating to 'abnormal actin cytoskeleton morphology' (FYPO:0000350), but note that an abnormal actin cytoskeleton organization process may, but does not necessarily, result in abnormal actin cytoskeleton morphology.
+comment: Consider annotating to 'abnormal actin cytoskeleton' (FYPO:0002398), but note that an abnormal actin cytoskeleton organization process may, but does not necessarily, result in a physically abnormal abnormal actin cytoskeleton.
 synonym: "abnormal actin cytoskeleton organisation" EXACT [PomBase:mah]
 synonym: "abnormal actin cytoskeleton organization during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000296 ! actin cytoskeleton organization phenotype
@@ -10605,7 +10606,7 @@ creation_date: 2012-03-01T02:05:28Z
 id: FYPO:0000802
 name: abnormal cytoskeleton organization
 def: "A cellular process phenotype in which cytoskeleton organization is abnormal." [GO:0007010, PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in a physically abnormal abnormal cytoskeleton.
 subset: qc_do_not_manually_annotate
 synonym: "abnormal cytoskeleton organisation" EXACT [PomBase:mah]
 is_a: FYPO:0000335 ! abnormal cellular component organization
@@ -11155,7 +11156,6 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "normal protein localisation to nucleus" EXACT [PomBase:mah]
 synonym: "normal protein localization to nucleus during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
-is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0034504
@@ -11891,7 +11891,11 @@ id: FYPO:0000885
 name: abnormal histone H3-K9 trimethylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the trimethylation of lysine at position 9 of histone H3 in centromere outer repeat regions is abnormal." [PomBase:mah]
 synonym: "abnormal histone H3 K9 trimethylation at centromere outer repeat" EXACT [GO:0036124, PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at centromere otr" EXACT [PomBase:mah]
 synonym: "abnormal histone H3-K9 trimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "abnormal histone H3K9 trimethylation at centromere outer repeat" EXACT [PomBase:vw]
 synonym: "abnormal histone lysine H3 K9 trimethylation at centromere outer repeat" EXACT [GO:0036124, PomBase:mah]
 is_a: FYPO:0000864 ! abnormal histone H3-K9 trimethylation at centromere
@@ -11908,7 +11912,11 @@ id: FYPO:0000886
 name: abnormal histone H3-K9 dimethylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dimethylation of lysine at position 9 of histone H3 in centromere outer repeat regions is abnormal." [PomBase:mah]
 synonym: "abnormal histone H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at centromere otr" EXACT [PomBase:mah]
 synonym: "abnormal histone H3-K9 dimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "abnormal histone H3K9 dimethylation at centromere outer repeat" EXACT [PomBase:vw]
 synonym: "abnormal histone lysine H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000867 ! abnormal histone H3-K9 dimethylation at centromere
@@ -11924,6 +11932,10 @@ creation_date: 2012-03-20T12:29:52Z
 id: FYPO:0000887
 name: increased histone H3-K9 dimethylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dimethylation of lysine at position 9 of histone H3 in centromere outer repeat regions occurs to a greater extent than normal." [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "increased histone H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
 synonym: "increased histone H3-K9 dimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 dimethylation at centromere outer repeat" EXACT [PomBase:vw]
@@ -11941,11 +11953,15 @@ creation_date: 2012-03-20T01:25:53Z
 id: FYPO:0000888
 name: decreased histone H3-K9 dimethylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dimethylation of lysine at position 9 of histone H3 in centromere outer repeat regions occurs to a lower extent than normal." [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K9 dimethylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "decreased histone H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
 synonym: "decreased histone H3-K9 dimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 dimethylation at centromere outer repeat" EXACT [PomBase:vw]
+synonym: "decreased histone lysine H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
 synonym: "reduced histone H3-K9 dimethylation at centromere outer repeat" EXACT [PomBase:mah]
-synonym: "v histone lysine H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000877 ! decreased histone H3-K9 dimethylation at centromere
 is_a: FYPO:0000886 ! abnormal histone H3-K9 dimethylation at centromere outer repeat
 intersection_of: happens_during GO:0072690
@@ -11959,6 +11975,10 @@ creation_date: 2012-03-20T01:36:23Z
 id: FYPO:0000889
 name: increased histone H3-K9 trimethylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the trimethylation of lysine at position 9 of histone H3 in centromere outer repeat regions occurs to a greater extent than normal." [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "increased histone H3 K9 trimethylation at centromere outer repeat" EXACT [GO:0036124, PomBase:mah]
 synonym: "increased histone H3-K9 trimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 trimethylation at centromere outer repeat" EXACT [PomBase:vw]
@@ -11976,6 +11996,10 @@ creation_date: 2012-03-20T01:43:01Z
 id: FYPO:0000890
 name: decreased histone H3-K9 trimethylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the trimethylation of lysine at position 9 of histone H3 in centromere outer repeat regions occurs to a lower extent than normal." [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K9 trimethylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "decreased histone H3 K9 trimethylation at centromere outer repeat" EXACT [GO:0036124, PomBase:mah]
 synonym: "decreased histone H3-K9 trimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 trimethylation at centromere outer repeat" EXACT [PomBase:vw]
@@ -13042,7 +13066,11 @@ creation_date: 2012-04-12T12:39:39Z
 id: FYPO:0000965
 name: abnormal histone H3-K14 acetylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 14 of histone H3 in centromere outer repeat regions is abnormal." [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at centromere otr" EXACT [PomBase:mah]
 synonym: "abnormal histone H3-K14 acetylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "abnormal histone H3K14 acetylation at centromere outer repeat" EXACT [GO:0044154, PomBase:vw]
 is_a: FYPO:0000788 ! abnormal histone H3-K14 acetylation
 intersection_of: PATO:0000001
@@ -13057,6 +13085,10 @@ creation_date: 2012-04-12T12:56:33Z
 id: FYPO:0000966
 name: increased histone H3-K14 acetylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 14 of histone H3 in centromere outer repeat regions occurs to a greater extent than normal." [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "increased histone H3-K14 acetylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K14 acetylation at centromere outer repeat" EXACT [GO:0044154, PomBase:vw]
 is_a: FYPO:0000332 ! increased histone acetylation
@@ -13072,6 +13104,10 @@ creation_date: 2012-04-12T02:31:26Z
 id: FYPO:0000967
 name: decreased histone H3-K14 acetylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 14 of histone H3 in centromere outer repeat regions occurs to a lower extent than normal." [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K14 acetylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "decreased histone H3-K14 acetylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K14 acetylation at centromere outer repeat" EXACT [GO:0044154, PomBase:vw]
 synonym: "reduced histone H3-K14 acetylation at centromere outer repeat" EXACT [PomBase:mah]
@@ -18127,7 +18163,7 @@ creation_date: 2012-08-01T15:43:39Z
 id: FYPO:0001328
 name: abnormal cytoskeleton organization during vegetative growth
 def: "A cellular process phenotype in which cytoskeleton organization is abnormal in the vegetative growth phase of the cell cycle." [GO:0007010, PomBase:mah]
-comment: Consider annotating to 'abnormal cytoskeleton morphology' (FYPO:0000352), but note that an abnormal cytoskeleton organization process may, but does not necessarily, result in abnormal cytoskeleton morphology.
+comment: Consider annotating to 'abnormal cytoskeleton' (FYPO:0002397), but note that an abnormal cytoskeleton organization process may, but does not necessarily, result in a physically abnormal abnormal cytoskeleton.
 synonym: "abnormal cytoskeleton organisation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000802 ! abnormal cytoskeleton organization
 is_a: FYPO:0001353 ! abnormal cellular component organization during vegetative growth
@@ -18430,7 +18466,7 @@ creation_date: 2012-08-01T17:43:57Z
 id: FYPO:0001350
 name: abnormal microtubule cytoskeleton organization during vegetative growth
 def: "A phenotype that affects the organization of the microtubule cytoskeleton in the vegetative growth phase of the life cycle. Microtubule cytoskeleton organization is a cellular process that results in the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures comprising microtubules and their associated proteins." [GO:0000226, PomBase:mah]
-comment: Note that an abnormal microtubule cytoskeleton organization process may, but does not necessarily, result in abnormal microtubule cytoskeleton morphology.
+comment: Consider annotating to 'abnormal microtubule cytoskeleton' (FYPO:0002399), but note that an abnormal microtubule cytoskeleton organization process may, but does not necessarily, result in a physically abnormal abnormal microtubule cytoskeleton.
 synonym: "abnormal microtubule cytoskeleton organisation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal microtubule organisation during vegetative growth" RELATED [PomBase:mah]
 synonym: "abnormal microtubule organization during vegetative growth" RELATED [PomBase:mah]
@@ -18717,7 +18753,7 @@ comment: Note that the location of the contractile ring is determined by the loc
 synonym: "contractile ring displaced from cell centre" EXACT [PomBase:vw]
 synonym: "mislocalised actomyosin contractile ring" EXACT [PomBase:mah]
 synonym: "mislocalized actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
+is_a: FYPO:0002398 ! abnormal actin cytoskeleton
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005826
@@ -19175,7 +19211,6 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "normal protein localisation to cell cortex" EXACT [PomBase:mah]
 synonym: "normal protein localization to cell cortex during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
-is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0072697
@@ -19389,7 +19424,7 @@ name: mislocalized equatorial microtubule organizing center
 def: "A cell phenotype in which a cell forms an equatorial microtubule organizing center in an abnormal location. The normal location is at the center of the cell." [PomBase:mah]
 synonym: "mislocalised equatorial microtubule organizing center" EXACT [PomBase:mah]
 synonym: "mislocalized equatorial microtubule organizing center during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology
+is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000923
@@ -19403,11 +19438,11 @@ def: "A physical cellular phenotype observed in the vegetative growth phase of t
 comment: Note that an abnormal actin cytoskeleton organization process may, but does not necessarily, result in abnormal actin cytoskeleton morphology.
 synonym: "abnormal microtubule cytoskeleton morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000352 ! abnormal cytoskeleton morphology
+is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
 intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0015630
 intersection_of: qualifier PATO:0000460
-relationship: output_of FYPO:0001350 ! abnormal microtubule cytoskeleton organization during vegetative growth
 created_by: midori
 creation_date: 2012-08-22T12:00:57Z
 
@@ -20685,7 +20720,6 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "normal protein localisation to chromatin" EXACT [PomBase:mah]
 synonym: "normal protein localization to chromatin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
-is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0071168
@@ -21862,7 +21896,6 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "normal protein localisation to cell tip" EXACT [PomBase:mah]
 synonym: "normal protein localization to cell tip during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
-is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 created_by: midori
 creation_date: 2012-09-21T15:26:58Z
 
@@ -24596,7 +24629,6 @@ synonym: "normal protein localisation to eisosome filament" EXACT [PomBase:mah]
 synonym: "normal protein localization to eisosome filament during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal protein localization to linear eisosome" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
-is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0097446
@@ -24756,7 +24788,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "normal protein localisation to cytoplasm" EXACT [PomBase:mah]
 synonym: "normal protein localization to cytoplasm during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
-is_a: FYPO:0002388 ! normal protein localization during vegetative growth
+is_a: FYPO:0002388
 created_by: midori
 creation_date: 2012-11-21T15:36:24Z
 
@@ -25423,7 +25455,6 @@ synonym: "normal protein localisation to spindle pole body" EXACT [PomBase:mah]
 synonym: "normal protein localization to SPB" EXACT [PomBase:mah]
 synonym: "normal protein localization to spindle pole body during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
-is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0071988
@@ -27761,7 +27792,7 @@ id: FYPO:0002004
 name: microtubules absent from cell
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain detectable microtubules." [PomBase:mah]
 synonym: "absent microtubules" EXACT [PomBase:mah]
-is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology
+is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
 intersection_of: PATO:0002000
 intersection_of: during GO:0072690
 intersection_of: towards GO:0005874
@@ -28084,7 +28115,7 @@ id: FYPO:0002028
 name: multiple actomyosin contractile rings present
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more than one actomyosin contractile ring." [PMID:8834798, PomBase:mah]
 synonym: "actomyosin contractile rings present in greater numbers" EXACT [PomBase:mah]
-is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
+is_a: FYPO:0002398 ! abnormal actin cytoskeleton
 intersection_of: PATO:0000470
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005826
@@ -32238,6 +32269,10 @@ creation_date: 2013-06-21T15:36:29Z
 id: FYPO:0002331
 name: increased histone H3-K4 dimethylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dimethylation of lysine at position 4 of histone H3 in centromere outer repeat regions occurs to a greater extent than normal." [PomBase:mah]
+synonym: "abnormal histone H3-K4 dimethylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K4 dimethylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K4 dimethylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K4 dimethylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "increased histone H3 K4 dimethylation at centromere outer repeat" EXACT [GO:0044648, PomBase:mah]
 synonym: "increased histone H3-K4 dimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K4 dimethylation at centromere outer repeat" EXACT [PomBase:vw]
@@ -32765,6 +32800,10 @@ creation_date: 2013-07-25T12:16:39Z
 id: FYPO:0002369
 name: increased histone H3-K56 acetylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 56 of histone H3 in centromere outer repeat regions occurs to a greater extent than normal." [PomBase:mah]
+synonym: "abnormal histone H3-K56 acetylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K56 acetylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K56 acetylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K56 acetylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "increased histone H3-K56 acetylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K56 acetylation at centromere outer repeat" EXACT [GO:0097043, PomBase:vw]
 is_a: FYPO:0000332 ! increased histone acetylation
@@ -32817,7 +32856,7 @@ id: FYPO:0002373
 name: abnormal actin cortical patch localization during mitosis
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patch localization is abnormal during mitosis." [PomBase:mah]
 synonym: "abnormal actin cortical patch localisation during mitosis" EXACT [PomBase:mah]
-synonym: "abnormal actin cortical patch localization  during mitosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actin cortical patch localization during mitosis during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal actin patch localization during mitosis" EXACT [PomBase:vw]
 is_a: FYPO:0000190 ! abnormal actin cortical patch localization
 intersection_of: PATO:0000001
@@ -32928,12 +32967,16 @@ creation_date: 2013-07-25T16:27:44Z
 id: FYPO:0002381
 name: increased histone H3 acetylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which histone H3 acetylation occurs to a greater extent than normal in centromere outer repeat regions." [PomBase:mah]
+synonym: "abnormal histone H3 acetylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H3 acetylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3 acetylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3 acetylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "increased histone H3 acetylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0002361 ! abnormal histone H3 acetylation
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0043966
-intersection_of: qualifier PATO:0002051
 intersection_of: occurs_at SO:0001799
+intersection_of: qualifier PATO:0002051
 created_by: midori
 creation_date: 2013-07-30T12:21:23Z
 
@@ -32941,12 +32984,16 @@ creation_date: 2013-07-30T12:21:23Z
 id: FYPO:0002382
 name: increased histone H4 acetylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which histone H4 acetylation occurs to a greater extent than normal in centromere outer repeat regions." [PomBase:mah]
+synonym: "abnormal histone H4 acetylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H4 acetylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H4 acetylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H4 acetylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "increased histone H4 acetylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0002364 ! abnormal histone H4 acetylation
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0043967
-intersection_of: qualifier PATO:0002051
 intersection_of: occurs_at SO:0001799
+intersection_of: qualifier PATO:0002051
 created_by: midori
 creation_date: 2013-07-30T12:23:26Z
 
@@ -32955,6 +33002,10 @@ id: FYPO:0002383
 name: increased histone H3-K9 and H3-K14 acetylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at positions 9 and 14 of histone H3 in regions of the genome that are activel transcibed occurs to a greater extent than normal." [PMID:23851719, PomBase:mah]
 comment: Modifications detected by antibody (see http://www.millipore.com/coa.nsf/a73664f9f981af8c852569b9005b4eee/51ec49cf6807c0598525730600548fc0/$FILE/06-599-17300.pdf)
+synonym: "abnormal histone H3-K9 and H3-K14 acetylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 and H3-K14 acetylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H3-K9 and H3-K14 acetylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H3-K9 and H3-K14 acetylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "increased histone H3 acetylation (K9 and K14) at centromere outer repeat" EXACT [PMID:23851719]
 synonym: "increased histone H3-K9 and H3-K14 acetylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 and H3K14 acetylation at centromere outer repeat" EXACT [PomBase:mah]
@@ -32967,6 +33018,10 @@ id: FYPO:0002384
 name: increased histone H4-K5, H4-K8, H4-K12 and H4-K16 acetylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at positions 5, 8, 12 and 16 of histone H4 in regions of the genome that are activel transcibed occurs to a greater extent than normal." [PMID:23851719, PomBase:mah]
 comment: Modifications detected by antibody (see http://www.millipore.com/coa.nsf/a73664f9f981af8c852569b9005b4eee/aa10134d44ac430a8525730600550ec4/$FILE/06-866-19336.pdf).
+synonym: "abnormal histone H4-K5, H4-K8, H4-K12 and H4-K16 acetylation at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal histone H4-K5, H4-K8, H4-K12 and H4-K16 acetylation at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal histone H4-K5, H4-K8, H4-K12 and H4-K16 acetylation at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal histone H4-K5, H4-K8, H4-K12 and H4-K16 acetylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "increased histone H4 acetylation (K5, K8, K12 and K16) at centromere outer repeat" EXACT [PMID:23851719]
 synonym: "increased histone H4-K5, H4-K8, H4-K12 and H4-K16 acetylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H4K5, H4K8, H4K12 and H4K16 acetylation at centromere outer repeat" EXACT [PomBase:mah]
@@ -32992,8 +33047,12 @@ creation_date: 2013-07-30T14:48:45Z
 [Term]
 id: FYPO:0002386
 name: decreased protein localization to heterochromatin at centromere outer repeat
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to heterochromatin  at centromere outer repeat regions is decreased." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to heterochromatin at centromere outer repeat regions is decreased." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localization to heterochromatin at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to heterochromatin at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to heterochromatin at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal protein localization to heterochromatin at pericentromeric region" RELATED [PomBase:mah]
 synonym: "decreased protein localisation to heterochromatin at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "decreased protein localization to centromere outer repeat heterochromatin" EXACT [PomBase:mah]
 synonym: "decreased protein localization to heterochromatin at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
@@ -33009,7 +33068,7 @@ creation_date: 2013-07-30T14:55:26Z
 [Term]
 id: FYPO:0002387
 name: decreased protein localization to heterochromatin at telomere
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to heterochromatin  at telomeres is decreased." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to heterochromatin at telomeres is decreased." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein localisation to heterochromatin at telomere" EXACT [PomBase:mah]
 synonym: "decreased protein localization to heterochromatin at telomere during vegetative growth" EXACT [PomBase:mah]
@@ -33027,18 +33086,22 @@ creation_date: 2013-07-30T14:57:37Z
 [Term]
 id: FYPO:0002389
 name: normal protein localization to heterochromatin at centromere outer repeat
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to heterochromatin  at centromere outer repeat regions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to heterochromatin at centromere outer repeat regions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein localisation to heterochromatin at centromere outer repeat" EXACT [PomBase:mah]
+synonym: "normal protein localization at centromere otr" EXACT [PomBase:mah]
+synonym: "normal protein localization at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "normal protein localization at pericentric region" RELATED [PomBase:mah]
+synonym: "normal protein localization at pericentromeric region" RELATED [PomBase:mah]
 synonym: "normal protein localization to centromere outer repeat heterochromatin" EXACT [PomBase:mah]
 synonym: "normal protein localization to heterochromatin at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
-is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0097355
 intersection_of: occurs_at SO:0001799
 intersection_of: qualifier PATO:0000461
+relationship: has_part FYPO:0002396 ! normal maintenance of protein localization to heterochromatin at centromere outer repeat
 created_by: midori
 creation_date: 2013-07-30T15:02:49Z
 
@@ -33090,7 +33153,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 comment: When using this term, it is recommended to note the specific protein(s) affected.
 synonym: "abolished protein acetylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein acetylation abolished" EXACT [PomBase:mah]
-synonym: "protein acetylation absent" EXACT [PomBase:al ]
+synonym: "protein acetylation absent" EXACT [PomBase:al]
 is_a: FYPO:0000544 ! abolished protein modification
 is_a: FYPO:0002392 ! abnormal protein acetylation
 intersection_of: PATO:0001558
@@ -33118,6 +33181,10 @@ id: FYPO:0002395
 name: decreased maintenance of protein localization to heterochromatin at centromere outer repeat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the maintenance of localization of a protein at a location in heterochromatin at centromere outer repeat regions is decreased." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal maintenance of protein localization to heterochromatin at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal maintenance of protein localization to heterochromatin at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal maintenance of protein localization to heterochromatin at pericentric region" RELATED [PomBase:mah]
+synonym: "abnormal maintenance of protein localization to heterochromatin at pericentromeric region" RELATED [PomBase:mah]
 synonym: "decreased mainentance of protein localisation to heterochromatin at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "decreased maintenance of protein localization to centromere outer repeat heterochromatin" EXACT [PomBase:mah]
 synonym: "decreased maintenance of protein localization to heterochromatin at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
@@ -33131,12 +33198,80 @@ id: FYPO:0002396
 name: normal maintenance of protein localization to heterochromatin at centromere outer repeat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the maintenance of localization of a protein at a location in heterochromatin at centromere outer repeat regions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "normal mainentance of protein localisation to heterochromatin at centromere outer repeat" EXACT [PomBase:mah]
+synonym: "normal maintenance of protein localisation to heterochromatin at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "normal maintenance of protein localization to centromere outer repeat heterochromatin" EXACT [PomBase:mah]
 synonym: "normal maintenance of protein localization to heterochromatin at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0002388 ! normal protein localization during vegetative growth
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+is_a: FYPO:0002388
 created_by: midori
 creation_date: 2013-07-30T15:39:37Z
+
+[Term]
+id: FYPO:0002397
+name: abnormal cytoskeleton
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the amount, distribution, or morphology of all or part of the cytoskeleton is abnormal." [PomBase:mah]
+comment: Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in a physically abnormal cytoskeleton.
+synonym: "abnormal cytoskeleton during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cytoskeleton physical object quality" EXACT [PomBase:mah]
+is_a: FYPO:0000287 ! abnormal subcellular component
+intersection_of: PATO:0001241
+intersection_of: inheres_in GO:0005856
+intersection_of: qualifier PATO:0000460
+relationship: output_of FYPO:0000802 ! abnormal cytoskeleton organization
+created_by: midori
+creation_date: 2013-07-30T17:06:41Z
+
+[Term]
+id: FYPO:0002398
+name: abnormal actin cytoskeleton
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the amount, distribution, or morphology of all or part of the actin cytoskeleton is abnormal." [PomBase:mah]
+comment: Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in a physically abnormal actin cytoskeleton.
+synonym: "abnormal actin cytoskeleton during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actin cytoskeleton physical object quality" EXACT [PomBase:mah]
+is_a: FYPO:0002397 ! abnormal cytoskeleton
+intersection_of: PATO:0001241
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0015629
+intersection_of: qualifier PATO:0000460
+relationship: output_of FYPO:0000801 ! abnormal actin cytoskeleton organization
+created_by: midori
+creation_date: 2013-07-30T17:07:07Z
+
+[Term]
+id: FYPO:0002399
+name: abnormal microtubule cytoskeleton
+def: "A physical cellular phenotype in which the amount, distribution, or morphology of all or part of the microtubule cytoskeleton is abnormal." [PomBase:mah]
+comment: Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in a physically abnormal microtubule cytoskeleton.
+synonym: "abnormal microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal microtubule cytoskeleton physical object quality" EXACT [PomBase:mah]
+is_a: FYPO:0002397 ! abnormal cytoskeleton
+intersection_of: PATO:0001241
+intersection_of: inheres_in GO:0015630
+intersection_of: qualifier PATO:0000460
+relationship: output_of FYPO:0000054 ! abnormal microtubule cytoskeleton organization
+created_by: midori
+creation_date: 2013-07-30T17:07:17Z
+
+[Term]
+id: FYPO:0002400
+name: single microtubule bundle
+def: "A physical cellular phenotype in which all detectable microtubules are present in a single bundle." [PomBase:al, PomBase:mah]
+is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
+created_by: midori
+creation_date: 2013-07-30T17:51:31Z
+
+[Term]
+id: FYPO:0002401
+name: microtubule bundles present in greater numbers
+def: "A physical cellular phenotype in which cells contain more microtubule bundles than normal." [PomBase:mah]
+synonym: "extra microtubule bundles" EXACT [PomBase:mah]
+synonym: "increased level of MT bundles" EXACT [PomBase:al]
+is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
+intersection_of: PATO:0000470
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0097427
+created_by: midori
+creation_date: 2013-07-30T17:54:44Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
