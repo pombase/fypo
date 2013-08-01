@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 31:07:2013 17:18
+date: 01:08:2013 17:28
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -295,10 +295,10 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000021
 name: spheroid vegetative cell
-def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is shaped in the form of a spheroid. In spheroid cell<s, there is much less difference between the long and short axes of the cell than in wild type. Spheroid cells may shorter than normal, with approximately the same diameter as normal, or they may be enlarged." [PomBase:mah]
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is shaped in the form of a spheroid. In spheroid cells, there is much less difference between the long and short axes of the cell than in wild type. Spheroid cells may shorter than normal, with approximately the same diameter as normal, or they may be enlarged." [PomBase:mah]
 synonym: "cell morphology, round vegetative cell" RELATED [PomBase:mah]
 synonym: "cell morphology, rounded vegetative cell" RELATED [PomBase:mah]
-synonym: "rounded vegetative cell" EXACT []
+synonym: "rounded vegetative cell" EXACT [PomBase:mah]
 synonym: "spheroid cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001118 ! abnormal vegetative cell morphology
 is_a: FYPO:0001955 ! spheroid cell
@@ -25199,6 +25199,9 @@ synonym: "accumulation of Okazaki fragments during vegetative growth" EXACT [Pom
 synonym: "increased level of Okazaki fragments" EXACT [PomBase:mah]
 synonym: "Okazaki fragment accumulation" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: inheres_in CL:0000334
+intersection_of: towards SO:0001985
 created_by: midori
 creation_date: 2012-11-29T14:28:40Z
 
@@ -27172,7 +27175,7 @@ name: spheroid cell during nitrogen starvation
 def: "A cell morphology phenotype in which a cell is shaped in the form of a spheroid, when the cell is subject to nitrogen starvation. In spheroid cells, there is much less difference between the long and short axes of the cell than in wild type. Spheroid cells may shorter than normal, with approximately the same diameter as normal, or they may be enlarged." [PomBase:mah]
 synonym: "cell morphology, round cells during nitrogen starvation" RELATED [PomBase:mah]
 synonym: "cell morphology, rounded cells during nitrogen starvation" RELATED [PomBase:mah]
-synonym: "rounded cell during nitrogen starvation" EXACT []
+synonym: "rounded cell during nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000995 ! abnormal cell morphology during nitrogen starvation
 is_a: FYPO:0001955 ! spheroid cell
 intersection_of: PATO:0001865
@@ -31795,7 +31798,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "dispersed actin cortical patch localisation during mitotic interphase" EXACT [PomBase:mah]
 is_a: FYPO:0002021 ! dispersed actin cortical patch localization
 intersection_of: PATO:0001630
-intersection_of: exists_during GO:0007089
+intersection_of: exists_during GO:0051329
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0030479
 created_by: midori
@@ -32637,6 +32640,10 @@ synonym: "decreased histone lysine H3 K9 dimethylation at silent mating-type cas
 synonym: "decreased silent mating-type cassette histone H3-K9 dimethylation" EXACT [PomBase:mah]
 synonym: "reduced histone H3-K9 dimethylation at silent mating-type cassette" EXACT [PomBase:mah]
 is_a: FYPO:0000876 ! decreased histone H3-K9 dimethylation
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0036123
+intersection_of: occurs_at SO:0001984
+intersection_of: qualifier PATO:0002052
 created_by: midori
 creation_date: 2013-07-17T15:07:34Z
 
@@ -32972,8 +32979,8 @@ name: viable spheroid vegetative cell
 def: "A cell morphology phenotype in which a vegetatively growing cell is viable, and shaped in the form of a spheroid. In spheroid cells, there is much less difference between the long and short axes of the cell than in wild type. Spheroid cells may shorter than normal, with approximately the same diameter as normal, or they may be enlarged." [PomBase:mah]
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
 synonym: "spheroid viable cell" EXACT [PomBase:mah]
-synonym: "viable round vegetative cell" RELATED []
-synonym: "viable rounded vegetative cell" EXACT []
+synonym: "viable round vegetative cell" RELATED [PomBase:mah]
+synonym: "viable rounded vegetative cell" EXACT [PomBase:mah]
 synonym: "viable spheroid cell" EXACT [PomBase:mah]
 synonym: "viable spheroid cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000021 ! spheroid vegetative cell
@@ -33093,8 +33100,8 @@ name: decreased protein localization to telomeric heterochromatin
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to heterochromatin at telomeres is decreased." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein localisation to heterochromatin at telomere" EXACT [PomBase:mah]
-synonym: "decreased protein localization to heterochromatin at telomere during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased protein localization to heterochromatin at telomere" EXACT [PomBase:mah]
+synonym: "decreased protein localization to heterochromatin at telomere during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased protein localization to telomeric heterochromatin during vegetative growth" EXACT [PomBase:al]
 synonym: "reduced protein localization to heterochromatin at telomere" EXACT [PomBase:mah]
 is_a: FYPO:0002385 ! decreased protein localization to heterochromatin
@@ -33308,7 +33315,7 @@ id: FYPO:0002402
 name: viable swollen vegetative cell with abnormal cell shape
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is viable, and has an abnormal shape and a larger volume than normal." [PomBase:mah]
 synonym: "viable swollen cell with abnormal cell shape during vegetative growth" EXACT [PomBase:mah]
-synonym: "viable swollen misshapen vegetative cell" RELATED []
+synonym: "viable swollen misshapen vegetative cell" RELATED [PomBase:mah]
 is_a: FYPO:0002377 ! viable swollen vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
@@ -33495,7 +33502,7 @@ id: FYPO:0002415
 name: inviable swollen vegetative cell with abnormal cell shape
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, and has an abnormal shape and a larger volume than normal." [PomBase:mah]
 synonym: "inviable swollen cell with abnormal cell shape during vegetative growth" EXACT [PomBase:mah]
-synonym: "inviable swollen misshapen vegetative cell" RELATED []
+synonym: "inviable swollen misshapen vegetative cell" RELATED [PomBase:mah]
 is_a: FYPO:0002414 ! inviable swollen vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
@@ -33547,7 +33554,7 @@ id: FYPO:0002419
 name: inviable vegetative cell population after spore germination, without cell division
 def: "A cell population phenotype in which all vegetative cells arising from a population of germinated spores are inviable, and do not divide before dying." [PomBase:mah]
 synonym: "inviable germinated spore population, without cell division" EXACT [PomBase:mah]
-synonym: "inviable population of undivided germinated spores" EXACT []
+synonym: "inviable population of undivided germinated spores" EXACT [PomBase:mah]
 is_a: FYPO:0002147 ! inviable vegetative cell population after spore germination
 relationship: comprises_cells_with_phenotype FYPO:0001991 ! inviable after spore germination, without cell division
 created_by: midori
@@ -33580,7 +33587,7 @@ id: FYPO:0002422
 name: inviable vegetative cell population after spore germination, single or double cell division, abnormal cell shape
 def: "A cell population phenotype in which all vegetative cells arising from a population of germinated spores are inviable, have an abnormal shape and undergo one or two rounds of cell division." [PomBase:mah]
 synonym: "inviable germinated spore population, single or double cell division, abnormal cell shape" EXACT [PomBase:mah]
-synonym: "inviable population of germinated spores, single or double cell division, abnormal cell shape" EXACT []
+synonym: "inviable population of germinated spores, single or double cell division, abnormal cell shape" EXACT [PomBase:mah]
 is_a: FYPO:0002147 ! inviable vegetative cell population after spore germination
 relationship: comprises_cells_with_phenotype FYPO:0002421 ! inviable after spore germination, single or double cell division, abnormal cell shape
 created_by: midori
@@ -33591,12 +33598,39 @@ id: FYPO:0002423
 name: inviable after spore germination, without cell division, septated cells with abnormal cell shape
 def: "A phenotype in which a spore germinates to produce an inviable cell that forms a septum but does not divide, and that has an abnormal shape." [PomBase:mah]
 synonym: "essential; germinating spore, without cell division, septated cells with abnormal cell shape" RELATED [PomBase:mah]
-synonym: "inviable after spore germination, septated undivided abnormally shaped cell" EXACT []
+synonym: "inviable after spore germination, septated undivided abnormally shaped cell" EXACT [PomBase:mah]
 synonym: "inviable following spore germination, without cell division, septated cells with abnormal cell shape" EXACT [PomBase:mah]
 synonym: "inviable germinated spore, without cell division, septated cells with abnormal cell shape" EXACT [PomBase:mah]
 is_a: FYPO:0001991 ! inviable after spore germination, without cell division
 created_by: midori
 creation_date: 2013-07-31T17:14:02Z
+
+[Term]
+id: FYPO:0002424
+name: normal actin cortical patch localization during mitotic interphase
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patch localization is normal (i.e. indistinguishable from wild type) during interphase of the mitotic cell cycle." [PomBase:mah]
+synonym: "normal actin cortical patch localisation during mitotic interphase" EXACT [PomBase:mah]
+synonym: "normal actin cortical patch localization  during mitotic interphase during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001294 ! normal actin cortical patch localization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0051329
+intersection_of: inheres_in GO:0051666
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-08-01T17:10:00Z
+
+[Term]
+id: FYPO:0002425
+name: abnormal actin cable organization during mitotic interphase
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cable organization is abnormal during interphase of the mitotic cell cycle. The process normally results in the assembly, arrangement of constituent parts, or disassembly of an actin cable. Actin cables are the form of actin filament bundles found in yeasts." [GO:0032432, PomBase:mah]
+synonym: "abnormal actin cable organisation during mitotic interphase" EXACT [PomBase:mah]
+synonym: "abnormal actin cable organization during mitotic interphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actin filament bundle organization during mitotic interphase" EXACT [GO:0032432]
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
+is_a: FYPO:0002030 ! abnormal actin cable organization
+created_by: midori
+creation_date: 2013-08-01T17:15:08Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
