@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 27:08:2013 17:19
+date: 28:08:2013 16:59
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -455,7 +455,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000033
 name: abnormal contractile ring localization
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which contractile ring localization is abnormal. Contractile ring localization is the part of cytokinesis in which contractile ring is assembled and/or maintained in a specific location." [GO:0032187, PomBase:mah]
-comment: Note that the location of the contractile ring is determined by the location of the cell division site, so an abnormality in cell division site determination can be inferred from this phenotype.
+comment: Note that the location of the contractile ring is determined by the location of the cell division site, so an abnormality in cell division site determination can be inferred from this phenotype. Consider also annotating to 'abnormal septum site selection' (FYPO:0002154) because if the contractile ring forms in an abnormal location, the septum will also do so. The positions of both the contractile ring and the septum are determined by the processes that select the site of cell division.
 synonym: "abnormal contractile ring localisation" EXACT [PomBase:mah]
 synonym: "abnormal contractile ring localization during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal contractile ring localization involved in cell cycle cytokinesis" EXACT [PomBase:mah]
@@ -2970,12 +2970,12 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000220
-name: accumulation of centromeric outer repeat transcripts
+name: increased centromeric outer repeat transcript level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which small interfering RNA transcripts derived from the centromere outer repeat region are present at greater levels than normal." [PMID:20211136, PomBase:mah]
-synonym: "accumulation of centromeric outer repeat transcripts during vegetative growth" EXACT [PomBase:mah]
-synonym: "accumulation of non-coding outer repeat transcripts" EXACT [PomBase:vw]
-synonym: "accumulation of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
-synonym: "increased centromeric outer repeat transcript level" EXACT [PomBase:mah]
+synonym: "increased accumulation of centromeric outer repeat transcripts" EXACT [PomBase:mah]
+synonym: "increased accumulation of centromeric outer repeat transcripts during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased accumulation of non-coding outer repeat transcripts" EXACT [PomBase:vw]
+synonym: "increased accumulation of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 synonym: "increased level of centromeric outer repeat transcripts" EXACT [PomBase:mah]
 synonym: "increased level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
@@ -4494,8 +4494,7 @@ creation_date: 2011-06-03T01:43:41Z
 id: FYPO:0000339
 name: mislocalized septum
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell has a septum in an abnormal location. The normal location is at the midpoint of the long axis of the cell." [PomBase:mah]
-comment: Note that the location of the septum is determined by the location of the contractile ring, which in turn is determined by the location of the cell division site, so an abnormality in cell division site determination can be inferred from this phenotype.
-synonym: "abnormal barrier septum site selection" RELATED [PomBase:mah]
+comment: Note that the location of the septum is determined by the location of the contractile ring, which in turn is determined by the location of the cell division site, so an abnormality in cell division site determination can be inferred from this phenotype. Consider also annotating to 'mislocalized actomyosin contractile ring' (FYPO:0001369) because if the contractile ring forms in an abnormal location, the septum will also do so.
 synonym: "abnormal septum localization" RELATED [PomBase:mah]
 synonym: "abnormal septum location" EXACT [PomBase:mah]
 synonym: "abnormal septum position" EXACT [PomBase:mah]
@@ -10054,6 +10053,7 @@ id: FYPO:0000763
 name: resistance to cadmium
 def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of cadmium ions than normal." [PomBase:mah]
 synonym: "resistance to cadmium during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to cadmium ion" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0072690
@@ -10242,6 +10242,7 @@ id: FYPO:0000777
 name: abnormal double-strand break repair
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which double-strand break repair is abnormal." [PomBase:mah]
 synonym: "abnormal double-strand break repair during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal DSB repair" EXACT [PomBase:vw]
 is_a: FYPO:0000188 ! abnormal DNA repair
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -14889,7 +14890,7 @@ name: abolished chromatin binding
 def: "A molecular function phenotype in which chromatin binding by a mutated gene product does not occur. The gene product may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
 synonym: "abolished chromatin association" EXACT [PomBase:vw]
 synonym: "chromatin binding abolished" EXACT [PomBase:mah]
-is_a: FYPO:0001092 ! binding phenotype
+is_a: FYPO:0002576 ! abnormal chromatin binding
 intersection_of: PATO:0001558
 intersection_of: towards GO:0003682
 created_by: midori
@@ -16712,21 +16713,25 @@ creation_date: 2012-07-12T15:42:41Z
 
 [Term]
 id: FYPO:0001226
-name: mononucleate with mislocalized septum
-def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell contains a single nucleus and an asymmetrically located septum." [PomBase:mah]
-synonym: "mononucleate with abnormal septum location" EXACT [PomBase:mah]
-synonym: "mononucleate with abnormal septum position" EXACT [PomBase:mah]
-synonym: "mononucleate with asymmetric septum" EXACT [PomBase:mah]
-synonym: "mononucleate with asymmetrically located septum" EXACT [PomBase:mah]
-synonym: "mononucleate with mislocalised septum" EXACT [PomBase:mah]
-synonym: "mononucleate with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
-synonym: "mononucleate with misplaced septum" EXACT [PomBase:vw]
+name: inviable mononucleate vegetative cell with mislocalized septum
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, and contains a single nucleus and an asymmetrically located septum." [PomBase:mah]
+synonym: "inviable mononucleate cell with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable mononucleate monoseptate vegetative cell with mislocalized septum" EXACT [PomBase:mah]
+synonym: "inviable mononucleate vegetative cell with abnormal septum location" EXACT [PomBase:mah]
+synonym: "inviable mononucleate vegetative cell with abnormal septum position" EXACT [PomBase:mah]
+synonym: "inviable mononucleate vegetative cell with asymmetric septum" EXACT [PomBase:mah]
+synonym: "inviable mononucleate vegetative cell with asymmetrically located septum" EXACT [PomBase:mah]
+synonym: "inviable mononucleate vegetative cell with mislocalised septum" EXACT [PomBase:mah]
+synonym: "inviable mononucleate vegetative cell with misplaced septum" EXACT [PomBase:vw]
+synonym: "inviable mononucleate vegetative cell with single mislocalized septum" EXACT [PomBase:mah]
 is_a: FYPO:0000339 ! mislocalized septum
 is_a: FYPO:0002000 ! inviable septated mononucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000060 ! mononucleate
 intersection_of: has_part FYPO:0000339 ! mislocalized septum
+intersection_of: has_part FYPO:0001225 ! monoseptate
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2012-07-12T15:44:34Z
 
@@ -18746,7 +18751,7 @@ creation_date: 2012-08-07T12:54:57Z
 id: FYPO:0001369
 name: mislocalized actomyosin contractile ring
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms an actomyosin contractile ring in an abnormal location. The normal location is at the midpoint of, and perpendicular to, the long axis of the cell." [PomBase:mah]
-comment: Note that the location of the contractile ring is determined by the location of the cell division site, so an abnormality in cell division site determination can be inferred from this phenotype.
+comment: Note that the location of the contractile ring is determined by the location of the cell division site, so an abnormality in cell division site determination can be inferred from this phenotype. Consider also annotating to 'mislocalized septum' (FYPO:0000339) because if the contractile ring forms in an abnormal location, the septum will also do so.
 synonym: "contractile ring displaced from cell centre" EXACT [PomBase:vw]
 synonym: "mislocalised actomyosin contractile ring" EXACT [PomBase:mah]
 synonym: "mislocalized actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
@@ -18821,10 +18826,11 @@ creation_date: 2012-08-07T13:49:11Z
 
 [Term]
 id: FYPO:0001374
-name: protein localization to medial cortex abolished in spores
+name: abolished protein localization to medial cortex in spores
 def: "A cell phenotype in which the localization of a protein to the medial cortex of a spore is abolished." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "protein localisation to medial cortex abolished in spores" EXACT [GO:0071574, PomBase:mah]
+synonym: "protein localization to medial cortex abolished in spores" EXACT [PomBase:mah]
 synonym: "protein localization to medial ring abolished in spores" EXACT [GO:0031097, GO:0071574]
 is_a: FYPO:0001371 ! abolished protein localization to medial cortex
 is_a: FYPO:0001372 ! abnormal protein localization to medial cortex in spores
@@ -19035,6 +19041,7 @@ creation_date: 2012-08-15T11:46:28Z
 id: FYPO:0001390
 name: misoriented septum
 def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum that is not perpendicular to the long axis of the cell." [PomBase:mah]
+comment: Consider also annotating to 'angled actomyosin contractile ring' (FYPO:0002027) because if the contractile ring forms at an abnormal angle, the septum will also do so.
 synonym: "abnormal septum orientation" EXACT [PomBase:mah]
 synonym: "misoriented septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "tilted septum" EXACT [PomBase:al]
@@ -21846,6 +21853,7 @@ id: FYPO:0001583
 name: resistance to lithium
 def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of lithium ions than normal." [PomBase:mah]
 synonym: "resistance to lithium during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to lithium ion" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0072690
@@ -27621,11 +27629,13 @@ synonym: "inviable elongated mononucleate cell with asymmetric septum" EXACT [Po
 synonym: "inviable elongated mononucleate cell with asymmetrically located septum" EXACT [PomBase:mah]
 synonym: "inviable elongated mononucleate cell with mislocalised septum" EXACT [PomBase:mah]
 synonym: "inviable elongated mononucleate cell with mislocalized septum during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate monoseptate vegetative cell with mislocalized septum" EXACT [PomBase:mah]
 synonym: "inviable elongated mononucleate vegetative cell with mislocalized septum and mislocalized nucleus" EXACT [PomBase:mah]
 synonym: "inviable elongated mononucleate vegetative cell with misplaced septum" EXACT [PomBase:vw]
+synonym: "inviable elongated mononucleate vegetative cell with single mislocalized septum" EXACT [PomBase:mah]
 synonym: "inviable long mononucleate cell with mislocalized septum" EXACT [PomBase:vw]
 synonym: "inviable vegetative elongated mononucleate cell with mislocalized septum" EXACT [PomBase:mah]
-is_a: FYPO:0001226 ! mononucleate with mislocalized septum
+is_a: FYPO:0001226 ! inviable mononucleate vegetative cell with mislocalized septum
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0001917 ! elongated mononucleate monoseptate cell
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -27644,8 +27654,10 @@ name: inviable swollen elongated mononucleate vegetative cell with mislocalized 
 def: "A cell phenotype in which a cell contains a single septum, has one nucleus, is elongated, and is inviable. The septum is in an abnormal location, and the nucleus is located in one compartment of the septated cell. The cell compartment containing the nucleus is swollen (i.e. has a larger diameter than the other compartment)." [PomBase:mah, PomBase:vw]
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
 synonym: "inviable swollen elongated mononucleate cell with mislocalized septum near non-growing end" NARROW [PomBase:mah]
+synonym: "inviable swollen elongated mononucleate monoseptate vegetative cell with mislocalized septum near new end" EXACT [PomBase:mah]
 synonym: "inviable swollen elongated mononucleate vegetative cell with mislocalized septum near new end and mislocalized nucleus" EXACT [PomBase:mah]
 synonym: "inviable swollen elongated mononucleate vegetative cell with misplaced septum near new end" EXACT [PomBase:vw]
+synonym: "inviable swollen elongated mononucleate vegetative cell with single mislocalized septum near new end" EXACT [PomBase:mah]
 synonym: "long swollen mononucleate cell with mislocalized septum near new end" EXACT [PomBase:vw]
 synonym: "long swollen mononucleate cell with mislocalized septum near non-growing end" NARROW [PomBase:vw]
 synonym: "swollen elongated mononucleate cell with abnormal septum location near new end" EXACT [PomBase:mah]
@@ -27670,6 +27682,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
 intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001391 ! mislocalized septum, near new end
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: output_of FYPO:0002017 ! abnormal cell cycle arrest in mitotic interphase before NETO
@@ -29627,7 +29640,7 @@ creation_date: 2013-05-07T16:56:52Z
 id: FYPO:0002133
 name: abolished RNA binding
 def: "A molecular function phenotype in which RNA binding by a gene product does not occur, when the gene product or the bound RNA sequence is mutated." [PomBase:mah]
-synonym: "DNA binding abolished" EXACT [PomBase:mah]
+synonym: "RNA binding abolished" EXACT [PomBase:mah]
 is_a: FYPO:0002132 ! abnormal RNA binding
 intersection_of: PATO:0001558
 intersection_of: towards GO:0003723
@@ -29902,6 +29915,7 @@ creation_date: 2013-05-10T14:26:01Z
 id: FYPO:0002154
 name: abnormal septum site selection
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which barrier septum assembly takes place in an abnormal location. The site of septum assembly is normally determined by the location of the actomyosin contractile ring." [PomBase:mah]
+comment: Consider also annotating to 'abnormal contractile ring localization' (FYPO:0000033) because if the contractile ring forms in an abnormal location, the septum will also do so. The positions of both the contractile ring and the septum are determined by the processes that select the site of cell division.
 synonym: "abnormal barrier septum site selection" EXACT [PomBase:mah]
 synonym: "abnormal contractile ring localization resulting in abnormal septum site selection" RELATED [PomBase:mah]
 synonym: "abnormal contractile ring localization resulting in mislocalized septum" RELATED [PomBase:mah]
@@ -29939,8 +29953,8 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 comment: Note that a cell that has the phenotype 'angled actomyosin contractile ring' (FYPO:0002027) will usually also subsequently display this phenotype.
 synonym: "binucleate monoseptate cell, with angled septum, during vegetative growth" EXACT [PomBase:mah]
 synonym: "binucleate monoseptate cell, with septum not orthogonal to long axis" RELATED [PomBase:mah]
-is_a: FYPO:0000339 ! mislocalized septum
 is_a: FYPO:0001224 ! binucleate monoseptate cell
+is_a: FYPO:0001390 ! misoriented septum
 created_by: midori
 creation_date: 2013-05-10T15:43:47Z
 
@@ -32419,7 +32433,7 @@ id: FYPO:0002338
 name: abnormal protein localization to nuclear periphery
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nuclear periphery is abnormal. The nuclear periphery is the portion of the nuclear lumen proximal to the inner nuclear membrane." [PomBase:mah]
 comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abnormal protein localisation to nuclear periphery" EXACT [GO:0034504, PomBase:mah]
+synonym: "abnormal protein localisation to nuclear periphery" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to nuclear periphery during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001129 ! abnormal protein localization to nucleus
 intersection_of: PATO:0000001
@@ -35457,6 +35471,559 @@ intersection_of: exists_during GO:0072690
 intersection_of: towards GO:0005811
 created_by: midori
 creation_date: 2013-08-27T15:53:30Z
+
+[Term]
+id: FYPO:0002553
+name: abnormal double-strand break processing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which double-strand break processing is abnormal. Double-strand break processing is the 5' to 3' exonucleolytic resection of the DNA at the site of the break to form a 3' single-strand DNA overhang." [GO:0000729, PomBase:mah]
+synonym: "abnormal double-strand break processing during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal DSB processing" EXACT [PomBase:vw]
+is_a: FYPO:0000777 ! abnormal double-strand break repair
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000729
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-08-28T10:34:04Z
+
+[Term]
+id: FYPO:0002554
+name: normal protein localization to site of double-strand break
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to a region of a chromosome at which a DNA double-strand break has occurred is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to site of double-strand break" EXACT [PomBase:mah]
+synonym: "normal protein localization to double-strand break site" EXACT [PomBase:mah]
+synonym: "normal protein localization to DSB" EXACT [PomBase:vw]
+synonym: "normal protein localization to site of double-strand break during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to site of DSB" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990166
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-08-28T10:40:47Z
+
+[Term]
+id: FYPO:0002555
+name: abolished protein localization to medial cortex during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the medial cortex of a cell is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to medial cortex during vegetative growth" EXACT [GO:0071574, PomBase:mah]
+synonym: "abolished protein localization to medial ring during vegetative growth" EXACT [GO:0031097, GO:0071574]
+synonym: "protein localization to medial cortex abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000731 ! abnormal protein localization to medial cortex during vegetative growth
+is_a: FYPO:0001371 ! abolished protein localization to medial cortex
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0071574
+created_by: midori
+creation_date: 2013-08-28T11:26:06Z
+
+[Term]
+id: FYPO:0002556
+name: abolished protein localization to medial cortex during vegetative growth, with protein distributed in non-growing half of cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the medial cortex of a cell is abolished, and and the protein is instead detected distributed throughout the half of the cell nearer the non-growing end." [PomBase:al, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to medial cortex during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished protein localization to medial ring during vegetative growth" EXACT [GO:0031097, GO:0071574]
+synonym: "protein localization to medial cortex abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002555 ! abolished protein localization to medial cortex during vegetative growth
+created_by: midori
+creation_date: 2013-08-28T11:29:01Z
+
+[Term]
+id: FYPO:0002557
+name: decreased protein localization to medial cortex during vegetative growth
+def: "A cell phenotype in which the localization of a protein to the medial cortex is decreased in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to medial cortex during vegetative growth" EXACT [GO:0071574, PomBase:mah]
+synonym: "decreased protein localization to medial ring during vegetative growth" EXACT [GO:0031097, GO:0071574]
+synonym: "reduced protein localization to medial cortex during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000731 ! abnormal protein localization to medial cortex during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071574
+created_by: midori
+creation_date: 2013-08-28T11:31:22Z
+
+[Term]
+id: FYPO:0002558
+name: normal protein localization to medial cortex
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the medial cortex is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to medial cortex" EXACT [PomBase:mah]
+synonym: "normal protein localization to medial cortex during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to medial ring" EXACT [GO:0031097, GO:0071574]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071574
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-08-28T11:32:40Z
+
+[Term]
+id: FYPO:0002559
+name: normal protein localization to actomyosin contractile ring
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the actomyosin contractile ring is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to actomyosin contractile ring" EXACT [PomBase:mah]
+synonym: "normal protein localization to actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to contractile ring" EXACT [PomBase:al]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+created_by: midori
+creation_date: 2013-08-28T11:41:22Z
+
+[Term]
+id: FYPO:0002560
+name: abnormal protein localization to actomyosin contractile ring
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the actomyosin contractile ring is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the centromere and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to actomyosin contractile ring" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to contractile ring" EXACT [PomBase:al]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+created_by: midori
+creation_date: 2013-08-28T11:43:36Z
+
+[Term]
+id: FYPO:0002561
+name: abolished protein localization to actomyosin contractile ring
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the actomyosin contractile ring is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to actomyosin contractile ring" EXACT [PomBase:mah]
+synonym: "abolished protein localization to actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished protein localization to contractile ring" EXACT [PomBase:al]
+synonym: "protein localization to actomyosin contractile ring abolished" EXACT [PomBase:mah]
+is_a: FYPO:0002560 ! abnormal protein localization to actomyosin contractile ring
+created_by: midori
+creation_date: 2013-08-28T11:43:43Z
+
+[Term]
+id: FYPO:0002562
+name: delayed protein localization to actomyosin contractile ring
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the actomyosin contractile ring takes place later than normal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "delayed protein localisation to actomyosin contractile ring" EXACT [PomBase:mah]
+synonym: "delayed protein localization to actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
+synonym: "delayed protein localization to contractile ring" EXACT [PomBase:al]
+is_a: FYPO:0002560 ! abnormal protein localization to actomyosin contractile ring
+created_by: midori
+creation_date: 2013-08-28T11:44:12Z
+
+[Term]
+id: FYPO:0002563
+name: normal protein localization to nuclear periphery
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nuclear periphery is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to nuclear periphery" EXACT [PomBase:mah]
+synonym: "normal protein localization to nuclear periphery during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990139
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-08-28T11:48:40Z
+
+[Term]
+id: FYPO:0002564
+name: increased tRNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of transfer RNA (tRNA) measured in a cell is higher than normal. Total tRNA or a specific tRNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased mature tRNA level" EXACT [SO:0000253]
+synonym: "increased transfer RNA level" EXACT [PomBase:mah]
+synonym: "increased tRNA accumulation" RELATED [PomBase:mah]
+synonym: "increased tRNA level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards SO:0000253
+created_by: midori
+creation_date: 2013-08-28T13:48:20Z
+
+[Term]
+id: FYPO:0002565
+name: abolished histone methylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which histone methylation does not occur. All histone methylation may be affected, or methylation of specific sites on specific histones may be abolished." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "abolished histone methylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "histone methylation abolished" EXACT [PomBase:mah]
+synonym: "histone methylation absent" EXACT [PomBase:al]
+is_a: FYPO:0000457 ! abnormal histone methylation
+is_a: FYPO:0000544 ! abolished protein modification during vegetative growth
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0016571
+created_by: midori
+creation_date: 2013-08-28T13:54:16Z
+
+[Term]
+id: FYPO:0002566
+name: abolished histone H3-K9 methylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which methylation of lysine at position 9 of histone H3 does not occur." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "abolished histone H3 K9 methylation" EXACT [GO:0051567, PomBase:mah]
+synonym: "abolished histone H3-K9 methylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished histone H3K9me" EXACT [GO:0051567, PomBase:mah]
+synonym: "abolished histone lysine H3 K9 methylation" EXACT [GO:0051567, PomBase:mah]
+synonym: "histone H3-K9 methylation abolished" EXACT [PomBase:mah]
+synonym: "histone H3-K9 methylation absent" EXACT [PomBase:al]
+is_a: FYPO:0000458 ! abnormal histone H3-K9 methylation
+is_a: FYPO:0002565 ! abolished histone methylation
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0051567
+created_by: midori
+creation_date: 2013-08-28T13:56:00Z
+
+[Term]
+id: FYPO:0002567
+name: normal centromeric outer repeat transcript level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small interfering RNA transcripts derived from the centromere outer repeat region measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal accumulation of centromeric outer repeat transcripts" EXACT [PomBase:mah]
+synonym: "normal accumulation of centromeric outer repeat transcripts during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal accumulation of non-coding outer repeat transcripts" EXACT [PomBase:vw]
+synonym: "normal accumulation of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
+synonym: "normal centromeric outer repeat transcript accumulation" RELATED [PomBase:mah]
+synonym: "normal centromeric outer repeat transcript level during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal level of centromeric outer repeat transcripts" EXACT [PomBase:al]
+synonym: "normal level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards SO:0001905
+created_by: midori
+creation_date: 2013-08-28T14:38:37Z
+
+[Term]
+id: FYPO:0002568
+name: abolished protein localization to nuclear periphery
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nuclear periphery is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to nuclear periphery" EXACT [PomBase:mah]
+synonym: "abolished protein localization to nuclear periphery during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to nuclear periphery abolished" EXACT [PomBase:mah]
+is_a: FYPO:0001424 ! abolished protein localization to nucleus
+is_a: FYPO:0002338 ! abnormal protein localization to nuclear periphery
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:1990139
+created_by: midori
+creation_date: 2013-08-28T14:45:05Z
+
+[Term]
+id: FYPO:0002569
+name: increased cellular dCTP level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of dCTP measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular dCTP level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased dCTP accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:16311
+created_by: midori
+creation_date: 2013-08-28T14:52:37Z
+
+[Term]
+id: FYPO:0002570
+name: increased cellular dATP level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of dATP measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular dATP level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased dATP accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:16284
+created_by: midori
+creation_date: 2013-08-28T14:53:33Z
+
+[Term]
+id: FYPO:0002571
+name: decreased cellular dGTP level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of dGTP measured in the cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular dGTP level during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced cellular dGTP level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:16497
+created_by: midori
+creation_date: 2013-08-28T14:54:51Z
+
+[Term]
+id: FYPO:0002572
+name: decreased cellular dTTP level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of dTTP measured in the cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular dTTP level during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced cellular dTTP level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:18077
+created_by: midori
+creation_date: 2013-08-28T14:56:01Z
+
+[Term]
+id: FYPO:0002573
+name: increased number of Ssb1 foci
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites at which the protein Ssb1 accumulates is greater than normal." [PMID:22927644, PomBase:mah]
+comment: Because Rad22 often accumulates at double-strand breaks, consider also annotating to 'accumulation of double-strand break sites' (FYPO:0000455).
+synonym: "increased number of Rad11 foci" EXACT [PMID:22927644]
+synonym: "increased number of RPA foci" EXACT [PMID:22927644]
+synonym: "increased number of Rpa1 foci" EXACT [PMID:22927644]
+synonym: "increased number of Ssb1 foci during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+created_by: midori
+creation_date: 2013-08-28T15:01:41Z
+
+[Term]
+id: FYPO:0002574
+name: normal protein localization to centromere
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the centromere of a chromosome is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the centromere and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to centromere" EXACT [PomBase:mah]
+synonym: "normal protein localisation to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
+synonym: "normal protein localization to centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to chromosome, centric region" EXACT [GO:0071459, PomBase:mah]
+synonym: "normal protein localization to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071459
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-08-28T15:10:06Z
+
+[Term]
+id: FYPO:0002575
+name: normal protein localization to chromosome at long terminal repeat
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein a region in a chromosome that contains one or more long terminal repeats (LTRs) is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to chromosome at long terminal repeat" EXACT [PomBase:mah]
+synonym: "normal protein localization to chromosome at long terminal repeat during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to chromosome at LTR" EXACT [PomBase:mah]
+synonym: "normal protein localization to LTR" EXACT [PomBase:al]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034502
+intersection_of: occurs_at SO:0000286
+intersection_of: qualifier PATO:0000461
+relationship: has_part FYPO:0002396 ! normal maintenance of protein localization to heterochromatin at centromere outer repeat
+created_by: midori
+creation_date: 2013-08-28T15:14:19Z
+
+[Term]
+id: FYPO:0002576
+name: abnormal chromatin binding
+def: "A molecular function phenotype in which occurrence of chromatin binding by a mutated gene product is abnormal. The gene product may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
+is_a: FYPO:0000707 ! abnormal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003682
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-08-28T15:21:27Z
+
+[Term]
+id: FYPO:0002577
+name: decreased chromatin binding
+def: "A molecular function phenotype in which occurrence of chromatin binding by a mutated gene product is decreased. The gene product may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
+synonym: "reduced chromatin binding" EXACT [PomBase:mah]
+is_a: FYPO:0002576 ! abnormal chromatin binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003682
+created_by: midori
+creation_date: 2013-08-28T15:21:38Z
+
+[Term]
+id: FYPO:0002578
+name: resistance to hydroxyurea
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of hydroxyurea than normal." [PomBase:mah]
+synonym: "resistance to HU" EXACT [PomBase:mah]
+synonym: "resistance to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:44423
+created_by: midori
+creation_date: 2013-08-28T15:27:26Z
+
+[Term]
+id: FYPO:0002579
+name: altered tRNA level during vegetative growth
+def: "A cell phenotype in which the amount of transfer RNA (tRNA) measured in a cell differs from normal when the cell is in the vegetative growth phase of the life cycle. Total tRNA or a specific tRNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "abnormal tRNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "altered cellular transfer RNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "altered cellular tRNA level during vegetative " EXACT [PomBase:mah]
+is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
+is_a: FYPO:0001326 ! altered RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000460
+intersection_of: towards SO:0000253
+created_by: midori
+creation_date: 2013-08-28T16:07:23Z
+
+[Term]
+id: FYPO:0002580
+name: normal tRNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of transfer RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total tRNA or a specific tRNA may be measured." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal mature tRNA level" EXACT [SO:0000253]
+synonym: "normal transfer RNA level" EXACT [PomBase:mah]
+synonym: "normal tRNA accumulation" RELATED [PomBase:mah]
+synonym: "normal tRNA level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards SO:0000253
+created_by: midori
+creation_date: 2013-08-28T16:11:10Z
+
+[Term]
+id: FYPO:0002581
+name: increased level of nuclear tRNA processing intermediates with 3' extensions
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any tRNA processing intermediates with 3' extensions measured in the nucleus is higher than normal." [PomBase:mah]
+synonym: "increased accumulation of nuclear tRNA processing intermediates with 3' extensions" RELATED [PomBase:al]
+synonym: "increased level of nuclear tRNA processing intermediates with 3' extensions during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+created_by: midori
+creation_date: 2013-08-28T16:12:36Z
+
+[Term]
+id: FYPO:0002582
+name: normal mitochondrial tRNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mitochondrial transfer RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total tRNA or a specific tRNA may be measured." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal mature mitochondrial tRNA level" EXACT [SO:0000253]
+synonym: "normal mitochondrial transfer RNA level" EXACT [PomBase:mah]
+synonym: "normal mitochondrial tRNA accumulation" RELATED [PomBase:mah]
+synonym: "normal mitochondrial tRNA level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002580 ! normal tRNA level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005739
+intersection_of: qualifier PATO:0000461
+intersection_of: towards SO:0000253
+created_by: midori
+creation_date: 2013-08-28T16:18:45Z
+
+[Term]
+id: FYPO:0002583
+name: decreased tRNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of transfer RNA (tRNA) measured in a cell is lower than normal. Total tRNA or a specific tRNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mature tRNA level" EXACT [SO:0000253]
+synonym: "decreased transfer RNA level" EXACT [PomBase:mah]
+synonym: "decreased tRNA accumulation" RELATED [PomBase:mah]
+synonym: "decreased tRNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced tRNA level" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards SO:0000253
+created_by: midori
+creation_date: 2013-08-28T16:20:19Z
+
+[Term]
+id: FYPO:0002584
+name: decreased mitochondrial tRNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mitochondrial transfer RNA (tRNA) measured in a cell is lower than normal. Total tRNA or a specific tRNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mature mitochondrial tRNA level" EXACT [SO:0000253]
+synonym: "decreased mitochondrial transfer RNA level" EXACT [PomBase:mah]
+synonym: "decreased mitochondrial tRNA accumulation" RELATED [PomBase:mah]
+synonym: "decreased mitochondrial tRNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced mitochondrial tRNA level" EXACT [PomBase:mah]
+is_a: FYPO:0002583 ! decreased tRNA level
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005739
+intersection_of: towards SO:0000253
+created_by: midori
+creation_date: 2013-08-28T16:22:12Z
+
+[Term]
+id: FYPO:0002585
+name: mitochondrial tRNA absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mitochondrial transfer RNA (tRNA) measured in a cell is too low to detect. Total tRNA or a specific tRNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "mature mitochondrial tRNA absent from cell" EXACT [SO:0000253]
+synonym: "mitochondrial transfer RNA absent from cell" EXACT [PomBase:mah]
+synonym: "mitochondrial tRNA absent from cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "undetectable mitochondrial tRNA level" EXACT [PomBase:mah]
+is_a: FYPO:0001889 ! RNA absent from cell
+is_a: FYPO:0002583 ! decreased tRNA level
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0005739
+intersection_of: towards SO:0000253
+created_by: midori
+creation_date: 2013-08-28T16:24:01Z
+
+[Term]
+id: FYPO:0002586
+name: normal mitochondrial tRNA 3'-end processing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which mitochondrial tRNA 3'-end processing is normal (i.e. indistinguishable from wild type). In mitochondrial tRNA 3'-end processing, the 3' end of a mitochondrial pre-tRNA molecule is converted to that of a mature mitochondrial tRNA." [GO:0006396, PomBase:mah]
+synonym: "normal mitochondrial tRNA 3'-end processing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000859 ! normal metabolic process during vegetative growth
+created_by: midori
+creation_date: 2013-08-28T16:27:04Z
+
+[Term]
+id: FYPO:0002587
+name: increased level of mitochondrial polycistronic RNA precursors
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any mitochondrially-encoded polycistronic RNA precursors measured in the cell is higher than normal." [PomBase:mah]
+synonym: "increased accumulation of mitochondrial polycistronic RNA precursors" RELATED [PomBase:al]
+synonym: "increased level of mitochondrial polycistronic RNA precursors during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+created_by: midori
+creation_date: 2013-08-28T16:30:56Z
+
+[Term]
+id: FYPO:0002588
+name: resistance to nickel
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of nickel ions than normal." [PomBase:mah]
+synonym: "resistance to nickel during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to nickel ion" EXACT [PomBase:mah]
+synonym: "resistant to nickel" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:25516
+created_by: midori
+creation_date: 2013-08-28T16:35:20Z
+
+[Term]
+id: FYPO:0002589
+name: resistance to zinc
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of zinc ions than normal." [PomBase:mah]
+synonym: "resistance to zinc during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to zinc ion" EXACT [PomBase:mah]
+synonym: "resistant to nickel" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:27365
+created_by: midori
+creation_date: 2013-08-28T16:35:56Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
