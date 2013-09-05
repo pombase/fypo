@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 04:09:2013 17:52
+date: 05:09:2013 17:42
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -2228,7 +2228,7 @@ synonym: "abnormal actomyosin contractile ring assembly during vegetative growth
 synonym: "abnormal actomyosin contractile ring formation" RELATED [GO:0000915, PomBase:mah]
 synonym: "abnormal contractile ring assembly" EXACT [PomBase:mah]
 synonym: "abnormal cytokinesis, actomyosin contractile ring assembly" EXACT [PomBase:mah]
-synonym: "abnormal cytokinetic ring assembly" NARROW [PomBase:vw]
+synonym: "abnormal cytokinetic ring assembly" RELATED [PomBase:vw]
 synonym: "abnormal cytokinetic ring formation" RELATED [PomBase:vw]
 is_a: FYPO:0000032 ! abnormal cytokinesis
 is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
@@ -19888,6 +19888,7 @@ id: FYPO:0001450
 name: resistance to cold
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show decreased sensitivity to cold." [PomBase:mah]
 synonym: "resistance to cold during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to low temperature" EXACT [PomBase:mah]
 synonym: "resistant to cold" EXACT [PomBase:mah]
 is_a: FYPO:0000850 ! resistance to stress during vegetative growth
 intersection_of: PATO:0001552
@@ -33183,10 +33184,10 @@ id: FYPO:0002391
 name: decreased protein localization to rDNA
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to parts of the chromosome containing ribosomal DNA is decreased." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "decreased protein localisation to rDNA" EXACT [GO:0034504, PomBase:mah]
+synonym: "decreased protein localisation to rDNA" EXACT [PomBase:mah]
 synonym: "decreased protein localization to rDNA during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased protein localization to ribosomal DNA" EXACT [PomBase:mah]
-synonym: "reduced protein localization to cell tip" EXACT [PomBase:mah]
+synonym: "reduced protein localization to rDNA" EXACT [PomBase:mah]
 is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
 created_by: midori
 creation_date: 2013-07-30T15:08:19Z
@@ -35572,6 +35573,10 @@ synonym: "normal protein localisation to actomyosin contractile ring" EXACT [Pom
 synonym: "normal protein localization to actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal protein localization to contractile ring" EXACT [PomBase:al]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990179
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2013-08-28T11:41:22Z
 
@@ -35584,6 +35589,10 @@ synonym: "abnormal protein localisation to actomyosin contractile ring" EXACT [P
 synonym: "abnormal protein localization to actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to contractile ring" EXACT [PomBase:al]
 is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990179
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2013-08-28T11:43:36Z
 
@@ -35597,6 +35606,9 @@ synonym: "abolished protein localization to actomyosin contractile ring during v
 synonym: "abolished protein localization to contractile ring" EXACT [PomBase:al]
 synonym: "protein localization to actomyosin contractile ring abolished" EXACT [PomBase:mah]
 is_a: FYPO:0002560 ! abnormal protein localization to actomyosin contractile ring
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:1990179
 created_by: midori
 creation_date: 2013-08-28T11:43:43Z
 
@@ -35609,6 +35621,9 @@ synonym: "delayed protein localisation to actomyosin contractile ring" EXACT [Po
 synonym: "delayed protein localization to actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
 synonym: "delayed protein localization to contractile ring" EXACT [PomBase:al]
 is_a: FYPO:0002560 ! abnormal protein localization to actomyosin contractile ring
+intersection_of: PATO:0000502
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990179
 created_by: midori
 creation_date: 2013-08-28T11:44:12Z
 
@@ -35984,6 +35999,10 @@ name: normal mitochondrial tRNA 3'-end processing
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which mitochondrial tRNA 3'-end processing is normal (i.e. indistinguishable from wild type). In mitochondrial tRNA 3'-end processing, the 3' end of a mitochondrial pre-tRNA molecule is converted to that of a mature mitochondrial tRNA." [GO:0006396, PomBase:mah]
 synonym: "normal mitochondrial tRNA 3'-end processing during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000859 ! normal metabolic process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990180
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2013-08-28T16:27:04Z
 
@@ -36334,6 +36353,303 @@ intersection_of: occurs_at SO:0001789
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2013-09-04T17:13:15Z
+
+[Term]
+id: FYPO:0002614
+name: abnormal protein localization to pre-autophagosomal structure
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the pre-autophagosomal structure is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the centromere and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to PAS" EXACT [GO:0034497, PomBase:mah]
+synonym: "abnormal protein localisation to pre-autophagosomal structure" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to pre-autophagosomal structure during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034497
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-09-05T14:45:24Z
+
+[Term]
+id: FYPO:0002615
+name: decreased protein localization to pre-autophagosomal structure
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the pre-autophagosomal structure is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to pre-autophagosomal structure" EXACT [PomBase:mah]
+synonym: "decreased protein localization to PAS" EXACT [GO:0034497, PomBase:mah]
+synonym: "decreased protein localization to pre-autophagosomal structure during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to pre-autophagosomal structure" EXACT [PomBase:mah]
+is_a: FYPO:0002614 ! abnormal protein localization to pre-autophagosomal structure
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034497
+created_by: midori
+creation_date: 2013-09-05T14:45:34Z
+
+[Term]
+id: FYPO:0002616
+name: increased protein localization to pre-autophagosomal structure
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the pre-autophagosomal structure is increased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to pre-autophagosomal structure" EXACT [PomBase:mah]
+synonym: "increased protein localization to PAS" EXACT [GO:0034497, PomBase:mah]
+synonym: "increased protein localization to pre-autophagosomal structure during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002614 ! abnormal protein localization to pre-autophagosomal structure
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034497
+created_by: midori
+creation_date: 2013-09-05T14:45:51Z
+
+[Term]
+id: FYPO:0002617
+name: sensitive to sodium butyrate
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to sodium butyrate. Cells stop growing (and may die) at a concentration of sodium butyrate that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to sodium butyrate" EXACT [PomBase:mah]
+synonym: "sensitive to sodium butyratetinamide during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:64103
+created_by: midori
+creation_date: 2013-09-05T15:14:13Z
+
+[Term]
+id: FYPO:0002618
+name: normal cell population growth on valproic acid
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing valproic acid." [PomBase:mah]
+synonym: "normal cell population growth in presence of valproic acid" EXACT [PomBase:mah]
+synonym: "normal cellular response to valproic acid" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on valproic acid" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on valproic acid" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:39867
+created_by: midori
+creation_date: 2013-09-05T15:31:40Z
+
+[Term]
+id: FYPO:0002619
+name: normal cell population growth on sodium butyrate
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing sodium butyrate." [PomBase:mah]
+synonym: "normal cell population growth in presence of sodium butyrate" EXACT [PomBase:mah]
+synonym: "normal cellular response to sodium butyrate" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on sodium butyrate" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on sodium butyrate" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:64103
+created_by: midori
+creation_date: 2013-09-05T15:33:22Z
+
+[Term]
+id: FYPO:0002620
+name: normal cell population growth on trichostatin A
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing trichostatin A." [PomBase:mah]
+synonym: "normal cell population growth in presence of trichostatin A" EXACT [PomBase:mah]
+synonym: "normal cellular response to trichostatin A" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on trichostatin A" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on trichostatin A" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:46024
+created_by: midori
+creation_date: 2013-09-05T15:34:29Z
+
+[Term]
+id: FYPO:0002621
+name: abnormal malate dehydrogenase (oxaloacetate-decarboxylating) activity
+def: "A molecular function phenotype in which the observed rate of malate dehydrogenase (oxaloacetate-decarboxylating) activity is abnormal." [PomBase:mah]
+synonym: "abnormal 'malic' enzyme activity" RELATED [GO:0016619]
+synonym: "abnormal (S)-malate:NAD+ oxidoreductase (oxaloacetate-decarboxylating) activity" EXACT [GO:0016619]
+synonym: "abnormal NAD-linked malic enzyme activity" RELATED [GO:0016619]
+synonym: "abnormal NAD-malic enzyme activity" BROAD [GO:0016619]
+synonym: "abnormal NAD-specific malic enzyme activity" RELATED [GO:0016619]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0016619
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-09-05T15:47:08Z
+
+[Term]
+id: FYPO:0002622
+name: decreased malate dehydrogenase (oxaloacetate-decarboxylating) activity
+def: "A molecular function phenotype in which the observed rate of malate dehydrogenase (oxaloacetate-decarboxylating) activity activity is decreased." [PomBase:mah]
+synonym: "decreased 'malic' enzyme activity" RELATED [GO:0016619]
+synonym: "decreased (S)-malate:NAD+ oxidoreductase (oxaloacetate-decarboxylating) activity" EXACT [GO:0016619]
+synonym: "decreased NAD-linked malic enzyme activity" RELATED [GO:0016619]
+synonym: "decreased NAD-malic enzyme activity" BROAD [GO:0016619]
+synonym: "decreased NAD-specific malic enzyme activity" RELATED [GO:0016619]
+synonym: "reduced malate dehydrogenase (oxaloacetate-decarboxylating) activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0002621 ! abnormal malate dehydrogenase (oxaloacetate-decarboxylating) activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0016619
+created_by: midori
+creation_date: 2013-09-05T15:47:25Z
+
+[Term]
+id: FYPO:0002623
+name: decreased RNA level during cellular response to glucose stimulus
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to a glucose stimulus is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mRNA level during cellular response to glucose stimulus" NARROW [PomBase:mah]
+synonym: "decreased RNA accumulation during cellular response to glucose stimulus" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to glucose" EXACT [PomBase:mah]
+synonym: "decreased RNA level during cellular response to glucose stimulus during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced RNA level during cellular response to glucose stimulus" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0071333
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2013-09-05T15:50:26Z
+
+[Term]
+id: FYPO:0002624
+name: decreased punctate nuclear localization
+def: "A cell phenotype in which a gene product that is normally localized to discrete regions in the nucleus, visible as foci or dots by fluorescence microscopy, is abnormally localized such that fewer dots are observed than in normal (wild type) cells." [PomBase:mah]
+synonym: "reduced punctate nuclear localization" EXACT [PomBase:mah]
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
+created_by: midori
+creation_date: 2013-09-05T16:01:22Z
+
+[Term]
+id: FYPO:0002625
+name: normal protein localization to rDNA
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to parts of the chromosome containing ribosomal DNA is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to rDNA" EXACT [PomBase:mah]
+synonym: "normal protein localization to rDNA during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to ribosomal DNA" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+created_by: midori
+creation_date: 2013-09-05T16:03:48Z
+
+[Term]
+id: FYPO:0002626
+name: resistance to heat
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show decreased sensitivity to heat." [PomBase:mah]
+synonym: "resistance to heat during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to high temperature" EXACT [PomBase:al]
+synonym: "resistant to heat" EXACT [PomBase:mah]
+is_a: FYPO:0000212 ! abnormal cellular response to heat
+is_a: FYPO:0000850 ! resistance to stress during vegetative growth
+intersection_of: PATO:0001552
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0034605
+created_by: midori
+creation_date: 2013-09-05T16:10:37Z
+
+[Term]
+id: FYPO:0002627
+name: altered level of substance in cell wall
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of a specific substance measured in the cell wall differs from normal." [PomBase:mah]
+synonym: "abnormal level of substance in cell wall" EXACT [PomBase:mah]
+synonym: "abnormal level of substance in cell wall during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0009277
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:24431
+created_by: midori
+creation_date: 2013-09-05T16:37:47Z
+
+[Term]
+id: FYPO:0002628
+name: decreased level of substance in cell wall
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of a specific substance measured in the cell wall is lower than normal." [PomBase:mah]
+synonym: "decreased level of substance in cell wall during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced level of substance in cell wall" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+is_a: FYPO:0002627 ! altered level of substance in cell wall
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0009277
+intersection_of: towards CHEBI:24431
+created_by: midori
+creation_date: 2013-09-05T16:41:13Z
+
+[Term]
+id: FYPO:0002629
+name: galactose absent from cell wall
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of galactose measured in the cell wall is too low to detect." [PomBase:mah]
+synonym: "galactose absent from cell surface" RELATED [PomBase:al]
+synonym: "galactose absent from cell wall during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001446 ! altered cellular trehalose level
+is_a: FYPO:0002628 ! decreased level of substance in cell wall
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0009277
+intersection_of: towards CHEBI:12936
+created_by: midori
+creation_date: 2013-09-05T16:54:57Z
+
+[Term]
+id: FYPO:0002630
+name: irregular cell wall
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the outer surface of the fungal-type cell wall is rougher and less regular than normal." [PomBase:al, PomBase:mah]
+synonym: "irregular cell wall during vegetative growth" EXACT [PomBase:mah]
+synonym: "irregular cell wall surface texture" EXACT [PATO:0000700, PomBase:mah]
+synonym: "rough cell wall" EXACT [PomBase:mah]
+is_a: FYPO:0000351 ! abnormal cell wall morphology
+intersection_of: PATO:0000700
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0009277
+created_by: midori
+creation_date: 2013-09-05T17:07:11Z
+
+[Term]
+id: FYPO:0002631
+name: abnormal dTTP biosynthetic process
+def: "A metabolism phenotype observed in the vegetative growth phase of the life cycle in which dTTP biosynthesis is abnormal." [PomBase:mah]
+synonym: "abnormal dTTP biosynthesis" EXACT [GO:0006235, PomBase:mah]
+synonym: "abnormal dTTP biosynthetic process during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006235
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-09-05T17:18:46Z
+
+[Term]
+id: FYPO:0002632
+name: decreased dTTP biosynthetic process
+def: "A metabolism phenotype observed in the vegetative growth phase of the life cycle in which dTTP biosynthesis is decreased." [PomBase:mah]
+synonym: "abnormal dTTP biosynthesis" EXACT [GO:0006235, PomBase:mah]
+synonym: "abnormal dTTP biosynthetic process during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced dTTP biosynthetic process" EXACT [PomBase:mah]
+is_a: FYPO:0002631 ! abnormal dTTP biosynthetic process
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006235
+created_by: midori
+creation_date: 2013-09-05T17:18:50Z
+
+[Term]
+id: FYPO:0002633
+name: increased cellular dTTP level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of dTTP measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular dTTP level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased dTTP accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:18077
+created_by: midori
+creation_date: 2013-09-05T17:21:44Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
