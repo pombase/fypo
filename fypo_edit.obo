@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 06:09:2013 16:44
+date: 11:09:2013 16:08
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -2322,7 +2322,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000168
 name: abnormal mitotic cell cycle spindle assembly checkpoint
 def: "A cell cycle checkpoint phenotype in which the spindle assembly checkpoint of a mitotic cell cycle is abnormal. The mitotic spindle assembly checkpoint normally delays the metaphase/anaphase transition of a mitotic nuclear division until the spindle is correctly assembled and chromosomes are attached to the spindle. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0007094, PomBase:mah]
-synonym: "abnormal mitotic cell cycle spindle assembly checkpoint activation" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle spindle assembly checkpoint activation" RELATED [PomBase:mah]
 is_a: FYPO:0000200 ! abnormal regulation of mitotic metaphase/anaphase transition
 is_a: FYPO:0001704 ! abnormal cell cycle checkpoint
 intersection_of: PATO:0000001
@@ -24676,7 +24676,6 @@ creation_date: 2012-11-21T14:05:30Z
 id: FYPO:0001778
 name: abnormal kinetochore localization
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of one or more kinetochore(s) is abnormal." [PomBase:mah]
-comment: Encompasses both presence of proteins not normally found at the cell cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal centromere localization" RELATED [PomBase:al]
 synonym: "abnormal kinetochore localisation" EXACT [PomBase:mah]
 synonym: "abnormal kinetochore localization during vegetative growth" EXACT [PomBase:mah]
@@ -36663,6 +36662,74 @@ intersection_of: inheres_in GO:0072690
 intersection_of: towards CHEBI:48828
 created_by: midori
 creation_date: 2013-09-06T16:22:20Z
+
+[Term]
+id: FYPO:0002635
+name: normal protein ubiquitination
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the ubiquitination of one or more specific proteins, or of specific protein sites, is normal." [PomBase:mah]
+synonym: "normal protein ubiquitination during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein/peptide ubiquitination" EXACT [PomBase:mah]
+is_a: FYPO:0000549 ! normal protein modification during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0016567
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-09-11T13:01:58Z
+
+[Term]
+id: FYPO:0002636
+name: delayed mitotic spindle elongation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which mitotic spindle elongation is delayed." [PomBase:mah]
+synonym: "delayed mitotic spindle elongation during vegetative growth" EXACT [PomBase:mah]
+synonym: "mitotic spindle elongation delayed" EXACT [PomBase:vw]
+is_a: FYPO:0000131 ! abnormal mitotic spindle elongation
+intersection_of: PATO:0000502
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000022
+created_by: midori
+creation_date: 2013-09-11T13:43:06Z
+
+[Term]
+id: FYPO:0002637
+name: normal cell population growth on hygromycin B
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing hygromycin B." [PomBase:mah]
+synonym: "normal cell population growth in presence of hygromycin B" EXACT [PomBase:mah]
+synonym: "normal growth on hygromycin B" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on hygromycin B" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:16976
+created_by: midori
+creation_date: 2013-09-11T14:14:32Z
+
+[Term]
+id: FYPO:0002638
+name: increased activation of mitotic cell cycle spindle assembly checkpoint
+def: "A cell cycle checkpoint phenotype in which the spindle assembly checkpoint is activated more frequently than normal, typically conditions that do not cause checkpoint activation in wild-type cells. The mitotic spindle assembly checkpoint normally delays the metaphase/anaphase transition of a mitotic nuclear division until the spindle is correctly assembled and chromosomes are attached to the spindle." [PomBase:mah, PomBase:vw]
+comment: Checkpoint activation in a mutant usually implies that the mutation is causing problems that the checkpoint detects.
+synonym: "increased mitotic cell cycle spindle assembly checkpoint activation" EXACT [PomBase:mah]
+is_a: FYPO:0000168 ! abnormal mitotic cell cycle spindle assembly checkpoint
+is_a: FYPO:0001704 ! abnormal cell cycle checkpoint
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0090268
+created_by: midori
+creation_date: 2013-09-11T14:32:46Z
+
+[Term]
+id: FYPO:0002639
+name: increased interkinetochore distance before mitotic anaphase
+def: "A cell phenotype in which the distance between sister kinetochores is greater than normal before the onset of mitotic anaphase." [PMID:22065639, PomBase:mah]
+comment: Also see 'abnormal kinetochore localization' (FYPO:0001778) and 'abnormal mitotic sister chromatid segregation' (FYPO:0000141).
+synonym: "increased distance between mitotic kinetochores" RELATED [PomBase:vw]
+synonym: "increased interkinetochore distance before anaphase onset" EXACT [PMID:22065639]
+synonym: "increased sister kinetochore distance before mitotic anaphase" EXACT [PMID:22065639, PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+relationship: output_of FYPO:0001778 ! abnormal kinetochore localization
+created_by: midori
+creation_date: 2013-09-11T15:30:13Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
