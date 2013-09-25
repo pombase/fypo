@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 19:09:2013 16:17
+date: 25:09:2013 15:58
 saved-by: midori
-auto-generated-by: OBO-Edit 2.3-beta5
+auto-generated-by: OBO-Edit 2.3-beta6
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
@@ -2432,7 +2432,7 @@ name: abnormal mitotic spindle assembly
 alt_id: FYPO:0001349
 def: "A cellular process phenotype in which assembly of the mitotic spindle is abnormal. Spindle assembly is the aggregation, arrangement and bonding together of a set of components to form the spindle." [PomBase:mah]
 synonym: "abnormal mitotic spindle assembly during vegetative growth" EXACT [PomBase:mah]
-synonym: "abnormal spindle assembly during vegetative growth" EXACT []
+synonym: "abnormal spindle assembly during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000119 ! abnormal spindle assembly
 is_a: FYPO:0001350 ! abnormal microtubule cytoskeleton organization during vegetative growth
 intersection_of: PATO:0000001
@@ -2677,7 +2677,7 @@ creation_date: 2011-04-13T03:41:10Z
 [Term]
 id: FYPO:0000196
 name: abnormal forespore formation
-def: "A sporulation phenotype in which prospore formation is abnormal." [PomBase:mah]
+def: "A sporulation phenotype in which prospore formation is abnormal. In prospore formation, each haploid nucleus becomes encapsulated by a double membrane." [PomBase:mah]
 synonym: "abnormal ascospore-type prospore assembly" EXACT [GO:0031321]
 synonym: "abnormal ascospore-type prospore formation" EXACT [PomBase:mah]
 synonym: "abnormal prospore formation" EXACT [PomBase:mah]
@@ -5251,7 +5251,7 @@ synonym: "abnormal mitotic cell cycle arrest at G1/S phase transition" EXACT [Po
 synonym: "cell cycle progression through the G1/S phase transition: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic cell cycle arrest at G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic G1/S phase arrest" EXACT [PomBase:mah]
-is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
+is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
 intersection_of: during GO:0000082
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0071850
@@ -5310,7 +5310,7 @@ synonym: "abnormal cell cycle arrest at mitotic G2/M phase transition" EXACT [Po
 synonym: "cell cycle arrest at mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
 synonym: "cell cycle progression through the G2/M phase transition: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic G2/M phase arrest" EXACT [PomBase:mah]
-is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
+is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
 intersection_of: during GO:0000086
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0071850
@@ -6325,6 +6325,7 @@ synonym: "decreased mitotic recombination during vegetative growth" EXACT [PomBa
 synonym: "mitotic recombination: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "reduced mitotic recombination" EXACT [PomBase:mah]
 is_a: FYPO:0000481 ! abnormal mitotic recombination
+is_a: FYPO:0002340 ! decreased DNA recombination during vegetative growth
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006312
@@ -16856,6 +16857,7 @@ def: "A cell population phenotype in which vegetative cell population growth is 
 comment: Use this term when growth rate, e.g. as measured by population doubling time, is reduced. Note that with growth on plates, growth rate can be difficult to assess, so it may be better to use 'decreased cell growth' (FYPO:0000046). Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 synonym: "decreased vegetative cell population growth rate" EXACT [PomBase:mah]
 synonym: "growth defect, slow growth" BROAD [PomBase:mah]
+synonym: "increased doubling time" RELATED [PomBase:vw]
 synonym: "reduced vegetative cell population growth rate" EXACT [PomBase:mah]
 is_a: FYPO:0001356 ! abnormal vegetative cell population growth
 intersection_of: PATO:0000911
@@ -26165,8 +26167,9 @@ creation_date: 2013-01-30T12:58:39Z
 [Term]
 id: FYPO:0001886
 name: meiosis in haploid
-def: "A cellular process phenotype in which haploid cells undergo meiotic division." [DOI:10.1007/BF00332932, PomBase:mah]
+def: "A cellular process phenotype in which haploid cells undergo meiotic division. Haploid meiosis often results in the formation of a structure that resembles an azygotic ascus." [DOI:10.1007/BF00332932, PomBase:mah]
 synonym: "haploid meiosis" EXACT [PomBase:al]
+synonym: "increased haploid meiosis" EXACT [PomBase:mah]
 is_a: FYPO:0000051 ! abnormal meiosis
 created_by: midori
 creation_date: 2013-01-30T13:14:48Z
@@ -26541,7 +26544,7 @@ creation_date: 2013-01-31T15:09:55Z
 [Term]
 id: FYPO:0001914
 name: abnormal forespore membrane formation
-def: "A cellular process phenotype in which forespore membrane assembly is abnormal. In forespore membrane assembly, the nascent membrane forms at the meiotic outer plaque and grows until closure occurs and forespores, or prospores, are formed." [GO:0032120, PomBase:mah]
+def: "A cellular process phenotype in which prospore formation assembly is abnormal. In prospore formation, the nascent membrane forms at the meiotic outer plaque and grows until closure occurs and forespores, or prospores, are formed." [GO:0032120, PomBase:mah]
 synonym: "abnormal ascospore-type prospore membrane assembly" EXACT [GO:0032120]
 synonym: "abnormal prospore membrane formation" EXACT [PomBase:mah]
 is_a: FYPO:0001013 ! abnormal membrane organization
@@ -32457,11 +32460,10 @@ creation_date: 2013-07-09T14:39:15Z
 
 [Term]
 id: FYPO:0002340
-name: decreased DNA recombination
-def: "A cellular process phenotype in which the occurrence of DNA recombination is decreased." [PomBase:mah]
-synonym: "decreased DNA recombination during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased DNA recombination frequency" EXACT [PomBase:mah]
-synonym: "decreased DNA recombination rate" RELATED [PomBase:mah]
+name: decreased DNA recombination during vegetative growth
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of DNA recombination is decreased." [PomBase:mah]
+synonym: "decreased DNA recombination frequency during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased DNA recombination rate during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0001345 ! abnormal DNA recombination during vegetative growth
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
@@ -36772,8 +36774,8 @@ name: normal cell population growth on clotrimazole
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing clotrimazole." [PomBase:mah]
 synonym: "normal cell population growth in presence of clotrimazole" EXACT [PomBase:mah]
 synonym: "normal cellular response to clotrimazole" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on terbinafine" BROAD [PomBase:mah]
-synonym: "normal vegetative cell population growth on terbinafine" EXACT [PomBase:mah]
+synonym: "normal growth on clotrimazole" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on clotrimazole" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: inheres_in BTO:0000316
@@ -37542,6 +37544,195 @@ intersection_of: inheres_in GO:0072690
 intersection_of: towards CHEBI:805446
 created_by: midori
 creation_date: 2013-09-19T16:16:01Z
+
+[Term]
+id: FYPO:0002702
+name: circularized chromosome
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which one or more chromosomes forms a circle by fusion of its ends." [PMID:11349150, PomBase:mah]
+synonym: "circular chromosomes" EXACT [PomBase:mah]
+synonym: "circularised chromosome" EXACT [PomBase:mah]
+synonym: "fused telomeres" RELATED [PomBase:mah]
+is_a: FYPO:0000848 ! abnormal chromosome morphology
+created_by: midori
+creation_date: 2013-09-25T12:14:38Z
+
+[Term]
+id: FYPO:0002703
+name: increased protein level in autophagosome
+def: "A cell phenotype in which the amount of protein measured in autophagosomes is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
+synonym: "increased autophagosomal protein level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein level in autophagic vacuole during vegetative growth" EXACT [GO:0005776]
+synonym: "increased protein level in autophagosome during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein level in cytoplasm during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein accumulation in autophagosomes" EXACT [PomBase:vw]
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005776
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2013-09-25T12:39:09Z
+
+[Term]
+id: FYPO:0002704
+name: normal autophagic vacuole docking
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which autophagic vacuole docking is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal autophagic vacuole docking during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0016240
+intersection_of: qualifier PATO:0000461
+relationship: part_of FYPO:0000385 ! normal autophagy
+created_by: midori
+creation_date: 2013-09-25T12:41:21Z
+
+[Term]
+id: FYPO:0002705
+name: sensitive to methionine
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to methionine. Cells stop growing (and may die) at a concentration of methionine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to methionine" EXACT [PomBase:mah]
+synonym: "sensitive to methionine during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:16643
+created_by: midori
+creation_date: 2013-09-25T12:50:43Z
+
+[Term]
+id: FYPO:0002706
+name: resistance to cordycepin
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of cordycepin than normal." [PomBase:mah]
+synonym: "resistance to cordycepin during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to cordycepin" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:29014
+created_by: midori
+creation_date: 2013-09-25T13:04:40Z
+
+[Term]
+id: FYPO:0002707
+name: normal cell population growth on cordycepin
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cordycepin." [PomBase:mah]
+synonym: "normal cell population growth in presence of cordycepin" EXACT [PomBase:mah]
+synonym: "normal cellular response to cordycepin" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on cordycepin" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on cordycepin" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:29014
+created_by: midori
+creation_date: 2013-09-25T13:07:13Z
+
+[Term]
+id: FYPO:0002708
+name: abolished forespore formation
+def: "A cellular process phenotype in which prospore formation does not occur. In prospore formation, each haploid nucleus becomes encapsulated by a double membrane." [PomBase:mah]
+comment: This term can be used to describe mutants in which meiotic nuclear division takes place, forming four haploid nuclei, but ascospores do not form around the nuclei.
+synonym: "abolished ascospore-type prospore assembly" EXACT [GO:0032121]
+synonym: "abolished prospore formation" EXACT [PomBase:mah]
+synonym: "forespore formation abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000196 ! abnormal forespore formation
+intersection_of: PATO:0001558
+intersection_of: towards GO:0032121
+created_by: midori
+creation_date: 2013-09-25T14:36:01Z
+
+[Term]
+id: FYPO:0002709
+name: spindle pole body absent from cell
+def: "A cell phenotype in which the cell does not contain a detectable spindle pole body." [PomBase:mah]
+synonym: "absent spindle pole body" EXACT [PomBase:mah]
+is_a: FYPO:0000287 ! abnormal subcellular component
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690
+intersection_of: towards GO:0005816
+created_by: midori
+creation_date: 2013-09-25T14:46:19Z
+
+[Term]
+id: FYPO:0002710
+name: spindle pole body absent from cell after meiosis II
+def: "A cell phenotype in which nuclei formed by the second meiotic division do not contain detectable spindle pole bodies." [PomBase:mah]
+synonym: "absent spindle pole body after meiosis II" EXACT [PomBase:mah]
+synonym: "absent spindle pole body after second meiotic division" EXACT [PomBase:vw]
+is_a: FYPO:0002709 ! spindle pole body absent from cell
+created_by: midori
+creation_date: 2013-09-25T14:48:18Z
+
+[Term]
+id: FYPO:0002711
+name: abnormal nuclear separation after meiosis
+def: "A cellular process phenotype in which the haploid nuclei formed by meiotic division do not separate normally. Nuclei may be closer together than normal, or remain attached by an incompletely separated outer nuclear membrane, or both." [PMID:1417417, PomBase:mah]
+synonym: "abnormal nuclear distribution after meiosis" EXACT [PomBase:mah]
+synonym: "abnormal nuclear separation during sporulation" RELATED [PomBase:mah]
+synonym: "abnormal nuclear separation in ascus" EXACT [PomBase:mah]
+is_a: FYPO:0000121 ! abnormal sporulation
+created_by: midori
+creation_date: 2013-09-25T14:53:56Z
+
+[Term]
+id: FYPO:0002712
+name: decreased DNA recombination
+def: "A cellular process phenotype in which the occurrence of DNA recombination is decreased." [PomBase:mah]
+synonym: "decreased DNA recombination frequency" EXACT [PomBase:mah]
+synonym: "decreased DNA recombination rate" RELATED [PomBase:mah]
+is_a: FYPO:0000063 ! abnormal DNA recombination
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0006310
+created_by: midori
+creation_date: 2013-09-25T15:43:00Z
+
+[Term]
+id: FYPO:0002713
+name: decreased DNA recombination at mating type locus
+def: "A cellular process phenotype in which the occurrence of DNA recombination is decreased at the mating type locus." [PomBase:mah]
+synonym: "decreased DNA recombination frequency at mating type locus" EXACT [PomBase:mah]
+synonym: "decreased DNA recombination rate at mating type locus" RELATED [PomBase:mah]
+is_a: FYPO:0002712 ! decreased DNA recombination
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0006310
+intersection_of: occurs_at SO:0001789
+created_by: midori
+creation_date: 2013-09-25T15:46:03Z
+
+[Term]
+id: FYPO:0002714
+name: protein mislocalized to Golgi apparatus
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the Golgi apparatus is observed there." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "protein mislocalised to Golgi apparatus" EXACT [PomBase:mah]
+synonym: "protein mislocalised to Golgi apparatus during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to Golgi apparatus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005794
+relationship: output_of FYPO:0001129 ! abnormal protein localization to nucleus
+created_by: midori
+creation_date: 2013-09-25T15:52:17Z
+
+[Term]
+id: FYPO:0002715
+name: normal Golgi apparatus morphology
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, and structure the Golgi apparatus is normal." [PomBase:mah]
+comment: Note that an abnormal chromosome organization process may, but does not necessarily, result in abnormal chromosome morphology.
+synonym: "normal Golgi apparatus morphology during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal Golgi morphology" EXACT [PomBase:mah]
+is_a: FYPO:0001233 ! normal subcellular component
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005794
+intersection_of: qualifier PATO:0000461
+relationship: output_of FYPO:0000641 ! abnormal chromosome organization
+created_by: midori
+creation_date: 2013-09-25T15:53:38Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
