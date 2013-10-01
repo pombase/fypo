@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 26:09:2013 17:08
+date: 01:10:2013 17:25
 saved-by: midori
-auto-generated-by: OBO-Edit 2.3-beta5
+auto-generated-by: OBO-Edit 2.3-beta6
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
@@ -148,9 +148,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000011
-name: abnormal cell cycle progression
+name: abnormal cell cycle
 alt_id: FYPO:0000406
 def: "A cellular process phenotype in which a cell does not proceed normally through a cell cycle." [PomBase:mah]
+subset: qc_do_not_manually_annotate
 synonym: "abnormal cell-division cycle" EXACT [GO:0007049, PomBase:mah]
 synonym: "cell cycle defects" EXACT [PomBase:mah]
 synonym: "cell cycle progression: abnormal" EXACT [SGD:phenotype_annotation]
@@ -181,19 +182,18 @@ synonym: "delayed mitotic G2 phase progression" RELATED [PomBase:mah]
 synonym: "DNA replication arrest" RELATED [PomBase:vw]
 synonym: "DNA replication checkpoint activated" RELATED [PomBase:mah]
 synonym: "G2/M transition DNA damage checkpoint activated" RELATED [PomBase:mah]
-synonym: "increased duration of mitotic G2 phase" EXACT [PomBase:mah]
-synonym: "increased duration of mitotic G2 phase during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased mitotic G2 duration" EXACT [PomBase:mah]
+synonym: "increased duration of mitotic G2 phase" RELATED [PomBase:mah]
+synonym: "increased duration of mitotic G2 phase during vegetative growth" RELATED [PomBase:mah]
+synonym: "increased mitotic G2 duration" RELATED [PomBase:mah]
 synonym: "mitotic cell cycle delay at G2/M transition" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in G2 phase: decreased rate" RELATED [SGD:phenotype_annotation]
 synonym: "mitotic cell cycle progression in G2 phase: delayed" RELATED [SGD:phenotype_annotation]
-synonym: "mitotic cell cycle progression in G2 phase: increased duration" EXACT [SGD:phenotype_annotation]
+synonym: "mitotic cell cycle progression in G2 phase: increased duration" RELATED [SGD:phenotype_annotation]
 synonym: "mitotic G2 delay" RELATED [PomBase:mah]
 synonym: "mitotic G2/M transition delay during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced rate of mitotic G2 phase progression" RELATED [PomBase:mah]
-is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
+is_a: FYPO:0000399 ! abnormal mitotic G2/M phase transition
 is_a: FYPO:0000409 ! delayed cell cycle phase transition
-is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
@@ -722,7 +722,7 @@ alt_id: FYPO:0000738
 def: "A cellular process phenotype in which meiosis is abnormal. Meiosis refers specifically to the nuclear division phase of a meiotic cell cycle." [PomBase:mah]
 synonym: "meiosis defects" EXACT [PomBase:mah]
 synonym: "meiosis: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000052 ! abnormal meiotic cell cycle progression
+is_a: FYPO:0002739 ! abnormal meiotic cell cycle process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007126
 intersection_of: qualifier PATO:0000460
@@ -731,10 +731,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000052
-name: abnormal meiotic cell cycle progression
+name: abnormal meiotic cell cycle
 def: "A cellular process phenotype in which a cell does not proceed normally through a meiotic cell cycle." [PomBase:mah]
 synonym: "meiotic cell cycle defects" EXACT [PomBase:mah]
-is_a: FYPO:0000011 ! abnormal cell cycle progression
+is_a: FYPO:0000011 ! abnormal cell cycle
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0051321
 intersection_of: qualifier PATO:0000460
@@ -817,11 +817,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000059
-name: abnormal mitotic cell cycle progression
+name: abnormal mitotic cell cycle
 def: "A cellular process phenotype in which a cell does not proceed normally through a mitotic cell cycle." [PomBase:mah]
 synonym: "mitotic cell cycle defects" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000011 ! abnormal cell cycle progression
+is_a: FYPO:0000011 ! abnormal cell cycle
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000278
 intersection_of: qualifier PATO:0000460
@@ -830,10 +830,11 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000060
-name: mononucleate
+name: mononucleate vegetative cell
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell contains a single nucleus." [PomBase:mah]
 synonym: "mononucleate during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+is_a: FYPO:0002731 ! mononucleate
 intersection_of: PATO:0001407
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -2187,10 +2188,12 @@ creation_date: 2011-04-13T03:34:54Z
 
 [Term]
 id: FYPO:0000158
-name: DNA content increased
+name: DNA content increased during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the total amount of DNA in a cell is greater than normal." [PomBase:mah]
-synonym: "DNA content increased during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased DNA content during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased DNA level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+is_a: FYPO:0002729 ! DNA content increased
 intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -4291,7 +4294,7 @@ synonym: "cell cycle passage through the metaphase-anaphase transition: delayed"
 synonym: "delayed cell cycle passage through mitotic metaphase-anaphase transition" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle delay at metaphase/anaphase transition" EXACT [PomBase:mah]
 synonym: "mitotic metaphase/anaphase transition delay during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+is_a: FYPO:0002737 ! abnormal mitotic cell cycle process
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007091
@@ -4415,17 +4418,16 @@ comment: A G1/S delay may indicate that a checkpoint, such as the cell size chec
 synonym: "cell cycle progression through the G1/S phase transition: delayed" EXACT [SGD:phenotype_annotation]
 synonym: "delayed cell cycle progression through mitotic G1/S phase transition" EXACT [PomBase:mah]
 synonym: "delayed mitotic G1 phase progression" RELATED [PomBase:mah]
-synonym: "increased duration of mitotic G1 phase" EXACT [PomBase:mah]
-synonym: "increased duration of mitotic G1 phase during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased duration of mitotic G1 phase progression" EXACT [PomBase:mah]
+synonym: "increased duration of mitotic G1 phase" RELATED [PomBase:mah]
+synonym: "increased duration of mitotic G1 phase during vegetative growth" RELATED [PomBase:mah]
+synonym: "increased duration of mitotic G1 phase progression" RELATED [PomBase:mah]
 synonym: "mitotic cell cycle delay at G1/S transition" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle delay in G1" RELATED [PomBase:mah]
 synonym: "mitotic cell cycle progression in G1 phase: delayed" RELATED [SGD:phenotype_annotation]
-synonym: "mitotic cell cycle progression in G1 phase: increased duration" EXACT [SGD:phenotype_annotation]
+synonym: "mitotic cell cycle progression in G1 phase: increased duration" RELATED [SGD:phenotype_annotation]
 synonym: "mitotic G1/S transition delay during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
+is_a: FYPO:0000394 ! abnormal mitotic G1/S phase transition
 is_a: FYPO:0000409 ! delayed cell cycle phase transition
-is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000082
@@ -4481,7 +4483,7 @@ id: FYPO:0000337
 name: abnormal mitosis
 def: "A cellular process phenotype in which mitosis is abnormal." [PomBase:mah]
 synonym: "abnormal mitosis during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000607 ! abnormal mitotic M phase progression
+is_a: FYPO:0002737 ! abnormal mitotic cell cycle process
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007067
@@ -5218,7 +5220,7 @@ def: "A cellular process phenotype in which traversing the start control point o
 synonym: "cell cycle passage through START: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal mitotic cell cycle passage through START" EXACT [PomBase:mah]
 synonym: "normal passage through START of mitotic cell cycle during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000411 ! normal cell cycle progression
+is_a: FYPO:0000411 ! normal cell cycle
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007089
@@ -5244,11 +5246,14 @@ creation_date: 2011-07-14T06:06:09Z
 
 [Term]
 id: FYPO:0000394
-name: abnormal cell cycle progression through mitotic G1/S phase transition
+name: abnormal mitotic G1/S phase transition
 def: "A cellular process phenotype in which the G1/S transition of the mitotic cell cycle is abnormal." [PomBase:mah]
-synonym: "abnormal cell cycle progression through mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cell cycle progression through the G1/S phase transition" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle G1/S phase transition" EXACT [PomBase:mah]
+synonym: "abnormal mitotic G1/S cell cycle phase transition" EXACT [PomBase:mah]
+synonym: "abnormal mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
 synonym: "cell cycle progression through the G1/S phase transition: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+is_a: FYPO:0002737 ! abnormal mitotic cell cycle process
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000082
@@ -5274,13 +5279,14 @@ creation_date: 2011-07-14T06:06:09Z
 
 [Term]
 id: FYPO:0000397
-name: decreased duration of cell cycle progression through mitotic G1/S phase transition
+name: decreased duration of mitotic G1/S phase transition
 def: "A cellular process phenotype in which the duration of progression through the G1/S transition of the mitotic cell cycle is shorter than normal." [PomBase:mah]
 synonym: "cell cycle progression through the G1/S phase transition: increased rate" RELATED [SGD:phenotype_annotation]
-synonym: "decreased duration of cell cycle progression through mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased duration of cell cycle progression through mitotic G1/S phase transition" EXACT [PomBase:mah]
+synonym: "decreased duration of mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased rate of cell cycle progression through mitotic G1/S phase transition" RELATED [PomBase:mah]
-synonym: "reduced duration of cell cycle progression through mitotic G1/S phase transition" EXACT [PomBase:mah]
-is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
+synonym: "reduced duration of mitotic G1/S phase transition" EXACT [PomBase:mah]
+is_a: FYPO:0000394 ! abnormal mitotic G1/S phase transition
 is_a: FYPO:0000410 ! decreased duration of cell cycle phase
 intersection_of: PATO:0000499
 intersection_of: happens_during GO:0072690
@@ -5290,11 +5296,12 @@ creation_date: 2011-07-14T06:06:09Z
 
 [Term]
 id: FYPO:0000398
-name: premature cell cycle progression through mitotic G1/S phase transition
+name: premature mitotic G1/S phase transition
 def: "A cellular process phenotype in which progression through the G1/S transition of the mitotic cell cycle is premature." [PomBase:mah]
 synonym: "cell cycle progression through the G1/S phase transition: premature" EXACT [SGD:phenotype_annotation]
-synonym: "premature cell cycle progression through mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000394 ! abnormal cell cycle progression through mitotic G1/S phase transition
+synonym: "premature cell cycle progression through mitotic G1/S phase transition" EXACT [PomBase:mah]
+synonym: "premature mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000394 ! abnormal mitotic G1/S phase transition
 intersection_of: PATO:0000694
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000082
@@ -5303,11 +5310,14 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000399
-name: abnormal cell cycle progression through mitotic G2/M phase transition
+name: abnormal mitotic G2/M phase transition
 def: "A cellular process phenotype in which the G2/M transition of the mitotic cell cycle is abnormal." [PomBase:mah]
+synonym: "abnormal cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
 synonym: "abnormal cell cycle progression through mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle G2/M phase transition" EXACT [PomBase:mah]
+synonym: "abnormal mitotic G2/M cell cycle phase transition" EXACT [PomBase:mah]
 synonym: "cell cycle progression through the G2/M phase transition: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+is_a: FYPO:0002737 ! abnormal mitotic cell cycle process
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
@@ -5333,11 +5343,12 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000402
-name: increased cell cycle progression through mitotic G2/M phase transition
+name: increased mitotic G2/M phase transition
 def: "A cellular process phenotype in which the occurrence of progression through the G2/M transition of the mitotic cell cycle is increased." [PomBase:mah]
 synonym: "cell cycle progression through the G2/M phase transition: increased" EXACT [SGD:phenotype_annotation]
-synonym: "increased cell cycle progression through mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
+synonym: "increased cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
+synonym: "increased occurrence of mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000399 ! abnormal mitotic G2/M phase transition
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
@@ -5346,11 +5357,12 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000403
-name: increased duration of cell cycle progression through mitotic G2/M phase transition
+name: increased duration of mitotic G2/M phase transition
 def: "A cellular process phenotype in which the duration of progression through the G2/M transition of the mitotic cell cycle is increased." [PomBase:mah]
 synonym: "cell cycle progression through the G2/M phase transition: increased duration" EXACT [SGD:phenotype_annotation]
-synonym: "increased duration of cell cycle progression through mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
+synonym: "increased duration of cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
+synonym: "increased duration of mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000399 ! abnormal mitotic G2/M phase transition
 intersection_of: PATO:0000498
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
@@ -5359,13 +5371,14 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000404
-name: decreased duration of cell cycle progression through mitotic G2/M phase transition
+name: decreased duration of mitotic G2/M phase transition
 def: "A cellular process phenotype in which the duration of progression through the G2/M transition of the mitotic cell cycle is shorter than normal." [PomBase:mah]
 synonym: "cell cycle progression through the G2/M phase transition: increased rate" EXACT [SGD:phenotype_annotation]
+synonym: "decreased duration of cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
 synonym: "decreased duration of cell cycle progression through mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased rate of cell cycle progression through mitotic G2/M phase transition" RELATED [PomBase:mah]
-synonym: "reduced duration of cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
-is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
+synonym: "increased rate of mitotic G2/M phase transition" RELATED [PomBase:mah]
+synonym: "reduced duration of mitotic G2/M phase transition" EXACT [PomBase:mah]
+is_a: FYPO:0000399 ! abnormal mitotic G2/M phase transition
 is_a: FYPO:0000410 ! decreased duration of cell cycle phase
 intersection_of: PATO:0000499
 intersection_of: happens_during GO:0072690
@@ -5375,11 +5388,12 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000405
-name: normal cell cycle progression through mitotic G2/M phase transition
+name: normal mitotic G2/M phase transition
 def: "A cellular process phenotype in which the G2/M transition of the mitotic cell cycle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "cell cycle progression through the G2/M phase transition: normal" EXACT [SGD:phenotype_annotation]
-synonym: "normal cell cycle progression through mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000411 ! normal cell cycle progression
+synonym: "normal cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
+synonym: "normal mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002741 ! normal cell cycle process
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
@@ -5395,7 +5409,7 @@ comment: Note that this term should be used only for cell cycle arrest that occu
 synonym: "abnormal cell cycle arrest" EXACT [PomBase:mah]
 synonym: "abnormally arrested cell cycle progression during vegetative growth" EXACT [PomBase:mah]
 synonym: "cell cycle progression: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000011 ! abnormal cell cycle progression
+is_a: FYPO:0000011 ! abnormal cell cycle
 is_a: FYPO:0001024 ! cell cycle arrest phenotype
 intersection_of: PATO:0001561
 intersection_of: towards GO:0007050
@@ -5408,11 +5422,9 @@ name: increased duration of cell cycle phase
 def: "A cellular process phenotype in which the duration of one or more cell cycle phases is longer than normal." [PomBase:mah]
 synonym: "cell cycle progression: decreased rate" RELATED [SGD:phenotype_annotation]
 synonym: "decreased rate of cell cycle progression" RELATED [PomBase:mah]
-synonym: "increased duration of cell cycle phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced rate of cell cycle progression" RELATED [PomBase:mah]
-is_a: FYPO:0000011 ! abnormal cell cycle progression
+is_a: FYPO:0002735 ! abnormal cell cycle phase
 intersection_of: PATO:0000498
-intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007049
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
@@ -5423,7 +5435,7 @@ name: delayed cell cycle phase transition
 def: "A cellular process phenotype in which one or more cell cycle phase transitions takes place later than normal." [PomBase:mah]
 synonym: "cell cycle progression: delayed" EXACT [SGD:phenotype_annotation]
 synonym: "delayed cell cycle phase transition during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000011 ! abnormal cell cycle progression
+is_a: FYPO:0002734 ! abnormal cell cycle process
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007049
@@ -5435,22 +5447,21 @@ id: FYPO:0000410
 name: decreased duration of cell cycle phase
 def: "A cellular process phenotype in which the duration of one or more cell cycle phases is shorter than normal." [PomBase:mah]
 synonym: "cell cycle progression: increased rate" RELATED [SGD:phenotype_annotation]
-synonym: "decreased duration of cell cycle phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased rate of cell cycle progression" RELATED [PomBase:mah]
 synonym: "reduced duration of cell cycle phase" EXACT [PomBase:mah]
-is_a: FYPO:0000011 ! abnormal cell cycle progression
+is_a: FYPO:0002735 ! abnormal cell cycle phase
 intersection_of: PATO:0000499
-intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007049
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000411
-name: normal cell cycle progression
+name: normal cell cycle
 def: "A cellular process phenotype in which cell cycle progression is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "cell cycle progression: normal" EXACT [SGD:phenotype_annotation]
-synonym: "normal cell cycle progression during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal cell cycle during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal cell cycle progression" EXACT [PomBase:mah]
 synonym: "normal cell-division cycle" EXACT [GO:0007049, PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
@@ -5988,10 +5999,11 @@ creation_date: 2011-08-12T02:35:06Z
 
 [Term]
 id: FYPO:0000453
-name: DNA content decreased
+name: DNA content decreased during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell contains less DNA than normal." [PomBase:mah]
-synonym: "DNA content decreased during vegetative growth" EXACT [PomBase:mah]
-synonym: "DNA content reduced" EXACT [PomBase:mah]
+synonym: "decreased DNA content during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased DNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "DNA content reduced during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
 intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
@@ -6609,7 +6621,7 @@ synonym: "abnormal mitotic cell cycle arrest" RELATED [PomBase:mah]
 synonym: "abnormally arrested mitotic cell cycle during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle abnormally arrested" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle
 is_a: FYPO:0000407 ! abnormally arrested cell cycle progression
 intersection_of: PATO:0001561
 intersection_of: during GO:0072690
@@ -7440,7 +7452,7 @@ def: "A cellular process phenotype in which progression through the G1 phase of 
 synonym: "mitotic cell cycle progression in G1 phase: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal mitotic cell cycle progression in G1" EXACT [PomBase:mah]
 synonym: "normal mitotic G1 phase progression during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000411 ! normal cell cycle progression
+is_a: FYPO:0002740 ! normal cell cycle phase
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000080
@@ -7472,7 +7484,7 @@ def: "A cellular process phenotype in which progression through the G2 phase of 
 synonym: "abnormal mitotic cell cycle progression in G2" EXACT [PomBase:mah]
 synonym: "abnormal mitotic G2 phase progression during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in G2 phase: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+is_a: FYPO:0002736 ! abnormal mitotic cell cycle phase
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000085
@@ -8034,7 +8046,7 @@ def: "A cellular process phenotype in which progression through the G1 phase of 
 synonym: "abnormal mitotic cell cycle progression in G1" EXACT [PomBase:mah]
 synonym: "abnormal mitotic G1 phase progression during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in G1 phase: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+is_a: FYPO:0002736 ! abnormal mitotic cell cycle phase
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000080
@@ -8064,7 +8076,7 @@ def: "A cellular process phenotype in which progression through M phase of the m
 synonym: "abnormal mitotic cell cycle progression in M" EXACT [PomBase:mah]
 synonym: "abnormal mitotic M phase progression during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in M phase: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+is_a: FYPO:0002736 ! abnormal mitotic cell cycle phase
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000087
@@ -8078,12 +8090,14 @@ name: mitotic cell cycle arrest in M phase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in M phase." [PomBase:mah]
 synonym: "mitotic cell cycle arrest in M phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in M phase: arrested" EXACT [SGD:phenotype_annotation]
+synonym: "mitotic nuclear division arrest" EXACT [PomBase:vw]
 is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
 is_a: FYPO:0000607 ! abnormal mitotic M phase progression
 intersection_of: during GO:0000087
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0071850
 intersection_of: qualifier PATO:0000467
+relationship: has_output FYPO:0000337 ! abnormal mitosis
 created_by: midori
 creation_date: 2011-08-16T10:03:01Z
 
@@ -8094,7 +8108,7 @@ def: "A cellular process phenotype in which progression through S phase of the m
 synonym: "abnormal mitotic cell cycle progression in S" EXACT [PomBase:mah]
 synonym: "abnormal mitotic S phase progression during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in S phase: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
+is_a: FYPO:0002736 ! abnormal mitotic cell cycle phase
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000084
@@ -8223,7 +8237,7 @@ synonym: "delayed mitotic metaphase" EXACT [PomBase:mah]
 synonym: "delayed onset of mitotic metaphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in metaphase: delayed" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic metaphase delay" EXACT [PomBase:mah]
-is_a: FYPO:0000409 ! delayed cell cycle phase transition
+is_a: FYPO:0000607 ! abnormal mitotic M phase progression
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000089
@@ -9037,6 +9051,7 @@ creation_date: 2011-12-01T01:29:02Z
 id: FYPO:0000682
 name: abnormal regulation of molecular function
 def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which regulation of a molecular function is abnormal." [PomBase:mah]
+subset: qc_do_not_annotate
 synonym: "abnormal regulation of molecular function during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
 intersection_of: PATO:0000001
@@ -11004,7 +11019,7 @@ id: FYPO:0000827
 name: advanced cell cycle progression
 def: "A cellular process phenotype in which cell cycle progression is advanced, one or more cell cycle phase transitions takes place earlier than normal." [PomBase:mah]
 synonym: "advanced cell cycle progression during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000011 ! abnormal cell cycle progression
+is_a: FYPO:0000011 ! abnormal cell cycle
 intersection_of: PATO:0000500
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007049
@@ -11196,7 +11211,7 @@ is_a: FYPO:0002066 ! inviable elongated aseptate cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0000949 ! aseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: output_of FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
@@ -14585,8 +14600,8 @@ id: FYPO:0001069
 name: increased duration of mitotic cell cycle phase
 def: "A cellular process phenotype in which the duration of one or more mitotic cell cycle phases is longer than normal." [PomBase:mah]
 synonym: "increased duration of mitotic cell cycle phase during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 is_a: FYPO:0000408 ! increased duration of cell cycle phase
+is_a: FYPO:0002736 ! abnormal mitotic cell cycle phase
 intersection_of: PATO:0000498
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0022403
@@ -14599,8 +14614,8 @@ name: decreased duration of mitotic cell cycle phase
 def: "A cellular process phenotype in which the duration of one or more mitotic cell cycle phases is shorter than normal." [PomBase:mah]
 synonym: "decreased duration of mitotic cell cycle phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced duration of mitotic cell cycle phase" EXACT [PomBase:mah]
-is_a: FYPO:0000059 ! abnormal mitotic cell cycle progression
 is_a: FYPO:0000410 ! decreased duration of cell cycle phase
+is_a: FYPO:0002736 ! abnormal mitotic cell cycle phase
 intersection_of: PATO:0000499
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0022403
@@ -16767,7 +16782,7 @@ is_a: FYPO:0000339 ! mislocalized septum
 is_a: FYPO:0002303 ! inviable mononucleate monoseptate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0000339 ! mislocalized septum
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
@@ -19574,6 +19589,7 @@ synonym: "abnormal negative regulation of DNA-dependent DNA replication initiati
 synonym: "complete DNA re-replication" RELATED [PomBase:mah]
 synonym: "complete DNA rereplication" RELATED [PomBase:mah]
 is_a: FYPO:0000216 ! abnormal negative regulation of DNA replication initiation
+relationship: has_output FYPO:0000158 ! DNA content increased during vegetative growth
 created_by: midori
 creation_date: 2012-08-22T15:01:52Z
 
@@ -19586,6 +19602,7 @@ synonym: "abnormal negative regulation of DNA-dependent DNA replication initiati
 synonym: "partial DNA re-replication" RELATED [PomBase:mah]
 synonym: "partial DNA rereplication" RELATED [PomBase:mah]
 is_a: FYPO:0000216 ! abnormal negative regulation of DNA replication initiation
+relationship: has_output FYPO:0000158 ! DNA content increased during vegetative growth
 created_by: midori
 creation_date: 2012-08-22T15:05:13Z
 
@@ -19598,6 +19615,7 @@ synonym: "abnormal negative regulation of DNA-dependent DNA replication initiati
 synonym: "slow DNA re-replication" RELATED [PomBase:mah]
 synonym: "slow DNA rereplication" RELATED [PomBase:mah]
 is_a: FYPO:0000216 ! abnormal negative regulation of DNA replication initiation
+relationship: has_output FYPO:0000158 ! DNA content increased during vegetative growth
 created_by: midori
 creation_date: 2012-08-22T15:06:50Z
 
@@ -21086,7 +21104,7 @@ creation_date: 2012-09-13T15:02:01Z
 id: FYPO:0001532
 name: normal duration of mitotic S phase
 def: "A cell cycle phenotype in the duration of S phase of the mitotic cell cycle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-is_a: FYPO:0000411 ! normal cell cycle progression
+is_a: FYPO:0002740 ! normal cell cycle phase
 intersection_of: PATO:0001309
 intersection_of: inheres_in GO:0000084
 intersection_of: qualifier PATO:0000461
@@ -24493,10 +24511,11 @@ creation_date: 2012-11-14T15:25:43Z
 
 [Term]
 id: FYPO:0001761
-name: normal cell cycle progression through mitotic G1/S phase transition
+name: normal mitotic G1/S phase transition
 def: "A cellular process phenotype in which the G1/S transition of the mitotic cell cycle is normal." [PomBase:mah]
-synonym: "normal cell cycle progression through mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000411 ! normal cell cycle progression
+synonym: "normal cell cycle progression through mitotic G1/S phase transition" EXACT [PomBase:mah]
+synonym: "normal mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002741 ! normal cell cycle process
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000082
@@ -26106,6 +26125,7 @@ name: thin cell
 def: "A cell morphology phenotype in which a cell has an abnormally low thickness or diameter." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
+is_a: FYPO:0001126 ! abnormal cell shape
 is_a: FYPO:0001127 ! abnormal cell size
 intersection_of: PATO:0000592
 intersection_of: inheres_in CL:0000000
@@ -26608,12 +26628,12 @@ name: elongated mononucleate cell
 def: "A cell phenotype in which a cell contains one nucleus apiece and is elongated." [PomBase:mah]
 synonym: "elongated mononucleate cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "long mononucleate cell" EXACT [PomBase:vw]
-is_a: FYPO:0000060 ! mononucleate
+is_a: FYPO:0000060 ! mononucleate vegetative cell
 is_a: FYPO:0001122 ! elongated vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 created_by: midori
 creation_date: 2013-02-06T11:57:40Z
 
@@ -26628,7 +26648,7 @@ is_a: FYPO:0001916 ! elongated mononucleate cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0001225 ! monoseptate
 created_by: midori
 creation_date: 2013-02-06T12:00:33Z
@@ -27674,7 +27694,7 @@ is_a: FYPO:0001917 ! elongated mononucleate monoseptate cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0000339 ! mislocalized septum
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
@@ -27717,7 +27737,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001391 ! mislocalized septum, near new end
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
@@ -27802,10 +27822,10 @@ synonym: "septated mononucleate cell during vegetative growth" EXACT [PomBase:ma
 synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
 synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
 synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
-is_a: FYPO:0000060 ! mononucleate
+is_a: FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 intersection_of: has_part FYPO:0002069 ! mislocalized nucleus
 intersection_of: has_part FYPO:0002342 ! septated cell
@@ -27828,7 +27848,7 @@ is_a: FYPO:0000118 ! multiseptate
 is_a: FYPO:0002000 ! inviable septated mononucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0000118 ! multiseptate
 created_by: midori
 creation_date: 2013-02-27T13:11:43Z
@@ -29259,7 +29279,7 @@ is_a: FYPO:0002414 ! inviable swollen vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000025 ! swollen cell
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
@@ -30861,8 +30881,8 @@ creation_date: 2013-06-05T16:23:45Z
 id: FYPO:0002220
 name: increased duration of meiotic cell cycle phase
 def: "A cellular process phenotype in which the duration of one or more meiotic cell cycle phases is longer than normal." [PomBase:mah]
-is_a: FYPO:0000052 ! abnormal meiotic cell cycle progression
 is_a: FYPO:0000408 ! increased duration of cell cycle phase
+is_a: FYPO:0002738 ! abnormal meiotic cell cycle phase
 intersection_of: PATO:0000498
 intersection_of: during GO:0051321
 intersection_of: inheres_in GO:0022403
@@ -30909,6 +30929,7 @@ creation_date: 2013-06-05T16:40:26Z
 id: FYPO:0002224
 name: abnormally arrested meiotic cell cycle
 def: "A cellular process phenotype in which progression through the meiotic cell cycle is arrested under conditions where arrest does not normally occur." [PomBase:mah]
+is_a: FYPO:0000052 ! abnormal meiotic cell cycle
 is_a: FYPO:0000407 ! abnormally arrested cell cycle progression
 intersection_of: PATO:0001561
 intersection_of: during GO:0051321
@@ -31317,7 +31338,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 intersection_of: has_part FYPO:0002253 ! normal septum location
@@ -32009,7 +32030,7 @@ is_a: FYPO:0001225 ! monoseptate
 is_a: FYPO:0002000 ! inviable septated mononucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
@@ -32523,7 +32544,7 @@ is_a: FYPO:0001916 ! elongated mononucleate cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000060 ! mononucleate
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 intersection_of: has_part FYPO:0002069 ! mislocalized nucleus
 created_by: midori
@@ -35075,16 +35096,16 @@ comment: A G2/M advance may indicate that a checkpoint, such as the DNA replicat
 synonym: "advanced cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
 synonym: "advanced mitotic G2 phase progression" RELATED [PomBase:mah]
 synonym: "cell cycle, mitotic G2 advance" RELATED [PomBase:mah]
-synonym: "decreased duration of mitotic G2 phase" EXACT [PomBase:mah]
-synonym: "decreased duration of mitotic G2 phase during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased mitotic G2 duration" EXACT [PomBase:mah]
+synonym: "decreased duration of mitotic G2 phase" RELATED [PomBase:mah]
+synonym: "decreased duration of mitotic G2 phase during vegetative growth" RELATED [PomBase:mah]
+synonym: "decreased mitotic G2 duration" RELATED [PomBase:mah]
 synonym: "increased rate of mitotic G2 phase progression" RELATED [PomBase:mah]
 synonym: "mitotic cell cycle advance at G2/M transition" EXACT [PomBase:mah]
 synonym: "mitotic G2 advance" RELATED [PomBase:mah]
 synonym: "mitotic G2/M transition advance" EXACT [PomBase:mah]
 synonym: "mitotic G2/M transition advance during vegetative growth" EXACT [PomBase:mah]
 synonym: "premature mitotic G2/M transition during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000399 ! abnormal cell cycle progression through mitotic G2/M phase transition
+is_a: FYPO:0000399 ! abnormal mitotic G2/M phase transition
 is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
 is_a: FYPO:0000827 ! advanced cell cycle progression
 intersection_of: PATO:0000694
@@ -38032,6 +38053,201 @@ def: "A cell morphology phenotype in which a vegetative cell is inviable, has a 
 is_a: FYPO:0002083 ! inviable swollen elongated cell with enlarged nucleus
 created_by: midori
 creation_date: 2013-09-26T16:56:31Z
+
+[Term]
+id: FYPO:0002729
+name: DNA content increased
+def: "A cell phenotype in which the total amount of DNA in a cell is greater than normal." [PomBase:mah]
+synonym: "increased DNA content" EXACT [PomBase:mah]
+synonym: "increased DNA level" EXACT [PomBase:mah]
+is_a: FYPO:0000990 ! increased level of substance in cell
+intersection_of: PATO:0001162
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:16991
+created_by: midori
+creation_date: 2013-10-01T14:10:44Z
+
+[Term]
+id: FYPO:0002730
+name: DNA content increased during stationary phase
+def: "A cell phenotype in which the total amount of DNA in a cell is greater than normal when the cell is in a culture in stationary phase." [PomBase:mah]
+synonym: "increased DNA content during stationary phase" EXACT [PomBase:mah]
+synonym: "increased DNA level during stationary phase" EXACT [PomBase:mah]
+is_a: FYPO:0002729 ! DNA content increased
+created_by: midori
+creation_date: 2013-10-01T14:15:45Z
+
+[Term]
+id: FYPO:0002731
+name: mononucleate
+def: "A physical cellular phenotype in which a cell contains a single nucleus." [PomBase:mah]
+synonym: "mononucleate cell" EXACT [PomBase:mah]
+is_a: FYPO:0000136 ! cellular physical quality phenotype
+intersection_of: PATO:0001407
+intersection_of: inheres_in CL:0000000
+created_by: midori
+creation_date: 2013-10-01T14:26:14Z
+
+[Term]
+id: FYPO:0002732
+name: mononucleate cell with increased DNA content during stationary phase
+def: "A physical cellular phenotype in which a cell contains a single nucleus, and more DNA than normal, when the cell is in a culture in stationary phase." [PomBase:mah]
+is_a: FYPO:0002731 ! mononucleate
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0002730 ! DNA content increased during stationary phase
+intersection_of: has_part FYPO:0002731 ! mononucleate
+created_by: midori
+creation_date: 2013-10-01T14:28:35Z
+
+[Term]
+id: FYPO:0002733
+name: inviable after spore germination, multiple cell divisions, elongated bottle-shaped cell
+def: "A phenotype in which a spore germinates to produce a cell that is elongated and bottle-shaped, i.e. tapers at one end to a diameter smaller than the other, undergoes two or more rounds of cell division and then dies." [PomBase:al, PomBase:mah]
+synonym: "essential; germinating spore, multiple cell divisions, elongated bottle-shaped cell" RELATED [PomBase:mah]
+synonym: "inviable after spore germination, multiple cell divisions, elongated bottle/skittle cell" EXACT [PomBase:mah]
+synonym: "inviable after spore germination, multiple cell divisions, elongated skittle-shaped cell" EXACT [PomBase:mah]
+synonym: "inviable following spore germination, multiple cell divisions, elongated bottle-shaped cell" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, multiple cell divisions, elongated bottle-shaped cell" EXACT [PomBase:mah]
+is_a: FYPO:0002148 ! inviable after spore germination, multiple cell divisions, abnormal morphology
+created_by: midori
+creation_date: 2013-10-01T14:37:15Z
+
+[Term]
+id: FYPO:0002734
+name: abnormal cell cycle process
+def: "A cellular process phenotype in which a cell does not execute a cell cycle process normally. A cell cycle process is any of the processes that form part of the cell cycle, and thereby ensures successive accurate and complete genome replication and chromosome segregation." [GO:0022402, PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000011 ! abnormal cell cycle
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0022402
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-01T15:08:57Z
+
+[Term]
+id: FYPO:0002735
+name: abnormal cell cycle phase
+def: "A cellular process phenotype in which a cell does not proceed normally through a specific cell cycle phase. A cell cycle phase is any of the distinct periods or stages into which the cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000011 ! abnormal cell cycle
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0022403
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-01T15:09:18Z
+
+[Term]
+id: FYPO:0002736
+name: abnormal mitotic cell cycle phase
+def: "A cellular process phenotype in which a cell does not proceed normally through a specific mitotic cell cycle phase. A mitotic cell cycle phase is any of the distinct periods or stages into which the mitotic cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle
+is_a: FYPO:0002735 ! abnormal cell cycle phase
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0022403
+intersection_of: part_of GO:0000278
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-01T15:14:48Z
+
+[Term]
+id: FYPO:0002737
+name: abnormal mitotic cell cycle process
+def: "A cellular process phenotype in which a cell does not execute a mitotic cell cycle process normally. A mitotic cell cycle process is any of the processes that form part of the mitotic cell cycle, and thereby ensures successive accurate and complete genome replication and chromosome segregation during the vegetative growth phase of the life cycle." [GO:0022402, PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle
+is_a: FYPO:0002734 ! abnormal cell cycle process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0022402
+intersection_of: part_of GO:0000278
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-01T15:15:09Z
+
+[Term]
+id: FYPO:0002738
+name: abnormal meiotic cell cycle phase
+def: "A cellular process phenotype in which a cell does not proceed normally through a specific meiotic cell cycle phase. A meiotic cell cycle phase is any of the distinct periods or stages into which the meiotic cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000052 ! abnormal meiotic cell cycle
+is_a: FYPO:0002735 ! abnormal cell cycle phase
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0022403
+intersection_of: part_of GO:0051321
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-01T15:16:12Z
+
+[Term]
+id: FYPO:0002739
+name: abnormal meiotic cell cycle process
+def: "A cellular process phenotype in which a cell does not execute a meiotic cell cycle process normally. A meiotic cell cycle process is any of the processes that form part of the meiotic cell cycle, and thereby ensures successive accurate and complete genome replication and meiotic chromosome segregation." [GO:0022402, PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000052 ! abnormal meiotic cell cycle
+is_a: FYPO:0002734 ! abnormal cell cycle process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0022402
+intersection_of: part_of GO:0051321
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-01T15:17:46Z
+
+[Term]
+id: FYPO:0002740
+name: normal cell cycle phase
+def: "A cellular process phenotype in which a cell proceeds normally through a specific cell cycle phase. A cell cycle phase is any of the distinct periods or stages into which the cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000411 ! normal cell cycle
+intersection_of: PATO:0000051
+intersection_of: inheres_in GO:0022403
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-10-01T16:02:38Z
+
+[Term]
+id: FYPO:0002741
+name: normal cell cycle process
+def: "A cellular process phenotype in which a cell executes a cell cycle process normally. A cell cycle process is any of the processes that form part of the cell cycle, and thereby ensures successive accurate and complete genome replication and chromosome segregation." [GO:0022402, PomBase:mah]
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000411 ! normal cell cycle
+intersection_of: PATO:0000051
+intersection_of: inheres_in GO:0022402
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-10-01T16:03:12Z
+
+[Term]
+id: FYPO:0002742
+name: increased level of iron transport gene RNA during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more iron transport RNAs measured in a cell is higher than normal (i.e. higher than observed in wild-type cells). Iron transport RNAs are transcribed from genes whose products are involved in iron transport." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased iron transport gene RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+relationship: output_of FYPO:0000189 ! abnormal nuclear mRNA splicing, via spliceosome
+created_by: midori
+creation_date: 2013-10-01T16:48:00Z
+
+[Term]
+id: FYPO:0002743
+name: increased level of amino acid metabolism gene RNA during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more amino acid metabolism RNAs measured in a cell is higher than normal (i.e. higher than observed in wild-type cells). Amino acid metabolism RNAs are transcribed from genes whose products are involved in iron transport." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased amino acid metabolism gene RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+relationship: output_of FYPO:0000189 ! abnormal nuclear mRNA splicing, via spliceosome
+created_by: midori
+creation_date: 2013-10-01T16:50:06Z
+
+[Term]
+id: FYPO:0002744
+name: increased level of amino acid transport gene RNA during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more amino acid transport RNAs measured in a cell is higher than normal (i.e. higher than observed in wild-type cells). Amino acid transport RNAs are transcribed from genes whose products are involved in amino acid transport." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased amino acid transport gene RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+relationship: output_of FYPO:0000189 ! abnormal nuclear mRNA splicing, via spliceosome
+created_by: midori
+creation_date: 2013-10-01T16:50:41Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
