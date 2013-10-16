@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 10:10:2013 16:50
+date: 16:10:2013 17:13
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta6
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -1718,9 +1718,8 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000123
-name: large vacuoles
+name: large vacuoles during vegetative growth
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which vacuoles are larger than normal." [PomBase:mah]
-synonym: "large vacuoles during vegetative growth" EXACT [PomBase:mah]
 synonym: "vacuole organization defects, large vacuoles" EXACT [PomBase:mah]
 is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
 intersection_of: PATO:0000586
@@ -3768,14 +3767,16 @@ creation_date: 2011-04-19T04:37:01Z
 
 [Term]
 id: FYPO:0000281
-name: fragmented vacuoles during vegetative growth
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which vacuoles are broken into more, smaller fragments than normal." [PomBase:mah]
-synonym: "vacuole organization defects, fragmented vacuoles during vegetative growth" EXACT [PomBase:mah]
+name: small vacuoles present in greater numbers during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more, but smaller, vacuoles than normal." [PomBase:mah]
+synonym: "fragmented vacuoles during vegetative growth" RELATED [PomBase:mah]
+synonym: "vacuole organization defects, fragmented vacuoles during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
-is_a: FYPO:0002258 ! fragmented vacuoles
-intersection_of: PATO:0001444
+is_a: FYPO:0002258 ! small vacuoles present in greater numbers
+intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: inheres_in GO:0000324
+intersection_of: has_part FYPO:0002787 ! small vacuoles
+intersection_of: has_part FYPO:0002790 ! vacuoles present in greater numbers
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -4930,7 +4931,7 @@ intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
 intersection_of: qualifier PATO:0000460
-relationship: output_of FYPO:0000812 ! abnormal vacuole organization
+relationship: output_of FYPO:0000812 ! abnormal vacuole organization during vegetative growth
 created_by: midori
 creation_date: 2011-07-14T05:04:23Z
 
@@ -5195,7 +5196,7 @@ synonym: "advanced mitotic cell cycle passage through START" EXACT [PomBase:mah]
 synonym: "advanced passage through START of mitotic cell cycle during vegetative growth" EXACT [PomBase:mah]
 synonym: "cell cycle passage through START: increased rate" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
-is_a: FYPO:0000827 ! advanced cell cycle progression
+is_a: FYPO:0000827 ! advanced cell cycle phase transition
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007089
@@ -10762,14 +10763,14 @@ creation_date: 2012-03-01T03:38:04Z
 
 [Term]
 id: FYPO:0000812
-name: abnormal vacuole organization
+name: abnormal vacuole organization during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which vacuole organization is abnormal. Vacuole organization results in the assembly, arrangement of constituent parts, or disassembly of a vacuole." [GO:0007033, PomBase:mah]
-comment: Consider annotating to 'abnormal vacuolar morphology' (FYPO:0000368), but note that an abnormal vacuole organization process may, but does not necessarily, result in abnormal vacuolar morphology.
-synonym: "abnormal vacuolar organisation" EXACT [PomBase:vw]
-synonym: "abnormal vacuolar organization" EXACT [PomBase:vw]
-synonym: "abnormal vacuole organisation" EXACT [PomBase:mah]
-synonym: "abnormal vacuole organization during vegetative growth" EXACT [PomBase:mah]
+comment: Consider annotating to 'abnormal vacuolar morphology during vegetative growth' (FYPO:0000368), but note that an abnormal vacuole organization process may, but does not necessarily, result in abnormal vacuolar morphology.
+synonym: "abnormal vacuolar organisation during vegetative growth" EXACT [PomBase:vw]
+synonym: "abnormal vacuolar organization during vegetative growth" EXACT [PomBase:vw]
+synonym: "abnormal vacuole organisation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001353 ! abnormal cellular component organization during vegetative growth
+is_a: FYPO:0002803 ! abnormal vacuole organization
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007033
@@ -11017,7 +11018,7 @@ synonym: "mitotic cell cycle advance in G1" RELATED [PomBase:mah]
 synonym: "premature exit from mitosis" EXACT [PomBase:mah]
 synonym: "premature mitotic G1 phase entry" EXACT [PomBase:mah]
 is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
-is_a: FYPO:0000827 ! advanced cell cycle progression
+is_a: FYPO:0000827 ! advanced cell cycle phase transition
 intersection_of: PATO:0000694
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0010458
@@ -11276,7 +11277,7 @@ creation_date: 2012-03-14T01:27:55Z
 id: FYPO:0000845
 name: abnormal protein degradation during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein degradation is abnormal. Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
-synonym: "abnormal protein breakdown during vegetative growth" EXACT [GO:0030163]
+synonym: "abnormal protein breakdown during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "abnormal protein catabolic process during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "abnormal protein catabolism during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 is_a: FYPO:0000328 ! abnormal protein metabolic process during vegetative growth
@@ -11292,6 +11293,7 @@ creation_date: 2012-03-14T02:33:44Z
 id: FYPO:0000846
 name: decreased protein degradation during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is decreased." [PomBase:mah]
+synonym: "decreased protein breakdown during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolic process during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolism during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "reduced protein degradation during vegetative growth" EXACT [PomBase:mah]
@@ -11307,6 +11309,7 @@ creation_date: 2012-03-14T02:57:05Z
 id: FYPO:0000847
 name: increased protein degradation during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is increased." [PomBase:mah]
+synonym: "increased protein breakdown during vegetative growth" EXACT [GO:0031063]
 synonym: "increased protein catabolic process during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolism during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 is_a: FYPO:0000845 ! abnormal protein degradation during vegetative growth
@@ -12877,12 +12880,12 @@ creation_date: 2012-04-03T04:12:31Z
 
 [Term]
 id: FYPO:0000952
-name: vacuoles present in greater numbers
+name: vacuoles present in greater numbers during vegetative growth
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells contain more vacuoles than normal." [PomBase:mah]
-synonym: "additional vacuoles present" EXACT [PomBase:mah]
-synonym: "extra vacuoles" EXACT [PomBase:mah]
-synonym: "vacuoles present in greater numbers during vegetative growth" EXACT [PomBase:mah]
+synonym: "additional vacuoles present during vegetative growth" EXACT [PomBase:mah]
+synonym: "extra vacuoles during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+is_a: FYPO:0002790 ! vacuoles present in greater numbers
 intersection_of: PATO:0002002
 intersection_of: exists_during GO:0072690
 intersection_of: towards GO:0000324
@@ -13607,13 +13610,15 @@ creation_date: 2012-04-25T03:42:48Z
 
 [Term]
 id: FYPO:0001003
-name: fragmented vacuoles during nitrogen starvation
-def: "A cell phenotype in which vacuoles are broken into more, smaller fragments than normal when the cell is subject to nitrogen starvation." [PomBase:mah]
-synonym: "vacuole organization defects, fragmented vacuoles during nitrogen starvation" EXACT [PomBase:mah]
-is_a: FYPO:0002258 ! fragmented vacuoles
-intersection_of: PATO:0001444
-intersection_of: happens_during GO:0006995
-intersection_of: inheres_in GO:0000324
+name: small vacuoles present in greater numbers during nitrogen starvation
+def: "A cell phenotype in which a cell contains more, but smaller, vacuoles than normal when the cell is subject to nitrogen starvation." [PomBase:mah]
+synonym: "fragmented vacuoles during nitrogen starvation" RELATED [PomBase:mah]
+synonym: "vacuole organization defects, fragmented vacuoles during nitrogen starvation" RELATED [PomBase:mah]
+is_a: FYPO:0002258 ! small vacuoles present in greater numbers
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0006995
+intersection_of: has_part FYPO:0002787 ! small vacuoles
+intersection_of: has_part FYPO:0002790 ! vacuoles present in greater numbers
 created_by: midori
 creation_date: 2012-04-25T03:48:58Z
 
@@ -30442,12 +30447,12 @@ id: FYPO:0002190
 name: inviable swollen spheroid vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, is shaped in the form of a spheroid, and has a larger volume than normal." [PomBase:mah]
 synonym: "essential; swollen spheroid vegetative cell" RELATED [PomBase:mah]
-synonym: "inviable, increased spheroid vegetative cell size" RELATED [PomBase:vw]
 synonym: "inviable enlarged spheroid vegetative cell" RELATED [PomBase:mah]
 synonym: "inviable enlarged volume spheroid vegetative cell" EXACT [PomBase:mah]
 synonym: "inviable large spheroid vegetative cell" RELATED [PomBase:vw]
 synonym: "inviable swollen rounded vegetative cell" EXACT [PomBase:mah]
 synonym: "inviable swollen spheroid cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable, increased spheroid vegetative cell size" RELATED [PomBase:vw]
 synonym: "inviable, increased spheroid vegetative cell volume" EXACT [PomBase:mah]
 is_a: FYPO:0000025 ! swollen cell
 is_a: FYPO:0000945 ! swollen spheroid vegetative cell
@@ -30464,12 +30469,12 @@ id: FYPO:0002191
 name: inviable swollen septated spheroid vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, is shaped in the form of a spheroid, has one or more septa, and has a larger volume than normal." [PomBase:mah]
 synonym: "essential; swollen septated spheroid vegetative cell" RELATED [PomBase:mah]
-synonym: "inviable, septated, increased spheroid vegetative cell size" RELATED [PomBase:vw]
 synonym: "inviable enlarged septated spheroid vegetative cell" RELATED [PomBase:mah]
 synonym: "inviable enlarged volume septated spheroid vegetative cell" EXACT [PomBase:mah]
 synonym: "inviable septated large spheroid vegetative cell" RELATED [PomBase:vw]
 synonym: "inviable swollen septated rounded vegetative cell" EXACT [PomBase:mah]
 synonym: "inviable swollen septated spheroid cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable, septated, increased spheroid vegetative cell size" RELATED [PomBase:vw]
 synonym: "inviable, septated, increased spheroid vegetative cell volume" EXACT [PomBase:mah]
 is_a: FYPO:0000025 ! swollen cell
 is_a: FYPO:0002190 ! inviable swollen spheroid vegetative cell
@@ -30516,9 +30521,9 @@ creation_date: 2013-06-04T17:28:33Z
 id: FYPO:0002194
 name: inviable microcolony, swollen septated spheroid cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that have a larger volume than normal and spheroid shape, and contain one or more septa each. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
-synonym: "inviable microcolony, septated, spheroid vegetative cells with increased cell size" RELATED [PomBase:vw]
 synonym: "inviable microcolony, enlarged septated spheroid vegetative cells" RELATED [PomBase:mah]
 synonym: "inviable microcolony, septated large spheroid vegetative cells" RELATED [PomBase:vw]
+synonym: "inviable microcolony, septated, spheroid vegetative cells with increased cell size" RELATED [PomBase:vw]
 synonym: "inviable microcolony, septated, spheroid vegetative cells with increased cell volume" EXACT [PomBase:mah]
 synonym: "inviable microcolony, swollen septated rounded cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, swollen septated spheroid vegetative cells" EXACT [PomBase:mah]
@@ -31385,7 +31390,7 @@ name: abnormal vacuolar morphology
 def: "A physical cellular phenotype in which the size, shape, or structure of the fungal-type vacuole is abnormal." [PomBase:mah]
 comment: Note that an abnormal vacuole organization process may, but does not necessarily, result in abnormal vacuolar morphology.
 synonym: "vacuolar morphology: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000287 ! abnormal subcellular component
+is_a: FYPO:0002794 ! abnormal vacuole
 intersection_of: PATO:0000051
 intersection_of: inheres_in GO:0000324
 intersection_of: qualifier PATO:0000460
@@ -31394,12 +31399,14 @@ creation_date: 2013-06-11T17:16:05Z
 
 [Term]
 id: FYPO:0002258
-name: fragmented vacuoles
-def: "A cell phenotype in which vacuoles are broken into more, smaller fragments than normal." [PomBase:mah]
-synonym: "vacuole organization defects, fragmented vacuoles" EXACT [PomBase:mah]
-is_a: FYPO:0002257 ! abnormal vacuolar morphology
-intersection_of: PATO:0001444
-intersection_of: inheres_in GO:0000324
+name: small vacuoles present in greater numbers
+def: "A cell phenotype in which a cell contains more, but smaller, vacuoles than normal." [PomBase:mah]
+synonym: "fragmented vacuoles" RELATED [PomBase:mah]
+synonym: "vacuole organization defects, fragmented vacuoles" RELATED [PomBase:mah]
+is_a: FYPO:0002787 ! small vacuoles
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0002787 ! small vacuoles
+intersection_of: has_part FYPO:0002790 ! vacuoles present in greater numbers
 created_by: midori
 creation_date: 2013-06-11T17:18:14Z
 
@@ -31631,7 +31638,7 @@ creation_date: 2013-06-12T15:51:09Z
 id: FYPO:0002275
 name: abnormal protein degradation
 def: "A cellular process phenotype in which protein degradation is abnormal. Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
-synonym: "abnormal protein breakdown" EXACT [GO:0030163]
+synonym: "abnormal protein breakdown" EXACT [GO:0030163, PomBase:mah]
 synonym: "abnormal protein catabolic process" EXACT [GO:0030163, PomBase:mah]
 synonym: "abnormal protein catabolism" EXACT [GO:0030163, PomBase:mah]
 is_a: FYPO:0002274 ! abnormal protein metabolic process
@@ -31645,6 +31652,7 @@ creation_date: 2013-06-12T15:53:25Z
 id: FYPO:0002276
 name: increased protein degradation
 def: "A cellular process phenotype in which the occurrence of protein degradation is increased." [PomBase:mah]
+synonym: "increased protein breakdown" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolic process" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolism" EXACT [GO:0030163, PomBase:mah]
 is_a: FYPO:0002275 ! abnormal protein degradation
@@ -31657,8 +31665,9 @@ creation_date: 2013-06-12T15:56:44Z
 id: FYPO:0002277
 name: increased protein degradation during nitrogen starvation
 def: "A cellular process phenotype in which the occurrence of protein degradation is increased when the cell is subject to nitrogen starvation." [PomBase:mah]
-synonym: "increased protein catabolic process during vegetative growth" EXACT [GO:0030163, PomBase:mah]
-synonym: "increased protein catabolism during vegetative growth" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein breakdown during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein catabolic process during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein catabolism during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
 is_a: FYPO:0002276 ! increased protein degradation
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0006995
@@ -33252,6 +33261,18 @@ created_by: midori
 creation_date: 2013-07-30T14:57:37Z
 
 [Term]
+id: FYPO:0002388
+name: abnormal riboflavin binding
+def: "A molecular function phenotype in which occurrence of riboflavin binding by a mutated gene product is abnormal." [PomBase:mah]
+is_a: FYPO:0000707 ! abnormal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:1902444
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-16T11:29:35Z
+
+[Term]
 id: FYPO:0002389
 name: normal protein localization to heterochromatin at centromere outer repeat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to heterochromatin at centromere outer repeat regions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
@@ -33473,7 +33494,6 @@ id: FYPO:0002403
 name: abnormal nucleus
 def: "A physical cellular phenotype in which the amount, distribution, or morphology of all or part of the nucleus is abnormal." [PomBase:mah]
 comment: Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in a physically abnormal cytoskeleton.
-synonym: "abnormal nucleus during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal nucleus physical object quality" EXACT [PomBase:mah]
 is_a: FYPO:0000287 ! abnormal subcellular component
 intersection_of: PATO:0001241
@@ -35086,7 +35106,7 @@ synonym: "mitotic G2/M transition advance during vegetative growth" EXACT [PomBa
 synonym: "premature mitotic G2/M transition during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000399 ! abnormal mitotic G2/M phase transition
 is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
-is_a: FYPO:0000827 ! advanced cell cycle progression
+is_a: FYPO:0000827 ! advanced cell cycle phase transition
 intersection_of: PATO:0000694
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
@@ -35119,7 +35139,7 @@ is_a: FYPO:0002517 ! abnormal response to mitotic cell cycle checkpoint signalin
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0072414
-relationship: has_output FYPO:0000827 ! advanced cell cycle progression
+relationship: has_output FYPO:0000827 ! advanced cell cycle phase transition
 created_by: midori
 creation_date: 2013-08-15T14:45:22Z
 
@@ -38810,6 +38830,269 @@ intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006351
 created_by: midori
 creation_date: 2013-10-10T16:48:48Z
+
+[Term]
+id: FYPO:0002785
+name: abolished riboflavin binding
+def: "A molecular function phenotype in which riboflavin binding by a mutated gene product does not occur." [PomBase:mah]
+synonym: "riboflavin binding abolished" EXACT [PomBase:mah]
+is_a: FYPO:0002388 ! abnormal riboflavin binding
+intersection_of: PATO:0001558
+intersection_of: towards GO:1902444
+created_by: midori
+creation_date: 2013-10-16T11:29:42Z
+
+[Term]
+id: FYPO:0002786
+name: decreased riboflavin binding
+def: "A molecular function phenotype in which occurrence of riboflavin binding by a mutated gene product is decreased." [PomBase:mah]
+synonym: "reduced riboflavin binding" EXACT [PomBase:mah]
+is_a: FYPO:0002388 ! abnormal riboflavin binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:1902444
+created_by: midori
+creation_date: 2013-10-16T11:29:54Z
+
+[Term]
+id: FYPO:0002787
+name: small vacuoles
+def: "A cell phenotype in which vacuoles are smaller than normal." [PomBase:mah]
+is_a: FYPO:0002257 ! abnormal vacuolar morphology
+intersection_of: PATO:0000596
+intersection_of: inheres_in GO:0000324
+created_by: midori
+creation_date: 2013-10-16T11:45:57Z
+
+[Term]
+id: FYPO:0002788
+name: small vacuoles during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which vacuoles are smaller than normal." [PomBase:mah]
+is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
+is_a: FYPO:0002787 ! small vacuoles
+intersection_of: PATO:0000596
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0000324
+created_by: midori
+creation_date: 2013-10-16T11:46:21Z
+
+[Term]
+id: FYPO:0002789
+name: small vacuoles during stationary phase
+def: "A cell phenotype observed when the population in which the cell is found is in stationary phase in which vacuoles are smaller than normal." [PomBase:mah]
+is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
+is_a: FYPO:0002787 ! small vacuoles
+intersection_of: PATO:0000596
+intersection_of: exists_during GO:0060274
+intersection_of: inheres_in GO:0000324
+created_by: midori
+creation_date: 2013-10-16T11:46:42Z
+
+[Term]
+id: FYPO:0002790
+name: vacuoles present in greater numbers
+def: "A physical cellular phenotype in which cells contain more vacuoles than normal." [PomBase:mah]
+synonym: "additional vacuoles present" EXACT [PomBase:mah]
+synonym: "extra vacuoles" EXACT [PomBase:mah]
+is_a: FYPO:0002794 ! abnormal vacuole
+intersection_of: PATO:0002002
+intersection_of: towards GO:0000324
+created_by: midori
+creation_date: 2013-10-16T15:31:27Z
+
+[Term]
+id: FYPO:0002791
+name: small vacuoles present in greater numbers during stationary phase
+def: "A cell phenotype in which a cell contains more, but smaller, vacuoles than normal when the population in which the cell is found is in stationary phase." [PomBase:mah]
+synonym: "fragmented vacuoles during stationary phase" RELATED [PomBase:mah]
+is_a: FYPO:0002258 ! small vacuoles present in greater numbers
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0060274
+intersection_of: has_part FYPO:0002787 ! small vacuoles
+intersection_of: has_part FYPO:0002790 ! vacuoles present in greater numbers
+created_by: midori
+creation_date: 2013-10-16T15:41:48Z
+
+[Term]
+id: FYPO:0002792
+name: small vacuoles present in greater numbers during cellular hypotonic response
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more, but smaller, vacuoles than normal during a cellular response to a hypotonic environment." [PomBase:mah]
+synonym: "fragmented vacuoles during cellular hypotonic response" RELATED [PomBase:mah]
+synonym: "small vacuoles present in greater numbers during cellular hypotonic response during vegetative growth" EXACT [PomBase:mah]
+synonym: "small vacuoles present in greater numbers during hypotonic stress" EXACT [PomBase:al]
+is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
+is_a: FYPO:0002258 ! small vacuoles present in greater numbers
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0071476
+intersection_of: has_part FYPO:0002787 ! small vacuoles
+intersection_of: has_part FYPO:0002790 ! vacuoles present in greater numbers
+created_by: midori
+creation_date: 2013-10-16T15:44:28Z
+
+[Term]
+id: FYPO:0002793
+name: vacuoles present in decreased numbers during vegetative growth
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer vacuoles than normal." [PomBase:mah]
+synonym: "decreased level of vacuoles during vegetative growth" RELATED [PomBase:al]
+synonym: "fewer vacuoles present during vegetative growth" EXACT [PomBase:mah]
+synonym: "vacuoles present in reduced numbers during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002794 ! abnormal vacuole
+intersection_of: PATO:0002001
+intersection_of: exists_during GO:0072690
+intersection_of: towards GO:0000324
+created_by: midori
+creation_date: 2013-10-16T15:53:47Z
+
+[Term]
+id: FYPO:0002794
+name: abnormal vacuole
+def: "A physical cellular phenotype in which the number, distribution, or morphology of all or part of the vacuole(s) is abnormal." [PomBase:mah]
+comment: Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in a physically abnormal cytoskeleton.
+synonym: "abnormal vacuole physical object quality" EXACT [PomBase:mah]
+synonym: "abnormal vacuoles" EXACT [PomBase:mah]
+is_a: FYPO:0000287 ! abnormal subcellular component
+intersection_of: PATO:0001241
+intersection_of: inheres_in GO:0000324
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-16T15:54:06Z
+
+[Term]
+id: FYPO:0002795
+name: large vacuoles present in decreased numbers during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell contains fewer, but larger, vacuoles than normal." [PomBase:mah]
+synonym: "enlarged vacuoles present in decreased numbers during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000123 ! large vacuoles during vegetative growth
+intersection_of: has_part FYPO:0002793 ! vacuoles present in decreased numbers during vegetative growth
+created_by: midori
+creation_date: 2013-10-16T16:02:59Z
+
+[Term]
+id: FYPO:0002796
+name: abnormal protein degradation during nitrogen starvation
+def: "A cellular process phenotype in which protein degradation is abnormal  when the cell is subject to nitrogen starvation. Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
+synonym: "abnormal protein breakdown during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
+synonym: "abnormal protein catabolic process during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
+synonym: "abnormal protein catabolism during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
+is_a: FYPO:0002275 ! abnormal protein degradation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0006995
+intersection_of: inheres_in GO:0030163
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-16T16:11:43Z
+
+[Term]
+id: FYPO:0002797
+name: decreased protein degradation
+def: "A cellular process phenotype in which the occurrence of protein degradation is decreased." [PomBase:mah]
+synonym: "decreased protein breakdown" EXACT [GO:0030163, PomBase:mah]
+synonym: "decreased protein catabolic process" EXACT [GO:0030163, PomBase:mah]
+synonym: "decreased protein catabolism" EXACT [GO:0030163, PomBase:mah]
+synonym: "reduced protein degradation" EXACT [PomBase:mah]
+is_a: FYPO:0002275 ! abnormal protein degradation
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0030163
+created_by: midori
+creation_date: 2013-10-16T16:12:20Z
+
+[Term]
+id: FYPO:0002798
+name: decreased protein degradation during nitrogen starvation
+def: "A cellular process phenotype in which the occurrence of protein degradation is decreased when the cell is subject to nitrogen starvation." [PomBase:mah]
+synonym: "decreased protein catabolic process during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
+synonym: "decreased protein catabolism during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
+synonym: "reduced protein degradation during nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0002797 ! decreased protein degradation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0006995
+intersection_of: inheres_in GO:0030163
+created_by: midori
+creation_date: 2013-10-16T16:12:34Z
+
+[Term]
+id: FYPO:0002799
+name: normal protein degradation
+def: "A cellular process phenotype in which protein degradation is normal (i.e. indistinguishable from wild type). Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
+synonym: "normal protein breakdown" EXACT [GO:0030163, PomBase:mah]
+synonym: "normal protein catabolic process" EXACT [GO:0030163, PomBase:mah]
+synonym: "normal protein catabolism" EXACT [GO:0030163, PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0030163
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-10-16T16:17:41Z
+
+[Term]
+id: FYPO:0002800
+name: normal protein degradation during vegetative growth
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein degradation is normal (i.e. indistinguishable from wild type). Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
+synonym: "normal protein breakdown during vegetative growth" EXACT [GO:0030163, PomBase:mah]
+synonym: "normal protein catabolic process during vegetative growth" EXACT [GO:0030163, PomBase:mah]
+synonym: "normal protein catabolism during vegetative growth" EXACT [GO:0030163, PomBase:mah]
+is_a: FYPO:0002799 ! normal protein degradation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030163
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-10-16T16:23:50Z
+
+[Term]
+id: FYPO:0002801
+name: normal protein degradation during nitrogen starvation
+def: "A cellular process phenotype in which protein degradation is normal (i.e. indistinguishable from wild type) when the cell is subject to nitrogen starvation. Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
+synonym: "normal protein breakdown during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
+synonym: "normal protein catabolic process during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
+synonym: "normal protein catabolism during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
+is_a: FYPO:0002799 ! normal protein degradation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0006995
+intersection_of: inheres_in GO:0030163
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-10-16T16:24:11Z
+
+[Term]
+id: FYPO:0002802
+name: nucleus mislocalized to cell cortex during nitrogen starvation
+def: "A physical cellular phenotype in which a cell has a nucleus in an abnormal location at the cell cortex when the cell is subject to nitrogen starvation. The normal location is at the midpoint of the long axis of the cell." [PomBase:mah]
+is_a: FYPO:0002069 ! mislocalized nucleus
+created_by: midori
+creation_date: 2013-10-16T16:33:25Z
+
+[Term]
+id: FYPO:0002803
+name: abnormal vacuole organization
+def: "A cellular process phenotype in which vacuole organization is abnormal. Vacuole organization results in the assembly, arrangement of constituent parts, or disassembly of a vacuole." [GO:0007033, PomBase:mah]
+comment: Consider annotating to 'abnormal vacuolar morphology' (FYPO:0002257), but note that an abnormal vacuole organization process may, but does not necessarily, result in abnormal vacuolar morphology.
+synonym: "abnormal vacuolar organisation" EXACT [PomBase:vw]
+synonym: "abnormal vacuolar organization" EXACT [PomBase:vw]
+synonym: "abnormal vacuole organisation" EXACT [PomBase:mah]
+is_a: FYPO:0000335 ! abnormal cellular component organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007033
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-16T16:35:40Z
+
+[Term]
+id: FYPO:0002804
+name: abnormal vacuole organization during nitrogen starvation
+def: "A cellular process phenotype in which vacuole organization is abnormal when the cell is subject to nitrogen starvation. Vacuole organization results in the assembly, arrangement of constituent parts, or disassembly of a vacuole." [GO:0007033, PomBase:mah]
+comment: Consider annotating to 'abnormal vacuolar morphology' (FYPO:0002257), but note that an abnormal vacuole organization process may, but does not necessarily, result in abnormal vacuolar morphology.
+synonym: "abnormal vacuolar organisation during nitrogen starvation" EXACT [PomBase:vw]
+synonym: "abnormal vacuolar organization during nitrogen starvation" EXACT [PomBase:vw]
+synonym: "abnormal vacuole organisation during nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0002803 ! abnormal vacuole organization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0006995
+intersection_of: inheres_in GO:0007033
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-10-16T16:37:13Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
