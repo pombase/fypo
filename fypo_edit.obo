@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 04:11:2013 16:37
+date: 05:11:2013 17:01
 saved-by: midori
-auto-generated-by: OBO-Edit 2.3-beta6
+auto-generated-by: OBO-Edit 2.3-beta7
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
@@ -179,7 +179,10 @@ synonym: "cell cycle progression through the G2/M phase transition: delayed" EXA
 synonym: "cell cycle, mitotic G2 delay" RELATED [PomBase:mah]
 synonym: "decreased rate of mitotic G2 phase progression" RELATED [PomBase:mah]
 synonym: "delayed cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
+synonym: "delayed entry into mitosis" EXACT [PomBase:vw]
+synonym: "delayed mitotic entry" EXACT [PomBase:vw]
 synonym: "delayed mitotic G2 phase progression" RELATED [PomBase:mah]
+synonym: "delayed onset of mitotic M phase" RELATED [PomBase:vw]
 synonym: "DNA replication arrest" RELATED [PomBase:vw]
 synonym: "DNA replication checkpoint activated" RELATED [PomBase:mah]
 synonym: "G2/M transition DNA damage checkpoint activated" RELATED [PomBase:mah]
@@ -198,6 +201,7 @@ is_a: FYPO:0000409 ! delayed cell cycle phase transition
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
+relationship: has_output FYPO:0001492 ! viable elongated vegetative cell
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -2988,13 +2992,12 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000220
 name: increased centromeric outer repeat transcript level
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which small interfering RNA transcripts derived from the centromere outer repeat region are present at greater levels than normal." [PMID:20211136, PomBase:mah]
-synonym: "increased accumulation of centromeric outer repeat transcripts" EXACT [PomBase:mah]
-synonym: "increased accumulation of centromeric outer repeat transcripts during vegetative growth" EXACT [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which RNAs transcribed from the centromere outer repeat region are present at greater levels than normal." [PMID:20211136, PomBase:mah]
+synonym: "increased accumulation of centromeric outer repeat transcripts" RELATED [PomBase:mah]
+synonym: "increased accumulation of centromeric outer repeat transcripts during vegetative growth" RELATED [PomBase:mah]
 synonym: "increased accumulation of non-coding outer repeat transcripts" EXACT [PomBase:vw]
-synonym: "increased accumulation of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
+synonym: "increased centromeric outer repeat transcript level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased level of centromeric outer repeat transcripts" EXACT [PomBase:mah]
-synonym: "increased level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 intersection_of: PATO:0001162
 intersection_of: inheres_in CL:0000334
@@ -3680,11 +3683,13 @@ creation_date: 2011-04-19T04:37:01Z
 [Term]
 id: FYPO:0000273
 name: centromeric outer repeat transcripts absent
-def: "An RNA metabolism phenotype observed in the vegetative growth phase of the life cycle in which small interfering RNA transcripts derived from the centromere outer repeat region are absent." [PMID:20211136, PomBase:mah]
+def: "An RNA metabolism phenotype observed in the vegetative growth phase of the life cycle in which RNAs transcribed from the centromere outer repeat region are absent." [PMID:20211136, PomBase:mah]
 synonym: "centromeric outer repeat transcripts absent during vegetative growth" EXACT [PomBase:mah]
-synonym: "siRNAs homologous to outer repeats absent" EXACT [PomBase:vw]
-synonym: "siRNAs homologous to outer repeats undetectable" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards SO:0001905
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -10416,6 +10421,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "abnormal histone H3 K9 trimethylation" EXACT [GO:0036124, PomBase:mah]
 synonym: "abnormal histone H3-K9 trimethylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal histone H3K9 trimethylation" EXACT [PomBase:vw]
+synonym: "abnormal histone H3K9me3" EXACT [PomBase:mah]
 synonym: "abnormal histone lysine H3 K9 trimethylation" EXACT [GO:0036124, PomBase:mah]
 is_a: FYPO:0000458 ! abnormal histone H3-K9 methylation
 intersection_of: PATO:0000001
@@ -11540,6 +11546,7 @@ name: normal histone H3-K9 dimethylation at centromere
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dimethylation of lysine at position 9 of histone H3 in centromeric regions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal centromeric histone H3-K9 dimethylation " EXACT [PomBase:mah]
 synonym: "normal histone H3-K9 dimethylation at centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal histone H3K9me2 at centromere" EXACT [PomBase:mah]
 is_a: FYPO:0000861 ! normal histone methylation
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -11554,6 +11561,7 @@ id: FYPO:0000863
 name: normal histone H3-K9 dimethylation at centromere inner repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dimethylation of lysine at position 9 of histone H3 in centromere inner repeat regions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal histone H3-K9 dimethylation at centromere inner repeat during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal histone H3K9me2 at centromere inner repeat" EXACT [PomBase:mah]
 is_a: FYPO:0000862 ! normal histone H3-K9 dimethylation at centromere
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -11571,6 +11579,7 @@ synonym: "abnormal centromeric histone H3-K9 trimethylation" EXACT [PomBase:mah]
 synonym: "abnormal histone H3 K9 trimethylation at centromere" EXACT [GO:0036124, PomBase:mah]
 synonym: "abnormal histone H3-K9 trimethylation at centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal histone H3K9 trimethylation at centromere" EXACT [PomBase:vw]
+synonym: "abnormal histone H3K9me3 at centromere" EXACT [PomBase:mah]
 synonym: "abnormal histone lysine H3 K9 trimethylation at centromere" EXACT [GO:0036124, PomBase:mah]
 is_a: FYPO:0000787 ! abnormal histone H3-K9 trimethylation
 intersection_of: PATO:0000001
@@ -11588,6 +11597,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "abnormal histone H3 K9 trimethylation at centromere inner repeat" EXACT [GO:0036124, PomBase:mah]
 synonym: "abnormal histone H3-K9 trimethylation at centromere inner repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal histone H3K9 trimethylation at centromere inner repeat" EXACT [PomBase:vw]
+synonym: "abnormal histone H3K9me3 at centromere inner repeat" EXACT [PomBase:mah]
 synonym: "abnormal histone lysine H3 K9 trimethylation at centromere inner repeat" EXACT [GO:0036124, PomBase:mah]
 is_a: FYPO:0000864 ! abnormal histone H3-K9 trimethylation at centromere
 intersection_of: PATO:0000001
@@ -11605,6 +11615,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "abnormal histone H3 K9 dimethylation" EXACT [GO:0036123, PomBase:mah]
 synonym: "abnormal histone H3-K9 dimethylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal histone H3K9 dimethylation" EXACT [PomBase:vw]
+synonym: "abnormal histone H3K9me2" EXACT [PomBase:mah]
 synonym: "abnormal histone lysine H3 K9 dimethylation" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000458 ! abnormal histone H3-K9 methylation
 intersection_of: PATO:0000001
@@ -11622,6 +11633,7 @@ synonym: "abnormal centromeric histone H3-K9 dimethylation" EXACT [PomBase:mah]
 synonym: "abnormal histone H3 K9 dimethylation at centromere" EXACT [GO:0036123, PomBase:mah]
 synonym: "abnormal histone H3-K9 dimethylation at centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal histone H3K9 dimethylation at centromere" EXACT [PomBase:vw]
+synonym: "abnormal histone H3K9me2 at centromere" EXACT [PomBase:mah]
 synonym: "abnormal histone lysine H3 K9 dimethylation at centromere" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000866 ! abnormal histone H3-K9 dimethylation
 intersection_of: PATO:0000001
@@ -11639,6 +11651,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "abnormal histone H3 K9 dimethylation at centromere inner repeat" EXACT [GO:0036123, PomBase:mah]
 synonym: "abnormal histone H3-K9 dimethylation at centromere inner repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal histone H3K9 dimethylation at centromere inner repeat" EXACT [PomBase:vw]
+synonym: "abnormal histone H3K9me2 at centromere inner repeat" EXACT [PomBase:mah]
 synonym: "abnormal histone lysine H3 K9 dimethylation at centromere inner repeat" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000867 ! abnormal histone H3-K9 dimethylation at centromere
 intersection_of: PATO:0000001
@@ -11713,6 +11726,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "increased histone H3 K9 dimethylation" EXACT [GO:0036123, PomBase:mah]
 synonym: "increased histone H3-K9 dimethylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 dimethylation" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me2" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 dimethylation" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000866 ! abnormal histone H3-K9 dimethylation
 is_a: FYPO:0000871 ! increased histone H3-K9 methylation
@@ -11730,6 +11744,7 @@ synonym: "increased centromeric histone H3-K9 dimethylation" EXACT [PomBase:mah]
 synonym: "increased histone H3 K9 dimethylation at centromere" EXACT [GO:0036123, PomBase:mah]
 synonym: "increased histone H3-K9 dimethylation at centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 dimethylation at centromere" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me2 at centromere" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 dimethylation at centromere" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000873 ! increased histone H3-K9 dimethylation
 intersection_of: happens_during GO:0072690
@@ -11746,6 +11761,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "increased histone H3 K9 dimethylation at centromere inner repeat" EXACT [GO:0036123, PomBase:mah]
 synonym: "increased histone H3-K9 dimethylation at centromere inner repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 dimethylation at centromere inner repeat" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me2 at centromere inner repeat" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 dimethylation at centromere inner repeat" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000868 ! abnormal histone H3-K9 dimethylation at centromere inner repeat
 is_a: FYPO:0000874 ! increased histone H3-K9 dimethylation at centromere
@@ -11763,6 +11779,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "decreased histone H3 K9 dimethylation" EXACT [GO:0036123, PomBase:mah]
 synonym: "decreased histone H3-K9 dimethylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 dimethylation" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9me2" EXACT [PomBase:mah]
 synonym: "decreased histone lysine H3 K9 dimethylation" EXACT [GO:0036123, PomBase:mah]
 synonym: "reduced histone H3-K9 dimethylation" EXACT [PomBase:mah]
 is_a: FYPO:0000866 ! abnormal histone H3-K9 dimethylation
@@ -11781,6 +11798,7 @@ synonym: "decreased centromeric histone H3-K9 dimethylation" EXACT [PomBase:mah]
 synonym: "decreased histone H3 K9 dimethylation at centromere" EXACT [GO:0036123, PomBase:mah]
 synonym: "decreased histone H3-K9 dimethylation at centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 dimethylation at centromere" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9me2 at centromere" EXACT [PomBase:mah]
 synonym: "decreased histone lysine H3 K9 dimethylation at centromere" EXACT [GO:0036123, PomBase:mah]
 synonym: "reduced histone H3-K9 dimethylation at centromere" EXACT [PomBase:mah]
 is_a: FYPO:0000867 ! abnormal histone H3-K9 dimethylation at centromere
@@ -11799,6 +11817,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "decreased histone H3 K9 dimethylation at centromere inner repeat" EXACT [GO:0036123, PomBase:mah]
 synonym: "decreased histone H3-K9 dimethylation at centromere inner repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 dimethylation at centromere inner repeat" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9me2 at centromere inner repeat" EXACT [PomBase:mah]
 synonym: "reduced histone H3-K9 dimethylation at centromere inner repeat" EXACT [PomBase:mah]
 synonym: "v histone lysine H3 K9 dimethylation at centromere inner repeat" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000868 ! abnormal histone H3-K9 dimethylation at centromere inner repeat
@@ -11817,6 +11836,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "increased histone H3 K9 trimethylation" EXACT [GO:0036124, PomBase:mah]
 synonym: "increased histone H3-K9 trimethylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 trimethylation" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me3" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 trimethylation" EXACT [GO:0036124, PomBase:mah]
 is_a: FYPO:0000787 ! abnormal histone H3-K9 trimethylation
 is_a: FYPO:0000871 ! increased histone H3-K9 methylation
@@ -11834,6 +11854,7 @@ synonym: "increased centromeric histone H3-K9 trimethylation" EXACT [PomBase:mah
 synonym: "increased histone H3 K9 trimethylation at centromere" EXACT [GO:0036124, PomBase:mah]
 synonym: "increased histone H3-K9 trimethylation at centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 trimethylation at centromere" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me3 at centromere" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 trimethylation at centromere" EXACT [GO:0036124, PomBase:mah]
 is_a: FYPO:0000879 ! increased histone H3-K9 trimethylation
 intersection_of: happens_during GO:0072690
@@ -11850,6 +11871,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "increased histone H3 K9 trimethylation at centromere inner repeat" EXACT [GO:0036124, PomBase:mah]
 synonym: "increased histone H3-K9 trimethylation at centromere inner repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 trimethylation at centromere inner repeat" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me3 at centromere inner repeat" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 trimethylation at centromere inner repeat" EXACT [GO:0036124, PomBase:mah]
 is_a: FYPO:0000864 ! abnormal histone H3-K9 trimethylation at centromere
 is_a: FYPO:0000880 ! increased histone H3-K9 trimethylation at centromere
@@ -11867,6 +11889,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "decreased histone H3 K9 trimethylation" EXACT [GO:0036124, PomBase:mah]
 synonym: "decreased histone H3-K9 trimethylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 trimethylation" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9me3" EXACT [PomBase:mah]
 synonym: "decreased histone lysine H3 K9 trimethylation" EXACT [GO:0036124, PomBase:mah]
 synonym: "reduced histone H3-K9 trimethylation" EXACT [PomBase:mah]
 is_a: FYPO:0000787 ! abnormal histone H3-K9 trimethylation
@@ -11885,6 +11908,7 @@ synonym: "decreased centromeric histone H3-K9 trimethylation" EXACT [PomBase:mah
 synonym: "decreased histone H3 K9 trimethylation at centromere" EXACT [GO:0036124, PomBase:mah]
 synonym: "decreased histone H3-K9 trimethylation at centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 trimethylation at centromere" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9me3 at centromere" EXACT [PomBase:mah]
 synonym: "decreased histone lysine H3 K9 trimethylation at centromere" EXACT [GO:0036124, PomBase:mah]
 synonym: "reduced histone H3-K9 trimethylation at centromere" EXACT [PomBase:mah]
 is_a: FYPO:0000864 ! abnormal histone H3-K9 trimethylation at centromere
@@ -11903,6 +11927,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "decreased histone H3 K9 trimethylation at centromere inner repeat" EXACT [GO:0036124, PomBase:mah]
 synonym: "decreased histone H3-K9 trimethylation at centromere inner repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 trimethylation at centromere inner repeat" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9me3 at centromere inner repeat" EXACT [PomBase:mah]
 synonym: "decreased histone lysine H3 K9 trimethylation at centromere inner repeat" EXACT [GO:0036124, PomBase:mah]
 synonym: "reduced histone H3-K9 trimethylation at centromere inner repeat" EXACT [PomBase:mah]
 is_a: FYPO:0000883 ! decreased histone H3-K9 trimethylation at centromere
@@ -11924,6 +11949,7 @@ synonym: "abnormal histone H3-K9 trimethylation at centromeric outer repeat regi
 synonym: "abnormal histone H3-K9 trimethylation at pericentric region" RELATED [PomBase:mah]
 synonym: "abnormal histone H3-K9 trimethylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "abnormal histone H3K9 trimethylation at centromere outer repeat" EXACT [PomBase:vw]
+synonym: "abnormal histone H3K9me3 at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "abnormal histone lysine H3 K9 trimethylation at centromere outer repeat" EXACT [GO:0036124, PomBase:mah]
 is_a: FYPO:0000864 ! abnormal histone H3-K9 trimethylation at centromere
 intersection_of: PATO:0000001
@@ -11945,6 +11971,7 @@ synonym: "abnormal histone H3-K9 dimethylation at centromeric outer repeat regio
 synonym: "abnormal histone H3-K9 dimethylation at pericentric region" RELATED [PomBase:mah]
 synonym: "abnormal histone H3-K9 dimethylation at pericentromeric region" RELATED [PomBase:mah]
 synonym: "abnormal histone H3K9 dimethylation at centromere outer repeat" EXACT [PomBase:vw]
+synonym: "abnormal histone H3K9me2 at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "abnormal histone lysine H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000867 ! abnormal histone H3-K9 dimethylation at centromere
 intersection_of: PATO:0000001
@@ -11966,6 +11993,7 @@ synonym: "abnormal histone H3-K9 dimethylation at pericentromeric region" RELATE
 synonym: "increased histone H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
 synonym: "increased histone H3-K9 dimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 dimethylation at centromere outer repeat" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me2 at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000874 ! increased histone H3-K9 dimethylation at centromere
 is_a: FYPO:0000886 ! abnormal histone H3-K9 dimethylation at centromere outer repeat
@@ -11987,6 +12015,7 @@ synonym: "abnormal histone H3-K9 dimethylation at pericentromeric region" RELATE
 synonym: "decreased histone H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
 synonym: "decreased histone H3-K9 dimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 dimethylation at centromere outer repeat" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9me2 at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "decreased histone lysine H3 K9 dimethylation at centromere outer repeat" EXACT [GO:0036123, PomBase:mah]
 synonym: "reduced histone H3-K9 dimethylation at centromere outer repeat" EXACT [PomBase:mah]
 is_a: FYPO:0000877 ! decreased histone H3-K9 dimethylation at centromere
@@ -12009,6 +12038,7 @@ synonym: "abnormal histone H3-K9 trimethylation at pericentromeric region" RELAT
 synonym: "increased histone H3 K9 trimethylation at centromere outer repeat" EXACT [GO:0036124, PomBase:mah]
 synonym: "increased histone H3-K9 trimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K9 trimethylation at centromere outer repeat" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me3 at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 trimethylation at centromere outer repeat" EXACT [GO:0036124, PomBase:mah]
 is_a: FYPO:0000864 ! abnormal histone H3-K9 trimethylation at centromere
 is_a: FYPO:0000880 ! increased histone H3-K9 trimethylation at centromere
@@ -12030,6 +12060,7 @@ synonym: "abnormal histone H3-K9 trimethylation at pericentromeric region" RELAT
 synonym: "decreased histone H3 K9 trimethylation at centromere outer repeat" EXACT [GO:0036124, PomBase:mah]
 synonym: "decreased histone H3-K9 trimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 trimethylation at centromere outer repeat" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9me3 at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "decreased histone lysine H3 K9 trimethylation at centromere outer repeat" EXACT [GO:0036124, PomBase:mah]
 synonym: "reduced histone H3-K9 trimethylation at centromere outer repeat" EXACT [PomBase:mah]
 is_a: FYPO:0000883 ! decreased histone H3-K9 trimethylation at centromere
@@ -28977,9 +29008,9 @@ id: FYPO:0002083
 name: inviable swollen elongated cell with enlarged nucleus
 def: "A cell morphology phenotype in which a vegetative cell is inviable, has a larger volume, and is longer, than normal, and in which the nucleus is larger than normal." [PMID:19074598, PomBase:mah]
 comment: The distinction between this phenotype and dumbbell-shaped cells (FYPO:0000779) is that swollen elongated cells do not have a constriction along the long axis. Swollen elongated cells may have a uniform diameter, or may be swollen only around the nucleus.
+synonym: "inviable elongated cell with enlarged nucleus and increased cell volume" EXACT [PomBase:mah]
 synonym: "inviable enlarged elongated cell with enlarged nucleus" RELATED [PomBase:mah]
 synonym: "inviable large elongated cell with enlarged nucleus" RELATED [PomBase:vw]
-synonym: "inviable swollen elongated cell with enlarged nucleus and increased cell volume" EXACT [PomBase:mah]
 synonym: "inviable swollen elongated vegetative cell with enlarged nucleus" EXACT [PomBase:mah]
 synonym: "swollen elongated cell with enlarged nucleus" EXACT [PomBase:mah]
 synonym: "swollen elongated vegetative cell with enlarged nucleus" EXACT [PomBase:mah]
@@ -32487,6 +32518,7 @@ synonym: "abnormal histone H3-K4 dimethylation at pericentromeric region" RELATE
 synonym: "increased histone H3 K4 dimethylation at centromere outer repeat" EXACT [GO:0044648, PomBase:mah]
 synonym: "increased histone H3-K4 dimethylation at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3K4 dimethylation at centromere outer repeat" EXACT [PomBase:vw]
+synonym: "increased histone H3K4me2 at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K4 dimethylation at centromere outer repeat" EXACT [GO:0044648, PomBase:mah]
 is_a: FYPO:0002330 ! abnormal histone H3-K4 methylation
 intersection_of: happens_during GO:0072690
@@ -32824,6 +32856,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "decreased histone H3 K9 dimethylation at silent mating-type cassette" EXACT [GO:0036123, PomBase:mah]
 synonym: "decreased histone H3-K9 dimethylation at silent mating-type cassette during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K9 dimethylation at silent mating-type cassette" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9me2 at silent mating-type cassette" EXACT [PomBase:mah]
 synonym: "decreased histone lysine H3 K9 dimethylation at silent mating-type cassette" EXACT [GO:0036123, PomBase:mah]
 synonym: "decreased silent mating-type cassette histone H3-K9 dimethylation" EXACT [PomBase:mah]
 synonym: "reduced histone H3-K9 dimethylation at silent mating-type cassette" EXACT [PomBase:mah]
@@ -32865,6 +32898,7 @@ id: FYPO:0002358
 name: normal histone H3-K9 dimethylation at silent mating-type cassette
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dimethylation of lysine at position 9 of histone H3 in silent mating-type cassettes is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal histone H3-K9 dimethylation at silent mating-type cassette during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal histone H3K9me2 at silent mating-type cassette" EXACT [PomBase:mah]
 synonym: "normal silent mating-type cassette histone H3-K9 dimethylation " EXACT [PomBase:mah]
 is_a: FYPO:0000861 ! normal histone methylation
 created_by: midori
@@ -32875,6 +32909,7 @@ id: FYPO:0002359
 name: normal histone H3-K9 dimethylation at telomere
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dimethylation of lysine at position 9 of histone H3 in telomeric regions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal histone H3-K9 dimethylation at telomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal histone H3K9me2 at telomere" EXACT [PomBase:mah]
 synonym: "normal telomeric histone H3-K9 dimethylation " EXACT [PomBase:mah]
 is_a: FYPO:0000861 ! normal histone methylation
 intersection_of: PATO:0000001
@@ -32984,6 +33019,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "decreased histone H3 K4 dimethylation" EXACT [GO:0044648, PomBase:mah]
 synonym: "decreased histone H3-K4 dimethylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K4 dimethylation" EXACT [PomBase:vw]
+synonym: "decreased histone H3K4me2" EXACT [PomBase:mah]
 synonym: "decreased histone lysine H3 K4 dimethylation" EXACT [GO:0044648, PomBase:mah]
 synonym: "reduced histone H3-K4 dimethylation" EXACT [PomBase:mah]
 is_a: FYPO:0000866 ! abnormal histone H3-K9 dimethylation
@@ -33001,6 +33037,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "decreased histone H3 K4 trimethylation" EXACT [GO:0080182, PomBase:mah]
 synonym: "decreased histone H3-K4 trimethylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased histone H3K4 trimethylation" EXACT [PomBase:vw]
+synonym: "decreased histone H3K4me3" EXACT [PomBase:mah]
 synonym: "decreased histone lysine H3 K4 trimethylation" EXACT [GO:0080182, PomBase:mah]
 synonym: "reduced histone H3-K4 trimethylation" EXACT [PomBase:mah]
 is_a: FYPO:0000787 ! abnormal histone H3-K9 trimethylation
@@ -35899,16 +35936,14 @@ creation_date: 2013-08-28T13:56:00Z
 [Term]
 id: FYPO:0002567
 name: normal centromeric outer repeat transcript level
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small interfering RNA transcripts derived from the centromere outer repeat region measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNAs transcribed from the centromere outer repeat region measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
-synonym: "normal accumulation of centromeric outer repeat transcripts" EXACT [PomBase:mah]
+synonym: "normal accumulation of centromeric outer repeat transcripts" RELATED [PomBase:mah]
 synonym: "normal accumulation of centromeric outer repeat transcripts during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal accumulation of non-coding outer repeat transcripts" EXACT [PomBase:vw]
-synonym: "normal accumulation of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 synonym: "normal centromeric outer repeat transcript accumulation" RELATED [PomBase:mah]
 synonym: "normal centromeric outer repeat transcript level during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal level of centromeric outer repeat transcripts" EXACT [PomBase:al]
-synonym: "normal level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 is_a: FYPO:0001317 ! normal RNA level during vegetative growth
 intersection_of: PATO:0001159
 intersection_of: exists_during GO:0072690
@@ -39580,6 +39615,200 @@ intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0036450
 created_by: midori
 creation_date: 2013-11-04T15:52:41Z
+
+[Term]
+id: FYPO:0002834
+name: decreased chromatin silencing at centromere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of chromatin silencing at centromeric regions is decreased." [PomBase:mah]
+synonym: "decreased chromatin silencing at centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced chromatin silencing at centromere" EXACT [PomBase:mah]
+is_a: FYPO:0000576 ! decreased gene silencing
+is_a: FYPO:0002353 ! decreased chromatin silencing
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030702
+created_by: midori
+creation_date: 2013-11-05T14:24:37Z
+
+[Term]
+id: FYPO:0002835
+name: centromeric outer repeat transcript-derived siRNA absent
+def: "An RNA metabolism phenotype observed in the vegetative growth phase of the life cycle in which small interfering RNA transcripts derived from the centromere outer repeat region are absent." [PMID:20211136, PomBase:mah]
+synonym: "centromeric outer repeat transcript-derived siRNA undetectable" EXACT [PomBase:mah]
+synonym: "siRNAs homologous to outer repeats absent" EXACT [PomBase:vw]
+synonym: "siRNAs homologous to outer repeats undetectable" EXACT [PomBase:mah]
+is_a: FYPO:0000273 ! centromeric outer repeat transcripts absent
+created_by: midori
+creation_date: 2013-11-05T14:44:13Z
+
+[Term]
+id: FYPO:0002836
+name: increased centromeric outer repeat transcript-derived siRNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which small interfering RNA transcripts derived from the centromere outer repeat region are present at greater levels than normal." [PMID:20211136, PomBase:mah]
+synonym: "increased accumulation of centromeric outer repeat transcript-derived siRNA" EXACT [PomBase:mah]
+synonym: "increased accumulation of siRNAs homologous to outer repeats" RELATED [PomBase:vw]
+synonym: "increased centromeric outer repeat transcript-derived siRNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased level of centromeric outer repeat transcript-derived siRNA" EXACT [PomBase:mah]
+synonym: "increased level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
+is_a: FYPO:0000220 ! increased centromeric outer repeat transcript level
+created_by: midori
+creation_date: 2013-11-05T14:46:21Z
+
+[Term]
+id: FYPO:0002837
+name: normal centromeric outer repeat transcript-derived siRNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small interfering RNA transcripts derived from the centromere outer repeat region measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal accumulation of centromeric outer repeat transcript-derived siRNA" RELATED [PomBase:mah]
+synonym: "normal accumulation of centromeric outer repeat transcript-derived siRNA during vegetative growth" RELATED [PomBase:mah]
+synonym: "normal accumulation of siRNAs homologous to outer repeats" RELATED [PomBase:vw]
+synonym: "normal centromeric outer repeat transcript-derived siRNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
+is_a: FYPO:0002567 ! normal centromeric outer repeat transcript level
+created_by: midori
+creation_date: 2013-11-05T14:49:58Z
+
+[Term]
+id: FYPO:0002838
+name: abnormal protein localization to chromosome
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to a specific location on a chromosome is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the centromere and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to chromosome" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to chromosome during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034502
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2013-11-05T15:32:17Z
+
+[Term]
+id: FYPO:0002839
+name: decreased protein localization to chromosome
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein a specific location on a chromosome is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to chromosome" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromosome during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to chromosome" EXACT [PomBase:mah]
+is_a: FYPO:0002838 ! abnormal protein localization to chromosome
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034502
+created_by: midori
+creation_date: 2013-11-05T15:33:34Z
+
+[Term]
+id: FYPO:0002840
+name: increased protein localization to chromosome
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to a specific location on a chromosome is increased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to chromosome" EXACT [PomBase:mah]
+synonym: "increased protein localization to chromosome during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002838 ! abnormal protein localization to chromosome
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034502
+created_by: midori
+creation_date: 2013-11-05T15:33:43Z
+
+[Term]
+id: FYPO:0002841
+name: abolished protein localization to chromosome
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to a specific location on a chromosome is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to chromosome" EXACT [PomBase:mah]
+synonym: "abolished protein localization to chromosome during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to chromosome abolished" EXACT [PomBase:mah]
+is_a: FYPO:0002838 ! abnormal protein localization to chromosome
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0034502
+created_by: midori
+creation_date: 2013-11-05T15:33:50Z
+
+[Term]
+id: FYPO:0002842
+name: decreased protein localization to centromere outer repeat
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the centromere outer repeat regions of a chromosome is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to centromere outer repeat" EXACT [PomBase:mah]
+synonym: "decreased protein localisation to centromeric outer repeat region" EXACT [GO:0071459, PomBase:mah]
+synonym: "decreased protein localization to centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromosome, centric outer repeat region" EXACT [GO:0071459, PomBase:mah]
+synonym: "decreased protein localization to chromosome, centromeric outer repeat region" EXACT [GO:0071459, PomBase:mah]
+synonym: "reduced protein localization to centromere outer repeat" EXACT [PomBase:mah]
+is_a: FYPO:0000449 ! abnormal protein localization to centromere
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034502
+intersection_of: occurs_at SO:0001799
+created_by: midori
+creation_date: 2013-11-05T15:39:52Z
+
+[Term]
+id: FYPO:0002843
+name: protein mislocalized to nucleoplasm
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the nucleoplasm is observed there." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "protein mislocalised to nucleoplasm" EXACT [PomBase:mah]
+synonym: "protein mislocalised to nucleoplasm during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nucleoplasm during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005654
+relationship: output_of FYPO:0001129 ! abnormal protein localization to nucleus
+created_by: midori
+creation_date: 2013-11-05T15:59:55Z
+
+[Term]
+id: FYPO:0002844
+name: inviable microcolony, swollen elongated septated cells
+def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells which are septated, longer than normal, and have a larger than normal cell volume. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+synonym: "inviable microcolony, enlarged long septated vegetative cells" RELATED [PomBase:mah]
+synonym: "inviable microcolony, large elongated septated vegetative cells" RELATED [PomBase:vw]
+synonym: "inviable microcolony, swollen elongated septated vegetative cells" EXACT [PomBase:vw]
+is_a: FYPO:0002225 ! inviable microcolony, elongated cells
+is_a: FYPO:0002416 ! inviable microcolony, swollen cells, abnormal cell shape
+is_a: FYPO:0002453 ! inviable microcolony, septated cells with abnormal morphology
+relationship: comprises_cells_with_phenotype FYPO:0002845 ! inviable swollen elongated septated cell
+created_by: midori
+creation_date: 2013-11-05T16:02:59Z
+
+[Term]
+id: FYPO:0002845
+name: inviable swollen elongated septated cell
+def: "A cell morphology phenotype in which a vegetative cell is inviable, has a larger volume, and is longer, than normal, and contains one or more septa." [PomBase:mah]
+comment: The distinction between this phenotype and dumbbell-shaped cells (FYPO:0000779) is that swollen elongated cells do not have a constriction along the long axis. Swollen elongated cells may have a uniform diameter, or may be swollen only around the nucleus.
+synonym: "inviable enlarged elongated septated cell with enlarged nucleus" RELATED [PomBase:mah]
+synonym: "inviable large elongated septated cell" RELATED [PomBase:vw]
+synonym: "inviable swollen elongated septated vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0001429 ! swollen elongated cell
+is_a: FYPO:0001490 ! inviable elongated vegetative cell
+is_a: FYPO:0002251 ! inviable swollen elongated vegetative cell
+is_a: FYPO:0002342 ! septated cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0002342 ! septated cell
+created_by: midori
+creation_date: 2013-11-05T16:06:04Z
+
+[Term]
+id: FYPO:0002846
+name: inviable mixed population including spores, germinated spores and small cells
+def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores, germinated spores and small vegetative cells. The spheroid cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
+comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+synonym: "essential; mixed population including spores, germinated spores and small cells" RELATED [PomBase:mah]
+is_a: FYPO:0002466 ! inviable mixed population including spores, germinated spores and cells with abnormal morphology
+relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
+relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
+relationship: includes_cells_with_phenotype FYPO:0002302 ! inviable after spore germination, multiple cell divisions, spheroid cell
+created_by: midori
+creation_date: 2013-11-05T16:59:57Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
