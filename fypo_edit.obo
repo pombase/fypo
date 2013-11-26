@@ -1,12 +1,11 @@
 format-version: 1.2
-date: 26:11:2013 15:07
+date: 26:11:2013 17:03
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta7
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
-format-version: 1.2
 ontology: fypo
 
 [Term]
@@ -3786,8 +3785,8 @@ name: inviable microcolony
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
 synonym: "inviable microcolony formation" EXACT [PomBase:mah]
 synonym: "microcolony formation" BROAD [PomBase:mah]
-is_a: FYPO:0002059 ! inviable cell population
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
+is_a: FYPO:0002061 ! inviable vegetative cell population
+relationship: comprises_cells_with_phenotype FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2011-04-26T02:13:39Z
 
@@ -28090,9 +28089,9 @@ creation_date: 2013-04-24T12:29:02Z
 id: FYPO:0002075
 name: inviable vegetative cell population at high temperature
 def: "A cell population phenotype in which none of the cells in the population are viable at a high temperature in the vegetative growth phase of the life cycle." [PomBase:mah]
-comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
-is_a: FYPO:0002061 ! inviable vegetative cell population
-is_a: FYPO:0002074 ! inviable cell population at high temperature
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-04-24T12:31:01Z
 
@@ -29174,8 +29173,9 @@ creation_date: 2013-05-10T14:11:52Z
 id: FYPO:0002149
 name: inviable elongated vegetative cell population
 def: "A cell population phenotype in which all cells in the population are inviable and longer than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
-is_a: FYPO:0002433 ! inviable vegetative cell population with abnormal cell shape
-relationship: comprises_cells_with_phenotype FYPO:0001490 ! inviable elongated vegetative cell
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-05-10T14:18:17Z
 
@@ -29204,8 +29204,9 @@ creation_date: 2013-05-10T14:22:34Z
 id: FYPO:0002152
 name: inviable small vegetative cell population
 def: "A cell population phenotype in which all cells in the population are inviable and have a lower volume than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
-is_a: FYPO:0002454 ! inviable vegetative cell population with abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0000951 ! inviable small vegetative cell
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-05-10T14:25:01Z
 
@@ -29213,9 +29214,10 @@ creation_date: 2013-05-10T14:25:01Z
 id: FYPO:0002153
 name: viable small vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable but have a lower volume than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "wee population" EXACT [PomBase:mah]
-is_a: FYPO:0002060 ! viable vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0000648 ! viable small vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-05-10T14:26:01Z
 
@@ -29641,7 +29643,6 @@ id: FYPO:0002186
 name: inviable microcolony, small cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that have a lower volume than normal. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
 synonym: "inviable microcolony, small vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002152 ! inviable small vegetative cell population
 is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
 relationship: comprises_cells_with_phenotype FYPO:0000951 ! inviable small vegetative cell
 created_by: midori
@@ -29670,7 +29671,6 @@ def: "A cell population phenotype in which a cell undergoes one or a few rounds 
 synonym: "inviable microcolony, normal volume rounded cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, normal volume spheroid vegetative cells" EXACT [PomBase:mah]
 is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-is_a: FYPO:0002433 ! inviable vegetative cell population with abnormal cell shape
 relationship: comprises_cells_with_phenotype FYPO:0002187 ! inviable normal volume spheroid vegetative cell
 created_by: midori
 creation_date: 2013-06-04T17:03:55Z
@@ -29785,10 +29785,11 @@ creation_date: 2013-06-04T17:31:20Z
 id: FYPO:0002195
 name: normal morphology viable vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable and have normal morphology (i.e. size, shape, and structure) in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "viable vegetative cell population with normal cell morphology" EXACT [PomBase:mah]
 synonym: "viable vegetative cell population with normal cell shape and size" EXACT [PomBase:vw]
-is_a: FYPO:0002060 ! viable vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0002177 ! viable vegetative cell with normal cell morphology
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-06-05T10:45:58Z
 
@@ -29826,9 +29827,10 @@ creation_date: 2013-06-05T11:09:19Z
 id: FYPO:0002198
 name: viable vegetative cell population with abnormal cell shape
 def: "A cell population phenotype in which all cells in the population are viable but have abnormal cell shape, in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "viable, abnormally shaped vegetative cell population" EXACT [PomBase:mah]
-is_a: FYPO:0002060 ! viable vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0002197 ! viable vegetative cell with abnormal cell shape
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-06-05T11:33:07Z
 
@@ -29867,9 +29869,10 @@ creation_date: 2013-06-05T13:23:12Z
 id: FYPO:0002201
 name: viable stubby vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable but the cell diameter is larger than normal and the cell length is shorter than normal, in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "stubby viable vegetative cell population" EXACT [PomBase:mah]
-is_a: FYPO:0002060 ! viable vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0002106 ! viable stubby vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-06-05T13:25:46Z
 
@@ -29877,9 +29880,10 @@ creation_date: 2013-06-05T13:25:46Z
 id: FYPO:0002202
 name: inviable stubby vegetative cell population
 def: "A cell population phenotype in which all cells in the population are inviable and the cell diameter is larger than normal and the cell length is shorter than normal, in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "stubby inviable vegetative cell population" EXACT [PomBase:mah]
-is_a: FYPO:0002433 ! inviable vegetative cell population with abnormal cell shape
-relationship: comprises_cells_with_phenotype FYPO:0002107 ! inviable stubby vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-06-05T13:27:13Z
 
@@ -29888,7 +29892,6 @@ id: FYPO:0002203
 name: inviable microcolony, stubby cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells in which the cell diameter is larger than normal and the cell length is shorter than normal. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
 synonym: "inviable microcolony, stubby vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002202 ! inviable stubby vegetative cell population
 is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
 relationship: comprises_cells_with_phenotype FYPO:0002107 ! inviable stubby vegetative cell
 created_by: midori
@@ -29926,13 +29929,14 @@ creation_date: 2013-06-05T13:44:33Z
 id: FYPO:0002206
 name: inviable swollen spore population
 def: "A cell population phenotype in which none of the cells in a population of spores are viable, and all have a larger volume than normal. Inviable spores do not germinate." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "inviable enlarged spore population" RELATED [PomBase:mah]
 synonym: "inviable large spore population" RELATED [PomBase:vw]
 synonym: "inviable population of swollen spores" EXACT [PomBase:vw]
 synonym: "inviable spore population with increased cell size" RELATED [PomBase:vw]
 synonym: "inviable spore population with increased cell volume" EXACT [PomBase:mah]
-is_a: FYPO:0002150 ! inviable spore population
-relationship: comprises_cells_with_phenotype FYPO:0002207 ! inviable swollen spore
+is_obsolete: true
+replaced_by: FYPO:0002150
 created_by: midori
 creation_date: 2013-06-05T13:51:00Z
 
@@ -29978,16 +29982,15 @@ creation_date: 2013-06-05T13:58:55Z
 id: FYPO:0002209
 name: inviable swollen spore population with abnormal spore shape
 def: "A cell population phenotype in which none of the cells in a population of spores are viable, and all have a larger volume than normal and an abnormal shape. Inviable spores do not germinate." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "inviable enlarged spore population with abnormal spore shape" RELATED [PomBase:mah]
 synonym: "inviable large spore population with abnormal spore shape" RELATED [PomBase:vw]
 synonym: "inviable population of swollen spores with abnormal shape" EXACT [PomBase:vw]
 synonym: "inviable spore population with increased cell size and abnormal spore shape" RELATED [PomBase:vw]
 synonym: "inviable spore population with increased cell volume and abnormal spore shape" EXACT [PomBase:mah]
 synonym: "inviable swollen spore population with abnormal shape" EXACT [PomBase:mah]
-is_a: FYPO:0002206 ! inviable swollen spore population
-is_a: FYPO:0002465 ! inviable spore population with abnormal spore shape
-relationship: comprises_cells_with_phenotype FYPO:0002208 ! inviable swollen spore with abnormal shape
-relationship: has_part FYPO:0002205 ! spore germination abolished, swollen spore with abnormal shape
+is_obsolete: true
+replaced_by: FYPO:0002150
 created_by: midori
 creation_date: 2013-06-05T13:59:40Z
 
@@ -29999,7 +30002,6 @@ synonym: "inviable microcolony, bottle-shaped vegetative cells" EXACT [PomBase:m
 synonym: "inviable microcolony, bottle/skittle cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, skittle-shaped cells" EXACT [PomBase:mah]
 is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-is_a: FYPO:0002433 ! inviable vegetative cell population with abnormal cell shape
 relationship: comprises_cells_with_phenotype FYPO:0002111 ! inviable bottle-shaped vegetative cell
 created_by: midori
 creation_date: 2013-06-05T14:18:25Z
@@ -30008,10 +30010,11 @@ creation_date: 2013-06-05T14:18:25Z
 id: FYPO:0002211
 name: inviable vegetative cell population after spore germination, elongated germ tubes
 def: "A cell population phenotype in which all vegetative cells arising from a population of germinated spores are inviable, and the germinated spores have elongated germ tubes. The population may be mixed with respect to other phenotypes (e.g. whether cell division occurs)." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "cell population inviable after spore germination, with elongated germ tubes" EXACT [PomBase:mah]
 synonym: "inviable germinated spore population, elongated germ tubes" EXACT [PomBase:mah]
-is_a: FYPO:0002214 ! inviable vegetative cell population after spore germination, abnormal germ tube morphology
-relationship: comprises_cells_with_phenotype FYPO:0000314 ! inviable after spore germination with elongated germ tube
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-06-05T14:44:53Z
 
@@ -30030,10 +30033,11 @@ creation_date: 2013-06-05T14:47:02Z
 id: FYPO:0002213
 name: inviable vegetative cell population after spore germination, elongated curved germ tubes
 def: "A cell population phenotype in which all vegetative cells arising from a population of germinated spores are inviable, and the germinated spores have elongated germ tubes that are curved along the long axis. The population may be mixed with respect to other phenotypes (e.g. whether cell division occurs)." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "cell population inviable after spore germination, with elongated, curved germ tubes" EXACT [PomBase:mah]
 synonym: "inviable germinated spore population, elongated curved germ tubes" EXACT [PomBase:mah]
-is_a: FYPO:0002211 ! inviable vegetative cell population after spore germination, elongated germ tubes
-relationship: comprises_cells_with_phenotype FYPO:0002212 ! inviable after spore germination, without cell division, with elongated, curved germ tube
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-06-05T14:48:45Z
 
@@ -30041,12 +30045,12 @@ creation_date: 2013-06-05T14:48:45Z
 id: FYPO:0002214
 name: inviable vegetative cell population after spore germination, abnormal germ tube morphology
 def: "A cell population phenotype in which all vegetative cells arising from a population of germinated spores are inviable, and have germ tubes with abnormal morphology (i.e. size, shape, or structure)." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "cell population inviable after spore germination, abnormal germ tube morphology" EXACT [PomBase:mah]
 synonym: "inviable germinated spore population, abnormal germ tube morphology" EXACT [PomBase:mah]
 synonym: "inviable population of undivided germinated spores with abnormal germ tube morphology" EXACT [PomBase:vw]
-is_a: FYPO:0002147 ! inviable vegetative cell population after spore germination
-relationship: comprises_cells_with_phenotype FYPO:0000313 ! inviable after spore germination, without cell division, with abnormal germ tube morphology
-relationship: comprises_cells_with_phenotype FYPO:0002281 ! inviable after spore germination with abnormal germ tube morphology
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-06-05T14:55:56Z
 
@@ -30072,9 +30076,10 @@ creation_date: 2013-06-05T15:02:02Z
 id: FYPO:0002216
 name: viable curved vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable and are curved along the long axis in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "population of curved viable cells" EXACT [PomBase:vw]
-is_a: FYPO:0002198 ! viable vegetative cell population with abnormal cell shape
-relationship: comprises_cells_with_phenotype FYPO:0002112 ! viable curved vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-06-05T15:06:28Z
 
@@ -30082,10 +30087,11 @@ creation_date: 2013-06-05T15:06:28Z
 id: FYPO:0002217
 name: viable curved elongated vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable, longer than normal, and curved along the long axis in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "population of curved viable long cells" EXACT [PomBase:vw]
 synonym: "viable curved long vegetative cell population" EXACT [PomBase:mah]
-is_a: FYPO:0002216 ! viable curved vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0002215 ! viable curved elongated vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-06-05T15:07:23Z
 
@@ -30093,9 +30099,10 @@ creation_date: 2013-06-05T15:07:23Z
 id: FYPO:0002218
 name: inviable vegetative cell population after spore germination, normal unseptated germ tube morphology
 def: "A cell population phenotype in which all vegetative cells arising from a population of germinated spores are inviable, and have germ tubes with normal morphology (i.e. size, shape, and structure) that do not septate." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "inviable germinated spore population, normal unseptated germ tube morphology" EXACT [PomBase:mah]
-is_a: FYPO:0002147 ! inviable vegetative cell population after spore germination
-relationship: comprises_cells_with_phenotype FYPO:0000311 ! inviable after spore germination with normal, unseptated germ tube morphology
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-06-05T15:16:34Z
 
@@ -30177,7 +30184,6 @@ name: inviable microcolony, elongated cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that are longer than normal. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
 synonym: "inviable microcolony, elongated vegetative cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, long cells" EXACT [PomBase:mah]
-is_a: FYPO:0002149 ! inviable elongated vegetative cell population
 is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
 relationship: comprises_cells_with_phenotype FYPO:0001490 ! inviable elongated vegetative cell
 created_by: midori
@@ -30268,7 +30274,6 @@ name: inviable microcolony, curved cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that are curved along the long axis. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
 synonym: "inviable microcolony, curved vegetative cells" EXACT [PomBase:mah]
 is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-is_a: FYPO:0002413 ! inviable curved vegetative cell population
 relationship: comprises_cells_with_phenotype FYPO:0002113 ! inviable curved vegetative cell
 created_by: midori
 creation_date: 2013-06-06T14:18:49Z
@@ -30292,11 +30297,12 @@ id: FYPO:0002233
 name: viable elongated vegetative cell population
 alt_id: FYPO:0002278
 def: "A cell population phenotype in which all cells in the population are viable but longer than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "population of viable long cells" EXACT [PomBase:vw]
 synonym: "viable long vegetative cell population" EXACT [PomBase:mah]
 synonym: "viable population of elongated vegetative cells" EXACT [PomBase:vw]
-is_a: FYPO:0002198 ! viable vegetative cell population with abnormal cell shape
-relationship: comprises_cells_with_phenotype FYPO:0001492 ! viable elongated vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-06-06T14:39:45Z
 
@@ -30843,7 +30849,6 @@ name: inviable microcolony, abnormal cell morphology
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that have abnormal morphology (i.e. size, shape, or structure). Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
 synonym: "inviable microcolony, vegetative cells with abnormal morphology" EXACT [PomBase:mah]
 is_a: FYPO:0000299 ! inviable microcolony
-is_a: FYPO:0002454 ! inviable vegetative cell population with abnormal cell morphology
 relationship: comprises_cells_with_phenotype FYPO:0001118 ! abnormal vegetative cell morphology
 created_by: midori
 creation_date: 2013-06-12T15:37:46Z
@@ -31114,12 +31119,13 @@ creation_date: 2013-06-13T14:47:56Z
 id: FYPO:0002292
 name: viable bottle-shaped vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable and taper at one end to a diameter smaller than the other, in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "population of bottle-shaped viable cells" EXACT [PomBase:vw]
 synonym: "viable bottle/skittle vegetative cell population" EXACT [PomBase:mah]
 synonym: "viable skittle-shaped vegetative cell population" EXACT [PomBase:mah]
 synonym: "viable vegetative cell population with skittle shaped cells" EXACT [PomBase:vw]
-is_a: FYPO:0002198 ! viable vegetative cell population with abnormal cell shape
-relationship: comprises_cells_with_phenotype FYPO:0002110 ! viable bottle-shaped vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-06-13T14:56:49Z
 
@@ -32248,10 +32254,11 @@ creation_date: 2013-07-25T13:32:16Z
 id: FYPO:0002372
 name: viable spheroid vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable and are shaped in the form of spheroids." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "population of spheroid viable cells" EXACT [PomBase:vw]
 synonym: "viable rounded vegetative cell population" EXACT [PomBase:mah]
-is_a: FYPO:0002198 ! viable vegetative cell population with abnormal cell shape
-relationship: comprises_cells_with_phenotype FYPO:0002380 ! viable spheroid vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-07-25T13:38:18Z
 
@@ -32341,12 +32348,13 @@ creation_date: 2013-07-25T14:59:46Z
 id: FYPO:0002378
 name: viable swollen vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable but have a larger volume than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "viable enlarged vegetative cell population" RELATED [PomBase:mah]
 synonym: "viable large vegetative cell population" RELATED [PomBase:vw]
 synonym: "viable vegetative cell population with increased cell size" RELATED [PomBase:vw]
 synonym: "viable vegetative cell population with increased cell volume" EXACT [PomBase:mah]
-is_a: FYPO:0002060 ! viable vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0002377 ! viable swollen vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-07-25T15:02:36Z
 
@@ -32793,9 +32801,10 @@ creation_date: 2013-07-31T13:49:44Z
 id: FYPO:0002407
 name: viable curved stubby vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable and curved along the long axis, and the cell diameter is larger than normal and the cell length is shorter than normal, in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "curved stubby viable vegetative cell population" EXACT [PomBase:mah]
-is_a: FYPO:0002216 ! viable curved vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0002405 ! viable curved stubby vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-07-31T13:52:21Z
 
@@ -32803,9 +32812,10 @@ creation_date: 2013-07-31T13:52:21Z
 id: FYPO:0002408
 name: viable curved stubby septated vegetative cell population
 def: "A cell population phenotype in which all cells in the population are viable and curved along the long axis, contain one or more septa apiece, and the cell diameter is larger than normal and the cell length is shorter than normal, in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "curved stubby septated viable vegetative cell population" EXACT [PomBase:mah]
-is_a: FYPO:0002407 ! viable curved stubby vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0002406 ! viable curved stubby septated vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002060
 created_by: midori
 creation_date: 2013-07-31T14:08:02Z
 
@@ -32862,11 +32872,11 @@ creation_date: 2013-07-31T14:32:46Z
 id: FYPO:0002412
 name: inviable curved elongated vegetative cell population
 def: "A cell population phenotype in which all cells in the population are inviable, longer than normal, and curved along the long axis in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "inviable curved long vegetative cell population" EXACT [PomBase:mah]
 synonym: "population of curved inviable long cells" EXACT [PomBase:vw]
-is_a: FYPO:0002149 ! inviable elongated vegetative cell population
-is_a: FYPO:0002413 ! inviable curved vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0002411 ! inviable curved elongated vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-07-31T14:33:01Z
 
@@ -32874,10 +32884,11 @@ creation_date: 2013-07-31T14:33:01Z
 id: FYPO:0002413
 name: inviable curved vegetative cell population
 def: "A cell population phenotype in which all cells in the population are inviable and curved along the long axis in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "inviable curved vegetative cell population" EXACT [PomBase:mah]
 synonym: "population of inviable curved cells" EXACT [PomBase:vw]
-is_a: FYPO:0002433 ! inviable vegetative cell population with abnormal cell shape
-relationship: comprises_cells_with_phenotype FYPO:0002113 ! inviable curved vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-07-31T14:36:48Z
 
@@ -32964,10 +32975,11 @@ creation_date: 2013-07-31T16:33:44Z
 id: FYPO:0002419
 name: inviable vegetative cell population after spore germination, without cell division
 def: "A cell population phenotype in which all vegetative cells arising from a population of germinated spores are inviable, and do not divide before dying." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "inviable germinated spore population, without cell division" EXACT [PomBase:mah]
 synonym: "inviable population of undivided germinated spores" EXACT [PomBase:mah]
-is_a: FYPO:0002147 ! inviable vegetative cell population after spore germination
-relationship: comprises_cells_with_phenotype FYPO:0001991 ! inviable after spore germination, without cell division
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-07-31T16:40:46Z
 
@@ -32997,10 +33009,11 @@ creation_date: 2013-07-31T16:57:30Z
 id: FYPO:0002422
 name: inviable vegetative cell population after spore germination, single or double cell division, abnormal cell shape
 def: "A cell population phenotype in which all vegetative cells arising from a population of germinated spores are inviable, have an abnormal shape and undergo one or two rounds of cell division." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "inviable germinated spore population, single or double cell division, abnormal cell shape" EXACT [PomBase:mah]
 synonym: "inviable population of germinated spores, single or double cell division, abnormal cell shape" EXACT [PomBase:mah]
-is_a: FYPO:0002147 ! inviable vegetative cell population after spore germination
-relationship: comprises_cells_with_phenotype FYPO:0002421 ! inviable after spore germination, single or double cell division, abnormal cell shape
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-07-31T16:58:52Z
 
@@ -33132,9 +33145,10 @@ creation_date: 2013-08-06T12:02:33Z
 id: FYPO:0002433
 name: inviable vegetative cell population with abnormal cell shape
 def: "A cell population phenotype in which all cells in the population are inviable and have abnormal cell shape, in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "inviable, abnormally shaped vegetative cell population" EXACT [PomBase:mah]
-is_a: FYPO:0002454 ! inviable vegetative cell population with abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0002451 ! inviable vegetative cell with abnormal cell shape
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-08-06T12:07:07Z
 
@@ -33420,8 +33434,9 @@ creation_date: 2013-08-06T14:44:38Z
 id: FYPO:0002454
 name: inviable vegetative cell population with abnormal cell morphology
 def: "A cell population phenotype in which all cells in the population are inviable and have abnormal cell morphology (i.e. size, shape, or structure), in the vegetative growth phase of the life cycle." [PomBase:mah]
-is_a: FYPO:0002061 ! inviable vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0002273 ! inviable vegetative cell with abnormal cell morphology
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-08-06T14:46:31Z
 
@@ -33605,11 +33620,11 @@ creation_date: 2013-08-06T16:01:01Z
 id: FYPO:0002465
 name: inviable spore population with abnormal spore shape
 def: "A cell population phenotype in which none of the cells in a population of spores are viable, and all have an abnormal shape. Inviable spores do not germinate." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "inviable population of spores with abnormal shape" EXACT [PomBase:vw]
 synonym: "inviable spore population with abnormal shape" EXACT [PomBase:mah]
-is_a: FYPO:0002150 ! inviable spore population
-relationship: comprises_cells_with_phenotype FYPO:0002467 ! abnormal spore shape
-relationship: has_part FYPO:0000306 ! abolished spore germination
+is_obsolete: true
+replaced_by: FYPO:0002150
 created_by: midori
 creation_date: 2013-08-06T16:15:29Z
 
@@ -33644,13 +33659,14 @@ creation_date: 2013-08-06T16:31:13Z
 id: FYPO:0002468
 name: inviable swollen elongated vegetative cell population
 def: "A cell population phenotype in which all cells in the population are inviable, have a larger volume and are longer than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "inviable elongated cell population with increased cell volume" EXACT [PomBase:mah]
 synonym: "inviable elongated swollen population" EXACT [PomBase:vw]
 synonym: "inviable enlarged elongated cell population" RELATED [PomBase:mah]
 synonym: "inviable large elongated cell population" RELATED [PomBase:vw]
 synonym: "inviable swollen long vegetative cell population" EXACT [PomBase:mah]
-is_a: FYPO:0002149 ! inviable elongated vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0002251 ! inviable swollen elongated vegetative cell
+is_obsolete: true
+replaced_by: FYPO:0002061
 created_by: midori
 creation_date: 2013-08-08T11:06:30Z
 
