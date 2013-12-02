@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 26:11:2013 14:30
+date: 02:12:2013 15:25
 saved-by: antonialock
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Grouping_terms "The grouping terms are high level terms not used for direct annotation but for grouping purposes in the ontology."
@@ -837,6 +837,7 @@ name: grouping sequential growth conditions
 def: "This is a grouping term, please do not use for annotation." []
 subset: Grouping_terms
 is_a: PECO:0000001 ! phenotype condition
+is_a: PECO:0000238 ! grouping condition combinations
 created_by: antonialock
 creation_date: 2012-04-23T03:15:51Z
 
@@ -1856,7 +1857,7 @@ alt_id: PECO:0000204
 def: "An experimental condition in which an experiment was performed in diploid cells." []
 subset: Grouping_terms
 synonym: "2N cells" EXACT []
-is_a: PECO:0000001 ! phenotype condition
+is_obsolete: true
 created_by: antonialock
 creation_date: 2012-11-22T20:39:13Z
 
@@ -2140,6 +2141,36 @@ def: "Cells were grown for more than 48 hours." []
 is_a: PECO:0000122 ! grouping growth timing
 created_by: antonialock
 creation_date: 2013-11-26T14:29:10Z
+
+[Term]
+id: PECO:0000238
+name: grouping condition combinations
+is_a: PECO:0000001 ! phenotype condition
+created_by: antonialock
+creation_date: 2013-12-02T14:58:52Z
+
+[Term]
+id: PECO:0000239
+name: grouping starvation and timing
+is_a: PECO:0000238 ! grouping condition combinations
+created_by: antonialock
+creation_date: 2013-12-02T15:01:10Z
+
+[Term]
+id: PECO:0000240
+name: >7 days nitrogen starvation
+def: "Cells were subjected to nitrogen starvation for more than 7 days." []
+is_a: PECO:0000239 ! grouping starvation and timing
+created_by: antonialock
+creation_date: 2013-12-02T15:01:33Z
+
+[Term]
+id: PECO:0000241
+name: 28 days nitrogen starvation followed by 10-50 hours recovery in minimal medium
+def: "Recovery from nitrogen starvation: cells are first grown in minimal medium containing no nitrogen for 28 days. This medium is then replaced with nitrogen containing minimal medium and cells are allowed to recover for 10-50 hours." []
+is_a: PECO:0000110 ! nitrogen starvation and recovery
+created_by: antonialock
+creation_date: 2013-12-02T15:06:40Z
 
 [Typedef]
 id: part_of
