@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 04:12:2013 16:38
+date: 10:12:2013 15:42
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -33,7 +33,7 @@ creation_date: 2011-03-16T04:25:28Z
 id: FYPO:0000003
 name: cell population phenotype
 def: "A phenotype that is observed at the level of a population of cells." [PomBase:mah]
-comment: Note: differentium is population level, and may reflect observation conditions.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note: differentium is population level, and may reflect observation conditions.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast cell population phenotype" EXACT [PomBase:mah]
@@ -45,7 +45,7 @@ creation_date: 2011-03-16T04:26:35Z
 id: FYPO:0000004
 name: cell viability
 def: "A cell phenotype that consists of the cell's disposition to survive and develop normally." [PomBase:mah]
-comment: Viability is usually determined under standard laboratory conditions, i.e. a cell is generally considered viable if it can grow in rich medium under normal conditions such as temperature, pressure, oxygen level, pH, etc.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Viability is usually determined under standard laboratory conditions, i.e. a cell is generally considered viable if it can grow in rich medium under normal conditions such as temperature, pressure, oxygen level, pH, etc.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000002 ! cell phenotype
@@ -152,6 +152,7 @@ id: FYPO:0000011
 name: abnormal cell cycle
 alt_id: FYPO:0000406
 def: "A cellular process phenotype in which a cell does not proceed normally through a cell cycle." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 synonym: "abnormal cell-division cycle" EXACT [GO:0007049, PomBase:mah]
 synonym: "cell cycle defects" EXACT [PomBase:mah]
@@ -1075,17 +1076,17 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000082
-name: sensitive to high temperature
+name: sensitive to heat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to heat. For example, cells may fail to grow or grow more slowly than normal at high temperatures." [PomBase:mah]
-comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
+comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius. Use this term if you have assayed growth of cells exposed to heat in culture. If you have assayed the response to heat at the subcellular or molecular level, consider annotating to 'abnormal cellular response to heat' (FYPO:0000212).
 synonym: "heat sensitive" EXACT [PomBase:mah]
 synonym: "heat sensitivity: increased" EXACT [SGD:phenotype_annotation]
 synonym: "hypersensitive to high temperature" EXACT [PomBase:mah]
-synonym: "sensitive to heat" EXACT [PomBase:mah]
+synonym: "sensitive to high temperature" EXACT [PomBase:mah]
 synonym: "sensitive to high temperature during vegetative growth" EXACT [PomBase:mah]
 synonym: "temperature sensitive" RELATED [PomBase:mah]
-is_a: FYPO:0000212 ! abnormal cellular response to heat
 is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
+relationship: output_of FYPO:0000212 ! abnormal cellular response to heat
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -1933,7 +1934,7 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000152
 name: abnormal cellular response to nitrogen starvation
 def: "A stress response phenotype in which the response to nitrogen starvation is abnormal." [PomBase:mah]
-comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. Use this term if you have assayed the response to nitrogen starvation at the subcellular or molecular level. If you have assayed growth of cells exposed to nitrogen starvation in culture, use 'sensitive to nitrogen starvation' (FYPO:0002124).
 synonym: "abnormal cellular response to nitrogen depletion" EXACT [PomBase:vw]
 synonym: "abnormal cellular response to nitrogen deprivation" EXACT [PomBase:vw]
 is_a: FYPO:0000713 ! abnormal cellular response to starvation
@@ -1999,7 +2000,7 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000157
 name: abnormal response to DNA damage stimulus
 def: "A stress response phenotype observed in the vegetative growth phase of the life cycle in which the response to DNA damage is abnormal." [PomBase:mah]
-comment: Also consider specific phenotype terms for sensitivity to substances or other stimuli that can damage DNA, e.g. 'sensitive to DNA damaging agents' (FYPO:0000266), 'sensitive to methyl methanesulfonate' (FYPO:0000089), 'sensitive to UV' (FYPO:0000268), etc.
+comment: Use this term if you have assayed the response to DNA damage at the subcellular or molecular level. If you have assayed growth of cells exposed to DNA damage in culture, use 'sensitive to DNA damage' (FYPO:0000265). Also consider specific phenotype terms for sensitivity to substances or other stimuli that can damage DNA, e.g. 'sensitive to DNA damaging agents' (FYPO:0000266), 'sensitive to methyl methanesulfonate' (FYPO:0000089), 'sensitive to UV' (FYPO:0000268), etc.
 synonym: "abnormal response to DNA damage stimulus during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
 intersection_of: PATO:0000001
@@ -2075,7 +2076,7 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000162
 name: abnormal cellular response to stress
 def: "A cellular response phenotype in which a cellular response to stress is abnormal." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Use a descendant of this term if you have assayed the response to a stress at the subcellular or molecular level. If you have assayed growth of cells exposed to the stress in culture, use a descendant of 'sensitive to stress' (FYPO:0002549) or 'resistance to stress' (FYPO:0002046).
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000298 ! cellular response phenotype
 intersection_of: PATO:0000001
@@ -2482,6 +2483,7 @@ creation_date: 2011-04-13T03:41:10Z
 id: FYPO:0000193
 name: abnormal cellular response to osmotic stress
 def: "A stress response phenotype observed in the vegetative growth phase of the life cycle in which a cellular response to osmotic stress is abnormal." [PomBase:mah]
+comment: Use this term if you have assayed the response to osmotic stress at the subcellular or molecular level. If you have assayed growth of cells exposed to osmotic stress in culture, use 'sensitive to osmotic stress' (FYPO:0000270) or 'resistance to osmotic stress' (FYPO:0000851).
 synonym: "abnormal cellular response to osmotic stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
 intersection_of: PATO:0000001
@@ -2694,6 +2696,7 @@ creation_date: 2011-04-13T03:41:10Z
 id: FYPO:0000212
 name: abnormal cellular response to heat
 def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to heat is abnormal." [PomBase:mah]
+comment: Use this term if you have assayed the response to heat at the subcellular or molecular level. If you have assayed growth of cells exposed to heat in culture, use 'sensitive to heat' (FYPO:0000082) or 'resistance to heat' (FYPO:0002626).
 synonym: "abnormal cellular response to heat during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
 intersection_of: PATO:0000001
@@ -3100,10 +3103,9 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000244
 name: loss of viability upon nutrient depletion
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when cells are deprived of nutrients such as carbon or nitrogen." [PomBase:mah]
-comment: Use this term to annotate experiments in which a culture is grown under nutrient-depleted conditions, and then the number of cells viable enough to form a colony upon return to nutrient-replete conditions is measured and compared to wild type.
+comment: Use this term to annotate experiments in which a culture is grown under nutrient-depleted conditions, and then the number of cells viable enough to form a colony upon return to nutrient-replete conditions is measured and compared to wild type. Also consider 'sensitive to nitrogen starvation' (FYPO:0002124).
 synonym: "growth defect, required during nutrient depletion" RELATED [PomBase:mah]
 synonym: "loss of viability upon nutrient starvation" EXACT [PomBase:al]
-synonym: "sensitive to nitrogen starvation" RELATED [PomBase:al]
 is_a: FYPO:0001985 ! abnormal phenotype
 is_a: FYPO:0002057 ! cell population viability
 relationship: includes_cells_with_phenotype FYPO:0000713 ! abnormal cellular response to starvation
@@ -3354,11 +3356,11 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000265
 name: sensitive to DNA damage
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to DNA damage." [PomBase:mah]
-comment: Also consider specific phenotype terms for sensitivity to substances or other stimuli that can damage DNA, e.g. 'sensitive to DNA damaging agents' (FYPO:0000266), 'sensitive to methyl methanesulfonate' (FYPO:0000089), 'sensitive to UV' (FYPO:0000268), etc.
+comment: Use this term if you have assayed growth of cells exposed to DNA damage in culture. If you have assayed the response to DNA damage at the subcellular or molecular level, consider annotating to 'abnormal cellular response to DNA damage stimulus' (FYPO:0000157). Also consider specific phenotype terms for sensitivity to substances or other stimuli that can damage DNA, e.g. 'sensitive to DNA damaging agents' (FYPO:0000266), 'sensitive to methyl methanesulfonate' (FYPO:0000089), 'sensitive to UV' (FYPO:0000268), etc.
 synonym: "hypersensitive to DNA damage" EXACT [PomBase:mah]
 synonym: "sensitive to DNA damage during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000157 ! abnormal response to DNA damage stimulus
 is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
+relationship: output_of FYPO:0000157 ! abnormal response to DNA damage stimulus
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3412,11 +3414,12 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000270
 name: sensitive to osmotic stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to osmotic stress." [PomBase:mah]
+comment: Use this term if you have assayed growth of cells exposed to osmotic stress in culture. If you have assayed the response to osmotic stress at the subcellular or molecular level, consider annotating to 'abnormal cellular response to osmotic stress' (FYPO:0000193).
 synonym: "hypersensitive to osmotic stress" EXACT [PomBase:mah]
 synonym: "osmotic stress resistance: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "sensitive to osmotic stress during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
 is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
+relationship: output_of FYPO:0000193 ! abnormal cellular response to osmotic stress
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -3641,6 +3644,7 @@ creation_date: 2011-04-21T02:22:36Z
 id: FYPO:0000289
 name: translation regulation phenotype
 def: "A gene expression phenotype that affects the regulation of translation." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast translation regulation phenotype" EXACT [PomBase:mah]
@@ -3727,6 +3731,7 @@ creation_date: 2011-04-21T02:31:20Z
 id: FYPO:0000295
 name: cytoskeleton organization phenotype
 def: "A cellular process phenotype that affects cytoskeleton organization. Cytoskeleton organization results in the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures." [GO:0007010, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "cytoskeleton organisation phenotype" EXACT [PomBase:mah]
@@ -3757,6 +3762,7 @@ creation_date: 2011-04-21T02:31:20Z
 id: FYPO:0000297
 name: microtubule cytoskeleton organization phenotype
 def: "A cellular process phenotype that affects the organization of the microtubule cytoskeleton. Microtubule cytoskeleton organization results in the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures comprising microtubules and associated proteins." [GO:0000226, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast microtubule cytoskeleton organization phenotype" EXACT [PomBase:mah]
@@ -3849,13 +3855,12 @@ creation_date: 2011-04-26T02:40:00Z
 id: FYPO:0000304
 name: sensitive to stress during vegetative growth
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a stress." [PomBase:mah]
+comment: Use this term if you have assayed growth of cells exposed to a stress in culture. If you have assayed the response to the stress at the subcellular or molecular level, consider annotating to 'abnormal cellular response to stress during vegetative growth' (FYPO:0001341).
 synonym: "hypersensitive to stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "stress resistance: decreased during vegetative growth" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
+is_a: FYPO:0001358 ! vegetative cell population growth phenotype
 is_a: FYPO:0002549 ! sensitive to stress
-intersection_of: PATO:0001551
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0033554
+relationship: output_of FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
 created_by: midori
 creation_date: 2011-04-26T03:10:44Z
 
@@ -4214,6 +4219,7 @@ creation_date: 2011-05-11T04:08:59Z
 id: FYPO:0000334
 name: cellular component organization phenotype
 def: "A phenotype that affects a process of cellular component organization, i.e. the assembly, arrangement of constituent parts, or disassembly of a cellular component, that occurs at the cellular level." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "cellular component organisation phenotype" EXACT [PomBase:mah]
@@ -8162,16 +8168,16 @@ creation_date: 2011-08-23T04:58:25Z
 
 [Term]
 id: FYPO:0000634
-name: protein localization to centromere abolished
+name: abolished protein localization to centromere
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the centromere of a chromosome does not occur." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abolished protein localization to centromere" EXACT [PomBase:mah]
+synonym: "abolished protein localisation to centromere" EXACT [PomBase:mah]
+synonym: "abolished protein localisation to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
+synonym: "abolished protein localization to centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished protein localization to chromosome, centric region" EXACT [GO:0071459, PomBase:mah]
+synonym: "abolished protein localization to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "protein absent from centromere" RELATED [PomBase:mah]
-synonym: "protein localisation to centromere abolished" EXACT [PomBase:mah]
-synonym: "protein localisation to chromosome, centromeric region, abolished" EXACT [GO:0071459, PomBase:mah]
-synonym: "protein localization to centromere abolished during vegetative growth" EXACT [PomBase:mah]
-synonym: "protein localization to chromosome, centric region, abolished" EXACT [GO:0071459, PomBase:mah]
-synonym: "protein localization to chromosome, centromeric region, abolished" EXACT [GO:0071459, PomBase:mah]
+synonym: "protein localization to centromere abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
@@ -8412,6 +8418,7 @@ creation_date: 2011-11-11T10:42:36Z
 id: FYPO:0000653
 name: DNA binding phenotype
 def: "A phenotype that affects DNA binding." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast DNA binding phenotype" EXACT [PomBase:mah]
@@ -8767,6 +8774,7 @@ creation_date: 2011-12-01T01:29:02Z
 id: FYPO:0000682
 name: abnormal regulation of molecular function
 def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which regulation of a molecular function is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 synonym: "abnormal regulation of molecular function during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
@@ -9054,6 +9062,7 @@ creation_date: 2011-12-05T02:26:17Z
 id: FYPO:0000706
 name: normal molecular function
 def: "A phenotype in which a specific molecular function is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000257 ! normal phenotype
@@ -9068,6 +9077,7 @@ creation_date: 2011-12-05T03:06:23Z
 id: FYPO:0000707
 name: abnormal molecular function
 def: "A phenotype in which a specific molecular function is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000652 ! molecular function phenotype
@@ -9309,14 +9319,12 @@ creation_date: 2011-12-07T11:28:32Z
 id: FYPO:0000726
 name: sensitive to oxidative stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to oxidative stress." [PomBase:mah]
+comment: Use this term if you have assayed growth of cells exposed to oxidative stress in culture. If you have assayed the response to oxidative stress at the subcellular or molecular level, consider annotating to 'abnormal cellular response to oxidative stress during vegetative growth' (FYPO:0001340).
 synonym: "hypersensitive to oxidative stress" EXACT [PomBase:mah]
 synonym: "oxidative stress resistance: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "sensitive to oxidative stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
-is_a: FYPO:0001340 ! abnormal cellular response to oxidative stress during vegetative growth
-intersection_of: PATO:0001551
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0034599
+relationship: output_of FYPO:0001340 ! abnormal cellular response to oxidative stress during vegetative growth
 created_by: midori
 creation_date: 2011-12-07T01:17:37Z
 
@@ -10667,7 +10675,7 @@ synonym: "advanced cell cycle phase transition during vegetative growth" EXACT [
 synonym: "advanced cell cycle progression" EXACT [PomBase:mah]
 synonym: "advanced cell cycle progression during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000011 ! abnormal cell cycle
-intersection_of: PATO:0000500
+intersection_of: PATO:0000694
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0044770
 created_by: midori
@@ -11001,11 +11009,9 @@ id: FYPO:0000850
 name: resistance to stress during vegetative growth
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show decreased sensitivity to a stress." [PomBase:mah]
 synonym: "resistant to stress during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
+is_a: FYPO:0001358 ! vegetative cell population growth phenotype
 is_a: FYPO:0002046 ! resistance to stress
-intersection_of: PATO:0001552
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0033554
+relationship: output_of FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
 created_by: midori
 creation_date: 2012-03-15T10:55:12Z
 
@@ -11013,13 +11019,11 @@ creation_date: 2012-03-15T10:55:12Z
 id: FYPO:0000851
 name: resistance to osmotic stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show decreased sensitivity to osmotic stress." [PomBase:mah]
+comment: Use this term if you have assayed growth of cells exposed to osmotic stress in culture. If you have assayed the response to osmotic stress at the subcellular or molecular level, consider annotating to 'abnormal cellular response to osmotic stress' (FYPO:0000193).
 synonym: "resistance to osmotic stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to osmotic stress" EXACT [PomBase:mah]
-is_a: FYPO:0000193 ! abnormal cellular response to osmotic stress
 is_a: FYPO:0000850 ! resistance to stress during vegetative growth
-intersection_of: PATO:0001552
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0071470
+relationship: output_of FYPO:0000193 ! abnormal cellular response to osmotic stress
 created_by: midori
 creation_date: 2012-03-15T10:55:59Z
 
@@ -11031,9 +11035,6 @@ synonym: "ionic stress resistance: increased" EXACT [SGD:phenotype_annotation]
 synonym: "resistant to salt stress" EXACT [PomBase:mah]
 synonym: "resistant to salt stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000851 ! resistance to osmotic stress
-intersection_of: PATO:0001552
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0071472
 created_by: midori
 creation_date: 2012-03-15T10:56:15Z
 
@@ -12207,12 +12208,12 @@ creation_date: 2012-04-02T03:52:49Z
 
 [Term]
 id: FYPO:0000930
-name: protein localization to cell cortex abolished
+name: abolished protein localization to cell cortex
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the cell cortex does not occur." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abolished protein localization to cell cortex" EXACT [PomBase:mah]
+synonym: "abolished protein localisation to cell cortex" EXACT [PomBase:mah]
 synonym: "protein absent from cell cortex" RELATED [PomBase:mah]
-synonym: "protein localisation to cell cortex abolished" EXACT [PomBase:mah]
+synonym: "protein localization to cell cortex abolished" EXACT [PomBase:mah]
 synonym: "protein localization to cell cortex abolished during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
@@ -12267,13 +12268,13 @@ creation_date: 2012-04-02T03:52:49Z
 
 [Term]
 id: FYPO:0000934
-name: protein localization to microtubule cytoskeleton abolished
+name: abolished protein localization to microtubule cytoskeleton
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the microtubule cytoskeleton does not occur." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abolished protein localization to microtubule cytoskeleton" EXACT [PomBase:mah]
+synonym: "abolished protein localisation to microtubule cytoskeleton" EXACT [PomBase:mah]
+synonym: "abolished protein localization to microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein absent from microtubule cytoskeleton" RELATED [PomBase:mah]
-synonym: "protein localisation to microtubule cytoskeleton abolished" EXACT [PomBase:mah]
-synonym: "protein localization to microtubule cytoskeleton abolished during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to microtubule cytoskeleton abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
@@ -12329,13 +12330,13 @@ creation_date: 2012-04-02T03:52:49Z
 
 [Term]
 id: FYPO:0000938
-name: protein localization to cortical microtubule cytoskeleton abolished
+name: abolished protein localization to cortical microtubule cytoskeleton
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the cortical microtubule cytoskeleton does not occur." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abolished protein localization to cortical microtubule cytoskeleton" EXACT [PomBase:mah]
+synonym: "abolished protein localisation to cortical microtubule cytoskeleton" EXACT [PomBase:mah]
+synonym: "abolished protein localization to cortical microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein absent from cortical microtubule cytoskeleton" RELATED [PomBase:mah]
-synonym: "protein localisation to cortical microtubule cytoskeleton abolished" EXACT [PomBase:mah]
-synonym: "protein localization to cortical microtubule cytoskeleton abolished during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to cortical microtubule cytoskeleton abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
@@ -12766,6 +12767,9 @@ name: normal cellular response to stress
 def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to a stress is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular response to stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0033554
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-04-19T01:25:21Z
 
@@ -14503,6 +14507,7 @@ creation_date: 2012-06-01T13:59:10Z
 id: FYPO:0001092
 name: binding phenotype
 def: "A phenotype that affects the binding of a gene product to another substance." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast binding phenotype" EXACT [PomBase:mah]
@@ -14515,7 +14520,7 @@ creation_date: 2012-06-01T14:07:32Z
 [Term]
 id: FYPO:0001093
 name: abolished chromatin binding
-def: "A molecular function phenotype in which chromatin binding by a mutated gene product does not occur. The gene product may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
+def: "A molecular function phenotype in which chromatin binding by a gene product does not occur. The affected gene product may be encoded by the mutated gene, or by a different gene, and may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
 synonym: "abolished chromatin association" EXACT [PomBase:vw]
 synonym: "chromatin binding abolished" EXACT [PomBase:mah]
 is_a: FYPO:0002576 ! abnormal chromatin binding
@@ -14766,7 +14771,7 @@ comment: This term can be used for any circumstances in which cells are starved 
 synonym: "advanced cell cycle arrest in response to nitrogen depletion" EXACT [PomBase:vw]
 synonym: "advanced cell cycle arrest in response to nitrogen deprivation" EXACT [PomBase:vw]
 is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
-intersection_of: PATO:0000500
+intersection_of: PATO:0000694
 intersection_of: during GO:0006995
 intersection_of: inheres_in GO:0030996
 created_by: midori
@@ -14972,6 +14977,7 @@ creation_date: 2012-06-07T15:28:36Z
 id: FYPO:0001127
 name: abnormal cell size
 def: "A cell morphology phenotype in which a cell has a volume or dimensions that differ from normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000117
@@ -15636,9 +15642,8 @@ creation_date: 2012-06-21T11:13:29Z
 id: FYPO:0001178
 name: loss of viability in stationary phase upon nitrogen depletion
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when cells in a culture in stationary phase are deprived of nitrogen." [PomBase:mah]
-comment: Use this term to annotate experiments in which a culture is grown to stationary phase under nitrogen-depleted conditions, and then the number of cells viable enough to form a colony upon return to conditions supporting vegetative growth is measured and compared to wild type.
+comment: Use this term to annotate experiments in which a culture is grown to stationary phase under nitrogen-depleted conditions, and then the number of cells viable enough to form a colony upon return to conditions supporting vegetative growth is measured and compared to wild type. Also consider 'sensitive to nitrogen starvation' (FYPO:0002124).
 synonym: "loss of viability upon nitrogen starvation" EXACT [PomBase:al]
-synonym: "sensitive to nitrogen starvation" RELATED [PomBase:al]
 is_a: FYPO:0000244 ! loss of viability upon nutrient depletion
 is_a: FYPO:0000245 ! loss of viability in stationary phase
 created_by: midori
@@ -15912,6 +15917,7 @@ creation_date: 2012-07-05T16:14:49Z
 id: FYPO:0001200
 name: abnormal cellular response to calcium starvation
 def: "A stress response phenotype observed in the vegetative growth phase of the life cycle in which the response to calcium starvation is abnormal." [PomBase:mah]
+comment: Use this term if you have assayed the response to calcium starvation at the subcellular or molecular level. If you have assayed growth of cells exposed to calcium starvation in culture, use 'sensitive to calcium starvation' (FYPO:0001201).
 synonym: "abnormal cellular response to calcium depletion" EXACT [PomBase:vw]
 synonym: "abnormal cellular response to calcium deprivation" EXACT [PomBase:vw]
 synonym: "abnormal cellular response to calcium ion starvation" EXACT [GO:0072732, PomBase:mah]
@@ -15928,6 +15934,7 @@ creation_date: 2012-07-05T16:38:24Z
 id: FYPO:0001201
 name: sensitive to calcium starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to calcium starvation." [PomBase:mah]
+comment: Use this term if you have assayed growth of cells exposed to calcium starvation in culture. If you have assayed the response to calcium starvation at the subcellular or molecular level, consider annotating to 'abnormal cellular response to calcium starvation' (FYPO:0001200).
 synonym: "hypersensitive to calcium starvation" EXACT [PomBase:mah]
 synonym: "reduced growth in low calcium" RELATED [PomBase:vw]
 synonym: "sensitive to calcium depletion" EXACT [PomBase:vw]
@@ -15935,10 +15942,7 @@ synonym: "sensitive to calcium deprivation" EXACT [PomBase:vw]
 synonym: "sensitive to calcium ion starvation" EXACT [GO:0072732, PomBase:mah]
 synonym: "sensitive to calcium starvation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
-is_a: FYPO:0001200 ! abnormal cellular response to calcium starvation
-intersection_of: PATO:0001551
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0072732
+relationship: output_of FYPO:0001200 ! abnormal cellular response to calcium starvation
 created_by: midori
 creation_date: 2012-07-05T16:43:08Z
 
@@ -16739,10 +16743,10 @@ id: FYPO:0001259
 name: decreased RNA level during cellular response to hypoxia
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hypoxia is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
-synonym: "decreased protein level during cellular response to increased oxygen tension" EXACT [GO:0071456]
 synonym: "decreased RNA accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to hyperoxic stress" EXACT [GO:0071456]
 synonym: "decreased RNA level during cellular response to hypoxia during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased RNA level during cellular response to increased oxygen tension" EXACT [GO:0071456]
 synonym: "decreased transcript level during cellular response to hypoxia" EXACT [PomBase:vw]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
 intersection_of: PATO:0001163
@@ -17588,6 +17592,7 @@ creation_date: 2012-08-01T13:42:47Z
 id: FYPO:0001320
 name: vegetative cell phenotype
 def: "A phenotype that is observed at the level of an individual cell, when the cell is in the vegetative growth phase of the cell cycle." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "cell phenotype during vegetative growth" EXACT [PomBase:mah]
@@ -17604,6 +17609,7 @@ creation_date: 2012-08-01T13:52:18Z
 id: FYPO:0001321
 name: cellular physical quality phenotype during vegetative growth
 def: "A phenotype that affects any physical object quality, such as morphology, number, location, etc., of a cell or a cellular component in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "cellular physical object quality phenotype during vegetative growth" EXACT [PATO:0001241]
@@ -17620,6 +17626,7 @@ creation_date: 2012-08-01T14:44:55Z
 id: FYPO:0001322
 name: abnormal subcellular component during vegetative growth
 def: "A physical cellular phenotype in which the amount, distribution, or morphology of a cell part is abnormal in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "abnormal subcellular structure during vegetative growth" RELATED [PomBase:mah]
@@ -17762,6 +17769,7 @@ creation_date: 2012-08-01T16:24:14Z
 id: FYPO:0001331
 name: cellular process phenotype during vegetative growth
 def: "A phenotype that affects a cellular process in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast cellular process phenotype during vegetative growth" EXACT [PomBase:mah]
@@ -17818,6 +17826,7 @@ creation_date: 2012-08-01T16:33:52Z
 id: FYPO:0001335
 name: transcription regulation phenotype during vegetative growth
 def: "A gene expression phenotype that affects the regulation of DNA-dependent transcription in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast transcription regulation phenotype during vegetative growth" EXACT [PomBase:mah]
@@ -17890,6 +17899,7 @@ creation_date: 2012-08-01T17:15:31Z
 id: FYPO:0001340
 name: abnormal cellular response to oxidative stress during vegetative growth
 def: "A stress response phenotype in which a cellular response to oxidative stress is abnormal in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: Use this term if you have assayed the response to oxidative stress at the subcellular or molecular level. If you have assayed growth of cells exposed to oxidative stress in culture, use 'sensitive to oxidative stress' (FYPO:0000726).
 is_a: FYPO:0000180 ! abnormal cellular response to oxidative stress
 is_a: FYPO:0001341 ! abnormal cellular response to stress during vegetative growth
 intersection_of: PATO:0000001
@@ -17903,6 +17913,7 @@ creation_date: 2012-08-01T17:18:23Z
 id: FYPO:0001341
 name: abnormal cellular response to stress during vegetative growth
 def: "A cellular response phenotype in which a cellular response to stress is abnormal in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: Use this term if you have assayed the response to a stress at the subcellular or molecular level. If you have assayed growth of cells exposed to the stress in culture, use 'sensitive to stress during vegetative growth' (FYPO:0000304) or 'resistance to stress during vegetative growth' (FYPO:0000850) or a more specific term.
 is_a: FYPO:0000162 ! abnormal cellular response to stress
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -17982,6 +17993,7 @@ creation_date: 2012-08-01T17:38:00Z
 id: FYPO:0001347
 name: nucleic acid metabolism phenotype during vegetative growth
 def: "A cellular process phenotype that affects any nucleic acid metabolic process in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast nucleic acid metabolism phenotype during vegetative growth" EXACT [PomBase:mah]
@@ -17997,6 +18009,7 @@ creation_date: 2012-08-01T17:39:21Z
 id: FYPO:0001348
 name: cellular metabolism phenotype during vegetative growth
 def: "A cellular process phenotype that affects metabolism in the cell in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast cellular metabolism phenotype during vegetative growth" EXACT [PomBase:mah]
@@ -18087,7 +18100,7 @@ creation_date: 2012-08-01T18:14:28Z
 id: FYPO:0001355
 name: decreased vegetative cell population growth
 def: "A cell population phenotype in which the growth of a population of cells is decreased relative to normal in the vegetative growth phase of the life cycle. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both." [PomBase:mah]
-comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 subset: qc_do_not_manually_annotate
 synonym: "aerobic vegetative growth defects" RELATED [PomBase:mah]
 synonym: "decreased vegetative aerobic cell population growth" NARROW [PomBase:mah]
@@ -18103,7 +18116,7 @@ creation_date: 2012-08-01T18:16:46Z
 id: FYPO:0001356
 name: abnormal vegetative cell population growth
 def: "A cellular process phenotype in which vegetative cell population growth is abnormal." [PomBase:mah]
-comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
 subset: qc_do_not_manually_annotate
 synonym: "vegetative growth defect" RELATED [PomBase:mah]
 is_a: FYPO:0000045 ! abnormal cell population growth
@@ -18127,6 +18140,7 @@ creation_date: 2012-08-01T18:20:01Z
 id: FYPO:0001358
 name: vegetative cell population growth phenotype
 def: "A cell phenotype that affects the rate or extent of cell population growth in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "cell population growth phenotype during vegetative growth" EXACT [PomBase:mah]
@@ -18170,6 +18184,7 @@ creation_date: 2012-08-02T14:52:32Z
 id: FYPO:0001362
 name: abnormal cellular process during vegetative growth
 def: "A phenotype in which a specific cellular process is abnormal in the vegetative growth phase of the life cycle." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000628 ! abnormal cellular process
@@ -18815,7 +18830,7 @@ id: FYPO:0001408
 name: sensitive to heat shock
 def: "A cell phenotype in which cells show increased sensitivity to heat shock. Heat shock is a form of heat stress in which cells are briefly exposed to a very high temperature." [PomBase:mah]
 synonym: "hypersensitive to heat shock" EXACT [PomBase:mah]
-is_a: FYPO:0000082 ! sensitive to high temperature
+is_a: FYPO:0000082 ! sensitive to heat
 created_by: midori
 creation_date: 2012-08-16T16:02:56Z
 
@@ -19384,9 +19399,6 @@ synonym: "resistance to cold during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistance to low temperature" EXACT [PomBase:mah]
 synonym: "resistant to cold" EXACT [PomBase:mah]
 is_a: FYPO:0000850 ! resistance to stress during vegetative growth
-intersection_of: PATO:0001552
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0070417
 created_by: midori
 creation_date: 2012-08-23T15:46:25Z
 
@@ -19398,9 +19410,6 @@ synonym: "resistance to freezing during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to freeze-thawing" RELATED [PomBase:al]
 synonym: "resistant to freezing" EXACT [PomBase:mah]
 is_a: FYPO:0001450 ! resistance to cold
-intersection_of: PATO:0001552
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0071497
 created_by: midori
 creation_date: 2012-08-23T15:47:42Z
 
@@ -19412,9 +19421,6 @@ synonym: "resistance to water deprivation during vegetative growth" EXACT [PomBa
 synonym: "resistant to dehydration" EXACT [GO:0009414, PomBase:al]
 synonym: "resistant to water deprivation" EXACT [PomBase:mah]
 is_a: FYPO:0000850 ! resistance to stress during vegetative growth
-intersection_of: PATO:0001552
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0042631
 created_by: midori
 creation_date: 2012-08-23T15:49:03Z
 
@@ -20507,10 +20513,6 @@ synonym: "sensitive to zinc deprivation" EXACT [PomBase:vw]
 synonym: "sensitive to zinc ion starvation" EXACT [PomBase:mah]
 synonym: "sensitive to zinc starvation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
-intersection_of: PATO:0001551
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0034224
-intersection_of: towards CHEBI:497734
 created_by: midori
 creation_date: 2012-09-13T15:35:17Z
 
@@ -23051,7 +23053,7 @@ synonym: "normal DNA damage checkpoint during gamma irradiation" NARROW [PomBase
 is_a: FYPO:0001705 ! normal DNA damage checkpoint
 is_a: FYPO:0001927 ! normal cell cycle regulation during cellular response to ionizing radiation
 intersection_of: PATO:0000001
-intersection_of: during GO:0071479
+intersection_of: during GO:0071480
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0000077
 intersection_of: qualifier PATO:0000461
@@ -24190,6 +24192,7 @@ creation_date: 2012-11-21T15:39:01Z
 id: FYPO:0001790
 name: normal plasmid loss
 def: "A cell phenotype in which plasmids are lost at the same frequency as in wild-type cells. Plasmid loss occurs when one or both daughter cells do not inherit copies of a plasmid from the mother cell, and may result from failure of plasmid replication or segregation." [PomBase:mah]
+is_a: FYPO:0000002 ! cell phenotype
 is_a: FYPO:0001312 ! normal vegetative phenotype
 created_by: midori
 creation_date: 2012-11-21T15:52:33Z
@@ -27294,9 +27297,6 @@ synonym: "sensitive to iron ion deprivation" EXACT [PomBase:vw]
 synonym: "sensitive to iron ion starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to iron starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
-intersection_of: PATO:0001551
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0010106
 created_by: midori
 creation_date: 2013-02-27T15:24:45Z
 
@@ -27718,14 +27718,12 @@ creation_date: 2013-03-14T15:54:13Z
 [Term]
 id: FYPO:0002046
 name: resistance to stress
-def: "A phenotype in which cells show decreased sensitivity to a stress." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+def: "A phenotype in which cells in a population show decreased sensitivity to a stress. Typically, a cell population are deemed resistant to a stress if cells in the population grow and divide when exposed to the stress at an intensity at which wild-type cells stop growing (and may die)." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Use a descendant of this term if you have assayed growth of cells exposed to a stress in culture. If you have assayed the response to the stress at the subcellular or molecular level, consider annotating to a descendant of 'abnormal cellular response to stress' (FYPO:0000162).
 subset: qc_do_not_manually_annotate
 synonym: "resistant to stress" EXACT [PomBase:mah]
 synonym: "stress resistance: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000162 ! abnormal cellular response to stress
-intersection_of: PATO:0001552
-intersection_of: inheres_in GO:0033554
+is_a: FYPO:0000139 ! cell population growth phenotype
 created_by: midori
 creation_date: 2013-03-14T15:56:42Z
 
@@ -27875,6 +27873,7 @@ creation_date: 2013-03-27T16:55:57Z
 id: FYPO:0002057
 name: cell population viability
 def: "A cell population phenotype that reflects the proportion of the population that survive and develop normally." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000003 ! cell population phenotype
@@ -27885,7 +27884,7 @@ creation_date: 2013-04-04T13:48:22Z
 id: FYPO:0002058
 name: viable cell population
 def: "A cell population phenotype in which cells in the population are viable." [PomBase:mah]
-comment: Note that a viable population may contain individual cells that are inviable. Usually it is difficult to detect inviable cells within an otherwise viable population, especially if population growth is simply assayed by OD increase in liquid culture or by colony formation on plates. If you have done an experiment that detects individual inviable cells, consider using the term 'mixed population including viable and inviable cells' (FYPO:0000908).
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that a viable population may contain individual cells that are inviable. Usually it is difficult to detect inviable cells within an otherwise viable population, especially if population growth is simply assayed by OD increase in liquid culture or by colony formation on plates. If you have done an experiment that detects individual inviable cells, consider using the term 'mixed population including viable and inviable cells' (FYPO:0000908).
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0002057 ! cell population viability
 relationship: includes_cells_with_phenotype FYPO:0000124 ! viable cell
@@ -28148,9 +28147,6 @@ synonym: "sensitive to hypoosmotic conditions" EXACT [PomBase:al]
 synonym: "sensitive to hypotonic conditions" RELATED [PomBase:mah]
 synonym: "sensitive to low osmolarity during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000270 ! sensitive to osmotic stress
-intersection_of: PATO:0001551
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0071476
 created_by: midori
 creation_date: 2013-04-24T14:41:45Z
 
@@ -28447,7 +28443,7 @@ synonym: "reduced protein kinase activity during cellular response to HU" EXACT 
 synonym: "reduced protein kinase activity during cellular response to hydroxyurea" EXACT [PomBase:mah]
 is_a: FYPO:0001382 ! decreased protein kinase activity
 intersection_of: PATO:0002052
-intersection_of: happens_during GO:0072711
+intersection_of: during GO:0072711
 intersection_of: inheres_in GO:0004672
 created_by: midori
 creation_date: 2013-05-02T12:21:11Z
@@ -28710,6 +28706,7 @@ creation_date: 2013-05-07T12:51:07Z
 id: FYPO:0002114
 name: transporter activity phenotype
 def: "A phenotype that affects a transporter activity." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast transporter activity phenotype" EXACT [PomBase:mah]
@@ -28723,6 +28720,7 @@ creation_date: 2013-05-07T13:25:10Z
 id: FYPO:0002115
 name: normal transporter activity
 def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000706 ! normal molecular function
 is_a: FYPO:0002114 ! transporter activity phenotype
@@ -28736,6 +28734,7 @@ creation_date: 2013-05-07T13:26:31Z
 id: FYPO:0002116
 name: abnormal transporter activity
 def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is abnormal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000707 ! abnormal molecular function
 is_a: FYPO:0002114 ! transporter activity phenotype
@@ -28749,6 +28748,7 @@ creation_date: 2013-05-07T13:27:14Z
 id: FYPO:0002117
 name: abolished transporter activity
 def: "A molecular function phenotype in which a specified transporter activity is absent." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 synonym: "catalytic activity abolished" EXACT [PomBase:mah]
 is_a: FYPO:0002116 ! abnormal transporter activity
@@ -28761,6 +28761,7 @@ creation_date: 2013-05-07T13:27:44Z
 id: FYPO:0002118
 name: decreased transporter activity
 def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is decreased." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 synonym: "reduced transporter activity" EXACT [PomBase:mah]
 is_a: FYPO:0002116 ! abnormal transporter activity
@@ -28773,6 +28774,7 @@ creation_date: 2013-05-07T13:28:05Z
 id: FYPO:0002119
 name: increased transporter activity
 def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is increased." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0002116 ! abnormal transporter activity
 intersection_of: PATO:0002051
@@ -28833,16 +28835,13 @@ creation_date: 2013-05-07T15:16:42Z
 id: FYPO:0002124
 name: sensitive to nitrogen starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to nitrogen starvation." [PomBase:mah]
-comment: Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation, but this term does not refer to such prolonged starvation.
+comment: Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation, but this term does not refer to such prolonged starvation. Use this term if you have assayed growth of cells exposed to nitrogen starvation in culture. If you have assayed the response to nitrogen starvation at the subcellular or molecular level, consider annotating to 'abnormal cellular response to nitrogen starvation' (FYPO:0000152).
 synonym: "hypersensitive to nitrogen starvation" EXACT [PomBase:mah]
 synonym: "sensitive to nitrogen depletion" EXACT [PomBase:vw]
 synonym: "sensitive to nitrogen deprivation" EXACT [PomBase:vw]
 synonym: "sensitive to nitrogen starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to vitamin B1 starvation" EXACT [GO:0036225]
 is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
-intersection_of: PATO:0001551
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0006995
 created_by: midori
 creation_date: 2013-05-07T16:25:36Z
 
@@ -28950,6 +28949,7 @@ creation_date: 2013-05-07T16:53:59Z
 id: FYPO:0002131
 name: RNA binding phenotype
 def: "A phenotype that affects RNA binding." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast DNA binding phenotype" EXACT [PomBase:mah]
@@ -31083,6 +31083,7 @@ id: FYPO:0002288
 name: abolished protein tyrosine phosphorylation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of tyrosine residues in one or more specific proteins, or of specific protein sites, does not occur." [PomBase:mah]
 comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "abolished peptidyl-tyrosine phosphorylation" EXACT [GO:0018108]
 synonym: "abolished protein tyrosine phosphorylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein tyrosine phosphorylation abolished" EXACT [PomBase:mah]
 is_a: FYPO:0000775 ! abnormal protein phosphorylation during vegetative growth
@@ -31416,9 +31417,6 @@ synonym: "resistance to ionizing radiation during vegetative growth" EXACT [PomB
 synonym: "resistant to ionizing radiation" EXACT [GO:0009414, PomBase:al]
 synonym: "resistant to IR" EXACT [PomBase:mah]
 is_a: FYPO:0000850 ! resistance to stress during vegetative growth
-intersection_of: PATO:0001552
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0071479
 created_by: midori
 creation_date: 2013-06-20T15:28:55Z
 
@@ -34783,7 +34781,8 @@ comment: When using this term, it is recommended to note the specific protein(s)
 synonym: "abolished protein serine phosphorylation at Arg-X-X-Ser site during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
 synonym: "abolished protein serine phosphorylation at arginine-X-X-serine site during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
 synonym: "abolished protein serine phosphorylation at RxxS site during cellular response to H2O2" EXACT [PomBase:mah]
-is_a: FYPO:0002033 ! abolished protein phosphorylation during vegetative growth
+synonym: "protein serine phosphorylation abolished at RxxS site during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+is_a: FYPO:0002982 ! abolished protein serine phosphorylation
 created_by: midori
 creation_date: 2013-08-27T15:23:47Z
 
@@ -34795,7 +34794,8 @@ comment: When using this term, it is recommended to note the specific protein(s)
 synonym: "abolished protein serine phosphorylation at Arg-X-X-Ser site during cellular response to hydroxyurea" EXACT [PomBase:mah]
 synonym: "abolished protein serine phosphorylation at arginine-X-X-serine site during cellular response to hydroxyurea" EXACT [PomBase:mah]
 synonym: "abolished protein serine phosphorylation at RxxS site during cellular response to HU" EXACT [PomBase:mah]
-is_a: FYPO:0002033 ! abolished protein phosphorylation during vegetative growth
+synonym: "protein serine phosphorylation abolished at RxxS site during cellular response to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0002982 ! abolished protein serine phosphorylation
 created_by: midori
 creation_date: 2013-08-27T15:26:39Z
 
@@ -34836,12 +34836,12 @@ creation_date: 2013-08-27T15:45:17Z
 [Term]
 id: FYPO:0002549
 name: sensitive to stress
-def: "A phenotype in which cells show increased sensitivity to a stress." [PomBase:mah]
+def: "A phenotype in which cells in a population show increased sensitivity to a stress. Typically, a cell population are deemed sensitive to a stress if cells in the population stop growing (and may die) when exposed to the stress at an intensity that allows a population of wild type cells to grow and divide." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Use a descendant of this term if you have assayed growth of cells exposed to a stress in culture. If you have assayed the response to the stress at the subcellular or molecular level, consider annotating to a descendant of 'abnormal cellular response to stress' (FYPO:0000162).
+subset: qc_do_not_manually_annotate
 synonym: "hypersensitive to stress" EXACT [PomBase:mah]
 synonym: "stress resistance: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000162 ! abnormal cellular response to stress
-intersection_of: PATO:0001551
-intersection_of: inheres_in GO:0033554
+is_a: FYPO:0000139 ! cell population growth phenotype
 created_by: midori
 creation_date: 2013-08-27T15:46:35Z
 
@@ -34854,8 +34854,6 @@ synonym: "increased sensitivity to UV irradiation" EXACT [PomBase:vw]
 synonym: "sensitive to ultraviolet light" EXACT [PomBase:mah]
 synonym: "UV resistance: decreased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0002549 ! sensitive to stress
-intersection_of: PATO:0001551
-intersection_of: inheres_in GO:0034644
 created_by: midori
 creation_date: 2013-08-27T15:48:41Z
 
@@ -35255,7 +35253,7 @@ creation_date: 2013-08-28T15:14:19Z
 [Term]
 id: FYPO:0002576
 name: abnormal chromatin binding
-def: "A molecular function phenotype in which occurrence of chromatin binding by a mutated gene product is abnormal. The gene product may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
+def: "A molecular function phenotype in which the occurrence of chromatin binding by a gene product is abnormal. The affected gene product may be encoded by the mutated gene, or by a different gene, and may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
 is_a: FYPO:0000707 ! abnormal molecular function
 is_a: FYPO:0001092 ! binding phenotype
 intersection_of: PATO:0000001
@@ -35267,7 +35265,7 @@ creation_date: 2013-08-28T15:21:27Z
 [Term]
 id: FYPO:0002577
 name: decreased chromatin binding
-def: "A molecular function phenotype in which occurrence of chromatin binding by a mutated gene product is decreased. The gene product may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
+def: "A molecular function phenotype in which occurrence of chromatin binding by a gene product is decreased. The affected gene product may be encoded by the mutated gene, or by a different gene, and may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
 synonym: "reduced chromatin binding" EXACT [PomBase:mah]
 is_a: FYPO:0002576 ! abnormal chromatin binding
 intersection_of: PATO:0002052
@@ -35934,14 +35932,13 @@ creation_date: 2013-09-05T16:03:48Z
 id: FYPO:0002626
 name: resistance to heat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show decreased sensitivity to heat." [PomBase:mah]
+comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius. Use this term if you have assayed growth of cells exposed to heat in culture. If you have assayed the response to heat at the subcellular or molecular level, consider annotating to 'abnormal cellular response to heat' (FYPO:0000212).
+synonym: "heat resistance" EXACT [PomBase:mah]
 synonym: "resistance to heat during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistance to high temperature" EXACT [PomBase:al]
 synonym: "resistant to heat" EXACT [PomBase:mah]
-is_a: FYPO:0000212 ! abnormal cellular response to heat
 is_a: FYPO:0000850 ! resistance to stress during vegetative growth
-intersection_of: PATO:0001552
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0034605
+relationship: output_of FYPO:0000212 ! abnormal cellular response to heat
 created_by: midori
 creation_date: 2013-09-05T16:10:37Z
 
@@ -36662,7 +36659,7 @@ creation_date: 2013-09-19T12:04:02Z
 [Term]
 id: FYPO:0002682
 name: increased resistance to chemical
-def: "A phenotype in which cells show increased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which a population of cells grow and divide." [PomBase:mah]
+def: "A phenotype in which cells in a population show increased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which a population of cells grow and divide." [PomBase:mah]
 synonym: "resistance to chemicals: increased" EXACT [SGD:phenotype_annotation]
 synonym: "resistant to chemical" EXACT [PomBase:mah]
 is_a: FYPO:0000139 ! cell population growth phenotype
@@ -36672,7 +36669,7 @@ creation_date: 2013-09-19T12:14:30Z
 [Term]
 id: FYPO:0002683
 name: increased sensitivity to chemical
-def: "A phenotype in which cells show decreased resistance to a chemical stimulus. Resistance to a chemical is measured by determining the maximum concentration of the chemical at which a population of cells grow and divide. Typically, cells are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type cells to grow." [PomBase:mah]
+def: "A phenotype in which cells in a population show decreased resistance to a chemical stimulus. Resistance to a chemical is measured by determining the maximum concentration of the chemical at which a population of cells grow and divide. Typically, cells are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type cells to grow." [PomBase:mah]
 synonym: "resistance to chemicals: decreased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000139 ! cell population growth phenotype
 created_by: midori
@@ -37294,6 +37291,7 @@ creation_date: 2013-10-01T14:37:15Z
 id: FYPO:0002734
 name: abnormal cell cycle process
 def: "A cellular process phenotype in which a cell does not execute a cell cycle process normally. A cell cycle process is any of the processes that form part of the cell cycle, and thereby ensures successive accurate and complete genome replication and chromosome segregation." [GO:0022402, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000011 ! abnormal cell cycle
 intersection_of: PATO:0000001
@@ -37306,6 +37304,7 @@ creation_date: 2013-10-01T15:08:57Z
 id: FYPO:0002735
 name: abnormal cell cycle phase
 def: "A cellular process phenotype in which a cell does not proceed normally through a specific cell cycle phase. A cell cycle phase is any of the distinct periods or stages into which the cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000011 ! abnormal cell cycle
 intersection_of: PATO:0000001
@@ -37318,6 +37317,7 @@ creation_date: 2013-10-01T15:09:18Z
 id: FYPO:0002736
 name: abnormal mitotic cell cycle phase
 def: "A cellular process phenotype in which a cell does not proceed normally through a specific mitotic cell cycle phase. A mitotic cell cycle phase is any of the distinct periods or stages into which the mitotic cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000059 ! abnormal mitotic cell cycle
 is_a: FYPO:0002735 ! abnormal cell cycle phase
@@ -37332,6 +37332,7 @@ creation_date: 2013-10-01T15:14:48Z
 id: FYPO:0002737
 name: abnormal mitotic cell cycle process
 def: "A cellular process phenotype in which a cell does not execute a mitotic cell cycle process normally. A mitotic cell cycle process is any of the processes that form part of the mitotic cell cycle, and thereby ensures successive accurate and complete genome replication and chromosome segregation during the vegetative growth phase of the life cycle." [GO:0022402, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000059 ! abnormal mitotic cell cycle
 is_a: FYPO:0002734 ! abnormal cell cycle process
@@ -37346,6 +37347,7 @@ creation_date: 2013-10-01T15:15:09Z
 id: FYPO:0002738
 name: abnormal meiotic cell cycle phase
 def: "A cellular process phenotype in which a cell does not proceed normally through a specific meiotic cell cycle phase. A meiotic cell cycle phase is any of the distinct periods or stages into which the meiotic cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000052 ! abnormal meiotic cell cycle
 is_a: FYPO:0002735 ! abnormal cell cycle phase
@@ -37360,6 +37362,7 @@ creation_date: 2013-10-01T15:16:12Z
 id: FYPO:0002739
 name: abnormal meiotic cell cycle process
 def: "A cellular process phenotype in which a cell does not execute a meiotic cell cycle process normally. A meiotic cell cycle process is any of the processes that form part of the meiotic cell cycle, and thereby ensures successive accurate and complete genome replication and meiotic chromosome segregation." [GO:0022402, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000052 ! abnormal meiotic cell cycle
 is_a: FYPO:0002734 ! abnormal cell cycle process
@@ -37374,6 +37377,7 @@ creation_date: 2013-10-01T15:17:46Z
 id: FYPO:0002740
 name: normal cell cycle phase
 def: "A cellular process phenotype in which a cell proceeds normally through a specific cell cycle phase. A cell cycle phase is any of the distinct periods or stages into which the cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000411 ! normal cell cycle
 intersection_of: PATO:0000051
@@ -37386,6 +37390,7 @@ creation_date: 2013-10-01T16:02:38Z
 id: FYPO:0002741
 name: normal cell cycle process
 def: "A cellular process phenotype in which a cell executes a cell cycle process normally. A cell cycle process is any of the processes that form part of the cell cycle, and thereby ensures successive accurate and complete genome replication and chromosome segregation." [GO:0022402, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000411 ! normal cell cycle
 intersection_of: PATO:0000051
@@ -38354,9 +38359,6 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "hypersensitive to non-ionic osmotic stress" EXACT [PomBase:mah]
 synonym: "sensitive to non-ionic osmotic stress during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000270 ! sensitive to osmotic stress
-intersection_of: PATO:0001551
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0071471
 created_by: midori
 creation_date: 2013-10-22T15:47:09Z
 
@@ -39077,7 +39079,7 @@ creation_date: 2013-11-14T11:33:47Z
 
 [Term]
 id: FYPO:0002861
-name: decreased poly(U) polymerase  activity
+name: decreased poly(U) polymerase activity
 def: "A molecular function phenotype in which the observed rate of polynucleotide uridylyltransferase (poly(U) polymerase) activity is decreased." [PMID:17449726, PomBase:mah]
 synonym: "abnormal RNA uridylyltransferase activity" EXACT [GO:0050265]
 synonym: "decreased polynucleotide uridylyltransferase activity" EXACT [PMID:17449726, PomBase:vw]
@@ -40012,7 +40014,7 @@ synonym: "decreased protein localisation to M26 site" EXACT [PomBase:mah]
 synonym: "decreased protein localization to M26 binding site" EXACT [PomBase:mah, SO:0001900]
 synonym: "decreased protein localization to M26 site during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced protein localization to M26 site" EXACT [PomBase:mah]
-is_a: FYPO:0000449 ! abnormal protein localization to centromere
+is_a: FYPO:0002839 ! decreased protein localization to chromosome
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0034502
@@ -40507,7 +40509,7 @@ creation_date: 2013-12-04T15:55:26Z
 [Term]
 id: FYPO:0002960
 name: increased level of DSR-containing meiosis gene RNA during vegetative growth
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more RNAs that are normally expressed during meiosis, and that contain determinant of selective removal (DSR) sequences, measured in a cell is higher than normal (i.e. higher than observed in wild-type cells during vegetative growth)." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more RNAs that are normally expressed during meiosis, and that contain determinant of selective removal (DSR) sequences, measured in a cell is higher than normal (i.e. higher than observed in wild-type cells during vegetative growth)." [PMID:23980030, PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "increased DSR-containing meiosis gene RNA accumulation during vegetative growth" RELATED [PomBase:mah]
 synonym: "increased level of DSR-containing meiosis gene transcripts during vegetative growth" EXACT [PomBase:vw]
@@ -40525,6 +40527,388 @@ synonym: "delaminated cell wall during G0" RELATED [PomBase:mah]
 is_a: FYPO:0002948 ! delaminated cell wall
 created_by: midori
 creation_date: 2013-12-04T14:37:13Z
+
+[Term]
+id: FYPO:0002962
+name: abolished protein localization to Mei2 nuclear dot
+def: "A cell phenotype in which the localization of a protein to the Mei2 nuclear dot is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "protein localisation to Mei2 nuclear dot abolished" EXACT [PomBase:mah]
+synonym: "protein localization to Mei2 nuclear dot abolished" EXACT [PomBase:mah]
+is_a: FYPO:0002958 ! abnormal protein localization to Mei2 nuclear dot
+intersection_of: PATO:0001558
+intersection_of: towards GO:1902549
+created_by: midori
+creation_date: 2013-12-10T11:56:13Z
+
+[Term]
+id: FYPO:0002963
+name: abnormal protein localization to Mmi1 focus
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to Mmi1 foci is abnormal. Mmi1 foci are small structure that form within the nucleus, and contain proteins involved in degrading meiosis-specific RNAs during the mitotic cell cycle, such as Mmi1, Iss10, and Red1." [PMID:23980030, PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to Mmi1 focus" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to Mmi1 foci" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to Mmi1 focus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001129 ! abnormal protein localization to nucleus during vegetative growth
+created_by: midori
+creation_date: 2013-12-10T11:59:35Z
+
+[Term]
+id: FYPO:0002964
+name: increased protein localization to Mmi1 focus
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to Mmi1 foci is increased. Mmi1 foci are small structure that form within the nucleus, and contain proteins involved in degrading meiosis-specific RNAs during the mitotic cell cycle, such as Mmi1, Iss10, and Red1." [PMID:23980030, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to Mmi1 focus" EXACT [PomBase:mah]
+synonym: "increased protein localization to Mmi1 foci" EXACT [PomBase:mah]
+synonym: "increased protein localization to Mmi1 focus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002963 ! abnormal protein localization to Mmi1 focus
+created_by: midori
+creation_date: 2013-12-10T11:59:52Z
+
+[Term]
+id: FYPO:0002965
+name: normal protein localization to nucleolus
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleolus is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the centromere and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to nucleolus" EXACT [PomBase:mah]
+synonym: "normal protein localization to nucleolus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902570
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-12-10T12:26:53Z
+
+[Term]
+id: FYPO:0002966
+name: normal protein localization to mitotic spindle
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitotic spindle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to mitotic spindle" EXACT [PomBase:mah]
+synonym: "normal protein localization to mitotic spindle during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902480
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-12-10T12:28:10Z
+
+[Term]
+id: FYPO:0002967
+name: normal protein localization to mitotic spindle pole body
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitotic spindle pole body is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the spindle pole body and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to mitotic spindle pole body" EXACT [PomBase:mah]
+synonym: "normal protein localization to mitotic SPB" EXACT [PomBase:mah]
+synonym: "normal protein localization to spindle pole body during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902440
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-12-10T12:30:11Z
+
+[Term]
+id: FYPO:0002968
+name: normal protein localization to mitotic spindle pole body during G2
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitotic spindle pole body is normal (i.e. indistinguishable from wild type) during G2 phase of the cell cycle." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the spindle pole body and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to mitotic spindle pole body during G2" EXACT [PomBase:mah]
+synonym: "normal protein localization to mitotic SPB during G2" EXACT [PomBase:mah]
+synonym: "normal protein localization to spindle pole body during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0000085
+intersection_of: inheres_in GO:1902440
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-12-10T12:31:29Z
+
+[Term]
+id: FYPO:0002969
+name: increased protein localization to mitotic spindle pole body
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitotic spindle pole body is increased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to mitotic spindle pole body" EXACT [PomBase:mah]
+synonym: "increased protein localization to mitotic SPB" EXACT [PomBase:mah]
+synonym: "increased protein localization to spindle pole body during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000939 ! abnormal protein localization to mitotic spindle pole body
+is_a: FYPO:0002770 ! decreased protein localization to spindle pole body
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902440
+created_by: midori
+creation_date: 2013-12-10T12:32:39Z
+
+[Term]
+id: FYPO:0002970
+name: increased protein localization to mitotic spindle pole body during metaphase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitotic spindle pole body is increased during metaphase." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to mitotic spindle pole body during metaphase" EXACT [PomBase:mah]
+synonym: "increased protein localization to mitotic SPB during metaphase" EXACT [PomBase:mah]
+synonym: "increased protein localization to mitotic spindle pole body during mitotic metaphase" EXACT [PomBase:mah]
+synonym: "increased protein localization to spindle pole body during metaphase during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000939 ! abnormal protein localization to mitotic spindle pole body
+is_a: FYPO:0002770 ! decreased protein localization to spindle pole body
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0000089
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902440
+created_by: midori
+creation_date: 2013-12-10T12:33:13Z
+
+[Term]
+id: FYPO:0002971
+name: decreased protein localization to mitotic spindle pole body during telophase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitotic spindle pole body is decreased during telophase." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to mitotic spindle pole body during telophase" EXACT [PomBase:mah]
+synonym: "decreased protein localization to mitotic SPB during telophase" EXACT [PomBase:mah]
+synonym: "decreased protein localization to mitotic spindle pole body during mitotic telophase" EXACT [PomBase:mah]
+synonym: "decreased protein localization to spindle pole body during telophase during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to mitotic spindle pole body during telophase" EXACT [PomBase:mah]
+is_a: FYPO:0000939 ! abnormal protein localization to mitotic spindle pole body
+is_a: FYPO:0002770 ! decreased protein localization to spindle pole body
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0000093
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902440
+created_by: midori
+creation_date: 2013-12-10T12:34:01Z
+
+[Term]
+id: FYPO:0002972
+name: increased ubiquitin ligase activity
+def: "A molecular function phenotype in which the observed rate of ubiquitin ligase activity is increased." [PomBase:mah]
+synonym: "increased ubiquitin-protein ligase activity" EXACT [GO:0004842]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001912 ! abnormal ubiquitin ligase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004842
+created_by: midori
+creation_date: 2013-12-10T12:35:59Z
+
+[Term]
+id: FYPO:0002973
+name: increased ubiquitin ligase activity during metaphase
+def: "A molecular function phenotype in which the observed rate of ubiquitin ligase activity is increased during mitotic metaphase." [PomBase:mah]
+synonym: "increased ubiquitin ligase activity during mitotic metaphase" EXACT [PomBase:mah]
+synonym: "increased ubiquitin-protein ligase activity during metaphase" EXACT [GO:0004842]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001912 ! abnormal ubiquitin ligase activity
+intersection_of: PATO:0002051
+intersection_of: during GO:0000089
+intersection_of: inheres_in GO:0004842
+created_by: midori
+creation_date: 2013-12-10T12:36:59Z
+
+[Term]
+id: FYPO:0002974
+name: normal origin recognition complex assembly
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which origin recognition complex (ORC) assembly is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal ORC assembly" EXACT [GO:1902561]
+synonym: "normal origin recognition complex assembly during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001215 ! normal protein complex assembly
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902561
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-12-10T12:42:55Z
+
+[Term]
+id: FYPO:0002975
+name: decreased RNA level during cellular response to hydroxyurea
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hydroxyurea is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased RNA accumulation during cellular response to hydroxyurea" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to HU" EXACT [PomBase:mah]
+synonym: "decreased RNA level during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased transcript level during cellular response to hydroxyurea" EXACT [PomBase:vw]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072711
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2013-12-10T14:52:35Z
+
+[Term]
+id: FYPO:0002976
+name: decreased protein localization to chromatin at MCB promoters during cellular response to hydroxyurea
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin at promoters that contain MCB sites is decreased during a cellular response to hydroxyurea." [PMID:24006488, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to chromatin at MCB promoters during cellular response to hydroxyurea" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromatin at MCB promoters during cellular response to HU" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromatin at MCB promoters during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromatin at MCB-containing promoters during cellular response to hydroxyurea" EXACT [PomBase:mah]
+synonym: "reduced protein localization to chromatin at MCB promoters during cellular response to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0072711
+intersection_of: inheres_in GO:0071168
+intersection_of: occurs_at SO:0001855
+created_by: midori
+creation_date: 2013-12-10T14:55:44Z
+
+[Term]
+id: FYPO:0002977
+name: increased protein localization to chromatin at MCB promoters during cellular response to hydroxyurea
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin at promoters that contain MCB sites is increased during a cellular response to hydroxyurea." [PMID:24006488, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to chromatin at MCB promoters during cellular response to hydroxyurea" EXACT [PomBase:mah]
+synonym: "increased protein localization to chromatin at MCB promoters during cellular response to HU" EXACT [PomBase:mah]
+synonym: "increased protein localization to chromatin at MCB promoters during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein localization to chromatin at MCB-containing promoters during cellular response to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0072711
+intersection_of: inheres_in GO:0071168
+intersection_of: occurs_at SO:0001855
+created_by: midori
+creation_date: 2013-12-10T14:58:33Z
+
+[Term]
+id: FYPO:0002978
+name: increased protein localization to chromatin during cellular response to methyl methanesulfonate
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin is increased during a cellular response to methyl methanesulfonate." [PMID:24006488, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to chromatin during cellular response to methyl methanesulfonate" EXACT [PomBase:mah]
+synonym: "increased protein localization to chromatin during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein localization to chromatin during cellular response to MMS" EXACT [PomBase:mah]
+is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0072703
+intersection_of: inheres_in GO:0071168
+created_by: midori
+creation_date: 2013-12-10T15:10:59Z
+
+[Term]
+id: FYPO:0002979
+name: normal protein localization to chromatin during cellular response to methyl methanesulfonate
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin is normal (i.e. indistinguishable from wild type) during a cellular response to methyl methanesulfonate." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to chromatin during cellular response to methyl methanesulfonate" EXACT [PomBase:mah]
+synonym: "normal protein localization to chromatin during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to chromatin during cellular response to MMS" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0072703
+intersection_of: inheres_in GO:0071168
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2013-12-10T15:12:28Z
+
+[Term]
+id: FYPO:0002980
+name: increased chromatin binding
+def: "A molecular function phenotype in which occurrence of chromatin binding by a gene product is increased. The affected gene product may be encoded by the mutated gene, or by a different gene, and may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
+is_a: FYPO:0002576 ! abnormal chromatin binding
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0003682
+created_by: midori
+creation_date: 2013-12-10T15:27:49Z
+
+[Term]
+id: FYPO:0002981
+name: increased chromatin binding during cellular response to methyl methanesulfonate
+def: "A molecular function phenotype in which occurrence of chromatin binding by a gene product is increased during a cellular response to methyl methanesulfonate. The affected gene product may be encoded by the mutated gene, or by a different gene, and may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
+synonym: "increased chromatin binding during cellular response to MMS" EXACT [PomBase:mah]
+is_a: FYPO:0002576 ! abnormal chromatin binding
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0003682
+intersection_of: happens_during GO:0072703
+created_by: midori
+creation_date: 2013-12-10T15:28:23Z
+
+[Term]
+id: FYPO:0002982
+name: abolished protein serine phosphorylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of serine residues in one or more specific proteins, or of specific protein sites, does not occur." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "abolished peptidyl-serine phosphorylation" EXACT [GO:0018105]
+synonym: "abolished protein serine phosphorylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein serine phosphorylation abolished" EXACT [PomBase:mah]
+is_a: FYPO:0002033 ! abolished protein phosphorylation during vegetative growth
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0018105
+created_by: midori
+creation_date: 2013-12-10T15:30:47Z
+
+[Term]
+id: FYPO:0002983
+name: abolished protein serine phosphorylation during cellular response to DNA damage
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of serine residues in one or more specific proteins, or of specific protein sites, does not occur during a cellular response to DNA damage." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "protein serine phosphorylation abolished during cellular response to DNA damage" EXACT [PomBase:mah]
+is_a: FYPO:0002982 ! abolished protein serine phosphorylation
+intersection_of: PATO:0001558
+intersection_of: during GO:0006974
+intersection_of: during GO:0072690
+intersection_of: towards GO:0018105
+created_by: midori
+creation_date: 2013-12-10T15:34:20Z
+
+[Term]
+id: FYPO:0002984
+name: normal RNA level during cellular response to methyl methanesulfonate
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to methyl methanesulfonate is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal mRNA level during cellular response to methyl methanesulfonate" NARROW [PomBase:mah]
+synonym: "normal protein level during cellular response to MMS" EXACT [PomBase:mah]
+synonym: "normal RNA accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0071703
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2013-12-10T15:37:29Z
+
+[Term]
+id: FYPO:0002985
+name: increased RNA level during cellular response to methyl methanesulfonate
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to methyl methanesulfonate is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased mRNA level during cellular response to methyl methanesulfonate" NARROW [PomBase:mah]
+synonym: "increased RNA accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
+synonym: "increased RNA level during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased RNA level during cellular response to MMS" EXACT [PomBase:mah]
+synonym: "increased transcript level during cellular response to methyl methanesulfonate" EXACT [PomBase:vw]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:0072703
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2013-12-10T15:38:51Z
+
+[Term]
+id: FYPO:0002986
+name: increased chromatin binding during cellular response to ionizing radiation
+def: "A molecular function phenotype in which occurrence of chromatin binding by a gene product is increased during a cellular response to ionizing radiation. The affected gene product may be encoded by the mutated gene, or by a different gene, and may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
+synonym: "increased chromatin binding during cellular response to IR" EXACT [PomBase:mah]
+is_a: FYPO:0002576 ! abnormal chromatin binding
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0071480
+intersection_of: inheres_in GO:0003682
+created_by: midori
+creation_date: 2013-12-10T15:40:22Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
