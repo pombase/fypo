@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 11:12:2013 16:55
+date: 17:12:2013 13:43
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -985,11 +985,12 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000074
 name: resistance to drug
 def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of a drug than normal." [PomBase:mah]
+comment: This term was made obsolete because 'drug' is not defined clearly. Search for a specific term for resistance to the substance used in the assay.
 synonym: "drug resistance" EXACT [PomBase:mah]
 synonym: "drug resistant" EXACT [PomBase:mah]
 synonym: "resistance to drug during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to drugs" EXACT [PomBase:mah]
-is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+is_obsolete: true
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -2683,12 +2684,9 @@ creation_date: 2011-04-13T03:41:10Z
 id: FYPO:0000211
 name: abnormal cellular response to drug
 def: "A chemical response phenotype observed in the vegetative growth phase of the life cycle in which the cellular response to a chemical is abnormal." [PomBase:mah]
+comment: This term was made obsolete because 'drug' is not defined clearly.
 synonym: "abnormal cellular response to drug during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001342 ! cellular response phenotype during vegetative growth
-intersection_of: PATO:0000001
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0042493
-intersection_of: qualifier PATO:0000460
+is_obsolete: true
 created_by: midori
 creation_date: 2011-04-13T03:41:10Z
 
@@ -3790,10 +3788,10 @@ creation_date: 2011-04-21T04:47:15Z
 id: FYPO:0000299
 name: inviable microcolony
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony formation" EXACT [PomBase:mah]
 synonym: "microcolony formation" BROAD [PomBase:mah]
-is_a: FYPO:0002061 ! inviable vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0001489 ! inviable vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2011-04-26T02:13:39Z
 
@@ -4014,8 +4012,8 @@ creation_date: 2011-04-27T01:13:41Z
 id: FYPO:0000317
 name: mixed population
 def: "A cell population phenotype in which a population contains cells with more than one phenotype, usually different morphologies." [PomBase:mah]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
-is_a: FYPO:0000003 ! cell population phenotype
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
+is_obsolete: true
 created_by: midori
 creation_date: 2011-04-27T01:32:52Z
 
@@ -4023,14 +4021,12 @@ creation_date: 2011-04-27T01:32:52Z
 id: FYPO:0000318
 name: inviable mixed population including long cells
 def: "A mixed population phenotype in which a microcolony forms, all cells in the population are inviable, some cells may divide, and some cells are longer than normal." [PomBase:jh, PomBase:mah]
-comment: Consider also annotating to 'elongated inviable vegetative cell' (FYPO:0001490) or one of its descendants, to describe the phenotype of the individual elongated cells in the population. Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including long cells" RELATED [PomBase:mah]
 synonym: "inviable microcolony including long cells" EXACT [PomBase:mah, PomBase:vw]
 synonym: "inviable mixed population including long vegetative cells" EXACT [PomBase:mah]
 synonym: "long low penetrance" RELATED [PomBase:jh, PomBase:vw]
-is_a: FYPO:0000299 ! inviable microcolony
-is_a: FYPO:0000317 ! mixed population
-relationship: includes_cells_with_phenotype FYPO:0000017 ! elongated cell
+is_obsolete: true
 created_by: midori
 creation_date: 2011-04-27T04:18:16Z
 
@@ -4038,13 +4034,10 @@ creation_date: 2011-04-27T04:18:16Z
 id: FYPO:0000319
 name: inviable mixed population including spores and divided germinated spores
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of spores and germinated spores most of which go on to divide once or twice. Some germinated spores remain septated and do not complete cell division." [PomBase:jh, PomBase:mah]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including spores and divided germinated spores" RELATED [PomBase:mah]
 synonym: "put cut" RELATED [PomBase:jh]
-is_a: FYPO:0000317 ! mixed population
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2011-04-27T04:20:40Z
 
@@ -4063,11 +4056,9 @@ creation_date: 2011-04-27T04:25:13Z
 id: FYPO:0000321
 name: inviable mixed population including spores and undivided germinated spores
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores and germinated spores that fail to divide." [PomBase:jh, PomBase:mah]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including spores and undivided germinated spores" RELATED [PomBase:mah]
-is_a: FYPO:0000317 ! mixed population
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000316 ! inviable after spore germination
+is_obsolete: true
 created_by: midori
 creation_date: 2011-04-27T04:32:25Z
 
@@ -5776,13 +5767,10 @@ creation_date: 2011-08-12T02:37:29Z
 id: FYPO:0000454
 name: inviable mixed population including long and short cells
 def: "A mixed population phenotype in which a microcolony forms, all cells in the population are inviable, and some cells are longer and other cells smaller than normal." [PomBase:mah]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including long and short cells" RELATED [PomBase:mah]
 synonym: "inviable mixed population including long and short vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0000299 ! inviable microcolony
-is_a: FYPO:0000317 ! mixed population
-relationship: includes_cells_with_phenotype FYPO:0000017 ! elongated cell
-relationship: includes_cells_with_phenotype FYPO:0000023 ! small cell
+is_obsolete: true
 created_by: midori
 creation_date: 2011-08-12T02:39:05Z
 
@@ -11946,11 +11934,8 @@ creation_date: 2012-03-29T03:47:40Z
 id: FYPO:0000908
 name: mixed population including viable and inviable cells
 def: "A mixed population phenotype in which some cells in a population are viable and others are inviable." [PomBase:mah]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
-is_a: FYPO:0000317 ! mixed population
-is_a: FYPO:0002057 ! cell population viability
-relationship: includes_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000124 ! viable cell
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
+is_obsolete: true
 created_by: midori
 creation_date: 2012-03-29T03:52:40Z
 
@@ -29176,11 +29161,11 @@ creation_date: 2013-05-09T10:27:14Z
 id: FYPO:0002147
 name: inviable vegetative cell population after spore germination
 def: "A cell population phenotype in which all vegetative cells arising from a population of germinated spores are inviable. The population may be mixed with respect to other phenotypes (e.g. whether cell division occurs)." [PomBase:mah]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
 synonym: "cell population inviable after spore germination" EXACT [PomBase:mah]
 synonym: "inviable germinated spore population" EXACT [PomBase:mah]
 synonym: "population of inviable germinated spores" EXACT [PomBase:vw]
-is_a: FYPO:0002061 ! inviable vegetative cell population
-relationship: comprises_cells_with_phenotype FYPO:0000316 ! inviable after spore germination
+is_obsolete: true
 created_by: midori
 creation_date: 2013-05-10T13:02:05Z
 
@@ -29558,11 +29543,10 @@ creation_date: 2013-06-04T12:52:23Z
 id: FYPO:0002178
 name: viable mixed population including long cells
 def: "A mixed population phenotype in which cells in the population are viable, and some cells are longer than normal." [PomBase:jh, PomBase:mah]
-comment: Consider also annotating to 'elongated viable vegetative cell' (FYPO:0001492) or one of its descendants, to describe the phenotype of the individual elongated cells in the population. Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "long low penetrance" RELATED [PomBase:jh, PomBase:vw]
 synonym: "non-essential; mixed population including long cells" RELATED [PomBase:mah]
-is_a: FYPO:0000317 ! mixed population
-relationship: includes_cells_with_phenotype FYPO:0000017 ! elongated cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T14:10:37Z
 
@@ -29570,13 +29554,10 @@ creation_date: 2013-06-04T14:10:37Z
 id: FYPO:0002179
 name: inviable mixed population, vegetative cells with abnormal morphology, including long cells
 def: "A mixed population phenotype in which a microcolony forms, all cells in the population are inviable and have abnormal morphology (i.e. size, shape, or structure), some cells may divide, and some cells are longer than normal." [PomBase:jh, PomBase:mah]
-comment: Consider also annotating to 'elongated inviable vegetative cell' (FYPO:0001490) or one of its descendants, to describe the phenotype of the individual elongated cells in the population. Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population of vegetative cells with abnormal morphology, including long cells" RELATED [PomBase:mah]
 synonym: "inviable microcolony of vegetative cells with abnormal morphology, including long cells" EXACT [PomBase:mah, PomBase:vw]
-is_a: FYPO:0000317 ! mixed population
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0001118 ! abnormal vegetative cell morphology
-relationship: includes_cells_with_phenotype FYPO:0001122 ! elongated vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T15:30:24Z
 
@@ -29584,11 +29565,9 @@ creation_date: 2013-06-04T15:30:24Z
 id: FYPO:0002180
 name: viable mixed vegetative cell population including cell with normal morphology and long cells
 def: "A mixed population phenotype in which cells in the population are viable, some cells are longer than normal, and the rest of the cells are of normal morphology (i.e. size, shape, and structure)." [PomBase:jh, PomBase:mah]
-comment: Consider also annotating to 'elongated viable vegetative cell' (FYPO:0001492) or one of its descendants, to describe the phenotype of the individual elongated cells in the population. Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "long low penetrance" RELATED [PomBase:jh, PomBase:vw]
-is_a: FYPO:0002178 ! viable mixed population including long cells
-relationship: includes_cells_with_phenotype FYPO:0001122 ! elongated vegetative cell
-relationship: includes_cells_with_phenotype FYPO:0001315 ! normal vegetative cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T15:36:23Z
 
@@ -29596,13 +29575,10 @@ creation_date: 2013-06-04T15:36:23Z
 id: FYPO:0002181
 name: inviable mixed population including germinated spores and spheroid cells
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of germinated spores and spheroid vegetative cells. The spheroid cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including germinated spores and spheroid cells" RELATED [PomBase:mah]
 synonym: "inviable mixed population including germinated spores and rounded cells" EXACT [PomBase:mah]
-is_a: FYPO:0002432 ! inviable mixed population including germinated spores and cells with abnormal shape
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T15:53:26Z
 
@@ -29610,13 +29586,10 @@ creation_date: 2013-06-04T15:53:26Z
 id: FYPO:0002182
 name: inviable mixed population including spores, germinated spores and spheroid cells
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores, germinated spores and spheroid vegetative cells. The spheroid cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including spores, germinated spores and spheroid cells" RELATED [PomBase:mah]
 synonym: "inviable mixed population including spores, germinated spores and rounded cells" EXACT [PomBase:mah]
-is_a: FYPO:0002466 ! inviable mixed population including spores, germinated spores and cells with abnormal morphology
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0002302 ! inviable after spore germination, multiple cell divisions, spheroid cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T16:11:59Z
 
@@ -29624,12 +29597,9 @@ creation_date: 2013-06-04T16:11:59Z
 id: FYPO:0002183
 name: inviable mixed population including spores, germinated spores and cells with normal morphology
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores, germinated spores and cells with normal morphology (i.e. size, shape, and structure). The cells with normal morphology arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including spores, germinated spores and cells with normal morphology" RELATED [PomBase:mah]
-is_a: FYPO:0000317 ! mixed population
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T16:13:03Z
 
@@ -29637,14 +29607,11 @@ creation_date: 2013-06-04T16:13:03Z
 id: FYPO:0002184
 name: inviable mixed population including spores, germinated spores and bottle-shaped cells
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores, germinated spores and bottle-shaped vegetative cells. The bottle-shaped cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including spores, germinated spores and bottle-shaped cells" RELATED [PomBase:mah]
 synonym: "inviable mixed population including spores, germinated spores and bottle/skittle cells" EXACT [PomBase:mah]
 synonym: "inviable mixed population including spores, germinated spores and skittle-shaped cells" EXACT [PomBase:mah]
-is_a: FYPO:0002466 ! inviable mixed population including spores, germinated spores and cells with abnormal morphology
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T16:20:17Z
 
@@ -29652,14 +29619,11 @@ creation_date: 2013-06-04T16:20:17Z
 id: FYPO:0002185
 name: inviable mixed population including germinated spores and bottle-shaped cells
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of germinated spores and bottle-shaped vegetative cells. The bottle-shaped cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including germinated spores and bottle-shaped cells" RELATED [PomBase:mah]
 synonym: "inviable mixed population including germinated spores and bottle/skittle cells" RELATED [PomBase:mah]
 synonym: "inviable mixed population including germinated spores and skittle-shaped cells" EXACT [PomBase:mah]
-is_a: FYPO:0002432 ! inviable mixed population including germinated spores and cells with abnormal shape
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T16:22:21Z
 
@@ -29667,9 +29631,9 @@ creation_date: 2013-06-04T16:22:21Z
 id: FYPO:0002186
 name: inviable microcolony, small cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that have a lower volume than normal. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, small vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0000951 ! inviable small vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T16:42:49Z
 
@@ -29693,10 +29657,10 @@ creation_date: 2013-06-04T17:02:22Z
 id: FYPO:0002188
 name: inviable microcolony, normal volume spheroid cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that have a normal volume and spheroid shape. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, normal volume rounded cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, normal volume spheroid vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0002187 ! inviable normal volume spheroid vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T17:03:55Z
 
@@ -29767,10 +29731,10 @@ creation_date: 2013-06-04T17:09:31Z
 id: FYPO:0002192
 name: inviable microcolony, normal volume septated spheroid cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that have a normal volume and spheroid shape, and contain one or more septa each. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, normal volume septated rounded cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, normal volume septated spheroid vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002188 ! inviable microcolony, normal volume spheroid cells
-relationship: comprises_cells_with_phenotype FYPO:0002193 ! inviable normal volume septated spheroid vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T17:27:04Z
 
@@ -29795,14 +29759,14 @@ creation_date: 2013-06-04T17:28:33Z
 id: FYPO:0002194
 name: inviable microcolony, swollen septated spheroid cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that have a larger volume than normal and spheroid shape, and contain one or more septa each. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, enlarged septated spheroid vegetative cells" RELATED [PomBase:mah]
 synonym: "inviable microcolony, septated large spheroid vegetative cells" RELATED [PomBase:vw]
 synonym: "inviable microcolony, septated, spheroid vegetative cells with increased cell size" RELATED [PomBase:vw]
 synonym: "inviable microcolony, septated, spheroid vegetative cells with increased cell volume" EXACT [PomBase:mah]
 synonym: "inviable microcolony, swollen septated rounded cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, swollen septated spheroid vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0002191 ! inviable swollen septated spheroid vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-04T17:31:20Z
 
@@ -29916,9 +29880,9 @@ creation_date: 2013-06-05T13:27:13Z
 id: FYPO:0002203
 name: inviable microcolony, stubby cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells in which the cell diameter is larger than normal and the cell length is shorter than normal. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, stubby vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0002107 ! inviable stubby vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-05T13:34:24Z
 
@@ -29926,9 +29890,9 @@ creation_date: 2013-06-05T13:34:24Z
 id: FYPO:0002204
 name: inviable microcolony, stubby septated cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that each contain one or more septa, and in which the cell diameter is larger than normal and the cell length is shorter than normal. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, stubby septated vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002203 ! inviable microcolony, stubby cells
-relationship: comprises_cells_with_phenotype FYPO:0002200 ! inviable stubby septated vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-05T13:36:02Z
 
@@ -30023,11 +29987,11 @@ creation_date: 2013-06-05T13:59:40Z
 id: FYPO:0002210
 name: inviable microcolony, bottle-shaped cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that taper at one end to a diameter smaller than the other. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, bottle-shaped vegetative cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, bottle/skittle cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, skittle-shaped cells" EXACT [PomBase:mah]
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0002111 ! inviable bottle-shaped vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-05T14:18:25Z
 
@@ -30207,10 +30171,10 @@ creation_date: 2013-06-05T16:41:00Z
 id: FYPO:0002225
 name: inviable microcolony, elongated cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that are longer than normal. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, elongated vegetative cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, long cells" EXACT [PomBase:mah]
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0001490 ! inviable elongated vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-05T16:45:49Z
 
@@ -30218,9 +30182,8 @@ creation_date: 2013-06-05T16:45:49Z
 id: FYPO:0002226
 name: inviable microcolony, abnormal cell shape, normal cell size
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells in which cell shape is altered and cell size remains normal. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0001511 ! inviable vegetative cell, abnormal cell shape, normal cell size
-relationship: comprises_cells_with_phenotype FYPO:0002451 ! inviable vegetative cell with abnormal cell shape
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-05T16:52:35Z
 
@@ -30297,9 +30260,9 @@ creation_date: 2013-06-06T14:15:53Z
 id: FYPO:0002231
 name: inviable microcolony, curved cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that are curved along the long axis. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, curved vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0002113 ! inviable curved vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-06T14:18:49Z
 
@@ -30307,13 +30270,13 @@ creation_date: 2013-06-06T14:18:49Z
 id: FYPO:0002232
 name: inviable microcolony, swollen curved cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that have a larger volume than normal and are curved along the long axis. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, curved cells with increased cell size" RELATED [PomBase:vw]
 synonym: "inviable microcolony, curved cells with increased cell volume" EXACT [PomBase:mah]
 synonym: "inviable microcolony, enlarged curved cells" RELATED [PomBase:mah]
 synonym: "inviable microcolony, large curved cells" RELATED [PomBase:vw]
 synonym: "inviable microcolony, swollen curved vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002231 ! inviable microcolony, curved cells
-relationship: comprises_cells_with_phenotype FYPO:0002230 ! inviable swollen curved vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-06T14:19:36Z
 
@@ -30873,9 +30836,9 @@ creation_date: 2013-06-12T15:00:33Z
 id: FYPO:0002272
 name: inviable microcolony, abnormal cell morphology
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that have abnormal morphology (i.e. size, shape, or structure). Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, vegetative cells with abnormal morphology" EXACT [PomBase:mah]
-is_a: FYPO:0000299 ! inviable microcolony
-relationship: comprises_cells_with_phenotype FYPO:0001118 ! abnormal vegetative cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-12T15:37:46Z
 
@@ -31161,9 +31124,8 @@ creation_date: 2013-06-13T14:56:49Z
 id: FYPO:0002293
 name: viable mixed population including curved cells
 def: "A mixed population phenotype in which cells in the population are viable, and some cells are curved along the long axis." [PomBase:jh, PomBase:mah]
-comment: Consider also annotating to 'elongated viable vegetative cell' (FYPO:0001492) or one of its descendants, to describe the phenotype of the individual elongated cells in the population. Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
-is_a: FYPO:0000317 ! mixed population
-relationship: includes_cells_with_phenotype FYPO:0000017 ! elongated cell
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-13T15:02:16Z
 
@@ -31226,12 +31188,9 @@ creation_date: 2013-06-13T16:13:52Z
 id: FYPO:0002298
 name: inviable mixed population including divided and undivided germinated spores, with elongated germ tubes
 def: "A mixed population phenotype in which all cells in a population are inviable germinated spores with elongated germ tubes, and in which some cells divide once and others do not divide. In the cells that divide once, an inviable cell forms from the growing end of the germ tube, but does not divide further." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including divided and undivided germinated spores, with elongated germ tubes" RELATED [PomBase:mah]
-is_a: FYPO:0002426 ! inviable mixed population including divided and undivided germinated spores
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-20T11:41:51Z
 
@@ -31239,12 +31198,9 @@ creation_date: 2013-06-20T11:41:51Z
 id: FYPO:0002299
 name: inviable mixed population including divided and undivided germinated spores, with curved germ tubes
 def: "A mixed population phenotype in which all cells in a population are inviable germinated spores with curved germ tubes, and in which some cells divide once and others do not divide. In the cells that divide once, an inviable cell forms from the growing end of the germ tube, but does not divide further." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including divided and undivided germinated spores, with curved germ tubes" RELATED [PomBase:mah]
-is_a: FYPO:0002426 ! inviable mixed population including divided and undivided germinated spores
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-20T11:44:24Z
 
@@ -31252,13 +31208,10 @@ creation_date: 2013-06-20T11:44:24Z
 id: FYPO:0002300
 name: inviable mixed population including germinated spores with elongated germ tubes and elongated cells
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of germinated spores with elongated germ tubes and elongated vegetative cells. The elongated cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including germinated spores with elongated germ tubes and elongated cells" RELATED [PomBase:mah]
 synonym: "inviable mixed population including germinated spores with elongated germ tubes and long cells" EXACT [PomBase:mah]
-is_a: FYPO:0002432 ! inviable mixed population including germinated spores and cells with abnormal shape
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-20T11:57:57Z
 
@@ -31266,9 +31219,9 @@ creation_date: 2013-06-20T11:57:57Z
 id: FYPO:0002301
 name: inviable microcolony, curved septated cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that are curved along the long axis and contain one or more septa. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, curved septated vegetative cells" EXACT [PomBase:mah]
-is_a: FYPO:0002231 ! inviable microcolony, curved cells
-relationship: comprises_cells_with_phenotype FYPO:0002282 ! inviable curved septated vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-06-20T13:28:56Z
 
@@ -32264,14 +32217,10 @@ creation_date: 2013-07-25T12:43:03Z
 id: FYPO:0002371
 name: inviable mixed population including spores, undivided germinated spores and divided germinated spores
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of spores, undivided germinated spores, and germinated spores that go on to divide once or twice. Some germinated spores remain septated and do not complete cell division." [PomBase:jh, PomBase:mah]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including spores in divided germinated spores, and divided germinated spores" RELATED [PomBase:mah]
 synonym: "inviable mixed population including spores and undivided and divided germinated spores" EXACT [PomBase:vw]
-is_a: FYPO:0000319 ! inviable mixed population including spores and divided germinated spores
-is_a: FYPO:0000321 ! inviable mixed population including spores and undivided germinated spores
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-07-25T13:32:16Z
 
@@ -32958,14 +32907,13 @@ creation_date: 2013-07-31T16:16:47Z
 id: FYPO:0002416
 name: inviable microcolony, swollen cells, abnormal cell shape
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells in which cell shape is altered and cell volume is larger than normal. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolonies swollen misshapen cells" RELATED [PomBase:vw]
 synonym: "inviable microcolony, enlarged vegetative cells with abnormal cell shape" RELATED [PomBase:mah]
 synonym: "inviable microcolony, large vegetative cells with abnormal cell shape" RELATED [PomBase:vw]
 synonym: "inviable microcolony, vegetative cells with increased cell size and abnormal cell shape" RELATED [PomBase:vw]
 synonym: "inviable microcolony, vegetative cells with increased cell volume and abnormal cell shape" EXACT [PomBase:mah]
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0001511 ! inviable vegetative cell, abnormal cell shape, normal cell size
-relationship: comprises_cells_with_phenotype FYPO:0002451 ! inviable vegetative cell with abnormal cell shape
+is_obsolete: true
 created_by: midori
 creation_date: 2013-07-31T16:24:46Z
 
@@ -32973,12 +32921,9 @@ creation_date: 2013-07-31T16:24:46Z
 id: FYPO:0002417
 name: inviable mixed population including spores and germinated spores with elongated germ tubes
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores and germinated spores with elongated germ tubes. The elongated cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including spores and germinated spores with elongated germ tubes" RELATED [PomBase:mah]
-is_a: FYPO:0000317 ! mixed population
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000314 ! inviable after spore germination with elongated germ tube
+is_obsolete: true
 created_by: midori
 creation_date: 2013-07-31T16:27:14Z
 
@@ -32986,13 +32931,10 @@ creation_date: 2013-07-31T16:27:14Z
 id: FYPO:0002418
 name: inviable mixed population including spores, germinated spores and elongated cells
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores, germinated spores and elongated vegetative cells. The spheroid cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including spores, germinated spores and elongated cells" RELATED [PomBase:mah]
 synonym: "inviable mixed population including spores, germinated spores and long cells" EXACT [PomBase:mah]
-is_a: FYPO:0002466 ! inviable mixed population including spores, germinated spores and cells with abnormal morphology
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0002262 ! inviable after spore germination, multiple cell divisions, elongated cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-07-31T16:33:44Z
 
@@ -33089,12 +33031,9 @@ creation_date: 2013-08-01T17:15:08Z
 id: FYPO:0002426
 name: inviable mixed population including divided and undivided germinated spores
 def: "A mixed population phenotype in which all cells in a population are inviable germinated spores, and in which some cells divide once and others do not divide. In the cells that divide once, an inviable cell forms from the growing end of the germ tube, but does not divide further." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including divided and undivided germinated spores" RELATED [PomBase:mah]
-is_a: FYPO:0000317 ! mixed population
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-08-02T14:13:03Z
 
@@ -33115,12 +33054,9 @@ creation_date: 2013-08-02T14:15:29Z
 id: FYPO:0002428
 name: inviable mixed population including germinated spores with elongated germ tubes and cells with normal morphology
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of germinated spores with elongated germ tubes and vegetative cells of normal size and shape. The vegetative cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including germinated spores with elongated germ tubes and cells with normal morphology" RELATED [PomBase:mah]
-is_a: FYPO:0000317 ! mixed population
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0000320 ! inviable after spore germination, single cell division, normal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-08-02T15:25:58Z
 
@@ -33149,10 +33085,9 @@ creation_date: 2013-08-02T16:39:51Z
 id: FYPO:0002431
 name: inviable mixed population including germinated spores with abnormal shape and cells with abnormal shape
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of germinated spores of abnormal shape and vegetative cells of abnormal shape. The vegetative cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including germinated spores with abnormal shape and cells with abnormal shape" RELATED [PomBase:mah]
-is_a: FYPO:0002432 ! inviable mixed population including germinated spores and cells with abnormal shape
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-08-06T12:00:58Z
 
@@ -33160,10 +33095,9 @@ creation_date: 2013-08-06T12:00:58Z
 id: FYPO:0002432
 name: inviable mixed population including germinated spores and cells with abnormal shape
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of germinated spores and vegetative cells of abnormal shape. The vegetative cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including germinated spores and cells with abnormal shape" RELATED [PomBase:mah]
-is_a: FYPO:0000317 ! mixed population
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-08-06T12:02:33Z
 
@@ -33450,9 +33384,9 @@ creation_date: 2013-08-06T14:42:46Z
 id: FYPO:0002453
 name: inviable microcolony, septated cells with abnormal morphology
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that have abnormal morphology (i.e. size, shape, or structure) and contain one or more septa apiece. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, septated vegetative cells with abnormal morphology" EXACT [PomBase:mah]
-is_a: FYPO:0002272 ! inviable microcolony, abnormal cell morphology
-relationship: comprises_cells_with_phenotype FYPO:0002452 ! inviable septated vegetative cell with abnormal cell morphology
+is_obsolete: true
 created_by: midori
 creation_date: 2013-08-06T14:44:38Z
 
@@ -33634,11 +33568,10 @@ creation_date: 2013-08-06T15:55:34Z
 id: FYPO:0002464
 name: inviable microcolony, branched, curved, elongated cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that are curved along the long axis, longer than normal, and branched (and septated). Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, branched, curved, elongated, septated vegetative cells" EXACT [PomBase:vw]
 synonym: "inviable microcolony, curved, branched, elongated cells " EXACT [PomBase:vw]
-is_a: FYPO:0002225 ! inviable microcolony, elongated cells
-is_a: FYPO:0002231 ! inviable microcolony, curved cells
-relationship: comprises_cells_with_phenotype FYPO:0002463 ! inviable branched, curved, elongated vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-08-06T16:01:01Z
 
@@ -33658,12 +33591,9 @@ creation_date: 2013-08-06T16:15:29Z
 id: FYPO:0002466
 name: inviable mixed population including spores, germinated spores and cells with abnormal morphology
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores, germinated spores and cells with abnormal morphology (i.e. size, shape, or structure). The cells with normal morphology arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including spores, germinated spores and cells with abnormal morphology" RELATED [PomBase:mah]
-is_a: FYPO:0000317 ! mixed population
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000005 ! abnormal cell morphology
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
+is_obsolete: true
 created_by: midori
 creation_date: 2013-08-06T16:17:57Z
 
@@ -33700,12 +33630,11 @@ creation_date: 2013-08-08T11:06:30Z
 id: FYPO:0002469
 name: inviable microcolony, elongated bottle-shaped cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells that are longer than normal and taper at one end to a diameter smaller than the other. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, elongated bottle-shaped vegetative cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, elongated bottle/skittle cells" EXACT [PomBase:mah]
 synonym: "inviable microcolony, elongated skittle-shaped cells" EXACT [PomBase:mah]
-is_a: FYPO:0002210 ! inviable microcolony, bottle-shaped cells
-is_a: FYPO:0002225 ! inviable microcolony, elongated cells
-relationship: comprises_cells_with_phenotype FYPO:0002242 ! inviable elongated bottle-shaped vegetative cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-08-08T11:17:14Z
 
@@ -38854,13 +38783,11 @@ creation_date: 2013-11-05T15:59:55Z
 id: FYPO:0002844
 name: inviable microcolony, swollen elongated septated cells
 def: "A cell population phenotype in which a cell undergoes one or a few rounds of cell division before cells die, resulting in the formation a colony that contains only a few inviable cells which are septated, longer than normal, and have a larger than normal cell volume. Up to 6 rounds of cell division (generating 64 cells) may be observed, but 3 divisions or fewer is more typical." [PomBase:mah, PomBase:vw]
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype, with penetrance extensions where needed.
 synonym: "inviable microcolony, enlarged long septated vegetative cells" RELATED [PomBase:mah]
 synonym: "inviable microcolony, large elongated septated vegetative cells" RELATED [PomBase:vw]
 synonym: "inviable microcolony, swollen elongated septated vegetative cells" EXACT [PomBase:vw]
-is_a: FYPO:0002225 ! inviable microcolony, elongated cells
-is_a: FYPO:0002416 ! inviable microcolony, swollen cells, abnormal cell shape
-is_a: FYPO:0002453 ! inviable microcolony, septated cells with abnormal morphology
-relationship: comprises_cells_with_phenotype FYPO:0002845 ! inviable swollen elongated septated cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-11-05T16:02:59Z
 
@@ -38888,12 +38815,9 @@ creation_date: 2013-11-05T16:06:04Z
 id: FYPO:0002846
 name: inviable mixed population including spores, germinated spores and small cells
 def: "A mixed population phenotype in which all cells in a population are inviable, and the population includes a mixture of ungerminated spores, germinated spores and small vegetative cells. The spheroid cells arise from division of some of the germinated spores, and may form a microcolony of up to 64 cells." [PomBase:mah, PomBase:vw]
-comment: Note that this term is temporary and will eventually be made obsolete, because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified. This term is maintained as a stopgap until querying of annotations with extensions that represent penetrance, and combinations thereof, improves.
+comment: This term was made obsolete because a "mixed population" observation would be better represented as two or more separate phenotype annotations, each with penetrance specified.
 synonym: "essential; mixed population including spores, germinated spores and small cells" RELATED [PomBase:mah]
-is_a: FYPO:0002466 ! inviable mixed population including spores, germinated spores and cells with abnormal morphology
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
-relationship: includes_cells_with_phenotype FYPO:0000306 ! abolished spore germination
-relationship: includes_cells_with_phenotype FYPO:0002302 ! inviable after spore germination, multiple cell divisions, spheroid cell
+is_obsolete: true
 created_by: midori
 creation_date: 2013-11-05T16:59:57Z
 
