@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 08:01:2014 15:55
+date: 15:01:2014 17:11
 saved-by: midori
-auto-generated-by: OBO-Edit 2.3
+auto-generated-by: OBO-Edit 2.3-beta7
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
@@ -448,15 +448,16 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000032
 name: abnormal cytokinesis
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytokinesis is abnormal. Cytokinesis is part of the cell cycle and results in the division of the cytoplasm of a cell and its separation into two daughter cells." [GO:0000910, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytokinesis is abnormal. Cytokinesis is part of the cell cycle and results in the division of the cytoplasm of a cell and its separation into two daughter cells." [GO:0000281, PomBase:mah]
 synonym: "abnormal cell cycle cytokinesis" EXACT [PomBase:mah]
 synonym: "abnormal cytokinesis during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cytokinesis" EXACT [PomBase:mah]
 synonym: "cytokinesis defects" EXACT [PomBase:mah]
 synonym: "cytokinesis: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000910
+intersection_of: inheres_in GO:0000281
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
@@ -464,17 +465,17 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000033
 name: abnormal contractile ring localization
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which contractile ring localization is abnormal. Contractile ring localization is the part of cytokinesis in which contractile ring is assembled and/or maintained in a specific location." [GO:0032187, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which contractile ring localization is abnormal. Contractile ring localization is the part of cytokinesis in which contractile ring is assembled and/or maintained in a specific location." [GO:1902405, PomBase:mah]
 comment: Note that the location of the contractile ring is determined by the location of the cell division site, so an abnormality in cell division site determination can be inferred from this phenotype. Consider also annotating to 'abnormal septum site selection' (FYPO:0002154) because if the contractile ring forms in an abnormal location, the septum will also do so. The positions of both the contractile ring and the septum are determined by the processes that select the site of cell division.
 synonym: "abnormal contractile ring localisation" EXACT [PomBase:mah]
 synonym: "abnormal contractile ring localization during vegetative growth" EXACT [PomBase:mah]
-synonym: "abnormal contractile ring localization involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "abnormal contractile ring localization involved in mitotic cytokinesis" EXACT [GO:1902405, PomBase:mah]
 synonym: "cytokinesis defects, misplaced contractile ring" EXACT [PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
 is_a: FYPO:0001337 ! localization phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0032187
+intersection_of: inheres_in GO:1902405
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
@@ -1217,6 +1218,8 @@ name: sensitive to benomyl
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to benomyl. Cells stop growing (and may die) at a concentration of benomyl that allows wild type cells to grow." [PomBase:mah]
 synonym: "hypersensitive to benomyl" EXACT [PomBase:mah]
 synonym: "sensitive to benomyl during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to MBC" EXACT [PMID:6887244]
+synonym: "sensitive to methyl benzimidazole-2-yl-carbamate" EXACT [PMID:6887244]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
@@ -1403,11 +1406,11 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000112
 name: sensitive to sorbitol
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to sorbitol. Cells stop growing (and may die) at a concentration of sorbitol that allows wild type cells to grow." [PomBase:mah]
-comment: Also consider annotating to 'sensitive to osmotic stress' (FYPO:0000270).
 synonym: "hypersensitive to sorbitol" EXACT [PomBase:mah]
 synonym: "sensitive to glucitol" EXACT [CHEBI:30911, PomBase:mah]
 synonym: "sensitive to sorbitol during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+is_a: FYPO:0002811 ! sensitive to non-ionic osmotic stress
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
 
@@ -1462,7 +1465,8 @@ id: FYPO:0000117
 name: abnormal septation
 alt_id: FYPO:0000170
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which septation is abnormal." [PomBase:mah]
-synonym: "abnormal barrier septum formation involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "abnormal barrier septum formation involved in mitotic cytokinesis" EXACT [PomBase:mah]
+synonym: "abnormal mitotic barrier septum assembly" EXACT [GO:1902411, PomBase:mah]
 synonym: "abnormal septation during vegetative growth" EXACT [PomBase:mah]
 synonym: "septation defects" EXACT [PomBase:mah]
 synonym: "septum formation: abnormal" EXACT [SGD:phenotype_annotation]
@@ -1470,7 +1474,7 @@ is_a: FYPO:0000032 ! abnormal cytokinesis
 is_a: FYPO:0001354 ! abnormal cellular component assembly during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000917
+intersection_of: inheres_in GO:1902411
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
@@ -2102,12 +2106,13 @@ creation_date: 2011-04-13T03:34:54Z
 [Term]
 id: FYPO:0000164
 name: abnormal cytokinetic cell separation
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytokinetic cell separation is abnormal. Cell separation is the process of physically separating progeny cells during cytokinesis, and involves enzymatic digestion of septum components." [GO:0000920, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytokinetic cell separation is abnormal. Cell separation is the process of physically separating progeny cells during cytokinesis, and involves enzymatic digestion of septum components." [GO:1902409, PomBase:mah]
 synonym: "abnormal cytokinetic cell separation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cytokinetic cell separation" EXACT [GO:1902409, PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000920
+intersection_of: inheres_in GO:1902409
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-13T03:34:54Z
@@ -2594,10 +2599,11 @@ id: FYPO:0000202
 name: abnormal regulation of cytokinetic cell separation
 def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which regulation of cytokinetic cell separation is abnormal." [PomBase:mah]
 synonym: "abnormal regulation of cytokinetic cell separation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal regulation of mitotic cytokinetic cell separation" EXACT [GO:1902467, PomBase:mah]
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0010590
+intersection_of: inheres_in GO:1902467
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-13T03:41:10Z
@@ -3436,6 +3442,7 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000272
 name: abolished septum formation
 def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell fails to form a septum." [PMID:9649519, PomBase:mah]
+synonym: "abolished mitotic barrier septum assembly" EXACT [GO:1902411, PomBase:mah]
 synonym: "septum formation abolished" EXACT [PomBase:mah]
 synonym: "septum formation abolished during vegetative growth" EXACT [PomBase:mah]
 synonym: "septum formation: absent" EXACT [SGD:phenotype_annotation]
@@ -3445,7 +3452,7 @@ is_a: FYPO:0000186 ! abnormal cell division
 is_a: FYPO:0000417 ! abolished cytokinesis
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
-intersection_of: towards GO:0000917
+intersection_of: towards GO:1902411
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -4883,7 +4890,7 @@ creation_date: 2011-07-14T06:06:09Z
 [Term]
 id: FYPO:0000383
 name: delayed autophagy
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which autophagy is delayed." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which autophagy takes place later than normal." [PomBase:mah]
 synonym: "autophagy: delayed" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000163 ! abnormal autophagy
 intersection_of: PATO:0000502
@@ -5310,10 +5317,11 @@ synonym: "absent cytokinesis" EXACT [PomBase:mah]
 synonym: "cytokinesis abolished" EXACT [PomBase:mah]
 synonym: "cytokinesis abolished during vegetative growth" EXACT [PomBase:mah]
 synonym: "cytokinesis: absent" EXACT [SGD:phenotype_annotation]
+synonym: "mitotic cytokinesis abolished" EXACT [GO:0000281, PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
-intersection_of: towards GO:0000910
+intersection_of: towards GO:0000281
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
@@ -5323,11 +5331,12 @@ name: decreased cytokinesis
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of cell cycle cytokinesis is decreased." [PomBase:mah]
 synonym: "cytokinesis: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "decreased cytokinesis during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased mitotic cytokinesis" EXACT [GO:0000281, PomBase:mah]
 synonym: "reduced cytokinesis" EXACT [PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000910
+intersection_of: inheres_in GO:0000281
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
@@ -5337,24 +5346,26 @@ name: decreased rate of cytokinesis
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the rate of cell cycle cytokinesis is decreased." [PomBase:mah]
 synonym: "cytokinesis: decreased rate" EXACT [SGD:phenotype_annotation]
 synonym: "decreased rate of cytokinesis during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased rate of mitotic cytokinesis" EXACT [GO:0000281, PomBase:mah]
 synonym: "reduced rate of cytokinesis" EXACT [PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
 intersection_of: PATO:0000911
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000910
+intersection_of: inheres_in GO:0000281
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000420
 name: delayed cytokinesis
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cell cycle cytokinesis is delayed." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cell cycle cytokinesis takes place later than normal." [PomBase:mah]
 synonym: "cytokinesis: delayed" EXACT [SGD:phenotype_annotation]
 synonym: "delayed cytokinesis during vegetative growth" EXACT [PomBase:mah]
+synonym: "delayed mitotic cytokinesis" EXACT [GO:0000281, PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000910
+intersection_of: inheres_in GO:0000281
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
@@ -5406,7 +5417,7 @@ creation_date: 2011-07-14T06:45:37Z
 [Term]
 id: FYPO:0000424
 name: delayed endocytosis
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which endocytosis is delayed." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which endocytosis takes place later than normal." [PomBase:mah]
 synonym: "delayed actin-mediated endocytosis" EXACT [PomBase:vw]
 synonym: "delayed endocytosis during vegetative growth" EXACT [PomBase:mah]
 synonym: "endocytosis: delayed" EXACT [SGD:phenotype_annotation]
@@ -5476,7 +5487,7 @@ creation_date: 2011-07-14T06:45:37Z
 [Term]
 id: FYPO:0000429
 name: delayed G0 to G1 transition
-def: "A cellular process phenotype in which the G0 to G1 transition is delayed." [PomBase:mah]
+def: "A cellular process phenotype in which the G0 to G1 transition takes place later than normal." [PomBase:mah]
 synonym: "delayed G0/G1 transition" EXACT [PomBase:mah]
 synonym: "slow cell population growth following nitrogen starvation" RELATED [PomBase:al]
 is_a: FYPO:0000628 ! abnormal cellular process
@@ -6045,7 +6056,7 @@ creation_date: 2011-08-15T10:19:32Z
 [Term]
 id: FYPO:0000477
 name: delayed meiosis
-def: "A cellular process phenotype in which meiosis is delayed." [PomBase:mah]
+def: "A cellular process phenotype in which meiosis takes place later than normal." [PomBase:mah]
 synonym: "meiosis: delayed" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000051 ! abnormal meiosis
 intersection_of: PATO:0000502
@@ -6146,7 +6157,7 @@ creation_date: 2011-08-15T10:19:32Z
 [Term]
 id: FYPO:0000486
 name: delayed meiotic recombination
-def: "A cellular process phenotype in which reciprocal meiotic recombination is delayed." [PomBase:mah]
+def: "A cellular process phenotype in which reciprocal meiotic recombination takes place later than normal." [PomBase:mah]
 synonym: "meiotic recombination: delayed" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000008 ! abnormal meiotic recombination
 intersection_of: PATO:0000502
@@ -6510,7 +6521,7 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000513
 name: delayed nuclear fusion during mating
-def: "A cellular process phenotype in which karyogamy involved in conjugation with cellular fusion is delayed." [PomBase:mah]
+def: "A cellular process phenotype in which karyogamy involved in conjugation with cellular fusion takes place later than normal." [PomBase:mah]
 synonym: "delayed karyogamy" EXACT [PomBase:mah]
 synonym: "delayed karyogamy involved in conjugation with cellular fusion" EXACT [PomBase:mah]
 synonym: "nuclear fusion during mating: delayed" EXACT [SGD:phenotype_annotation]
@@ -6726,7 +6737,7 @@ creation_date: 2011-08-15T11:08:30Z
 [Term]
 id: FYPO:0000528
 name: delayed peroxisome degradation
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which pexophagy is delayed." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which pexophagy takes place later than normal." [PomBase:mah]
 synonym: "delayed pexophagy" EXACT [PomBase:mah]
 synonym: "pexophagy: delayed" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000383 ! delayed autophagy
@@ -6970,7 +6981,7 @@ creation_date: 2011-08-15T11:41:34Z
 [Term]
 id: FYPO:0000546
 name: delayed protein modification
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein modification is delayed. All modifications may be affected, or only modifications of a certain type, or on specific proteins, or even specific sites within specific proteins." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein modification takes place later than normal. All modifications may be affected, or only modifications of a certain type, or on specific proteins, or even specific sites within specific proteins." [PomBase:mah]
 synonym: "delayed protein modification during vegetative growth" EXACT [PomBase:mah]
 synonym: "delayed protein/peptide modification" EXACT [PomBase:mah]
 synonym: "protein/peptide modification: delayed" EXACT [SGD:phenotype_annotation]
@@ -7278,6 +7289,7 @@ name: decreased duration of septation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the duration of septation is decreased." [PomBase:mah]
 synonym: "decreased barrier septum formation involved in cell cycle cytokinesis" RELATED [PomBase:mah]
 synonym: "decreased duration of barrier septum formation involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "decreased duration of mitotic barrier septum assembly" EXACT [GO:1902411, PomBase:mah]
 synonym: "decreased duration of septation during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased septation" RELATED [PomBase:mah]
 synonym: "decreased septum formation" RELATED [PomBase:mah]
@@ -7286,7 +7298,7 @@ synonym: "septum formation: decreased" BROAD [SGD:phenotype_annotation]
 is_a: FYPO:0000117 ! abnormal septation
 intersection_of: PATO:0000499
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000917
+intersection_of: inheres_in GO:1902411
 created_by: midori
 creation_date: 2011-08-15T11:41:34Z
 
@@ -7565,7 +7577,7 @@ creation_date: 2011-08-15T12:00:20Z
 [Term]
 id: FYPO:0000587
 name: delayed sporulation
-def: "A cellular process phenotype in which ascospore formation is delayed." [PomBase:mah]
+def: "A cellular process phenotype in which ascospore formation takes place later than normal." [PomBase:mah]
 synonym: "delayed ascospore formation" EXACT [PomBase:mah]
 synonym: "sporulation: delayed" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000121 ! abnormal sporulation
@@ -7748,7 +7760,7 @@ creation_date: 2011-08-15T12:00:20Z
 [Term]
 id: FYPO:0000600
 name: delayed vacuolar transport
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which vacuolar transport is delayed." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which vacuolar transport takes place later than normal." [PomBase:mah]
 synonym: "delayed vacuolar transport during vegetative growth" EXACT [PomBase:mah]
 synonym: "vacuolar transport: delayed" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000597 ! abnormal vacuolar transport
@@ -7965,7 +7977,7 @@ creation_date: 2011-08-16T10:03:01Z
 [Term]
 id: FYPO:0000621
 name: delayed onset of mitotic metaphase
-def: "A cellular process phenotype in which the onset of metaphase of mitosis is delayed." [PomBase:mah]
+def: "A cellular process phenotype in which the onset of metaphase of mitosis takes place later than normal." [PomBase:mah]
 synonym: "delayed mitotic metaphase" EXACT [PomBase:mah]
 synonym: "delayed onset of mitotic metaphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in metaphase: delayed" EXACT [SGD:phenotype_annotation]
@@ -8217,12 +8229,13 @@ id: FYPO:0000639
 name: delayed septation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which septation takes place later than normal." [PomBase:al, PomBase:mah]
 synonym: "delayed barrier septum formation involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "delayed mitotic barrier septum assembly" EXACT [GO:1902411, PomBase:mah]
 synonym: "delayed septation during vegetative growth" EXACT [PomBase:mah]
 synonym: "delayed septum formation" BROAD [PomBase:mah]
 is_a: FYPO:0000117 ! abnormal septation
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000917
+intersection_of: inheres_in GO:1902411
 created_by: midori
 creation_date: 2011-08-31T02:55:54Z
 
@@ -8381,6 +8394,7 @@ alt_id: FYPO:0000649
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the duration of septation is increased." [PomBase:mah]
 synonym: "increased barrier septum formation involved in cell cycle cytokinesis" RELATED [PomBase:mah]
 synonym: "increased duration of barrier septum formation involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "increased duration of mitotic barrier septum assembly" EXACT [GO:1902411, PomBase:mah]
 synonym: "increased duration of septation during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased duration of septum formation" BROAD [PomBase:mah]
 synonym: "increased septation" RELATED [PomBase:mah]
@@ -8388,7 +8402,7 @@ synonym: "increased septum formation" RELATED [PomBase:mah]
 is_a: FYPO:0000117 ! abnormal septation
 intersection_of: PATO:0000498
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000917
+intersection_of: inheres_in GO:1902411
 created_by: midori
 creation_date: 2011-10-13T03:07:53Z
 
@@ -8657,11 +8671,12 @@ creation_date: 2011-11-11T02:51:12Z
 id: FYPO:0000673
 name: normal septation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which septation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal mitotic barrier septum assembly" EXACT [GO:1902411, PomBase:mah]
 synonym: "normal septation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000917
+intersection_of: inheres_in GO:1902411
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2011-11-11T02:53:07Z
@@ -9143,7 +9158,7 @@ creation_date: 2011-12-06T12:15:32Z
 [Term]
 id: FYPO:0000712
 name: delayed cell cycle arrest in response to nitrogen starvation
-def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation is delayed." [PomBase:mah]
+def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation takes place later than normal." [PomBase:mah]
 comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
 synonym: "delayed cell cycle arrest in response to nitrogen depletion" EXACT [PomBase:vw]
 synonym: "delayed cell cycle arrest in response to nitrogen deprivation" EXACT [PomBase:vw]
@@ -9351,7 +9366,7 @@ creation_date: 2011-12-07T03:02:33Z
 [Term]
 id: FYPO:0000729
 name: delayed actomyosin contractile ring assembly
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which contractile ring assembly is delayed." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which contractile ring assembly takes place later than normal." [PomBase:mah]
 synonym: "delayed actomyosin contractile ring assembly during vegetative growth" EXACT [PomBase:mah]
 synonym: "delayed actomyosin contractile ring formation" RELATED [GO:0000915, PomBase:vw]
 synonym: "delayed contractile ring assembly" EXACT [PomBase:mah]
@@ -9535,7 +9550,7 @@ creation_date: 2012-01-11T12:45:30Z
 [Term]
 id: FYPO:0000743
 name: abnormal actin cortical patch internalization
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patch internalization is abnormal." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patch internalization is abnormal. Actin cortical patch internalization is the process in which the patch moves from the cell surface to the inside of the cell." [GO:0044397, PMID:21620704, PomBase:mah]
 synonym: "abnormal actin cortical patch internalisation" EXACT [PomBase:mah]
 synonym: "abnormal actin cortical patch internalization during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal actin patch internalization" EXACT [PomBase:vw]
@@ -9565,7 +9580,7 @@ creation_date: 2012-01-11T01:47:11Z
 [Term]
 id: FYPO:0000745
 name: delayed actin cortical patch internalization
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patch internalization is delayed." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patch internalization takes place later than normal. Actin cortical patch internalization is the process in which the patch moves from the cell surface to the inside of the cell." [GO:0044397, PMID:21620704, PomBase:mah]
 synonym: "delayed abnormal actin cortical patch internalization during vegetative growth" EXACT [PomBase:mah]
 synonym: "delayed actin cortical patch internalisation" EXACT [PomBase:mah]
 is_a: FYPO:0000743 ! abnormal actin cortical patch internalization
@@ -9578,7 +9593,7 @@ creation_date: 2012-01-11T01:57:25Z
 [Term]
 id: FYPO:0000746
 name: abolished actin cortical patch internalization
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patch internalization does not occur." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patch internalization does not occur. Actin cortical patch internalization is the process in which the patch moves from the cell surface to the inside of the cell." [GO:0044397, PMID:21620704, PomBase:mah]
 synonym: "abolished actin cortical patch internalisation" EXACT [PomBase:mah]
 synonym: "abolished actin cortical patch internalization during vegetative growth" EXACT [PomBase:mah]
 synonym: "actin cortical patch internalization abolished" EXACT [PomBase:mah]
@@ -9953,7 +9968,7 @@ creation_date: 2012-02-09T04:35:48Z
 [Term]
 id: FYPO:0000778
 name: delayed double-strand break repair
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which double-strand break repair is delayed." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which double-strand break repair takes place later than normal." [PomBase:mah]
 synonym: "delayed double-strand break repair during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000777 ! abnormal double-strand break repair
 intersection_of: PATO:0000502
@@ -16773,12 +16788,13 @@ id: FYPO:0001261
 name: decreased cytokinesis during cellular hyperosmotic response
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of cell cycle cytokinesis is decreased during a cellular hyperosmotic response." [PomBase:mah]
 synonym: "decreased cytokinesis during cellular hyperosmotic response during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased mitotic cytokinesis" EXACT [GO:0000281, PomBase:mah]
 synonym: "reduced cytokinesis during cellular hyperosmotic response" EXACT [PomBase:mah]
 is_a: FYPO:0000418 ! decreased cytokinesis
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0071474
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000910
+intersection_of: inheres_in GO:0000281
 created_by: midori
 creation_date: 2012-07-19T16:20:14Z
 
@@ -18206,15 +18222,15 @@ creation_date: 2012-08-02T18:07:32Z
 [Term]
 id: FYPO:0001364
 name: abnormal contractile ring contraction
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which contractile ring contraction is abnormal. Contractile ring contraction is the part of cytokinesis in which the actomyosin contractile ring constricts." [GO:0000916, PomBase:mah]
-synonym: "abnormal actomyosin contractile ring contraction" EXACT [GO:0000916, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which contractile ring contraction is abnormal. Contractile ring contraction is the part of cytokinesis in which the actomyosin contractile ring constricts." [GO:1902404, PomBase:mah]
+synonym: "abnormal actomyosin contractile ring contraction" EXACT [GO:1902404, PomBase:mah]
 synonym: "abnormal contractile ring constriction" EXACT [PomBase:vw]
 synonym: "abnormal contractile ring contraction during vegetative growth" EXACT [PomBase:mah]
-synonym: "abnormal contractile ring contraction involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "abnormal mitotic contractile ring contraction" EXACT [PomBase:mah]
 is_a: FYPO:0000032 ! abnormal cytokinesis
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000916
+intersection_of: inheres_in GO:1902404
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2012-08-07T12:39:39Z
@@ -18222,17 +18238,17 @@ creation_date: 2012-08-07T12:39:39Z
 [Term]
 id: FYPO:0001365
 name: decreased rate of contractile ring contraction
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the rate of contractile ring contraction is decreased. Contractile ring contraction is the part of cytokinesis in which the actomyosin contractile ring constricts." [GO:0000916, PomBase:mah]
-synonym: "decreased rate of actomyosin contractile ring contraction" EXACT [GO:0000916, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the rate of contractile ring contraction is decreased. Contractile ring contraction is the part of cytokinesis in which the actomyosin contractile ring constricts." [GO:1902404, PomBase:mah]
+synonym: "decreased rate of actomyosin contractile ring contraction" EXACT [GO:1902404, PomBase:mah]
 synonym: "decreased rate of contractile ring constriction" EXACT [PomBase:mah]
 synonym: "decreased rate of contractile ring contraction during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased rate of contractile ring contraction involved in cell cycle cytokinesis" EXACT [PomBase:mah]
+synonym: "decreased rate of mitotic contractile ring contraction" EXACT [PomBase:mah]
 synonym: "reduced rate of contractile ring contraction" EXACT [PomBase:mah]
 is_a: FYPO:0000419 ! decreased rate of cytokinesis
 is_a: FYPO:0001364 ! abnormal contractile ring contraction
 intersection_of: PATO:0000911
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000916
+intersection_of: inheres_in GO:1902404
 created_by: midori
 creation_date: 2012-08-07T12:41:50Z
 
@@ -18254,13 +18270,14 @@ creation_date: 2012-08-07T12:51:48Z
 [Term]
 id: FYPO:0001367
 name: normal cytokinesis
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytokinesis is normal (i.e. indistinguishable from wild type). Cytokinesis is part of the cell cycle and results in the division of the cytoplasm of a cell and its separation into two daughter cells." [GO:0000910, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytokinesis is normal (i.e. indistinguishable from wild type). Cytokinesis is part of the cell cycle and results in the division of the cytoplasm of a cell and its separation into two daughter cells." [GO:0000281, PomBase:mah]
 synonym: "normal cell cycle cytokinesis" EXACT [PomBase:mah]
 synonym: "normal cytokinesis during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal mitotic cytokinesis" EXACT [GO:0000281, PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000910
+intersection_of: inheres_in GO:0000281
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-08-07T12:54:44Z
@@ -21154,6 +21171,8 @@ name: abolished vegetative cell population growth
 def: "A cellular process phenotype in which vegetative cell population growth does not occur, although cells remain viable." [PomBase:mah]
 comment: This term's primary purpose is to organize terms beneath it in the ontology, and we recommend that it not be used for direct annotations. Please consider using one of the more specific terms, which mention carbon or nitrogen sources, to annotate each phenotype, as cells that do not grow on any media would be considered inviable.
 subset: qc_do_not_annotate
+synonym: "abolished growth of population of viable vegetative cells" EXACT [PomBase:mah]
+synonym: "abolished vegetative cell population growth, viable cells" EXACT [PomBase:vw]
 synonym: "vegetative cell population growth abolished" EXACT [PomBase:mah]
 synonym: "vegetative population growth abolished" EXACT [PomBase:mah]
 is_a: FYPO:0001355 ! decreased vegetative cell population growth
@@ -22802,7 +22821,7 @@ creation_date: 2012-11-02T15:39:06Z
 [Term]
 id: FYPO:0001686
 name: normal cell population growth on MBC
-def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing the tubulin poison mecarzole (MBC." [PomBase:mah]
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing the tubulin poison mecarzole (MBC)." [PomBase:mah]
 synonym: "normal cell population growth in presence of MBC" EXACT [PomBase:mah]
 synonym: "normal cell population growth on carbendazim" EXACT [CHEBI:3392]
 synonym: "normal cell population growth on mecarzole" EXACT [PomBase:al]
@@ -22818,6 +22837,8 @@ id: FYPO:0001687
 name: normal cell population growth on benomyl
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing benomyl." [PomBase:mah]
 synonym: "normal cell population growth in presence of benomyl" EXACT [PomBase:mah]
+synonym: "normal cell population growth on MBC" EXACT [PMID:6887244]
+synonym: "normal cell population growth on methyl benzimidazole-2-yl-carbamate" EXACT [PMID:6887244]
 synonym: "normal cellular response to benomyl" RELATED [PomBase:al, PomBase:mah]
 synonym: "normal growth on benomyl" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on benomyl" EXACT [PomBase:mah]
@@ -23795,13 +23816,14 @@ creation_date: 2012-11-14T15:03:21Z
 id: FYPO:0001760
 name: normal cytokinetic cell separation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytokinetic cell separation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal cell separation during cytokinesis" RELATED [GO:0000920]
+synonym: "normal cell separation during cytokinesis" RELATED [GO:1902409]
 synonym: "normal cytokinetic cell separation during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal cytokinetic cell separation following mitosis" EXACT [PomBase:mah]
+synonym: "normal mitotic cytokinetic cell separation" EXACT [GO:1902409, PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000920
+intersection_of: inheres_in GO:1902409
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-11-14T15:25:43Z
@@ -26093,7 +26115,8 @@ creation_date: 2013-02-06T15:31:52Z
 id: FYPO:0001929
 name: normal cell cycle regulation during cellular response to hydroxyurea
 def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to hydroxyurea is normal (i.e. indistinguishable from wild type). Normally, cell cycle progression is slowed or arrested transiently following exposure to hydroxyurea." [PomBase:mah]
-synonym: "normal cell cycle delay following hydroxyurea exposure" EXACT [PomBase:al]
+synonym: "normal cell cycle arrest in response to HU" NARROW [PMID:1706223, PomBase:al]
+synonym: "normal cell cycle delay following hydroxyurea exposure" NARROW [PomBase:al]
 synonym: "normal cell cycle regulation during cellular response to HU" EXACT [PomBase:mah]
 synonym: "normal cell cycle regulation in response to hydroxyurea" EXACT [PomBase:mah]
 synonym: "normal mitotic cell cycle regulation during cellular response to hydroxyurea" EXACT [PomBase:mah]
@@ -28315,8 +28338,8 @@ synonym: "extra exocytic vesicles at barrier septum during septation" EXACT [Pom
 synonym: "post-Golgi secretory vesicles present in greater numbers at barrier septum during septation" RELATED [PomBase:vw]
 is_a: FYPO:0002086 ! exocytic vesicles present in greater numbers
 intersection_of: PATO:0002002
-intersection_of: exists_during GO:0000917
 intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:1902411
 intersection_of: part_of GO:0000935
 intersection_of: towards GO:0070382
 created_by: midori
@@ -31917,7 +31940,7 @@ creation_date: 2013-07-17T13:46:22Z
 [Term]
 id: FYPO:0002349
 name: delayed stress granule assembly
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which stress granule assembly is delayed." [PMID:21098141, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which stress granule assembly takes place later than normal." [PMID:21098141, PomBase:mah]
 synonym: "delayed stress granule assembly during vegetative growth" EXACT [PomBase:mah]
 synonym: "delayed stress granule formation" RELATED [PomBase:mah]
 is_a: FYPO:0002347 ! abnormal stress granule assembly
@@ -31957,7 +31980,7 @@ creation_date: 2013-07-17T13:54:28Z
 [Term]
 id: FYPO:0002352
 name: delayed stress granule disassembly
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which stress granule disassembly is delayed." [PMID:21098141, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which stress granule disassembly takes place later than normal." [PMID:21098141, PomBase:mah]
 synonym: "delayed stress granule disassembly during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0002351 ! abnormal stress granule disassembly
 intersection_of: PATO:0000502
@@ -36008,7 +36031,7 @@ creation_date: 2013-09-11T13:01:58Z
 [Term]
 id: FYPO:0002636
 name: delayed mitotic spindle elongation
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which mitotic spindle elongation is delayed." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which mitotic spindle elongation takes place later than normal." [PomBase:mah]
 synonym: "delayed mitotic spindle elongation during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic spindle elongation delayed" EXACT [PomBase:vw]
 is_a: FYPO:0000131 ! abnormal mitotic spindle elongation
@@ -38580,7 +38603,7 @@ creation_date: 2013-11-04T15:38:55Z
 [Term]
 id: FYPO:0002830
 name: delayed protein phosphorylation during vegetative growth
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, is delayed." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, takes place later than normal." [PomBase:mah]
 synonym: "delayed protein/peptide phosphorylation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000775 ! abnormal protein phosphorylation during vegetative growth
 intersection_of: PATO:0000502
@@ -38592,7 +38615,7 @@ creation_date: 2013-11-04T15:41:33Z
 [Term]
 id: FYPO:0002831
 name: delayed protein phosphorylation during mitotic M phase
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, is delayed during M phase of the mitotic cell cycle." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, takes place later than normal during M phase of the mitotic cell cycle." [PomBase:mah]
 synonym: "delayed protein phosphorylation during mitotic M phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "delayed protein phosphorylation during mitotic M-phase" EXACT [PomBase:vw]
 synonym: "delayed protein/peptide phosphorylation during mitotic M phase" EXACT [PomBase:mah]
@@ -41235,6 +41258,236 @@ def: "A cellular process phenotype in which cells attempt to undergo mitosis bef
 is_a: FYPO:0001046 ! premature mitosis
 created_by: midori
 creation_date: 2014-01-08T15:00:35Z
+
+[Term]
+id: FYPO:0003013
+name: abnormal actomyosin contractile ring disassembly
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which contractile ring disassembly is abnormal. Contractile ring disassembly is the part of cytokinesis in which the actomyosin contractile ring is disaggregated into its constituent components." [PomBase:mah]
+synonym: "abnormal actomyosin contractile ring disassembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal contractile ring disassembly" EXACT [PomBase:mah]
+synonym: "abnormal cytokinesis, actomyosin contractile ring disassembly" EXACT [PomBase:mah]
+synonym: "abnormal cytokinetic ring disassembly" RELATED [PomBase:vw]
+synonym: "abnormal mitotic actomyosin contractile ring disassembly" EXACT [PomBase:mah]
+is_a: FYPO:0000032 ! abnormal cytokinesis
+is_a: FYPO:0000801 ! abnormal actin cytoskeleton organization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902621
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-01-15T10:21:16Z
+
+[Term]
+id: FYPO:0003014
+name: decreased rate of contractile ring disassembly
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the rate of contractile ring contraction is decreased. Contractile ring disassembly is the part of cytokinesis in which the actomyosin contractile ring is disaggregated into its constituent components." [PomBase:mah]
+synonym: "decreased rate of actomyosin contractile ring disassembly" EXACT [PomBase:mah]
+synonym: "decreased rate of contractile ring disassembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased rate of mitotic contractile ring disassembly" EXACT [PomBase:mah]
+synonym: "reduced rate of contractile ring disassembly" EXACT [PomBase:mah]
+is_a: FYPO:0003013 ! abnormal actomyosin contractile ring disassembly
+intersection_of: PATO:0000911
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902621
+created_by: midori
+creation_date: 2014-01-15T10:22:22Z
+
+[Term]
+id: FYPO:0003015
+name: cell lysis during cellular response to salt stress
+def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell lyses, i.e. the plasma membrane ruptures and cytoplasm is lost, during a cellular response to salt stress. Note that in fission yeast cell lysis, the integrity of the cell wall is also compromised." [PomBase:mah]
+synonym: "cell lysis during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "cytolysis during cellular response to salt stress" EXACT [PomBase:mah]
+synonym: "inviable, lysed cell during cellular response to salt stress" EXACT [PomBase:mah]
+synonym: "lysed cell in response to salt stress" EXACT [PomBase:al]
+is_a: FYPO:0000647 ! vegetative cell lysis
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0071472
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0019835
+created_by: midori
+creation_date: 2014-01-15T10:54:08Z
+
+[Term]
+id: FYPO:0003016
+name: cell lysis during cellular response to non-ionic osmotic stress
+def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell lyses, i.e. the plasma membrane ruptures and cytoplasm is lost, during a cellular response to non-ionic osmotic stress. Note that in fission yeast cell lysis, the integrity of the cell wall is also compromised." [PomBase:mah]
+synonym: "cell lysis during cellular response to non-ionic osmotic stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "cytolysis during cellular response to non-ionic osmotic stress" EXACT [PomBase:mah]
+synonym: "inviable, lysed cell during cellular response to non-ionic osmotic stress" EXACT [PomBase:mah]
+synonym: "lysed cell in response to non-ionic osmotic stress" EXACT [PomBase:al]
+is_a: FYPO:0000647 ! vegetative cell lysis
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0071471
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0019835
+created_by: midori
+creation_date: 2014-01-15T10:55:13Z
+
+[Term]
+id: FYPO:0003017
+name: inviable elongated vegetative cell during cellular response to salt stress
+def: "A cell morphology phenotype in which a vegetative cell is inviable and longer than normal during a cellular response to salt stress." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "elongated inviable cell during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated inviable vegetative cell during cellular response to salt stress" EXACT [PomBase:mah]
+synonym: "essential; elongated vegetative cell during cellular response to salt stress" RELATED [PomBase:mah]
+is_a: FYPO:0001490 ! inviable elongated vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0071472
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000049 ! inviable cell
+created_by: midori
+creation_date: 2014-01-15T10:59:07Z
+
+[Term]
+id: FYPO:0003018
+name: inviable elongated vegetative cell during cellular response to non-ionic osmotic stress
+def: "A cell morphology phenotype in which a vegetative cell is inviable and longer than normal during a cellular response to non-ionic osmotic stress." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "elongated inviable cell during cellular response to non-ionic osmotic stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated inviable vegetative cell during cellular response to non-ionic osmotic stress" EXACT [PomBase:mah]
+synonym: "essential; elongated vegetative cell during cellular response to v stress" RELATED [PomBase:mah]
+is_a: FYPO:0001490 ! inviable elongated vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0071471
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000049 ! inviable cell
+created_by: midori
+creation_date: 2014-01-15T11:00:24Z
+
+[Term]
+id: FYPO:0003019
+name: abnormal protein autophosphorylation during vegetative growth
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the autophosphorylation of one or more specific proteins, or of specific protein sites, is abnormal. Protein autophosphorylation is the phosphorylation by a protein of one or more of its own amino acid residues, or residues on an identical protein." [GO:0031952, PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+is_a: FYPO:0000329 ! abnormal protein modification during vegetative growth
+is_a: FYPO:0002677 ! abnormal protein phosphorylation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0031952
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-01-15T11:04:27Z
+
+[Term]
+id: FYPO:0003020
+name: abolished protein autophosphorylation during vegetative growth
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the autophosphorylation of one or more specific proteins, or of specific protein sites, does not occur. Protein autophosphorylation is the phosphorylation by a protein of one or more of its own amino acid residues, or residues on an identical protein." [GO:0031952, PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "protein autophosphorylation abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000544 ! abolished protein modification during vegetative growth
+is_a: FYPO:0000775 ! abnormal protein phosphorylation during vegetative growth
+is_a: FYPO:0002678 ! abolished protein phosphorylation
+is_a: FYPO:0003019 ! abnormal protein autophosphorylation during vegetative growth
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0031952
+created_by: midori
+creation_date: 2014-01-15T11:05:00Z
+
+[Term]
+id: FYPO:0003021
+name: sensitive to EPC
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to ethyl N-phenylcarbamate (EPC). Cells stop growing (and may die) at a concentration of EPC that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to EPC" EXACT [PomBase:mah]
+synonym: "sensitive to EPC during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to ethyl N-phenylcarbamate" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-01-15T11:46:04Z
+
+[Term]
+id: FYPO:0003022
+name: resistance to nocodazole
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of nocodazole than normal." [PomBase:mah]
+synonym: "resistance to nocodazole during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to nocodazole" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-01-15T13:47:40Z
+
+[Term]
+id: FYPO:0003023
+name: normal cell population growth on EPC
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing ethyl N-phenylcarbamate (EPC)." [PomBase:mah]
+synonym: "normal cell population growth in presence of EPC" EXACT [PomBase:mah]
+synonym: "normal cell population growth on ethyl N-phenylcarbamate" EXACT [PomBase:mah]
+synonym: "normal cellular response to EPC" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on EPC" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on EPC" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+created_by: midori
+creation_date: 2014-01-15T13:49:48Z
+
+[Term]
+id: FYPO:0003024
+name: abnormal homologous chromosome pairing
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is abnormal. Synaspsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained." [GO:0007129, PomBase:mah]
+synonym: "abnormal homologous chromosome pairing at meiosis" EXACT [GO:0007129]
+synonym: "abnormal synapsis" EXACT [GO:0007129]
+is_a: FYPO:0000051 ! abnormal meiosis
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007129
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-01-15T14:42:37Z
+
+[Term]
+id: FYPO:0003025
+name: decreased homologous chromosome pairing
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is decreased. Synaspsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained." [GO:0007129, PomBase:mah]
+synonym: "decreased homologous chromosome pairing at meiosis" EXACT [GO:0007129]
+synonym: "decreased synapsis" EXACT [GO:0007129]
+synonym: "reduced homologous chromosome pairing" EXACT [PomBase:mah]
+is_a: FYPO:0000051 ! abnormal meiosis
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0007129
+created_by: midori
+creation_date: 2014-01-15T14:45:55Z
+
+[Term]
+id: FYPO:0003026
+name: delayed homologous chromosome pairing
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) takes place later than normal. Synaspsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained." [GO:0007129, PomBase:mah]
+synonym: "delayed homologous chromosome pairing at meiosis" EXACT [GO:0007129]
+synonym: "delayed synapsis" EXACT [GO:0007129]
+is_a: FYPO:0000051 ! abnormal meiosis
+intersection_of: PATO:0000502
+intersection_of: inheres_in GO:0007129
+created_by: midori
+creation_date: 2014-01-15T14:47:13Z
+
+[Term]
+id: FYPO:0003027
+name: normal poly(A)+ mRNA export from nucleus
+def: "A transport phenotype observed in the vegetative growth phase of the life cycle in which the export of polyadenylated mRNA from the nucleus is normal." [PomBase:mah]
+synonym: "normal poly(A)+ mRNA export from nucleus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0016973
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-01-15T15:57:46Z
+
+[Term]
+id: FYPO:0003028
+name: normal actin cortical patch localization during mitosis
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patch localization is normal during mitosis." [PomBase:mah]
+synonym: "abnormal actin patch localization during mitosis" EXACT [PomBase:vw]
+synonym: "normal actin cortical patch localisation during mitosis" EXACT [PomBase:mah]
+synonym: "normal actin cortical patch localization during mitosis during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001294 ! normal actin cortical patch localization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0007067
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051666
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-01-15T16:04:43Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
