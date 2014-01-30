@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 29:01:2014 17:52
+date: 30:01:2014 17:04
 saved-by: midori
-auto-generated-by: OBO-Edit 2.3-beta7
+auto-generated-by: OBO-Edit 2.3
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
@@ -751,7 +751,7 @@ synonym: "elongated microtubules" EXACT [PomBase:mah]
 synonym: "long microtubules during vegetative growth" EXACT [PomBase:mah]
 synonym: "microtubule organization defects, long microtubules" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
-is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology
+is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology during vegetative growth
 intersection_of: PATO:0000573
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005874
@@ -4452,8 +4452,9 @@ def: "A physical cellular phenotype observed in the vegetative growth phase of t
 comment: Note that an abnormal actin cytoskeleton organization process may, but does not necessarily, result in abnormal actin cytoskeleton morphology.
 synonym: "abnormal actin cytoskeleton morphology during vegetative growth" EXACT [PomBase:mah]
 synonym: "actin cytoskeleton morphology: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000352 ! abnormal cytoskeleton morphology
+is_a: FYPO:0000352 ! abnormal cytoskeleton morphology during vegetative growth
 is_a: FYPO:0002398 ! abnormal actin cytoskeleton
+is_a: FYPO:0003063 ! abnormal cytoskeleton morphology
 intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0015629
@@ -4478,10 +4479,9 @@ creation_date: 2011-07-14T05:04:23Z
 
 [Term]
 id: FYPO:0000352
-name: abnormal cytoskeleton morphology
+name: abnormal cytoskeleton morphology during vegetative growth
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the cytoskeleton is abnormal." [PomBase:mah]
 comment: Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in abnormal cytoskeleton morphology.
-synonym: "abnormal cytoskeleton morphology during vegetative growth" EXACT [PomBase:mah]
 synonym: "cytoskeleton morphology: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0002397 ! abnormal cytoskeleton
 intersection_of: PATO:0000051
@@ -7501,7 +7501,8 @@ creation_date: 2011-08-15T11:41:34Z
 [Term]
 id: FYPO:0000581
 name: decreased spore germination
-def: "A cellular process phenotype in which the occurrence of spore germination is decreased." [PomBase:mah]
+def: "A cellular process phenotype in which the occurrence of spore germination is decreased. At the cellular level, an individual spore is less likely to germinate than normal." [PomBase:mah]
+comment: Note that this phenotype is usually assayed by observing a population of spores and measuring how many germinate. This term may be replaced by a cell population term in the future.
 synonym: "reduced spore germination" EXACT [PomBase:mah]
 synonym: "spore germination: decreased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000305 ! abnormal spore germination
@@ -18988,12 +18989,12 @@ creation_date: 2012-08-22T11:59:56Z
 
 [Term]
 id: FYPO:0001418
-name: abnormal microtubule cytoskeleton morphology
+name: abnormal microtubule cytoskeleton morphology during vegetative growth
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the microtubule cytoskeleton is abnormal." [PomBase:mah]
 comment: Note that an abnormal actin cytoskeleton organization process may, but does not necessarily, result in abnormal actin cytoskeleton morphology.
-synonym: "abnormal microtubule cytoskeleton morphology during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000352 ! abnormal cytoskeleton morphology
+is_a: FYPO:0000352 ! abnormal cytoskeleton morphology during vegetative growth
 is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
+is_a: FYPO:0003063 ! abnormal cytoskeleton morphology
 intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0015630
@@ -37634,7 +37635,7 @@ name: short cytoplasmic microtubules
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form cytoplasmic microtubules that are shorter than normal." [PomBase:mah]
 synonym: "short cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
-is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology
+is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology during vegetative growth
 intersection_of: PATO:0000574
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005881
@@ -41438,7 +41439,7 @@ creation_date: 2014-01-15T13:49:48Z
 [Term]
 id: FYPO:0003024
 name: abnormal homologous chromosome pairing
-def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is abnormal. Synaspsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained." [GO:0007129, PomBase:mah]
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is abnormal. Synapsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained. Pairing may be assayed globally or at one or more specific loci." [GO:0007129, PomBase:mah]
 synonym: "abnormal homologous chromosome pairing at meiosis" EXACT [GO:0007129]
 synonym: "abnormal synapsis" EXACT [GO:0007129]
 is_a: FYPO:0000051 ! abnormal meiosis
@@ -41451,7 +41452,7 @@ creation_date: 2014-01-15T14:42:37Z
 [Term]
 id: FYPO:0003025
 name: decreased homologous chromosome pairing
-def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is decreased. Synaspsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained." [GO:0007129, PomBase:mah]
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is decreased. Synapsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained. Pairing may be assayed globally or at one or more specific loci." [GO:0007129, PomBase:mah]
 synonym: "decreased homologous chromosome pairing at meiosis" EXACT [GO:0007129]
 synonym: "decreased synapsis" EXACT [GO:0007129]
 synonym: "reduced homologous chromosome pairing" EXACT [PomBase:mah]
@@ -41464,7 +41465,7 @@ creation_date: 2014-01-15T14:45:55Z
 [Term]
 id: FYPO:0003026
 name: delayed homologous chromosome pairing
-def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) takes place later than normal. Synaspsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained." [GO:0007129, PomBase:mah]
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) takes place later than normal. Synapsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained. Pairing may be assayed globally or at one or more specific loci." [GO:0007129, PomBase:mah]
 synonym: "delayed homologous chromosome pairing at meiosis" EXACT [GO:0007129]
 synonym: "delayed synapsis" EXACT [GO:0007129]
 is_a: FYPO:0000051 ! abnormal meiosis
@@ -41783,6 +41784,212 @@ synonym: "3'-extended transcript" EXACT [PomBase:mah]
 is_a: FYPO:0003048 ! abnormal transcript length
 created_by: midori
 creation_date: 2014-01-29T17:38:21Z
+
+[Term]
+id: FYPO:0003050
+name: normal homologous chromosome pairing
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is normal (i.e. indistinguishable from wild type). Synapsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained. Pairing may be assayed globally or at one or more specific loci." [GO:0007129, PomBase:mah]
+synonym: "normal homologous chromosome pairing at meiosis" EXACT [GO:0007129]
+synonym: "normal synapsis" EXACT [GO:0007129]
+is_a: FYPO:0000478 ! normal meiosis
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007129
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-01-30T14:00:10Z
+
+[Term]
+id: FYPO:0003051
+name: normal homologous chromosome pairing at cis-acting homologous chromosome pairing region
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is normal (i.e. indistinguishable from wild type) at a cis-acting homologous chromosome pairing region such as the sme2 locus." [PMID:22582262, PMID:23117617, PMID:24173580, PomBase:mah]
+synonym: "normal homologous chromosome pairing at meiosis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+synonym: "normal homologous chromosome pairing at sme2 locus" NARROW [PomBase:mah]
+synonym: "normal synapsis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+is_a: FYPO:0003050 ! normal homologous chromosome pairing
+created_by: midori
+creation_date: 2014-01-30T14:03:25Z
+
+[Term]
+id: FYPO:0003052
+name: abnormal homologous chromosome pairing at cis-acting homologous chromosome pairing region
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is abnormal at a cis-acting homologous chromosome pairing region such as the sme2 locus." [PMID:22582262, PMID:23117617, PMID:24173580, PomBase:mah]
+synonym: "abnormal homologous chromosome pairing at meiosis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+synonym: "abnormal homologous chromosome pairing at sme2 locus" NARROW [PomBase:mah]
+synonym: "abnormal synapsis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+is_a: FYPO:0003024 ! abnormal homologous chromosome pairing
+created_by: midori
+creation_date: 2014-01-30T14:33:16Z
+
+[Term]
+id: FYPO:0003053
+name: increased homologous chromosome pairing at cis-acting homologous chromosome pairing region
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is increased (i.e. occurs to a greater extent) at a cis-acting homologous chromosome pairing region such as the sme2 locus." [PMID:22582262, PMID:23117617, PMID:24173580, PomBase:mah]
+synonym: "increased homologous chromosome pairing at meiosis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+synonym: "increased homologous chromosome pairing at sme2 locus" NARROW [PomBase:mah]
+synonym: "increased synapsis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+is_a: FYPO:0003024 ! abnormal homologous chromosome pairing
+created_by: midori
+creation_date: 2014-01-30T14:37:27Z
+
+[Term]
+id: FYPO:0003054
+name: decreased homologous chromosome pairing at cis-acting homologous chromosome pairing region
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is decreased (i.e. occurs to a lower extent) at a cis-acting homologous chromosome pairing region such as the sme2 locus." [PMID:22582262, PMID:23117617, PMID:24173580, PomBase:mah]
+synonym: "decreased homologous chromosome pairing at meiosis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+synonym: "decreased homologous chromosome pairing at sme2 locus" NARROW [PomBase:mah]
+synonym: "decreased synapsis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+synonym: "reduced homologous chromosome pairing at cis-acting homologous chromosome pairing region" EXACT [PomBase:mah]
+is_a: FYPO:0003024 ! abnormal homologous chromosome pairing
+created_by: midori
+creation_date: 2014-01-30T14:45:24Z
+
+[Term]
+id: FYPO:0003055
+name: delayed homologous chromosome pairing at cis-acting homologous chromosome pairing region
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is delayed at a cis-acting homologous chromosome pairing region such as the sme2 locus." [PMID:22582262, PMID:23117617, PMID:24173580, PomBase:mah]
+synonym: "delayed homologous chromosome pairing at meiosis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+synonym: "delayed homologous chromosome pairing at sme2 locus" NARROW [PomBase:mah]
+synonym: "delayed synapsis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+is_a: FYPO:0003024 ! abnormal homologous chromosome pairing
+created_by: midori
+creation_date: 2014-01-30T14:46:10Z
+
+[Term]
+id: FYPO:0003056
+name: Mei2 nuclear dot absent from cell
+def: "A cell phenotype in which the cell does not contain a detectable Mei2 nuclear dot complex." [PomBase:mah]
+synonym: "absence of Mei2 dot" EXACT [PomBase:vw]
+synonym: "absent Mei2 nuclear dot" EXACT [PomBase:mah]
+synonym: "Mei2 nuclear dot complex absent from cell" EXACT [GO:0033620]
+is_a: FYPO:0000287 ! abnormal subcellular component
+intersection_of: PATO:0002000
+intersection_of: inheres_in CL:0000000
+intersection_of: towards GO:0033620
+created_by: midori
+creation_date: 2014-01-30T14:58:38Z
+
+[Term]
+id: FYPO:0003057
+name: abnormal RNA localization
+def: "A cell phenotype in which the localization of an RNA in a cell is abnormal. An RNA may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." [PomBase:mah]
+synonym: "abnormal cellular RNA localisation" EXACT [PomBase:mah]
+synonym: "abnormal cellular RNA localization" EXACT [PomBase:mah]
+synonym: "abnormal RNA localisation" EXACT [PomBase:mah]
+is_a: FYPO:0000138 ! localization phenotype
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006403
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-01-30T16:00:06Z
+
+[Term]
+id: FYPO:0003058
+name: normal RNA localization
+def: "A cell phenotype in which the localization of an RNA in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular RNA localisation" EXACT [PomBase:mah]
+synonym: "normal cellular RNA localization" EXACT [PomBase:mah]
+synonym: "normal RNA localisation" EXACT [PomBase:mah]
+is_a: FYPO:0000138 ! localization phenotype
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006403
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-01-30T16:05:30Z
+
+[Term]
+id: FYPO:0003059
+name: normal RNA localization to chromatin
+def: "A cell phenotype in which the localization of an RNA to chromatin is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal RNA localisation to chromatin" EXACT [PomBase:mah]
+is_a: FYPO:0000138 ! localization phenotype
+is_a: FYPO:0003058 ! normal RNA localization
+created_by: midori
+creation_date: 2014-01-30T16:06:28Z
+
+[Term]
+id: FYPO:0003060
+name: decreased meiotic recombination at cis-acting homologous chromosome pairing region
+def: "A cellular process phenotype in which the occurrence of reciprocal meiotic recombination at a cis-acting homologous chromosome pairing region such sa the sme2 locus is decreased." [PomBase:mah]
+synonym: "decreased meiotic recombination at sme2 locus" NARROW [PomBase:mah]
+synonym: "reduced meiotic recombination at cis-acting homologous chromosome pairing region" EXACT [PomBase:mah]
+is_a: FYPO:0000485 ! decreased meiotic recombination
+created_by: midori
+creation_date: 2014-01-30T16:09:19Z
+
+[Term]
+id: FYPO:0003061
+name: twin haploid meiosis
+def: "A cellular process phenotype in which the two nuclei in a cell formed by conjugation undergo meiosis before karyogamy. Note that this can occur in h-/h- or h+/h+ diploids, or in zygotes." [PMID:23755176, PomBase:al, PomBase:mah]
+synonym: "haploid meiosis before karyogamy" EXACT [PomBase:al]
+is_a: FYPO:0000479 ! premature meiosis
+created_by: midori
+creation_date: 2014-01-30T16:35:28Z
+
+[Term]
+id: FYPO:0003062
+name: abnormal nuclear migration during mating
+def: "A cellular process phenotype in which nuclear migration involved in conjugation with cellular fusion is abnormal." [PomBase:mah]
+synonym: "abnormal nuclear congression during karyogamy" RELATED [PomBase:al]
+synonym: "abnormal nuclear migration involved in conjugation with cellular fusion" EXACT [GO:0000743]
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000743
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-01-30T16:43:32Z
+
+[Term]
+id: FYPO:0003063
+name: abnormal cytoskeleton morphology
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the cytoskeleton is abnormal." [PomBase:mah]
+comment: Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in abnormal cytoskeleton morphology.
+is_a: FYPO:0002397 ! abnormal cytoskeleton
+intersection_of: PATO:0000051
+intersection_of: inheres_in GO:0005856
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-01-30T16:47:41Z
+
+[Term]
+id: FYPO:0003064
+name: abnormal microtubule cytoskeleton morphology
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the microtubule cytoskeleton is abnormal." [PomBase:mah]
+comment: Note that an abnormal actin cytoskeleton organization process may, but does not necessarily, result in abnormal actin cytoskeleton morphology.
+is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
+is_a: FYPO:0003063 ! abnormal cytoskeleton morphology
+intersection_of: PATO:0000051
+intersection_of: inheres_in GO:0015630
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-01-30T16:47:52Z
+
+[Term]
+id: FYPO:0003065
+name: abnormal microtubule cytoskeleton morphology during mating
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the microtubule cytoskeleton is abnormal during conjugation with cellular fusion." [PomBase:mah]
+comment: Note that an abnormal actin cytoskeleton organization process may, but does not necessarily, result in abnormal actin cytoskeleton morphology.
+synonym: "abnormal microtubule cytoskeleton morphology during conjugation with cellular fusion" EXACT [GO:0000747]
+synonym: "abnormal microtubule cytoskeleton morphology during karyogamy" RELATED [PomBase:al]
+is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
+is_a: FYPO:0003063 ! abnormal cytoskeleton morphology
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0000747
+intersection_of: inheres_in GO:0015630
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-01-30T16:52:27Z
+
+[Term]
+id: FYPO:0003066
+name: abnormal sporulation resulting in formation of ascus with fewer than four spores
+def: "A sporulation phenotype in which asci that contain one, two, or three spores form following conjugation and subsequent sporulation." [PomBase:al, PomBase:mah]
+synonym: "abnormal ascospore formation resulting in formation of asci with fewer than four spores" EXACT [GO:0030437, PomBase:mah]
+synonym: "abnormal sporulation resulting in formation of asci with fewer than four spores" EXACT [PomBase:mah]
+is_a: FYPO:0000121 ! abnormal sporulation
+created_by: midori
+creation_date: 2014-01-30T17:00:30Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
