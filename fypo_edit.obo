@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 17:02:2014 14:44
+date: 19:02:2014 16:46
 saved-by: midori
-auto-generated-by: OBO-Edit 2.3
+auto-generated-by: OBO-Edit 2.3-beta7
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
@@ -24331,6 +24331,7 @@ synonym: "decreased rate of protein synthesis" NARROW [PomBase:al]
 synonym: "decreased translation during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced translation" EXACT [PomBase:mah]
 is_a: FYPO:0001797 ! abnormal translation
+is_a: FYPO:0003124 ! abnormal cytoplasmic translation
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006412
@@ -27372,6 +27373,7 @@ id: FYPO:0002019
 name: elongated telomeres
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form telomeres that are longer than normal." [PomBase:mah]
 synonym: "elongated telomeres during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased telomere length" EXACT [PomBase:mah]
 synonym: "long telomeres" EXACT [PomBase:mah]
 is_a: FYPO:0002254 ! abnormal telomere morphology
 intersection_of: PATO:0000573
@@ -30399,6 +30401,8 @@ creation_date: 2013-06-06T15:32:04Z
 id: FYPO:0002239
 name: shortened telomeres
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form telomeres that are shorter than normal." [PomBase:mah]
+synonym: "decreased telomere length" EXACT [PomBase:mah]
+synonym: "reduced telomere length" EXACT [PomBase:mah]
 synonym: "short telomeres" EXACT [PomBase:mah]
 synonym: "shortened telomeres during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0002254 ! abnormal telomere morphology
@@ -39289,6 +39293,7 @@ creation_date: 2013-11-14T15:30:22Z
 id: FYPO:0002879
 name: abolished transcription during glucose starvation
 def: "A cellular process phenotype in which transcription does not occur when the cell is subject to glucose starvation. All genes, or a specific subset of genes, may be affected." [PomBase:mah]
+synonym: "abolished glucose deprivation induced gene exprression" RELATED [PomBase:vw]
 synonym: "abolished transcription during cellular response to glucose starvation" EXACT [PomBase:mah]
 synonym: "abolished transcription during glucose depletion" EXACT [PomBase:vw]
 synonym: "abolished transcription during glucose deprivation" EXACT [PomBase:vw]
@@ -39307,6 +39312,7 @@ id: FYPO:0002880
 name: decreased transcription during glucose starvation and oxidative stress
 def: "A cellular process phenotype in which transcription occurs to a lower extent than normal when the cell is subject to glucose starvation and oxidative stress simultaneously. All genes, or a specific subset of genes, may be affected." [PomBase:mah]
 comment: Use this term if there is evidence, such as labeled nucleotide incorporation, showing that transcription rather than RNA stability is affected; otherwise, use 'decreased RNA level' (FYPO:0000826).
+synonym: "decreased transcription during cellular response to glucose starvation and oxidative stress" EXACT [PomBase:mah]
 synonym: "decreased transcription during glucose depletion and oxidative stress" EXACT [PomBase:vw]
 synonym: "decreased transcription during glucose deprivation and oxidative stress" EXACT [PomBase:vw]
 synonym: "decreased transcription in response to glucose starvation and oxidative stress" EXACT [PomBase:mah]
@@ -41791,6 +41797,7 @@ id: FYPO:0003049
 name: increased transcript length by 3' extension
 def: "A phenotype in which a transcript, i.e. an RNA molecule synthesized on a DNA template by RNA polymerase, is longer than normal due to inclusion of more RNA at the 3' end." [PMID:22582262, PomBase:mah, SO:0000673]
 synonym: "3'-extended transcript" EXACT [PomBase:mah]
+synonym: "poly(A) readthrough" RELATED [PomBase:vw]
 is_a: FYPO:0003048 ! abnormal transcript length
 created_by: midori
 creation_date: 2014-01-29T17:38:21Z
@@ -42372,6 +42379,16 @@ created_by: midori
 creation_date: 2014-02-13T15:22:03Z
 
 [Term]
+id: FYPO:0003095
+name: viable elongated vegetative cell, with progressive elongation
+def: "A cell morphology phenotype in which a vegetative cell is viable and longer than normal, and continues to become longer over successive generations." [PMID:24013504, PomBase:mah]
+comment: Note that progressive cell elongation usually results from DNA damage checkpoint activation. Consider also annotating to 'normal DNA damage checkpoint' (FYPO:0001705) or 'increased DNA damage checkpoint activation' (FYPO:0001707).
+synonym: "progressively elongating viable vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0001492 ! viable elongated vegetative cell
+created_by: midori
+creation_date: 2014-02-19T10:34:57Z
+
+[Term]
 id: FYPO:0003096
 name: decreased histone H3-K9 methylation at centromere outer repeat
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which methylation of lysine at position 9 of histone H3 in centromere outer repeat regions occurs to a lower extent than normal." [PomBase:mah]
@@ -42537,6 +42554,287 @@ synonym: "increased transposon-derived small RNA level" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2014-02-13T16:42:33Z
+
+[Term]
+id: FYPO:0003106
+name: stable shortened telomeres
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form telomeres that are shorter than normal, and that remain at a consistent length over successive generations." [PMID:24013504, PomBase:mah]
+synonym: "stable decreased telomere length" EXACT [PomBase:mah]
+synonym: "stably shortened telomeres" EXACT [PomBase:mah]
+is_a: FYPO:0002239 ! shortened telomeres
+created_by: midori
+creation_date: 2014-02-19T11:03:54Z
+
+[Term]
+id: FYPO:0003107
+name: progressively shortening telomeres
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form telomeres that are shorter than normal, and that continue to decrease in length over successive generations." [PMID:24013504, PomBase:mah]
+synonym: "progressively decreasing telomere length" EXACT [PomBase:mah]
+is_a: FYPO:0002239 ! shortened telomeres
+created_by: midori
+creation_date: 2014-02-19T11:05:13Z
+
+[Term]
+id: FYPO:0003108
+name: abnormal protein localization to telomere
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the telomere of a chromosome is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the telomere and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to chromosome, telomeric region" EXACT [GO:0070198, PomBase:mah]
+synonym: "abnormal protein localisation to telomere" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to chromosome, telomeric region" EXACT [GO:0070198, PomBase:mah]
+synonym: "abnormal protein localization to telomere during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0070198
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-02-19T11:07:53Z
+
+[Term]
+id: FYPO:0003109
+name: abolished protein localization to telomere
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the telomere of a chromosome does not occur." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to chromosome, telomeric region" EXACT [GO:0070198, PomBase:mah]
+synonym: "abolished protein localisation to telomere" EXACT [PomBase:mah]
+synonym: "abolished protein localization to chromosome, telomeric region" EXACT [GO:0070198, PomBase:mah]
+synonym: "abolished protein localization to telomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein absent from telomere" RELATED [PomBase:mah]
+synonym: "protein localization to telomere abolished" EXACT [PomBase:mah]
+is_a: FYPO:0003108 ! abnormal protein localization to telomere
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0070198
+created_by: midori
+creation_date: 2014-02-19T11:08:34Z
+
+[Term]
+id: FYPO:0003110
+name: sensitive to caffeine and rapamycin
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to a combination of caffeine and rapamycin. Cells stop growing (and may die) at concentrations of caffeine and rapamycin that allows wild type cells to grow." [PMID:23551936, PomBase:mah]
+synonym: "hypersensitive to caffeine and rapamycin" EXACT [PomBase:mah]
+synonym: "sensitive to caffeine and rapamycin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-02-19T11:21:00Z
+
+[Term]
+id: FYPO:0003111
+name: abnormal ubiquitinyl hydrolase activity
+def: "A molecular function phenotype in which the observed rate of ubiquitinyl hydrolase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0036459
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-02-19T11:36:19Z
+
+[Term]
+id: FYPO:0003112
+name: increased ubiquitinyl hydrolase activity
+def: "A molecular function phenotype in which the observed rate of ubiquitinyl hydrolase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0003111 ! abnormal ubiquitinyl hydrolase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0036459
+created_by: midori
+creation_date: 2014-02-19T11:36:28Z
+
+[Term]
+id: FYPO:0003113
+name: resistance to sodium nitroprusside
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of sodium nitroprusside than normal." [PomBase:mah]
+synonym: "resistance to sodium nitroprusside during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to sodium nitroprusside" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-02-19T11:38:18Z
+
+[Term]
+id: FYPO:0003114
+name: increased cellular nitric oxide level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of nitric oxide measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular nitric oxide level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased cellular NO level" EXACT [CHEBI:16480]
+synonym: "increased nitric oxide accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:16480
+created_by: midori
+creation_date: 2014-02-19T11:43:42Z
+
+[Term]
+id: FYPO:0003115
+name: resistance to L-methionine (R)-S-oxide
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of L-methionine (R)-S-oxide than normal." [PomBase:mah]
+synonym: "resistance to L-methionine (R)-S-oxide during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to L-methionine (R)-S-oxide" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-02-19T11:45:51Z
+
+[Term]
+id: FYPO:0003116
+name: sensitive to plumbagin
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to plumbagin. Cells stop growing (and may die) at a concentration of plumbagin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to plumbagin" EXACT [PomBase:mah]
+synonym: "sensitive to plumbagin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-02-19T14:29:40Z
+
+[Term]
+id: FYPO:0003117
+name: increased cellular reactive oxygen species level during cellular response to plumbagin
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of reactive oxygen species (ROS) measured in a cell is lower than normal during a cellular response to plumbagin." [PomBase:mah]
+synonym: "increased cellular reactive oxygen species accumulation during cellular response to plumbagin" RELATED [PomBase:mah]
+synonym: "increased cellular reactive oxygen species level during cellular response to plumbagin during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased cellular ROS accumulation during cellular response to plumbagin" RELATED [PomBase:mah]
+synonym: "increased cellular ROS level during cellular response to plumbagin" EXACT [PomBase:mah]
+synonym: "increased ROS accumulation during cellular response to plumbagin" RELATED [PomBase:al]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+is_a: FYPO:0002142 ! altered cellular reactive oxygen species level
+created_by: midori
+creation_date: 2014-02-19T14:31:55Z
+
+[Term]
+id: FYPO:0003118
+name: normal cellular reactive oxygen species level during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of reactive oxygen species (ROS) measured in the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular ROS level" EXACT [PomBase:mah]
+synonym: "normal level of reactive oxygen species in cell" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:26523
+created_by: midori
+creation_date: 2014-02-19T14:36:02Z
+
+[Term]
+id: FYPO:0003119
+name: increased nuclear polyadenylated mRNA level during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of polyadenylated messenger RNA (mRNA) measured in the nucleus is higher than normal. Total mRNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased nuclear poly(A)+ mRNA level during vegetative growth" EXACT [PomBase:vw]
+synonym: "increased nuclear polyadenylated messenger RNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased nuclear polyadenylated mRNA accumulation during vegetative growth" RELATED [PomBase:mah]
+synonym: "increased nuclear polyadenylated mRNA transcript level during vegetative growth" EXACT [PomBase:vw]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+is_a: FYPO:0002934 ! altered mRNA level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005634
+intersection_of: towards SO:0000871
+created_by: midori
+creation_date: 2014-02-19T15:21:49Z
+
+[Term]
+id: FYPO:0003120
+name: decreased transcription during glucose starvation
+def: "A cellular process phenotype in which transcription occurs to a lower extent than normal when the cell is subject to glucose starvation. All genes, or a specific subset of genes, may be affected." [PomBase:mah]
+comment: Use this term if there is evidence, such as labeled nucleotide incorporation, showing that transcription rather than RNA stability is affected; otherwise, use 'decreased RNA level' (FYPO:0000826).
+synonym: "decreased transcription during cellular response to glucose starvation" EXACT [PomBase:mah]
+synonym: "decreased transcription during glucose depletion" EXACT [PomBase:vw]
+synonym: "decreased transcription during glucose deprivation" EXACT [PomBase:vw]
+synonym: "decreased transcription in response to glucose starvation" EXACT [PomBase:mah, PomBase:vw]
+synonym: "reduced transcription during glucose starvation" EXACT [PomBase:mah]
+is_a: FYPO:0002876 ! decreased transcription
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0042149
+intersection_of: inheres_in GO:0006351
+relationship: has_output FYPO:0000826 ! decreased RNA level
+created_by: midori
+creation_date: 2014-02-19T15:29:30Z
+
+[Term]
+id: FYPO:0003121
+name: normal rate of homologous chromosome pairing at cis-acting homologous chromosome pairing region
+def: "A cellular process phenotype in which the rate, or speed, of homologous chromosome pairing during meiosis (synapsis) is normal (i.e. indistinguishable from wild type) at a cis-acting homologous chromosome pairing region such as the sme2 locus." [PMID:22582262, PMID:23117617, PMID:24173580, PomBase:mah]
+synonym: "normal rate of homologous chromosome pairing at meiosis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+synonym: "normal rate of homologous chromosome pairing at sme2 locus" NARROW [PomBase:mah]
+synonym: "normal rate of synapsis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
+is_a: FYPO:0003051 ! normal homologous chromosome pairing at cis-acting homologous chromosome pairing region
+created_by: midori
+creation_date: 2014-02-19T15:39:51Z
+
+[Term]
+id: FYPO:0003122
+name: decreased protein autophosphorylation during cellular response to DNA damage
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of autophosphorylation of one or more specific proteins, or of specific protein sites, is decreased during a cellular response to DNA damage." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "decreased protein autophosphorylation during cellular response to DNA damage during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein autophosphorylation during cellular response to DNA damage" EXACT [PomBase:mah]
+is_a: FYPO:0003019 ! abnormal protein autophosphorylation during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0006974
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0046777
+created_by: midori
+creation_date: 2014-02-19T15:58:59Z
+
+[Term]
+id: FYPO:0003123
+name: abolished protein localization to nuclear periphery during cellular response to heat
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nuclear periphery is abolished during a cellular response to heat." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to nuclear periphery during cellular response to heat" EXACT [PomBase:mah]
+synonym: "abolished protein localization to nuclear periphery during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to nuclear periphery abolished during cellular response to heat" EXACT [PomBase:mah]
+is_a: FYPO:0001424 ! abolished protein localization to nucleus
+is_a: FYPO:0002338 ! abnormal protein localization to nuclear periphery
+intersection_of: PATO:0001558
+intersection_of: during GO:0034605
+intersection_of: during GO:0072690
+intersection_of: towards GO:1990139
+created_by: midori
+creation_date: 2014-02-19T16:07:20Z
+
+[Term]
+id: FYPO:0003124
+name: abnormal cytoplasmic translation
+def: "A metabolism phenotype observed in the vegetative growth phase of the life cycle in which translation in the cytoplasm is abnormal. Translation is the synthesis of a protein using the sequence of a mature mRNA molecule to specify the sequence of amino acids in a polypeptide chain." [GO:0002183, PomBase:mah]
+comment: Note that this term should be used only when an experiment measures protein synthesis directly, e.g. by measuring incorporation of a radiolabeled amino acid. Consider annotating to 'altered protein level' (FYPO:0000834) or one of its descendants.
+synonym: "abnormal cytoplasmic protein biosynthesis" EXACT [GO:0006412, PomBase:mah]
+synonym: "abnormal cytoplasmic protein synthesis" EXACT [GO:0006412, PomBase:mah]
+synonym: "abnormal cytoplasmic translation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000291 ! translation phenotype
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0002180
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-02-19T16:10:41Z
+
+[Term]
+id: FYPO:0003125
+name: decreased cytoplasmic translational initiation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of translational initiation in the cytoplasm is decreased." [PomBase:mah]
+comment: Note that this term should be used only when an experiment measures the initiation of protein synthesis directly, e.g. by ribosome profiling. Consider annotating to 'decreased protein level' (FYPO:0000835) or one of its descendants.
+synonym: "decreased cytoplasmic translational initiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced cytoplasmic translational initiation" EXACT [PomBase:mah]
+is_a: FYPO:0001797 ! abnormal translation
+is_a: FYPO:0003124 ! abnormal cytoplasmic translation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0002183
+created_by: midori
+creation_date: 2014-02-19T16:10:56Z
+
+[Term]
+id: FYPO:0003126
+name: post-anaphase array absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain a detectable post-anaphase array of microtubules." [PMID:24006493, PMID:9601091, PomBase:mah]
+synonym: "absent post-anaphase array" EXACT [PomBase:mah]
+synonym: "PAA absent from cell" EXACT [PMID:9601091]
+synonym: "post-anaphase microtubule array absent from cell" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+created_by: midori
+creation_date: 2014-02-19T16:39:51Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
