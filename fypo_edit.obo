@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 19:02:2014 16:46
+date: 20:02:2014 15:34
 saved-by: midori
-auto-generated-by: OBO-Edit 2.3-beta7
+auto-generated-by: OBO-Edit 2.3
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
@@ -10873,7 +10873,6 @@ intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0000949 ! aseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-relationship: output_of FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
 created_by: midori
 creation_date: 2012-03-12T03:25:38Z
 
@@ -33298,6 +33297,7 @@ id: FYPO:0002444
 name: loss of punctate cytoplasmic localization
 def: "A cell phenotype in which a gene product that is normally localized to discrete regions in the cytoplasm, visible as foci or dots by fluorescence microscopy, is abnormally localized such that dots cannot be observed." [PomBase:mah]
 synonym: "cytoplasmic dots absent" RELATED [PomBase:mah]
+synonym: "loss of punctate cytoplasmic localization during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
 created_by: midori
 creation_date: 2013-08-06T13:54:47Z
@@ -35887,6 +35887,7 @@ creation_date: 2013-09-05T15:50:26Z
 id: FYPO:0002624
 name: decreased punctate nuclear localization
 def: "A cell phenotype in which a gene product that is normally localized to discrete regions in the nucleus, visible as foci or dots by fluorescence microscopy, is abnormally localized such that fewer dots are observed than in normal (wild type) cells." [PomBase:mah]
+synonym: "decreased punctate nuclear localization during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced punctate nuclear localization" EXACT [PomBase:mah]
 is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
 created_by: midori
@@ -41163,7 +41164,7 @@ is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
 is_a: FYPO:0002142 ! altered cellular reactive oxygen species level
 intersection_of: PATO:0001162
 intersection_of: during GO:0072690
-intersection_of: inheres_in CL:0000000
+intersection_of: inheres_in CL:0000334
 intersection_of: towards CHEBI:26523
 created_by: midori
 creation_date: 2013-12-17T15:47:02Z
@@ -42697,6 +42698,11 @@ synonym: "increased cellular ROS level during cellular response to plumbagin" EX
 synonym: "increased ROS accumulation during cellular response to plumbagin" RELATED [PomBase:al]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 is_a: FYPO:0002142 ! altered cellular reactive oxygen species level
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:1902709
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:26523
 created_by: midori
 creation_date: 2014-02-19T14:31:55Z
 
@@ -42833,8 +42839,150 @@ synonym: "absent post-anaphase array" EXACT [PomBase:mah]
 synonym: "PAA absent from cell" EXACT [PMID:9601091]
 synonym: "post-anaphase microtubule array absent from cell" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+intersection_of: PATO:0002000
+intersection_of: inheres_in CL:0000334
+intersection_of: towards GO:1990295
 created_by: midori
 creation_date: 2014-02-19T16:39:51Z
+
+[Term]
+id: FYPO:0003127
+name: decreased cellular nitric oxide level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of nitric oxide measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular nitric oxide level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased cellular NO level" EXACT [CHEBI:16480]
+synonym: "decreased nitric oxide accumulation" RELATED [PomBase:mah]
+synonym: "reduced cellular nitric oxide level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:16480
+created_by: midori
+creation_date: 2014-02-20T14:02:44Z
+
+[Term]
+id: FYPO:0003128
+name: inviable elongated mononucleate aseptate vegetative cell with mitotic cell cycle arrest in M phase
+def: "A cell morphology phenotype in which a vegetative cell is inviable contains one nucleus, has no septum, is longer than normal, and progress through the mitotic cell cycle is arrested in M phase." [PomBase:mah]
+comment: A population of cells with this phenotype usually shows a marginal increase in cell number before all cells die. Cells arrested in S phase typically have more than 1C, but less than 2C, DNA content. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "elongated inviable mononucleate aseptate cell with mitotic cell cycle arrest in M phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated inviable mononucleate aseptate vegetative cell with mitotic cell cycle arrest in M phase" EXACT [PomBase:mah]
+synonym: "essential; elongated mononucleate aseptate vegetative cell with mitotic cell cycle arrest in M phase" RELATED [PomBase:mah]
+synonym: "inviable elongated mononucleate aseptate vegetative cell with cell cycle arrest in mitosis" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate aseptate vegetative cell with mitotic nuclear division arrest" EXACT [PomBase:vw]
+synonym: "mitotic cell cycle arrest in M-phase with elongated inviable mononucleate aseptate cell" EXACT [PomBase:vw]
+synonym: "mitotic M-phase arrested elongated inviable mononucleate aseptate vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0000839 ! inviable elongated mononucleate aseptate cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000049 ! inviable cell
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
+intersection_of: has_part FYPO:0000608 ! mitotic cell cycle arrest in M phase
+intersection_of: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0000608 ! mitotic cell cycle arrest in M phase
+created_by: midori
+creation_date: 2014-02-20T14:09:34Z
+
+[Term]
+id: FYPO:0003129
+name: loss of punctate nuclear localization during cellular response to ionizing radiation
+def: "A cell phenotype in which a gene product that is normally localized to discrete regions in the nucleus, visible as foci or dots by fluorescence microscopy, is abnormally localized such that dots cannot be observed during a cellular response to ionizing radiation." [PomBase:mah]
+synonym: "loss of punctate nuclear localization during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "loss of punctate nuclear localization during cellular response to IR" EXACT [PomBase:al]
+is_a: FYPO:0000782
+created_by: midori
+creation_date: 2014-02-20T14:20:27Z
+
+[Term]
+id: FYPO:0003130
+name: advanced mitotic G1 phase entry during cellular response to ionizing radiation
+def: "A cellular process phenotype in which entry into the G1 phase of the mitotic cell cycle (exit from mitosis) takes place earlier than normal during a cellular response to ionizing radiation." [PomBase:mah]
+synonym: "accelerated entry into G1 during cellular response to ionizing radiation" RELATED [PomBase:al]
+synonym: "advanced exit from mitosis during cellular response to ionizing radiation" EXACT [PomBase:mah]
+synonym: "advanced mitotic G1 phase entry during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "advanced mitotic G1 phase entry during cellular response to IR" EXACT [PomBase:al]
+synonym: "advanced mitotic G1 progression during cellular response to ionizing radiation" RELATED [PomBase:mah]
+synonym: "mitotic cell cycle advance in G1 during cellular response to ionizing radiation" RELATED [PomBase:mah]
+synonym: "premature exit from mitosis during cellular response to ionizing radiation" EXACT [PomBase:mah]
+synonym: "premature mitotic G1 phase entry during cellular response to ionizing radiation" EXACT [PomBase:mah]
+is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
+is_a: FYPO:0000827 ! advanced cell cycle phase transition
+intersection_of: PATO:0000694
+intersection_of: happens_during GO:0071479
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0010458
+created_by: midori
+creation_date: 2014-02-20T14:24:36Z
+
+[Term]
+id: FYPO:0003131
+name: normal protein phosphorylation during cellular response to ionizing radiation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins is normal during a cellular response to ionizing radiation." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "normal protein phosphorylation during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein phosphorylation during cellular response to IR" EXACT [PomBase:al]
+is_a: FYPO:0000776 ! normal protein phosphorylation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0071479
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-02-20T14:27:11Z
+
+[Term]
+id: FYPO:0003132
+name: normal punctate nuclear localization during cellular response to ionizing radiation
+def: "A cell phenotype in which a gene product is normally localized to discrete regions in the nucleus (i.e. its localization is indistinguishable from wild type), visible as foci or dots by fluorescence microscopy, during a cellular response to ionizing radiation." [PomBase:mah]
+synonym: "normal punctate nuclear localization during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal punctate nuclear localization during cellular response to IR" EXACT [PomBase:al]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+created_by: midori
+creation_date: 2014-02-20T14:29:03Z
+
+[Term]
+id: FYPO:0003133
+name: galactomannan absent from cell wall
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of galactomannan measured in the cell wall is too low to detect." [PomBase:mah]
+synonym: "galactomannan absent from cell surface" RELATED [PomBase:al]
+synonym: "galactomannan absent from cell wall during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002628 ! decreased level of substance in cell wall
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0009277
+intersection_of: towards CHEBI:27680
+created_by: midori
+creation_date: 2014-02-20T14:45:12Z
+
+[Term]
+id: FYPO:0003134
+name: increased cell wall alpha-glucan level during cellular response to calcium starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of alpha-D-glucan measured in the cell wall is greater than normal during a cellular response to calcium starvation." [PomBase:mah]
+synonym: "increased cell wall alpha-D-glucan level during cellular response to calcium starvation" EXACT [CHEBI:22385, PomBase:mah]
+synonym: "increased cell wall alpha-glucan accumulation during cellular response to calcium starvation" RELATED [PomBase:mah]
+synonym: "increased cell wall alpha-glucan level during cellular response to calcium starvation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001083 ! increased polysaccharide level
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:0072732
+intersection_of: inheres_in GO:0009277
+intersection_of: towards CHEBI:22385
+created_by: midori
+creation_date: 2014-02-20T14:46:18Z
+
+[Term]
+id: FYPO:0003135
+name: normal agglutination
+def: "A cell adhesion phenotype in which cells adhere to other cells of compatible mating type normally (i.e. agglutination is ndistinguishable from wild type)." [PomBase:mah]
+synonym: "normal agglutination involved in conjugation with cellular fusion" EXACT [GO:0000752]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: qualifier PATO:0000461
+intersection_of: towards GO:0000752
+created_by: midori
+creation_date: 2014-02-20T14:51:35Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
