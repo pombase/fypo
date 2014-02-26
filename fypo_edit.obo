@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 20:02:2014 15:34
+date: 26:02:2014 18:04
 saved-by: midori
-auto-generated-by: OBO-Edit 2.3
+auto-generated-by: OBO-Edit 2.3-beta7
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
@@ -1259,6 +1259,7 @@ id: FYPO:0000098
 name: sensitive to calcium
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to calcium. Cells stop growing (and may die) at a concentration of calcium ions that allows wild type cells to grow." [PomBase:mah]
 synonym: "hypersensitive to calcium" EXACT [PomBase:mah]
+synonym: "sensitive to calcium chloride" NARROW [PomBase:mah]
 synonym: "sensitive to calcium during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to calcium ions" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
@@ -3557,6 +3558,7 @@ id: FYPO:0000281
 name: small vacuoles present in greater numbers during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more, but smaller, vacuoles than normal." [PomBase:mah]
 synonym: "fragmented vacuoles during vegetative growth" RELATED [PomBase:mah]
+synonym: "vacuole fusion defects" RELATED [PomBase:vw]
 synonym: "vacuole organization defects, fragmented vacuoles during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
 is_a: FYPO:0002258 ! small vacuoles present in greater numbers
@@ -7489,6 +7491,7 @@ id: FYPO:0000580
 name: abnormal ascospore wall biogenesis
 def: "A cellular process phenotype in which ascospore wall biogenesis is abnormal." [PomBase:mah]
 synonym: "abnormal spore wall formation" RELATED [PomBase:mah]
+synonym: "abnormal spore wall organization" RELATED [PomBase:vw]
 synonym: "spore wall formation: abnormal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000174 ! abnormal cell wall biogenesis
 intersection_of: PATO:0000001
@@ -7955,6 +7958,7 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000619
 name: mitotic cell cycle arrest in anaphase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in anaphase." [PomBase:mah]
+synonym: "cell cycle arrest in mitotic anaphase" EXACT [GO:0000090]
 synonym: "mitotic cell cycle arrest in anaphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in late anaphase: arrested" NARROW [SGD:phenotype_annotation]
 is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
@@ -7969,6 +7973,7 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000620
 name: mitotic cell cycle arrest in metaphase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in metaphase." [PomBase:mah]
+synonym: "cell cycle arrest in mitotic metaphase" EXACT [GO:0000089]
 synonym: "mitotic cell cycle arrest in metaphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in metaphase: arrested" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
@@ -7998,6 +8003,7 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000622
 name: mitotic cell cycle arrest in telophase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in telophase." [PomBase:mah]
+synonym: "cell cycle arrest in mitotic telophase" EXACT [GO:0000093]
 synonym: "mitotic cell cycle arrest in telophase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in telophase: arrested" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
@@ -9148,12 +9154,15 @@ creation_date: 2011-12-06T12:15:03Z
 
 [Term]
 id: FYPO:0000711
-name: decreased cell cycle arrest in response to nitrogen starvation
-def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation is decreased." [PomBase:mah]
+name: decreased cell cycle arrest in mitotic G1 phase in response to nitrogen starvation
+def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation occurs in G1 phase, but its occurrence is decreased." [PomBase:mah]
 comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
-synonym: "decreased cell cycle arrest in response to nitrogen depletion" EXACT [PomBase:vw]
-synonym: "decreased cell cycle arrest in response to nitrogen deprivation" EXACT [PomBase:vw]
-synonym: "reduced cell cycle arrest in response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "decreased cell cycle arrest in mitotic G1 phase during cellular response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "decreased cell cycle arrest in mitotic G1 phase in response to nitrogen depletion" EXACT [PomBase:vw]
+synonym: "decreased cell cycle arrest in mitotic G1 phase in response to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "decreased mitotic G1 arrest in response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "decreased nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
+is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
 is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0030996
@@ -9162,11 +9171,15 @@ creation_date: 2011-12-06T12:15:32Z
 
 [Term]
 id: FYPO:0000712
-name: delayed cell cycle arrest in response to nitrogen starvation
-def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation takes place later than normal." [PomBase:mah]
+name: delayed cell cycle arrest in mitotic G1 phase in response to nitrogen starvation
+def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation occurs in G1 phase, but takes place later than normal." [PomBase:mah]
 comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
-synonym: "delayed cell cycle arrest in response to nitrogen depletion" EXACT [PomBase:vw]
-synonym: "delayed cell cycle arrest in response to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "delayed cell cycle arrest in mitotic G1 phase during cellular response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "delayed cell cycle arrest in mitotic G1 phase in response to nitrogen depletion" EXACT [PomBase:vw]
+synonym: "delayed cell cycle arrest in mitotic G1 phase in response to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "delayed mitotic G1 arrest in response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "delayed nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
+is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
 is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
 intersection_of: PATO:0000502
 intersection_of: inheres_in GO:0030996
@@ -13160,7 +13173,7 @@ creation_date: 2012-04-25T02:41:20Z
 id: FYPO:0000998
 name: elongated cell during nitrogen starvation
 def: "A cell morphology phenotype in which a cell becomes longer than normal, i.e. the maximum distance between the cell ends is greater than normal, when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
-comment: Note that this term is classified as a type of abnormal cell shape, because wild-type cells are never seen with the proportions (length:width ratio) observed in elongated cells. Small cells, in contrast, have the same proportions as a subset of wild-type cells, and simply do not grow to the full length seen in wild type. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+comment: Note that wild-type cells become shorter under nitrogen starvation conditions than under nitrogen-replete conditions, and that mutant cells subjected to nitrogen starvation may have lengths similar to wild type cells under non-starved conditions. Also note that this term is classified as a type of abnormal cell shape, because under a given set of conditions wild-type cells are never seen with the proportions (length:width ratio) observed in elongated cells. Small cells, in contrast, have the same proportions as a subset of wild-type cells, and simply do not grow to the full length seen in wild type. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
 synonym: "cell morphology, elongated cell during nitrogen starvation" EXACT [PomBase:mah]
 synonym: "elongated cell during nitrogen depletion" EXACT [PomBase:vw]
 synonym: "elongated cell during nitrogen deprivation" EXACT [PomBase:vw]
@@ -13211,6 +13224,8 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
 synonym: "abnormal cell cycle arrest in mitotic G2 phase during nitrogen depletion" EXACT [PomBase:vw]
 synonym: "abnormal cell cycle arrest in mitotic G2 phase during nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "advanced nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
+synonym: "cell cycle arrest in mitotic G2 phase during nitrogen starvation" EXACT [PomBase:mah]
 synonym: "mitotic G2 phase arrest during nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
 is_a: FYPO:0001151 ! cell cycle arrest in mitotic G2 phase during starvation
@@ -14774,11 +14789,15 @@ creation_date: 2012-06-01T15:26:21Z
 
 [Term]
 id: FYPO:0001112
-name: advanced cell cycle arrest in response to nitrogen starvation
-def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation takes place earlier than normal." [PomBase:mah]
+name: advanced cell cycle arrest in mitotic G1 phase in response to nitrogen starvation
+def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation occurs in G1 phase, but takes takes place earlier than normal." [PomBase:mah]
 comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
-synonym: "advanced cell cycle arrest in response to nitrogen depletion" EXACT [PomBase:vw]
-synonym: "advanced cell cycle arrest in response to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "advanced cell cycle arrest in mitotic G1 phase during cellular response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "advanced cell cycle arrest in mitotic G1 phase in response to nitrogen depletion" EXACT [PomBase:vw]
+synonym: "advanced cell cycle arrest in mitotic G1 phase in response to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "advanced mitotic G1 arrest in response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "advanced nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
+is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
 is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
 intersection_of: PATO:0000694
 intersection_of: during GO:0006995
@@ -18725,7 +18744,7 @@ creation_date: 2012-08-15T14:06:42Z
 [Term]
 id: FYPO:0001399
 name: normal mitotic spindle
-def: "A physical cellular phenotype in which the structure of the mitotic spindle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A physical cellular phenotype in which the mitotic spindle is normal (i.e. indistinguishable from wild type) with respect to structure, composition, location, and orientation." [PomBase:mah]
 synonym: "normal mitotic spindle during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
 intersection_of: PATO:0000001
@@ -25779,7 +25798,7 @@ creation_date: 2013-01-30T17:33:34Z
 [Term]
 id: FYPO:0001905
 name: normal mitotic spindle microtubules
-def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the structure of microtubules in the mitotic spindle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the number, structure, and orientation of microtubules in the mitotic spindle are normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal mitotic spindle microtubules during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
 intersection_of: PATO:0000001
@@ -28288,7 +28307,7 @@ creation_date: 2013-05-01T16:10:39Z
 [Term]
 id: FYPO:0002085
 name: normal vegetative cell growth
-def: "A cellular process phenotype in which the growth of a cell is normal in the vegetative growth phase of the life cycle. Cell growth is the process in which a cell irreversibly increases in size over time by accretion and biosynthetic production of matter similar to that already present." [GO:0016049, PomBase:mah]
+def: "A cellular process phenotype in which the growth of a cell is normal (i.e. indistinguishable from wild type) in the vegetative growth phase of the life cycle. Cell growth is the process in which a cell irreversibly increases in size over time by accretion and biosynthetic production of matter similar to that already present." [GO:0016049, PomBase:mah]
 comment: Note that this term refers to growth at the level of any individual cell, and that it specifies only that increase in cell size due to metabolism is normal. Other aspects of the cell's biology may be abnormal, and other abnormalities may affect increase in cell number (population growth). Also see 'cell population growth phenotype' (FYPO:0000139) and its descendants.
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 is_a: FYPO:0002062 ! normal cell growth
@@ -31702,10 +31721,10 @@ synonym: "increased histone H3K4 dimethylation at centromere outer repeat" EXACT
 synonym: "increased histone H3K4me2 at centromere outer repeat" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K4 dimethylation at centromere outer repeat" EXACT [GO:0044648, PomBase:mah]
 is_a: FYPO:0002330 ! abnormal histone H3-K4 methylation
+intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0044648
 intersection_of: occurs_at SO:0001799
-intersection_of: qualifier PATO:0002051
 created_by: midori
 creation_date: 2013-06-21T17:31:19Z
 
@@ -36977,6 +36996,7 @@ def: "A cellular process phenotype in which the haploid nuclei formed by meiotic
 synonym: "abnormal nuclear distribution after meiosis" EXACT [PomBase:mah]
 synonym: "abnormal nuclear separation during sporulation" RELATED [PomBase:mah]
 synonym: "abnormal nuclear separation in ascus" EXACT [PomBase:mah]
+synonym: "abnormal separation of nuclei in ascus" EXACT [PomBase:vw]
 is_a: FYPO:0000121 ! abnormal sporulation
 created_by: midori
 creation_date: 2013-09-25T14:53:56Z
@@ -39204,10 +39224,9 @@ synonym: "abnormal ER localization" EXACT [PomBase:mah]
 is_a: FYPO:0001337 ! localization phenotype during vegetative growth
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
 intersection_of: PATO:0000001
-intersection_of: happens_during GO:0051643
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0072766
 intersection_of: qualifier PATO:0000460
+intersection_of: inheres_in GO:0051643
 created_by: midori
 creation_date: 2013-11-14T14:17:54Z
 
@@ -40852,9 +40871,9 @@ name: normal RNA level during cellular response to methyl methanesulfonate
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to methyl methanesulfonate is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to methyl methanesulfonate" NARROW [PomBase:mah]
-synonym: "normal RNA level during cellular response to MMS" EXACT [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal RNA level during cellular response to MMS" EXACT [PomBase:mah]
 is_a: FYPO:0001317 ! normal RNA level during vegetative growth
 intersection_of: PATO:0001159
 intersection_of: exists_during GO:0071703
@@ -41030,6 +41049,7 @@ creation_date: 2013-12-17T13:57:25Z
 id: FYPO:0002996
 name: normal negative regulation of DNA replication during cellular response to hydrogen peroxide
 def: "A regulation phenotype in which regulation of DNA replication during the mitotic cell cycle is normal (i.e. indistinguishable from wild type) during a cellular response to hydrogen peroxide." [PomBase:mah]
+synonym: "normal negative regulation of DNA replication during cellular response to H2O2" EXACT [PomBase:mah]
 synonym: "normal negative regulation of nuclear cell cycle DNA replication during cellular response to hydrogen peroxide" EXACT [GO:1902576]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
@@ -41094,7 +41114,7 @@ creation_date: 2013-12-17T14:17:58Z
 [Term]
 id: FYPO:0003000
 name: abolished actin filament polymerization
-def: "A cytokinesis phenotype observed in the vegetative growth phase of the life cycle in which the assembly of actin filaments actin monomers does not occur." [PomBase:mah]
+def: "A cytokinesis phenotype observed in the vegetative growth phase of the life cycle in which the assembly of actin filaments from actin monomers does not occur." [PomBase:mah]
 synonym: "abolished actin filament polymerisation" EXACT [PomBase:mah]
 synonym: "abolished actin filament polymerization during vegetative growth" EXACT [PomBase:mah]
 synonym: "actin filament polymerization abolished" EXACT [PomBase:mah]
@@ -42892,7 +42912,7 @@ name: loss of punctate nuclear localization during cellular response to ionizing
 def: "A cell phenotype in which a gene product that is normally localized to discrete regions in the nucleus, visible as foci or dots by fluorescence microscopy, is abnormally localized such that dots cannot be observed during a cellular response to ionizing radiation." [PomBase:mah]
 synonym: "loss of punctate nuclear localization during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
 synonym: "loss of punctate nuclear localization during cellular response to IR" EXACT [PomBase:al]
-is_a: FYPO:0000782
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
 created_by: midori
 creation_date: 2014-02-20T14:20:27Z
 
@@ -42984,6 +43004,417 @@ intersection_of: qualifier PATO:0000461
 intersection_of: towards GO:0000752
 created_by: midori
 creation_date: 2014-02-20T14:51:35Z
+
+[Term]
+id: FYPO:0003136
+name: excess plasma membrane present
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells contain more plasma membrane than normal. Excess plasma membrane may appear as bubble-like structures inside the cell, and may be concentrated in the mating projection during conjugation." [PMID:19627505, PomBase:mah]
+synonym: "excess mating projection membrane present" NARROW [GO:0070250, PomBase:al, PomBase:vw]
+synonym: "excess plasma membrane present during vegetative growth" EXACT [PomBase:mah]
+synonym: "internal membrane bubbles present" RELATED [PMID:19627505, PomBase:vw]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+intersection_of: PATO:0002002
+intersection_of: exists_during GO:0072690
+intersection_of: towards GO:0005886
+created_by: midori
+creation_date: 2014-02-26T10:31:56Z
+
+[Term]
+id: FYPO:0003137
+name: normal mitotic spindle pole body
+def: "A physical cellular phenotype in which the mitotic spindle pole bodies are normal (i.e. indistinguishable from wild type) with respect to structure, composition, location, and orientation." [PomBase:mah]
+synonym: "normal spindle pole body during mitosis" EXACT [PomBase:vw]
+synonym: "normal spindle pole body during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
+intersection_of: PATO:0001241
+intersection_of: exists_during GO:0007067
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0044732
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-02-26T10:41:05Z
+
+[Term]
+id: FYPO:0003138
+name: abnormal ascospore wall morphology
+def: "A physical cellular phenotype in which the size, shape, or structure of the ascospore wall is abnormal." [PomBase:mah]
+synonym: "abnormal spore wall morphology" EXACT [PomBase:mah]
+synonym: "abnormal spore wall organization" RELATED [PomBase:vw]
+is_a: FYPO:0002946 ! abnormal cell wall
+intersection_of: PATO:0000051
+intersection_of: inheres_in GO:0005619
+intersection_of: qualifier PATO:0000460
+relationship: output_of FYPO:0000580 ! abnormal ascospore wall biogenesis
+created_by: midori
+creation_date: 2014-02-26T11:13:35Z
+
+[Term]
+id: FYPO:0003139
+name: abnormal sporulation resulting in formation of ascus containing anucleate spores
+def: "A sporulation phenotype that results in the formation of an ascus that contains spore-like bodies that do not contain nuclei." [PMID:8203159, PomBase:mah, PomBase:vw]
+synonym: "abnormal ascospore formation resulting in formation ascus containing anucleate spores" EXACT [GO:0030437, PomBase:mah]
+synonym: "abnormal sporulation resulting in formation of asci containing anucleate spores" RELATED [PomBase:mah]
+is_a: FYPO:0000121 ! abnormal sporulation
+created_by: midori
+creation_date: 2014-02-26T11:20:06Z
+
+[Term]
+id: FYPO:0003140
+name: decreased protein tyrosine phosphorylation during cellular response to heat
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of tyrosine residues in one or more specific proteins, or of specific protein sites, occurs to a lower extent than normal during a cellular response to heat." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "decreased peptidyl-tyrosine phosphorylation during cellular response to heat" EXACT [GO:0018108, PomBase:mah]
+synonym: "decreased protein tyrosine phosphorylation during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased tyrosine phosphorylation during cellular response to heat" EXACT [PomBase:al]
+synonym: "reduced protein tyrosine phosphorylation during cellular response to heat" EXACT [PomBase:mah]
+is_a: FYPO:0002375 ! decreased protein tyrosine phosphorylation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0034605
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0018108
+created_by: midori
+creation_date: 2014-02-26T11:22:56Z
+
+[Term]
+id: FYPO:0003141
+name: decreased protein tyrosine phosphorylation during cellular response to hydrogen peroxide
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of tyrosine residues in one or more specific proteins, or of specific protein sites, occurs to a lower extent than normal during a cellular response to hydrogen peroxide." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "decreased peptidyl-tyrosine phosphorylation during cellular response to hydrogen peroxide" EXACT [GO:0018108, PomBase:mah]
+synonym: "decreased protein tyrosine phosphorylation during cellular response to H2O2" EXACT [PomBase:mah]
+synonym: "decreased protein tyrosine phosphorylation during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased tyrosine phosphorylation during cellular response to hydrogen peroxide" EXACT [PomBase:al]
+synonym: "reduced protein tyrosine phosphorylation during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+is_a: FYPO:0002375 ! decreased protein tyrosine phosphorylation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0070301
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0018108
+created_by: midori
+creation_date: 2014-02-26T11:24:17Z
+
+[Term]
+id: FYPO:0003142
+name: decreased RNA level during cellular response to methyl methanesulfonate
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to methyl methanesulfonate is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mRNA level during cellular response to methyl methanesulfonate" NARROW [PomBase:mah]
+synonym: "decreased RNA accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased RNA level during cellular response to MMS" EXACT [PomBase:mah]
+synonym: "decreased transcript level during cellular response to methyl methanesulfonate" EXACT [PomBase:vw]
+synonym: "reduced RNA level during cellular response to methyl methanesulfonate" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:0072703
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-02-26T11:41:17Z
+
+[Term]
+id: FYPO:0003143
+name: decreased protein level during cellular response to methyl methanesulfonate
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to methyl methanesulfonate is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "decreased protein accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
+synonym: "decreased protein level during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein level during cellular response to MMS" EXACT [PomBase:mah]
+synonym: "reduced protein level during cellular response to methyl methanesulfonate" EXACT [PomBase:mah]
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+is_a: FYPO:0001548 ! altered protein level during cellular response to hydrogen peroxide
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:0072703
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-02-26T11:43:44Z
+
+[Term]
+id: FYPO:0003144
+name: normal protein level during cellular response to methyl methanesulfonate
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to the level of methyl methanesulfonate is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "normal protein accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
+synonym: "normal protein level during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein level during cellular response to MMS" EXACT [PomBase:mah]
+is_a: FYPO:0000833 ! normal protein level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:0072703
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-02-26T11:46:49Z
+
+[Term]
+id: FYPO:0003145
+name: mitotic cell cycle arrest in prophase
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in prophase." [PomBase:mah]
+synonym: "cell cycle arrest in mitotic prophase" EXACT [GO:0000088]
+synonym: "mitotic cell cycle arrest in prophase during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
+intersection_of: during GO:0000088
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0071850
+intersection_of: qualifier PATO:0000467
+created_by: midori
+creation_date: 2014-02-26T11:51:55Z
+
+[Term]
+id: FYPO:0003146
+name: sensitive to hydrostatic pressure
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to hydrostatic pressure." [PomBase:mah]
+comment: Use this term if you have assayed growth of cells exposed to oxidative stress in culture. If you have assayed the response to oxidative stress at the subcellular or molecular level, consider annotating to 'abnormal cellular response to oxidative stress during vegetative growth' (FYPO:0001340).
+synonym: "hypersensitive to hydrostatic pressure" EXACT [PomBase:mah]
+synonym: "sensitive to hydrostatic pressure during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
+created_by: midori
+creation_date: 2014-02-26T11:56:12Z
+
+[Term]
+id: FYPO:0003147
+name: abnormal UDP-N-acetylglucosamine-dolichyl-phosphate N-acetylglucosaminephosphotransferase activity
+def: "A molecular function phenotype in which the observed rate of UDP-N-acetylglucosamine-dolichyl-phosphate N-acetylglucosaminephosphotransferase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003975
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-02-26T11:58:51Z
+
+[Term]
+id: FYPO:0003148
+name: increased UDP-N-acetylglucosamine-dolichyl-phosphate N-acetylglucosaminephosphotransferase activity
+def: "A molecular function phenotype in which the observed rate of UDP-N-acetylglucosamine-dolichyl-phosphate N-acetylglucosaminephosphotransferase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0003147 ! abnormal UDP-N-acetylglucosamine-dolichyl-phosphate N-acetylglucosaminephosphotransferase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0003975
+created_by: midori
+creation_date: 2014-02-26T11:59:00Z
+
+[Term]
+id: FYPO:0003149
+name: decreased chromatin binding during cellular response to methyl methanesulfonate
+def: "A molecular function phenotype in which occurrence of chromatin binding by a gene product (usually a protein) in a mutant is decreased during a cellular response to methyl methanesulfonate. The affected gene product may be encoded by the mutated gene, or by a different gene, and may normally bind DNA, protein, or both in chromatin." [PomBase:mah]
+synonym: "decreased chromatin binding during cellular response to MMS" EXACT [PomBase:mah]
+synonym: "reduced chromatin binding during cellular response to methyl methanesulfonate" EXACT [PomBase:mah]
+is_a: FYPO:0002576 ! abnormal chromatin binding
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072703
+intersection_of: inheres_in GO:0003682
+created_by: midori
+creation_date: 2014-02-26T14:50:12Z
+
+[Term]
+id: FYPO:0003150
+name: decreased activation of bipolar cell growth
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which activation of bipolar cell growth occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased activation of bipolar vegetative cell growth" EXACT [PomBase:mah]
+synonym: "decreased NETO" EXACT [PomBase:mah]
+synonym: "decreased new end take-off" EXACT [PomBase:mah]
+synonym: "reduced activation of bipolar cell growth" EXACT [PomBase:mah]
+is_a: FYPO:0000147 ! abnormal activation of bipolar cell growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051519
+created_by: midori
+creation_date: 2014-02-26T15:48:02Z
+
+[Term]
+id: FYPO:0003151
+name: decreased protein level during cellular response to heat
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to heat is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "decreased protein accumulation during cellular response to heat" RELATED [PomBase:mah]
+synonym: "decreased protein level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein level during cellular response to heat" EXACT [PomBase:mah]
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0034605
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-02-26T15:56:14Z
+
+[Term]
+id: FYPO:0003152
+name: increased protein level during cellular response to heat
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to heat is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "increased protein accumulation during cellular response to heat" RELATED [PomBase:mah]
+synonym: "increased protein level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0034605
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-02-26T15:57:07Z
+
+[Term]
+id: FYPO:0003153
+name: normal protein level during cellular response to heat
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to heat is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "normal protein accumulation during cellular response to heat" RELATED [PomBase:mah]
+synonym: "normal protein level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000833 ! normal protein level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0034605
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-02-26T15:58:08Z
+
+[Term]
+id: FYPO:0003154
+name: abnormal vegetative cell growth
+def: "A cellular process phenotype in which cell growth is abnormal in the vegetative growth phase of the life cycle. Cell growth is the irreversible increase in size over time by accretion and biosynthetic production of matter similar to that already present." [PomBase:mah]
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0016049
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-02-26T16:03:54Z
+
+[Term]
+id: FYPO:0003155
+name: intermittent monopolar cell growth
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cells grow from one end, and do not grow continuously, but instead oscillate between periods of growth and pauses during which no growth occurs." [PMID:24146635, PomBase:mah]
+synonym: "intermittent monopolar vegetative cell growth" EXACT [PomBase:mah]
+is_a: FYPO:0003154 ! abnormal vegetative cell growth
+intersection_of: PATO:0000690
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0042814
+created_by: midori
+creation_date: 2014-02-26T16:08:07Z
+
+[Term]
+id: FYPO:0003156
+name: normal monopolar cell growth
+def: "A cellular process phenotype in which the monopolar growth of a cell is normal (i.e. indistinguishable from wild type in timing, extent, rate, etc.) in the vegetative growth phase of the life cycle." [PMID:24146635, PomBase:mah]
+comment: Note that this term refers to growth at the level of any individual cell, and that it specifies only that increase in cell size due to metabolism is normal. Other aspects of the cell's biology may be abnormal, and other abnormalities may affect increase in cell number (population growth). Also see 'cell population growth phenotype' (FYPO:0000139) and its descendants.
+synonym: "normal monopolar vegetative cell growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+is_a: FYPO:0002062 ! normal cell growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0042814
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-02-26T16:13:48Z
+
+[Term]
+id: FYPO:0003157
+name: unstable protein localization to growing cell tip
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein is localized to the growing cell tip, but does not remain there continuously." [PMID:24146635, PomBase:mah]
+is_a: FYPO:0001584 ! abnormal protein localization to cell tip
+created_by: midori
+creation_date: 2014-02-26T16:34:09Z
+
+[Term]
+id: FYPO:0003158
+name: abolished actin filament bundle assembly
+def: "A cytokinesis phenotype observed in the vegetative growth phase of the life cycle in which the assembly of actin filament bundles does not occur." [PomBase:mah]
+synonym: "abolished actin bundling" EXACT [PomBase:vw]
+synonym: "abolished actin filament bundle assembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "actin bundling absent" EXACT [PomBase:vw]
+synonym: "actin filament bundle assembly abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000727 ! abnormal actin filament organization
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0051017
+created_by: midori
+creation_date: 2014-02-26T17:05:36Z
+
+[Term]
+id: FYPO:0003159
+name: cAMP absent from cell
+def: "A cell phenotype in which the amount of cyclic AMP (cAMP) measured in a cell is too low to detect." [PomBase:mah]
+synonym: "cyclic AMP absent from cell" EXACT [PomBase:mah]
+is_a: FYPO:0001660 ! decreased cellular cAMP level
+is_a: FYPO:0001888 ! substance absent from cell
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:17489
+created_by: midori
+creation_date: 2014-02-26T17:15:41Z
+
+[Term]
+id: FYPO:0003160
+name: elongated cell during stationary phase
+def: "A cell morphology phenotype in which cells are longer than normal, i.e. the maximum distance between the cell ends is greater than normal, when the cell is in a culture in stationary phase." [PomBase:mah]
+comment: Note that this term is classified as a type of abnormal cell shape, because wild-type cells are never seen with the proportions (length:width ratio) observed in elongated cells. Small cells, in contrast, have the same proportions as a subset of wild-type cells, and simply do not grow to the full length seen in wild type.
+synonym: "long cell during stationary phase" EXACT [PomBase:mah]
+is_a: FYPO:0000017 ! elongated cell
+created_by: midori
+creation_date: 2014-02-26T17:30:37Z
+
+[Term]
+id: FYPO:0003161
+name: RNA absent from cell during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is too low to detect. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "transcripts absent from cell during vegetative growth" EXACT [PomBase:vw]
+synonym: "undetectable RNA level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001889 ! RNA absent from cell
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-02-26T17:36:19Z
+
+[Term]
+id: FYPO:0003162
+name: RNA absent from cell during cellular response to salt stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is too low to detect during a cellular response to salt stress. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "RNA absent from cell during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "transcripts absent from cell during cellular response to salt stress" EXACT [PomBase:vw]
+synonym: "undetectable RNA level during cellular response to salt stress" EXACT [PomBase:mah]
+is_a: FYPO:0001889 ! RNA absent from cell
+intersection_of: PATO:0002000
+intersection_of: during GO:0071472
+intersection_of: during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-02-26T17:37:56Z
+
+[Term]
+id: FYPO:0003163
+name: abnormal nuclease activity
+def: "A molecular function phenotype in which the observed rate of nuclease activity is abnormal. All nuclease activities may be abnormal, or a specific nuclease activity may be assayed." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004518
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-02-26T17:42:24Z
+
+[Term]
+id: FYPO:0003164
+name: abolished nuclease activity
+def: "A molecular function phenotype in which nuclease activity is absent. All nuclease activities may be absent, or a specific nuclease activity may be assayed." [PomBase:mah]
+synonym: "nuclease activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0003163 ! abnormal nuclease activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004518
+created_by: midori
+creation_date: 2014-02-26T17:42:31Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
