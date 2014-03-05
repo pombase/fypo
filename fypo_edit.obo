@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 05:03:2014 11:31
+date: 05:03:2014 17:09
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta7
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -6076,6 +6076,9 @@ is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007126
 intersection_of: qualifier PATO:0000461
+relationship: has_part FYPO:0002094 ! normal meiotic sister chromatid cohesion
+relationship: has_part FYPO:0003050 ! normal homologous chromosome pairing
+relationship: has_part FYPO:0003176 ! normal meiotic chromosome segregation
 created_by: midori
 creation_date: 2011-08-15T10:19:32Z
 
@@ -8733,12 +8736,12 @@ creation_date: 2011-11-11T03:25:01Z
 
 [Term]
 id: FYPO:0000677
-name: abnormal protein targeting to prospore membrane
-def: "A transport phenotype in which protein targeting to the prospore membrane is abnormal." [PomBase:mah]
+name: abnormal protein localization to prospore membrane
+def: "A transport phenotype in which protein localization to the prospore membrane is abnormal." [PomBase:mah]
 comment: Encompasses both targeting of proteins to the prospore membrane where they are not normally found and decreased or no targeting of proteins normally found in the prospore membrane. We recommend noting which protein(s) were used in the assay when annotating to this term.
-is_a: FYPO:0000675 ! abnormal protein targeting
+is_a: FYPO:0001370 ! abnormal protein targeting
 intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0072693
+intersection_of: inheres_in GO:1902657
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-11-29T05:16:27Z
@@ -13994,8 +13997,8 @@ name: normal arginine import
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which L-arginine import into the cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal arginine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal arginine import into cell" EXACT [PomBase:al]
-synonym: "normal arginine uptake" EXACT [GO:0043091]
-synonym: "normal L-arginine import" NARROW [PomBase:mah]
+synonym: "normal L-arginine uptake" EXACT [GO:0043091]
+synonym: "normal L-arginine import" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
 is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 intersection_of: PATO:0000001
@@ -16286,12 +16289,7 @@ id: FYPO:0001224
 name: binucleate monoseptate cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has two nuclei and one septum." [PomBase:mah]
 synonym: "binucleate monoseptate cell during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001222 ! binucleate
-is_a: FYPO:0001225 ! monoseptate
-intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0001222 ! binucleate
-intersection_of: has_part FYPO:0001225 ! monoseptate
+is_obsolete: true
 created_by: midori
 creation_date: 2012-07-12T15:40:42Z
 
@@ -29326,7 +29324,7 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 comment: Note that a cell that has the phenotype 'angled actomyosin contractile ring' (FYPO:0002027) will usually also subsequently display this phenotype.
 synonym: "binucleate monoseptate cell, with angled septum, during vegetative growth" EXACT [PomBase:mah]
 synonym: "binucleate monoseptate cell, with septum not orthogonal to long axis" RELATED [PomBase:mah]
-is_a: FYPO:0001224 ! binucleate monoseptate cell
+is_a: FYPO:0001222 ! binucleate
 is_a: FYPO:0001390 ! misoriented septum
 created_by: midori
 creation_date: 2013-05-10T15:43:47Z
@@ -41828,7 +41826,7 @@ name: normal homologous chromosome pairing
 def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is normal (i.e. indistinguishable from wild type). Synapsis is the process in which the side by side pairing and physical juxtaposition of homologous chromosomes is established and maintained. Pairing may be assayed globally or at one or more specific loci." [GO:0007129, PomBase:mah]
 synonym: "normal homologous chromosome pairing at meiosis" EXACT [GO:0007129]
 synonym: "normal synapsis" EXACT [GO:0007129]
-is_a: FYPO:0000478 ! normal meiosis
+is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007129
 intersection_of: qualifier PATO:0000461
@@ -42892,6 +42890,7 @@ synonym: "inviable elongated mononucleate aseptate vegetative cell with cell cyc
 synonym: "inviable elongated mononucleate aseptate vegetative cell with mitotic nuclear division arrest" EXACT [PomBase:vw]
 synonym: "mitotic cell cycle arrest in M-phase with elongated inviable mononucleate aseptate cell" EXACT [PomBase:vw]
 synonym: "mitotic M-phase arrested elongated inviable mononucleate aseptate vegetative cell" EXACT [PomBase:mah]
+synonym: "nuclear division arrest without septation (elongated cell)" EXACT [PomBase:vw]
 is_a: FYPO:0000839 ! inviable elongated mononucleate aseptate cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
@@ -43420,7 +43419,7 @@ name: cut
 def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells, and in which the septum physically divides the nucleus into two parts." [PomBase:jh, PomBase:mah, PomBase:vw]
 comment: In a cut phenotype, the septum may partition the two nuclei into the two daughter cells, partition both nuclei into one daughter cell, or physically divide one nucleus, depending on septum placement. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
 synonym: "cut during vegetative growth" EXACT [PomBase:mah]
-synonym: "septation following abnormal chromosome segregation, with septum dividing nucleus" EXACT []
+synonym: "septation following abnormal chromosome segregation, with septum dividing nucleus" EXACT [PomBase:mah]
 is_a: FYPO:0000229 ! septation following abnormal chromosome segregation
 created_by: midori
 creation_date: 2014-03-05T10:47:49Z
@@ -43432,6 +43431,229 @@ def: "An inviable phenotype observed in the vegetative growth phase of the life 
 is_a: FYPO:0000229 ! septation following abnormal chromosome segregation
 created_by: midori
 creation_date: 2014-03-05T11:09:42Z
+
+[Term]
+id: FYPO:0003167
+name: abnormal protein farnesyltransferase activity
+def: "A molecular function phenotype in which the observed rate of protein farnesyltransferase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004660
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-03-05T11:47:45Z
+
+[Term]
+id: FYPO:0003168
+name: abolished protein farnesyltransferase activity
+def: "A molecular function phenotype in which protein farnesyltransferase activity is absent." [PomBase:mah]
+synonym: "protein farnesyltransferase activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0003167 ! abnormal protein farnesyltransferase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004660
+created_by: midori
+creation_date: 2014-03-05T11:47:54Z
+
+[Term]
+id: FYPO:0003169
+name: increased amino acid import during vegetative growth
+def: "A cellular process phenotype in which the import of one or more amino acids into the cell occurs to a greater extent than normal in the vegetative growth phase of the life cycle." [PomBase:mah]
+synonym: "increased amino acid import into cell during vegetative growth" EXACT [PomBase:al]
+synonym: "increased amino acid uptake during vegetative growth" EXACT [GO:0043090]
+is_a: FYPO:0001361 ! abnormal amino acid import during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043090
+created_by: midori
+creation_date: 2014-03-05T11:52:32Z
+
+[Term]
+id: FYPO:0003170
+name: increased arginine import
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the import of arginine into the cell occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased arginine import during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased arginine import into cell" EXACT [PomBase:al]
+synonym: "increased L-arginine uptake" EXACT [GO:0043091]
+synonym: "increased L-arginine import" EXACT [GO:0043091, PomBase:mah]
+is_a: FYPO:0001654 ! abnormal arginine import
+is_a: FYPO:0003169 ! increased amino acid import during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043091
+created_by: midori
+creation_date: 2014-03-05T11:53:04Z
+
+[Term]
+id: FYPO:0003171
+name: binucleate monoseptate cell with mitotic cell cycle arrest before cell separation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell has two nuclei and the mitotic cell cycle is arrested after the septum has formed, but before cells have separated." [PomBase:mah]
+comment: M phase is often identified by the degree of chromosome condensation. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "binucleate monoseptate cell with mitotic cell cycle arrest before cell separation during vegetative growth" EXACT [PomBase:mah]
+synonym: "binucleate monoseptate cell with mitotic cell cycle arrest before cytokinetic cell separation" EXACT [GO:0000920]
+synonym: "mitotic cell cycle arrest before cell separation with binucleate monoseptate cell" EXACT [PomBase:vw]
+synonym: "nuclear division arrest with septation (normal cell length)" EXACT [PomBase:vw]
+is_a: FYPO:0001222 ! binucleate
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0001222
+intersection_of: has_part FYPO:0002888
+intersection_of: has_part FYPO:0001225
+relationship: has_part FYPO:0002888 ! mitotic cell cycle arrest before cell separation
+created_by: midori
+creation_date: 2014-03-05T14:33:43Z
+
+[Term]
+id: FYPO:0003172
+name: mitotic cell cycle arrest in M phase without septation
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in M phase, and the cell does not form a septum." [PomBase:mah]
+synonym: "mitotic cell cycle arrest in M phase without cytokinesis" RELATED [PomBase:mah]
+synonym: "mitotic cell cycle arrest in M phase without septation, normal cell size" EXACT [PomBase:mah]
+synonym: "nuclear division arrest without septation (normal cell length)" EXACT [PomBase:vw]
+is_a: FYPO:0000608 ! mitotic cell cycle arrest in M phase
+created_by: midori
+creation_date: 2014-03-05T15:03:46Z
+
+[Term]
+id: FYPO:0003173
+name: abnormal nucleotide-excision repair
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which nucleotide-excision repair is abnormal. Nucleotide-excision repair is a DNA repair process in which a small region of the strand surrounding the damage is removed as an oligonucleotide,and the resulting small gap is filled in by the sequential action of DNA polymerase and DNA ligase." [GO:0006289, PomBase:mah]
+synonym: "abnormal excision repair" BROAD [PomBase:mah]
+synonym: "abnormal NER" EXACT [GO:0006289]
+synonym: "abnormal nucleotide-excision repair during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000188 ! abnormal DNA repair
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006289
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-03-05T15:22:23Z
+
+[Term]
+id: FYPO:0003174
+name: normal nucleotide-excision repair during cellular response to UV
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which nucleotide-excision repair is normal (i.e. indistinguishable from wild type) during a cellular response to ultraviolet light. Nucleotide-excision repair is a DNA repair process in which a small region of the strand surrounding the damage is removed as an oligonucleotide,and the resulting small gap is filled in by the sequential action of DNA polymerase and DNA ligase." [GO:0006289, PomBase:mah]
+synonym: "normal excision repair during cellular response to UV" BROAD [PomBase:mah]
+synonym: "normal NER during cellular response to UV" EXACT [GO:0006289]
+synonym: "normal nucleotide-excision repair during cellular response to ultraviolet light" EXACT [PomBase:mah]
+synonym: "normal nucleotide-excision repair during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0034644
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006289
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-03-05T15:34:33Z
+
+[Term]
+id: FYPO:0003175
+name: decreased nucleotide-excision repair during cellular response to UV
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which nucleotide-excision repair is decreased during a cellular response to ultraviolet light. Nucleotide-excision repair is a DNA repair process in which a small region of the strand surrounding the damage is removed as an oligonucleotide,and the resulting small gap is filled in by the sequential action of DNA polymerase and DNA ligase." [GO:0006289, PomBase:mah]
+synonym: "decreased excision repair during cellular response to UV" BROAD [PomBase:mah]
+synonym: "decreased NER during cellular response to UV" EXACT [GO:0006289]
+synonym: "decreased nucleotide-excision repair during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced nucleotide-excision repair during cellular response to UV" EXACT [PomBase:mah]
+is_a: FYPO:0003173 ! abnormal nucleotide-excision repair
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0034644
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006289
+created_by: midori
+creation_date: 2014-03-05T15:40:08Z
+
+[Term]
+id: FYPO:0003176
+name: normal meiotic chromosome segregation
+def: "A cellular process phenotype in which meiotic chromosome segregation is normal (i.e. indistinguishable from wild type). Meiotic chromosome segregation is the entire process in which genetic material, in the form of chromosomes, is organized into specific structures and then physically separated and apportioned to two or more sets during M phase of the meiotic cell cycle." [GO:0045132, PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0045132
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-03-05T15:46:02Z
+
+[Term]
+id: FYPO:0003177
+name: abnormal meiotic homologous chromosome biorientation
+def: "A cellular process phenotype in which homologous chromosome biorientation is abnormal during meiosis. Homologous chromosome biorientation is the process in which the sister centromeres of one chromosome attach to microtubules that emanate from the same spindle pole, ensuring that homologous maternal and paternal chromosomes are pulled in opposite directions at anaphase of meiosis I" [PomBase:mah]
+synonym: "abnormal homologous chromosome biorientation during meiosis" EXACT [PomBase:mah]
+synonym: "abnormal homologous chromosome orientation involved in meiotic metaphase I plate congression" EXACT [GO:0031619]
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0031619
+intersection_of: qualifier PATO:0000460
+relationship: part_of FYPO:0000151 ! abnormal meiotic chromosome segregation
+created_by: midori
+creation_date: 2014-03-05T16:19:48Z
+
+[Term]
+id: FYPO:0003178
+name: normal meiotic sister chromatid segregation
+def: "A cellular process phenotype in which the organization and subsequent separation of sister chromatids during te second meiotic division is normal (i.e. indistinguishable from wild type) during meiosis." [GO:0045144, PomBase:mah]
+synonym: "normal chromosome disjunction at meiosis II" EXACT [PomBase:al]
+synonym: "normal sister chromatid segregation during meiosis" EXACT [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0045144
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-03-05T16:29:02Z
+
+[Term]
+id: FYPO:0003179
+name: decreased intragenic meiotic recombination
+def: "A cellular process phenotype in which the occurrence of intragenic meiotic recombination is decreased." [PMID:16169489, PomBase:mah]
+synonym: "decreased meiotic intragenic recombination" EXACT [PMID:16169489, PomBase:al]
+synonym: "reduced intragenic meiotic recombination" EXACT [PomBase:mah]
+is_a: FYPO:0000485 ! decreased meiotic recombination
+created_by: midori
+creation_date: 2014-03-05T16:35:44Z
+
+[Term]
+id: FYPO:0003180
+name: decreased intergenic meiotic recombination
+def: "A cellular process phenotype in which the occurrence of intergenic meiotic recombination is decreased." [PMID:16169489, PomBase:mah]
+synonym: "decreased meiotic intergenic recombination" EXACT [PMID:16169489, PomBase:al]
+synonym: "reduced intergenic meiotic recombination" EXACT [PomBase:mah]
+is_a: FYPO:0000485 ! decreased meiotic recombination
+created_by: midori
+creation_date: 2014-03-05T16:46:00Z
+
+[Term]
+id: FYPO:0003181
+name: abolished meiotic DNA double-strand break formation
+def: "A cellular process phenotype in which generation ofdouble-strand breaks at defined hotspots throughout the genome during meiosis I does not occur." [GO:0042138, PomBase:mah]
+synonym: "absent meiotic DNA double-strand break formation" EXACT [PomBase:mah]
+synonym: "meiotic DNA double-strand break formation abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000008 ! abnormal meiotic recombination
+intersection_of: PATO:0001558
+intersection_of: towards GO:0042138
+created_by: midori
+creation_date: 2014-03-05T16:50:04Z
+
+[Term]
+id: FYPO:0003182
+name: chromosome nondisjunction at meiosis II
+def: "A cellular process phenotype in which sister chromatids fail to segregate properly, or disjoin, during meiosis II." [PomBase:mah]
+synonym: "abolished meiotic sister chromatid segregation" EXACT [GO:0045144]
+is_a: FYPO:0000925 ! unequal meiotic chromosome segregation
+intersection_of: PATO:0001558
+intersection_of: towards GO:0045144
+created_by: midori
+creation_date: 2014-03-05T16:53:23Z
+
+[Term]
+id: FYPO:0003183
+name: normal cell population growth on phleomycin
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing phleomycin." [PomBase:mah]
+synonym: "normal cell population growth in presence of phleomycin" EXACT [PomBase:mah]
+synonym: "normal cellular response to phleomycin" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on phleomycin" BROAD [PomBase:mah]
+synonym: "normal vegetative cell population growth on phleomycin" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+created_by: midori
+creation_date: 2014-03-05T16:57:31Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
