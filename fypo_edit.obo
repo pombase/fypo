@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 26:02:2014 18:04
+date: 05:03:2014 11:31
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3-beta7
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -2905,14 +2905,12 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000229
-name: cut
+name: septation following abnormal chromosome segregation
 alt_id: FYPO:0000322
 alt_id: FYPO:0000323
 def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells." [PomBase:jh, PomBase:mah, PomBase:vw]
 comment: In a cut phenotype, the septum may partition the two nuclei into the two daughter cells, partition both nuclei into one daughter cell, or physically divide one nucleus, depending on septum placement. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
-synonym: "cut during vegetative growth" EXACT [PomBase:mah]
-synonym: "cut, binucleate cell formation" NARROW [PomBase:mah, PomBase:vw]
-synonym: "cut, septum dividing nucleus" NARROW [PomBase:mah, PomBase:vw]
+synonym: "septation following abnormal chromosome segregation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000049 ! inviable cell
 is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 is_a: FYPO:0001320 ! vegetative cell phenotype
@@ -13859,14 +13857,14 @@ def: "An inviable phenotype in which a cell undergoes mitotic catastrophe (i.e. 
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
 synonym: "cut with mitotic catastrophe" EXACT [PomBase:mah]
 synonym: "mitotic catastrophe with cut during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000229 ! cut
 is_a: FYPO:0001047 ! mitotic catastrophe
+is_a: FYPO:0003165 ! cut
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-intersection_of: has_part FYPO:0000229 ! cut
 intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0003165 ! cut
 created_by: midori
 creation_date: 2012-05-11T01:37:41Z
 
@@ -13933,10 +13931,10 @@ is_a: FYPO:0001049 ! mitotic catastrophe, small cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-intersection_of: has_part FYPO:0000229 ! cut
 intersection_of: has_part FYPO:0000951 ! inviable small vegetative cell
 intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0003165 ! cut
 created_by: midori
 creation_date: 2012-05-11T02:38:12Z
 
@@ -13952,10 +13950,10 @@ is_a: FYPO:0001050 ! mitotic catastrophe, normal size cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-intersection_of: has_part FYPO:0000229 ! cut
 intersection_of: has_part FYPO:0001124 ! normal vegetative cell size
 intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0003165 ! cut
 created_by: midori
 creation_date: 2012-05-11T02:39:40Z
 
@@ -13972,10 +13970,10 @@ is_a: FYPO:0001051 ! mitotic catastrophe, elongated cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-intersection_of: has_part FYPO:0000229 ! cut
 intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 intersection_of: has_part FYPO:0001490 ! inviable elongated vegetative cell
+intersection_of: has_part FYPO:0003165 ! cut
 created_by: midori
 creation_date: 2012-05-11T02:39:47Z
 
@@ -13986,7 +13984,7 @@ def: "An inviable phenotype in which a cell enters mitosis normally, but then un
 synonym: "cut following normal entry into mitosis" EXACT [PomBase:mah]
 synonym: "cut following normal mitotic entry during vegetative growth" EXACT [PomBase:mah]
 synonym: "cut with normal mitotic entry" EXACT [PomBase:mah]
-is_a: FYPO:0000229 ! cut
+is_a: FYPO:0003165 ! cut
 created_by: midori
 creation_date: 2012-05-11T02:46:40Z
 
@@ -27877,8 +27875,8 @@ name: cut during cellular response to hydroxyurea
 def: "A cut phenotype that is observed when a cell is exposed to hydroxyurea. In a cut phenotype, a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells." [PomBase:mah]
 synonym: "cut during cellular response to HU" EXACT [PomBase:mah]
 synonym: "cut during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000229 ! cut
-intersection_of: FYPO:0000229 ! cut
+is_a: FYPO:0003165 ! cut
+intersection_of: FYPO:0003165 ! cut
 intersection_of: during GO:0072711
 created_by: midori
 creation_date: 2013-03-27T16:33:44Z
@@ -31211,10 +31209,10 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: happens_during GO:0072690
 intersection_of: happens_during GO:0072711
 intersection_of: has_part FYPO:0000141 ! abnormal mitotic sister chromatid segregation
-intersection_of: has_part FYPO:0000229 ! cut
 intersection_of: has_part FYPO:0001204 ! mistimed mitosis
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 intersection_of: has_part FYPO:0001490 ! inviable elongated vegetative cell
+intersection_of: has_part FYPO:0003165 ! cut
 created_by: midori
 creation_date: 2013-06-13T15:21:02Z
 
@@ -39225,8 +39223,8 @@ is_a: FYPO:0001337 ! localization phenotype during vegetative growth
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: qualifier PATO:0000460
 intersection_of: inheres_in GO:0051643
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2013-11-14T14:17:54Z
 
@@ -43415,6 +43413,25 @@ intersection_of: PATO:0001558
 intersection_of: towards GO:0004518
 created_by: midori
 creation_date: 2014-02-26T17:42:31Z
+
+[Term]
+id: FYPO:0003165
+name: cut
+def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells, and in which the septum physically divides the nucleus into two parts." [PomBase:jh, PomBase:mah, PomBase:vw]
+comment: In a cut phenotype, the septum may partition the two nuclei into the two daughter cells, partition both nuclei into one daughter cell, or physically divide one nucleus, depending on septum placement. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "cut during vegetative growth" EXACT [PomBase:mah]
+synonym: "septation following abnormal chromosome segregation, with septum dividing nucleus" EXACT []
+is_a: FYPO:0000229 ! septation following abnormal chromosome segregation
+created_by: midori
+creation_date: 2014-03-05T10:47:49Z
+
+[Term]
+id: FYPO:0003166
+name: septation following abnormal chromosome segregation, with binucleate cell formation
+def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells, and in which the septum forms in a position that partitions both nuclei into one daughter cell." [PomBase:mah, PomBase:vw]
+is_a: FYPO:0000229 ! septation following abnormal chromosome segregation
+created_by: midori
+creation_date: 2014-03-05T11:09:42Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
