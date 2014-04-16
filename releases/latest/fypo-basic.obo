@@ -3,9 +3,14 @@ data-version: releases/2014-04-16
 date: 16:04:2014 17:03
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
+subsetdef: abnormal_slim "Abnormal/normal slim"
+subsetdef: absent_slim "Absent/present slim"
+subsetdef: attribute_slim "Attribute slim"
 subsetdef: biosapiens "biosapiens protein feature ontology"
+subsetdef: cell_quality "cell_quality"
 subsetdef: Cross_product_review "Involved_in"
 subsetdef: DBVAR "database of genomic structural variation"
+subsetdef: disposition_slim "Disposition slim"
 subsetdef: goantislim_grouping "Grouping classes that can be excluded"
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
@@ -21,11 +26,15 @@ subsetdef: goslim_virus "Viral GO slim"
 subsetdef: goslim_yeast "Yeast GO slim"
 subsetdef: gosubset_prok "Prokaryotic GO subset"
 subsetdef: mf_needs_review "Catalytic activity terms in need of attention"
+subsetdef: mpath_slim "Pathology slim"
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
+subsetdef: relational_slim "Relational slim: types of quality that require an additional entity in order to exist"
+subsetdef: scalar_slim "Scalar slim"
 subsetdef: SOFA "SO feature annotation"
 subsetdef: termgenie_unvetted "Terms created by TermGenie that do not follow a template and require additional vetting by editors"
 subsetdef: ubprop:upper_level "abstract upper-level terms not directly useful for analysis"
+subsetdef: value_slim "Value slim"
 subsetdef: virus_checked "Viral overhaul terms"
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision: 939 $
@@ -2543,6 +2552,7 @@ synonym: "actomyosin contractile ring splitting during vegetative growth" EXACT 
 synonym: "actomyosin contractile ring splitting upon contraction" EXACT [PomBase:mah]
 synonym: "cytokinesis defects, splitting of the actinomyosin ring" RELATED [PomBase:mah]
 synonym: "split actomyosin contractile ring" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0001364 ! abnormal contractile ring contraction
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -2803,7 +2813,9 @@ synonym: "localization defects, nuclear accumulation of Pap1 and Sty1" NARROW [P
 synonym: "nuclear accumulation of Pap1 and Sty1" NARROW [PomBase:mah]
 synonym: "nuclear accumulation of protein" EXACT [PomBase:mah]
 synonym: "nuclear protein accumulation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
+is_a: FYPO:0002403 ! abnormal nucleus
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3082,6 +3094,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "fragmented vacuoles during vegetative growth" RELATED [PomBase:mah]
 synonym: "vacuole fusion defects" RELATED [PomBase:vw]
 synonym: "vacuole organization defects, fragmented vacuoles during vegetative growth" RELATED [PomBase:mah]
+is_a: FYPO:0000123 ! large vacuoles during vegetative growth
 is_a: FYPO:0000952 ! vacuoles present in greater numbers during vegetative growth
 is_a: FYPO:0002258 ! small vacuoles present in greater numbers
 is_a: FYPO:0002788 ! small vacuoles during vegetative growth
@@ -3108,6 +3121,7 @@ synonym: "chromosome fragmentation upon segregation during mitosis" EXACT [PomBa
 synonym: "chromosome fragmentation upon segregation during vegetative growth" EXACT [PomBase:mah]
 synonym: "chromosome segregation defects, chromosome fragmentation" EXACT [PomBase:mah]
 is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
+is_a: FYPO:0000848 ! abnormal chromosome morphology
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -9008,7 +9022,7 @@ def: "A physical cellular phenotype observed in the vegetative growth phase of t
 synonym: "elongated nuclei" EXACT [PomBase:vw]
 synonym: "elongated nucleus during vegetative growth" EXACT [PomBase:mah]
 synonym: "long nucleus" EXACT [PomBase:vw]
-is_a: FYPO:0000062 ! abnormal nuclear morphology during vegetative growth
+is_a: FYPO:0000344 ! enlarged nucleus during vegetative growth
 created_by: midori
 creation_date: 2012-03-09T03:40:40Z
 
@@ -9213,6 +9227,7 @@ def: "A cell phenotype in which the amount of protein measured in the cytoplasm 
 synonym: "cytoplasmic accumulation of protein" EXACT [PomBase:mah]
 synonym: "cytoplasmic protein accumulation during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased protein level in cytoplasm during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
 created_by: midori
 creation_date: 2012-03-14T04:24:49Z
@@ -9821,6 +9836,7 @@ name: mitochondrial aggregation
 def: "An abnormal intracellular mitochondrion distribution phenotype observed in the vegetative growth phase of the life cycle in which mitochondria cluster together more than normal." [PomBase:mah]
 synonym: "mitochondrial aggregation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000894 ! abnormal intracellular mitochondrion distribution
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 created_by: midori
 creation_date: 2012-03-29T02:45:02Z
 
@@ -9981,6 +9997,8 @@ synonym: "increased RNA level in nucleus during vegetative growth" EXACT [PomBas
 synonym: "nuclear accumulation of RNA" RELATED [PomBase:mah]
 synonym: "nuclear RNA accumulation during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+is_a: FYPO:0002403 ! abnormal nucleus
 created_by: midori
 creation_date: 2012-03-29T04:01:15Z
 
@@ -10131,7 +10149,6 @@ name: normal volume vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has a normal volume." [PomBase:mah]
 synonym: "normal volume cells during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001124 ! normal vegetative cell size
-is_a: FYPO:0001312 ! normal vegetative phenotype
 created_by: midori
 creation_date: 2012-04-03T03:12:03Z
 
@@ -10419,6 +10436,7 @@ id: FYPO:0000950
 name: elongated aseptate cell
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell does not contain a septum and is elongated." [PomBase:mah]
 synonym: "elongated aseptate cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000118 ! multiseptate
 is_a: FYPO:0000949 ! aseptate
 is_a: FYPO:0001122 ! elongated vegetative cell
 created_by: midori
@@ -11075,8 +11093,11 @@ synonym: "long, multinucleate dumbbell-shaped cell" EXACT [PomBase:vw]
 synonym: "multinucleate dumbbell-shaped cell" EXACT [PomBase:mah]
 synonym: "multinucleate dumbbell-shaped cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000779 ! inviable elongated dumbbell-shaped cell
+is_a: FYPO:0001252 ! multinucleate multiseptate cell
+is_a: FYPO:0001494 ! inviable elongated multiseptate vegetative cell
 is_a: FYPO:0002024 ! inviable elongated multinucleate aseptate vegetative cell
 is_a: FYPO:0002066 ! inviable elongated aseptate cell
+is_a: FYPO:0002452 ! inviable septated vegetative cell with abnormal cell morphology
 created_by: midori
 creation_date: 2012-04-25T04:07:50Z
 
@@ -11575,6 +11596,7 @@ def: "An inviable phenotype in which a cell undergoes mitotic catastrophe (i.e. 
 comment: Note that mitotic catastrophe in normal-size cells is usually interpreted to mean that cells enter mitosis despite failing to activate a DNA integrity checkpoint. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
 synonym: "mitotic catastrophe, normal size cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001047 ! mitotic catastrophe
+is_a: FYPO:0002199 ! inviable vegetative cell with normal cell morphology
 created_by: midori
 creation_date: 2012-05-11T02:09:56Z
 
@@ -12415,7 +12437,7 @@ id: FYPO:0001124
 name: normal vegetative cell size
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has normal volume and dimensions." [PomBase:mah]
 synonym: "normal cell size during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0001315 ! normal vegetative cell morphology
 created_by: midori
 creation_date: 2012-06-07T15:28:36Z
 
@@ -12424,7 +12446,7 @@ id: FYPO:0001125
 name: normal vegetative cell shape
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has a normal shape." [PomBase:mah]
 synonym: "normal cell shape during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0001315 ! normal vegetative cell morphology
 created_by: midori
 creation_date: 2012-06-07T15:28:36Z
 
@@ -16768,6 +16790,7 @@ synonym: "inviable lumpy cell" RELATED [PomBase:vw]
 synonym: "inviable vegetative cell with abnormal cell shape and normal cell size" RELATED [PomBase:mah]
 synonym: "inviable, abnormal cell shape, normal cell size during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001121 ! vegetative cell, abnormal cell shape, normal cell size
+is_a: FYPO:0002199 ! inviable vegetative cell with normal cell morphology
 is_a: FYPO:0002451 ! inviable vegetative cell with abnormal cell shape
 created_by: midori
 creation_date: 2012-09-13T10:52:33Z
@@ -17837,7 +17860,9 @@ synonym: "abnormal level of substance in vacuole" EXACT [PomBase:mah]
 synonym: "abnormal level of substance in vacuole during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal vacuolar level of substance" EXACT [PomBase:mah]
 synonym: "altered vacuolar level of substance" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
+is_a: FYPO:0002794 ! abnormal vacuole
 created_by: midori
 creation_date: 2012-09-27T13:06:05Z
 
@@ -17859,6 +17884,7 @@ name: normal level of substance in vacuole
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of a specific substance measured in the vacuole is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal level of substance in vacuole during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal vacuolar level of substance" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
 created_by: midori
 creation_date: 2012-09-27T13:07:41Z
@@ -17871,6 +17897,7 @@ synonym: "abnormal cytosolic level of substance" EXACT [PomBase:mah]
 synonym: "abnormal level of substance in cytosol" EXACT [PomBase:mah]
 synonym: "abnormal level of substance in cytosol during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cytosolic level of substance" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0001323 ! altered level of substance in cell during vegetative growth
 created_by: midori
 creation_date: 2012-09-27T13:17:34Z
@@ -17893,6 +17920,7 @@ name: normal level of substance in cytosol
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of a specific substance measured in the cytosol is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cytosolic level of substance" EXACT [PomBase:mah]
 synonym: "normal level of substance in cytosol during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
 created_by: midori
 creation_date: 2012-09-27T13:19:00Z
@@ -21250,6 +21278,7 @@ synonym: "abnormal contractile ring contraction with contractile ring collapse" 
 synonym: "actomyosin contractile ring collapse during vegetative growth" EXACT [PomBase:mah]
 synonym: "actomyosin contractile ring collapse upon contraction" EXACT [PomBase:mah]
 synonym: "cytokinesis defects, collapse of the actinomyosin ring" RELATED [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0001364 ! abnormal contractile ring contraction
 created_by: midori
 creation_date: 2013-01-30T17:33:34Z
@@ -22624,6 +22653,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "dispersed actin cortical patch localisation" EXACT [PomBase:mah]
 synonym: "dispersed actin cortical patch location" RELATED [PomBase:mah]
 is_a: FYPO:0000190 ! abnormal actin cortical patch localization
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 created_by: midori
 creation_date: 2013-02-28T13:54:07Z
 
@@ -23333,7 +23363,6 @@ synonym: "inviable large elongated cell with enlarged nucleus" RELATED [PomBase:
 synonym: "inviable swollen elongated vegetative cell with enlarged nucleus" EXACT [PomBase:mah]
 synonym: "swollen elongated cell with enlarged nucleus" EXACT [PomBase:mah]
 synonym: "swollen elongated vegetative cell with enlarged nucleus" EXACT [PomBase:mah]
-is_a: FYPO:0000344 ! enlarged nucleus during vegetative growth
 is_a: FYPO:0000832 ! elongated nucleus
 is_a: FYPO:0002251 ! inviable swollen elongated vegetative cell
 created_by: midori
@@ -23585,7 +23614,7 @@ id: FYPO:0002105
 name: inviable vegetative cell with normal cell shape
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has a normal shape but is inviable." [PomBase:mah]
 synonym: "inviable cell with normal cell shape during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001489 ! inviable vegetative cell
+is_a: FYPO:0002199 ! inviable vegetative cell with normal cell morphology
 created_by: midori
 creation_date: 2013-05-07T12:27:52Z
 
@@ -29135,6 +29164,7 @@ synonym: "normal mature mitochondrial tRNA level" EXACT [SO:0000253]
 synonym: "normal mitochondrial transfer RNA level" EXACT [PomBase:mah]
 synonym: "normal mitochondrial tRNA accumulation" RELATED [PomBase:mah]
 synonym: "normal mitochondrial tRNA level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
 is_a: FYPO:0002580 ! normal tRNA level
 created_by: midori
 creation_date: 2013-08-28T16:18:45Z
@@ -29166,6 +29196,7 @@ synonym: "decreased mitochondrial tRNA accumulation" RELATED [PomBase:mah]
 synonym: "decreased mitochondrial tRNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased mitochondrial tRNA transcript level" EXACT [PomBase:vw]
 synonym: "reduced mitochondrial tRNA level" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0002583 ! decreased tRNA level
 created_by: midori
 creation_date: 2013-08-28T16:22:12Z
@@ -29977,7 +30008,7 @@ synonym: "normal NETO frequency" RELATED [PomBase:mah]
 synonym: "normal NETO occurrence" EXACT [PomBase:mah]
 synonym: "normal occurrence of activation of bipolar vegetative cell growth" EXACT [PomBase:mah]
 synonym: "normal occurrence of new end take off" EXACT [PomBase:mah]
-is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
+is_a: FYPO:0001396 ! normal activation of bipolar cell growth
 created_by: midori
 creation_date: 2013-09-12T16:37:35Z
 
@@ -30459,6 +30490,7 @@ synonym: "increased autophagosomal protein level during vegetative growth" EXACT
 synonym: "increased protein level in autophagic vacuole during vegetative growth" EXACT [GO:0005776]
 synonym: "increased protein level in autophagosome during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein accumulation in autophagosomes" EXACT [PomBase:vw]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0001327 ! increased protein level during vegetative growth
 created_by: midori
 creation_date: 2013-09-25T12:39:09Z
@@ -32080,6 +32112,7 @@ def: "A cell phenotype in which the amount of a protein measured in the proteaso
 comment: Use this term for cases where the relative abundance of one or more specific proteins in the proteasome is decreased, altering the proteasome stoichiometry.
 synonym: "decreased proteasomal protein level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased protein level in proteasome during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0001324 ! decreased protein level during vegetative growth
 created_by: midori
 creation_date: 2013-11-08T11:53:44Z
@@ -32199,6 +32232,7 @@ synonym: "increased level of (1->3)-beta-D-glucan at cell tip" EXACT [PomBase:ma
 synonym: "septal material present at cell tip" RELATED [PMID:21652630, PomBase:al]
 synonym: "septum material present at cell tip" RELATED [PMID:8978671, PomBase:al]
 is_a: FYPO:0001083 ! increased polysaccharide level
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 created_by: midori
 creation_date: 2013-11-08T14:19:44Z
 
@@ -32366,6 +32400,7 @@ def: "A physical cellular phenotype observed in the vegetative growth phase of t
 synonym: "normal septum orientation during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal septum position" RELATED [PomBase:mah]
 is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
+is_a: FYPO:0002253 ! normal septum location
 created_by: midori
 creation_date: 2013-11-14T14:31:54Z
 
@@ -37365,6 +37400,16 @@ created_by: kareneilbeck
 creation_date: 2010-10-14T01:32:15Z
 
 [Typedef]
+id: decreased_in_magnitude_relative_to
+name: decreased_in_magnitude_relative_to
+namespace: quality
+def: "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+is_transitive: true
+is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+
+[Typedef]
 id: derives_from
 name: derives_from
 namespace: sequence
@@ -37377,6 +37422,23 @@ id: develops_from
 name: develops_from
 xref: RO:0002202
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl/cl-basic.owl
+
+[Typedef]
+id: different_in_magnitude_relative_to
+name: different_in_magnitude_relative_to
+namespace: quality
+def: "q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+
+[Typedef]
+id: directly_associated_with
+name: directly_associated_with
+namespace: quality
+def: "q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
+comment: Example: 'Lewy bodies increased number related to dystrophic neurite increased number' (from annotation of PMID:8740227 in http://ccdb.ucsd.edu/1.0/NDPO.owl#ndpo_404). Here the increase in the number of lewy bodies is directly_associated_with the increase in the number of dystrophic neurites.\nAssociation is weaker than correlation or proportionality. These relations may be later added to PATO.
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+created_by: cjm
+creation_date: 2009-08-26T02:50:08Z
 
 [Typedef]
 id: during
@@ -37399,6 +37461,28 @@ xref: GOREL:0000032
 id: happens_during
 name: happens_during
 xref: RO:0002092
+
+[Typedef]
+id: has_cross_section
+name: has_cross_section
+namespace: quality
+def: "s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2." [PATOC:CJM]
+comment: Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round.
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+
+[Typedef]
+id: has_dividend_quality
+name: has_dividend_quality
+namespace: quality
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+is_a: has_ratio_quality ! has_ratio_quality
+
+[Typedef]
+id: has_divisor_quality
+name: has_divisor_quality
+namespace: quality
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+is_a: has_ratio_quality ! has_ratio_quality
 
 [Typedef]
 id: has_input
@@ -37449,6 +37533,12 @@ comment: The relationship between a feature and an attribute.
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/so-xp.obo.owl
 
 [Typedef]
+id: has_ratio_quality
+name: has_ratio_quality
+namespace: quality
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+
+[Typedef]
 id: includes_cells_with_phenotype
 name: includes cells with phenotype
 def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in some or all of the individual cells in the population." [PomBase:mah]
@@ -37457,9 +37547,29 @@ created_by: midori
 creation_date: 2011-04-26T02:10:32Z
 
 [Typedef]
+id: increased_in_magnitude_relative_to
+name: increased_in_magnitude_relative_to
+namespace: quality
+def: "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+is_transitive: true
+is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+
+[Typedef]
 id: inheres_in
 name: inheres_in
 xref: RO:0000052
+
+[Typedef]
+id: inversely_associated_with
+name: inversely_associated_with
+namespace: quality
+def: "q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
+comment: Association is weaker than correlation or proportionality. These relations may be later added to PATO.
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+created_by: cjm
+creation_date: 2009-08-26T02:50:24Z
 
 [Typedef]
 id: member_of
@@ -37546,6 +37656,14 @@ name: qualifier
 comment: placeholder relation to indicate normality/abnormality.
 
 [Typedef]
+id: reciprocal_of
+name: reciprocal_of
+namespace: quality
+def: "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e." [PATOC:CJM]
+comment: There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality.
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+
+[Typedef]
 id: regulates
 name: regulates
 xref: RO:0002211
@@ -37557,10 +37675,19 @@ name: results_in_formation_of
 xref: RO:0002297
 
 [Typedef]
+id: similar_in_magnitude_relative_to
+name: similar_in_magnitude_relative_to
+namespace: quality
+def: "q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+
+[Typedef]
 id: towards
 name: towards
+namespace: quality
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
 xref: OBO_REL:towards
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
 
 [Typedef]
 id: transcribed_from
