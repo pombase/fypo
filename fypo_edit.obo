@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 23:04:2014 16:51
+date: 29:04:2014 14:35
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -1975,12 +1975,12 @@ creation_date: 2011-04-13T03:34:54Z
 
 [Term]
 id: FYPO:0000155
-name: flocculating cells
+name: increased flocculation
 alt_id: FYPO:0000462
 def: "A cell population phenotype that reflects increased occurrence of flocculation. Flocculation is the non-sexual aggregation of single cells." [GO:0000128, PomBase:mah]
+synonym: "flocculating cells" EXACT [PomBase:mah]
 synonym: "flocculation: increased" EXACT [SGD:phenotype_annotation]
 synonym: "increased cell-cell adhesion" BROAD [PomBase:mah, PomBase:vw]
-synonym: "increased flocculation" EXACT [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
 is_a: FYPO:0000300 ! biological process phenotype
 is_a: FYPO:0001985 ! abnormal phenotype
@@ -2857,10 +2857,11 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000224
-name: lemon-shaped
+name: lemon-shaped cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a single cell grows in the form of a lemon. A lemon shape is defined mathematically as having a quadric surface in three dimensions obtained by rotating less than half of a circular arc about an axis passing through the endpoints of the arc." [http://mathworld.wolfram.com/Lemon.html, PomBase:mah]
 synonym: "cell morphology, lemon shaped" EXACT [PomBase:mah]
-synonym: "lemon-shaped during vegetative growth" EXACT [PomBase:mah]
+synonym: "lemon-shaped cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "lemon-shaped vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0002345
 intersection_of: exists_during GO:0072690
@@ -7852,6 +7853,7 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 comment: M phase is often identified by the degree of chromosome condensation.
 synonym: "cell cycle arrest in mitotic M phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest in M phase" EXACT [PomBase:mah]
+synonym: "mitotic cell cycle arrest with condensed chromosomes" EXACT [PomBase:vw]
 synonym: "mitotic cell cycle progression in M phase: arrested" EXACT [SGD:phenotype_annotation]
 synonym: "mitotic nuclear division arrest" EXACT [PomBase:vw]
 is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
@@ -16032,7 +16034,7 @@ def: "A cell population phenotype that reflects increased occurrence of cofloccu
 comment: Note: coflocculation between S. pombe and E. coli is sensitive to mannose but not to glucose or galactose. Plant lectins such as HHA, GNA, NPA, or Concanavalin A (ConA) decrease but do not abolish S. pombe-E. coli coflocculation. Cations have different effects: Li+, Na+, K+, Mg2+ or Mn2+ increase coflocculation, Co2+, Zn2+ , and Ca2+ have no effect, and Cu2+ or Hg2+ completely abolish coflocculation.
 synonym: "co-flocculating cells" EXACT [PomBase:mah]
 synonym: "increased coflocculation" EXACT [PomBase:mah]
-is_a: FYPO:0000155 ! flocculating cells
+is_a: FYPO:0000155 ! increased flocculation
 created_by: midori
 creation_date: 2012-07-06T15:40:35Z
 
@@ -26303,6 +26305,7 @@ creation_date: 2013-02-06T16:22:37Z
 id: FYPO:0001937
 name: abnormal cytochrome-c oxidase activity
 def: "A molecular function phenotype in which the observed rate of cytochrome-c oxidase activity is abnormal." [PomBase:mah]
+comment: Also consider using the cellular process phenotype term 'abnormal cellular respiration' (FYPO:0000078).
 is_a: FYPO:0000661 ! abnormal catalytic activity
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0004129
@@ -26314,6 +26317,7 @@ creation_date: 2013-02-06T16:26:21Z
 id: FYPO:0001938
 name: decreased cytochrome-c oxidase activity
 def: "A molecular function phenotype in which the observed rate of cytochrome-c oxidase activity is decreased." [PomBase:mah]
+comment: Also consider using the cellular process phenotype term 'decreased cellular respiration' (FYPO:0000342).
 synonym: "reduced cytochrome-c oxidase activity" EXACT [PomBase:mah]
 is_a: FYPO:0000663 ! decreased catalytic activity
 is_a: FYPO:0001937 ! abnormal cytochrome-c oxidase activity
@@ -27286,6 +27290,8 @@ id: FYPO:0002009
 name: decreased oxygen consumption
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the amount of oxygen consumed by cells in a given time is lower than in wild type." [PomBase:mah]
 comment: Also see 'decreased cellular respiration' (FYPO:0000342).
+synonym: "decreased oxygen uptake" RELATED [PomBase:vw]
+synonym: "reduced oxygen consumption" EXACT [PomBase:mah]
 is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
 created_by: midori
 creation_date: 2013-02-27T14:50:33Z
@@ -39494,7 +39500,7 @@ def: "A cellular process phenotype in which the mitotic cell cycle is arrested a
 synonym: "mitotic cell cycle arrest before cell separation during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest before mitotic cytokinetic cell separation" EXACT [GO:1902409]
 is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
-intersection_of: during GO:0007089
+intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0071850
 intersection_of: precedes GO:1902409
 intersection_of: qualifier PATO:0000467
@@ -43761,7 +43767,7 @@ synonym: "normal protein localisation to microtubule cytoskeleton during mitotic
 synonym: "normal protein localization to microtubule cytoskeleton during interphase during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 intersection_of: PATO:0000001
-intersection_of: happens_during GO:0051329
+intersection_of: happens_during GO:0051329<
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0035372
 intersection_of: qualifier PATO:0000461
@@ -45640,6 +45646,241 @@ synonym: "reduced protein localization to growing cell tip, with protein distrib
 is_a: FYPO:0002871 ! decreased protein localization to growing cell tip
 created_by: midori
 creation_date: 2014-04-23T16:24:17Z
+
+[Term]
+id: FYPO:0003318
+name: abolished galactose-specific cell-cell adhesion
+def: "A cell adhesion phenotype observed in the vegetative growth phase of the life cycle in which galactose-specific cell-cell adhesion does not occur. Galactose-specific cell-cell adhesion is the attachment of one cell to another cell, mediated via the binding of cell wall proteins on one cell to galactose residues on the other." [GO:0098611, PomBase:mah]
+synonym: "abolished cell-cell adhesion involved in galactose-specific flocculation" NARROW [GO:0098611]
+synonym: "galactose-specific cell-cell adhesion abolished" EXACT [PomBase:mah]
+synonym: "galactose-specific cell-cell adhesion abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000009 ! abnormal cell adhesion during vegetative growth
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0098611
+created_by: midori
+creation_date: 2014-04-29T11:01:09Z
+
+[Term]
+id: FYPO:0003319
+name: increased mannose-specific cell-cell adhesion
+def: "A cell adhesion phenotype observed in the vegetative growth phase of the life cycle in which mannose-specific cell-cell adhesion is increased. Mannose-specific cell-cell adhesion is the attachment of one cell to another cell, mediated via the binding of cell wall proteins on one cell to mannose residues on the other, and when it is increased cells adhere to each other more strongly or to a greater extent than normal." [GO:0098612, PomBase:mah]
+synonym: "increased cell-cell adhesion involved in mannose-specific flocculation" NARROW [GO:0098612]
+synonym: "increased mannose-specific cell-cell adhesion during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000009 ! abnormal cell adhesion during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: towards GO:0098612
+created_by: midori
+creation_date: 2014-04-29T11:01:15Z
+
+[Term]
+id: FYPO:0003320
+name: abnormal NADH dehydrogenase (ubiquinone) activity
+def: "A molecular function phenotype in which the observed rate of NADH dehydrogenase (ubiquinone) activity is abnormal." [PomBase:mah]
+comment: Also consider using the cellular process phenotype term 'abnormal cellular respiration' (FYPO:0000078).
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0008137
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-04-29T11:20:47Z
+
+[Term]
+id: FYPO:0003321
+name: decreased NADH dehydrogenase (ubiquinone) activity
+def: "A molecular function phenotype in which the observed rate of NADH dehydrogenase (ubiquinone) activity is decreased." [PomBase:mah]
+comment: Also consider using the cellular process phenotype term 'decreased cellular respiration' (FYPO:0000342).
+synonym: "reduced NADH dehydrogenase (ubiquinone) activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0003320 ! abnormal NADH dehydrogenase (ubiquinone) activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0008137
+created_by: midori
+creation_date: 2014-04-29T11:20:55Z
+
+[Term]
+id: FYPO:0003322
+name: abnormal succinate dehydrogenase (ubiquinone) activity
+def: "A molecular function phenotype in which the observed rate of succinate dehydrogenase (ubiquinone) activity is abnormal." [PomBase:mah]
+comment: Also consider using the cellular process phenotype term 'abnormal cellular respiration' (FYPO:0000078).
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0008177
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-04-29T11:21:16Z
+
+[Term]
+id: FYPO:0003323
+name: abolished succinate dehydrogenase (ubiquinone) activity
+def: "A molecular function phenotype in which succinate dehydrogenase (ubiquinone) activity is absent." [PomBase:mah]
+comment: Also consider using the cellular process phenotype term 'decreased cellular respiration' (FYPO:0000342).
+synonym: "succinate dehydrogenase (ubiquinone) activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0003322 ! abnormal succinate dehydrogenase (ubiquinone) activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0008177
+created_by: midori
+creation_date: 2014-04-29T11:21:37Z
+
+[Term]
+id: FYPO:0003324
+name: altered cytochrome absorption spectrum
+def: "A phenotype in which the spectrum of light absorption observed in whole cells or isolated mitochondria, and attributed to cytochromes present, differs from wild type." [PMID:22349564, PMID:8668131, PomBase:mah]
+synonym: "altered mitochondrial absorption spectrum" RELATED [PomBase:mah]
+is_a: FYPO:0001985 ! abnormal phenotype
+created_by: midori
+creation_date: 2014-04-29T11:59:47Z
+
+[Term]
+id: FYPO:0003325
+name: resistance to methotrexate
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of methotrexate than normal." [PomBase:mah]
+synonym: "resistance to methotrexate during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to methotrexate" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-04-29T13:18:48Z
+
+[Term]
+id: FYPO:0003326
+name: normal interphase microtubule nucleation
+def: "A microtubule cytoskeleton organization phenotype observed in the vegetative growth phase of the life cycle in which nucleation of microtubules from interphase microtubule organizing centers (iMTOCs) is normal (i.e. indistinguishable from wild type)." [PMID:19001497, PomBase:mah]
+synonym: "normal interphase microtubule nucleation by interphase microtubule organizing center" EXACT [PomBase:mah]
+synonym: "normal interphase microtubule nucleation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051415
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-04-29T13:48:16Z
+
+[Term]
+id: FYPO:0003327
+name: curved cytoplasmic microtubules
+def: "A microtubule organization phenotype observed in the vegetative growth phase of the life cycle in which cells form cytoplasmic microtubules that are curved, i.e. follow a smooth bend rather than a straight line." [PomBase:mah]
+synonym: "curved cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+intersection_of: PATO:0000406
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005881
+created_by: midori
+creation_date: 2014-04-29T13:51:48Z
+
+[Term]
+id: FYPO:0003328
+name: misoriented cytoplasmic microtubules
+def: "A microtubule organization phenotype observed in the vegetative growth phase of the life cycle in which the orientation of cytoplasmic microtubules within a cell is abnormal. The normal orientation is parallel to the long axis of the cell." [PomBase:mah]
+synonym: "misoriented cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+intersection_of: PATO:0000133
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005881
+created_by: midori
+creation_date: 2014-04-29T13:53:11Z
+
+[Term]
+id: FYPO:0003329
+name: abolished protein localization to cell tip during mitotic interphase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the cell tip is abolished during interphase of the mitotic cell cycle." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to cell tip during mitotic interphase" EXACT [PomBase:mah]
+synonym: "abolished protein localization to cell tip during mitotic interphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to cell tip abolished during mitotic interphase" EXACT [PomBase:mah]
+is_a: FYPO:0001584 ! abnormal protein localization to cell tip
+intersection_of: PATO:0001558
+intersection_of: during GO:0051329
+intersection_of: during GO:0072690
+intersection_of: towards GO:1990151
+created_by: midori
+creation_date: 2014-04-29T13:58:27Z
+
+[Term]
+id: FYPO:0003330
+name: normal protein localization to new mitotic spindle pole body
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the new mitotic spindle pole body is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal asymmetric protein localization to new mitotic spindle pole body" EXACT [GO:0061510]
+synonym: "normal protein localisation to new mitotic spindle pole body" EXACT [PomBase:mah]
+synonym: "normal protein localization to new mitotic SPB" EXACT [PomBase:mah]
+synonym: "normal protein localization to new spindle pole body during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0061510
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-04-29T14:04:57Z
+
+[Term]
+id: FYPO:0003331
+name: decreased protein kinase activity during mitotic interphase
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is decreased interphase of the mitotic cell cycle." [PomBase:mah]
+synonym: "reduced protein kinase activity during mitotic interphase" EXACT [PomBase:mah]
+is_a: FYPO:0001382 ! decreased protein kinase activity
+intersection_of: PATO:0002052
+intersection_of: during GO:0051329
+intersection_of: inheres_in GO:0004672
+created_by: midori
+creation_date: 2014-04-29T14:07:34Z
+
+[Term]
+id: FYPO:0003332
+name: normal protein kinase activity during mitotic interphase
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is normal (i.e. indistinguishable from wild type) during interphase of the mitotic cell cycle." [PomBase:mah]
+is_a: FYPO:0003075 ! normal protein kinase activity
+intersection_of: PATO:0000001
+intersection_of: during GO:0051329
+intersection_of: inheres_in GO:0004672
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-04-29T14:08:34Z
+
+[Term]
+id: FYPO:0003333
+name: inviable lemon-shaped cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a single cell is inviable, and grows in the form of a lemon prior to cell death. A lemon shape is defined mathematically as having a quadric surface in three dimensions obtained by rotating less than half of a circular arc about an axis passing through the endpoints of the arc." [http://mathworld.wolfram.com/Lemon.html, PomBase:mah]
+synonym: "inviable lemon-shaped cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable lemon-shaped vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0000224 ! lemon-shaped cell
+is_a: FYPO:0001489 ! inviable vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000224 ! curved vegetative cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2014-04-29T14:10:35Z
+
+[Term]
+id: FYPO:0003334
+name: normal protein localization to septin ring
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the septin ring is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to septin ring" EXACT [PomBase:mah]
+synonym: "normal protein localization to septin ring during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902935
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-04-29T14:17:37Z
+
+[Term]
+id: FYPO:0003335
+name: increased galactose-specific flocculation
+def: "A cell population phenotype that reflects increased occurrence of galactose-specific flocculation. Galactose-specific flocculation is the non-sexual aggregation of single cells, mediated by the binding of cell wall proteins on one cell to galactose residues on the other." [GO:0036349, PomBase:mah]
+synonym: "flocculating cells, galactose-specific " EXACT [PomBase:mah]
+synonym: "increased galactose-specific cell-cell adhesion" BROAD [PomBase:mah, PomBase:vw]
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0000155 ! increased flocculation
+is_a: FYPO:0000300 ! biological process phenotype
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0036349
+created_by: midori
+creation_date: 2014-04-29T14:33:45Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
