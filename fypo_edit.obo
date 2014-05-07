@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 29:04:2014 14:35
+date: 07:05:2014 17:40
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -12,7 +12,7 @@ ontology: fypo
 [Term]
 id: FYPO:0000001
 name: phenotype
-def: "Any of the set of observable characteristics of an organism resulting from the interaction of its genotype with the environment." [PomBase:mah]
+def: "Any of the set of observabgle characteristics of an organism resulting from the interaction of its genotype with the environment." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 synonym: "fission yeast phenotype" EXACT [PomBase:mah]
@@ -827,14 +827,14 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000061
-name: multinucleate
+name: multinucleate vegetative cell
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more than one nucleus." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
-synonym: "multinucleate cells" EXACT [PomBase:al]
-synonym: "multinucleate during vegetative growth" EXACT [PomBase:mah]
-synonym: "multiple nuclei" EXACT [PomBase:al]
+synonym: "multinucleate cells during vegetative growth" EXACT [PomBase:al]
+synonym: "multiple nuclei during vegetative growth" EXACT [PomBase:al]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+is_a: FYPO:0003341 ! multinucleate
 intersection_of: PATO:0001908
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -1676,16 +1676,17 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000133
-name: elongated multinucleate cell
+name: elongated multinucleate vegetative cell
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more than one nucleus and is elongated." [PomBase:mah]
 synonym: "elongated multinucleate cell during vegetative growth" EXACT [PomBase:mah]
-synonym: "long multinucleate cell" EXACT [PomBase:vw]
-is_a: FYPO:0000061 ! multinucleate
+synonym: "long multinucleate vegetative cell" EXACT [PomBase:vw]
+is_a: FYPO:0000061 ! multinucleate vegetative cell
 is_a: FYPO:0001122 ! elongated vegetative cell
+is_a: FYPO:0003342 ! elongated multinucleate cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
 relationship: output_of FYPO:0000032 ! abnormal cytokinesis
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
@@ -2952,16 +2953,16 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000232
-name: actomyosin contractile ring splitting
+name: split actomyosin contractile ring
 def: "A cytokinesis phenotype observed in the vegetative growth phase of the life cycle in which the actomyosin contractile ring splits upon initiation of contraction during anaphase B, resulting in the formation of a primary ring that undergoes constriction and a secondary ring that does not constrict." [PMID:18272786, PomBase:mah]
-synonym: "abnormal contractile ring contraction with contractile ring splitting" EXACT [PomBase:mah]
-synonym: "actomyosin contractile ring splitting during vegetative growth" EXACT [PomBase:mah]
-synonym: "actomyosin contractile ring splitting upon contraction" EXACT [PomBase:mah]
+synonym: "abnormal contractile ring contraction with contractile ring splitting" RELATED [PomBase:mah]
+synonym: "actomyosin contractile ring splitting" RELATED [PomBase:mah]
+synonym: "actomyosin contractile ring splitting upon contraction" RELATED [PomBase:mah]
 synonym: "cytokinesis defects, splitting of the actinomyosin ring" RELATED [PomBase:mah]
-synonym: "split actomyosin contractile ring" EXACT [PomBase:mah]
-is_a: FYPO:0001364 ! abnormal contractile ring contraction
+synonym: "split actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003338 ! abnormal actomyosin contractile ring morphology
 intersection_of: PATO:0001786
-intersection_of: happens_during GO:0000092
+intersection_of: exists_during GO:0000092
 intersection_of: inheres_in GO:0005826
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -8533,7 +8534,7 @@ creation_date: 2011-11-11T10:45:30Z
 [Term]
 id: FYPO:0000660
 name: normal catalytic activity
-def: "A molecular function phenotype in which a the observed rate of a specified catalytic activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of a specified catalytic activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 is_a: FYPO:0000654 ! catalytic activity phenotype
 is_a: FYPO:0000706 ! normal molecular function
 intersection_of: PATO:0000001
@@ -8545,7 +8546,7 @@ creation_date: 2011-11-11T10:46:28Z
 [Term]
 id: FYPO:0000661
 name: abnormal catalytic activity
-def: "A molecular function phenotype in which a the observed rate of a specified catalytic activity is abnormal." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of a specified catalytic activity is abnormal." [PomBase:mah]
 is_a: FYPO:0000654 ! catalytic activity phenotype
 is_a: FYPO:0000707 ! abnormal molecular function
 intersection_of: PATO:0000001
@@ -8557,7 +8558,7 @@ creation_date: 2011-11-11T10:46:28Z
 [Term]
 id: FYPO:0000662
 name: increased catalytic activity
-def: "A molecular function phenotype in which a the observed rate of a specified catalytic activity is increased." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of a specified catalytic activity is increased." [PomBase:mah]
 is_a: FYPO:0000661 ! abnormal catalytic activity
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0003824
@@ -8567,7 +8568,7 @@ creation_date: 2011-11-11T10:46:28Z
 [Term]
 id: FYPO:0000663
 name: decreased catalytic activity
-def: "A molecular function phenotype in which a the observed rate of a specified catalytic activity is decreased." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of a specified catalytic activity is decreased." [PomBase:mah]
 synonym: "reduced catalytic activity" EXACT [PomBase:mah]
 is_a: FYPO:0000661 ! abnormal catalytic activity
 intersection_of: PATO:0002052
@@ -9176,6 +9177,7 @@ synonym: "decreased cell cycle arrest in mitotic G1 phase in response to nitroge
 synonym: "decreased mitotic cell cycle arrest in G1 phase in response to nitrogen starvation" EXACT [PomBase:mah]
 synonym: "decreased mitotic G1 arrest in response to nitrogen starvation" EXACT [PomBase:mah]
 synonym: "decreased nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
+synonym: "reduced cell cycle arrest in mitotic G1 phase in response to nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
 is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
 intersection_of: PATO:0002052
@@ -13330,12 +13332,12 @@ synonym: "elongated, multinucleate dumbbell-shaped cell" EXACT [PomBase:mah]
 synonym: "long, multinucleate dumbbell-shaped cell" EXACT [PomBase:vw]
 synonym: "multinucleate dumbbell-shaped cell" EXACT [PomBase:mah]
 synonym: "multinucleate dumbbell-shaped cell during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000133 ! elongated multinucleate cell
+is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
 is_a: FYPO:0000779 ! inviable elongated dumbbell-shaped cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
 intersection_of: has_part FYPO:0000779 ! inviable elongated dumbbell-shaped cell
 intersection_of: has_part FYPO:0000949 ! aseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
@@ -16293,11 +16295,11 @@ creation_date: 2012-07-12T15:15:47Z
 
 [Term]
 id: FYPO:0001222
-name: binucleate
+name: binucleate vegetative cell
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell contains two nuclei." [PomBase:mah]
-synonym: "binucleate cells" EXACT [PomBase:al]
+synonym: "binucleate cells during vegetative growth" EXACT [PomBase:al]
 synonym: "binucleate during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000061 ! multinucleate
+is_a: FYPO:0000061 ! multinucleate vegetative cell
 intersection_of: PATO:0001406
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -16309,12 +16311,12 @@ id: FYPO:0001223
 name: binucleate multiseptate cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has two nuclei and more than one septum. The septa are grouped together between the two nuclei." [PomBase:mah]
 synonym: "binucleate multiseptate cell during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001222 ! binucleate
-is_a: FYPO:0001252 ! multinucleate multiseptate cell
+is_a: FYPO:0001222 ! binucleate vegetative cell
+is_a: FYPO:0001252 ! multinucleate multiseptate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000118 ! multiseptate
-intersection_of: has_part FYPO:0001222 ! binucleate
+intersection_of: has_part FYPO:0001222 ! binucleate vegetative cell
 created_by: midori
 creation_date: 2012-07-12T15:39:43Z
 
@@ -16694,25 +16696,26 @@ creation_date: 2012-07-17T13:31:48Z
 
 [Term]
 id: FYPO:0001252
-name: multinucleate multiseptate cell
+name: multinucleate multiseptate vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has two or more nuclei and more than one septum per cell." [PomBase:mah]
 synonym: "multinucleate multiseptate cell during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000061 ! multinucleate
+is_a: FYPO:0000061 ! multinucleate vegetative cell
 is_a: FYPO:0000118 ! multiseptate
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
 intersection_of: has_part FYPO:0000118 ! multiseptate
 created_by: midori
 creation_date: 2012-07-19T15:38:21Z
 
 [Term]
 id: FYPO:0001253
-name: elongated multinucleate multiseptate cell, septa between nuclei
+name: elongated multinucleate multiseptate vegetative cell, septa between nuclei
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is longer than normal, has two or more nuclei and more than one septum, and the septa are located so as to form separate compartments with a single nucleus in each." [PomBase:mah, PomBase:vw]
 synonym: "elongated multinucleate multiseptate cell, septa between nuclei during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000133 ! elongated multinucleate cell
-is_a: FYPO:0001252 ! multinucleate multiseptate cell
+is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
+is_a: FYPO:0001252 ! multinucleate multiseptate vegetative cell
+is_a: FYPO:0003343 ! elongated multinucleate multiseptate cell, septa between nuclei
 created_by: midori
 creation_date: 2012-07-19T15:40:18Z
 
@@ -16721,7 +16724,7 @@ id: FYPO:0001254
 name: multinucleate multiseptate cell, septa grouped
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has two or more nuclei and more than one septum, and the septa are grouped together between two compartments, one or more of which may contain multiple nuclei." [PomBase:mah]
 synonym: "multinucleate multiseptate cell, septa grouped during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001252 ! multinucleate multiseptate cell
+is_a: FYPO:0001252 ! multinucleate multiseptate vegetative cell
 is_a: FYPO:0002002 ! multiseptate vegetative cell, septa grouped
 created_by: midori
 creation_date: 2012-07-19T15:41:59Z
@@ -20020,13 +20023,13 @@ comment: Note that if you have done an experiment that assays the viability of a
 synonym: "elongated inviable multinucleate cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "elongated multinucleate inviable vegetative cell" EXACT [PomBase:mah]
 synonym: "essential; elongated multinucleate vegetative cell" RELATED [PomBase:mah]
-is_a: FYPO:0000133 ! elongated multinucleate cell
+is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000049 ! inviable cell
-intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
 created_by: midori
 creation_date: 2012-08-30T14:27:16Z
 
@@ -20055,12 +20058,12 @@ def: "A cell morphology phenotype in which a vegetative cell is viable, longer t
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
 synonym: "elongated multinucleate viable cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "elongated multinucleate viable vegetative cell" EXACT [PomBase:mah]
-is_a: FYPO:0000133 ! elongated multinucleate cell
+is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
 is_a: FYPO:0001492 ! viable elongated vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
 intersection_of: has_part FYPO:0000124 ! viable cell
 created_by: midori
 creation_date: 2012-08-30T14:32:23Z
@@ -27516,7 +27519,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000049 ! inviable cell
-intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
 intersection_of: has_part FYPO:0000949 ! aseptate
 created_by: midori
 creation_date: 2013-02-28T14:14:17Z
@@ -27534,7 +27537,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000049 ! inviable cell
-intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
 intersection_of: has_part FYPO:0002023 ! abnormal septum morphology
 created_by: midori
 creation_date: 2013-02-28T14:18:31Z
@@ -27846,12 +27849,12 @@ id: FYPO:0002049
 name: elongated multinucleate aseptate vegetative cell
 def: "A cell morphology phenotype in which vegetative a cell is longer than normal, has no septum, and contains more than one nucleus." [PomBase:mah]
 synonym: "elongated multinucleate aseptate cells during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000133 ! elongated multinucleate cell
+is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
 is_a: FYPO:0000950 ! elongated aseptate cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
 intersection_of: has_part FYPO:0000949 ! aseptate
 created_by: midori
 creation_date: 2013-03-14T16:36:18Z
@@ -27867,7 +27870,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
 intersection_of: has_part FYPO:0000949 ! aseptate
 created_by: midori
 creation_date: 2013-03-14T16:40:20Z
@@ -27886,7 +27889,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
-intersection_of: has_part FYPO:0000061 ! multinucleate
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
 intersection_of: has_part FYPO:0000949 ! aseptate
 created_by: midori
 creation_date: 2013-03-14T16:41:21Z
@@ -28805,7 +28808,7 @@ creation_date: 2013-05-07T13:25:10Z
 [Term]
 id: FYPO:0002115
 name: normal transporter activity
-def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of a specified transporter activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000706 ! normal molecular function
@@ -28819,7 +28822,7 @@ creation_date: 2013-05-07T13:26:31Z
 [Term]
 id: FYPO:0002116
 name: abnormal transporter activity
-def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is abnormal." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of a specified transporter activity is abnormal." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0000707 ! abnormal molecular function
@@ -28846,7 +28849,7 @@ creation_date: 2013-05-07T13:27:44Z
 [Term]
 id: FYPO:0002118
 name: decreased transporter activity
-def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is decreased." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of a specified transporter activity is decreased." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 synonym: "reduced transporter activity" EXACT [PomBase:mah]
@@ -28859,7 +28862,7 @@ creation_date: 2013-05-07T13:28:05Z
 [Term]
 id: FYPO:0002119
 name: increased transporter activity
-def: "A molecular function phenotype in which a the observed rate of a specified transporter activity is increased." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of a specified transporter activity is increased." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0002116 ! abnormal transporter activity
@@ -29372,7 +29375,7 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 comment: Note that a cell that has the phenotype 'angled actomyosin contractile ring' (FYPO:0002027) will usually also subsequently display this phenotype.
 synonym: "binucleate monoseptate cell, with angled septum, during vegetative growth" EXACT [PomBase:mah]
 synonym: "binucleate monoseptate cell, with septum not orthogonal to long axis" RELATED [PomBase:mah]
-is_a: FYPO:0001222 ! binucleate
+is_a: FYPO:0001222 ! binucleate vegetative cell
 is_a: FYPO:0001390 ! misoriented septum
 created_by: midori
 creation_date: 2013-05-10T15:43:47Z
@@ -31788,7 +31791,7 @@ creation_date: 2013-07-05T15:54:40Z
 [Term]
 id: FYPO:0002333
 name: protein localization phenotype
-def: "A cell phenotype that affects the localization of a the localization of a protein in a cell." [PomBase:mah]
+def: "A cell phenotype that affects the localization of a protein in a cell." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 synonym: "cellular protein localization phenotype" EXACT [GO:0034613]
@@ -41406,12 +41409,12 @@ creation_date: 2014-01-15T10:21:16Z
 
 [Term]
 id: FYPO:0003014
-name: decreased rate of contractile ring disassembly
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the rate, or speed, of contractile ring contraction is decreased. Contractile ring disassembly is the part of cytokinesis in which the actomyosin contractile ring is disaggregated into its constituent components." [PomBase:mah]
-synonym: "decreased rate of actomyosin contractile ring disassembly" EXACT [PomBase:mah]
-synonym: "decreased rate of contractile ring disassembly during vegetative growth" EXACT [PomBase:mah]
+name: decreased rate of actomyosin contractile ring disassembly
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the rate, or speed, of actomyosin contractile ring disassembly is decreased. Contractile ring disassembly is the part of cytokinesis in which the actomyosin contractile ring is disaggregated into its constituent components." [PomBase:mah]
+synonym: "decreased rate of actomyosin contractile ring disassembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased rate of contractile ring disassembly" EXACT [PomBase:mah]
 synonym: "decreased rate of mitotic contractile ring disassembly" EXACT [PomBase:mah]
-synonym: "reduced rate of contractile ring disassembly" EXACT [PomBase:mah]
+synonym: "reduced rate of actomyosin contractile ring disassembly" EXACT [PomBase:mah]
 is_a: FYPO:0003013 ! abnormal actomyosin contractile ring disassembly
 intersection_of: PATO:0000911
 intersection_of: happens_during GO:0072690
@@ -43580,10 +43583,10 @@ synonym: "binucleate monoseptate cell with mitotic cell cycle arrest before cell
 synonym: "binucleate monoseptate cell with mitotic cell cycle arrest before cytokinetic cell separation" EXACT [GO:0000920]
 synonym: "mitotic cell cycle arrest before cell separation with binucleate monoseptate cell" EXACT [PomBase:vw]
 synonym: "nuclear division arrest with septation (normal cell length)" EXACT [PomBase:vw]
-is_a: FYPO:0001222 ! binucleate
+is_a: FYPO:0001222 ! binucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0001222 ! binucleate
+intersection_of: has_part FYPO:0001222 ! binucleate vegetative cell
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0002888 ! mitotic cell cycle arrest before cell separation
 relationship: has_part FYPO:0002888 ! mitotic cell cycle arrest before cell separation
@@ -45848,7 +45851,7 @@ is_a: FYPO:0000224 ! lemon-shaped cell
 is_a: FYPO:0001489 ! inviable vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000224 ! curved vegetative cell
+intersection_of: has_part FYPO:0000224 ! lemon-shaped cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2014-04-29T14:10:35Z
@@ -45881,6 +45884,262 @@ intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0036349
 created_by: midori
 creation_date: 2014-04-29T14:33:45Z
+
+[Term]
+id: FYPO:0003336
+name: increased duration of protein localization to actomyosin contractile ring
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which one or more proteins is localized to the actomyosin contractile ring for a longer time than normal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased duration of protein localisation to actomyosin contractile ring" EXACT [PomBase:mah]
+synonym: "increased duration of protein localization to actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased duration of protein localization to contractile ring" EXACT [PomBase:mah]
+synonym: "prolonged protein localization to actomyosin contractile ring" EXACT [PomBase:vw]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+intersection_of: PATO:0000498
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990179
+created_by: midori
+creation_date: 2014-05-07T14:53:08Z
+
+[Term]
+id: FYPO:0003337
+name: increased protein localization to septum
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the cell septum is increased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to septum" EXACT [PomBase:mah]
+synonym: "increased protein localization to barrier septum" EXACT [GO:0000935, PomBase:mah]
+synonym: "increased protein localization to cell septum" EXACT [PomBase:al]
+synonym: "increased protein localization to septum during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002718 ! abnormal protein localization to septum
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902432
+created_by: midori
+creation_date: 2014-05-07T14:55:56Z
+
+[Term]
+id: FYPO:0003338
+name: abnormal actomyosin contractile ring morphology
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the actomyosin contractile ring is abnormal." [PomBase:mah]
+synonym: "abnormal actomyosin contractile ring morphology during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal contractile ring morphology" EXACT [PomBase:mah]
+is_a: FYPO:0000350 ! abnormal actin cytoskeleton morphology
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005826
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-05-07T14:59:58Z
+
+[Term]
+id: FYPO:0003339
+name: decreased rate of actomyosin contractile ring assembly
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the rate, or speed, of contractile ring assembly is decreased. Contractile ring assembly is the part of cytokinesis in which the actomyosin contractile ring is formed of actin, myosin, and associated proteins." [PomBase:mah]
+synonym: "decreased rate of actomyosin contractile ring assembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased rate of contractile ring assembly" EXACT [PomBase:mah]
+synonym: "decreased rate of mitotic contractile ring assembly" EXACT [PomBase:mah]
+synonym: "reduced rate of actomyosin contractile ring assembly" EXACT [PomBase:mah]
+is_a: FYPO:0000161 ! abnormal actomyosin contractile ring assembly
+intersection_of: PATO:0000911
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000915
+created_by: midori
+creation_date: 2014-05-07T15:02:59Z
+
+[Term]
+id: FYPO:0003340
+name: decreased re-entry into mitotic cell cycle during recovery from stationary phase
+def: "A cellular process phenotype in which the occurrence of re-entry into the mitotic cell cycle is decreased when the cell is in a population that has been in stationary phase and is then placed in conditions that allow recovery." [PMID:9199286, PomBase:mah]
+synonym: "decreased re-entry into mitotic cell cycle following growth to stationary phase" EXACT [PomBase:al]
+synonym: "reduced re-entry into mitotic cell cycle during recovery from stationary phase" EXACT [PomBase:mah]
+is_a: FYPO:0000145 ! regulation phenotype
+created_by: midori
+creation_date: 2014-05-07T15:40:33Z
+
+[Term]
+id: FYPO:0003341
+name: multinucleate
+def: "A physical cellular phenotype in which a cell contains more than one nucleus." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
+synonym: "multinucleate cells" EXACT [PomBase:al]
+synonym: "multiple nuclei" EXACT [PomBase:al]
+is_a: FYPO:0000287 ! abnormal subcellular component
+intersection_of: PATO:0001908
+intersection_of: inheres_in CL:0000334
+created_by: midori
+creation_date: 2014-05-07T15:45:12Z
+
+[Term]
+id: FYPO:0003342
+name: elongated multinucleate cell
+def: "A cell phenotype in which a cell contains more than one nucleus and is elongated." [PomBase:mah]
+synonym: "long multinucleate cell" EXACT [PomBase:vw]
+is_a: FYPO:0000017 ! elongated cell
+is_a: FYPO:0003341 ! multinucleate
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0003341 ! multinucleate
+created_by: midori
+creation_date: 2014-05-07T15:47:45Z
+
+[Term]
+id: FYPO:0003343
+name: elongated multinucleate multiseptate cell, septa between nuclei
+def: "A cell morphology phenotype in which a cell is longer than normal, has two or more nuclei and more than one septum, and the septa are located so as to form separate compartments with a single nucleus in each." [PomBase:mah, PomBase:vw]
+is_a: FYPO:0001252 ! multinucleate multiseptate vegetative cell
+is_a: FYPO:0003342 ! elongated multinucleate cell
+created_by: midori
+creation_date: 2014-05-07T15:51:02Z
+
+[Term]
+id: FYPO:0003344
+name: elongated multinucleate multiseptate cell, septa between nuclei, during stationary phase
+def: "A cell morphology phenotype observed when a cell population is in stationary phase in which a cell is longer than normal, has two or more nuclei and more than one septum, and the septa are located so as to form separate compartments with a single nucleus in each." [PomBase:mah, PomBase:vw]
+synonym: "elongated multinucleate multiseptate cell, septa between nuclei during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003343 ! elongated multinucleate multiseptate cell, septa between nuclei
+created_by: midori
+creation_date: 2014-05-07T15:52:21Z
+
+[Term]
+id: FYPO:0003345
+name: abolished cell cycle arrest in mitotic G1 phase in response to nitrogen starvation
+def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation does not occur; arrest normally occurs in G1 phase." [PomBase:mah]
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+synonym: "abolished cell cycle arrest in mitotic G1 phase during cellular response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "abolished cell cycle arrest in mitotic G1 phase in response to nitrogen depletion" EXACT [PomBase:vw]
+synonym: "abolished cell cycle arrest in mitotic G1 phase in response to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "abolished mitotic cell cycle arrest in G1 phase in response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "abolished mitotic G1 arrest in response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "abolished nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
+synonym: "cell cycle arrest in mitotic G1 phase in response to nitrogen starvation abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
+is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
+intersection_of: PATO:0001558
+intersection_of: tomards GO:0030996
+created_by: midori
+creation_date: 2014-05-07T15:56:55Z
+
+[Term]
+id: FYPO:0003346
+name: abnormal meiotic recombination at silent mating-type cassette
+def: "A cellular process phenotype in which reciprocal meiotic recombination is abnormal at the silent mating-type cassettes. Meiotic recombination is a cellular process in which double strand breaks are formed and repaired through a double Holliday junction intermediate, resulting in the equal exchange of genetic material between non-sister chromatids in a pair of homologous chromosomes." [GO:0007131, PomBase:mah]
+synonym: "abnormal meiotic DNA recombination at silent mating-type cassette" EXACT [PomBase:mah]
+synonym: "abnormal reciprocal meiotic recombination at silent mating-type cassette" EXACT [PomBase:mah]
+synonym: "abnormal recombination at silent mating-type cassette" BROAD [PomBase:mah]
+synonym: "DNA recombination defects, meiotic, at silent mating-type cassette" EXACT [PomBase:mah]
+is_a: FYPO:0000063 ! abnormal DNA recombination
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007131
+intersection_of: occurs_at SO:0001984
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-05-07T16:08:59Z
+
+[Term]
+id: FYPO:0003347
+name: altered substrate specificity
+def: "A molecular function phenotype in which the substrate specificity of a catalytic activity differs from wild type." [PMID:23091597, PomBase:mah]
+synonym: "abnormal catalytic activity, altered substrate specificity" EXACT [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+created_by: midori
+creation_date: 2014-05-07T16:19:46Z
+
+[Term]
+id: FYPO:0003348
+name: altered substrate specificity, glutathione synthetase to homoglutathione synthetase activity
+def: "A molecular function phenotype in which the substrate specificity of a gene product that executes glutathione synthetase activity in wild type is altered such that the gene product executes homoglutathione synthetase activity." [PMID:23091597, PomBase:mah]
+synonym: "abnormal catalytic activity, altered substrate specificity, glutathione synthetase to homoglutathione synthetase activity" EXACT [PomBase:mah]
+is_a: FYPO:0003347 ! altered substrate specificity
+created_by: midori
+creation_date: 2014-05-07T16:24:09Z
+
+[Term]
+id: FYPO:0003349
+name: normal protein localization to mitotic spindle midzone during anaphase B
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitotic spindle midzone during anaphase B is normal (i.e. indistinguishable from wild type). The mitotic spindle midzone is the area in the center of the mitotic spindle where the spindle microtubules from opposite poles overlap. Anaphase B is the stage of mitosis in which the polar microtubules elongate and the two poles of the spindle move farther apart." [GO:0000092, GO:1990023, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to mitotic spindle midzone during anaphase B" EXACT [PomBase:mah]
+synonym: "normal protein localization to mitotic spindle midzone during anaphase B during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0000092
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902967
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-05-07T16:41:21Z
+
+[Term]
+id: FYPO:0003350
+name: abolished protein localization to mitotic spindle midzone during anaphase B
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitotic spindle midzone during anaphase B does not occur. The mitotic spindle midzone is the area in the center of the mitotic spindle where the spindle microtubules from opposite poles overlap. Anaphase B is the stage of mitosis in which the polar microtubules elongate and the two poles of the spindle move farther apart." [GO:0000092, GO:1990023, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "protein absent from mitotic spindle midzone during anaphase B" RELATED [PomBase:mah]
+synonym: "protein localisation to mitotic spindle midzone abolished during anaphase B" EXACT [PomBase:mah]
+synonym: "protein localization to mitotic spindle midzone abolished during anaphase B" EXACT [PomBase:mah]
+synonym: "protein localization to spindle midzone abolished during anaphase B during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
+is_a: FYPO:0002824 ! abnormal protein localization to mitotic spindle
+intersection_of: PATO:0001558
+intersection_of: during GO:0000092
+intersection_of: during GO:0072690
+intersection_of: towards GO:1902967
+created_by: midori
+creation_date: 2014-05-07T16:44:01Z
+
+[Term]
+id: FYPO:0003351
+name: increased duration of protein localization to kinetochore
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which one or more proteins is localized to the kinetochore of a chromosome for a longer time than normal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased duration of protein localisation to kinetochore" EXACT [PomBase:mah]
+synonym: "increased duration of protein localization to kinetochore during vegetative growth" EXACT [PomBase:mah]
+synonym: "prolonged protein localization to kinetochore" EXACT [PomBase:vw]
+is_a: FYPO:0001268 ! abnormal protein localization to kinetochore
+intersection_of: PATO:0000498
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034501
+created_by: midori
+creation_date: 2014-05-07T16:46:42Z
+
+[Term]
+id: FYPO:0003352
+name: decreased DNA double-strand break formation at mating-type locus
+def: "A DNA recombination phenotype observed in the vegetative growth phase of the life cycle in which DNA double-strand break formation occurs to a lower extent than normal during gene conversion at the mating-type locus." [PomBase:mah]
+synonym: "decreased DNA double-strand break formation at mating-type locus during gene conversion" EXACT [PomBase:mah]
+synonym: "decreased DNA double-strand break formation at mating-type locus during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased DNA double-strand break formation during gene conversion at mating-type locus" EXACT [PomBase:mah]
+synonym: "decreased DSB formation at mat1" EXACT [PomBase:al]
+synonym: "decreased DSB formation at mating-type locus" EXACT [PomBase:mah]
+synonym: "decreased DSB formation proximal to mat1" EXACT [PomBase:al]
+synonym: "decreased gene conversion at mating-type locus, DNA double-strand break formation" EXACT [GO:0000728]
+synonym: "reduced DNA double-strand break formation at mating-type locus" EXACT [PomBase:mah]
+is_a: FYPO:0001345 ! abnormal DNA recombination during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000728
+created_by: midori
+creation_date: 2014-05-07T17:25:17Z
+
+[Term]
+id: FYPO:0003353
+name: normal DNA double-strand break formation at mating-type locus
+def: "A DNA recombination phenotype observed in the vegetative growth phase of the life cycle in which DNA double-strand break formation is normal (i.e. indistinguishable from wild type) during gene conversion at the mating-type locus." [PomBase:mah]
+synonym: "normal DNA double-strand break formation at mating-type locus during gene conversion" EXACT [PomBase:mah]
+synonym: "normal DNA double-strand break formation at mating-type locus during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal DNA double-strand break formation during gene conversion at mating-type locus" EXACT [PomBase:mah]
+synonym: "normal DSB formation at mat1" EXACT [PomBase:al]
+synonym: "normal DSB formation at mating-type locus" EXACT [PomBase:mah]
+synonym: "normal DSB formation proximal to mat1" EXACT [PomBase:al]
+synonym: "normal gene conversion at mating-type locus, DNA double-strand break formation" EXACT [GO:0000728]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000728
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-05-07T17:29:08Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
