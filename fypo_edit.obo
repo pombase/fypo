@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 07:05:2014 17:40
+date: 12:05:2014 16:24
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -1080,15 +1080,26 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000082
 name: sensitive to heat
+alt_id: FYPO:0000247
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to heat. For example, cells may fail to grow or grow more slowly than normal at high temperatures." [PomBase:mah]
-comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius. Use this term if you have assayed growth of cells exposed to heat in culture. If you have assayed the response to heat at the subcellular or molecular level, consider annotating to 'abnormal cellular response to heat' (FYPO:0000212).
+comment: MERGED COMMENT:\nTARGET COMMENT: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius. Use this term if you have assayed growth of cells exposed to heat in culture. If you have assayed the response to heat at the subcellular or molecular level, consider annotating to 'abnormal cellular response to heat' (FYPO:0000212).\n--------------------\nSOURCE COMMENT: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise. For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
+synonym: "decreased cell population growth at high temperature" RELATED [PomBase:mah]
+synonym: "decreased growth at high temperature" RELATED [PomBase:mah]
+synonym: "decreased vegetative cell population growth at high temperature" RELATED [PomBase:mah]
+synonym: "growth defect, slow growth at high temperatures" RELATED [PomBase:mah]
 synonym: "heat sensitive" EXACT [PomBase:mah]
 synonym: "heat sensitivity: increased" EXACT [SGD:phenotype_annotation]
 synonym: "hypersensitive to high temperature" EXACT [PomBase:mah]
+synonym: "reduced growth at high temperature" RELATED [PomBase:mah]
 synonym: "sensitive to high temperature" EXACT [PomBase:mah]
 synonym: "sensitive to high temperature during vegetative growth" EXACT [PomBase:mah]
+synonym: "slow growth at high temperature" RELATED [PomBase:mah]
 synonym: "temperature sensitive" RELATED [PomBase:mah]
 is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
+is_a: FYPO:0001355 ! decreased vegetative cell population growth
+intersection_of: FYPO:0000046 ! decreased cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001305
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -3086,10 +3097,10 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000242
-name: normal cell population growth on ammonia nitrogen source
+name: normal growth on ammonia nitrogen source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing ammonia as the nitrogen source." [PomBase:mah]
 synonym: "growth defect, normal growth with ammonia nitrogen source" RELATED [PomBase:mah]
-synonym: "normal growth on ammonia nitrogen source" BROAD [PomBase:mah]
+synonym: "normal cell population growth on ammonia nitrogen source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on ammonia nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -3097,10 +3108,10 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000243
-name: normal cell population growth on proline nitrogen source
+name: normal growth on proline nitrogen source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing L-proline as the nitrogen source." [PomBase:mah]
 synonym: "growth defect, normal growth with proline nitrogen source" RELATED [PomBase:mah]
-synonym: "normal growth on proline nitrogen source" BROAD [PomBase:mah]
+synonym: "normal cell population growth on proline nitrogen source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on proline nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -3141,23 +3152,6 @@ synonym: "antioxidant required for vegetative cell growth" EXACT [PomBase:mah]
 synonym: "growth auxotrophic for antioxidant" EXACT [PomBase:al]
 synonym: "growth defect, requires antioxidant for growth" EXACT [PomBase:mah]
 is_a: FYPO:0001356 ! abnormal vegetative cell population growth
-created_by: midori
-creation_date: 2011-04-19T02:59:38Z
-
-[Term]
-id: FYPO:0000247
-name: decreased cell population growth at high temperature
-def: "A vegetative cell population growth phenotype in which cell growth is decreased relative to normal at a high temperature." [PomBase:mah]
-comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise. For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
-synonym: "decreased growth at high temperature" BROAD [PomBase:mah]
-synonym: "decreased vegetative cell population growth at high temperature" EXACT [PomBase:mah]
-synonym: "growth defect, slow growth at high temperatures" RELATED [PomBase:mah]
-synonym: "reduced growth at high temperature" RELATED [PomBase:mah]
-synonym: "slow growth at high temperature" RELATED [PomBase:mah]
-is_a: FYPO:0001355 ! decreased vegetative cell population growth
-intersection_of: FYPO:0000046 ! decreased cell population growth
-intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001305
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3884,52 +3878,29 @@ created_by: midori
 creation_date: 2011-04-27T11:47:04Z
 
 [Term]
-id: FYPO:0000306
-name: abolished spore germination
-def: "A cellular process phenotype in which spore germination does not occur." [PomBase:mah]
-synonym: "spore germination abolished" EXACT [PomBase:mah]
-is_a: FYPO:0000305 ! abnormal spore germination
-intersection_of: PATO:0001558
-intersection_of: towards GO:0009847
-created_by: midori
-creation_date: 2011-04-27T11:47:04Z
-
-[Term]
 id: FYPO:0000307
-name: spore germination abolished, small spores
-def: "A cellular process phenotype in which spore germination does not occur, and spores are smaller than normal." [PomBase:mah]
-is_a: FYPO:0000309 ! spore germination abolished, abnormal spore morphology
+name: inviable small spore
+def: "A viability phenotype in which a spore is unable to survive under conditions in which wild type spores survive, and is smaller than normal. An inviable spore does not germinate." [PomBase:mah]
+synonym: "spore germination abolished, small spores" RELATED [PomBase:mah]
+is_a: FYPO:0000309 ! inviable spore with abnormal morphology
+is_a: FYPO:0000346 ! small spores
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: has_part FYPO:0000306 ! abolished spore germination
 intersection_of: has_part FYPO:0000346 ! small spores
-created_by: midori
-creation_date: 2011-04-27T11:47:04Z
-
-[Term]
-id: FYPO:0000308
-name: spore germination abolished, swollen spore
-def: "A cellular process phenotype in which spore germination does not occur, and the spore has a larger volume than normal. In a swollen cell, both length and diameter are greater than normal, although the cell is only considered elongated if the length:width ratio is also greater than normal." [PomBase:mah]
-synonym: "spore germination abolished, enlarged spore" RELATED [PomBase:mah]
-synonym: "spore germination abolished, increased spore size" RELATED [PomBase:vw]
-synonym: "spore germination abolished, increased spore volume" EXACT [PomBase:mah]
-synonym: "spore germination abolished, large spore" RELATED [PomBase:vw]
-is_a: FYPO:0000309 ! spore germination abolished, abnormal spore morphology
-intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: has_part FYPO:0000306 ! abolished spore germination
-intersection_of: has_part FYPO:0000347 ! swollen spore
-relationship: has_part FYPO:0000347 ! swollen spore
+intersection_of: has_part FYPO:0002151 ! inviable spore
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
 
 [Term]
 id: FYPO:0000309
-name: spore germination abolished, abnormal spore morphology
-def: "A cellular process phenotype in which spore germination does not occur, and spores have abnormal morphology (i.e. size, shape, or structure)." [PomBase:mah]
-synonym: "spore germination abolished, misshapen spores" EXACT [PomBase:mah]
-is_a: FYPO:0000306 ! abolished spore germination
+name: inviable spore with abnormal morphology
+def: "A viability phenotype in which a spore is unable to survive under conditions in which wild type spores survive, and has an abnormal morphology (i.e. size, shape, or structure). An inviable spore does not germinate." [PomBase:mah]
+synonym: "spore germination abolished, abnormal spore morphology" RELATED [PomBase:mah]
+synonym: "spore germination abolished, misshapen spores" RELATED [PomBase:mah]
+is_a: FYPO:0002151 ! inviable spore
+is_a: has_part ! has_part
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: has_part FYPO:0000306 ! abolished spore germination
 intersection_of: has_part FYPO:0000348 ! abnormal spore morphology
+intersection_of: has_part FYPO:0002151 ! inviable spore
 created_by: midori
 creation_date: 2011-04-27T11:47:04Z
 
@@ -12467,12 +12438,14 @@ creation_date: 2012-04-03T02:27:00Z
 
 [Term]
 id: FYPO:0000944
-name: spore germination abolished, normal spore morphology
-def: "A cellular process phenotype in which spore germination does not occur, and spores have normal morphology (i.e. size, shape, and structure)." [PomBase:mah]
-is_a: FYPO:0000306 ! abolished spore germination
+name: inviable spore with normal morphology
+def: "A viability phenotype in which a spore is unable to survive under conditions in which wild type spores survive, and has a normal morphology (i.e. size, shape, or structure). An inviable spore does not germinate." [PomBase:mah]
+synonym: "spore germination abolished, normal spore morphology" RELATED [PomBase:mah]
+is_a: FYPO:0000943 ! normal spore morphology
+is_a: FYPO:0002151 ! inviable spore
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: has_part FYPO:0000306 ! abolished spore germination
 intersection_of: has_part FYPO:0000943 ! normal spore morphology
+intersection_of: has_part FYPO:0002151 ! inviable spore
 created_by: midori
 creation_date: 2012-04-03T02:28:22Z
 
@@ -12622,12 +12595,12 @@ creation_date: 2012-04-12T12:15:57Z
 
 [Term]
 id: FYPO:0000954
-name: normal cell population growth on nickel cation
+name: normal growth on nickel cation
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing nickel cations." [PomBase:mah]
 synonym: "normal cell population growth in presence of nickel cations" EXACT [PomBase:mah]
 synonym: "normal cell population growth on nickel" EXACT [GO:0071289, PomBase:mah]
+synonym: "normal cell population growth on nickel cation" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to nickel cation" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on nickel cation" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on nickel cation" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12635,11 +12608,11 @@ creation_date: 2012-04-12T12:18:01Z
 
 [Term]
 id: FYPO:0000955
-name: normal cell population growth on lead ion
+name: normal growth on lead ion
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing lead ions." [PomBase:mah]
 synonym: "normal cell population growth in presence of lead ion" EXACT [PomBase:mah]
+synonym: "normal cell population growth on lead ion" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to lead ion" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on lead ion" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on lead ion" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12647,11 +12620,11 @@ creation_date: 2012-04-12T12:21:54Z
 
 [Term]
 id: FYPO:0000956
-name: normal cell population growth on bismuth
+name: normal growth on bismuth
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing bismuth." [PomBase:mah]
 synonym: "normal cell population growth in presence of bismuth" EXACT [PomBase:mah]
+synonym: "normal cell population growth on bismuth" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to bismuth" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on bismuth" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on bismuth" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12659,12 +12632,12 @@ creation_date: 2012-04-12T12:22:52Z
 
 [Term]
 id: FYPO:0000957
-name: normal cell population growth on methyl methanesulfonate
+name: normal growth on methyl methanesulfonate
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing methyl methanesulfonate." [PomBase:mah]
 synonym: "normal cell population growth in presence of methyl methanesulfonate" EXACT [PomBase:mah]
+synonym: "normal cell population growth on methyl methanesulfonate" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on MMS" EXACT [CHEBI:25255]
 synonym: "normal cellular response to methyl methanesulfonate" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on methyl methanesulfonate" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on methyl methanesulfonate" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12672,12 +12645,12 @@ creation_date: 2012-04-12T12:23:26Z
 
 [Term]
 id: FYPO:0000958
-name: normal cell population growth on mercaptoethanol
+name: normal growth on mercaptoethanol
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing mercaptoethanol." [PomBase:mah]
 synonym: "normal cell population growth in presence of mercaptoethanol" EXACT [PomBase:mah]
 synonym: "normal cell population growth on 2-sulfanylethanol" EXACT [CHEBI:41218]
+synonym: "normal cell population growth on mercaptoethanol" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to mercaptoethanol" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on mercaptoethanol" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on mercaptoethanol" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12685,12 +12658,12 @@ creation_date: 2012-04-12T12:25:12Z
 
 [Term]
 id: FYPO:0000959
-name: normal cell population growth on sodium dodecyl sulfate
+name: normal growth on sodium dodecyl sulfate
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing sodium dodecyl sulfate (SDS." [PomBase:mah]
 synonym: "normal cell population growth in presence of sodium dodecyl sulfate" EXACT [PomBase:mah]
 synonym: "normal cell population growth on SDS" EXACT [CHEBI:8984]
+synonym: "normal cell population growth on sodium dodecyl sulfate" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to sodium dodecyl sulfate" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on sodium dodecyl sulfate" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on sodium dodecyl sulfate" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12698,12 +12671,12 @@ creation_date: 2012-04-12T12:28:02Z
 
 [Term]
 id: FYPO:0000960
-name: normal cell population growth on ethanol
+name: normal growth on ethanol
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing ethanol." [PomBase:mah]
 synonym: "normal cell population growth in presence of ethanol" EXACT [PomBase:mah]
+synonym: "normal cell population growth on ethanol" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on to ethyl alcohol" EXACT [PomBase:mah]
 synonym: "normal cellular response to ethanol" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on ethanol" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on ethanol" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12711,12 +12684,12 @@ creation_date: 2012-04-12T12:35:28Z
 
 [Term]
 id: FYPO:0000961
-name: normal cell population growth on sorbitol
+name: normal growth on sorbitol
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing sorbitol." [PomBase:mah]
 synonym: "normal cell population growth in presence of sorbitol" EXACT [PomBase:mah]
 synonym: "normal cell population growth on glucitol" EXACT [CHEBI:30199]
+synonym: "normal cell population growth on sorbitol" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to sorbitol" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on sorbitol" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on sorbitol" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12724,12 +12697,12 @@ creation_date: 2012-04-12T12:36:31Z
 
 [Term]
 id: FYPO:0000962
-name: normal cell population growth on hydrogen peroxide
+name: normal growth on hydrogen peroxide
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing hydrogen peroxide." [PomBase:mah]
 synonym: "normal cell population growth in presence of hydrogen peroxide" EXACT [PomBase:mah]
 synonym: "normal cell population growth on H2O2" EXACT [CHEBI:16240]
+synonym: "normal cell population growth on hydrogen peroxide" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to hydrogen peroxide" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on hydrogen peroxide" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on hydrogen peroxide" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12737,11 +12710,11 @@ creation_date: 2012-04-12T12:37:24Z
 
 [Term]
 id: FYPO:0000963
-name: normal cell population growth on hydroxyurea
+name: normal growth on hydroxyurea
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing hydroxyurea." [PomBase:mah]
 synonym: "normal cell population growth in presence of hydroxyurea" EXACT [PomBase:mah]
 synonym: "normal cell population growth on HU" EXACT [PomBase:mah]
-synonym: "normal growth on hydroxyurea" BROAD [PomBase:mah]
+synonym: "normal cell population growth on hydroxyurea" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on hydroxyurea" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12749,12 +12722,12 @@ creation_date: 2012-04-12T12:38:22Z
 
 [Term]
 id: FYPO:0000964
-name: normal cell population growth on thiabendazole
+name: normal growth on thiabendazole
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing thiabendazole." [PomBase:mah]
 synonym: "normal cell population growth in presence of thiabendazole" EXACT [PomBase:mah]
 synonym: "normal cell population growth on TBZ" EXACT [CHEBI:45979]
+synonym: "normal cell population growth on thiabendazole" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to thiabendazole" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on thiabendazole" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on thiabendazole" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12832,9 +12805,10 @@ creation_date: 2012-04-19T01:25:21Z
 
 [Term]
 id: FYPO:0000969
-name: normal cell population growth during cellular response to UV
+name: normal growth during cellular response to UV
 def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to ultraviolet light." [PomBase:mah]
 synonym: "normal cell population growth during cellular response to ultraviolet light" EXACT [PomBase:mah]
+synonym: "normal cell population growth during cellular response to UV" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to UV" RELATED [PomBase:mah]
 synonym: "normal sensitivity to UV irradiation" RELATED [PomBase:vw]
 synonym: "normal vegetative cell population growth during cellular response to UV" EXACT [PomBase:mah]
@@ -12935,10 +12909,10 @@ creation_date: 2012-04-19T02:34:05Z
 
 [Term]
 id: FYPO:0000978
-name: normal cell population growth on mevastatin
+name: normal growth on mevastatin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing mevastatin." [PomBase:mah]
 synonym: "normal cell population growth on compactin" EXACT [PomBase:al]
-synonym: "normal growth on mevastatin" BROAD [PomBase:mah]
+synonym: "normal cell population growth on mevastatin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on mevastatin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12946,9 +12920,9 @@ creation_date: 2012-04-19T04:43:12Z
 
 [Term]
 id: FYPO:0000979
-name: normal cell population growth on miconazole
+name: normal growth on miconazole
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing miconazole." [PomBase:mah]
-synonym: "normal growth on miconazole" BROAD [PomBase:mah]
+synonym: "normal cell population growth on miconazole" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on miconazole" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -12956,9 +12930,9 @@ creation_date: 2012-04-19T04:45:21Z
 
 [Term]
 id: FYPO:0000980
-name: normal cell population growth on amphotericin B
+name: normal growth on amphotericin B
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing amphotericin B." [PomBase:mah]
-synonym: "normal growth on amphotericin B" BROAD [PomBase:mah]
+synonym: "normal cell population growth on amphotericin B" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on amphotericin B" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -13485,11 +13459,11 @@ creation_date: 2012-04-25T02:15:24Z
 
 [Term]
 id: FYPO:0001016
-name: normal cell population growth on actinomycin D
+name: normal growth on actinomycin D
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing actinomycin D." [PomBase:mah]
 synonym: "normal cell population growth in presence of actinomycin D" EXACT [PomBase:mah]
+synonym: "normal cell population growth on actinomycin D" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to actinomycin D" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on actinomycin D" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on actinomycin D" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -13540,12 +13514,12 @@ creation_date: 2012-04-30T02:17:33Z
 
 [Term]
 id: FYPO:0001020
-name: normal cell population growth on calcium ion
+name: normal growth on calcium ion
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing calcium ions." [PomBase:mah]
 synonym: "normal cell population growth in presence of calcium ions" EXACT [PomBase:mah]
 synonym: "normal cell population growth on calcium" EXACT [PomBase:mah]
+synonym: "normal cell population growth on calcium ion" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to calcium ion" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on calcium ion" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on calcium ion" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -13553,8 +13527,9 @@ creation_date: 2012-04-30T02:48:06Z
 
 [Term]
 id: FYPO:0001021
-name: normal cell population growth during cellular response to osmotic stress
+name: normal growth during cellular response to osmotic stress
 def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to osmotic stress." [PomBase:mah]
+synonym: "normal cell population growth during cellular response to osmotic stress" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to osmotic stress" RELATED [PomBase:mah]
 synonym: "normal vegetative cell population growth during cellular response to osmotic stress" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
@@ -13565,12 +13540,13 @@ creation_date: 2012-04-30T02:50:20Z
 
 [Term]
 id: FYPO:0001022
-name: normal cell population growth during cellular response to high osmolarity
+name: normal growth during cellular response to high osmolarity
 def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to high osmolarity." [PomBase:mah]
+synonym: "normal cell population growth during cellular response to high osmolarity" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth during cellular response to hyperosmotic conditions" EXACT [PomBase:mah]
 synonym: "normal cellular response to high osmolarity" RELATED [PomBase:mah]
 synonym: "normal vegetative cell population growth during cellular response to high osmolarity" EXACT [PomBase:mah]
-is_a: FYPO:0001021 ! normal cell population growth during cellular response to osmotic stress
+is_a: FYPO:0001021 ! normal growth during cellular response to osmotic stress
 intersection_of: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: happens_during GO:0071474
 created_by: midori
@@ -13578,11 +13554,11 @@ creation_date: 2012-04-30T02:50:58Z
 
 [Term]
 id: FYPO:0001023
-name: normal cell population growth on cisplatin
+name: normal growth on cisplatin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cisplatin." [PomBase:mah]
 synonym: "normal cell population growth in presence of cisplatin" EXACT [PomBase:mah]
 synonym: "normal cell population growth on cis-DDP" EXACT [CHEBI:27899]
-synonym: "normal cell population growth on DDP" BROAD [PomBase:mah]
+synonym: "normal cell population growth on cisplatin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to cisplatin" RELATED [PomBase:al, PomBase:mah]
 synonym: "normal growth on cisplatin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on cisplatin" EXACT [PomBase:mah]
@@ -13668,13 +13644,13 @@ creation_date: 2012-05-15T16:55:19Z
 
 [Term]
 id: FYPO:0001030
-name: normal cell population growth on dithiothreitol
+name: normal growth on dithiothreitol
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing dithiothreitol." [PomBase:mah]
 synonym: "normal cell population growth in presence of dithiothreitol" EXACT [PomBase:mah]
 synonym: "normal cell population growth on 1,4-dithiothreitol" EXACT [CHEBI:18320]
+synonym: "normal cell population growth on dithiothreitol" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on DTT" EXACT [PomBase:mah]
 synonym: "normal cellular response to dithiothreitol" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on dithiothreitol" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on dithiothreitol" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -13753,13 +13729,14 @@ creation_date: 2012-05-09T04:45:40Z
 
 [Term]
 id: FYPO:0001037
-name: normal cell population growth during cellular response to salt stress
+name: normal growth during cellular response to salt stress
 def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to salt stress." [PomBase:mah]
 synonym: "normal cell population growth during cellular response to ionic osmotic stress" EXACT [GO:0071472, PomBase:mah]
+synonym: "normal cell population growth during cellular response to salt stress" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to salt stress" RELATED [PomBase:mah]
 synonym: "normal cellular salinity response" RELATED [GO:0071472, PomBase:mah]
 synonym: "normal vegetative cell population growth during cellular response to salt stress" EXACT [PomBase:mah]
-is_a: FYPO:0001021 ! normal cell population growth during cellular response to osmotic stress
+is_a: FYPO:0001021 ! normal growth during cellular response to osmotic stress
 intersection_of: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: happens_during GO:0071472
 created_by: midori
@@ -14330,11 +14307,11 @@ creation_date: 2012-05-31T16:00:49Z
 
 [Term]
 id: FYPO:0001075
-name: normal cell population growth on papulacandin B
+name: normal growth on papulacandin B
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing papulacandin B." [PomBase:mah]
 synonym: "normal cell population growth in presence of papulacandin B" EXACT [PomBase:mah]
+synonym: "normal cell population growth on papulacandin B" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to papulacandin B" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on papulacandin B" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on papulacandin B" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -14657,12 +14634,12 @@ creation_date: 2012-06-01T14:37:39Z
 
 [Term]
 id: FYPO:0001099
-name: normal cell population growth on CCCP
+name: normal growth on CCCP
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing carbonyl cyanide m-chlorophenyl hydrazone (CCCP)." [PomBase:mah]
 synonym: "normal cell population growth in presence of CCCP" EXACT [PomBase:mah]
 synonym: "normal cell population growth on carbonyl cyanide m-chlorophenyl hydrazone" EXACT [CHEBI:3259]
+synonym: "normal cell population growth on CCCP" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to CCCP" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on CCCP" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on CCCP" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -14670,10 +14647,11 @@ creation_date: 2012-06-01T14:38:51Z
 
 [Term]
 id: FYPO:0001100
-name: normal cell population growth on Gentian violet
+name: normal growth on Gentian violet
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing Gentian violet (also known as crystal violet)." [PomBase:mah]
 synonym: "normal cell population growth in presence of Gentian violet" EXACT [PomBase:mah]
 synonym: "normal cell population growth on crystal violet" EXACT [PomBase:mah]
+synonym: "normal cell population growth on Gentian violet" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on {4-[Bis-(4-dimethylamino-phenyl)-methylene]-cyclohexa-2,5-dienylidene}-dimethyl-ammonium chloride" EXACT [CHEBI:198346]
 synonym: "normal vegetative cell population growth on Gentian violet" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
@@ -15347,11 +15325,11 @@ creation_date: 2012-06-14T16:21:22Z
 
 [Term]
 id: FYPO:0001148
-name: normal cell population growth on amiloride
+name: normal growth on amiloride
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing amiloride." [PomBase:mah]
 synonym: "normal cell population growth in presence of amiloride" EXACT [PomBase:mah]
+synonym: "normal cell population growth on amiloride" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to amiloride" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on amiloride" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on amiloride" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -15359,11 +15337,11 @@ creation_date: 2012-06-14T16:30:50Z
 
 [Term]
 id: FYPO:0001149
-name: normal cell population growth on methylamine
+name: normal growth on methylamine
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing methylamine." [PomBase:mah]
 synonym: "normal cell population growth in presence of methylamine" EXACT [PomBase:mah]
+synonym: "normal cell population growth on methylamine" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to methylamine" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on methylamine" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on methylamine" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -15525,9 +15503,9 @@ creation_date: 2012-06-15T14:21:23Z
 
 [Term]
 id: FYPO:0001164
-name: normal cell population growth on glucose carbon source
+name: normal growth on glucose carbon source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing glucose as the carbon source." [PomBase:mah]
-synonym: "normal growth on glucose carbon source" BROAD [PomBase:mah]
+synonym: "normal cell population growth on glucose carbon source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on dextrose carbon source" EXACT [PomBase:al]
 synonym: "normal vegetative cell population growth on glucose carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
@@ -15548,9 +15526,9 @@ creation_date: 2012-06-15T14:28:05Z
 
 [Term]
 id: FYPO:0001166
-name: normal cell population growth on fructose carbon source
+name: normal growth on fructose carbon source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing fructose as the carbon source." [PomBase:mah]
-synonym: "normal growth on fructose carbon source" BROAD [PomBase:mah]
+synonym: "normal cell population growth on fructose carbon source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on fructose carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -15662,9 +15640,9 @@ creation_date: 2012-06-18T15:57:19Z
 
 [Term]
 id: FYPO:0001174
-name: normal cell population growth on sucrose carbon source
+name: normal growth on sucrose carbon source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing sucrose as the carbon source." [PomBase:mah]
-synonym: "normal growth on sucrose carbon source" BROAD [PomBase:mah]
+synonym: "normal cell population growth on sucrose carbon source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on sucrose carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -15672,9 +15650,9 @@ creation_date: 2012-06-21T11:11:55Z
 
 [Term]
 id: FYPO:0001175
-name: normal cell population growth on maltose carbon source
+name: normal growth on maltose carbon source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing maltose as the carbon source." [PomBase:mah]
-synonym: "normal growth on maltose carbon source" BROAD [PomBase:mah]
+synonym: "normal cell population growth on maltose carbon source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on maltose carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -15867,17 +15845,17 @@ creation_date: 2012-07-05T14:41:18Z
 
 [Term]
 id: FYPO:0001192
-name: normal cell population growth on cell wall-degrading enzymes
+name: normal growth on cell wall-degrading enzymes
 alt_id: FYPO:0001193
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which vegetative cell growth is normal (i.e. indistinguishable from wild type) in a medium containing one or more enzymes that degrades cell wall polysaccharides." [PomBase:mah]
 synonym: "normal cell population growth in presence of cell wall-degrading enzymes" EXACT [PomBase:mah]
 synonym: "normal cell population growth on beta-1,3-glucan laminaripentaohydrolase" NARROW [PomBase:al, PomBase:mah]
+synonym: "normal cell population growth on cell wall-degrading enzymes" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on lysing enzymes from Trichoderma harzianum" NARROW [PomBase:al]
 synonym: "normal cell population growth on Lyticase" NARROW [PomBase:mah]
 synonym: "normal cell population growth on Novozyme 234" NARROW [PomBase:mah]
 synonym: "normal cell population growth on Zymolyase" NARROW [PomBase:mah]
 synonym: "normal cellular response to cell wall-degrading enzymes" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on cell wall-degrading enzymes" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on cell wall-degrading enzymes" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -16297,6 +16275,8 @@ creation_date: 2012-07-12T15:15:47Z
 id: FYPO:0001222
 name: binucleate vegetative cell
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell contains two nuclei." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "binucleate cells during vegetative growth" EXACT [PomBase:al]
 synonym: "binucleate during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000061 ! multinucleate vegetative cell
@@ -16497,11 +16477,11 @@ creation_date: 2012-07-16T14:25:09Z
 
 [Term]
 id: FYPO:0001236
-name: normal cell population growth on cycloheximide
+name: normal growth on cycloheximide
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cycloheximide." [PomBase:mah]
 synonym: "normal cell population growth in presence of cycloheximide" EXACT [PomBase:mah]
+synonym: "normal cell population growth on cycloheximide" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to cycloheximide" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on cycloheximide" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on cycloheximide" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -16509,12 +16489,12 @@ creation_date: 2012-07-16T15:25:03Z
 
 [Term]
 id: FYPO:0001237
-name: normal cell population growth on cadmium
+name: normal growth on cadmium
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cadmium ions." [PomBase:mah]
 synonym: "normal cell population growth in presence of cadmium" EXACT [PomBase:mah]
+synonym: "normal cell population growth on cadmium" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on cadmium ion" EXACT [PomBase:mah]
 synonym: "normal cellular response to cadmium" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on cadmium" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on cadmium" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -16522,11 +16502,11 @@ creation_date: 2012-07-16T15:25:47Z
 
 [Term]
 id: FYPO:0001238
-name: normal cell population growth on staurosporine
+name: normal growth on staurosporine
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing staurosporine." [PomBase:mah]
 synonym: "normal cell population growth in presence of staurosporine" EXACT [PomBase:mah]
+synonym: "normal cell population growth on staurosporine" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to staurosporine" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on staurosporine" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on staurosporine" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -16534,13 +16514,13 @@ creation_date: 2012-07-16T15:27:03Z
 
 [Term]
 id: FYPO:0001239
-name: normal cell population growth on t-BOOH
+name: normal growth on t-BOOH
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing tert-butyl hydroperoxide (t-BOOH)." [PomBase:mah]
 synonym: "normal cell population growth in presence of t-BOOH" EXACT [PomBase:mah]
 synonym: "normal cell population growth on 2-methyl-prop-2-yl-hydroperoxide" EXACT [CHEBI:64090]
+synonym: "normal cell population growth on t-BOOH" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on tert-butyl hydroperoxide" EXACT [PomBase:mah]
 synonym: "normal cellular response to t-BOOH" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on t-BOOH" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on t-BOOH" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -16548,12 +16528,12 @@ creation_date: 2012-07-16T15:28:00Z
 
 [Term]
 id: FYPO:0001240
-name: normal cell population growth on diamide
+name: normal growth on diamide
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing N,N,N',N'-tetramethyldiazene-1,2-dicarboxamide, also known as diamide." [PomBase:mah]
 synonym: "normal cell population growth in presence of diamide" EXACT [PomBase:mah]
+synonym: "normal cell population growth on diamide" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on N,N,N',N'-tetramethyldiazene-1,2-dicarboxamide" EXACT [CHEBI:48958, PomBase:mah]
 synonym: "normal cellular response to diamide" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on diamide" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on diamide" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -16561,11 +16541,11 @@ creation_date: 2012-07-16T15:30:45Z
 
 [Term]
 id: FYPO:0001241
-name: normal cell population growth on anisomycin
+name: normal growth on anisomycin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing anisomycin." [PomBase:mah]
 synonym: "normal cell population growth in presence of anisomycin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on anisomycin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to anisomycin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on anisomycin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on anisomycin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -18907,9 +18887,9 @@ creation_date: 2012-08-16T16:02:56Z
 
 [Term]
 id: FYPO:0001409
-name: normal cell population growth on glycerol carbon source
+name: normal growth on glycerol carbon source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing glycerol as the carbon source." [PomBase:mah]
-synonym: "normal growth on glycerol carbon source" BROAD [PomBase:mah]
+synonym: "normal cell population growth on glycerol carbon source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on glycerol carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -19267,11 +19247,11 @@ creation_date: 2012-08-23T12:50:30Z
 
 [Term]
 id: FYPO:0001435
-name: normal cell population growth on erythromycin
+name: normal growth on erythromycin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing erythromycin." [PomBase:mah]
 synonym: "normal cell population growth in presence of erythromycin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on erythromycin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to erythromycin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on erythromycin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on erythromycin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -19279,11 +19259,11 @@ creation_date: 2012-08-23T12:53:50Z
 
 [Term]
 id: FYPO:0001436
-name: normal cell population growth on trichodermin
+name: normal growth on trichodermin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing trichodermin." [PomBase:mah]
 synonym: "normal cell population growth in presence of trichodermin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on trichodermin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to trichodermin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on trichodermin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on trichodermin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -19291,11 +19271,11 @@ creation_date: 2012-08-23T12:55:40Z
 
 [Term]
 id: FYPO:0001437
-name: normal cell population growth on antimycin A
+name: normal growth on antimycin A
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing antimycin A." [PomBase:mah]
 synonym: "normal cell population growth in presence of antimycin A" EXACT [PomBase:mah]
+synonym: "normal cell population growth on antimycin A" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to antimycin A" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on antimycin A" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on antimycin A" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -19303,11 +19283,11 @@ creation_date: 2012-08-23T12:56:12Z
 
 [Term]
 id: FYPO:0001438
-name: normal cell population growth on tetracycline
+name: normal growth on tetracycline
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing tetracycline." [PomBase:mah]
 synonym: "normal cell population growth in presence of tetracycline" EXACT [PomBase:mah]
+synonym: "normal cell population growth on tetracycline" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to tetracycline" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on tetracycline" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on tetracycline" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -19315,11 +19295,11 @@ creation_date: 2012-08-23T12:58:33Z
 
 [Term]
 id: FYPO:0001439
-name: normal cell population growth on chloramphenicol
+name: normal growth on chloramphenicol
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing chloramphenicol." [PomBase:mah]
 synonym: "normal cell population growth in presence of chloramphenicol" EXACT [PomBase:mah]
+synonym: "normal cell population growth on chloramphenicol" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to chloramphenicol" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on chloramphenicol" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on chloramphenicol" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -19508,8 +19488,9 @@ creation_date: 2012-08-23T15:50:53Z
 
 [Term]
 id: FYPO:0001454
-name: normal cell population growth during cellular response to freezing
+name: normal during cellular response to freezing
 def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to freezing conditions." [PomBase:mah]
+synonym: "normal cell population growth during cellular response to freezing" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to freeze-thawing" RELATED [PomBase:al]
 synonym: "normal cellular response to freezing" RELATED [PomBase:mah]
 synonym: "normal vegetative cell population growth during cellular response to freezing" EXACT [PomBase:mah]
@@ -19694,12 +19675,12 @@ creation_date: 2012-08-29T15:55:25Z
 
 [Term]
 id: FYPO:0001470
-name: normal cell population growth on tacrolimus
+name: normal growth on tacrolimus
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing tacrolimus." [PomBase:mah]
 synonym: "normal cell population growth in presence of tacrolimus" EXACT [PomBase:mah]
+synonym: "normal cell population growth on tacrolimus" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to FK506" EXACT [CHEBI:61057]
 synonym: "normal cellular response to tacrolimus" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on tacrolimus" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on tacrolimus" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -19707,35 +19688,35 @@ creation_date: 2012-08-29T16:03:18Z
 
 [Term]
 id: FYPO:0001471
-name: normal cell population growth on tacrolimus during salt stress
+name: normal growth on tacrolimus during salt stress
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing tacrolimus, when the cell is subject to salt stress." [PomBase:mah]
 synonym: "normal cell population growth in presence of tacrolimus during salt stress" EXACT [PomBase:mah]
 synonym: "normal cell population growth on FK506 during salt stress" EXACT [CHEBI:61057]
+synonym: "normal cell population growth on tacrolimus during salt stress" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to salt stress and tacrolimus" RELATED [PomBase:al]
 synonym: "normal cellular response to tacrolimus and salt stress" RELATED [PomBase:al]
 synonym: "normal cellular response to tacrolimus during salt stress" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on tacrolimus during salt stress" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on tacrolimus during salt stress" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
-intersection_of: FYPO:0001470 ! normal cell population growth on tacrolimus
+intersection_of: FYPO:0001470 ! normal growth on tacrolimus
 intersection_of: happens_during GO:0071472
 created_by: midori
 creation_date: 2012-08-29T16:04:35Z
 
 [Term]
 id: FYPO:0001472
-name: normal cell population growth on tacrolimus during osmotic stress
+name: normal growth on tacrolimus during osmotic stress
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing tacrolimus, when the cell is subject to osmotic stress." [PomBase:mah]
 synonym: "normal cell population growth in presence of tacrolimus during osmotic stress" EXACT [PomBase:mah]
 synonym: "normal cell population growth on tacrolimus and sorbitol" NARROW [PomBase:al]
+synonym: "normal cell population growth on tacrolimus during osmotic stress" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to FK506 during osmotic stress" EXACT [CHEBI:61057]
 synonym: "normal cellular response to tacrolimus and osmotic stress" RELATED [PomBase:al]
 synonym: "normal cellular response to tacrolimus and sorbitol" RELATED [PomBase:al]
 synonym: "normal cellular response to tacrolimus during osmotic stress" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on tacrolimus during osmotic stress" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on tacrolimus during osmotic stress" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
-intersection_of: FYPO:0001470 ! normal cell population growth on tacrolimus
+intersection_of: FYPO:0001470 ! normal growth on tacrolimus
 intersection_of: happens_during GO:0071470
 created_by: midori
 creation_date: 2012-08-29T16:08:07Z
@@ -20127,11 +20108,11 @@ creation_date: 2012-08-30T15:24:42Z
 
 [Term]
 id: FYPO:0001500
-name: normal cell population growth on cytochalasin B
+name: normal growth on cytochalasin B
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cytochalasin B." [PomBase:mah]
 synonym: "normal cell population growth in presence of cytochalasin B" EXACT [PomBase:mah]
+synonym: "normal cell population growth on cytochalasin B" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to cytochalasin B" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on cytochalasin B" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on cytochalasin B" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -20446,11 +20427,11 @@ creation_date: 2012-09-13T14:02:16Z
 
 [Term]
 id: FYPO:0001522
-name: normal cell population growth on caffeine
+name: normal growth on caffeine
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing caffeine." [PomBase:mah]
 synonym: "normal cell population growth in presence of caffeine" EXACT [PomBase:mah]
+synonym: "normal cell population growth on caffeine" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to caffeine" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on caffeine" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on caffeine" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -20458,11 +20439,11 @@ creation_date: 2012-09-13T14:06:29Z
 
 [Term]
 id: FYPO:0001523
-name: normal cell population growth on leptomycin B
+name: normal growth on leptomycin B
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing leptomycin B." [PomBase:mah]
 synonym: "normal cell population growth in presence of leptomycin B" EXACT [PomBase:mah]
+synonym: "normal cell population growth on leptomycin B" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to leptomycin B" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on leptomycin B" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on leptomycin B" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -20492,12 +20473,12 @@ creation_date: 2012-09-13T14:43:00Z
 
 [Term]
 id: FYPO:0001526
-name: normal cell population growth on L-thialysine
+name: normal growth on L-thialysine
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing L-thialysine." [PomBase:mah]
 synonym: "normal cell population growth in presence of L-thialysine" EXACT [PomBase:mah]
+synonym: "normal cell population growth on L-thialysine" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on thialysine" BROAD [PomBase:mah]
 synonym: "normal cellular response to L-thialysine" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on L-thialysine" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on L-thialysine" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -20764,12 +20745,12 @@ creation_date: 2012-09-13T16:12:10Z
 
 [Term]
 id: FYPO:0001545
-name: normal cell population growth on L-canavanine
+name: normal growth on L-canavanine
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing L-canavanine." [PomBase:mah]
 synonym: "normal cell population growth in presence of L-canavanine" EXACT [PomBase:mah]
 synonym: "normal cell population growth on canavanine" BROAD [PomBase:mah]
+synonym: "normal cell population growth on L-canavanine" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to L-canavanine" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on L-canavanine" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on L-canavanine" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -21269,10 +21250,10 @@ creation_date: 2012-09-20T15:03:18Z
 
 [Term]
 id: FYPO:0001578
-name: normal cell population growth on dipeptide nitrogen source
+name: normal growth on dipeptide nitrogen source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing a dipeptide such as Leu-Ala as the nitrogen source." [PomBase:mah]
+synonym: "normal cell population growth on dipeptide nitrogen source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal dipeptide utilization" RELATED [PomBase:mah, PomBase:vw]
-synonym: "normal growth on dipeptide nitrogen source" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on dipeptide nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -21280,9 +21261,9 @@ creation_date: 2012-09-20T15:07:14Z
 
 [Term]
 id: FYPO:0001579
-name: normal cell population growth on tetrapeptide nitrogen source
+name: normal growth on tetrapeptide nitrogen source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing a tetrapeptide such as Leu-Ser-Lys-Leu as the nitrogen source." [PomBase:mah]
-synonym: "normal growth on tetrapeptide nitrogen source" BROAD [PomBase:mah]
+synonym: "normal cell population growth on tetrapeptide nitrogen source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal tetrapeptide utilization" RELATED [PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on tetrapeptide nitrogen source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
@@ -21291,10 +21272,10 @@ creation_date: 2012-09-20T15:08:09Z
 
 [Term]
 id: FYPO:0001580
-name: normal cell population growth on leucine nitrogen source
+name: normal growth on leucine nitrogen source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing leucine as the nitrogen source." [PomBase:mah]
+synonym: "normal cell population growth on leucine nitrogen source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on monomeric leucine nitrogen source" EXACT [PomBase:vw]
-synonym: "normal growth on leucine nitrogen source" BROAD [PomBase:mah]
 synonym: "normal leucine utilization" RELATED [PomBase:mah, PomBase:vw]
 synonym: "normal monomeric leucine utilization" RELATED [PomBase:vw]
 synonym: "normal vegetative cell population growth on leucine nitrogen source" EXACT [PomBase:mah]
@@ -21314,14 +21295,14 @@ creation_date: 2012-09-20T15:57:31Z
 
 [Term]
 id: FYPO:0001582
-name: normal cell population growth on glutathione
+name: normal growth on glutathione
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing glutathione." [PomBase:mah]
 synonym: "normal cell population growth in presence of glutathione" EXACT [PomBase:mah]
+synonym: "normal cell population growth on glutathione" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on GSH" EXACT [CHEBI:16856]
 synonym: "normal cell population growth on L-gamma-glutamyl-L-cysteinylglycine" EXACT [CHEBI:16856]
 synonym: "normal cell population growth on reduced glutathione" EXACT [CHEBI:16856]
 synonym: "normal cellular response to glutathione" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on glutathione" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on glutathione" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -22883,13 +22864,13 @@ creation_date: 2012-11-02T15:39:06Z
 
 [Term]
 id: FYPO:0001686
-name: normal cell population growth on MBC
+name: normal growth on MBC
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing the tubulin poison mecarzole (MBC)." [PomBase:mah]
 synonym: "normal cell population growth in presence of MBC" EXACT [PomBase:mah]
 synonym: "normal cell population growth on carbendazim" EXACT [CHEBI:3392]
+synonym: "normal cell population growth on MBC" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on mecarzole" EXACT [PomBase:al]
 synonym: "normal cellular response to MBC" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on MBC" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on MBC" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -22897,13 +22878,13 @@ creation_date: 2012-11-02T15:43:07Z
 
 [Term]
 id: FYPO:0001687
-name: normal cell population growth on benomyl
+name: normal growth on benomyl
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing benomyl." [PomBase:mah]
 synonym: "normal cell population growth in presence of benomyl" EXACT [PomBase:mah]
+synonym: "normal cell population growth on benomyl" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on MBC" EXACT [PMID:6887244]
 synonym: "normal cell population growth on methyl benzimidazole-2-yl-carbamate" EXACT [PMID:6887244]
 synonym: "normal cellular response to benomyl" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on benomyl" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on benomyl" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -22911,12 +22892,12 @@ creation_date: 2012-11-02T15:45:13Z
 
 [Term]
 id: FYPO:0001688
-name: normal cell population growth on brefeldin A
+name: normal growth on brefeldin A
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing brefeldin A." [PomBase:mah]
 synonym: "normal cell population growth in presence of brefeldin A" EXACT [PomBase:mah]
 synonym: "normal cell population growth on BFA" EXACT [PomBase:mah]
+synonym: "normal cell population growth on brefeldin A" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to brefeldin A" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on brefeldin A" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on brefeldin A" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -22924,13 +22905,13 @@ creation_date: 2012-11-02T15:47:41Z
 
 [Term]
 id: FYPO:0001689
-name: normal cell population growth on 4-nitroquinoline N-oxide
+name: normal growth on 4-nitroquinoline N-oxide
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing 4-nitroquinoline N-oxide." [PomBase:mah]
 synonym: "normal cell population growth in presence of 4-nitroquinoline N-oxide" EXACT [PomBase:mah]
+synonym: "normal cell population growth on 4-nitroquinoline N-oxide" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on 4-NQO" EXACT [PomBase:mah]
 synonym: "normal cell population growth on 4NQO" EXACT [PomBase:al]
 synonym: "normal cellular response to 4-nitroquinoline N-oxide" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on 4-nitroquinoline N-oxide" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on 4-nitroquinoline N-oxide" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -22938,12 +22919,12 @@ creation_date: 2012-11-02T15:50:35Z
 
 [Term]
 id: FYPO:0001690
-name: normal cell population growth on camptothecin
+name: normal growth on camptothecin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing camptothecin." [PomBase:mah]
 synonym: "normal cell population growth in presence of camptothecin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on camptothecin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on CPT" EXACT [PomBase:al]
 synonym: "normal cellular response to camptothecin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on camptothecin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on camptothecin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -22951,11 +22932,11 @@ creation_date: 2012-11-02T15:52:52Z
 
 [Term]
 id: FYPO:0001691
-name: normal cell population growth on paraquat
+name: normal growth on paraquat
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing paraquat." [PomBase:mah]
 synonym: "normal cell population growth in presence of paraquat" EXACT [PomBase:mah]
+synonym: "normal cell population growth on paraquat" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to paraquat" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on paraquat" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on paraquat" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -24332,11 +24313,11 @@ creation_date: 2012-11-21T16:19:01Z
 
 [Term]
 id: FYPO:0001795
-name: normal cell population growth on purvalanol A
+name: normal growth on purvalanol A
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing purvalanol A." [PomBase:mah]
 synonym: "normal cell population growth in presence of purvalanol A" EXACT [PomBase:mah]
+synonym: "normal cell population growth on purvalanol A" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to purvalanol A" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on purvalanol A" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on purvalanol A" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -24698,12 +24679,12 @@ creation_date: 2013-11-08T13:54:35Z
 
 [Term]
 id: FYPO:0001820
-name: normal cell population growth on lithium ion
+name: normal growth on lithium ion
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing lithium ions." [PomBase:mah]
 synonym: "normal cell population growth in presence of lithium ions" EXACT [PomBase:mah]
 synonym: "normal cell population growth on lithium" EXACT [PomBase:mah]
+synonym: "normal cell population growth on lithium ion" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to lithium ion" RELATED [PomBase:mah]
-synonym: "normal growth on lithium ion" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on lithium ion" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -24806,9 +24787,9 @@ creation_date: 2012-11-29T15:31:54Z
 
 [Term]
 id: FYPO:0001829
-name: normal cell population growth on gluconate carbon source
+name: normal growth on gluconate carbon source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing gluconate as the carbon source." [PomBase:mah]
-synonym: "normal growth on gluconate carbon source" BROAD [PomBase:mah]
+synonym: "normal cell population growth on gluconate carbon source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on gluconate carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -24874,10 +24855,10 @@ creation_date: 2012-11-29T15:50:29Z
 
 [Term]
 id: FYPO:0001835
-name: normal cell population growth on acidic medium
+name: normal growth on acidic medium
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium that is more acidic than standard fission yeast media (about 5.8)." [PomBase:mah]
+synonym: "normal cell population growth on acidic medium" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to acidity" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on acidic medium" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on acidic medium" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -25536,12 +25517,12 @@ creation_date: 2013-01-30T12:30:20Z
 
 [Term]
 id: FYPO:0001883
-name: normal cell population growth on caspofungin
+name: normal growth on caspofungin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing caspofungin." [PomBase:mah]
 synonym: "normal cell population growth in presence of caspofungin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on caspofungin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on glucan synthase inhibitor" BROAD [PomBase:mah]
 synonym: "normal cellular response to caspofungin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on caspofungin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on caspofungin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -26018,11 +25999,11 @@ creation_date: 2013-02-06T12:00:33Z
 
 [Term]
 id: FYPO:0001918
-name: normal cell population growth on trifluoperazine
+name: normal growth on trifluoperazine
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing trifluoperazine." [PomBase:mah]
 synonym: "normal cell population growth in presence of trifluoperazine" EXACT [PomBase:mah]
+synonym: "normal cell population growth on trifluoperazine" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to trifluoperazine" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on trifluoperazine" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on trifluoperazine" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -26796,11 +26777,11 @@ creation_date: 2013-02-07T16:00:02Z
 
 [Term]
 id: FYPO:0001975
-name: normal cell population growth on nocodazole
+name: normal growth on nocodazole
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing nocodazole." [PomBase:mah]
 synonym: "normal cell population growth in presence of nocodazole" EXACT [PomBase:mah]
+synonym: "normal cell population growth on nocodazole" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to nocodazole" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on nocodazole" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on nocodazole" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -27093,11 +27074,11 @@ creation_date: 2013-02-20T17:01:11Z
 
 [Term]
 id: FYPO:0001995
-name: normal cell population growth on polymyxin B
+name: normal growth on polymyxin B
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing polymyxin B." [PomBase:mah]
 synonym: "normal cell population growth in presence of polymyxin B" EXACT [PomBase:mah]
+synonym: "normal cell population growth on polymyxin B" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to polymyxin B" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on polymyxin B" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on polymixin B" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -28129,7 +28110,7 @@ creation_date: 2013-04-17T16:16:17Z
 [Term]
 id: FYPO:0002071
 name: mislocalized nucleus during vegetative growth
-def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell has a nucleus in an abnormal location. The normal location of a single nucleus is at the midpoint of the long axis of the cell (during mitoic telophase, daughter nuclei normally move away from the cell division site)." [PomBase:mah]
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell has a nucleus in an abnormal location. The normal location of a single nucleus is at the midpoint of the long axis of the cell (during mitotic telophase, daughter nuclei normally move away from the cell division site)." [PomBase:mah]
 synonym: "abnormal nucleus location during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal nucleus position during vegetative growth" EXACT [PomBase:mah]
 synonym: "displaced nucleus during vegetative growth" EXACT [PomBase:vw]
@@ -28256,17 +28237,17 @@ creation_date: 2013-04-24T14:57:12Z
 
 [Term]
 id: FYPO:0002079
-name: normal cell population growth on calcium ion during cellular hypotonic response
+name: normal growth on calcium ion during cellular hypotonic response
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing calcium ions during a cellular hypotonic response." [PomBase:mah]
 synonym: "normal cell population growth in presence of calcium ions during cellular hypotonic response" EXACT [PomBase:mah]
 synonym: "normal cell population growth on calcium during cellular hypotonic response" EXACT [PomBase:mah]
 synonym: "normal cell population growth on calcium ion during cellular hypoosmotic response" EXACT [PomBase:al]
+synonym: "normal cell population growth on calcium ion during cellular hypotonic response" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on excess calcium during cellular hypotonic response" EXACT [PomBase:al]
 synonym: "normal cellular response to calcium ion during cellular hypotonic response" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on calcium ion during cellular hypotonic response" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on calcium ion during cellular hypotonic response" EXACT [PomBase:mah]
-is_a: FYPO:0001020 ! normal cell population growth on calcium ion
-intersection_of: FYPO:0001020 ! normal cell population growth on calcium ion
+is_a: FYPO:0001020 ! normal growth on calcium ion
+intersection_of: FYPO:0001020 ! normal growth on calcium ion
 intersection_of: happens_during GO:0071476
 created_by: midori
 creation_date: 2013-04-24T14:59:06Z
@@ -28284,12 +28265,12 @@ creation_date: 2013-05-01T15:43:45Z
 
 [Term]
 id: FYPO:0002081
-name: normal cell population growth on TPCK
+name: normal growth on TPCK
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing N-tosyl-L-phenylalanyl chloromethyl ketone (TPCK)." [PomBase:mah]
 synonym: "normal cell population growth in presence of TPCK" EXACT [PomBase:mah]
 synonym: "normal cell population growth on N-tosyl-L-phenylalanyl chloromethyl ketone" EXACT [CHEBI:9642]
+synonym: "normal cell population growth on TPCK" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to TPCK" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on TPCK" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on TPCK" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -29304,11 +29285,14 @@ creation_date: 2013-05-10T14:20:09Z
 [Term]
 id: FYPO:0002151
 name: inviable spore
+alt_id: FYPO:0000306
 def: "A viability phenotype in which a spore is unable to survive under conditions in which wild type spores survive. An inviable spore does not germinate." [PomBase:mah]
+synonym: "abolished spore germination" RELATED [PomBase:mah]
+synonym: "spore germination abolished" RELATED [PomBase:mah]
 is_a: FYPO:0000049 ! inviable cell
 intersection_of: PATO:0000718
 intersection_of: inheres_in CL:0000596
-relationship: has_part FYPO:0000306 ! abolished spore germination
+intersection_of: towards GO:0009847
 created_by: midori
 creation_date: 2013-05-10T14:22:34Z
 
@@ -29421,11 +29405,11 @@ creation_date: 2013-05-10T16:04:01Z
 
 [Term]
 id: FYPO:0002160
-name: normal cell population growth on cilofungin
+name: normal growth on cilofungin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cilofungin." [PomBase:mah]
 synonym: "normal cell population growth in presence of cilofungin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on cilofungin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to cilofungin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on cilofungin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on cilofungin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -29433,11 +29417,11 @@ creation_date: 2013-05-10T16:10:52Z
 
 [Term]
 id: FYPO:0002161
-name: normal cell population growth on Calcofluor White
+name: normal growth on Calcofluor White
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing Calcofluor White." [PomBase:mah]
 synonym: "normal cell population growth in presence of Calcofluor White" EXACT [PomBase:mah]
+synonym: "normal cell population growth on Calcofluor White" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to Calcofluor White" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on Calcofluor White" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on cilofungin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -29516,12 +29500,12 @@ creation_date: 2013-05-14T13:34:52Z
 
 [Term]
 id: FYPO:0002168
-name: normal cell population growth on ethyl methanesulfonate
+name: normal growth on ethyl methanesulfonate
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing ethyl methanesulfonate." [PomBase:mah]
 synonym: "normal cell population growth in presence of ethyl methanesulfonate" EXACT [PomBase:mah]
 synonym: "normal cell population growth on EMS" EXACT [PomBase:mah]
+synonym: "normal cell population growth on ethyl methanesulfonate" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to ethyl methanesulfonate" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on ethyl methanesulfonate" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on ethyl methanesulfonate" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -29529,9 +29513,10 @@ creation_date: 2013-05-14T13:37:06Z
 
 [Term]
 id: FYPO:0002169
-name: normal cell population growth during cellular response to gamma radiation
+name: normal growth during cellular response to gamma radiation
 def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) during a cellular response to gamma radiation." [PomBase:mah]
 synonym: "normal cell population growth during cellular response to gamma irradiation" EXACT [PomBase:al]
+synonym: "normal cell population growth during cellular response to gamma radiation" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth in response to gamma irradiation" RELATED [PomBase:al]
 synonym: "normal cellular response to gamma radiation" RELATED [PomBase:mah]
 synonym: "normal sensitivity to gamma radiation" RELATED [PomBase:mah]
@@ -29998,24 +29983,6 @@ created_by: midori
 creation_date: 2013-06-05T13:36:02Z
 
 [Term]
-id: FYPO:0002205
-name: spore germination abolished, swollen spore with abnormal shape
-def: "A cellular process phenotype in which spore germination does not occur, and the spore has a larger volume than normal and an abnormal shape." [PomBase:mah]
-synonym: "spore germination abolished, enlarged spore with abnormal shape" RELATED [PomBase:mah]
-synonym: "spore germination abolished, large spore with abnormal shape" RELATED [PomBase:vw]
-synonym: "spore germination abolished, spore with abnormal shape and increased cell size" RELATED [PomBase:vw]
-synonym: "spore germination abolished, spore with abnormal shape and increased cell volume" EXACT [PomBase:mah]
-synonym: "spore germination abolished, swollen misshapen spores" RELATED [PomBase:mah]
-is_a: FYPO:0000308 ! spore germination abolished, swollen spore
-intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: has_part FYPO:0000306 ! abolished spore germination
-intersection_of: has_part FYPO:0000347 ! swollen spore
-intersection_of: has_part FYPO:0001126 ! abnormal cell shape
-relationship: has_part FYPO:0000347 ! swollen spore
-created_by: midori
-creation_date: 2013-06-05T13:44:33Z
-
-[Term]
 id: FYPO:0002206
 name: inviable swollen spore population
 def: "A cell population phenotype in which none of the cells in a population of spores are viable, and all have a larger volume than normal. In a swollen cell, both length and diameter are greater than normal, although the cell is only considered elongated if the length:width ratio is also greater than normal. Inviable spores do not germinate." [PomBase:mah]
@@ -30033,23 +30000,29 @@ creation_date: 2013-06-05T13:51:00Z
 [Term]
 id: FYPO:0002207
 name: inviable swollen spore
+alt_id: FYPO:0000308
 def: "A viability phenotype in which a spore is unable to survive under conditions in which wild type spores survive, and has a larger volume than normal. In a swollen cell, both length and diameter are greater than normal, although the cell is only considered elongated if the length:width ratio is also greater than normal. An inviable spore does not germinate." [PomBase:mah]
 synonym: "inviable enlarged spore" RELATED [PomBase:mah]
 synonym: "inviable large spore" RELATED [PomBase:vw]
 synonym: "inviable spore with increased spore size" RELATED [PomBase:vw]
 synonym: "inviable spore with increased spore volume" EXACT [PomBase:mah]
+synonym: "spore germination abolished, enlarged spore" RELATED [PomBase:mah]
+synonym: "spore germination abolished, increased spore size" RELATED [PomBase:vw]
+synonym: "spore germination abolished, increased spore volume" RELATED [PomBase:mah]
+synonym: "spore germination abolished, large spore" RELATED [PomBase:vw]
+synonym: "spore germination abolished, swollen spore" RELATED [PomBase:mah]
+is_a: FYPO:0000309 ! inviable spore with abnormal morphology
 is_a: FYPO:0000347 ! swollen spore
-is_a: FYPO:0002151 ! inviable spore
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000347 ! swollen spore
 intersection_of: has_part FYPO:0002151 ! inviable spore
-relationship: has_part FYPO:0000308 ! spore germination abolished, swollen spore
 created_by: midori
 creation_date: 2013-06-05T13:52:59Z
 
 [Term]
 id: FYPO:0002208
 name: inviable swollen spore with abnormal shape
+alt_id: FYPO:0002205
 def: "A viability phenotype in which a spore is unable to survive under conditions in which wild type spores survive, and has a larger volume than normal and an abnormal shape. An inviable spore does not germinate." [PomBase:mah]
 synonym: "inviable enlarged spore with abnormal shape" RELATED [PomBase:mah]
 synonym: "inviable large spore with abnormal shape" RELATED [PomBase:vw]
@@ -30059,6 +30032,12 @@ synonym: "inviable spore with increased spore volume and abnormal shape" EXACT [
 synonym: "inviable spore with increased volume and abnormal shape" EXACT [PomBase:mah]
 synonym: "inviable swollen abnormally shaped spore" EXACT [PomBase:mah]
 synonym: "inviable swollen misshapen spore" RELATED [PomBase:mah]
+synonym: "spore germination abolished, enlarged spore with abnormal shape" RELATED [PomBase:mah]
+synonym: "spore germination abolished, large spore with abnormal shape" RELATED [PomBase:vw]
+synonym: "spore germination abolished, spore with abnormal shape and increased cell size" RELATED [PomBase:vw]
+synonym: "spore germination abolished, spore with abnormal shape and increased cell volume" EXACT [PomBase:mah]
+synonym: "spore germination abolished, swollen misshapen spores" RELATED [PomBase:mah]
+synonym: "spore germination abolished, swollen spore with abnormal shape" RELATED [PomBase:mah]
 is_a: FYPO:0002207 ! inviable swollen spore
 is_a: FYPO:0002427 ! inviable spore with abnormal shape
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -30454,11 +30433,11 @@ creation_date: 2013-06-06T15:30:42Z
 
 [Term]
 id: FYPO:0002238
-name: normal cell population growth on cerulenin
+name: normal growth on cerulenin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cerulenin." [PomBase:mah]
 synonym: "normal cell population growth in presence of cerulenin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on cerulenin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to cerulenin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on cerulenin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on cerulenin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -31730,11 +31709,11 @@ creation_date: 2013-06-21T15:16:32Z
 
 [Term]
 id: FYPO:0002329
-name: normal cell population growth on pravastatin
+name: normal growth on pravastatin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing pravastatin." [PomBase:mah]
 synonym: "normal cell population growth in presence of pravastatin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on pravastatin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to pravastatin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on pravastatin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on pravastatin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -31937,11 +31916,11 @@ creation_date: 2013-07-09T16:05:43Z
 
 [Term]
 id: FYPO:0002343
-name: normal cell population growth on terbinafine
+name: normal growth on terbinafine
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing terbinafine." [PomBase:mah]
 synonym: "normal cell population growth in presence of terbinafine" EXACT [PomBase:mah]
+synonym: "normal cell population growth on terbinafine" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to terbinafine" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on terbinafine" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on terbinafine" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -33146,12 +33125,11 @@ creation_date: 2013-08-02T14:13:03Z
 id: FYPO:0002427
 name: inviable spore with abnormal shape
 def: "A viability phenotype in which a spore is unable to survive under conditions in which wild type spores survive, and has an abnormal shape. An inviable spore does not germinate." [PomBase:mah]
-is_a: FYPO:0002151 ! inviable spore
+is_a: FYPO:0000309 ! inviable spore with abnormal morphology
 is_a: FYPO:0002467 ! abnormal spore shape
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0001126 ! abnormal cell shape
 intersection_of: has_part FYPO:0002151 ! inviable spore
-relationship: has_part FYPO:0000306 ! abolished spore germination
 created_by: midori
 creation_date: 2013-08-02T14:15:29Z
 
@@ -33712,7 +33690,6 @@ is_a: FYPO:0001126 ! abnormal cell shape
 intersection_of: PATO:0000052
 intersection_of: inheres_in CL:0000596
 intersection_of: qualifier PATO:0000460
-relationship: has_part FYPO:0000306 ! abolished spore germination
 created_by: midori
 creation_date: 2013-08-06T16:31:13Z
 
@@ -35863,11 +35840,11 @@ creation_date: 2013-09-05T15:14:13Z
 
 [Term]
 id: FYPO:0002618
-name: normal cell population growth on valproic acid
+name: normal growth on valproic acid
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing valproic acid." [PomBase:mah]
 synonym: "normal cell population growth in presence of valproic acid" EXACT [PomBase:mah]
+synonym: "normal cell population growth on valproic acid" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to valproic acid" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on valproic acid" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on valproic acid" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -35875,11 +35852,11 @@ creation_date: 2013-09-05T15:31:40Z
 
 [Term]
 id: FYPO:0002619
-name: normal cell population growth on sodium butyrate
+name: normal growth on sodium butyrate
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing sodium butyrate." [PomBase:mah]
 synonym: "normal cell population growth in presence of sodium butyrate" EXACT [PomBase:mah]
+synonym: "normal cell population growth on sodium butyrate" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to sodium butyrate" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on sodium butyrate" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on sodium butyrate" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -35887,11 +35864,11 @@ creation_date: 2013-09-05T15:33:22Z
 
 [Term]
 id: FYPO:0002620
-name: normal cell population growth on trichostatin A
+name: normal growth on trichostatin A
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing trichostatin A." [PomBase:mah]
 synonym: "normal cell population growth in presence of trichostatin A" EXACT [PomBase:mah]
+synonym: "normal cell population growth on trichostatin A" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to trichostatin A" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on trichostatin A" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on trichostatin A" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -36124,10 +36101,10 @@ creation_date: 2013-09-11T13:43:06Z
 
 [Term]
 id: FYPO:0002637
-name: normal cell population growth on hygromycin B
+name: normal growth on hygromycin B
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing hygromycin B." [PomBase:mah]
 synonym: "normal cell population growth in presence of hygromycin B" EXACT [PomBase:mah]
-synonym: "normal growth on hygromycin B" BROAD [PomBase:mah]
+synonym: "normal cell population growth on hygromycin B" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on hygromycin B" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -36191,11 +36168,11 @@ creation_date: 2013-09-12T11:48:40Z
 
 [Term]
 id: FYPO:0002643
-name: normal cell population growth on clotrimazole
+name: normal growth on clotrimazole
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing clotrimazole." [PomBase:mah]
 synonym: "normal cell population growth in presence of clotrimazole" EXACT [PomBase:mah]
+synonym: "normal cell population growth on clotrimazole" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to clotrimazole" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on clotrimazole" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on clotrimazole" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -36574,11 +36551,11 @@ creation_date: 2013-09-18T16:26:49Z
 
 [Term]
 id: FYPO:0002672
-name: normal cell population growth on rapamycin
+name: normal growth on rapamycin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing rapamycin." [PomBase:mah]
 synonym: "normal cell population growth in presence of rapamycin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on rapamycin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to rapamycin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on rapamycin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on rapamycin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -36586,11 +36563,11 @@ creation_date: 2013-09-18T16:35:24Z
 
 [Term]
 id: FYPO:0002673
-name: normal cell population growth on torin1
+name: normal growth on torin1
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing torin1." [PomBase:mah]
 synonym: "normal cell population growth in presence of torin1" EXACT [PomBase:mah]
+synonym: "normal cell population growth on torin1" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to torin1" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on torin1" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on torin1" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -36790,11 +36767,11 @@ creation_date: 2013-09-19T14:48:08Z
 
 [Term]
 id: FYPO:0002690
-name: normal cell population growth on cumene hydroperoxide
+name: normal growth on cumene hydroperoxide
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cumene hydroperoxide." [PomBase:mah]
 synonym: "normal cell population growth in presence of cumene hydroperoxide" EXACT [PomBase:mah]
+synonym: "normal cell population growth on cumene hydroperoxide" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to cumene hydroperoxide" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on cumene hydroperoxide" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on cumene hydroperoxide" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -36802,11 +36779,11 @@ creation_date: 2013-09-19T15:00:38Z
 
 [Term]
 id: FYPO:0002691
-name: normal cell population growth on menadione
+name: normal growth on menadione
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing menadione." [PomBase:mah]
 synonym: "normal cell population growth in presence of menadione" EXACT [PomBase:mah]
+synonym: "normal cell population growth on menadione" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to menadione" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on menadione" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on menadione" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -36989,11 +36966,11 @@ creation_date: 2013-09-25T13:04:40Z
 
 [Term]
 id: FYPO:0002707
-name: normal cell population growth on cordycepin
+name: normal growth on cordycepin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cordycepin." [PomBase:mah]
 synonym: "normal cell population growth in presence of cordycepin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on cordycepin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to cordycepin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on cordycepin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on cordycepin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -38351,12 +38328,12 @@ creation_date: 2013-10-22T14:58:17Z
 
 [Term]
 id: FYPO:0002807
-name: normal cell population growth on arsenate
+name: normal growth on arsenate
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing arsenate ions." [PomBase:mah]
 synonym: "normal cell population growth in presence of arsenate" EXACT [PomBase:mah]
+synonym: "normal cell population growth on arsenate" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on arsenate ion" EXACT [PomBase:mah]
 synonym: "normal cellular response to arsenate" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on arsenate" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on arsenate" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -38472,7 +38449,7 @@ id: FYPO:0002816
 name: inviable after spore germination, without cell division, multinucleate cell with elongated germ tube
 def: "A phenotype in which a spore germinates to produce an elongated germ tube, and in which the nucleus divides at least once to produce a multinucleate cell. The cell does not divide, and eventually dies." [PomBase:mah]
 synonym: "essential; germinating spore without cell division, multinucleate cell with elongated germ tube" RELATED [PomBase:mah]
-synonym: "inviable germinatedspore, without cell division, multinucleate cell with elongated germ tube" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, without cell division, multinucleate cell with elongated germ tube" EXACT [PomBase:mah]
 synonym: "inviable multinucleate germinated spore with elongated germ tube" EXACT [PomBase:mah]
 synonym: "multinucleate after spore germination with elongated germ tube" EXACT [PomBase:vw]
 is_a: FYPO:0002379 ! inviable after spore germination, without cell division, with elongated germ tube
@@ -40285,11 +40262,11 @@ creation_date: 2013-11-28T14:42:41Z
 
 [Term]
 id: FYPO:0002940
-name: normal cell population growth on micafungin
+name: normal growth on micafungin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing micafungin." [PomBase:mah]
 synonym: "normal cell population growth in presence of micafungin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on micafungin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to caspofungin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on caspofungin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on caspofungin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -41541,12 +41518,12 @@ creation_date: 2014-01-15T13:47:40Z
 
 [Term]
 id: FYPO:0003023
-name: normal cell population growth on EPC
+name: normal growth on EPC
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing ethyl N-phenylcarbamate (EPC)." [PomBase:mah]
 synonym: "normal cell population growth in presence of EPC" EXACT [PomBase:mah]
+synonym: "normal cell population growth on EPC" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on ethyl N-phenylcarbamate" EXACT [PomBase:mah]
 synonym: "normal cellular response to EPC" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on EPC" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on EPC" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -43736,11 +43713,11 @@ creation_date: 2014-03-05T16:53:23Z
 
 [Term]
 id: FYPO:0003183
-name: normal cell population growth on phleomycin
+name: normal growth on phleomycin
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing phleomycin." [PomBase:mah]
 synonym: "normal cell population growth in presence of phleomycin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on phleomycin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to phleomycin" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on phleomycin" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on phleomycin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -44316,7 +44293,7 @@ creation_date: 2014-03-19T14:09:21Z
 [Term]
 id: FYPO:0003220
 name: normal histone H3-K9K14 acetylation
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at positions 9 and 14 of histone H3 is normal (i.e. indistinguishable from wild type)" [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at positions 9 and 14 of histone H3 is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal histone H3 K9K14 acetylation" EXACT [PomBase:mah]
 synonym: "normal histone H3-K9 and K14 acetylation" EXACT [PomBase:mah]
 synonym: "normal histone H3-K9K14 acetylation during vegetative growth" EXACT [PomBase:mah]
@@ -45030,12 +45007,12 @@ creation_date: 2014-04-02T15:32:50Z
 
 [Term]
 id: FYPO:0003272
-name: normal cell population growth on sodium hypochlorite
+name: normal growth on sodium hypochlorite
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing sodium hypochlorite." [PomBase:mah]
 synonym: "normal cell population growth in presence of sodium hypochlorite" EXACT [PomBase:mah]
 synonym: "normal cell population growth on NaOCl" EXACT [PomBase:al]
+synonym: "normal cell population growth on sodium hypochlorite" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to sodium hypochlorite" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on sodium hypochlorite" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on sodium hypochlorite" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -45043,12 +45020,12 @@ creation_date: 2014-04-02T15:36:59Z
 
 [Term]
 id: FYPO:0003273
-name: normal cell population growth on nitrite
+name: normal growth on nitrite
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing nitrite ions." [PomBase:mah]
 synonym: "normal cell population growth in presence of nitrite" EXACT [PomBase:mah]
+synonym: "normal cell population growth on nitrite" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on nitrite ion" EXACT [PomBase:mah]
 synonym: "normal cellular response to nitrite" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on nitrite" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on nitrite" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -45056,12 +45033,12 @@ creation_date: 2014-04-02T15:41:59Z
 
 [Term]
 id: FYPO:0003274
-name: normal cell population growth on GSNO
+name: normal growth on GSNO
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing S-nitrosoglutathione (GSNO)." [PomBase:mah]
 synonym: "normal cell population growth in presence of GSNO" EXACT [PomBase:mah]
+synonym: "normal cell population growth on GSNO" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cell population growth on S-nitrosoglutathione" EXACT [CHEBI:50091]
 synonym: "normal cellular response to GSNO" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on GSNO" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on GSNO" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -45124,7 +45101,7 @@ creation_date: 2014-04-02T16:11:20Z
 [Term]
 id: FYPO:0003279
 name: excess Golgi cisternae present
-def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells contain more Golgi cisternae than normal. Golgi cisternae are the the thin, flattened membrane-bounded compartments that form the central portion of the Golgi complex." [GO:0031985, PomBase:mah]
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells contain more Golgi cisternae than normal. Golgi cisternae are the thin, flattened membrane-bounded compartments that form the central portion of the Golgi complex." [GO:0031985, PomBase:mah]
 synonym: "accumulation of Golgi cisternae" EXACT [PomBase:vw]
 synonym: "excess Golgi cisternae present during vegetative growth" EXACT [PomBase:mah]
 synonym: "Golgi cisternae present in greater amount" EXACT [PomBase:mah]
@@ -45347,14 +45324,14 @@ creation_date: 2014-04-15T16:50:17Z
 
 [Term]
 id: FYPO:0003295
-name: normal cell population growth on amitrole
+name: normal growth on amitrole
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing amitrole." [PomBase:mah]
 synonym: "normal cell population growth in presence of amitrole" EXACT [PomBase:mah]
 synonym: "normal cell population growth on 3-amino-1,2,4-triazole" EXACT [CHEBI:40036, PomBase:mah]
 synonym: "normal cell population growth on 3-AT" EXACT [PomBase:mah]
 synonym: "normal cell population growth on 3AT" EXACT [PMID:23671279]
+synonym: "normal cell population growth on amitrole" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to amitrole" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal growth on amitrole" BROAD [PomBase:mah]
 synonym: "normal vegetative cell population growth on amitrole" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
@@ -46119,6 +46096,7 @@ is_a: FYPO:0001345 ! abnormal DNA recombination during vegetative growth
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000728
+relationship: has_output FYPO:0000470 ! decreased mating type switching
 created_by: midori
 creation_date: 2014-05-07T17:25:17Z
 
@@ -46140,6 +46118,69 @@ intersection_of: inheres_in GO:0000728
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2014-05-07T17:29:08Z
+
+[Term]
+id: FYPO:0003354
+name: decreased galactose level in glycoprotein glycan
+def: "A phenotype in which the glycan moiety of a glycoprotein contains a lower amount of galactose residues than normal. In wild-type cells, glycoprotein glycans contain mannose and galactose residues in a 1:1.2 ratio, and the galactose residues are connected by alpha-1,2 linkages." [PMID:8782411, PomBase:mah]
+synonym: "decreased level of alpha 1,2-linked galactose residues in glycoprotein glycan" EXACT [PomBase:mah]
+synonym: "decreased protein glycan galactosylation" RELATED [PMID:8782411, PomBase:al]
+is_a: FYPO:0003290 ! abnormal glycoprotein glycan structure
+created_by: midori
+creation_date: 2014-05-12T14:28:42Z
+
+[Term]
+id: FYPO:0003355
+name: growth auxotrophic for sulfur-containing amino acid
+def: "Auxotrophy in which a cell is unable to synthesize sulfur-containing amino acids, and therefore requires one or more sulfur-containing amino acids (e.g. cysteine or methionine) in the medium for vegetative cell growth." [PomBase:mah]
+synonym: "growth auxotrophic for sulfur-containing amino acid during vegetative growth" EXACT [PomBase:mah]
+synonym: "sulfur-containing amino acid auxotrophy" EXACT [PomBase:mah]
+is_a: FYPO:0000128 ! auxotrophy
+created_by: midori
+creation_date: 2014-05-12T15:24:39Z
+
+[Term]
+id: FYPO:0003356
+name: sensitive to papuamide B during mating
+def: "A phenotype in which cells show increased sensitivity to phlorizin during mating. Cells stop growing (and may die) at a concentration of phlorizin that allows wild type cells to grow." [PMID:24514900, PomBase:mah]
+synonym: "sensitive to papuamide B during conjugation with cellular fusion" EXACT [GO:0000747]
+synonym: "sensitivity to chemicals interfering with lipids during mating" BROAD [PMID:24514900]
+is_a: FYPO:0002683 ! increased sensitivity to chemical
+created_by: midori
+creation_date: 2014-05-12T15:40:53Z
+
+[Term]
+id: FYPO:0003357
+name: sensitive to filipin
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to filipin. Cells stop growing (and may die) at a concentration of filipin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to filipin" EXACT [PomBase:mah]
+synonym: "sensitive to filipin during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitivity to chemicals interfering with lipids" BROAD [PMID:24514900]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-05-12T15:46:17Z
+
+[Term]
+id: FYPO:0003358
+name: sensitive to miconazole
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to miconazole. Cells stop growing (and may die) at a concentration of miconazole that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to miconazole" EXACT [PomBase:mah]
+synonym: "sensitive to miconazole during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitivity to chemicals interfering with lipids" BROAD [PMID:24514900]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-05-12T15:47:17Z
+
+[Term]
+id: FYPO:0003359
+name: sensitive to myriocin
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to myriocin. Cells stop growing (and may die) at a concentration of myriocin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to myriocin" EXACT [PomBase:mah]
+synonym: "sensitive to myriocin during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitivity to chemicals interfering with lipids" BROAD [PMID:24514900]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-05-12T15:48:32Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
@@ -46261,6 +46302,10 @@ transitive_over: part_of ! part_of
 id: results_in_formation_of
 name: results_in_formation_of
 xref: RO:0002297
+
+[Typedef]
+id: tomards
+name: tomards (UNDECLARED)
 
 [Typedef]
 id: towards
