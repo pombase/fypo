@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 13:05:2014 15:25
+date: 29:05:2014 16:53
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -3896,8 +3896,8 @@ name: inviable spore with abnormal morphology
 def: "A viability phenotype in which a spore is unable to survive under conditions in which wild type spores survive, and has an abnormal morphology (i.e. size, shape, or structure). An inviable spore does not germinate." [PomBase:mah]
 synonym: "spore germination abolished, abnormal spore morphology" RELATED [PomBase:mah]
 synonym: "spore germination abolished, misshapen spores" RELATED [PomBase:mah]
-is_a: FYPO:0002151 ! inviable spore
 is_a: FYPO:0000348 ! abnormal spore morphology
+is_a: FYPO:0002151 ! inviable spore
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000348 ! abnormal spore morphology
 intersection_of: has_part FYPO:0002151 ! inviable spore
@@ -31324,6 +31324,7 @@ creation_date: 2013-06-20T13:52:46Z
 id: FYPO:0002303
 name: inviable mononucleate monoseptate vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, and has one nucleus and one septum." [PomBase:mah]
+synonym: "displaced nucleus with septum" RELATED [PMID:7798319]
 synonym: "inviable mononucleate monoseptate cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
 synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
@@ -35832,7 +35833,7 @@ id: FYPO:0002617
 name: sensitive to sodium butyrate
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to sodium butyrate. Cells stop growing (and may die) at a concentration of sodium butyrate that allows wild type cells to grow." [PomBase:mah]
 synonym: "hypersensitive to sodium butyrate" EXACT [PomBase:mah]
-synonym: "sensitive to sodium butyratetinamide during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to sodium butyrate during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
 created_by: midori
 creation_date: 2013-09-05T15:14:13Z
@@ -40548,6 +40549,7 @@ name: decreased RNA level during meiosis
 def: "A cell phenotype in which the amount of RNA measured in a cell is lower than normal when the cell undergoing meiosis. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
 synonym: "decreased RNA accumulation during meiosis" RELATED [PomBase:mah]
+synonym: "decreased RNA level during meiotic nuclear division" EXACT [GO:0007126]
 synonym: "decreased transcript level during meiosis" EXACT [PomBase:vw]
 synonym: "reduced RNA level during meiosis" EXACT [PomBase:mah]
 is_a: FYPO:0000826 ! decreased RNA level
@@ -46180,6 +46182,180 @@ synonym: "sensitivity to chemicals interfering with lipids" BROAD [PMID:24514900
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
 created_by: midori
 creation_date: 2014-05-12T15:48:32Z
+
+[Term]
+id: FYPO:0003360
+name: abolished superoxide dismutase activity
+def: "A molecular function phenotype in which superoxide dismutase activity is absent." [PomBase:mah]
+synonym: "superoxide dismutase activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0003281 ! abnormal superoxide dismutase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004784
+created_by: midori
+creation_date: 2014-05-29T15:25:07Z
+
+[Term]
+id: FYPO:0003361
+name: normal superoxide dismutase activity
+def: "A molecular function phenotype in which the observed rate of superoxide dismutase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004784
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-05-29T15:31:09Z
+
+[Term]
+id: FYPO:0003362
+name: normal protein acetylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein acetylation is normal (i.e. indistinguishable from wild type). Protein acetylation is the addition of an acetyl group to a protein amino acid." [GO:0006473, PomBase:mah]
+synonym: "normal protein acetylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein/peptide acetylation" EXACT [PomBase:mah]
+is_a: FYPO:0000549 ! normal protein modification during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006473
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-05-29T15:33:47Z
+
+[Term]
+id: FYPO:0003363
+name: abolished cytogamy
+def: "A cellular process phenotype in which cytogamy does not occur. Cytogamy is the process that creates a single cell from two cells of complementary mating types." [GO:0000755, PomBase:mah]
+synonym: "conjugation without cellular fusion during mating" RELATED [PomBase:al]
+synonym: "cytogamy abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0001558
+intersection_of: towards GO:0000755
+created_by: midori
+creation_date: 2014-05-29T15:48:02Z
+
+[Term]
+id: FYPO:0003364
+name: mislocalized nucleus during mating
+def: "A physical cellular phenotype in which a cell has a nucleus in an abnormal location during mating. The normal location of a single nucleus is at the midpoint of the long axis of the cell." [PomBase:mah]
+synonym: "abnormal nucleus location during mating" EXACT [PomBase:mah]
+synonym: "abnormal nucleus position during mating" EXACT [PomBase:mah]
+synonym: "displaced nucleus during mating" EXACT [PomBase:vw]
+synonym: "mislocalised nucleus during mating" EXACT [PomBase:mah]
+synonym: "mislocalized nucleus during conjugation with cellular fusion" EXACT [GO:0000747]
+synonym: "misplaced nuclei during mating" EXACT [PomBase:vw]
+synonym: "misplaced nucleus during mating" EXACT [PomBase:vw]
+is_a: FYPO:0002069 ! mislocalized nucleus
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0000747
+intersection_of: inheres_in GO:0005634
+created_by: midori
+creation_date: 2014-05-29T15:50:36Z
+
+[Term]
+id: FYPO:0003365
+name: abnormal pyridoxine import
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the import of pyridoxine into the cell is abnormal." [PomBase:mah]
+synonym: "abnormal pyridoxine import during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal pyridoxine import into cell" EXACT [PomBase:al]
+synonym: "abnormal pyridoxine uptake" EXACT [PomBase:mah]
+is_a: FYPO:0001336 ! transport phenotype during vegetative growth
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+is_a: FYPO:0001720 ! abnormal transport
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1903075
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-05-29T16:04:35Z
+
+[Term]
+id: FYPO:0003366
+name: decreased pyridoxine import
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the import of pyridoxine into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased pyridoxine import during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased pyridoxine import into cell" EXACT [PomBase:al]
+synonym: "decreased pyridoxine uptake" EXACT [GO:1902837]
+synonym: "reduced pyridoxine import" EXACT [PomBase:mah]
+is_a: FYPO:0003365 ! abnormal pyridoxine import
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1903075
+created_by: midori
+creation_date: 2014-05-29T16:04:54Z
+
+[Term]
+id: FYPO:0003367
+name: growth auxotrophic for pyridoxine
+def: "Auxotrophy in which a cell is unable to synthesize pyridoxine, and therefore requires pyridoxine in the medium for vegetative cell growth." [PomBase:mah]
+synonym: "growth auxotrophic for pyridoxine during vegetative growth" EXACT [PomBase:mah]
+synonym: "pyridoxine auxotrophy" EXACT [PomBase:mah]
+is_a: FYPO:0000128 ! auxotrophy
+created_by: midori
+creation_date: 2014-05-29T16:07:39Z
+
+[Term]
+id: FYPO:0003368
+name: resistance to sodium fluoride
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of sodium fluoride than normal." [PomBase:mah]
+synonym: "resistance to NaF" EXACT [PomBase:mah]
+synonym: "resistance to sodium fluoride during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to sodium fluoride" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-05-29T16:09:58Z
+
+[Term]
+id: FYPO:0003369
+name: sensitive to sodium fluoride
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to sodium fluoride. Cells stop growing (and may die) at a concentration of sodium fluoride that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to sodium fluoride" EXACT [PomBase:mah]
+synonym: "sensitive to NaF" EXACT [PomBase:mah]
+synonym: "sensitive to sodium fluoride during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-05-29T16:12:14Z
+
+[Term]
+id: FYPO:0003370
+name: normal growth on sodium fluoride
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing sodium fluoride." [PomBase:mah]
+synonym: "normal cell population growth in presence of sodium fluoride" EXACT [PomBase:mah]
+synonym: "normal cell population growth on sodium fluoride" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to sodium fluoride" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on NaF" EXACT [PomBase:mah]
+synonym: "normal vegetative cell population growth on sodium fluoride" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+created_by: midori
+creation_date: 2014-05-29T16:14:04Z
+
+[Term]
+id: FYPO:0003371
+name: abolished protein localization to actomyosin contractile ring, with protein mislocalized to cytoplasm
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the actomyosin contractile ring is abolished, and the protein is present in the cytoplasm instead." [PMID:18256290, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to actomyosin contractile ring, with protein mislocalized to cytoplasm" EXACT [PomBase:mah]
+synonym: "abolished protein localization to actomyosin contractile ring, with protein mislocalized to cytoplasm, during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished protein localization to contractile ring, with protein mislocalized to cytoplasm" EXACT [PomBase:al]
+synonym: "protein localization to actomyosin contractile ring abolished, with protein mislocalized to cytoplasm" EXACT [PomBase:mah]
+is_a: FYPO:0002561 ! abolished protein localization to actomyosin contractile ring
+created_by: midori
+creation_date: 2014-05-29T16:16:00Z
+
+[Term]
+id: FYPO:0003372
+name: RNA absent from cell during meiosis
+def: "A cell phenotype in which the amount of RNA measured in a cell is too low to detect when the cell undergoing meiosis. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+synonym: "RNA absent from cell during meiotic nuclear division" EXACT [GO:0007126]
+synonym: "transcripts absent from cell during meiosis" EXACT [PomBase:vw]
+synonym: "undetectable cellular RNA level during meiosis" EXACT [PomBase:mah]
+is_a: FYPO:0001889 ! RNA absent from cell
+is_a: FYPO:0002959 ! decreased RNA level during meiosis
+intersection_of: PATO:0002000
+intersection_of: during GO:0007126
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-05-29T16:34:44Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
