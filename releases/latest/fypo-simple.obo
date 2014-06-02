@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2014-05-29
-date: 29:05:2014 16:53
+data-version: releases/2014-06-02
+date: 02:06:2014 16:56
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -58,7 +58,7 @@ synonymtypedef: SCI "SCIENTIFIC NAME"
 synonymtypedef: SMILES "SMILES"
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 958 $
+remark: svn version: $Revision: 961 $
 ontology: fypo
 property_value: gformat-version "1.2"
 
@@ -657,7 +657,8 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000051
 name: abnormal meiosis
 alt_id: FYPO:0000738
-def: "A cellular process phenotype in which meiosis is abnormal. Meiosis refers specifically to the nuclear division phase of a meiotic cell cycle." [PomBase:mah]
+def: "A cellular process phenotype in which meiosis is abnormal. Meiosis refers specifically to the nuclear division phases of a meiotic cell cycle." [PomBase:mah]
+synonym: "abnormal meiotic nuclear division" EXACT [GO:0007126]
 synonym: "meiosis defects" EXACT [PomBase:mah]
 synonym: "meiosis: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000335 ! abnormal cellular component organization
@@ -1512,7 +1513,7 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000128
 name: auxotrophy
-def: "A phenotype characterized by a cell's inability to synthesize a particular organic compound required for its growth." [PATO:0000422, PomBase:mah]
+def: "A phenotype in which a cell requires a particular organic compound, which is not required by a wild-type cell for its growth. Auxotrophy usually results from a cell's inability to synthesize the compound." [PATO:0000422, PomBase:mah]
 synonym: "auxotrophy during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001358 ! vegetative cell population growth phenotype
 created_by: midori
@@ -2743,13 +2744,13 @@ creation_date: 2011-04-19T02:59:38Z
 
 [Term]
 id: FYPO:0000246
-name: antioxidant required for growth
+name: growth auxotrophic for antioxidant
 def: "A cell population phenotype in which a cell population grows only in the presence of an antioxidant in the vegetative growth phase of the life cycle." [PomBase:mah]
 synonym: "antioxidant required for cell population growth" EXACT [PomBase:mah]
+synonym: "antioxidant required for growth" EXACT [PomBase:mah]
 synonym: "antioxidant required for vegetative cell growth" EXACT [PomBase:mah]
-synonym: "growth auxotrophic for antioxidant" EXACT [PomBase:al]
 synonym: "growth defect, requires antioxidant for growth" EXACT [PomBase:mah]
-is_a: FYPO:0001356 ! abnormal vegetative cell population growth
+is_a: FYPO:0000128 ! auxotrophy
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -5134,7 +5135,8 @@ creation_date: 2011-08-15T10:19:32Z
 [Term]
 id: FYPO:0000474
 name: abolished meiosis
-def: "A cellular process phenotype in which meiosis does not occur." [PomBase:mah]
+def: "A cellular process phenotype in which one or both meiotic nuclear division(s) does not occur." [PomBase:mah]
+synonym: "abolished meiotic nuclear division" EXACT [GO:0007126]
 synonym: "absent meiosis" EXACT [PomBase:mah]
 synonym: "meiosis abolished" EXACT [PomBase:mah]
 synonym: "meiosis: absent" EXACT [SGD:phenotype_annotation]
@@ -5155,7 +5157,8 @@ creation_date: 2011-08-15T10:19:32Z
 [Term]
 id: FYPO:0000476
 name: decreased meiosis
-def: "A cellular process phenotype in which the occurrence of meiosis is decreased." [PomBase:mah]
+def: "A cellular process phenotype in which the occurrence of one or both meiotic nuclear division(s) is decreased." [PomBase:mah]
+synonym: "decreased meiotic nuclear division" EXACT [GO:0007126]
 synonym: "meiosis: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "reduced meiosis" EXACT [PomBase:mah]
 is_a: FYPO:0000051 ! abnormal meiosis
@@ -5165,7 +5168,8 @@ creation_date: 2011-08-15T10:19:32Z
 [Term]
 id: FYPO:0000477
 name: delayed meiosis
-def: "A cellular process phenotype in which meiosis begins later than normal." [PomBase:mah]
+def: "A cellular process phenotype in which one or both meiotic nuclear division(s) begins later than normal." [PomBase:mah]
+synonym: "delayed meiotic nuclear division" EXACT [GO:0007126]
 synonym: "meiosis: delayed" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000051 ! abnormal meiosis
 created_by: midori
@@ -5174,8 +5178,9 @@ creation_date: 2011-08-15T10:19:32Z
 [Term]
 id: FYPO:0000478
 name: normal meiosis
-def: "A cellular process phenotype in which meiosis is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A cellular process phenotype in which the meiotic nuclear divisions are normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "meiosis: normal" EXACT [SGD:phenotype_annotation]
+synonym: "normal meiotic nuclear division" EXACT [GO:0007126]
 is_a: FYPO:0000334 ! cellular component organization phenotype
 is_a: FYPO:0000627 ! normal cellular process
 relationship: has_part FYPO:0002094 ! normal meiotic sister chromatid cohesion
@@ -5187,8 +5192,9 @@ creation_date: 2011-08-15T10:19:32Z
 [Term]
 id: FYPO:0000479
 name: premature meiosis
-def: "A cellular process phenotype in which meiosis occurs prematurely." [PomBase:mah]
+def: "A cellular process phenotype in which one or both meiotic nuclear division(s) occurs prematurely." [PomBase:mah]
 synonym: "meiosis: premature" EXACT [SGD:phenotype_annotation]
+synonym: "premature meiotic nuclear division" EXACT [GO:0007126]
 is_a: FYPO:0000051 ! abnormal meiosis
 created_by: midori
 creation_date: 2011-08-15T10:19:32Z
@@ -8475,6 +8481,7 @@ id: FYPO:0000783
 name: protein mislocalized to cytoplasm
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the cytoplasm is observed there." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in the cytoplasm in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to cytoplasm" EXACT [PomBase:vw]
 synonym: "protein mislocalised to cytoplasm" EXACT [PomBase:mah]
 synonym: "protein mislocalized to cytoplasm during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
@@ -8487,6 +8494,7 @@ name: protein mislocalized to nucleus
 alt_id: FYPO:0001251
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the nucleus is observed there." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to nucleus" EXACT [PomBase:vw]
 synonym: "protein mislocalised to nucleus" EXACT [PomBase:mah]
 synonym: "protein mislocalised to nucleus during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to nucleus during vegetative growth" EXACT [PomBase:mah]
@@ -8620,13 +8628,13 @@ creation_date: 2012-02-29T03:27:58Z
 
 [Term]
 id: FYPO:0000797
-name: sensitive to TBPH
-def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tert-butyl hydroperoxide (TBPH or t-BOOH). Cells stop growing (and may die) at a concentration of TBPH that allows wild type cells to grow." [PomBase:mah]
-synonym: "hypersensitive to TBPH" EXACT [PomBase:mah]
+name: sensitive to tert-butyl hydroperoxide
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tert-butyl hydroperoxide (TBHP or t-BOOH). Cells stop growing (and may die) at a concentration of tert-butyl hydroperoxide that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to tert-butyl hydroperoxide" EXACT [PomBase:mah]
 synonym: "sensitive to 2-methyl-prop-2-yl-hydroperoxide" EXACT [CHEBI:64090]
 synonym: "sensitive to t-BOOH" EXACT [PomBase:al, PomBase:mah]
-synonym: "sensitive to TBPH during vegetative growth" EXACT [PomBase:mah]
-synonym: "sensitive to tert-butyl hydroperoxide" EXACT [CHEBI:64090, PomBase:al]
+synonym: "sensitive to TBHP" EXACT [CHEBI:64090, PomBase:al]
+synonym: "sensitive to tert-butyl hydroperoxide during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
 created_by: midori
 creation_date: 2012-02-29T03:49:47Z
@@ -11080,8 +11088,8 @@ synonym: "advanced nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
 synonym: "cell cycle arrest in mitotic G2 phase during nitrogen starvation" EXACT [PomBase:mah]
 synonym: "mitotic G2 phase arrest during nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
-is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
 is_a: FYPO:0001151 ! cell cycle arrest in mitotic G2 phase during starvation
+is_a: FYPO:0003373 ! abnormal cell cycle arrest in mitotic G2 phase
 created_by: midori
 creation_date: 2012-04-25T03:39:33Z
 
@@ -13677,6 +13685,7 @@ id: FYPO:0001227
 name: protein mislocalized to cytoplasm during cellular response to hydrogen peroxide
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the cytoplasm is observed there, during a cellular response to hydrogen peroxide." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in the cytoplasm in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants.
+synonym: "ectopic protein localization to cytoplasm during cellular response to hydrogen peroxide" EXACT [PomBase:vw]
 synonym: "protein mislocalised to cytoplasm during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
 synonym: "protein mislocalized to cytoplasm during cellular response to H2O2" EXACT [PomBase:mah]
 synonym: "protein mislocalized to cytoplasm during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
@@ -13817,14 +13826,15 @@ creation_date: 2012-07-16T15:27:03Z
 
 [Term]
 id: FYPO:0001239
-name: normal growth on t-BOOH
-def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing tert-butyl hydroperoxide (t-BOOH)." [PomBase:mah]
-synonym: "normal cell population growth in presence of t-BOOH" EXACT [PomBase:mah]
+name: normal growth on tert-butyl hydroperoxide
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing tert-butyl hydroperoxide (t-BOOH, TBHP)." [PomBase:mah]
+synonym: "normal cell population growth in presence of tert-butyl hydroperoxide" EXACT [PomBase:mah]
 synonym: "normal cell population growth on 2-methyl-prop-2-yl-hydroperoxide" EXACT [CHEBI:64090]
-synonym: "normal cell population growth on t-BOOH" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
-synonym: "normal cell population growth on tert-butyl hydroperoxide" EXACT [PomBase:mah]
-synonym: "normal cellular response to t-BOOH" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal vegetative cell population growth on t-BOOH" EXACT [PomBase:mah]
+synonym: "normal cell population growth on tert-butyl hydroperoxide" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to tert-butyl hydroperoxide" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on t-BOOH" EXACT [PomBase:mah]
+synonym: "normal growth on TBHP" EXACT [PomBase:mah]
+synonym: "normal vegetative cell population growth on tert-butyl hydroperoxide" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
 creation_date: 2012-07-16T15:28:00Z
@@ -18835,6 +18845,7 @@ id: FYPO:0001676
 name: protein mislocalized to nucleus during S phase
 def: "A cell phenotype in which a protein that is not normally found in the nucleus is observed there during S phase of a mitotic cell cycle." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to nucleus during S phase" EXACT [PomBase:vw]
 synonym: "protein mislocalised to nucleus during S phase" EXACT [PomBase:mah]
 synonym: "protein mislocalised to nucleus during S phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to nucleus during S phase during vegetative growth" EXACT [PomBase:mah]
@@ -19971,11 +19982,11 @@ creation_date: 2012-11-21T14:05:30Z
 
 [Term]
 id: FYPO:0001778
-name: abnormal kinetochore localization
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of one or more kinetochore(s) is abnormal." [PomBase:mah]
-synonym: "abnormal centromere localization" RELATED [PomBase:al]
-synonym: "abnormal kinetochore localisation" EXACT [PomBase:mah]
-synonym: "abnormal kinetochore localization during vegetative growth" EXACT [PomBase:mah]
+name: abnormal centromere localization
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of one or more centromere(s) is abnormal." [PomBase:mah]
+synonym: "abnormal centromere localisation" EXACT [PomBase:mah]
+synonym: "abnormal centromere localization during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal kinetochore localization" EXACT [GO:0072765, PomBase:al]
 is_a: FYPO:0001440 ! abnormal protein complex localization
 created_by: midori
 creation_date: 2012-11-21T14:24:28Z
@@ -19997,7 +20008,7 @@ synonym: "abnormal kinetochore localization at spindle pole body" RELATED [GO:00
 synonym: "abnormal kinetochores to spindle pole body clustering" RELATED [PomBase:vw]
 synonym: "mislocalized, scattered centromeres" RELATED [PomBase:al]
 synonym: "unclustered kinetochores" RELATED [PomBase:al]
-is_a: FYPO:0001778 ! abnormal kinetochore localization
+is_a: FYPO:0001778 ! abnormal centromere localization
 created_by: midori
 creation_date: 2012-11-21T14:33:41Z
 
@@ -20167,6 +20178,7 @@ id: FYPO:0001796
 name: protein mislocalized to centromere
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found at the centromeric region of a chromosome is observed there." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found at the centromere in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to centromere" EXACT [PomBase:vw]
 synonym: "protein mislocalised to centromere" EXACT [PomBase:mah]
 synonym: "protein mislocalised to centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to centromere during vegetative growth" EXACT [PomBase:mah]
@@ -22771,9 +22783,7 @@ synonym: "abnormal cell cycle arrest in mitotic interphase before NETO during ve
 synonym: "abnormal cell cycle arrest in mitotic interphase before new end take-off" RELATED [GO:0051519]
 synonym: "abnormal mitotic cell cycle arrest in interphase before NETO" EXACT [PomBase:mah]
 synonym: "cell cycle arrest in mitotic interphase before NETO" BROAD [PomBase:vw]
-is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
-is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
-is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+is_a: FYPO:0003373 ! abnormal cell cycle arrest in mitotic G2 phase
 relationship: has_output FYPO:0001018 ! abolished activation of bipolar cell growth
 created_by: midori
 creation_date: 2013-02-27T15:46:41Z
@@ -23417,6 +23427,7 @@ id: FYPO:0002073
 name: protein mislocalized to nucleus during cellular response to copper
 def: "A cell phenotype in which a protein that is not normally found in the nucleus is observed there during a cellular response to copper ions." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to nucleus during cellular response to copper" EXACT [PomBase:vw]
 synonym: "nuclear protein accumulation in response to copper" RELATED [PomBase:al]
 synonym: "protein mislocalised to nucleus during cellular response to copper" EXACT [PomBase:mah]
 synonym: "protein mislocalised to nucleus during cellular response to copper ion during vegetative growth" EXACT [PomBase:mah]
@@ -27872,6 +27883,7 @@ id: FYPO:0002445
 name: protein mislocalized to actin cortical patch
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in actin cortical patches is observed there." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in actin cortical patches in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to actin cortical patch" EXACT [PomBase:vw]
 synonym: "protein mislocalised to actin cortical patch" EXACT [PomBase:mah]
 synonym: "protein mislocalised to actin cortical patch during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to actin cortical patch during vegetative growth" EXACT [PomBase:mah]
@@ -30196,7 +30208,7 @@ synonym: "increased distance between mitotic kinetochores" RELATED [PomBase:vw]
 synonym: "increased interkinetochore distance before anaphase onset" EXACT [PMID:22065639]
 synonym: "increased sister kinetochore distance before mitotic anaphase" EXACT [PMID:22065639, PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
-relationship: output_of FYPO:0001778 ! abnormal kinetochore localization
+relationship: output_of FYPO:0001778 ! abnormal centromere localization
 created_by: midori
 creation_date: 2013-09-11T15:30:13Z
 
@@ -31002,6 +31014,7 @@ id: FYPO:0002714
 name: protein mislocalized to Golgi apparatus
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the Golgi apparatus is observed there." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in the Golgi in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to Golgi apparatus" EXACT [PomBase:vw]
 synonym: "protein mislocalised to Golgi apparatus" EXACT [PomBase:mah]
 synonym: "protein mislocalised to Golgi apparatus during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to Golgi apparatus during vegetative growth" EXACT [PomBase:mah]
@@ -32467,6 +32480,7 @@ id: FYPO:0002843
 name: protein mislocalized to nucleoplasm
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the nucleoplasm is observed there." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in the nucleoplasm in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to nucleoplasm" EXACT [PomBase:vw]
 synonym: "protein mislocalised to nucleoplasm" EXACT [PomBase:mah]
 synonym: "protein mislocalised to nucleoplasm during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to nucleoplasm during vegetative growth" EXACT [PomBase:mah]
@@ -32561,6 +32575,7 @@ id: FYPO:0002851
 name: protein mislocalized to eisosome
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found at the eisosome is observed there." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in the eisosome in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to eisosome" EXACT [PomBase:vw]
 synonym: "protein mislocalised to eisosome" EXACT [PomBase:mah]
 synonym: "protein mislocalised to eisosome during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to eisosome during vegetative growth" EXACT [PomBase:mah]
@@ -35144,7 +35159,7 @@ creation_date: 2014-02-04T16:06:17Z
 id: FYPO:0003071
 name: abolished single-stranded DNA 5'-3' exodeoxyribonuclease activity
 def: "A molecular function phenotype in which a single-stranded DNA 5'-3' exodeoxyribonuclease activity is absent." [PomBase:mah]
-synonym: "single-stranded DNA 5'-3' exodeoxyribonuclease activity< abolished" EXACT [PomBase:mah]
+synonym: "single-stranded DNA 5'-3' exodeoxyribonuclease activity abolished" EXACT [PomBase:mah]
 is_a: FYPO:0003070 ! abnormal single-stranded DNA 5'-3' exodeoxyribonuclease activity
 is_a: FYPO:0003164 ! abolished nuclease activity
 created_by: midori
@@ -35653,7 +35668,7 @@ creation_date: 2014-02-19T14:29:40Z
 [Term]
 id: FYPO:0003117
 name: increased cellular reactive oxygen species level during cellular response to plumbagin
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of reactive oxygen species (ROS) measured in a cell is lower than normal during a cellular response to plumbagin." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of reactive oxygen species (ROS) measured in a cell is higher than normal during a cellular response to plumbagin." [PomBase:mah]
 synonym: "increased cellular reactive oxygen species accumulation during cellular response to plumbagin" RELATED [PomBase:mah]
 synonym: "increased cellular reactive oxygen species level during cellular response to plumbagin during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased cellular ROS accumulation during cellular response to plumbagin" RELATED [PomBase:mah]
@@ -36453,6 +36468,7 @@ id: FYPO:0003187
 name: protein mislocalized to astral microtubule during mitosis
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found associated with astral microtubules during mitosis is observed there during mitosis. The protein may or may not normally associate with astral microtubules during other cell cycle phases." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found at astral microtubules during mitosis in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to astral microtubule during mitosis" EXACT [PomBase:vw]
 synonym: "protein mislocalised to astral microtubule during mitosis" EXACT [PomBase:mah]
 synonym: "protein mislocalized to astral microtubule during mitosis during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
@@ -38607,6 +38623,212 @@ is_a: FYPO:0001983 ! protein absent from cell
 is_a: FYPO:0002959 ! decreased RNA level during meiosis
 created_by: midori
 creation_date: 2014-05-29T16:34:44Z
+
+[Term]
+id: FYPO:0003373
+name: abnormal cell cycle arrest in mitotic G2 phase
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested during G2 phase, under conditions where arrest is not a normal occurrence." [PomBase:mah]
+comment: Use this term if the cell cycle is abnormally arrested after completion of DNA replication (S phase) but before the G2/M transition.
+synonym: "abnormal cell cycle arrest in mitotic G2 phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle arrest in  G2 phase" EXACT [PomBase:mah]
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+created_by: midori
+creation_date: 2014-06-02T13:28:31Z
+
+[Term]
+id: FYPO:0003374
+name: normal cellular coenzyme Q10 level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of coenzyme Q10 measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular coenzyme Q10 accumulation" RELATED [PomBase:mah]
+synonym: "normal cellular coenzyme Q10 level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+created_by: midori
+creation_date: 2014-06-02T13:49:46Z
+
+[Term]
+id: FYPO:0003375
+name: normal ubiquinone binding
+def: "A molecular function phenotype in which occurrence of ubiquinone binding by a gene product (usually a protein) in a mutant is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal coenzyme Q binding" EXACT [GO:0048039]
+is_a: FYPO:0000706 ! normal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+created_by: midori
+creation_date: 2014-06-02T13:51:29Z
+
+[Term]
+id: FYPO:0003376
+name: resistance to nitrogen starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show decreased sensitivity to nitrogen starvation. Cells go on to grow and divide to a greater extent than wild type following nitrogen starvation" [PomBase:al, PomBase:mah]
+comment: Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation, but this term does not refer to such prolonged starvation. Use this term if you have assayed growth of cells exposed to nitrogen starvation in culture. If you have assayed the response to nitrogen starvation at the subcellular or molecular level, consider annotating to 'abnormal cellular response to nitrogen starvation' (FYPO:0000152).
+synonym: "resistance to nitrogen depletion" EXACT [PomBase:vw]
+synonym: "resistance to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "resistance to nitrogen starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000850 ! resistance to stress during vegetative growth
+created_by: midori
+creation_date: 2014-06-02T13:56:34Z
+
+[Term]
+id: FYPO:0003377
+name: decreased RNA level during cellular response to nitrosative stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to nitrosative stress is lower than normal. Total RNA or a specific RNA may be affected. Nitrosative stress often results from exposure to high levels of nitric oxide (NO) or the highly reactive oxidant peroxynitrite, which is produced following interaction of NO with superoxide anions." [GO:0071500, PMID:20204527, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. NO levels can be increased experimentally by adding sodium nitroprusside to growth media.
+synonym: "decreased mRNA level during cellular response to nitrosative stress" NARROW [PomBase:mah]
+synonym: "decreased RNA accumulation during cellular response to nitrosative stress" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to nitrosative stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased transcript level during cellular response to nitrosative stress" EXACT [PomBase:vw]
+synonym: "reduced RNA level during cellular response to nitrosative stress" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+created_by: midori
+creation_date: 2014-06-02T14:05:02Z
+
+[Term]
+id: FYPO:0003378
+name: abolished meiosis I
+def: "A cellular process phenotype in which the first meiotic nuclear division, in which homologous chromosomes are normally paired and segregated from each other, does not occur." [GO:0007127, PomBase:mah]
+synonym: "abolished first meiotic nuclear division" EXACT [PomBase:al]
+synonym: "absent meiosis I" EXACT [PomBase:mah]
+synonym: "meiosis I abolished" EXACT [PomBase:mah]
+synonym: "meiosis I: absent" EXACT [PomBase:mah]
+is_a: FYPO:0000474 ! abolished meiosis
+created_by: midori
+creation_date: 2014-06-02T14:29:46Z
+
+[Term]
+id: FYPO:0003379
+name: abolished meiosis II
+def: "A cellular process phenotype in which the second meiotic nuclear division, in which two chromatids in each chromosome are normally separated, does not occur." [GO:0007135, PomBase:mah]
+synonym: "abolished second meiotic nuclear division" EXACT [PomBase:al]
+synonym: "absent meiosis II" EXACT [PomBase:mah]
+synonym: "meiosis II abolished" EXACT [PomBase:mah]
+synonym: "meiosis II: absent" EXACT [PomBase:mah]
+is_a: FYPO:0000474 ! abolished meiosis
+created_by: midori
+creation_date: 2014-06-02T14:31:32Z
+
+[Term]
+id: FYPO:0003380
+name: decreased meiosis I
+def: "A cellular process phenotype in which the occurrence of the first meiotic nuclear division, in which homologous chromosomes are normally paired and segregated from each other, is decreased." [PomBase:mah]
+synonym: "decreased first meiotic nuclear division" EXACT [PomBase:al]
+synonym: "meiosis I: decreased" EXACT [PomBase:mah]
+synonym: "reduced meiosis I" EXACT [PomBase:mah]
+is_a: FYPO:0000476 ! decreased meiosis
+created_by: midori
+creation_date: 2014-06-02T14:32:49Z
+
+[Term]
+id: FYPO:0003381
+name: increased cellular glycerol level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of glycerol measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular glycerol level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased glycerol accumulation" RELATED [PomBase:al]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+created_by: midori
+creation_date: 2014-06-02T15:27:01Z
+
+[Term]
+id: FYPO:0003382
+name: increased cellular acetate level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of acetate measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased acetate accumulation" RELATED [PomBase:al]
+synonym: "increased cellular acetate level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+created_by: midori
+creation_date: 2014-06-02T15:28:29Z
+
+[Term]
+id: FYPO:0003383
+name: resistance to tert-butyl hydroperoxide
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of tert-butyl hydroperoxide (TBHP or t-BOOH) than normal." [PomBase:mah]
+synonym: "resistance to 2-methyl-prop-2-yl-hydroperoxide" EXACT [CHEBI:64090]
+synonym: "resistance to t-BOOH" EXACT [PomBase:al, PomBase:mah]
+synonym: "resistance to TBHP" EXACT [CHEBI:64090, PomBase:al]
+synonym: "resistance to tert-butyl hydroperoxide during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to tert-butyl hydroperoxide" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-06-02T15:29:51Z
+
+[Term]
+id: FYPO:0003384
+name: sensitive to chromium
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to chromium ions. Cells stop growing (and may die) at a concentration of chromium ions that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to chromium" EXACT [PomBase:mah]
+synonym: "sensitive to chromium during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to chromium ions" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-06-02T15:36:35Z
+
+[Term]
+id: FYPO:0003385
+name: increased cellular cadmium level during cellular response to cadmium
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of cadmium ions measured in a cell is higher than normal during a cellular response to cadmium." [PomBase:mah]
+synonym: "increased cadmium accumulation during cellular response to cadmium" RELATED [PomBase:al]
+synonym: "increased cellular cadmium accumulation during cellular response to cadmium" RELATED [PomBase:mah]
+synonym: "increased cellular cadmium ion level during cellular response to cadmium" EXACT [PomBase:mah]
+synonym: "increased cellular cadmium level during cellular response to cadmium during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003004 ! increased cellular reactive oxygen species level during vegetative growth
+created_by: midori
+creation_date: 2014-06-02T15:40:07Z
+
+[Term]
+id: FYPO:0003386
+name: increased superoxide dismutase activity
+def: "A molecular function phenotype in which the observed rate of superoxide dismutase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0003281 ! abnormal superoxide dismutase activity
+created_by: midori
+creation_date: 2014-06-02T15:42:15Z
+
+[Term]
+id: FYPO:0003387
+name: decreased catalase activity
+def: "A molecular function phenotype in which the observed rate of catalase activity is decreased." [PomBase:mah]
+synonym: "reduced catalase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000690 ! decreased oxidoreductase activity
+is_a: FYPO:0001104 ! abnormal catalase activity
+created_by: midori
+creation_date: 2014-06-02T15:42:47Z
+
+[Term]
+id: FYPO:0003388
+name: decreased biotin import
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the import of biotin into the cell occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased biotin import during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased biotin import into cell" EXACT [PomBase:al]
+synonym: "decreased biotin uptake" EXACT [PomBase:mah]
+synonym: "reduced biotin import" EXACT [PomBase:mah]
+is_a: FYPO:0001744 ! abnormal biotin import
+created_by: midori
+creation_date: 2014-06-02T15:44:42Z
+
+[Term]
+id: FYPO:0003389
+name: viable elongated vegetative cell with swollen medial region
+def: "A cell morphology phenotype in which a vegetative cell is viable, is longer than normal, has a larger diameter than normal near the equator (but not at the ends), and has an overall volume greater than normal." [PMID:24554432, PomBase:mah, PomBase:vw]
+synonym: "medial bulge formation phenotype" EXACT [PMID:24554432]
+synonym: "viable elongated vegetative cell with swollen medial region during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002479 ! viable swollen elongated vegetative cell
+created_by: midori
+creation_date: 2014-06-02T15:49:47Z
+
+[Term]
+id: FYPO:0003390
+name: protein mislocalized to medial cortex
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found at the medial cortex is observed there." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the medial cortex in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to medial cortex" EXACT [PomBase:vw]
+synonym: "protein mislocalised to medial cortex" EXACT [PomBase:mah]
+synonym: "protein mislocalised to medial cortex during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to medial cortex during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
+created_by: midori
+creation_date: 2014-06-02T16:00:13Z
 
 [Typedef]
 id: adjacent_to
