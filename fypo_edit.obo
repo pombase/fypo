@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 11:06:2014 15:30
+date: 16:06:2014 13:58
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -5606,7 +5606,8 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 comment: Arrest with replicated DNA may occur between late S and G2/M; if only DNA content is measured, the arrest point cannot be determined with greater precision.
 synonym: "cell cycle arrest with 2C DNA content" NARROW [PomBase:mah]
 synonym: "cell cycle arrest with replicated DNA during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000407 ! abnormally arrested cell cycle progression
+synonym: "mitotic cell cycle arrest with replicated DNA" EXACT [PomBase:mah]
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
 intersection_of: FYPO:0000407 ! abnormally arrested cell cycle progression
 intersection_of: during GO:0072690
 intersection_of: preceded_by GO:0006261
@@ -12841,10 +12842,11 @@ creation_date: 2012-04-19T01:38:22Z
 
 [Term]
 id: FYPO:0000972
-name: increased number of Rad22 foci
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites at which the protein Rad22 accumulates is greater than normal." [PMID:22064477, PomBase:mah]
+name: increased number of Rad52 foci
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites at which the protein Rad52 (also called Rad22) accumulates is greater than normal." [PMID:22064477, PomBase:mah]
 comment: Because Rad22 often accumulates at double-strand breaks, consider also annotating to 'accumulation of double-strand break sites' (FYPO:0000455).
-synonym: "increased number of Rad22 foci during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased number of Rad22 foci" EXACT [PomBase:mah]
+synonym: "increased number of Rad52 foci during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-04-19T02:09:54Z
@@ -19204,10 +19206,11 @@ creation_date: 2012-08-22T15:16:12Z
 id: FYPO:0001430
 name: cell cycle arrest with unreplicated DNA
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested before cells have replicated genomic DNA." [PomBase:mah]
-comment: Arrest with replicated DNA may occur between mitosis and the beginning of S phase; if only DNA content is measured, the arrest point cannot be determined with greater precision.
+comment: Arrest with unreplicated DNA may occur between mitosis and the beginning of S phase; if only DNA content is measured, the arrest point cannot be determined with greater precision.
 synonym: "cell cycle arrest with 1C DNA content" NARROW [PomBase:mah]
 synonym: "cell cycle arrest with unreplicated DNA during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000407 ! abnormally arrested cell cycle progression
+synonym: "mitotic cell cycle arrest with unreplicated DNA" EXACT [PomBase:mah]
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
 intersection_of: inheres_in GO:0071850
 intersection_of: precedes GO:0033260
 intersection_of: qualifier PATO:0000467
@@ -31908,7 +31911,7 @@ creation_date: 2013-07-09T15:19:36Z
 [Term]
 id: FYPO:0002341
 name: increased duration of DNA damage checkpoint
-def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any DNA damage checkpoint is greater than in wild type under any specified set of conditions." [PomBase:mah]
+def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any DNA damage checkpoint is greater than in wild type when the cell is exposed to ultraviolet light." [PomBase:mah]
 synonym: "delayed DNA damage checkpoint deactivation" EXACT [PomBase:mah]
 is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
 intersection_of: PATO:0000498
@@ -40781,10 +40784,10 @@ creation_date: 2013-12-10T12:35:59Z
 
 [Term]
 id: FYPO:0002973
-name: increased ubiquitin ligase activity during metaphase
-def: "A molecular function phenotype in which the observed rate of ubiquitin ligase activity is increased during mitotic metaphase." [PomBase:mah]
-synonym: "increased ubiquitin ligase activity during mitotic metaphase" EXACT [PomBase:mah]
-synonym: "increased ubiquitin-protein ligase activity during metaphase" EXACT [GO:0004842]
+name: increased ubiquitin ligase activity during mitotic metaphase
+def: "A molecular function phenotype in which the observed rate of ubiquitin ligase activity is increased during metaphase of the mitotic cell cycle." [PomBase:mah]
+synonym: "increased ubiquitin ligase activity during metaphase of mitosis" EXACT [PomBase:mah]
+synonym: "increased ubiquitin-protein ligase activity during mitotic metaphase" EXACT [GO:0004842]
 is_a: FYPO:0000662 ! increased catalytic activity
 is_a: FYPO:0001912 ! abnormal ubiquitin ligase activity
 intersection_of: PATO:0002051
@@ -44225,7 +44228,7 @@ name: explosive cytokinetic cell separation resulting in vegetative cell lysis
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cell separation is instantaneous and asymmetrical, with a ripped primary septum. Explosive cell separation takes a few seconds (rather than 5-6 minutes as in wild type) and involves asymmetrical degradation and/or breakage of the septum edging followed by an abrupt tear of a weak primary septum and an instantaneous curvature of the secondary septum." [PMID:22891259, PomBase:mah]
 synonym: "side-explosive cell separation" EXACT [PMID:22891259]
 is_a: FYPO:0000164 ! abnormal cytokinetic cell separation
-relationship: has_output FYPO:0000647 ! vegetative cell lysis
+relationship: has_output FYPO:0003440 ! cell lysis during cytokinesis
 created_by: midori
 creation_date: 2014-03-19T11:16:27Z
 
@@ -45828,7 +45831,7 @@ creation_date: 2014-04-29T14:04:57Z
 [Term]
 id: FYPO:0003331
 name: decreased protein kinase activity during mitotic interphase
-def: "A molecular function phenotype in which the observed rate of a protein kinase activity is decreased interphase of the mitotic cell cycle." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is decreased during interphase of the mitotic cell cycle." [PomBase:mah]
 synonym: "reduced protein kinase activity during mitotic interphase" EXACT [PomBase:mah]
 is_a: FYPO:0001382 ! decreased protein kinase activity
 intersection_of: PATO:0002052
@@ -47273,6 +47276,188 @@ intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0004585
 created_by: midori
 creation_date: 2014-06-11T15:27:00Z
+
+[Term]
+id: FYPO:0003436
+name: decreased protein kinase activity during mitotic G2 phase
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is decreased during the G2 phase of the mitotic cell cycle." [PomBase:mah]
+synonym: "reduced protein kinase activity during mitotic G2 phase" EXACT [PomBase:mah]
+is_a: FYPO:0003331 ! decreased protein kinase activity during mitotic interphase
+intersection_of: PATO:0002052
+intersection_of: during GO:0000085
+intersection_of: inheres_in GO:0004672
+created_by: midori
+creation_date: 2014-06-16T11:26:31Z
+
+[Term]
+id: FYPO:0003437
+name: abolished protein kinase activity during mitotic G1 phase
+def: "A molecular function phenotype in which a protein kinase activity is absent during G1 phase of the mitotic cell cycle." [PomBase:mah]
+synonym: "protein kinase activity abolished during mitotic G1 phase" EXACT [PomBase:mah]
+is_a: FYPO:0001381 ! abnormal protein kinase activity
+is_a: FYPO:0001384 ! abolished protein kinase activity
+intersection_of: PATO:0001558
+intersection_of: during GO:0000080
+intersection_of: towards GO:0004672
+created_by: midori
+creation_date: 2014-06-16T11:30:42Z
+
+[Term]
+id: FYPO:0003438
+name: mitotic G1/S transition delay following nitrogen starvation-induced G1 phase arrest
+def: "A cell cycle phenotype in which the G1/S transition of the mitotic cell cycle begins later than normal after the cell has been arrested in G1 phase due to nitrogen starvation. The duration of G1 arrest is thus longer than normal." [PMID:8657126, PomBase:mah]
+comment: A G1/S delay may indicate that a checkpoint, such as the cell size checkpoint or the G1/S DNA damage checkpoint, is activated. Checkpoint activation can be tested using checkpoint kinase mutants.
+synonym: "delayed cell cycle progression through mitotic G1/S phase transition following cell cycle arrest in mitotic G1 phase in response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "delayed mitotic G1 phase progression following nitrogen starvation-induced G1 phase arrest" RELATED [PomBase:mah]
+synonym: "increased duration of nitrogen starvation-induced mitotic G1 phase arrest" RELATED [PomBase:mah]
+synonym: "mitotic cell cycle delay at G1/S transition following nitrogen starvation-induced G1 phase arrest" EXACT [PomBase:mah]
+synonym: "mitotic G1/S transition delay after recovery from nitrogen starvation-induced G1 arrest" EXACT [PMID:8657126, PomBase:vw]
+is_a: FYPO:0000333 ! mitotic G1/S transition delay
+is_a: FYPO:0000394 ! abnormal mitotic G1/S phase transition
+created_by: midori
+creation_date: 2014-06-16T11:54:10Z
+
+[Term]
+id: FYPO:0003439
+name: branched septum
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum that has branches. For example, the septum may be Y-shaped." [PMID:24798735, PomBase:mah]
+synonym: "branched septum during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+is_a: FYPO:0002023 ! abnormal septum morphology
+intersection_of: PATO:000040
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0000935
+created_by: midori
+creation_date: 2014-06-16T12:06:23Z
+
+[Term]
+id: FYPO:0003440
+name: cell lysis during cytokinesis
+def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell lyses, i.e. the plasma membrane ruptures and cytoplasm is lost, during cytokinesis. Note that in fission yeast cell lysis, the integrity of the cell wall is also compromised." [PMID:24798735, PomBase:mah]
+synonym: "cell lysis during cytokinesis during vegetative growth" EXACT [PomBase:mah]
+synonym: "cytolysis during cytokinesis" EXACT [PomBase:mah]
+synonym: "inviable, lysed cell during cytokinesis" EXACT [PomBase:mah]
+is_a: FYPO:0000647 ! vegetative cell lysis
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0000281
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0019835
+created_by: midori
+creation_date: 2014-06-16T12:21:54Z
+
+[Term]
+id: FYPO:0003441
+name: normal protein localization to actin cytoskeleton
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to all or part of the actin cytoskeleton is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to actin cytoskeleton" EXACT [PomBase:mah]
+synonym: "normal protein localization to actin cytoskeleton during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1903119
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-06-16T12:40:07Z
+
+[Term]
+id: FYPO:0003442
+name: abolished protein localization to actin cable
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to one or more actin cables does not occur. Actin cables are the form of actin filament bundles found in yeasts." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to actin cable" EXACT [PomBase:mah]
+synonym: "abolished protein localization to actin cable during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished protein localization to actin filament bundle" EXACT [GO:0032432]
+synonym: "protein absent from actin cable" RELATED [PomBase:mah]
+synonym: "protein localization to actin cable abolished" EXACT [PomBase:mah]
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:1903120
+created_by: midori
+creation_date: 2014-06-16T12:46:59Z
+
+[Term]
+id: FYPO:0003443
+name: decreased medial cortical node movement during contractile ring assembly
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which medial cortical nodes move less frequently, and over shorter distances, than normal. During contractile ring assembly, medial cortical nodes normally move towards the cell center, and condense into a ring." [PMID:24798735, PomBase:al, PomBase:mah]
+is_a: FYPO:0000032 ! abnormal cytokinesis
+created_by: midori
+creation_date: 2014-06-16T12:56:48Z
+
+[Term]
+id: FYPO:0003444
+name: abnormal medial cortical node migration
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which medial cortical nodes move in random directions such that they do not undergo an overall migration towards the cell center. During contractile ring assembly, medial cortical nodes normally move towards the cell center, and condense into a ring." [PMID:24798735, PomBase:al, PomBase:mah]
+is_a: FYPO:0000032 ! abnormal cytokinesis
+created_by: midori
+creation_date: 2014-06-16T13:01:12Z
+
+[Term]
+id: FYPO:0003445
+name: increased duration of DNA damage checkpoint during cellular response to UV
+def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any DNA damage checkpoint is greater than in wild type under any specified set of conditions." [PomBase:mah]
+synonym: "delayed DNA damage checkpoint deactivation during cellular response to UV" EXACT [PomBase:mah]
+is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+intersection_of: PATO:0000498
+intersection_of: during GO:0034644
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0000077
+created_by: midori
+creation_date: 2014-06-16T13:23:07Z
+
+[Term]
+id: FYPO:0003446
+name: decreased SRP-dependent cotranslational protein targeting to membrane
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of SRP-dependent cotranslational protein targeting to the ER membrane is decreased." [GO:0006614, PomBase:mah]
+synonym: "decreased SRP-dependent cotranslational protein targeting to membrane during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced SRP-dependent cotranslational protein targeting to membrane" EXACT [PomBase:mah]
+is_a: FYPO:0000215 ! abnormal intracellular protein transport
+is_a: FYPO:0000536 ! abnormal protein secretion
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006614
+created_by: midori
+creation_date: 2014-06-16T13:37:29Z
+
+[Term]
+id: FYPO:0003447
+name: decreased level of glycosylated protein in cell
+def: "A cell phenotype in which the amount of glycosylated protein measured the cell is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
+synonym: "decreased accumulation of glycosylated protein in cell" RELATED [PomBase:mah]
+synonym: "decreased cellular glycoprotein level" EXACT [PR:000037069]
+synonym: "decreased glycosylated protein level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased level of glycosylated protein in cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced level of glycosylated protein in cell" EXACT [PomBase:mah]
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005776
+intersection_of: towards PR:000037069
+created_by: midori
+creation_date: 2014-06-16T13:49:35Z
+
+[Term]
+id: FYPO:0003448
+name: viable swollen vacuolated spheroid vegetative cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is viable, is shaped in the form of a spheroid, has a larger volume than normal, and in which vacuoles are more visible (usually by microscopy) than normal. In a swollen cell, both length and diameter are greater than normal, although the cell is only considered elongated if the length:width ratio is also greater than normal." [PomBase:mah]
+synonym: "viable enlarged vacuolated spheroid vegetative cell" RELATED [PomBase:mah]
+synonym: "viable enlarged volume vacuolated spheroid vegetative cell" EXACT [PomBase:mah]
+synonym: "viable large vacuolated spheroid vegetative cell" RELATED [PomBase:vw]
+synonym: "viable swollen rounded vacuolated vegetative cell" EXACT [PomBase:mah]
+synonym: "viable swollen vacuolated spheroid cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000025 ! swollen cell
+is_a: FYPO:0000945 ! swollen spheroid vegetative cell
+is_a: FYPO:0001581 ! vacuolated
+is_a: FYPO:0002377 ! viable swollen vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000021 ! spheroid vegetative cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0001491 ! viable vegetative cell
+intersection_of: has_part FYPO:0001581 ! vacuolated
+created_by: midori
+creation_date: 2014-06-16T13:51:06Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
