@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 16:06:2014 13:58
+date: 24:06:2014 15:30
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -6363,6 +6363,7 @@ synonym: "abnormally arrested mitotic cell cycle during vegetative growth" EXACT
 synonym: "mitotic cell cycle abnormally arrested" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle: arrested" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000059 ! abnormal mitotic cell cycle
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
 is_a: FYPO:0000407 ! abnormally arrested cell cycle progression
 intersection_of: PATO:0001561
 intersection_of: during GO:0072690
@@ -8362,15 +8363,21 @@ id: FYPO:0000648
 name: viable small vegetative cell
 def: "A cell morphology phenotype in which a vegetatively growing cell is viable but has an abnormally low volume. Note that small viable cells result from a cell cycle size regulation defect." [PomBase:mah]
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
+synonym: "mitosis with small cell size" RELATED [PomBase:vw]
+synonym: "reduced size at cell division" RELATED [PomBase:vw]
 synonym: "small viable vegetative cell" EXACT [PomBase:mah]
 synonym: "viable small cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "wee" EXACT [PomBase:jh, PomBase:mah]
 is_a: FYPO:0000645 ! small vegetative cell
 is_a: FYPO:0001491 ! viable vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: PATO:0000694
 intersection_of: exists_during GO:0072690
+intersection_of: happens_during GO:0072690
 intersection_of: has_part FYPO:0000023 ! small cell
 intersection_of: has_part FYPO:0001491 ! viable vegetative cell
+intersection_of: inheres_in GO:0007067
+relationship: output_of FYPO:0001046 ! premature mitosis
 created_by: midori
 creation_date: 2011-10-13T12:06:45Z
 
@@ -10067,14 +10074,12 @@ creation_date: 2012-02-29T12:49:47Z
 
 [Term]
 id: FYPO:0000784
-name: protein mislocalized to nucleus
+name: protein mislocalized to nucleus during vegetative growth
 alt_id: FYPO:0001251
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the nucleus is observed there." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "ectopic protein localization to nucleus" EXACT [PomBase:vw]
-synonym: "protein mislocalised to nucleus" EXACT [PomBase:mah]
+synonym: "ectopic protein localization to nucleus during vegetative growth" EXACT [PomBase:vw]
 synonym: "protein mislocalised to nucleus during vegetative growth" EXACT [PomBase:mah]
-synonym: "protein mislocalized to nucleus during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
@@ -19120,12 +19125,11 @@ creation_date: 2012-08-22T14:28:30Z
 
 [Term]
 id: FYPO:0001424
-name: abolished protein localization to nucleus
+name: abolished protein localization to nucleus during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleus is abolished." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abolished protein localisation to nucleus" EXACT [PomBase:mah]
-synonym: "abolished protein localization to nucleus during vegetative growth" EXACT [PomBase:mah]
-synonym: "protein localization to nucleus abolished" EXACT [PomBase:mah]
+synonym: "abolished protein localisation to nucleus during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to nucleus abolished during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001129 ! abnormal protein localization to nucleus during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
@@ -20084,14 +20088,14 @@ creation_date: 2012-08-30T14:32:53Z
 
 [Term]
 id: FYPO:0001497
-name: inviable elongated vegetative cell with mitotic cell cycle arrest in S phase
-def: "A cell morphology phenotype in which a vegetative cell is inviable and longer than normal, and progress through the mitotic cell cycle is arrested in S phase." [PomBase:mah]
+name: inviable elongated vegetative cell with mitotic cell cycle arrest in interphase
+def: "A cell morphology phenotype in which a vegetative cell is inviable and longer than normal, and progress through the mitotic cell cycle is arrested in interphase." [PomBase:mah]
 comment: A population of cells with this phenotype usually shows a marginal increase in cell number before all cells die. Cells arrested in S phase typically have more than 1C, but less than 2C, DNA content. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
-synonym: "elongated inviable cell with mitotic cell cycle arrest in S phase during vegetative growth" EXACT [PomBase:mah]
-synonym: "elongated inviable vegetative cell with mitotic cell cycle arrest in S phase" EXACT [PomBase:mah]
-synonym: "essential; elongated vegetative cell with mitotic cell cycle arrest in S phase" RELATED [PomBase:mah]
-synonym: "mitotic cell cycle arrest in S-phase with elongated inviable cell" EXACT [PomBase:vw]
-synonym: "mitotic S-phase arrested elongated inviable vegetative cell" EXACT [PomBase:mah]
+synonym: "elongated inviable cell with mitotic cell cycle arrest in interphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated inviable vegetative cell with mitotic cell cycle arrest in interphase" EXACT [PomBase:mah]
+synonym: "essential; elongated vegetative cell with mitotic cell cycle arrest in interphase" RELATED [PomBase:mah]
+synonym: "mitotic cell cycle arrest in interphase with elongated inviable cell" EXACT [PomBase:vw]
+synonym: "mitotic interphase arrested elongated inviable vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
@@ -22738,7 +22742,7 @@ synonym: "ectopic protein localization to nucleus during S phase" EXACT [PomBase
 synonym: "protein mislocalised to nucleus during S phase" EXACT [PomBase:mah]
 synonym: "protein mislocalised to nucleus during S phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to nucleus during S phase during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000784 ! protein mislocalized to nucleus
+is_a: FYPO:0000784 ! protein mislocalized to nucleus during vegetative growth
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0000084
 intersection_of: exists_during GO:0072690
@@ -27921,7 +27925,7 @@ creation_date: 2013-03-26T15:48:36Z
 [Term]
 id: FYPO:0002054
 name: cut during cellular response to hydroxyurea
-def: "A cut phenotype that is observed when a cell is exposed to hydroxyurea. In a cut phenotype, a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells." [PomBase:mah]
+def: "A cut phenotype that is observed when a cell is exposed to hydroxyurea. In a cut phenotype, a cell undergoes septation despite abnormal chromosome segregation, such that the septum physically divides the nucleus into two parts, and gives rise to inviable daughter cells." [PomBase:mah]
 synonym: "cut during cellular response to HU" EXACT [PomBase:mah]
 synonym: "cut during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0003165 ! cut
@@ -28178,7 +28182,7 @@ synonym: "protein mislocalised to nucleus during cellular response to copper" EX
 synonym: "protein mislocalised to nucleus during cellular response to copper ion during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to nucleus during cellular response to copper ion" EXACT [PomBase:mah]
 synonym: "protein mislocalized to nucleus during cellular response to copper ion during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000784 ! protein mislocalized to nucleus
+is_a: FYPO:0000784 ! protein mislocalized to nucleus during vegetative growth
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0071280
 intersection_of: exists_during GO:0072690
@@ -31201,7 +31205,7 @@ comment: When using this term, it is recommended to note the specific protein(s)
 synonym: "normal protein tyrosine phosphorylation during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000776 ! normal protein phosphorylation
 intersection_of: PATO:0000001
-intersection_of: happens_during GO:0034605
+intersection_of: happens_during GO:0034605<
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0018108
 intersection_of: qualifier PATO:0000461
@@ -35177,7 +35181,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "abolished protein localisation to nuclear periphery" EXACT [PomBase:mah]
 synonym: "abolished protein localization to nuclear periphery during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein localization to nuclear periphery abolished" EXACT [PomBase:mah]
-is_a: FYPO:0001424 ! abolished protein localization to nucleus
+is_a: FYPO:0001424 ! abolished protein localization to nucleus during vegetative growth
 is_a: FYPO:0002338 ! abnormal protein localization to nuclear periphery
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
@@ -37964,7 +37968,7 @@ synonym: "abolished protein localisation to nucleus, with protein mislocalised t
 synonym: "abolished protein localization in nucleus, with protein mislocalized to cytoplasm" EXACT [GO:0072659]
 synonym: "abolished protein localization to nucleus, with protein mislocalized to cytoplasm, during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein localization to nucleus abolished, with protein mislocalized to cytoplasm" EXACT [PomBase:mah]
-is_a: FYPO:0001424 ! abolished protein localization to nucleus
+is_a: FYPO:0001424 ! abolished protein localization to nucleus during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: has_part FYPO:0000783 ! protein mislocalized to cytoplasm
@@ -41827,7 +41831,7 @@ synonym: "abolished protein localisation to Mmi1 focus" EXACT [PomBase:mah]
 synonym: "abolished protein localization to Mmi1 focus during vegetative growth" EXACT [PomBase:mah]
 synonym: "abolished protein localization to Mmi1 nuclear focus complex" EXACT [GO:1990251]
 synonym: "protein localization to Mmi1 focus abolished" EXACT [PomBase:mah]
-is_a: FYPO:0001424 ! abolished protein localization to nucleus
+is_a: FYPO:0001424 ! abolished protein localization to nucleus during vegetative growth
 is_a: FYPO:0002963 ! abnormal protein localization to Mmi1 focus
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
@@ -42908,7 +42912,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "abolished protein localisation to nuclear periphery during cellular response to heat" EXACT [PomBase:mah]
 synonym: "abolished protein localization to nuclear periphery during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein localization to nuclear periphery abolished during cellular response to heat" EXACT [PomBase:mah]
-is_a: FYPO:0001424 ! abolished protein localization to nucleus
+is_a: FYPO:0001424 ! abolished protein localization to nucleus during vegetative growth
 is_a: FYPO:0002338 ! abnormal protein localization to nuclear periphery
 intersection_of: PATO:0001558
 intersection_of: during GO:0034605
@@ -43480,7 +43484,7 @@ name: RNA absent from cell during cellular response to salt stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is too low to detect during a cellular response to salt stress. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "RNA absent from cell during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
-synonym: "transcripts absent from cell during cellular response to salt stress" EXACT [PomBase:vw]
+synonym: "transcripts absent from cell during cellular response <to salt stress" EXACT [PomBase:vw]
 synonym: "undetectable RNA level during cellular response to salt stress" EXACT [PomBase:mah]
 is_a: FYPO:0001889 ! RNA absent from cell
 intersection_of: PATO:0002000
@@ -46397,7 +46401,6 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 comment: Use this term if the cell cycle is abnormally arrested after completion of DNA replication (S phase) but before the G2/M transition.
 synonym: "abnormal cell cycle arrest in mitotic G2 phase during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal mitotic cell cycle arrest in  G2 phase" EXACT [PomBase:mah]
-is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
 is_a: FYPO:0000446 ! cell cycle arrest in mitotic G2 phase
 is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
 intersection_of: PATO:0001561
@@ -47008,7 +47011,6 @@ synonym: "additional cytoplasmic vesicles present during vegetative growth" EXAC
 synonym: "cytoplasmic vesicles present in greater numbers during vegetative growth" EXACT [PomBase:mah]
 synonym: "extra cytoplasmic vesicles during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
-is_a: FYPO:0002790 ! vacuoles present in greater numbers
 intersection_of: PATO:0002002
 intersection_of: exists_during GO:0072690
 intersection_of: towards GO:0016023
@@ -47324,7 +47326,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "branched septum during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
 is_a: FYPO:0002023 ! abnormal septum morphology
-intersection_of: PATO:000040
+intersection_of: PATO:0000402
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
 created_by: midori
@@ -47432,7 +47434,7 @@ synonym: "reduced level of glycosylated protein in cell" EXACT [PomBase:mah]
 is_a: FYPO:0001324 ! decreased protein level during vegetative growth
 intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
-intersection_of: inheres_in GO:0005776
+intersection_of: inheres_in CL:0000334
 intersection_of: towards PR:000037069
 created_by: midori
 creation_date: 2014-06-16T13:49:35Z
@@ -47458,6 +47460,404 @@ intersection_of: has_part FYPO:0001491 ! viable vegetative cell
 intersection_of: has_part FYPO:0001581 ! vacuolated
 created_by: midori
 creation_date: 2014-06-16T13:51:06Z
+
+[Term]
+id: FYPO:0003449
+name: abnormal cell cycle arrest at mitotic G1/S phase transition
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested at the mitotic G1/S phase transition, under conditions where arrest is not a normal occurrence." [PomBase:mah]
+comment: Use this term if the cell cycle is abnormally arrested after completion of DNA replication (S phase) but before the G2/M transition.
+synonym: "abnormal cell cycle arrest at mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle arrest at G1/S phase transition" EXACT [PomBase:mah]
+is_a: FYPO:0000395 ! cell cycle arrest at mitotic G1/S phase transition
+is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
+is_a: FYPO:0001430 ! cell cycle arrest with unreplicated DNA
+intersection_of: PATO:0001561
+intersection_of: during GO:0000082
+intersection_of: during GO:0072690
+intersection_of: towards GO:0071850
+created_by: midori
+creation_date: 2014-06-24T11:44:29Z
+
+[Term]
+id: FYPO:0003450
+name: abolished protein localization to nucleus
+def: "A cell phenotype in which the localization of a protein to the nucleus is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to nucleus" EXACT [PomBase:mah]
+synonym: "protein localization to nucleus abolished" EXACT [PomBase:mah]
+is_a: FYPO:0002956 ! abnormal protein localization to nucleus
+intersection_of: PATO:0001558
+intersection_of: towards GO:0034504
+created_by: midori
+creation_date: 2014-06-24T12:15:23Z
+
+[Term]
+id: FYPO:0003451
+name: abolished protein localization to nucleus during meiotic anaphase II
+def: "A cell phenotype in which the localization of a protein to the nucleus is abolished during anaphase of the second meiotic nuclear division." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to nucleus during meiotic anaphase II" EXACT [PomBase:mah]
+synonym: "abolished protein localization to nucleus during anaphase II" EXACT [PomBase:al]
+synonym: "protein localization to nucleus abolished during meiotic anaphase II" EXACT [PomBase:mah]
+is_a: FYPO:0003450 ! abolished protein localization to nucleus
+intersection_of: PATO:0001558
+intersection_of: during GO:0007138
+intersection_of: towards GO:0034504
+created_by: midori
+creation_date: 2014-06-24T12:17:48Z
+
+[Term]
+id: FYPO:0003452
+name: mislocalized protein
+def: "A cell phenotype in which a protein is observed in a particular location where it is not normally found." [PomBase:mah]
+comment: The difference between this term and 'abnormal protein localization' (FYPO:0000443) is that 'mislocalized protein' describes a protein that is observed in a place where it is not normally found, whereas 'abnormal protein localization' additionally encompasses the absence of protein from a place where it is normally found. FYPO:0000782 can therefore be used in any case where a protein is in a different location in a mutant compared to wild type, whereas additional information is usually required to support annotation to FYPO:0000443 or its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "mislocalised protein" EXACT [PomBase:mah]
+is_a: FYPO:0003037 ! abnormal cell phenotype
+intersection_of: PATO:0000628
+intersection_of: inheres_in CHEBI:36080
+relationship: output_of FYPO:0001370 ! abnormal protein localization
+created_by: midori
+creation_date: 2014-06-24T12:20:58Z
+
+[Term]
+id: FYPO:0003453
+name: protein mislocalized to nucleus
+def: "A cell phenotype in which a protein that is not normally found in the nucleus is observed there." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to nucleus" EXACT [PomBase:vw]
+synonym: "protein mislocalised to nucleus" EXACT [PomBase:mah]
+is_a: FYPO:0003452 ! mislocalized protein
+intersection_of: PATO:0000628
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005634
+created_by: midori
+creation_date: 2014-06-24T12:22:14Z
+
+[Term]
+id: FYPO:0003454
+name: protein mislocalized to nucleus during meiosis I
+def: "A cell phenotype in which a protein that is not normally found in the nucleus is observed there during the first meiotic nuclear division." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to nucleus during meiosis I" EXACT [PomBase:vw]
+synonym: "protein mislocalised to nucleus during meiosis I" EXACT [PomBase:mah]
+is_a: FYPO:0003453 ! protein mislocalized to nucleus
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0007127
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005634
+created_by: midori
+creation_date: 2014-06-24T12:29:34Z
+
+[Term]
+id: FYPO:0003455
+name: decreased arginine catabolic process to proline
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of the breakdown of arginine into other compounds, including proline, is decreased." [GO:0019493, PomBase:mah]
+synonym: "decreased arginine catabolic process to proline during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased arginine catabolism to proline" EXACT [PomBase:mah]
+synonym: "reduced arginine catabolic process to proline" EXACT [PomBase:mah]
+is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0019493
+created_by: midori
+creation_date: 2014-06-24T12:50:35Z
+
+[Term]
+id: FYPO:0003456
+name: growth auxotrophic for methionine and purine
+def: "Auxotrophy in which a cell is unable to synthesize methionine or purines, and therefore requires methionine and at least one purine in the medium for vegetative cell growth." [PomBase:mah]
+synonym: "growth auxotrophic for methionine and purine during vegetative growth" EXACT [PomBase:mah]
+synonym: "methionine and purine auxotrophy" EXACT [PomBase:mah]
+is_a: FYPO:0000040 ! growth auxotrophic for methionine
+created_by: midori
+creation_date: 2014-06-24T13:28:57Z
+
+[Term]
+id: FYPO:0003457
+name: increased cellular homocysteine level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of homocysteine measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular homocysteine level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased homocysteine accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:17230
+created_by: midori
+creation_date: 2014-06-24T13:36:34Z
+
+[Term]
+id: FYPO:0003458
+name: alpha,alpha-trehalase activity increase abolished during cellular response to salt stress
+def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity does not increase as a result of a salt stress stimulus" [PomBase:mah]
+synonym: "absent increase in trehalase activity in response to salt stress" EXACT [PomBase:al]
+synonym: "neutral trehalase activity increase abolished during cellular response to salt stress" EXACT [PomBase:mah]
+synonym: "trehalase activity increase abolished during cellular response to salt stress" BROAD [GO:0004555, GO:0015927]
+is_a: FYPO:0001479 ! abnormal alpha,alpha-trehalase activity
+created_by: midori
+creation_date: 2014-06-24T13:40:09Z
+
+[Term]
+id: FYPO:0003459
+name: decreased cellular trehalose level during cellular response to salt stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of trehalose measured in a cell is lower than normal when the cell is subject to salt stress." [PomBase:mah]
+synonym: "decreased cellular trehalose level during vegetative growth and during cellular response to salt stress" EXACT [PomBase:mah]
+synonym: "decreased cellular trehalose level in response to salt stress" EXACT [PomBase:al]
+synonym: "decreased trehalose accumulation during cellular response to salt stress" RELATED [PomBase:mah]
+synonym: "reduced cellular trehalose level during cellular response to salt stress" EXACT [PomBase:mah]
+is_a: FYPO:0001447 ! decreased cellular trehalose level
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0071472
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2014-06-24T14:03:51Z
+
+[Term]
+id: FYPO:0003460
+name: decreased cellular trehalose level during cellular response to oxidative stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of trehalose measured in a cell is lower than normal when the cell is subject to oxidative stress." [PomBase:mah]
+synonym: "decreased cellular trehalose level during vegetative growth and during cellular response to oxidative stress" EXACT [PomBase:mah]
+synonym: "decreased cellular trehalose level in response to oxidative stress" EXACT [PomBase:al]
+synonym: "decreased trehalose accumulation during cellular response to oxidative stress" RELATED [PomBase:mah]
+synonym: "reduced cellular trehalose level during cellular response to oxidative stress" EXACT [PomBase:mah]
+is_a: FYPO:0001447 ! decreased cellular trehalose level
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0034599
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2014-06-24T14:05:22Z
+
+[Term]
+id: FYPO:0003461
+name: normal cellular trehalose level during cellular response to salt stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of trehalose measured in a cell is normal (i.e. indistinguishable from wild type) when the cell is subject to salt stress." [PomBase:mah]
+synonym: "normal cellular trehalose accumulation during cellular response to salt stress" RELATED [PomBase:mah]
+synonym: "normal cellular trehalose level during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001449 ! normal cellular trehalose level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0071472
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2014-06-24T14:06:56Z
+
+[Term]
+id: FYPO:0003462
+name: normal cellular trehalose level during cellular response to oxidative stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of trehalose measured in a cell is normal (i.e. indistinguishable from wild type) when the cell is subject to oxidative stress." [PomBase:mah]
+synonym: "normal cellular trehalose accumulation during cellular response to oxidative stress" RELATED [PomBase:mah]
+synonym: "normal cellular trehalose level during cellular response to oxidative stress during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001449 ! normal cellular trehalose level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0034599
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2014-06-24T14:08:13Z
+
+[Term]
+id: FYPO:0003463
+name: abolished alpha,alpha-trehalase activity
+def: "A molecular function phenotype in which alpha,alpha-trehalase activity is absent." [PomBase:mah]
+synonym: "abolished neutral trehalase activity" EXACT [PomBase:mah]
+synonym: "abolished trehalase activity" BROAD [GO:0004555]
+synonym: "alpha,alpha-trehalase activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0001479 ! abnormal alpha,alpha-trehalase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004555
+created_by: midori
+creation_date: 2014-06-24T14:14:04Z
+
+[Term]
+id: FYPO:0003464
+name: decreased alpha,alpha-trehalase activity during cellular response to heat
+def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity is lower than normal during a cellular response to heat." [PomBase:mah]
+synonym: "decreased neutral trehalase activity during cellular response to heat" EXACT [PomBase:mah]
+synonym: "decreased trehalase activity during cellular response to heat" BROAD [GO:0004555, GO:0015927]
+synonym: "reduced alpha,alpha-trehalase activity during cellular response to heat" EXACT [PomBase:mah]
+is_a: FYPO:0001479 ! abnormal alpha,alpha-trehalase activity
+intersection_of: PATO:0002052
+intersection_of: during GO:0034605
+intersection_of: inheres_in GO:0004555
+created_by: midori
+creation_date: 2014-06-24T14:24:58Z
+
+[Term]
+id: FYPO:0003465
+name: decreased alpha,alpha-trehalase activity during cellular response to salt stress
+def: "A molecular function phenotype in which the observed rate of alpha,alpha-trehalase activity is lower than normal during a cellular response to salt stress." [PomBase:mah]
+synonym: "decreased neutral trehalase activity during cellular response to salt stress" EXACT [PomBase:mah]
+synonym: "decreased trehalase activity during cellular response to salt stress" BROAD [GO:0004555, GO:0015927]
+synonym: "reduced alpha,alpha-trehalase activity during cellular response to v" EXACT [PomBase:mah]
+is_a: FYPO:0001479 ! abnormal alpha,alpha-trehalase activity
+intersection_of: PATO:0002052
+intersection_of: during GO:0071472
+intersection_of: inheres_in GO:0004555
+created_by: midori
+creation_date: 2014-06-24T14:27:25Z
+
+[Term]
+id: FYPO:0003466
+name: normal cellular trehalose level during cellular response to heat
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of trehalose measured in a cell is normal (i.e. indistinguishable from wild type) when the cell is subject to a heat stimulus." [PomBase:mah]
+synonym: "normal cellular trehalose accumulation during cellular response to heat" RELATED [PomBase:mah]
+synonym: "normal cellular trehalose level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001449 ! normal cellular trehalose level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0034605
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:27082
+created_by: midori
+creation_date: 2014-06-24T14:28:19Z
+
+[Term]
+id: FYPO:0003467
+name: altered splice site specificity
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which RNA splice site specificity differs from normal. For example, introns in which the normally recognized 3' splice site AG nucleotides are mutated may be spliced." [PMID:1617727, PomBase:mah]
+synonym: "abnormal splice site specificity" EXACT [PomBase:mah]
+is_a: FYPO:0002915 ! abnormal RNA splicing
+created_by: midori
+creation_date: 2014-06-24T14:40:45Z
+
+[Term]
+id: FYPO:0003468
+name: normal RNA splicing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which RNA splicing is normal (i.e. indistinguishable from wild type). All RNA splicing may be normal, or one splicing of or more specific RNA molecules may be specifically assayed." [PomBase:mah]
+synonym: "normal RNA splicing during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal RNA splicing, via transesterification reactions with bulged adenosine as nucleophile" EXACT [GO:0000377]
+is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000377
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-06-24T14:46:38Z
+
+[Term]
+id: FYPO:0003469
+name: normal snRNA splicing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which small nuclear RNA (snRNA) splicing is normal (i.e. indistinguishable from wild type). All snRNA splicing may be normal, or one splicing of or more specific snRNA molecules may be specifically assayed." [PomBase:mah]
+synonym: "normal snRNA splicing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003468 ! normal RNA splicing
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000377
+intersection_of: qualifier PATO:0000461
+intersection_of: towards SO:0000231
+created_by: midori
+creation_date: 2014-06-24T14:47:50Z
+
+[Term]
+id: FYPO:0003470
+name: increased mRNA splicing, via spliceosome
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of mRNA splicing via the spliceosome is increased." [PMID:24298023, PomBase:mah]
+synonym: "increased mRNA splicing, via spliceosome during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased nuclear mRNA splicing, via spliceosome" EXACT [PomBase:mah]
+synonym: "increased splicing" BROAD [PomBase:al]
+is_a: FYPO:0000189 ! abnormal mRNA splicing, via spliceosome
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000398
+created_by: midori
+creation_date: 2014-06-24T14:49:33Z
+
+[Term]
+id: FYPO:0003471
+name: multiseptate cell during cellular response to salt stress
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has more than one septum apiece during a cellular response to salt stress." [PomBase:mah]
+synonym: "multiseptate cell during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "multiseptate in response to salt stress" EXACT [PomBase:al]
+is_a: FYPO:0000118 ! multiseptate
+intersection_of: FYPO:0000118 ! multiseptate
+intersection_of: exists_during GO:0071472
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+created_by: midori
+creation_date: 2014-06-24T15:00:17Z
+
+[Term]
+id: FYPO:0003472
+name: cut during cellular response to salt stress
+def: "A cut phenotype that is observed when a cell is subject to salt stress. In a cut phenotype, a cell undergoes septation despite abnormal chromosome segregation, such that the septum physically divides the nucleus into two parts, and gives rise to inviable daughter cells." [PomBase:mah]
+synonym: "cut during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003165 ! cut
+intersection_of: FYPO:0003165 ! cut
+intersection_of: during GO:0071472
+created_by: midori
+creation_date: 2014-06-24T15:01:30Z
+
+[Term]
+id: FYPO:0003473
+name: septation following abnormal chromosome segregation, with binucleate cell formation during cellular response to salt stress
+def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell undergoes septation despite abnormal chromosome segregation, and gives rise to inviable daughter cells, and in which the septum forms in a position that partitions both nuclei into one daughter cell, when the cell is subject to salt stress." [PomBase:mah, PomBase:vw]
+is_a: FYPO:0000229 ! septation following abnormal chromosome segregation
+created_by: midori
+creation_date: 2014-06-24T15:05:37Z
+
+[Term]
+id: FYPO:0003474
+name: fragmented nucleus during cellular response to salt stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which nucleus is broken into multiple small fragments that are smaller than a normal nucleus, hen the cell is subject to salt stress." [PomBase:mah]
+synonym: "fragmented nucleus during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
+synonym: "loss of nuclear integrity during cellular response to salt stress" RELATED [PomBase:al]
+is_a: FYPO:0001919 ! fragmented nucleus
+intersection_of: PATO:0001444
+intersection_of: exists_during GO:0071472
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005634
+created_by: midori
+creation_date: 2014-06-24T15:12:19Z
+
+[Term]
+id: FYPO:0003475
+name: abnormal arsenate reductase activity
+def: "A molecular function phenotype in which the observed rate of arsenate reductase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0030611
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-06-24T15:22:07Z
+
+[Term]
+id: FYPO:0003476
+name: decreased arsenate reductase activity
+def: "A molecular function phenotype in which the observed rate of arsenate reductase activity is decreased." [PomBase:mah]
+synonym: "reduced arsenate reductase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0003475 ! abnormal arsenate reductase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0030611
+created_by: midori
+creation_date: 2014-06-24T15:22:14Z
+
+[Term]
+id: FYPO:0003477
+name: abolished protein phosphorylation during cellular response to arsenic-containing substance
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, does not occur during a cellular response to an arsenic-containing substance such as arsenate." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "abolished protein phosphorylation during cellular response to arsenate" NARROW [PMID:22912829, PomBase:mah]
+synonym: "abolished protein phosphorylation during cellular response to arsenic-containing substance during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein phosphorylation abolished during cellular response to arsenic-containing substance" EXACT [PomBase:mah]
+is_a: FYPO:0002033 ! abolished protein phosphorylation during vegetative growth
+intersection_of: PATO:0001558
+intersection_of: during GO:0071243
+intersection_of: during GO:0072690
+intersection_of: towards GO:0006468
+created_by: midori
+creation_date: 2014-06-24T15:28:25Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
