@@ -204,7 +204,7 @@ is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
-relationship: has_output FYPO:0003481 ! viable elongated vegetative cell, elongated upon mitotic entry
+relationship: output_of FYPO:0003481 ! viable elongated vegetative cell, elongated upon mitotic entry
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -48247,7 +48247,7 @@ is_a: has_participant ! has_participant
 [Typedef]
 id: has_output
 name: has_output
-def: "p has_output c iff c participates_in p at the end of p and c is in some way changed by p or created by p." [GOC:curators]
+def: "p has_output c iff c participates_in p at the end of p and c is in some way changed by p or created by p. Implies that if p happens, c always ensues." [GOC:curators]
 xref: RO:0002234
 
 [Typedef]
@@ -48294,8 +48294,8 @@ xref: BFO:0000066
 [Typedef]
 id: output_of
 name: output_of
-def: "Relation between an abnormal structure and an abnormal process that forms it; A output_of B used where B results_in_formation_of A isn't always true." [PomBase:mah]
-comment: inverse of results_in_formation_of
+def: "Relation between a structure and a process that forms it, or between one process and a preceding process; A output_of B used where B has_output A isn't always true. Implies that process B is the only way to get output A." [PomBase:mah]
+comment: inverse of has_output
 synonym: "formation results from" EXACT [PomBase:mah]
 xref: RO:0002353
 
