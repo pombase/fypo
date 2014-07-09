@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:07:2014 16:55
+date: 09:07:2014 15:31
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -23116,7 +23116,7 @@ creation_date: 2012-11-07T16:03:57Z
 [Term]
 id: FYPO:0001705
 name: normal DNA damage checkpoint
-def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
+def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal (i.e. indistinguishable from wild type). A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
 synonym: "normal DNA damage checkpoint activation" EXACT [PomBase:mah]
 synonym: "normal DNA damage checkpoint activation under non-stressed conditions" NARROW [PomBase:al]
 synonym: "normal DNA damage checkpoint during cellular response to DNA damage" EXACT [PomBase:al]
@@ -23132,7 +23132,7 @@ creation_date: 2012-11-07T16:37:55Z
 [Term]
 id: FYPO:0001706
 name: normal DNA damage checkpoint during cellular response to ionizing radiation
-def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal when the cell is exposed to ionizing radiation. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
+def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal (i.e. indistinguishable from wild type) when the cell is exposed to ionizing radiation. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
 synonym: "normal DNA damage checkpoint activation during cellular response to ionizing radiation" EXACT [PomBase:al]
 synonym: "normal DNA damage checkpoint during cellular response to gamma radiation" NARROW [PomBase:al, PomBase:mah]
 synonym: "normal DNA damage checkpoint during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
@@ -28612,7 +28612,7 @@ creation_date: 2013-05-02T12:40:04Z
 [Term]
 id: FYPO:0002102
 name: normal DNA damage checkpoint during cellular response to UV
-def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal when the cell is exposed to ultraviolet light. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
+def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal (i.e. indistinguishable from wild type) when the cell is exposed to ultraviolet light. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
 synonym: "normal DNA damage checkpoint activation during cellular response to UV" EXACT [PomBase:al]
 synonym: "normal DNA damage checkpoint during cellular response to ultraviolet light" EXACT [PomBase:mah]
 synonym: "normal DNA damage checkpoint during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
@@ -30700,7 +30700,7 @@ creation_date: 2013-06-07T16:05:04Z
 id: FYPO:0002254
 name: abnormal telomere morphology
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the telomere is abnormal." [PomBase:mah]
-comment: Note that an abnormal peroxisome organization process may, but does not necessarily, result in abnormal peroxisome morphology.
+comment: Note that an abnormal telomere organization process may, but does not necessarily, result in abnormal telomere morphology.
 synonym: "abnormal telomere morphology during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 intersection_of: PATO:0000051
@@ -31369,6 +31369,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+relationship: output_of FYPO:0000229 ! septation following abnormal chromosome segregation
 created_by: midori
 creation_date: 2013-06-20T13:59:28Z
 
@@ -48564,6 +48565,81 @@ synonym: "inviable germinated spore, multiple cell divisions, cell cycle arrest 
 is_a: FYPO:0002262 ! inviable after spore germination, multiple cell divisions, elongated cell
 created_by: midori
 creation_date: 2014-07-08T16:53:27Z
+
+[Term]
+id: FYPO:0003530
+name: normal S-phase DNA damage checkpoint
+def: "A cell cycle checkpoint phenotype in which the S phase DNA damage checkpoint (also known as the intra-S phase DNA damage checkpoint) is normal (i.e. indistinguishable from wild type). The S phase DNA damage checkpoint slows progression through S phase in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [PomBase:mah]
+synonym: "normal intra-S DNA damage checkpoint" EXACT [PomBase:mah]
+synonym: "normal S-phase DNA damage checkpoint activation" EXACT [PomBase:mah]
+synonym: "normal S-phase DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001705 ! normal DNA damage checkpoint
+intersection_of: PATO:0000001
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0031573
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-07-09T14:22:09Z
+
+[Term]
+id: FYPO:0003531
+name: normal peroxisome size
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which peroxisome size is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal peroxisome size during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
+intersection_of: PATO:0000117
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005777
+intersection_of: qualifier PATO:0000461
+relationship: part_of FYPO:0002155 ! normal telomere structure
+created_by: midori
+creation_date: 2014-07-09T14:39:27Z
+
+[Term]
+id: FYPO:0003532
+name: increased monopolar index
+def: "A cell population phenotype in which the monopolar index is higher than normal. The monopolar index is the proportion of the population undergoing monopolar growth at any given time." [PMID:20501954, PomBase:al, PomBase:mah]
+synonym: "increased frequency of monopolar growth polarity" RELATED [PMID:20501954]
+synonym: "increased number of cells undergoing monopolar growth" EXACT [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
+created_by: midori
+creation_date: 2014-07-09T15:01:21Z
+
+[Term]
+id: FYPO:0003533
+name: increased bipolar index
+def: "A cell population phenotype in which the bipolar index is higher than normal. The bipolar index is the proportion of the population undergoing bipolar growth at any given time." [PMID:20501954, PomBase:al, PomBase:mah]
+synonym: "increased frequency of bipolar growth polarity" RELATED [PMID:20501954]
+synonym: "increased number of cells undergoing bipolar growth" EXACT [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
+created_by: midori
+creation_date: 2014-07-09T15:03:49Z
+
+[Term]
+id: FYPO:0003534
+name: decreased monopolar index
+def: "A cell population phenotype in which the monopolar index is lower than normal. The monopolar index is the proportion of the population undergoing monopolar growth at any given time." [PMID:20501954, PomBase:al, PomBase:mah]
+synonym: "decreased frequency of monopolar growth polarity" RELATED [PMID:20501954]
+synonym: "decreased number of cells undergoing monopolar growth" EXACT [PomBase:mah]
+synonym: "reduced monopolar index" EXACT []
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
+created_by: midori
+creation_date: 2014-07-09T15:24:42Z
+
+[Term]
+id: FYPO:0003535
+name: decreased bipolar index
+def: "A cell population phenotype in which the bipolar index is lower than normal. The bipolar index is the proportion of the population undergoing bipolar growth at any given time." [PMID:20501954, PomBase:al, PomBase:mah]
+synonym: "decreased frequency of bipolar growth polarity" RELATED [PMID:20501954]
+synonym: "decreased number of cells undergoing bipolar growth" EXACT [PomBase:mah]
+synonym: "reduced bipolar index" EXACT []
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
+created_by: midori
+creation_date: 2014-07-09T15:25:04Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
