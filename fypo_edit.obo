@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 14:07:2014 13:45
+date: 15:07:2014 14:14
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -5775,15 +5775,14 @@ creation_date: 2011-08-12T02:39:05Z
 
 [Term]
 id: FYPO:0000455
-name: increased number of double-strand break sites
+name: increased number of double-strand break sites during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites of double-strand breaks in DNA is greater than normal." [PomBase:mah]
 comment: Because Rad22 often accumulates at double-strand breaks, consider also annotating to 'increased number of Rad22 foci' (FYPO:0000972).
-synonym: "accumulation of DNA damage foci" EXACT [PomBase:mah]
-synonym: "accumulation of double-strand break sites" EXACT [PomBase:mah]
+synonym: "accumulation of DNA damage foci during vegetative growth" RELATED [PomBase:mah]
 synonym: "accumulation of double-strand break sites during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased number of DNA damage foci" EXACT [PomBase:mah]
-synonym: "increased number of double-strand break sites during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased number of DNA damage foci during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+is_a: FYPO:0003547 ! increased DNA damage during vegetative growth
 intersection_of: PATO:0002002
 intersection_of: happens_during GO:0072690
 intersection_of: towards GO:0035861
@@ -19222,8 +19221,8 @@ name: abnormal mitotic cell cycle arrest with unreplicated DNA
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested before cells have replicated genomic DNA, under conditions where arrest does not normally occur." [PomBase:mah]
 comment: Arrest with unreplicated DNA may occur between mitosis and the beginning of S phase; if only DNA content is measured, the arrest point cannot be determined with greater precision.
 synonym: "abnormal mitotic cell cycle arrest with 1C DNA content" NARROW [PomBase:mah]
-synonym: "abnormal mitotic cell cycle arrest with unreplicated DNA during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal mitotic cell cycle arrest with unreplicated DNA" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle arrest with unreplicated DNA during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
 intersection_of: inheres_in GO:0071850
 intersection_of: precedes GO:0033260
@@ -28110,6 +28109,7 @@ creation_date: 2013-04-17T16:06:19Z
 id: FYPO:0002069
 name: mislocalized nucleus
 def: "A physical cellular phenotype in which a cell has a nucleus in an abnormal location. The normal location is at the midpoint of the long axis of the cell." [PomBase:mah]
+subset: qc_do_not_manually_annotate
 synonym: "abnormal nucleus location" EXACT [PomBase:mah]
 synonym: "abnormal nucleus position" EXACT [PomBase:mah]
 synonym: "displaced nucleus" EXACT [PomBase:vw]
@@ -28144,6 +28144,7 @@ creation_date: 2013-04-17T16:16:17Z
 id: FYPO:0002071
 name: mislocalized nucleus during vegetative growth
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell has a nucleus in an abnormal location. The normal location of a single nucleus is at the midpoint of the long axis of the cell (during mitotic telophase, daughter nuclei normally move away from the cell division site)." [PomBase:mah]
+subset: qc_do_not_manually_annotate
 synonym: "abnormal nucleus location during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal nucleus position during vegetative growth" EXACT [PomBase:mah]
 synonym: "displaced nucleus during vegetative growth" EXACT [PomBase:vw]
@@ -28205,8 +28206,8 @@ creation_date: 2013-04-24T12:06:43Z
 id: FYPO:0002074
 name: inviable cell population at high temperature
 def: "A cell population phenotype in which none of the cells in the population are viable at a high temperature." [PomBase:mah]
-comment: For fission yeast, high temperature usually corresponds to above 32 degrees Celsius.
-is_a: FYPO:0002059 ! inviable cell population
+comment: This term was made obsolete because it is redundant with annotating to the equivalent cell phenotype plus a full-penetrance extension.
+is_obsolete: true
 created_by: midori
 creation_date: 2013-04-24T12:29:02Z
 
@@ -41944,6 +41945,10 @@ synonym: "normal homologous chromosome pairing at meiosis at cis-acting homologo
 synonym: "normal homologous chromosome pairing at sme2 locus" NARROW [PomBase:mah]
 synonym: "normal synapsis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
 is_a: FYPO:0003050 ! normal homologous chromosome pairing
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007129
+intersection_of: occurs_at SO:0002025
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2014-01-30T14:03:25Z
 
@@ -41955,6 +41960,10 @@ synonym: "abnormal homologous chromosome pairing at meiosis at cis-acting homolo
 synonym: "abnormal homologous chromosome pairing at sme2 locus" NARROW [PomBase:mah]
 synonym: "abnormal synapsis at cis-acting homologous chromosome pairing region" EXACT [GO:0007129]
 is_a: FYPO:0003024 ! abnormal homologous chromosome pairing
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007129
+intersection_of: occurs_at SO:0002025
+intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2014-01-30T14:33:16Z
 
@@ -43494,7 +43503,7 @@ name: RNA absent from cell during cellular response to salt stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is too low to detect during a cellular response to salt stress. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "RNA absent from cell during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
-synonym: "transcripts absent from cell during cellular response <to salt stress" EXACT [PomBase:vw]
+synonym: "transcripts absent from cell during cellular response to salt stress" EXACT [PomBase:vw]
 synonym: "undetectable RNA level during cellular response to salt stress" EXACT [PomBase:mah]
 is_a: FYPO:0001889 ! RNA absent from cell
 intersection_of: PATO:0002000
@@ -43719,7 +43728,7 @@ creation_date: 2014-03-05T16:29:02Z
 [Term]
 id: FYPO:0003179
 name: decreased intragenic meiotic recombination
-def: "A cellular process phenotype in which the occurrence of intragenic meiotic recombination is decreased." [PMID:16169489, PomBase:mah]
+def: "A cellular process phenotype in which the occurrence of intragenic meiotic recombination is decreased. Intragenic meiotic recombination can result in gene conversion events." [PMID:16169489, PomBase:mah]
 synonym: "decreased meiotic intragenic recombination" EXACT [PMID:16169489, PomBase:al]
 synonym: "reduced intragenic meiotic recombination" EXACT [PomBase:mah]
 is_a: FYPO:0000485 ! decreased meiotic recombination
@@ -43729,7 +43738,7 @@ creation_date: 2014-03-05T16:35:44Z
 [Term]
 id: FYPO:0003180
 name: decreased intergenic meiotic recombination
-def: "A cellular process phenotype in which the occurrence of intergenic meiotic recombination is decreased." [PMID:16169489, PomBase:mah]
+def: "A cellular process phenotype in which the occurrence of intergenic meiotic recombination is decreased. Intergenic meiotic recombination leflects crossovers between homologous chromosomes." [PMID:16169489, PomBase:mah]
 synonym: "decreased meiotic intergenic recombination" EXACT [PMID:16169489, PomBase:al]
 synonym: "reduced intergenic meiotic recombination" EXACT [PomBase:mah]
 is_a: FYPO:0000485 ! decreased meiotic recombination
@@ -48622,7 +48631,7 @@ name: decreased monopolar index
 def: "A cell population phenotype in which the monopolar index is lower than normal. The monopolar index is the proportion of the population undergoing monopolar growth at any given time." [PMID:20501954, PomBase:al, PomBase:mah]
 synonym: "decreased frequency of monopolar growth polarity" RELATED [PMID:20501954]
 synonym: "decreased number of cells undergoing monopolar growth" EXACT [PomBase:mah]
-synonym: "reduced monopolar index" EXACT []
+synonym: "reduced monopolar index" EXACT [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
 is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
@@ -48634,11 +48643,180 @@ name: decreased bipolar index
 def: "A cell population phenotype in which the bipolar index is lower than normal. The bipolar index is the proportion of the population undergoing bipolar growth at any given time." [PMID:20501954, PomBase:al, PomBase:mah]
 synonym: "decreased frequency of bipolar growth polarity" RELATED [PMID:20501954]
 synonym: "decreased number of cells undergoing bipolar growth" EXACT [PomBase:mah]
-synonym: "reduced bipolar index" EXACT []
+synonym: "reduced bipolar index" EXACT [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
 is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2014-07-09T15:25:04Z
+
+[Term]
+id: FYPO:0003536
+name: increased septation index in stationary phase
+def: "A cell population phenotype in which the septation index is higher than normal in a population in stationary phase. The septation index is the proportion of the population undergoing septation at any given time, and is usually around 10% (varying between 7-15%) for wild type." [PomBase:mah, PomBase:vw]
+synonym: "increased septation in stationary phase" RELATED [PomBase:mah]
+synonym: "increased septation index during stationary phase" EXACT [PomBase:mah]
+synonym: "septated in stationary phase" RELATED [PomBase:vw]
+is_a: FYPO:0000650 ! increased septation index
+is_a: FYPO:0001985 ! abnormal phenotype
+relationship: includes_cells_with_phenotype FYPO:0000651 ! increased duration of septation
+created_by: midori
+creation_date: 2014-07-15T10:50:15Z
+
+[Term]
+id: FYPO:0003537
+name: decreased rate of premeiotic DNA replication
+def: "A cellular process phenotype in which the rate, or speed, of premeiotic DNA replication is decreased." [PomBase:mah]
+synonym: "reduced rate of premeiotic DNA replication" EXACT [PomBase:mah]
+is_a: FYPO:0001981 ! decreased rate of DNA replication
+intersection_of: PATO:0000911
+intersection_of: inheres_in GO:0006279
+created_by: midori
+creation_date: 2014-07-15T10:58:05Z
+
+[Term]
+id: FYPO:0003538
+name: premature meiosis I
+def: "A cellular process phenotype in which the first meiotic nuclear division occurs prematurely." [PomBase:mah]
+synonym: "premature first meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0000051 ! abnormal meiosis
+intersection_of: PATO:0000694
+intersection_of: inheres_in GO:0007127
+created_by: midori
+creation_date: 2014-07-15T10:59:35Z
+
+[Term]
+id: FYPO:0003539
+name: decreased global homologous chromosome pairing
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is decreased (i.e. occurs to a lower extent) over the entire length of the chromosomes." [PomBase:mah]
+synonym: "decreased generalised homologous chromosome pairing" EXACT [PATO:0002403]
+synonym: "decreased global homologous chromosome pairing at meiosis" EXACT [GO:0007129]
+synonym: "decreased global synapsis" EXACT [GO:0007129]
+synonym: "globally decreased homologous chromosome pairing" EXACT [PomBase:mah]
+synonym: "reduced global homologous chromosome pairing" EXACT [PomBase:mah]
+is_a: FYPO:0003024 ! abnormal homologous chromosome pairing
+created_by: midori
+creation_date: 2014-07-15T12:46:12Z
+
+[Term]
+id: FYPO:0003540
+name: decreased regional homologous chromosome pairing
+def: "A cellular process phenotype in which homologous chromosome pairing during meiosis (synapsis) is decreased (i.e. occurs to a lower extent) in one or more specific regions of the chromosomes." [PomBase:mah]
+synonym: "decreased localised homologous chromosome pairing" EXACT [PATO:0000627]
+synonym: "decreased regional homologous chromosome pairing at meiosis" EXACT [GO:0007129]
+synonym: "decreased regional synapsis" EXACT [GO:0007129]
+synonym: "reduced regional homologous chromosome pairing" EXACT [PomBase:mah]
+synonym: "regionally decreased homologous chromosome pairing" EXACT [PomBase:mah]
+is_a: FYPO:0003024 ! abnormal homologous chromosome pairing
+created_by: midori
+creation_date: 2014-07-15T12:54:18Z
+
+[Term]
+id: FYPO:0003541
+name: normal protein localization to meiotic spindle pole body
+def: "A cell phenotype in which the localization of a protein to the meiotic spindle pole body is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found at the spindle pole body and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to meiotic spindle pole body" EXACT [PomBase:mah]
+synonym: "normal protein localization to meiotic SPB" EXACT [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:1902441
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-07-15T13:05:03Z
+
+[Term]
+id: FYPO:0003542
+name: abolished protein localization to meiotic spindle pole body
+def: "A cell phenotype in which the localization of a protein to the meiotic spindle pole body is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term. Use this term for cells in which in which the re-accumulation of some spindle pole body components does not occur at the onset of meiosis I.
+synonym: "abolished protein localisation to meiotic spindle pole body" EXACT [PomBase:mah]
+synonym: "abolished protein localization to meiotic SPB" EXACT [PomBase:mah]
+synonym: "protein localization to meiotic spindle pole body abolished" EXACT [PomBase:mah]
+synonym: "reduced protein localization to meiotic spindle pole body" EXACT [PomBase:mah]
+is_a: FYPO:0002771 ! abnormal protein localization to meiotic spindle pole body
+intersection_of: PATO:0001558
+intersection_of: towards GO:1902441
+created_by: midori
+creation_date: 2014-07-15T13:06:08Z
+
+[Term]
+id: FYPO:0003543
+name: increased number of double-strand break sites
+def: "A cell phenotype in which the number of sites of double-strand breaks in DNA is greater than normal." [PomBase:mah]
+comment: Because Rad22 often accumulates at double-strand breaks, consider also annotating to 'increased number of Rad22 foci' (FYPO:0000972).
+synonym: "accumulation of DNA damage foci" RELATED [PomBase:mah]
+synonym: "accumulation of double-strand break sites" EXACT [PomBase:mah]
+synonym: "increased number of DNA damage foci" RELATED [PomBase:mah]
+is_a: FYPO:0003546 ! increased DNA damage
+intersection_of: PATO:0002002
+intersection_of: towards GO:0035861
+created_by: midori
+creation_date: 2014-07-15T13:31:59Z
+
+[Term]
+id: FYPO:0003544
+name: increased number of double-strand break sites during meiotic cell cycle
+def: "A cell phenotype in which the number of sites of double-strand breaks in DNA is greater than normal during a meiotic cell cycle." [PomBase:mah]
+comment: Because Rad22 often accumulates at double-strand breaks, consider also annotating to 'increased number of Rad22 foci' (FYPO:0000972).
+synonym: "accumulation of DNA damage foci during meiotic cell cycle" RELATED [PomBase:mah]
+synonym: "accumulation of double-strand break sites during meiotic cell cycle" EXACT [PomBase:mah]
+synonym: "increased number of DNA damage foci during meiotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased number of double-strand break sites during meiosis" RELATED [PomBase:mah]
+synonym: "increased number of meiotic double-strand break sites" EXACT [PomBase:vw]
+synonym: "increased number of meiotic double-strand breaks" EXACT [PomBase:vw]
+is_a: FYPO:0003543 ! increased number of double-strand break sites
+intersection_of: PATO:0002002
+intersection_of: happens_during GO:0051321
+intersection_of: towards GO:0035861
+created_by: midori
+creation_date: 2014-07-15T13:33:04Z
+
+[Term]
+id: FYPO:0003545
+name: increased duration of mitotic cell cycle DNA replication checkpoint
+def: "A cell cycle checkpoint phenotype in which the duration of mitotic cell cycle arrest or delay due to regulation by the DNA replication checkpoint is greater than normal. The DNA replication checkpoint normally prevents the initiation of mitosis until DNA replication is complete." [PomBase:mah]
+synonym: "increased duration of DNA replication checkpoint" BROAD [PomBase:mah]
+synonym: "increased duration of mitotic cell cycle DNA replication checkpoint activation" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "mitotic cell cycle DNA replication checkpoint activated" RELATED [PomBase:mah]
+is_a: FYPO:0000173 ! abnormal mitotic cell cycle DNA replication checkpoint
+intersection_of: PATO:0000498
+intersection_of: inheres_in GO:0033314
+created_by: midori
+creation_date: 2014-07-15T13:40:17Z
+
+[Term]
+id: FYPO:0003546
+name: increased DNA damage
+def: "A cell phenotype in which the amount of DNA damage measured in a cell is greater than normal. The number, extent, or both of damage sites may be increased." [PomBase:mah]
+synonym: "increased number of DNA lesions" RELATED [PomBase:al]
+synonym: "increased spontaneous DNA lesions" RELATED [PomBase:vw]
+is_a: FYPO:0000136 ! cellular physical quality phenotype
+created_by: midori
+creation_date: 2014-07-15T13:46:05Z
+
+[Term]
+id: FYPO:0003547
+name: increased DNA damage during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of DNA damage measured in a cell is greater than normal. The number, extent, or both of damage sites may be increased." [PomBase:mah]
+synonym: "increased number of DNA lesions during vegetative growth" RELATED [PomBase:al]
+synonym: "increased spontaneous DNA lesions during vegetative growth" RELATED [PomBase:vw]
+is_a: FYPO:0003546 ! increased DNA damage
+created_by: midori
+creation_date: 2014-07-15T13:58:24Z
+
+[Term]
+id: FYPO:0003548
+name: abolished mitotic G1/S transition following nitrogen starvation-induced G1 phase arrest
+def: "A cell cycle phenotype in which the G1/S transition of the mitotic cell cycle does not occur after the cell has been arrested in G1 phase due to nitrogen starvation. The cell remains arrested in G1." [PMID:9366254, PomBase:mah]
+comment: A G1/S delay may indicate that a checkpoint, such as the cell size checkpoint or the G1/S DNA damage checkpoint, is activated. Checkpoint activation can be tested using checkpoint kinase mutants.
+synonym: "abolished cell cycle progression through mitotic G1/S phase transition following cell cycle arrest in mitotic G1 phase in response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "abolished mitotic G1 phase progression following nitrogen starvation-induced G1 phase arrest" RELATED [PomBase:mah]
+synonym: "mitotic cell cycle G1/S transition abolished following nitrogen starvation-induced G1 phase arrest" EXACT [PomBase:mah]
+synonym: "mitotic G1/S transition abolished after recovery from nitrogen starvation-induced G1 arrest" EXACT [PMID:8657126, PomBase:vw]
+is_a: FYPO:0000333 ! mitotic G1/S transition delay
+is_a: FYPO:0000394 ! abnormal mitotic G1/S phase transition
+created_by: midori
+creation_date: 2014-07-15T14:10:19Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
