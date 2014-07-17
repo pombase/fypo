@@ -1,12 +1,11 @@
 format-version: 1.2
-date: 15:07:2014 14:14
+date: 17:07:2014 18:05
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
 default-namespace: fission_yeast_phenotype
 remark: svn version: $Revision$
-gformat-version: 1.2
 ontology: fypo
 
 [Term]
@@ -3498,6 +3497,7 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000276
 name: monopolar mitotic spindle
 def: "A physical cellular phenotype in which the mitotic spindle forms with microtubules emanating from only one pole." [PMID:11792803, PMID:9763447, PomBase:mah]
+comment: Also consider annotating to 'abnormal spindle pole body separation' (FYPO:0001733) or one of its children.
 synonym: "monopolar mitotic spindle during vegetative growth" EXACT [PomBase:mah]
 synonym: "spindle defects, monopolar mitotic spindle" EXACT [PomBase:mah]
 synonym: "spindle defects, monopolar spindle" EXACT [PomBase:mah]
@@ -11994,7 +11994,7 @@ name: abnormal protein localization to linear element
 def: "A cell phenotype in which the localization of a protein to linear elements is abnormal." [PomBase:mah]
 comment: Encompasses both presence of proteins not normally found at the medial cortex and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to linear element" EXACT [GO:0036181, PomBase:mah]
-is_a: FYPO:0001370 ! abnormal protein localization
+is_a: FYPO:0003549 ! abnormal protein localization during meiosis
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0036181
 intersection_of: qualifier PATO:0000460
@@ -23539,6 +23539,7 @@ creation_date: 2012-11-08T15:38:07Z
 id: FYPO:0001733
 name: abnormal spindle pole body separation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which spindle pole body separation is abnormal. Spindle pole body separation is the process in which duplicated spindle pole bodies detach and migrate apart within the nuclear membrane." [PomBase:mah]
+comment: Also consider annotating to 'monopolar mitotic spindle' (FYPO:0000276) if you observe any monopolar spindles.
 synonym: "abnormal SPB separation" EXACT [PomBase:mah]
 synonym: "abnormal spindle pole body separation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
@@ -23552,7 +23553,8 @@ creation_date: 2012-11-14T11:49:37Z
 [Term]
 id: FYPO:0001734
 name: abolished spindle pole body separation
-def: "A cell adhesion phenotype observed in the vegetative growth phase of the life cycle in which duplicated spindle pole bodies do not separate." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which duplicated spindle pole bodies do not separate." [PomBase:mah]
+comment: Also consider annotating to 'monopolar mitotic spindle' (FYPO:0000276) if you observe any monopolar spindles.
 synonym: "clustered spindle pole bodies" RELATED [PomBase:al]
 synonym: "SPB separation abolished" EXACT [PomBase:mah]
 synonym: "spindle pole body separation abolished" EXACT [PomBase:mah]
@@ -25410,12 +25412,12 @@ creation_date: 2013-01-28T13:48:16Z
 
 [Term]
 id: FYPO:0001874
-name: abnormal asymmetric protein localization to the old or new mitotic spindle pole body
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the preferential localization of a protein to the either the old or new spindle pole body is abnormal." [PomBase:mah]
+name: abnormal asymmetric protein localization to old or new mitotic spindle pole body
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the preferential localization of a protein to either the old or new spindle pole body is abnormal." [PomBase:mah]
 comment: Encompasses both presence of proteins not normally found at the spindle pole body and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abnormal asymmetric protein localisation to the old or new mitotic spindle pole body" EXACT [PomBase:mah]
-synonym: "abnormal asymmetric protein localization to the old or new mitotic SPB" EXACT [PomBase:mah]
-synonym: "abnormal asymmetric protein localization to the old or new mitotic spindle pole body during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal asymmetric protein localisation to old or new mitotic spindle pole body" EXACT [PomBase:mah]
+synonym: "abnormal asymmetric protein localization to old or new mitotic SPB" EXACT [PomBase:mah]
+synonym: "abnormal asymmetric protein localization to old or new mitotic spindle pole body during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000939 ! abnormal protein localization to mitotic spindle pole body
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -25426,14 +25428,14 @@ creation_date: 2013-01-30T11:45:04Z
 
 [Term]
 id: FYPO:0001875
-name: decreased asymmetric protein localization to the old or new mitotic spindle pole body
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the preferential localization of a protein to the either the old or new spindle pole body is decreased." [PomBase:mah]
+name: decreased asymmetric protein localization to old or new mitotic spindle pole body
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the preferential localization of a protein to either the old or new spindle pole body is decreased." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "decreased asymmetric protein localisation to the old or new mitotic spindle pole body" EXACT [PomBase:mah]
-synonym: "decreased asymmetric protein localization to the old or new mitotic SPB" EXACT [PomBase:mah]
-synonym: "decreased asymmetric protein localization to the old or new mitotic spindle pole body during vegetative growth" EXACT [PomBase:mah]
-synonym: "reduced asymmetric protein localization to the old or new mitotic spindle pole body" EXACT [PomBase:mah]
-is_a: FYPO:0001874 ! abnormal asymmetric protein localization to the old or new mitotic spindle pole body
+synonym: "decreased asymmetric protein localisation to old or new mitotic spindle pole body" EXACT [PomBase:mah]
+synonym: "decreased asymmetric protein localization to old or new mitotic SPB" EXACT [PomBase:mah]
+synonym: "decreased asymmetric protein localization to old or new mitotic spindle pole body during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced asymmetric protein localization to old or new mitotic spindle pole body" EXACT [PomBase:mah]
+is_a: FYPO:0001874 ! abnormal asymmetric protein localization to old or new mitotic spindle pole body
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0061492
@@ -25442,19 +25444,15 @@ creation_date: 2013-01-30T11:46:48Z
 
 [Term]
 id: FYPO:0001876
-name: abolished asymmetric protein localization to the old or new mitotic spindle pole body
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the preferential localization of a protein to the either the old or new spindle pole body is does not occur." [PomBase:mah]
+name: abnormally symmetric protein localization to mitotic spindle pole bodies during anaphase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is normally preferentially localized to either the old or new spindle pole body (SPB) during mitotic anaphase is instead symmetrically localized to both SPBs." [PMID:22119525, PMID:22419817, PMID:24920823, PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abolished asymmetric protein localization to the old or new mitotic SPB" EXACT [PomBase:mah]
-synonym: "asymmetric protein localization to the old or new mitotic spindle pole body abolished" EXACT [PomBase:mah]
-synonym: "asymmetric protein localization to the old or new mitotic spindle pole body abolished during vegetative growth" EXACT [PomBase:mah]
-synonym: "protein absent from old or new spindle pole body" RELATED [PomBase:mah]
-synonym: "protein localization to spindle pole body abolished" EXACT [PomBase:mah]
-is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
-is_a: FYPO:0001874 ! abnormal asymmetric protein localization to the old or new mitotic spindle pole body
-intersection_of: PATO:0001558
-intersection_of: during GO:0072690
-intersection_of: towards GO:0061492
+synonym: "abnormally symmetric protein localisation to mitotic spindle pole bodies during anaphase" EXACT [PomBase:mah]
+synonym: "abnormally symmetric protein localization to mitotic SPB during anaphase" EXACT [PomBase:mah]
+synonym: "abnormally symmetric protein localization to mitotic spindle pole bodies during anaphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormally symmetric protein localization to spindle pole bodies during mitotic anaphase" EXACT [PomBase:mah]
+synonym: "abolished asymmetric protein localization to old or new mitotic SPB" RELATED [PomBase:mah]
+is_a: FYPO:0001874 ! abnormal asymmetric protein localization to old or new mitotic spindle pole body
 created_by: midori
 creation_date: 2013-01-30T11:47:20Z
 
@@ -29109,13 +29107,13 @@ creation_date: 2013-05-07T16:58:03Z
 
 [Term]
 id: FYPO:0002136
-name: abnormal RNA catabolic process
+name: abnormal RNA catabolic process during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which an RNA catabolic process is abnormal." [GO:0006914, PomBase:mah]
-synonym: "abnormal RNA breakdown" EXACT [PomBase:mah]
-synonym: "abnormal RNA catabolic process during vegetative growth" EXACT [PomBase:mah]
-synonym: "abnormal RNA catabolism" EXACT [GO:0006401]
-synonym: "abnormal RNA degradation" EXACT [PomBase:mah]
+synonym: "abnormal RNA breakdown during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal RNA catabolism during vegetative growth" EXACT [GO:0006401]
+synonym: "abnormal RNA degradation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
+is_a: FYPO:0003551 ! abnormal RNA catabolic process
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006401
@@ -29125,13 +29123,12 @@ creation_date: 2013-05-07T17:08:20Z
 
 [Term]
 id: FYPO:0002137
-name: decreased RNA catabolic process
+name: decreased RNA catabolic process during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of an RNA catabolic process is decreased." [PomBase:mah]
-synonym: "decreased RNA breakdown" EXACT [PomBase:mah]
-synonym: "decreased RNA catabolic process during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased RNA catabolism" EXACT [GO:0006401]
-synonym: "decreased RNA degradation" EXACT [PomBase:mah]
-is_a: FYPO:0002136 ! abnormal RNA catabolic process
+synonym: "decreased RNA breakdown during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased RNA catabolism during vegetative growth" EXACT [GO:0006401]
+synonym: "decreased RNA degradation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003552 ! decreased RNA catabolic process
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006401
@@ -29140,13 +29137,12 @@ creation_date: 2013-05-07T17:09:04Z
 
 [Term]
 id: FYPO:0002138
-name: increased RNA catabolic process
+name: increased RNA catabolic process during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of an RNA catabolic process is increased." [PomBase:mah]
-synonym: "increased RNA breakdown" EXACT [PomBase:mah]
-synonym: "increased RNA catabolic process during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased RNA catabolism" EXACT [GO:0006401]
-synonym: "increased RNA degradation" EXACT [PomBase:mah]
-is_a: FYPO:0002136 ! abnormal RNA catabolic process
+synonym: "increased RNA breakdown during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased RNA catabolism during vegetative growth" EXACT [GO:0006401]
+synonym: "increased RNA degradation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003553 ! increased RNA catabolic process
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006401
@@ -29619,7 +29615,8 @@ name: decreased degradation of DSR-containing RNA
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of an RNA catabolic process that specifically degrades DSR-containing RNA molecules is decreased. A DSR (determinant of selective removal) is a region that is often found near the 3' end of meiosis-specific transcripts, usually contains one or more copies of the motif U(U/C/G)AAAC, and targets RNAs for degradation in vegetatively growing cells." [PMID:22046364, PMID:22645662, PomBase:mah]
 synonym: "decreased catabolism of DSR-containing RNA" EXACT [PomBase:mah]
 synonym: "decreased RNA catabolic process, DSR-containing RNA" EXACT [GO:0006401, PomBase:mah]
-is_a: FYPO:0002137 ! decreased RNA catabolic process
+is_a: FYPO:0002137 ! decreased RNA catabolic process during vegetative growth
+is_a: FYPO:0003552 ! decreased RNA catabolic process
 created_by: midori
 creation_date: 2013-05-14T16:03:57Z
 
@@ -37861,6 +37858,7 @@ comment: Encompasses both presence of proteins not normally found at the spindle
 synonym: "abnormal protein localisation to meiotic spindle pole body" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to meiotic SPB" EXACT [PomBase:mah]
 is_a: FYPO:0002769 ! abnormal protein localization to spindle pole body
+is_a: FYPO:0003549 ! abnormal protein localization during meiosis
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:1902441
 intersection_of: qualifier PATO:0000460
@@ -40562,6 +40560,7 @@ name: abnormal protein localization to nucleus during meiosis
 def: "A cell phenotype in which the localization of a protein to the nucleus is abnormal during meiosis." [PomBase:mah]
 comment: Encompasses both presence of proteins not normally found associated with chromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein localisation to nucleus during meiosis" EXACT [GO:0034504, PomBase:mah]
+synonym: "abnormal protein localization to nucleus during meiotic nuclear division" EXACT [GO:0007126]
 is_a: FYPO:0002956 ! abnormal protein localization to nucleus
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0007126
@@ -43751,7 +43750,7 @@ name: abolished meiotic DNA double-strand break formation
 def: "A cellular process phenotype in which generation of double-strand breaks at defined hotspots throughout the genome during meiosis I does not occur." [GO:0042138, PomBase:mah]
 synonym: "absent meiotic DNA double-strand break formation" EXACT [PomBase:mah]
 synonym: "meiotic DNA double-strand break formation abolished" EXACT [PomBase:mah]
-is_a: FYPO:0000008 ! abnormal meiotic recombination
+is_a: FYPO:0003564 ! abnormal meiotic DNA double-strand break formation
 intersection_of: PATO:0001558
 intersection_of: towards GO:0042138
 created_by: midori
@@ -48816,6 +48815,292 @@ synonym: "mitotic G1/S transition abolished after recovery from nitrogen starvat
 is_a: FYPO:0000394 ! abnormal mitotic G1/S phase transition
 created_by: midori
 creation_date: 2014-07-15T14:10:19Z
+
+[Term]
+id: FYPO:0003549
+name: abnormal protein localization during meiosis
+def: "A cell phenotype that affects the localization of a protein in a cell during one or both meiotic nuclear divisions. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." [PomBase:mah]
+comment: We recommend using one of the more specific terms instead of annotating to this term directly, if possible. If this term is used, we recommend noting which protein(s) were used in the assay.
+synonym: "abnormal cellular protein localisation during meiosis" EXACT [PomBase:mah]
+synonym: "abnormal cellular protein localization during meiosis" EXACT [PomBase:mah]
+synonym: "abnormal protein localisation during meiosis" EXACT [PomBase:mah]
+synonym: "abnormal protein localization during meiotic nuclear division" EXACT [GO:0007126]
+is_a: FYPO:0001370 ! abnormal protein localization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0007126
+intersection_of: inheres_in GO:0034613
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-17T09:54:27Z
+
+[Term]
+id: FYPO:0003550
+name: decreased protein level during meiosis
+def: "A cell phenotype in which the amount of protein measured in a cell during one or both meiotic nuclear divisions is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+synonym: "decreased protein accumulation during meiosis" RELATED [PomBase:mah]
+synonym: "decreased protein level during meiotic nuclear division" EXACT [GO:0007126]
+synonym: "reduced protein level during meiosis" EXACT [PomBase:mah]
+is_a: FYPO:0000835 ! decreased protein level
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0007126
+intersection_of: inheres_in CL:0000000
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-07-17T10:26:58Z
+
+[Term]
+id: FYPO:0003551
+name: abnormal RNA catabolic process
+def: "A cellular process phenotype in which an RNA catabolic process is abnormal." [GO:0006914, PomBase:mah]
+synonym: "abnormal RNA breakdown" EXACT [PomBase:mah]
+synonym: "abnormal RNA catabolism" EXACT [GO:0006401]
+synonym: "abnormal RNA degradation" EXACT [PomBase:mah]
+is_a: FYPO:0000860 ! abnormal metabolic process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0006401
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-17T10:43:12Z
+
+[Term]
+id: FYPO:0003552
+name: decreased RNA catabolic process
+def: "A cellular process phenotype in which the occurrence of an RNA catabolic process is decreased." [PomBase:mah]
+synonym: "decreased RNA breakdown" EXACT [PomBase:mah]
+synonym: "decreased RNA catabolism" EXACT [GO:0006401]
+synonym: "decreased RNA degradation" EXACT [PomBase:mah]
+is_a: FYPO:0003551 ! abnormal RNA catabolic process
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0006401
+created_by: midori
+creation_date: 2014-07-17T10:43:44Z
+
+[Term]
+id: FYPO:0003553
+name: increased RNA catabolic process
+def: "A cellular process phenotype in which the occurrence of an RNA catabolic process is increased." [PomBase:mah]
+synonym: "increased RNA breakdown" EXACT [PomBase:mah]
+synonym: "increased RNA catabolism" EXACT [GO:0006401]
+synonym: "increased RNA degradation" EXACT [PomBase:mah]
+is_a: FYPO:0003551 ! abnormal RNA catabolic process
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0006401
+created_by: midori
+creation_date: 2014-07-17T10:43:48Z
+
+[Term]
+id: FYPO:0003554
+name: increased degradation of middle meiotic gene RNA during late meiosis
+def: "A cellular process phenotype in which the occurrence of degradation of RNA transcribed from middle meiotic genes is increased during late meiosis." [PMID:20531409, PomBase:mah]
+synonym: "increased breakdown of middle meiotic gene RNA during late meiosis" EXACT [PomBase:mah]
+synonym: "increased catabolism of middle meiotic gene RNA during late meiosis" EXACT [PomBase:mah]
+is_a: FYPO:0003553 ! increased RNA catabolic process
+created_by: midori
+creation_date: 2014-07-17T10:48:30Z
+
+[Term]
+id: FYPO:0003555
+name: normal chromatin silencing at telomere
+def: "A transcription regulation phenotype observed in the vegetative growth phase of the life cycle in which chromatin silencing at the telomeres is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal chromatin silencing at telomere during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002335 ! normal chromatin silencing
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006348
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-07-17T10:53:27Z
+
+[Term]
+id: FYPO:0003556
+name: abnormal transcription termination
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the termination of RNA transcription from a DNA template is abnormal." [GO:0006353, PomBase:mah]
+synonym: "abnormal DNA-templated transcription, termination" EXACT [GO:0006353]
+synonym: "abnormal termination of transcription" EXACT [PomBase:al]
+synonym: "abnormal transcription termination during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006353
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-17T11:10:03Z
+
+[Term]
+id: FYPO:0003557
+name: increased antisense RNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of antisense RNA measured in a cell is higher than normal. Antisense RNA is transcribed from the coding, rather than the template, strand of DNA." [PomBase:mah, SO:0000644]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased antisense RNA accumulation" RELATED [PomBase:mah]
+synonym: "increased antisense RNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased antisense RNA transcript level" EXACT [PomBase:vw]
+synonym: "increased level of antisense transcripts" EXACT [PomBase:al]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards SO:0000644
+created_by: midori
+creation_date: 2014-07-17T11:14:47Z
+
+[Term]
+id: FYPO:0003558
+name: increased repeat element RNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any RNA transcribed from repeat elements, such as LTRs, retrotransposons, or wtf elements, measured in a cell is higher than normal." [PMID:24957674, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased repeat element RNA accumulation" RELATED [PomBase:mah]
+synonym: "increased repeat element RNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased repeat element transcript level" EXACT [PomBase:vw]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+created_by: midori
+creation_date: 2014-07-17T11:26:36Z
+
+[Term]
+id: FYPO:0003559
+name: sensitive to doxorubicin
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to doxorubicin. Cells stop growing (and may die) at a concentration of doxorubicin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to doxorubicin" EXACT [PomBase:mah]
+synonym: "sensitive to doxorubicin" EXACT [CHEBI:28748]
+synonym: "sensitive to doxorubicin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-07-17T14:35:50Z
+
+[Term]
+id: FYPO:0003560
+name: abnormal spindle pole body organization
+def: "A cell phenotype in which spindle pole body organization is abnormal. Spindle pole body organization is a process that results in the assembly, arrangement of constituent parts, or disassembly of the spindle pole body (SPB)." [GO:0051300, PomBase:mah]
+synonym: "abnormal SPB organization" EXACT [PomBase:mah]
+synonym: "abnormal spindle pole body organisation" EXACT [PomBase:mah]
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051300
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-17T14:39:15Z
+
+[Term]
+id: FYPO:0003561
+name: abnormal prospore-specific spindle pole body remodeling
+def: "A cell phenotype in which prospore-specific spindle pole body remodeling is abnormal. Prospore-specific spindle pole body remodeling takes place during the second meiotic division during ascospore formation and results in the structural reorganization of the SPB, including the recruitment of sporulation-specific proteins to the outer plaque to form the meiotic outer plaque (MOP)." [GO:001322, PomBase:mah]
+synonym: "abnormal ascospore-type prospore-specific spindle pole body remodeling" EXACT [GO:0031322]
+synonym: "abnormal prospore-specific SPB remodeling" EXACT [PomBase:mah]
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0031322
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-17T14:41:46Z
+
+[Term]
+id: FYPO:0003562
+name: normal horsetail nucleus morphology
+def: "A physical cellular phenotype in which the size, shape, or structure of the horsetail nucleus is normal (i.e. indistinguishable from wild type). The horsetail nucleus forms during the rapid oscillatory movement at meiotic prophase I." [PomBase:mah]
+comment: Note that an abnormal nucleus organization process may, but does not necessarily, result in abnormal nuclear morphology.
+synonym: "normal horsetail nuclear morphology" EXACT [PomBase:mah]
+is_a: FYPO:0001233 ! normal subcellular component
+intersection_of: PATO:0000051
+intersection_of: inheres_in GO:0071686
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-07-17T15:14:25Z
+
+[Term]
+id: FYPO:0003563
+name: normal meiosis I
+def: "A cellular process phenotype in which the first meiotic nuclear division is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal first meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007127
+intersection_of: qualifier PATO:0000461
+relationship: has_part FYPO:0002094 ! normal meiotic sister chromatid cohesion
+relationship: has_part FYPO:0003050 ! normal homologous chromosome pairing
+relationship: has_part FYPO:0003176 ! normal meiotic chromosome segregation
+created_by: midori
+creation_date: 2014-07-17T15:15:34Z
+
+[Term]
+id: FYPO:0003564
+name: abnormal meiotic DNA double-strand break formation
+def: "A cellular process phenotype in which generation of double-strand breaks at defined hotspots throughout the genome during meiosis I is abnormal." [GO:0042138, PomBase:mah]
+is_a: FYPO:0000008 ! abnormal meiotic recombination
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0042138
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-17T15:16:48Z
+
+[Term]
+id: FYPO:0003565
+name: increased protein phosphorylation during meiosis I
+def: "A cellular process phenotype in which the phosphorylation of one or more specific proteins occurs to a greater extent than normal during the first meiotic nuclear division." [PomBase:mah]
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+synonym: "increased protein phosphorylation during first meiotic nuclear division" EXACT [PomBase:vw]
+is_a: FYPO:0002680 ! increased protein phosphorylation
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0007127
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2014-07-17T15:17:53Z
+
+[Term]
+id: FYPO:0003566
+name: delayed spindle pole body separation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which spindle pole body separation begins later than normal." [PomBase:mah]
+synonym: "delayed SPB separation" EXACT [PomBase:mah]
+synonym: "spindle pole body separation delayed during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001733 ! abnormal spindle pole body separation
+intersection_of: PATO:0000502
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000073
+created_by: midori
+creation_date: 2014-07-17T15:49:09Z
+
+[Term]
+id: FYPO:0003567
+name: abnormal establishment of mitotic spindle pole body localization to nuclear envelope
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the transport and insertion of a spindle pole body into the nuclear envelope is abnormal." [PMID:24963130, PomBase:mah]
+synonym: "abnormal establishment of mitotic SPB localization to nuclear envelope" EXACT [PomBase:mah]
+synonym: "abnormal establishment of spindle pole body localisation to nuclear envelope" EXACT [PomBase:mah]
+synonym: "abnormal establishment of spindle pole body localization to nuclear envelope during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic SPB insertion into nuclear envelope" EXACT [PomBase:vw]
+synonym: "abnormal mitotic spindle pole body insertion into nuclear envelope" EXACT [PomBase:vw]
+is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071790
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-17T16:57:31Z
+
+[Term]
+id: FYPO:0003568
+name: abnormal establishment of mitotic spindle pole body localization to nuclear envelope, with spindle pole body in nucleoplasm
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the transport and insertion of a spindle pole body (SPB) into the nuclear envelope is abnormal, and the SPB enters the nucleus. An open fenestra remains present in the nuclear envelope." [PMID:24963130, PomBase:mah]
+synonym: "abnormal establishment of mitotic SPB localization to nuclear envelope, with spindle pole body in nucleoplasm" EXACT [PomBase:mah]
+synonym: "abnormal establishment of spindle pole body localisation to nuclear envelope, with spindle pole body in nucleoplasm" EXACT [PomBase:mah]
+synonym: "abnormal establishment of spindle pole body localization to nuclear envelope, with spindle pole body in nucleoplasm, during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic SPB insertion into nuclear envelope, with spindle pole body in nucleoplasm" EXACT [PomBase:vw]
+synonym: "abnormal mitotic spindle pole body insertion into nuclear envelope, with spindle pole body in nucleoplasm" EXACT [PomBase:vw]
+is_a: FYPO:0003567 ! abnormal establishment of mitotic spindle pole body localization to nuclear envelope
+created_by: midori
+creation_date: 2014-07-17T17:01:29Z
+
+[Term]
+id: FYPO:0003569
+name: abnormal establishment of mitotic spindle pole body localization to nuclear envelope, with spindle pole body in cytoplasm
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the transport and insertion of a spindle pole body (SPB) into the nuclear envelope is abnormal, and the SPB enters the cytoplasm. An open fenestra remains present in the nuclear envelope." [PMID:24963130, PomBase:mah]
+synonym: "abnormal establishment of mitotic SPB localization to nuclear envelope, with spindle pole body in cytoplasm" EXACT [PomBase:mah]
+synonym: "abnormal establishment of spindle pole body localisation to nuclear envelope, with spindle pole body in cytoplasm" EXACT [PomBase:mah]
+synonym: "abnormal establishment of spindle pole body localization to nuclear envelope, with spindle pole body in cytoplasm, during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic SPB insertion into nuclear envelope, with spindle pole body in cytoplasm" EXACT [PomBase:vw]
+synonym: "abnormal mitotic spindle pole body insertion into nuclear envelope, with spindle pole body in cytoplasm" EXACT [PomBase:vw]
+is_a: FYPO:0003567 ! abnormal establishment of mitotic spindle pole body localization to nuclear envelope
+created_by: midori
+creation_date: 2014-07-17T17:03:47Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
