@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 22:07:2014 15:14
+date: 23:07:2014 17:01
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -49115,6 +49115,18 @@ created_by: midori
 creation_date: 2014-07-17T17:03:47Z
 
 [Term]
+id: FYPO:0003570
+name: normal attachment of spindle microtubules to kinetochore
+def: "A cellular process phenotype in which the attachment of spindle microtubules to the kinetochore during a mitotic or meiotic nuclear division is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000145 ! regulation phenotype
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0008608
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-07-23T16:52:09Z
+
+[Term]
 id: FYPO:0003571
 name: decreased histone H3-K9 methylation at mating-type region heterochromatin
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which methylation of lysine at position 9 of histone H3 in heterochromatin at the silenced mating-type region occurs to a lower extent than normal." [PMID:18761674, PomBase:mah]
@@ -49374,6 +49386,61 @@ intersection_of: exists_during GO:0030437
 intersection_of: inheres_in GO:0000324
 created_by: midori
 creation_date: 2014-07-22T15:12:40Z
+
+[Term]
+id: FYPO:0003591
+name: abnormal protein complex binding
+def: "A molecular function phenotype in which the binding of one protein to a protein complex is abnormal. The protein whose binding to the protein complex may be encoded by the mutated gene, or may be encoded by a different gene." [PomBase:mah]
+comment: This term can be used for any protein-protein interaction that is affected by a mutation, whether or not the mutated gene product is one of the interacting proteins. We recommend noting which proteins were used in the assay when annotating to this term.
+is_a: FYPO:0000702 ! protein binding phenotype
+is_a: FYPO:0000707 ! abnormal molecular function
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0032403
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-23T16:54:48Z
+
+[Term]
+id: FYPO:0003592
+name: increased anaphase-promoting complex binding
+def: "A molecular function phenotype in which the binding of one protein to the anaphase-promoting complex (APC) occurs to a greater extent than normal. The protein whose binding to the APC may be encoded by the mutated gene, or may be encoded by a different gene." [PomBase:mah]
+comment: This term can be used for any protein-protein interaction that is affected by a mutation, whether or not the mutated gene product is one of the interacting proteins. We recommend noting which proteins were used in the assay when annotating to this term.
+is_a: FYPO:0000702 ! protein binding phenotype
+is_a: FYPO:0003591 ! abnormal protein complex binding
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0010997
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-23T16:56:15Z
+
+[Term]
+id: FYPO:0003593
+name: abolished anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of ubiquitin-dependent protein degradation with ubiquitin-protein ligation catalyzed by the anaphase-promoting complex, and mediated by the proteasome, is abolished." [GO:0031145, PomBase:mah]
+synonym: "abolished anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein degradation" EXACT [GO:0031145, PomBase:mah]
+synonym: "anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000845 ! abnormal protein degradation during vegetative growth
+is_a: FYPO:0002797 ! decreased protein degradation
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0031145
+created_by: midori
+creation_date: 2014-07-23T16:58:29Z
+
+[Term]
+id: FYPO:0003594
+name: normal anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of ubiquitin-dependent protein degradation with ubiquitin-protein ligation catalyzed by the anaphase-promoting complex, and mediated by the proteasome, is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein degradation" EXACT [GO:0031145, PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0031145
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-07-23T17:00:08Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
