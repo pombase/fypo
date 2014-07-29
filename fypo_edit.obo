@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 23:07:2014 17:01
+date: 29:07:2014 16:23
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -8748,9 +8748,10 @@ creation_date: 2011-11-29T05:16:27Z
 
 [Term]
 id: FYPO:0000678
-name: chromosome nondisjunction at meiosis I
+name: chromosome nondisjunction during meiosis I
 def: "A cellular process phenotype in which homologous chromosomes fail to segregate properly, or disjoin, during meiosis I." [PomBase:mah]
 synonym: "abolished homologous chromosome segregation" EXACT [GO:0045143]
+synonym: "chromosome nondisjunction at meiosis I" EXACT [PomBase:mah]
 is_a: FYPO:0000925 ! unequal meiotic chromosome segregation
 intersection_of: PATO:0001558
 intersection_of: towards GO:0045143
@@ -15162,7 +15163,7 @@ synonym: "increased 35S rRNA precursor accumulation" RELATED [PomBase:mah]
 synonym: "increased 35S rRNA precursor level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased 35S rRNA precursor transcript level" EXACT [PomBase:vw]
 synonym: "increased 35S rRNA primary transcript level" EXACT [PomBase:mah, SO:0000325]
-is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+is_a: FYPO:0003600 ! increased rRNA precursor level
 intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -15178,7 +15179,7 @@ comment: Consider annotating to a term describing abnormal transcription or abno
 synonym: "increased 27S rRNA precursor accumulation" RELATED [PomBase:mah]
 synonym: "increased 27S rRNA precursor level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased 27S rRNA precursor transcript level" EXACT [PomBase:vw]
-is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+is_a: FYPO:0003600 ! increased rRNA precursor level
 created_by: midori
 creation_date: 2012-06-08T16:44:25Z
 
@@ -43770,9 +43771,10 @@ creation_date: 2014-03-05T16:50:04Z
 
 [Term]
 id: FYPO:0003182
-name: chromosome nondisjunction at meiosis II
+name: chromosome nondisjunction during meiosis II
 def: "A cellular process phenotype in which sister chromatids fail to segregate properly, or disjoin, during meiosis II." [PomBase:mah]
 synonym: "abolished meiotic sister chromatid segregation" EXACT [GO:0045144]
+synonym: "chromosome nondisjunction at meiosis II" EXACT [PomBase:mah]
 is_a: FYPO:0000925 ! unequal meiotic chromosome segregation
 intersection_of: PATO:0001558
 intersection_of: towards GO:0045144
@@ -46766,7 +46768,7 @@ synonym: "decreased 35S rRNA precursor level during vegetative growth" EXACT [Po
 synonym: "decreased 35S rRNA precursor transcript level" EXACT [PomBase:vw]
 synonym: "decreased 35S rRNA primary transcript level" EXACT [PomBase:mah, SO:0000325]
 synonym: "reduced 35S rRNA precursor level" EXACT [PomBase:mah]
-is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+is_a: FYPO:0003601 ! decreased rRNA precursor level
 intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -46783,7 +46785,7 @@ synonym: "decreased 32S rRNA precursor accumulation" RELATED [PomBase:mah]
 synonym: "decreased 32S rRNA precursor level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased 32S rRNA precursor transcript level" EXACT [PomBase:vw]
 synonym: "reduced 32S rRNA precursor level" EXACT [PomBase:mah]
-is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+is_a: FYPO:0003601 ! decreased rRNA precursor level
 created_by: midori
 creation_date: 2014-06-03T13:29:06Z
 
@@ -49441,6 +49443,158 @@ intersection_of: inheres_in GO:0031145
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2014-07-23T17:00:08Z
+
+[Term]
+id: FYPO:0003595
+name: S-shaped cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a single cell grows\nin a shape that consists of two curves in opposite directions." [PomBase:mah]
+comment: A T-shaped cell may septate perpendicular to the normal septation axis, and divide to form normal-shaped daughter cells. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
+synonym: "kinked cell" EXACT [PomBase:mah]
+synonym: "kinky cell" EXACT [PomBase:mah]
+synonym: "S-shaped vegetative cell" EXACT [PomBase:mah]
+synonym: "sigmoid cell" EXACT [PomBase:mah]
+synonym: "Z-shaped cell" EXACT [PomBase:mah]
+is_a: FYPO:0001118 ! abnormal vegetative cell morphology
+intersection_of: PATO:0001878
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+created_by: midori
+creation_date: 2014-07-29T14:55:16Z
+
+[Term]
+id: FYPO:0003596
+name: abnormal snRNA 3'-end processing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which formation of the mature 3' end of an snRNA molecule is abnormal." [GO:0034472, PomBase:mah]
+synonym: "abnormal snRNA 3'-end processing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001553 ! abnormal RNA processing
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034472
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-29T15:15:29Z
+
+[Term]
+id: FYPO:0003597
+name: abolished snRNA 3'-end processing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which formation of the mature 3' end of an snRNA molecule is abolished." [GO:0034472, PomBase:mah]
+synonym: "abolished snRNA 3'-end processing during vegetative growth" EXACT [PomBase:mah]
+synonym: "snRNA 3'-end processing abolished" EXACT [PomBase:mah]
+is_a: FYPO:0003596 ! abnormal snRNA 3'-end processing
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0034472
+created_by: midori
+creation_date: 2014-07-29T15:17:08Z
+
+[Term]
+id: FYPO:0003598
+name: decreased snRNA 3'-end processing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which formation of the mature 3' end of an snRNA molecule is decreased." [GO:0034472, PomBase:mah]
+synonym: "decreased snRNA 3'-end processing during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced snRNA 3'-end processing" EXACT [PomBase:mah]
+is_a: FYPO:0003596 ! abnormal snRNA 3'-end processing
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034472
+created_by: midori
+creation_date: 2014-07-29T15:17:54Z
+
+[Term]
+id: FYPO:0003599
+name: normal snRNA 3'-end processing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which formation of the mature 3' end of an snRNA molecule is normal (i.e. indistinguishable from wild type)." [GO:0034472, PomBase:mah]
+synonym: "normal snRNA 3'-end processing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034472
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-07-29T15:18:15Z
+
+[Term]
+id: FYPO:0003600
+name: increased rRNA precursor level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any rRNA precursor measured in a cell is higher than normal." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased rRNA precursor accumulation" RELATED [PomBase:mah]
+synonym: "increased rRNA precursor level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased rRNA precursor transcript level" EXACT [PomBase:vw]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+created_by: midori
+creation_date: 2014-07-29T15:21:16Z
+
+[Term]
+id: FYPO:0003601
+name: decreased rRNA precursor level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any rRNA precursor measured in a cell is lower than normal." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased rRNA precursor accumulation" RELATED [PomBase:mah]
+synonym: "decreased rRNA precursor level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased rRNA precursor transcript level" EXACT [PomBase:vw]
+synonym: "reduced rRNA precursor level" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+created_by: midori
+creation_date: 2014-07-29T15:22:13Z
+
+[Term]
+id: FYPO:0003602
+name: abolished mRNA splicing, via spliceosome
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of mRNA splicing via the spliceosome is abolished." [PMID:24298023, PomBase:mah]
+synonym: "abolished mRNA splicing, via spliceosome during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished nuclear mRNA splicing, via spliceosome" EXACT [PomBase:mah]
+synonym: "abolished splicing" BROAD [PomBase:al]
+synonym: "mRNA splicing via spliceosome abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000189 ! abnormal mRNA splicing, via spliceosome
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0000398
+created_by: midori
+creation_date: 2014-07-29T15:26:02Z
+
+[Term]
+id: FYPO:0003603
+name: abnormal meiosis I
+def: "A cellular process phenotype in which the first meiotic division is abnormal." [PomBase:mah]
+synonym: "abnormal first meiotic nuclear division" EXACT [GO:0007127]
+is_a: FYPO:0002739 ! abnormal meiotic cell cycle process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007127
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-07-29T16:05:41Z
+
+[Term]
+id: FYPO:0003604
+name: sister chromatid separation during meiosis I
+def: "A cellular process phenotype in which sister chromatids become physically detached from one another during the first meiotic division, instead of remaining attached and segregating together. Sister chromatids normally do not separate until the second meiotic division." [PMID:10440376, PomBase:mah]
+synonym: "abnormal sister chromatid separation at meiosis I" EXACT [PomBase:al]
+synonym: "equational sister chromatid segregation at meiosis I" EXACT [PMID:10440376, PomBase:al]
+is_a: FYPO:0003603 ! abnormal meiosis I
+relationship: output_of FYPO:0002093 ! decreased meiotic sister chromatid cohesion
+created_by: midori
+creation_date: 2014-07-29T16:08:54Z
+
+[Term]
+id: FYPO:0003605
+name: unequal meiotic chromosome segregation during meiosis II
+def: "A cellular process phenotype in which chromosomes are not segregated equally to both spindle poles in the second meiotic nuclear division." [PMID:10440376, PomBase:mah]
+is_a: FYPO:0000925 ! unequal meiotic chromosome segregation
+created_by: midori
+creation_date: 2014-07-29T16:16:34Z
+
+[Term]
+id: FYPO:0003606
+name: decreased duration of meiotic prophase I
+def: "A cellular process phenotype in which the duration of prophase of the first meiotic nuclear division is shorter than normal." [PomBase:mah]
+synonym: "reduced duration of meiotic prophase I" EXACT [PomBase:mah]
+synonym: "short meiotic prophase I" EXACT [PomBase:al]
+is_a: FYPO:0000051 ! abnormal meiosis
+intersection_of: PATO:0000499
+intersection_of: inheres_in GO:0007128
+created_by: midori
+creation_date: 2014-07-29T16:21:25Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
