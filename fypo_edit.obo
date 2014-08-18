@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:08:2014 17:01
+date: 18:08:2014 16:13
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -801,6 +801,7 @@ synonym: "long microtubules during vegetative growth" EXACT [PomBase:mah]
 synonym: "microtubule organization defects, long microtubules" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology during vegetative growth
+is_a: FYPO:0003702 ! normal microtubule cytoskeleton morphology during vegetative growth
 intersection_of: PATO:0000573
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005874
@@ -19508,8 +19509,8 @@ synonym: "reduced vegetative growth" BROAD [PomBase:mah]
 synonym: "slow vegetative aerobic cell population growth" NARROW [PomBase:mah]
 is_a: FYPO:0000046 ! decreased cell population growth
 is_a: FYPO:0001356 ! abnormal vegetative cell population growth
-intersection_of: PATO:0002302
-intersection_of: inheres_in GO:0072690
+intersection_of: FYPO:0000046 ! decreased cell population growth
+intersection_of: happens_during GO:0072690
 created_by: midori
 creation_date: 2012-08-01T18:16:46Z
 
@@ -20296,7 +20297,7 @@ creation_date: 2012-08-16T16:19:09Z
 [Term]
 id: FYPO:0001410
 name: normal cellular sulfide level
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of sulfide (S2-), also called acid labile sulfide) measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of sulfide (S2-, also called acid labile sulfide) measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular acid labile sulfide level" EXACT [PomBase:al]
 synonym: "normal cellular sulfide accumulation" RELATED [PomBase:mah]
 synonym: "normal cellular sulfide ion level" EXACT [PomBase:mah]
@@ -39114,6 +39115,7 @@ def: "A phenotype in which vegetative cell population growth is normal (i.e. ind
 synonym: "normal cell population growth in presence of torin1" EXACT [PomBase:mah]
 synonym: "normal cell population growth on torin1" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal cellular response to torin1" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on torin 1" EXACT [PomBase:mah]
 synonym: "normal vegetative cell population growth on torin1" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: FYPO:0001357 ! normal vegetative cell population growth
@@ -39255,6 +39257,10 @@ def: "A phenotype in which germinating spores show increased sensitivity to phlo
 synonym: "hypersensitive to phlorizin" EXACT [PomBase:mah]
 synonym: "sensitive to phloridzin during spore germination" EXACT [CHEBI:8113, PomBase:mah]
 is_a: FYPO:0002683 ! increased sensitivity to chemical
+intersection_of: PATO:0001551
+intersection_of: during GO:0009847
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:8113
 created_by: midori
 creation_date: 2013-09-19T12:58:01Z
 
@@ -39476,6 +39482,7 @@ id: FYPO:0002701
 name: sensitive to torin1
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to torin1. Cells stop growing (and may die) at a concentration of torin1 that allows wild type cells to grow." [PomBase:mah]
 synonym: "hypersensitive to torin1" EXACT [PomBase:mah]
+synonym: "sensitive to torin 1" EXACT [PomBase:mah]
 synonym: "sensitive to torin1 during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "sensitive to torin1 during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
@@ -40315,6 +40322,7 @@ synonym: "short cytoplasmic microtubules during mitotic cell cycle" RELATED [Pom
 synonym: "short cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
 is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology during vegetative growth
+is_a: FYPO:0003702 ! normal microtubule cytoskeleton morphology during vegetative growth
 intersection_of: PATO:0000574
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005881
@@ -41837,6 +41845,9 @@ synonym: "resistance to 5-fluoroorotic acid during vegetative growth" EXACT [Pom
 synonym: "resistance to 5-FOA" EXACT [PomBase:al]
 synonym: "resistant to 5-fluoroorotic acid" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:74498
 created_by: midori
 creation_date: 2013-11-14T12:30:17Z
 
@@ -42874,13 +42885,14 @@ creation_date: 2013-11-27T15:58:41Z
 [Term]
 id: FYPO:0002932
 name: decreased snoRNA level
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of snoRNA measured in a cell is lower than normal." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mature snoRNA measured in a cell is lower than normal." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased mature snoRNA level" EXACT [PomBase:mah]
 synonym: "decreased small nucleolar RNA level" EXACT [PomBase:mah]
 synonym: "decreased snoRNA accumulation" RELATED [PomBase:mah]
 synonym: "decreased snoRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased snoRNA level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased snoRNA transcript level" EXACT [PomBase:vw]
+synonym: "decreased snoRNA transcript level" BROAD [PomBase:vw]
 synonym: "reduced snoRNA level" EXACT [PomBase:mah]
 is_a: FYPO:0003261 ! decreased small RNA level
 intersection_of: PATO:0001163
@@ -42893,13 +42905,14 @@ creation_date: 2013-11-28T13:13:18Z
 [Term]
 id: FYPO:0002933
 name: increased snoRNA level
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of snoRNA measured in a cell is higher than normal." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mature snoRNA measured in a cell is higher than normal." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased mature snoRNA level" EXACT [PomBase:mah]
 synonym: "increased small nucleolar RNA level" EXACT [PomBase:mah]
 synonym: "increased snoRNA accumulation" RELATED [PomBase:mah]
 synonym: "increased snoRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased snoRNA level during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased snoRNA transcript level" EXACT [PomBase:vw]
+synonym: "increased snoRNA transcript level" BROAD [PomBase:vw]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
@@ -47621,6 +47634,7 @@ creation_date: 2014-03-28T13:55:19Z
 id: FYPO:0003244
 name: intron-specific abnormal mRNA splicing, via spliceosome
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which mRNA splicing via the spliceosome takes place normally for some, but abnormally for other, specific introns." [PMID:23754748, PomBase:mah]
+synonym: "differential pre-mRNA splicing defects" EXACT [PMID:20400941]
 synonym: "intron-specific abnormal mRNA splicing, via spliceosome during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "intron-specific abnormal mRNA splicing, via spliceosome during vegetative growth" EXACT [PomBase:mah]
 synonym: "intron-specific abnormal nuclear mRNA splicing, via spliceosome" EXACT [PomBase:mah]
@@ -51824,7 +51838,7 @@ creation_date: 2014-07-09T15:25:04Z
 [Term]
 id: FYPO:0003536
 name: increased septation index in stationary phase
-def: "A cell population phenotype in which the septation index is higher than normal in a population in stationary phase. The septation index is the proportion of the population undergoing septation at any given time, and is usually around 10% (varying between 7-15%) for wild type." [PomBase:mah, PomBase:vw]
+def: "A cell population phenotype in which the septation index is higher than normal in a population in stationary phase. The septation index is the proportion of the population undergoing septation at any given time." [PomBase:mah, PomBase:vw]
 synonym: "increased septation in stationary phase" RELATED [PomBase:mah]
 synonym: "increased septation index during stationary phase" EXACT [PomBase:mah]
 synonym: "septated in stationary phase" RELATED [PomBase:vw]
@@ -52348,6 +52362,9 @@ synonym: "decreased protein localization to mating-type region heterochromatin d
 synonym: "decreased protein localization to silent mating type heterochromatin" EXACT [PomBase:al]
 synonym: "reduced protein localization to heterochromatin at mating-type region" EXACT [PomBase:mah]
 is_a: FYPO:0002385 ! decreased protein localization to heterochromatin
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1903212
 created_by: midori
 creation_date: 2014-07-22T12:01:04Z
 
@@ -52400,6 +52417,10 @@ synonym: "normal protein localisation to subtelomeric heterochromatin" EXACT [Po
 synonym: "normal protein localization to subtelomeric heterochromatin during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein localization to subtelomeric heterochromatin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1903213
+intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2014-07-22T12:15:47Z
 
@@ -53038,6 +53059,7 @@ synonym: "abnormal microtubule cytoskeleton morphology during mitotic interphase
 is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology during vegetative growth
 is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
 is_a: FYPO:0003063 ! abnormal cytoskeleton morphology
+is_a: FYPO:0003702 ! normal microtubule cytoskeleton morphology during vegetative growth
 intersection_of: PATO:0000051
 intersection_of: exists_during GO:0051329
 intersection_of: exists_during GO:0072690
@@ -53098,7 +53120,7 @@ creation_date: 2014-08-06T14:31:10Z
 [Term]
 id: FYPO:0003629
 name: abolished U2/U5/U6 snRNP complex assembly
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which spliceosomal tri-snRNP complex assembly is abolished." [PomBase:mah, PMID:12374752]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which spliceosomal tri-snRNP complex assembly is abolished." [PMID:12374752, PomBase:mah]
 synonym: "abolished U2/U5/U6 snRNP complex assembly during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abolished U2/U5/U6 snRNP complex assembly during vegetative growth" EXACT [PomBase:mah]
 synonym: "abolished U2/U5/U6 tri-snRNP complex assembly abolished" EXACT [PomBase:mah]
@@ -53817,6 +53839,412 @@ synonym: "decreased protein level at centromere outer repeat during vegetative g
 is_a: FYPO:0001324 ! decreased protein level during vegetative growth
 created_by: midori
 creation_date: 2014-08-12T16:51:31Z
+
+[Term]
+id: FYPO:0003682
+name: inviable after spore germination, without cell division, elongated multinucleate aseptate cell
+def: "A phenotype in which a spore germinates to produce an inviable cell that does not divide, is longer than normal, does not contain a septum, and contains more than one nucleus." [PomBase:mah]
+synonym: "essential; germinating spore, without cell division, elongated multinucleate aseptate cell" RELATED [PomBase:mah]
+synonym: "inviable after spore germination, multinucleate aseptate elongated cell" EXACT [PomBase:mah]
+synonym: "inviable after spore germination, undivided elongated multinucleate aseptate cell" EXACT [PomBase:mah]
+synonym: "inviable following spore germination, without cell division, elongated multinucleate aseptate cell" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, without cell division, elongated multinucleate aseptate cell" EXACT [PomBase:mah]
+is_a: FYPO:0002912 ! inviable after spore germination, without cell division, elongated multinucleate cell
+created_by: midori
+creation_date: 2014-08-18T10:58:13Z
+
+[Term]
+id: FYPO:0003683
+name: abnormal spliceosomal complex assembly
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which any process of spliceosomal complex assembly is abnormal." [PomBase:mah]
+synonym: "abnormal spliceosomal complex assembly during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal spliceosomal complex assembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal spliceosome assembly" BROAD [GO:0000245]
+is_a: FYPO:0003628 ! abnormal ribonucleoprotein complex assembly
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000245
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-08-18T11:02:56Z
+
+[Term]
+id: FYPO:0003684
+name: altered level of macromolecular complex
+def: "A physical cellular phenotype in which the amount of any macromolecular complex present in a cell differs from wild type." [PomBase:mah]
+synonym: "abnormal level of macromolecular complex" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+intersection_of: PATO:0002083
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+intersection_of: towards GO:0032991
+created_by: midori
+creation_date: 2014-08-18T11:16:42Z
+
+[Term]
+id: FYPO:0003685
+name: decreased U2/U5/U6 snRNP complex level
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer U2/U5/U6 snRNP complexes than normal." [PomBase:mah]
+synonym: "decreased level of U2/U5/U6 snRNP complexes" RELATED [PomBase:al]
+synonym: "decreased U2-type post-mRNA release spliceosomal complex level" EXACT [GO:0071008, PomBase:mah]
+synonym: "decreased U2/U5/U6 snRNP complex level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased U2/U5/U6 snRNP complex level during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced U2/U5/U6 snRNP complex level" EXACT [PomBase:mah]
+synonym: "U2/U5/U6 snRNP complex present at decreased level" EXACT [PomBase:mah]
+is_a: FYPO:0003684 ! altered level of macromolecular complex
+intersection_of: PATO:0002001
+intersection_of: exists_during GO:0072690
+intersection_of: towards GO:0071008
+created_by: midori
+creation_date: 2014-08-18T11:20:25Z
+
+[Term]
+id: FYPO:0003686
+name: abnormal box C/D snoRNA 3'-end processing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which formation of the mature 3' end of a box C/D snoRNA molecule is abnormal." [GO:0034472, PomBase:mah]
+synonym: "abnormal box C/D snoRNA 3'-end processing during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal box C/D snoRNA 3'-end processing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001553 ! abnormal RNA processing
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000495
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-08-18T11:41:49Z
+
+[Term]
+id: FYPO:0003687
+name: abnormal protein localization to nucleolus
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleolus is abnormal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to nucleolus" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to nucleolus during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal protein localization to nucleolus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902570
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-08-18T11:44:50Z
+
+[Term]
+id: FYPO:0003688
+name: abolished protein localization to nucleolus
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleolus is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to nucleolus" EXACT [PomBase:mah]
+synonym: "abolished protein localization in nucleolus" EXACT [GO:1902570]
+synonym: "abolished protein localization to nucleolus during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished protein localization to nucleolus during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to nucleolus abolished" EXACT [PomBase:mah]
+is_a: FYPO:0002125 ! abnormal protein localization to plasma membrane
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:1902570
+created_by: midori
+creation_date: 2014-08-18T11:46:45Z
+
+[Term]
+id: FYPO:0003689
+name: abolished protein localization to nucleolus, with protein mislocalized to cytoplasm
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleolus is abolished, and the protein is present in the cytoplasm instead." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to nucleolus, with protein mislocalised to cytoplasm" EXACT [PomBase:mah]
+synonym: "abolished protein localization in nucleolus, with protein mislocalized to cytoplasm" EXACT [GO:1902570]
+synonym: "abolished protein localization to nucleolus, with protein mislocalized to cytoplasm during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished protein localization to nucleolus, with protein mislocalized to cytoplasm, during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to nucleolus abolished, with protein mislocalized to cytoplasm" EXACT [PomBase:mah]
+is_a: FYPO:0003688 ! abolished protein localization to nucleolus
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: has_part FYPO:0000783 ! protein mislocalized to cytoplasm
+intersection_of: towards GO:1902570
+created_by: midori
+creation_date: 2014-08-18T11:46:48Z
+
+[Term]
+id: FYPO:0003690
+name: abolished cell population growth on glycerol/ethanol carbon source
+def: "A vegetative cell population growth phenotype in which a cell population does not grow in a medium containing glycerol and ethanol as the carbon sources." [PomBase:mah]
+comment: Use this term for a population of cells that does not grow with glycerol and ethanol as the carbon sources, but does grow using a different carbon source (a cell population that does not grow on any media would be considered inviable). Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+synonym: "abolished growth on glycerol/ethanol carbon source" BROAD [PomBase:mah]
+synonym: "abolished vegetative cell population growth on glycerol/ethanol carbon source" EXACT [PomBase:mah]
+synonym: "cell population growth on glycerol/ethanol carbon source abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000442 ! decreased cell population growth on glycerol/ethanol carbon source
+is_a: FYPO:0001575 ! abolished vegetative cell population growth
+intersection_of: FYPO:0001575 ! abolished vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:16236
+intersection_of: towards CHEBI:17754
+created_by: midori
+creation_date: 2014-08-18T11:51:55Z
+
+[Term]
+id: FYPO:0003691
+name: increased cellular 5-demethoxyubiquinone-10 level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of 5-demethoxyubiquinone-10 ()2-decaprenyl-3-methyl-6-methoxy-1,4-benzoquinone, an intermediate in ubiquinone biosynthesis) measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased 5-demethoxyubiquinone-10 accumulation" RELATED [PomBase:mah]
+synonym: "increased cellular 2-decaprenyl-3-methyl-6-methoxy-1,4-benzoquinone level" EXACT [PMID:5166547]
+synonym: "increased cellular 5-demethoxyubiquinone-10 level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased cellular 5-demethoxyubiquinone-10 level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased cellular demethoxyubiquinone-10 level" BROAD [PMID:18808426]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+created_by: midori
+creation_date: 2014-08-18T11:55:27Z
+
+[Term]
+id: FYPO:0003692
+name: increased protein phosphorylation during cellular response to oxidative stress
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a greater extent than normal during a cellular response to oxidative stress." [PomBase:mah]
+comment: When using this term, it is recommended to note the specific protein(s) affected.
+synonym: "increased protein phosphorylation during cellular response to oxidative stress during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased protein phosphorylation during cellular response to oxidative stress during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001038 ! increased protein phosphorylation during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0034599
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2014-08-18T12:10:32Z
+
+[Term]
+id: FYPO:0003693
+name: sulfide absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of (S2-, also called acid labile sulfide) measured in a cell is too low to detect." [PomBase:mah]
+synonym: "sulfide absent from cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sulfide absent from cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "sulfide ions absent from cell" EXACT [PomBase:mah]
+is_a: FYPO:0001208 ! substance absent from cell during vegetative growth
+is_a: FYPO:0001289 ! decreased phospholipid level
+intersection_of: PATO:0002000
+intersection_of: during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:15138
+created_by: midori
+creation_date: 2014-08-18T12:11:58Z
+
+[Term]
+id: FYPO:0003694
+name: decreased 18S rRNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of 18S ribosomal RNA measured in a cell is lower than normal." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased 18S rRNA accumulation" RELATED [PomBase:mah]
+synonym: "decreased 18S rRNA level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased 18S rRNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased 18S rRNA transcript level" EXACT [PomBase:vw]
+synonym: "decreased mature 18S rRNA transcript" EXACT [PomBase:vw]
+synonym: "reduced 18S rRNA level" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards SO:0000407
+created_by: midori
+creation_date: 2014-08-18T12:19:48Z
+
+[Term]
+id: FYPO:0003695
+name: decreased cytosolic small ribosomal subunit level
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer free small ribosomal subunits in the cytosol than normal." [PomBase:mah]
+synonym: "cytosolic small ribosomal subunit present at decreased level" EXACT [PomBase:mah]
+synonym: "decreased 40S ribosomal subunit level" EXACT [PomBase:mah]
+synonym: "decreased cytosolic small ribosomal subunit level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased cytosolic small ribosomal subunit level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased level of cytosolic small ribosomal subunits" RELATED [PomBase:al]
+synonym: "decreased small ribosomal subunit level" BROAD [PomBase:mah]
+synonym: "reduced cytosolic small ribosomal subunit level" EXACT [PomBase:mah]
+is_a: FYPO:0003684 ! altered level of macromolecular complex
+intersection_of: PATO:0002001
+intersection_of: exists_during GO:0072690
+intersection_of: towards GO:0022627
+created_by: midori
+creation_date: 2014-08-18T12:24:03Z
+
+[Term]
+id: FYPO:0003696
+name: increased cytosolic large ribosomal subunit level
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells contain more free large ribosomal subunits in the cytosol than normal." [PomBase:mah]
+synonym: "cytosolic large ribosomal subunit present at increased level" EXACT [PomBase:mah]
+synonym: "increased 60S ribosomal subunit level" EXACT [PomBase:mah]
+synonym: "increased cytosolic large ribosomal subunit level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased cytosolic large ribosomal subunit level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased large ribosomal subunit level" BROAD [PomBase:mah]
+synonym: "increased level of cytosolic large ribosomal subunits" RELATED [PomBase:al]
+is_a: FYPO:0003684 ! altered level of macromolecular complex
+intersection_of: PATO:0002001
+intersection_of: exists_during GO:0072690
+intersection_of: towards GO:0022625
+created_by: midori
+creation_date: 2014-08-18T12:26:02Z
+
+[Term]
+id: FYPO:0003697
+name: cell wall invagination into cytoplasm
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which one or more extensions of the cell wall protrude into the cytoplasm. The cell wall extensions do not form a normal septum." [PMID:9211982, PomBase:mah]
+is_a: FYPO:0000351 ! abnormal cell wall morphology during vegetative growth
+created_by: midori
+creation_date: 2014-08-18T13:12:11Z
+
+[Term]
+id: FYPO:0003698
+name: abnormal dense body present in nucleolus
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the nucleolus contains one or more spherical structures of great electron density that are not found in wild type cells." [PMID:9211982, PomBase:mah]
+is_a: FYPO:0000361 ! abnormal nucleolar morphology
+created_by: midori
+creation_date: 2014-08-18T13:14:45Z
+
+[Term]
+id: FYPO:0003699
+name: snoRNA guided rRNA pseudouridine synthesis abolished at specific site
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the intramolecular conversion of uridine to pseudouridine does not occur at a specific site in an rRNA molecule that is normally modified." [GO:0000454, PMID:15716270, PomBase:mah]
+is_a: FYPO:0000370 ! abnormal RNA modification
+created_by: midori
+creation_date: 2014-08-18T13:16:39Z
+
+[Term]
+id: FYPO:0003700
+name: increased snoRNA primary transcript level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of snoRNA primary transcripts measured in a cell is higher than normal." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased small nucleolar RNA primary transcript level" EXACT [PomBase:mah]
+synonym: "increased snoRNA primary transcript accumulation" RELATED [PomBase:mah]
+synonym: "increased snoRNA primary transcript level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased snoRNA primary transcript level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased snoRNA transcript level" BROAD [PomBase:vw]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards SO:0000232
+created_by: midori
+creation_date: 2014-08-18T13:33:23Z
+
+[Term]
+id: FYPO:0003701
+name: poly(A)+ RNA-containing focus present in nucleus
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the nucleus contains one or more foci that are enriched in polyadenylated RNA and are not found in wild-type cells." [PMID:20129053, PomBase:mah]
+synonym: "poly(A)+ RNA-containing foci present in nucleus" EXACT [PomBase:mah]
+is_a: FYPO:0000062 ! abnormal nuclear morphology during vegetative growth
+created_by: midori
+creation_date: 2014-08-18T13:36:39Z
+
+[Term]
+id: FYPO:0003702
+name: normal microtubule cytoskeleton morphology during vegetative growth
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the microtubule cytoskeleton is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal microtubule cytoskeleton morphology during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0015630
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-08-18T14:06:19Z
+
+[Term]
+id: FYPO:0003703
+name: abnormal histone deacetylase activity
+def: "A molecular function phenotype in which the observed rate of histone deacetylase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004407
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-08-18T14:08:46Z
+
+[Term]
+id: FYPO:0003704
+name: decreased histone deacetylase activity
+def: "A molecular function phenotype in which the observed rate of histone deacetylase activity is decreased." [PomBase:mah]
+synonym: "reduced histone deacetylase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0003703 ! abnormal histone deacetylase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004407
+created_by: midori
+creation_date: 2014-08-18T14:08:54Z
+
+[Term]
+id: FYPO:0003705
+name: sensitive to trapoxin A
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to trapoxin A. Cells stop growing (and may die) at a concentration of trapoxin A that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to trapoxin A" EXACT [PomBase:mah]
+synonym: "sensitive to trapoxin A during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to trapoxin A during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2014-08-18T14:12:35Z
+
+[Term]
+id: FYPO:0003706
+name: normal growth on K-252a
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing K-252a." [PomBase:mah]
+synonym: "normal cell population growth in presence of K-252a" EXACT [PomBase:mah]
+synonym: "normal cell population growth on K-252a" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to K-252a" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on K-252a" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:135352
+created_by: midori
+creation_date: 2014-08-18T14:14:24Z
+
+[Term]
+id: FYPO:0003707
+name: normal growth on valinomycin
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing valinomycin." [PomBase:mah]
+synonym: "normal cell population growth in presence of valinomycin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on valinomycin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to valinomycin" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on valinomycin" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:28545
+created_by: midori
+creation_date: 2014-08-18T14:15:15Z
+
+[Term]
+id: FYPO:0003708
+name: normal frequency of conjugation with h+ cells
+def: "A conjugation phenotype in which conjugation by a mutant with wild type h+ occurs at the same frequency as normal." [PomBase:mah]
+synonym: "normal conjugation with WT h+ cells" EXACT [PomBase:mah]
+synonym: "normal frequency of conjugation with h plus cells" EXACT [PomBase:mah]
+is_a: FYPO:0000760 ! normal conjugation
+created_by: midori
+creation_date: 2014-08-18T14:24:51Z
+
+[Term]
+id: FYPO:0003709
+name: decreased agglutination
+def: "A cell adhesion phenotype in which cells adhere to other cells of compatible mating type less strongly or to a lower extent than normal." [PomBase:mah]
+synonym: "decreased agglutination involved in conjugation with cellular fusion" EXACT [GO:0000752]
+synonym: "reduced agglutination" EXACT [PomBase:mah]
+is_a: FYPO:0001872 ! abnormal cell adhesion
+intersection_of: PATO:0002052
+intersection_of: towards GO:0000752
+created_by: midori
+creation_date: 2014-08-18T14:40:32Z
+
+[Term]
+id: FYPO:0003710
+name: swollen pear-shaped vegetative cell
+def: "A cell morphology phenotype in which a cell is shaped in the form of a pear, and has a larger volume than normal, in the vegetative growth phase of the life cycle. One end is rounded, while the other resembles an end of a normal rod-shaped cell." [PomBase:mah]
+synonym: "swollen ice cream cone-shaped cell during vegetative growth" EXACT [PMID:2236039, PomBase:vw]
+synonym: "swollen pear-shaped cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "swollen pear-shaped vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0000646 ! swollen vegetative cell
+is_a: FYPO:0001120 ! pear-shaped vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0001120 ! pear-shaped vegetative cell
+created_by: midori
+creation_date: 2014-08-18T16:10:38Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
