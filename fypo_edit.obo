@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 20:08:2014 15:57
+date: 27:08:2014 16:26
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -243,7 +243,7 @@ creation_date: 2011-03-29T05:53:56Z
 [Term]
 id: FYPO:0000015
 name: branched vegetative cell
-def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a daughter cell begins to grow from near, and at approximately a right angle to, the septum or cell division site of the mother cell, resulting in the formation of a single cell that has a branch." [PomBase:mah]
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a daughter cell begins to grow at approximately a right angle to the septum or cell division site of the mother cell, resulting in the formation of a single cell that has a branch." [PomBase:mah]
 synonym: "branched cell" EXACT [PomBase:mah]
 synonym: "branched cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "branched vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
@@ -3992,9 +3992,11 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000284
 name: large and small daughter nuclei
 def: "A mitosis phenotype observed in the vegetative growth phase of the life cycle in which the nucleus divides unequally to produce one daughter nucleus that is larger than the other." [PMID:8769419, PomBase:mah]
+comment: Consider also annotating to 'abnormal kinetochore organization' (FYPO:0000807).
 synonym: "large and small daughter nuclei during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "large and small daughter nuclei during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000062 ! abnormal nuclear morphology during vegetative growth
+relationship: output_of FYPO:0001270 ! complete but unequal mitotic sister chromatid separation
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -18139,7 +18141,7 @@ creation_date: 2012-07-19T16:21:16Z
 [Term]
 id: FYPO:0001263
 name: branched cell during cellular hyperosmotic response
-def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is branched during a cellular hyperosmotic response. In branched cells, a daughter cell grows from near, and at approximately a right angle to, the septum or cell division site of the mother cell, resulting in the formation of a branched, septated cell. Cell division may give rise to branched or unbranched daughter cells." [PomBase:jh, PomBase:mah]
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is branched during a cellular hyperosmotic response. In branched cells, a daughter cell grows at approximately a right angle to the septum or cell division site of the mother cell, resulting in the formation of a branched, septated cell. Cell division may give rise to branched or unbranched daughter cells." [PomBase:jh, PomBase:mah]
 synonym: "branched cell during cellular hyperosmotic response during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "branched cell during cellular hyperosmotic response during vegetative growth" EXACT [PomBase:mah]
 synonym: "branched, septated cell during cellular hyperosmotic response" EXACT [PomBase:vw]
@@ -18255,7 +18257,6 @@ synonym: "complete but unequal mitotic chromosome separation" EXACT [PomBase:mah
 synonym: "complete but unequal mitotic sister chromatid segregation" RELATED [PomBase:mah]
 synonym: "complete but unequal mitotic sister chromatid separation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0003241 ! unequal mitotic sister chromatid separation
-relationship: has_output FYPO:0000284 ! large and small daughter nuclei
 created_by: midori
 creation_date: 2012-07-19T17:05:51Z
 
@@ -32996,6 +32997,7 @@ id: FYPO:0002263
 name: inviable after spore germination, without cell division, cell cycle arrest, elongated cells
 def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then becomes elongated and undergoes cell cycle arrest, and eventually dies without completing cell division." [PomBase:mah]
 synonym: "inviable germinated spore, without cell division, cell cycle arrest, elongated cells" EXACT [PomBase:mah]
+is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0001924 ! inviable after spore germination, without cell division, cell cycle arrest
 created_by: midori
 creation_date: 2013-06-12T14:30:44Z
@@ -35942,7 +35944,7 @@ creation_date: 2013-08-06T15:25:18Z
 [Term]
 id: FYPO:0002461
 name: inviable branched vegetative cell
-def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a daughter cell grows from near, and at approximately a right angle to, the septum of the mother cell, resulting in the formation of an inviable branched, septated cell. Cell division may give rise to branched or unbranched daughter cells." [PomBase:jh, PomBase:mah]
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a daughter cell grows at approximately a right angle to the septum of the mother cell, resulting in the formation of an inviable branched, septated cell. Cell division may give rise to branched or unbranched daughter cells." [PomBase:jh, PomBase:mah]
 synonym: "inviable branched cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable branched vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "inviable branched, septated cell" EXACT [PomBase:jh, PomBase:mah, PomBase:vw]
@@ -38492,6 +38494,7 @@ creation_date: 2013-09-05T16:41:13Z
 id: FYPO:0002629
 name: galactose absent from cell wall
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of galactose measured in the cell wall is too low to detect." [PomBase:mah]
+comment: Note that 'galactose absent from cell wall glycoprotein glycan' (FYPO:0003727) is not a child of this term because the cell wall may contain galactose residues in glycans that are not part of glycosylated proteins.
 synonym: "galactose absent from cell surface" RELATED [PomBase:al]
 synonym: "galactose absent from cell wall during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "galactose absent from cell wall during vegetative growth" EXACT [PomBase:mah]
@@ -39816,6 +39819,7 @@ creation_date: 2013-09-26T14:51:13Z
 id: FYPO:0002724
 name: inviable after spore germination, single or double cell division, elongated cell
 def: "A phenotype in which a spore germinates to produce a cell that is longer than normal and undergoes one or two rounds of cell division." [PomBase:mah]
+is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0002421 ! inviable after spore germination, single or double cell division, abnormal cell shape
 created_by: midori
 creation_date: 2013-09-26T14:54:57Z
@@ -41621,7 +41625,7 @@ creation_date: 2013-11-08T11:53:44Z
 [Term]
 id: FYPO:0002848
 name: branched cell during recovery from stationary phase
-def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is branched when the cell population has been in stationary phase and is then placed in conditions that allow recovery. In branched cells, a daughter cell grows from near, and at approximately a right angle to, the septum or cell division site of the mother cell, resulting in the formation of a branched, septated cell. Cell division may give rise to branched or unbranched daughter cells." [PomBase:jh, PomBase:mah]
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is branched when the cell population has been in stationary phase and is then placed in conditions that allow recovery. In branched cells, a daughter cell grows at approximately a right angle to the septum or cell division site of the mother cell, resulting in the formation of a branched, septated cell. Cell division may give rise to branched or unbranched daughter cells." [PomBase:jh, PomBase:mah]
 synonym: "branched cell during recovery from stationary phase during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "branched cell during vegetative growth following stationary phase" EXACT [PomBase:mah]
 synonym: "branched, septated cell during recovery from stationary phase" EXACT [PomBase:vw]
@@ -45454,7 +45458,7 @@ creation_date: 2014-02-13T16:02:53Z
 [Term]
 id: FYPO:0003101
 name: decreased heterochromatin assembly at protein coding gene
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which heterochromatin assembly occurs to a lover extent than normal in regions containing protein-coding genes. Heterochromatin assembly is the assembly of chromatin into a compact and highly condensed form that is often, but not always, transcriptionally silent." [GO:0031507, PMID:24095277, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which heterochromatin assembly occurs to a lower extent than normal in regions containing protein-coding genes. Heterochromatin assembly is the assembly of chromatin into a compact and highly condensed form that is often, but not always, transcriptionally silent." [GO:0031507, PMID:24095277, PomBase:mah]
 synonym: "decreased heterochromatin assembly at protein coding gene during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased heterochromatin assembly at protein coding gene during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased heterochromatin assembly at protein-coding gene" EXACT [PomBase:mah]
@@ -49993,16 +49997,16 @@ creation_date: 2014-06-03T14:42:12Z
 
 [Term]
 id: FYPO:0003409
-name: abnormal centromere-specific nucleosome assembly
+name: abnormal CENP-A containing nucleosome assembly at centromere
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the formation of nucleosomes containing the histone H3 variant CenH3 (also called CENP-A; Cnp1 in S. pombe) is abnormal. CENP-A-containing nucleosomes are normally assembled into chromatin around centromeres, encompassing the central core and centromeric inner repeat regions." [GO:0034080, PMID:24710126, PomBase:mah, PomBase:vw]
 synonym: "abnormal CenH3-containing nucleosome assembly at centromere" RELATED [GO:0034080]
-synonym: "abnormal CENP-A containing nucleosome assembly at centromere" EXACT [GO:0034080]
+synonym: "abnormal CENP-A containing nucleosome assembly" EXACT [PomBase:mah]
+synonym: "abnormal CENP-A containing nucleosome assembly at centromere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal CENP-A containing nucleosome assembly at centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal CENP-A deposition" RELATED [GO:0034080]
 synonym: "abnormal CENP-A loading" RELATED [GO:0034080]
-synonym: "abnormal centromere specific nucleosome exchange" RELATED [GO:0034080]
 synonym: "abnormal centromere-specific histone exchange" EXACT [GO:0034080]
-synonym: "abnormal centromere-specific nucleosome assembly during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abnormal centromere-specific nucleosome assembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal centromere-specific nucleosome assembly" EXACT [GO:0034080]
 synonym: "abnormal centromeric DNA replication-independent nucleosome assembly" EXACT [GO:0034080]
 synonym: "abnormal DNA replication-independent nucleosome assembly at centromere" EXACT [GO:0034080]
 is_a: FYPO:0001352 ! abnormal chromatin organization during vegetative growth
@@ -50015,21 +50019,21 @@ creation_date: 2014-06-03T15:37:34Z
 
 [Term]
 id: FYPO:0003410
-name: increased spatial extent of centromere-specific nucleosome assembly at centromere
+name: increased spatial extent of CENP-A containing nucleosome assembly at centromere
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which nucleosomes containing the histone H3 variant CenH3 (also called CENP-A; Cnp1 in S. pombe) are assembled over a larger portion of the chromosome than normal. CENP-A-containing nucleosomes are normally assembled into chromatin around centromeres, encompassing the central core and centromeric inner repeat regions." [GO:0034080, PMID:24710126, PomBase:mah, PomBase:vw]
-synonym: "centromere-specific nucleosome spreading" RELATED [PomBase:vw]
-synonym: "increased extent of centromere-specific nucleosome" RELATED [PomBase:vw]
+synonym: "CENP-A containing nucleosome spreading" RELATED [PomBase:vw]
+synonym: "increased extent of CENP-A containing nucleosome" RELATED [PomBase:vw]
 synonym: "increased spatial extent of CenH3-containing nucleosome assembly at centromere" RELATED [GO:0034080]
 synonym: "increased spatial extent of CENP-A containing nucleosome assembly at centromere" EXACT [GO:0034080]
+synonym: "increased spatial extent of CENP-A containing nucleosome assembly at centromere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased spatial extent of CENP-A containing nucleosome assembly at centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased spatial extent of CENP-A deposition" RELATED [GO:0034080]
 synonym: "increased spatial extent of CENP-A loading" RELATED [GO:0034080]
-synonym: "increased spatial extent of centromere specific nucleosome exchange" RELATED [GO:0034080]
 synonym: "increased spatial extent of centromere-specific histone exchange" EXACT [GO:0034080]
-synonym: "increased spatial extent of centromere-specific nucleosome assembly at centromere during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "increased spatial extent of centromere-specific nucleosome assembly at centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased spatial extent of centromere-specific nucleosome assembly at centromere" EXACT [GO:0034080]
 synonym: "increased spatial extent of centromeric DNA replication-independent nucleosome assembly" EXACT [GO:0034080]
 synonym: "increased spatial extent of DNA replication-independent nucleosome assembly at centromere" EXACT [GO:0034080]
-is_a: FYPO:0003409 ! abnormal centromere-specific nucleosome assembly
+is_a: FYPO:0003409 ! abnormal CENP-A containing nucleosome assembly at centromere
 created_by: midori
 creation_date: 2014-06-03T15:41:14Z
 
@@ -54461,6 +54465,206 @@ intersection_of: inheres_in CL:0000334
 intersection_of: towards CHEBI:25447
 created_by: midori
 creation_date: 2014-08-20T15:55:52Z
+
+[Term]
+id: FYPO:0003727
+name: galactose absent from cell wall glycoprotein glycan
+def: "A phenotype in which the glycan moiety of a glycoprotein in the cell wall does not contain galactose residues. In wild-type cells, glycoprotein glycans contain mannose and galactose residues in a 1:1.2 ratio, and the galactose residues are connected by alpha-1,2 linkages." [PMID:11378902, PMID:9125114, PomBase:mah]
+comment: Note that this term is not a child of 'galactose absent from cell wall' (FYPO:0002629) because the cell wall may contain galactose residues in glycans that are not part of glycosylated proteins.
+synonym: "abolished galactosylation of cell surface proteins" RELATED [PomBase:vw]
+synonym: "alpha 1,2-linked galactose residues absent from cell wall glycoprotein" EXACT [PMID:9125114, PomBase:vw]
+synonym: "galactose absent from glycoprotein glycan in cell wall" EXACT [PomBase:mah]
+is_a: FYPO:0002628 ! decreased level of substance in cell wall
+is_a: FYPO:0003291 ! galactose absent from glycoprotein glycan
+created_by: midori
+creation_date: 2014-08-27T10:38:02Z
+
+[Term]
+id: FYPO:0003728
+name: abolished protein galactosylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the galactosylation of one or more specific proteins, or of specific protein sites, does not occur. Protein galactosylation is the addition of a galactose residue to a protein amino acid." [GO:0042125, PomBase:mah]
+synonym: "abolished protein galactosylation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished protein galactosylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein galactosylation abolished" EXACT [PomBase:mah]
+is_a: FYPO:0001910 ! abnormal protein glycosylation
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0006486
+relationship: has_output FYPO:0003291 ! galactose absent from glycoprotein glycan
+created_by: midori
+creation_date: 2014-08-27T10:46:38Z
+
+[Term]
+id: FYPO:0003729
+name: protein mislocalized to nuclear periphery
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the nuclear periphery is observed there." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the nucleoplasm in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to nuclear periphery" EXACT [PomBase:vw]
+synonym: "protein mislocalised to nuclear periphery" EXACT [PomBase:mah]
+synonym: "protein mislocalised to nuclear periphery during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nuclear periphery during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "protein mislocalized to nucleoplasm during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0034399
+relationship: output_of FYPO:0002529 ! abnormal protein localization to nucleoplasm
+created_by: midori
+creation_date: 2014-08-27T14:08:07Z
+
+[Term]
+id: FYPO:0003730
+name: abolished cell population growth on galactose carbon source
+def: "A vegetative cell population growth phenotype in which a cell population does not grow in a medium containing galactose as the carbon source." [PomBase:mah]
+comment: Use this term for a population of cells that does not grow with galactose as the carbon source, but does grow using a different carbon source (a cell population that does not grow on any media would be considered inviable). Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+synonym: "abolished galactose utilization" RELATED [PomBase:mah, PomBase:vw]
+synonym: "abolished growth on galactose carbon source" BROAD [PomBase:mah]
+synonym: "abolished vegetative cell population growth on galactose carbon source" EXACT [PomBase:mah]
+synonym: "cell population growth on galactose carbon source abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000251 ! decreased cell population growth on galactose carbon source
+is_a: FYPO:0001575 ! abolished vegetative cell population growth
+intersection_of: FYPO:0001575 ! abolished vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:12936
+created_by: midori
+creation_date: 2014-08-27T14:23:02Z
+
+[Term]
+id: FYPO:0003731
+name: normal growth on galactose carbon source
+def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing galactose as the carbon source." [PomBase:mah]
+synonym: "normal cell population growth on galactose carbon source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal vegetative cell population growth on galactose carbon source" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0000047 ! normal cell population growth
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:12936
+created_by: midori
+creation_date: 2014-08-27T14:24:18Z
+
+[Term]
+id: FYPO:0003732
+name: respiratory chain complex IV absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain any detectable respiratory chain complex IV in the mitochondria." [PMID:16911509, PomBase:mah]
+synonym: "absent respiratory chain complex IV" EXACT [PomBase:mah]
+synonym: "mitochondrial respiratory chain complex IV absent from cell" EXACT [GO:0005751]
+synonym: "respiratory chain complex IV absent from cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "respiratory chain complex IV absent from cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003684 ! altered level of macromolecular complex
+intersection_of: PATO:0002000
+intersection_of: inheres_in CL:0000334
+intersection_of: towards GO:0005751
+created_by: midori
+creation_date: 2014-08-27T14:27:19Z
+
+[Term]
+id: FYPO:0003733
+name: abnormal alcohol dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of alcohol dehydrogenase activity is abnormal." [PomBase:mah]
+synonym: "alcohol dehydrogenase (NAD) activity" EXACT [GO:0004022]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004022
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-08-27T14:45:07Z
+
+[Term]
+id: FYPO:0003734
+name: decreased alcohol dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of alcohol dehydrogenase activity is decreased." [PomBase:mah]
+synonym: "decreased alcohol dehydrogenase (NAD) activity" EXACT [GO:0004022]
+synonym: "reduced alcohol dehydrogenase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0003733 ! abnormal alcohol dehydrogenase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004022
+created_by: midori
+creation_date: 2014-08-27T14:45:18Z
+
+[Term]
+id: FYPO:0003735
+name: altered DNA binding specificity
+def: "A molecular function phenotype in which a gene product that normally binds to a specific DNA sequence instead binds to a different sequence when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." [PMID:7651412, PomBase:mah]
+synonym: "abnormal DNA binding specificity" EXACT [PomBase:mah]
+is_a: FYPO:0000656 ! abnormal DNA binding
+created_by: midori
+creation_date: 2014-08-27T15:09:29Z
+
+[Term]
+id: FYPO:0003736
+name: normal mitotic index
+def: "A cell population phenotype in which the mitotic index is normal (i.e. indistinguishable from wild type). The mitotic index is the proportion of the population undergoing mitosis at any given time." [PomBase:mah, PomBase:vw]
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0000257 ! normal phenotype
+created_by: midori
+creation_date: 2014-08-27T15:16:49Z
+
+[Term]
+id: FYPO:0003737
+name: delayed protein phosphorylation during mitotic G2 phase
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, begins later than normal during G2 phase of the mitotic cell cycle." [PomBase:mah]
+synonym: "delayed protein phosphorylation during mitotic G2 phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "delayed protein phosphorylation during mitotic G2-phase" EXACT [PomBase:vw]
+synonym: "delayed protein/peptide phosphorylation during mitotic G2 phase" EXACT [PomBase:mah]
+is_a: FYPO:0002830 ! delayed protein phosphorylation during vegetative growth
+intersection_of: PATO:0000502
+intersection_of: happens_during GO:0000085
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2014-08-27T15:30:55Z
+
+[Term]
+id: FYPO:0003738
+name: abnormal mitotic cell cycle arrest with condensed chromosomes
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested when cells have condensed chromosomes, but show no other signs of having entered mitosis or M phase, under conditions where arrest does not normally occur." [PomBase:mah]
+comment: Arrest with replicated DNA may occur between late S and G2/M; if only DNA content is measured, the arrest point cannot be determined with greater precision.
+synonym: "abnormal mitotic cell cycle arrest with condensed chromosomes during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+intersection_of: FYPO:0000407 ! abnormally arrested cell cycle progression
+intersection_of: during GO:0072690
+intersection_of: preceded_by GO:0007076
+created_by: midori
+creation_date: 2014-08-27T15:31:53Z
+
+[Term]
+id: FYPO:0003739
+name: decreased DNA replication origin binding
+def: "A molecular function phenotype in which occurrence of DNA binding at a replication origin by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." [PomBase:mah]
+synonym: "decreased origin binding" EXACT [PomBase:mah]
+synonym: "reduced DNA replication origin binding" EXACT [PomBase:mah]
+is_a: FYPO:0000658 ! decreased DNA binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003688
+created_by: midori
+creation_date: 2014-08-27T16:12:31Z
+
+[Term]
+id: FYPO:0003740
+name: decreased CENP-A containing nucleosome assembly at centromere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the formation of nucleosomes containing the histone H3 variant CenH3 (also called CENP-A; Cnp1 in S. pombe) occurs to a lower extent than normal. CENP-A-containing nucleosomes are normally assembled into chromatin around centromeres, encompassing the central core and centromeric inner repeat regions." [GO:0034080, PomBase:mah]
+synonym: "decreased CenH3-containing nucleosome assembly at centromere" RELATED [GO:0034080]
+synonym: "decreased CENP-A containing nucleosome assembly" EXACT [PomBase:mah]
+synonym: "decreased CENP-A containing nucleosome assembly at centromere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased CENP-A containing nucleosome assembly at centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased CENP-A deposition" RELATED [GO:0034080]
+synonym: "decreased CENP-A loading" RELATED [GO:0034080]
+synonym: "decreased centromere-specific histone exchange" EXACT [GO:0034080]
+synonym: "decreased centromere-specific nucleosome assembly" EXACT [GO:0034080]
+synonym: "decreased centromeric DNA replication-independent nucleosome assembly" EXACT [GO:0034080]
+synonym: "decreased DNA replication-independent nucleosome assembly at centromere" EXACT [GO:0034080]
+synonym: "reduced CENP-A containing nucleosome assembly at centromere" EXACT [PomBase:mah]
+is_a: FYPO:0003409 ! abnormal CENP-A containing nucleosome assembly at centromere
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034080
+created_by: midori
+creation_date: 2014-08-27T16:19:51Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
