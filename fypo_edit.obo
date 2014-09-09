@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:09:2014 17:28
+date: 09:09:2014 15:38
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -207,7 +207,7 @@ is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
-relationship: output_of FYPO:0003481 ! viable elongated vegetative cell, elongated upon mitotic entry
+relationship: has_output FYPO:0003481 ! viable elongated vegetative cell, elongated upon mitotic entry
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -3299,7 +3299,8 @@ creation_date: 2011-04-19T02:59:38Z
 [Term]
 id: FYPO:0000233
 name: long cytoplasmic microtubules
-def: "A microtubule organization phenotype observed in the vegetative growth phase of the life cycle in which cells form cytoplasmic microtubules that are longer than normal." [PomBase:mah]
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form cytoplasmic microtubules that are longer than normal." [PomBase:mah]
+synonym: "elongated cytoplasmic microtubules" EXACT [PomBase:mah]
 synonym: "long cytoplasmic microtubules during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "long cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
 synonym: "microtubule organization defect, long cytoplasmic microtubules" EXACT [PomBase:mah]
@@ -4249,7 +4250,7 @@ synonym: "reduced conjugation efficiency" EXACT [PomBase:mah]
 synonym: "reduced conjugation frequency" EXACT [PomBase:mah]
 synonym: "reduced zygote formation" RELATED [PomBase:mah]
 is_a: FYPO:0000031 ! abnormal conjugation
-intersection_of: PATO:0002052
+intersection_of: PATO:0000381<
 intersection_of: inheres_in GO:0000747
 created_by: midori
 creation_date: 2011-04-26T02:40:00Z
@@ -10461,7 +10462,6 @@ creation_date: 2012-01-18T03:00:32Z
 id: FYPO:0000760
 name: normal conjugation
 def: "A cellular process phenotype in which conjugation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal conjugation frequency" NARROW [PomBase:mah]
 synonym: "normal conjugation with cellular fusion" EXACT [PomBase:mah]
 synonym: "normal zygote formation" RELATED [PomBase:mah]
 is_a: FYPO:0000257 ! normal phenotype
@@ -10481,7 +10481,7 @@ synonym: "increased conjugation efficiency" EXACT [PomBase:mah]
 synonym: "increased occurrence of conjugation" EXACT [PomBase:mah]
 synonym: "increased zygote formation" RELATED [PomBase:mah]
 is_a: FYPO:0000031 ! abnormal conjugation
-intersection_of: PATO:0002051
+intersection_of: PATO:0000380
 intersection_of: inheres_in GO:0000747
 created_by: midori
 creation_date: 2012-01-18T03:03:19Z
@@ -10628,7 +10628,7 @@ synonym: "perforated nuclear membrane" RELATED [PomBase:mah]
 is_a: FYPO:0000769 ! abnormal nuclear envelope morphology during vegetative growth
 intersection_of: PATO:0002112
 intersection_of: exists_during GO:0072690
-intersection_of: inheres_in GO:0005637
+intersection_of: inheres_in GO:0005635
 created_by: midori
 creation_date: 2012-02-09T04:12:08Z
 
@@ -25981,9 +25981,11 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "abnormal centromere clustering at nuclear periphery during interphase of mitotic cell cycle" EXACT [PomBase:mah]
 synonym: "abnormal centromere clustering at nuclear periphery during mitotic cell cycle" EXACT [PomBase:mah]
 synonym: "abnormal centromere clustering at nuclear periphery during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal centromere clustering at old mitotic spindle pole body" RELATED [PomBase:vw]
 synonym: "abnormal centromere clustering at SPB" RELATED [PomBase:mah]
 synonym: "abnormal centromere clustering at spindle pole body" RELATED [GO:0072766, PomBase:mah]
 synonym: "abnormal centromere-SPB clustering" RELATED [GO:0072766]
+synonym: "abnormal kinetochore clustering at old mitotic spindle pole body" RELATED [PomBase:vw]
 synonym: "abnormal kinetochore clustering at SPB" RELATED [GO:0072766]
 synonym: "abnormal kinetochore clustering at spindle pole body" RELATED [PomBase:mah]
 synonym: "abnormal kinetochore localization at spindle pole body" RELATED [GO:0072766]
@@ -29278,13 +29280,14 @@ creation_date: 2013-02-27T13:50:36Z
 id: FYPO:0002005
 name: lobate nuclear envelope
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the nuclear envelope has a lobate cross-section, i.e. one in which the edge has deep indentations or undulations that form lobes." [http://en.wikipedia.org/wiki/File\:Leaf_morphology.svg&oldid=313835870, PMID:2211869, PomBase:mah]
+comment: This term differs from 'nuclear envelope protrusion present' (FYPO:0003788) in that a lobate envelope has a few deep fissures extending inward from the cytoplasm that appear to partially divide the nucleus into portians, whereas protrusions are smaller and extend outward from the bulk of the nucleus.
 synonym: "leaf-like nuclear envelope morphology" RELATED [PomBase:al]
 synonym: "lobate nuclear envelope during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "lobate nuclear envelope during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000769 ! abnormal nuclear envelope morphology during vegetative growth
 intersection_of: PATO:0001367
 intersection_of: exists_during GO:0072690
-intersection_of: inheres_in GO:0005637
+intersection_of: inheres_in GO:0005635
 created_by: midori
 creation_date: 2013-02-27T14:11:12Z
 
@@ -47730,10 +47733,11 @@ creation_date: 2014-03-28T15:22:36Z
 id: FYPO:0003251
 name: decreased transcription from SRE promoter
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which transcription from a promoter that contains one or more sterol regulatory elements (SREs) occurs to a lower extent than normal." [PMID:24327658, PomBase:mah]
-synonym: "decreased transcription decreased transcription from SRE promoter during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased transcription from SRE promoter during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased transcription from SRE promoter during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased transcription from SRE-containing promoter" EXACT [PomBase:mah]
 synonym: "decreased transcription from sterol regulatory element-containing promoter" EXACT [PomBase:mah, SO:1861]
+synonym: "reduced transcription from SRE promoter" EXACT [PomBase:mah]
 is_a: FYPO:0000781 ! decreased transcription during vegetative growth
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
@@ -54136,7 +54140,7 @@ id: FYPO:0003701
 name: poly(A)+ RNA-containing focus present in nucleus
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the nucleus contains one or more foci that are enriched in polyadenylated RNA and are not found in wild-type cells." [PMID:20129053, PomBase:mah]
 synonym: "poly(A)+ RNA-containing foci present in nucleus" EXACT [PomBase:mah]
-is_a: FYPO:0000062 ! abnormal nuclear morphology during vegetative growth
+is_a: FYPO:0002403 ! abnormal nucleus
 created_by: midori
 creation_date: 2014-08-18T13:36:39Z
 
@@ -54225,7 +54229,7 @@ name: normal frequency of conjugation with h+ cells
 def: "A conjugation phenotype in which conjugation by a mutant with wild type h+ occurs at the same frequency as normal." [PomBase:mah]
 synonym: "normal conjugation with WT h+ cells" EXACT [PomBase:mah]
 synonym: "normal frequency of conjugation with h plus cells" EXACT [PomBase:mah]
-is_a: FYPO:0000760 ! normal conjugation
+is_a: FYPO:0003797 ! normal conjugation frequency
 created_by: midori
 creation_date: 2014-08-18T14:24:51Z
 
@@ -54722,6 +54726,10 @@ synonym: "protein localization to centromeric chromatin during vegetative growth
 is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
 is_a: FYPO:0000634 ! abolished protein localization to centromere
 is_a: FYPO:0001678 ! abolished protein localization to chromatin
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: occurs_at SO:0001795
+intersection_of: towards GO:0071168
 created_by: midori
 creation_date: 2014-09-01T14:23:24Z
 
@@ -55022,6 +55030,10 @@ synonym: "abolished protein localization to chromatin at centromere central core
 synonym: "protein localization to chromatin at centromere central core during vegetative growth abolished" EXACT [PomBase:mah]
 is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
 is_a: FYPO:0003744 ! abolished protein localization to centromeric chromatin
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: occurs_at SO:0001796
+intersection_of: towards GO:0071168
 created_by: midori
 creation_date: 2014-09-08T12:38:50Z
 
@@ -55285,6 +55297,231 @@ intersection_of: inheres_in GO:0031081
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2014-09-08T17:25:07Z
+
+[Term]
+id: FYPO:0003784
+name: inviable after spore germination, single or double cell division, arrest with septated mononucleate cell
+def: "A phenotype in which a spore germinates to produce a cell of normal morphology that undergoes one or two rounds of cell division, and all cells produced arrest the cell cycle with a septum and a nucleus in one compartment, and then die." [PomBase:mah, PomBase:vw]
+synonym: "essential; germinating spore, single or double cell division, arrest with septated mononucleate cell" RELATED [PomBase:mah]
+synonym: "inviable after spore germination, single or double cell division, arrest with septated cell and single nucleus" EXACT [PomBase:vw]
+synonym: "inviable after spore germination, single or double cell division, arrest with septated mononucleate cell" EXACT [PomBase:vw]
+synonym: "inviable following spore germination, single or double cell division, arrest with septated mononucleate cell" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, single or double cell division, arrest with septated mononucleate cell" EXACT [PomBase:mah]
+is_a: FYPO:0002000 ! inviable septated mononucleate vegetative cell
+is_a: FYPO:0003759 ! inviable after spore germination, single or double cell division, arrest with single nucleus
+created_by: midori
+creation_date: 2014-09-09T11:07:33Z
+
+[Term]
+id: FYPO:0003785
+name: aseptate mononucleate vegetative cell
+def: "A cell phenotype in which a cell contains one nucleus and no septum." [PomBase:mah]
+synonym: "aseptate mononucleate cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "aseptate mononucleate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "mononucleate aseptate vegetative cell" EXACT [PomBase:mah]
+synonym: "unseptated mononucleate vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0000060 ! mononucleate vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
+intersection_of: has_part FYPO:0000949 ! aseptate
+created_by: midori
+creation_date: 2014-09-09T11:19:49Z
+
+[Term]
+id: FYPO:0003786
+name: abolished protein localization to centromere central core
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the central core of the centromeric regions is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to centromere central core during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished protein localization to centromere central core during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "protein localization to centromere central core during vegetative growth abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000449 ! abnormal protein localization to centromere
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: occurs_at SO:0001796
+intersection_of: towards GO:0071459
+created_by: midori
+creation_date: 2014-09-09T13:24:06Z
+
+[Term]
+id: FYPO:0003787
+name: long mitotic spindle microtubules protruding from spindle pole body
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form spindle microtubules that are longer than normal, and extend beyond the spindle pole body." [PMID:17486116, PomBase:mah]
+comment: Consider also annotating to 'nuclear envelope protrusion present' (FYPO:0003788), because the protruding spindle microtubules are usually surrounded by an extension of the nuclear envelope.
+synonym: "elongated mitotic spindle microtubules protruding from spindle pole body" EXACT [PomBase:mah]
+synonym: "elongated mitotic spindle microtubules protruding from spindle pole body during M-phase" EXACT [PomBase:vw]
+synonym: "long mitotic spindle microtubules protruding from SPB" EXACT [PomBase:mah]
+synonym: "long mitotic spindle microtubules protruding from spindle pole body during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "long mitotic spindle microtubules protruding from spindle pole body during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000055 ! long microtubules
+is_a: FYPO:0000338 ! abnormal mitotic spindle
+intersection_of: PATO:0001646
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005876
+intersection_of: towards GO:0044732
+created_by: midori
+creation_date: 2014-09-09T13:26:10Z
+
+[Term]
+id: FYPO:0003788
+name: nuclear envelope protrusion present
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the nuclear envelope has one or more extensions that protrude into the cytoplasm." [PMID:17486116, PMID:25103238, PomBase:mah]
+comment: This term differs from 'lobate nuclear envelope' (FYPO:0002005) in that a lobate envelope has a few deep fissures extending inward from the cytoplasm that appear to partially divide the nucleus into portians, whereas protrusions are smaller and extend outward from the bulk of the nucleus.
+synonym: "nuclear envelope protrusion present during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "nuclear envelope protrusion presente during vegetative growth" EXACT [PomBase:mah]
+synonym: "protruding nuclear envelope" EXACT [PomBase:mah]
+is_a: FYPO:0000769 ! abnormal nuclear envelope morphology during vegetative growth
+intersection_of: PATO:0001598
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005635
+created_by: midori
+creation_date: 2014-09-09T13:34:47Z
+
+[Term]
+id: FYPO:0003789
+name: decreased meiosis II
+def: "A cellular process phenotype in which the occurrence of the second meiotic nuclear division, in which two chromatids in each chromosome are normally separated, is decreased." [PomBase:mah]
+synonym: "decreased second meiotic nuclear division" EXACT [PomBase:al]
+synonym: "meiosis II: decreased" EXACT [PomBase:mah]
+synonym: "reduced meiosis II" EXACT [PomBase:mah]
+is_a: FYPO:0000051 ! abnormal meiosis
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0007135
+created_by: midori
+creation_date: 2014-09-09T14:01:31Z
+
+[Term]
+id: FYPO:0003790
+name: normal protein localization during meiosis
+def: "A cell phenotype in which the localization of a protein in a cell is normal (i.e. indistinguishable from wild type) during the first or second meiotic nuclear division." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation during meiosis" EXACT [PomBase:mah]
+synonym: "normal protein localization during meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0003627 ! normal protein localization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0007126
+intersection_of: inheres_in GO:0034613
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-09-09T14:03:28Z
+
+[Term]
+id: FYPO:0003791
+name: increased meiotic recombination at silent mating-type cassette
+def: "A cellular process phenotype in which the occurrence of reciprocal meiotic recombination is increased at the silent mating-type cassettes." [PomBase:mah]
+is_a: FYPO:0000008 ! abnormal meiotic recombination
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0007131
+intersection_of: occurs_at SO:0001984
+created_by: midori
+creation_date: 2014-09-09T14:37:37Z
+
+[Term]
+id: FYPO:0003792
+name: increased meiotic DNA double-strand break formation at silent mating-type cassette
+def: "A cellular process phenotype in which generation of double-strand breaks at defined hotspots throughout the genome during meiosis I is increased at the silent mating-type cassettes." [PomBase:mah]
+is_a: FYPO:0000008 ! abnormal meiotic recombination
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0042138
+intersection_of: occurs_at SO:0001984
+created_by: midori
+creation_date: 2014-09-09T14:41:21Z
+
+[Term]
+id: FYPO:0003793
+name: normal RNA level during cellular response to osmotic stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to osmotic stress is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "normal mRNA level during cellular response to osmotic stress" NARROW [PomBase:mah]
+synonym: "normal RNA accumulation during cellular response to osmotic stress" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to osmotic stress during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to osmotic stress during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0071470
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-09-09T14:57:46Z
+
+[Term]
+id: FYPO:0003794
+name: normal cellular glycerol level during cellular response to osmotic stress
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of glycerol measured in a cell is normal (i.e. indistinguishable from wild type) during a cellular response to osmotic stress." [PomBase:mah]
+synonym: "normal cellular glycerol accumulation during cellular response to osmotic stress" RELATED [PomBase:mah]
+synonym: "normal cellular glycerol level during cellular response to osmotic stress during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal cellular glycerol level during cellular response to osmotic stress during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0071470
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:17754
+created_by: midori
+creation_date: 2014-09-09T15:00:03Z
+
+[Term]
+id: FYPO:0003795
+name: normal cell wall alpha-glucan level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of alpha-D-glucan measured in the cell wall is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cell wall alpha-D-glucan level" EXACT [CHEBI:22385, PomBase:mah]
+synonym: "normal cell wall alpha-glucan accumulation" RELATED [PomBase:mah]
+synonym: "normal cell wall alpha-glucan level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal cell wall alpha-glucan level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0009277
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:22385
+created_by: midori
+creation_date: 2014-09-09T15:07:56Z
+
+[Term]
+id: FYPO:0003796
+name: abolished transcription from RNA polymerase II promoter
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which transcription from an RNA polymerase II promoter does not occur. All genes, or a specific subset of genes, may be affected." [PMID:16874521, PomBase:mah]
+synonym: "abolished transcription from RNA polymerase II promoter during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished transcription from RNA polymerase II promoter during vegetative growth" EXACT [PomBase:mah]
+synonym: "transcription from RNA polymerase II promoter abolished" EXACT [PomBase:mah]
+is_a: FYPO:0001443 ! abolished transcription during vegetative growth
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0006366
+created_by: midori
+creation_date: 2014-09-09T15:27:35Z
+
+[Term]
+id: FYPO:0003797
+name: normal conjugation frequency
+def: "A conjugation phenotype in which conjugation occurs at a normal (i.e. indistinguishable from wild type) frequency." [PomBase:mah]
+comment: Note that this term refers specifically to conjugation, whereas experiments that measure mating efficiency often do so by counting zygotes plus asci, sometimes also including spores. For such experiments, we recommend using 'normal mating efficiency' (FYPO:0001147).
+synonym: "normal conjugation efficiency" EXACT [PomBase:mah]
+synonym: "normal occurrence of conjugation" EXACT [PomBase:mah]
+synonym: "normal zygote formation" RELATED [PomBase:mah]
+is_a: FYPO:0000257 ! normal phenotype
+intersection_of: PATO:0000044
+intersection_of: inheres_in GO:0000747
+intersection_of: qualifier PATO:0000461
+relationship: part_of FYPO:0000760 ! normal conjugation
+created_by: midori
+creation_date: 2014-09-09T15:33:50Z
+
+[Term]
+id: FYPO:0003798
+name: normal meiosis II
+def: "A cellular process phenotype in which the second meiotic nuclear division is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal second meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0007135
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-09-09T15:36:52Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
