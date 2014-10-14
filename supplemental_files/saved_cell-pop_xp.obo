@@ -37,26 +37,12 @@ intersection_of: PATO:0001551
 intersection_of: inheres_in GO:0072690
 intersection_of: towards CHEBI:
 
-! stress sens
-[Term]
-id: FYPO:
-intersection_of: PATO:0001551
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:
-
 ! chem resistance
 [Term]
 id: FYPO:
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0072690
 intersection_of: towards CHEBI:
-
-! stress resist
-[Term]
-id: FYPO:
-intersection_of: PATO:0001552
-intersection_of: during GO:0072690
-intersection_of: inheres_in GO:
 
 ! normal on chem
 [Term]
@@ -65,3 +51,21 @@ intersection_of: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0000467
 intersection_of: towards CHEBI:
+
+! for stresses, note that we don't have (a) an ontology or other
+!  source of IDs for stresses, or (b) a process for the
+!  non-vegetative-phase-specific stress phenotype xps
+
+!! stress sens - FYPO:0000304 & descendants
+[Term]
+id: FYPO:
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards ![some stress]
+
+!! stress resist - FYPO:0000850 & descendants
+[Term]
+id: FYPO:
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards ![some stress]
