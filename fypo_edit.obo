@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 14:10:2014 16:28
+date: 15:10:2014 18:06
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -1053,7 +1053,6 @@ name: resistance to benomyl
 def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of benomyl than normal." [PomBase:mah]
 synonym: "resistance to benomyl during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "resistance to benomyl during vegetative growth" EXACT [PomBase:mah]
-synonym: "resistance to MBC" EXACT [PMID:6887244]
 synonym: "resistance to methyl benzimidazole-2-yl-carbamate" EXACT [PMID:6887244]
 synonym: "resistant to benomyl" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
@@ -1384,7 +1383,6 @@ def: "A phenotype observed in the vegetative growth phase of the life cycle in w
 synonym: "hypersensitive to benomyl" EXACT [PomBase:mah]
 synonym: "sensitive to benomyl during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "sensitive to benomyl during vegetative growth" EXACT [PomBase:mah]
-synonym: "sensitive to MBC" EXACT [PMID:6887244]
 synonym: "sensitive to methyl benzimidazole-2-yl-carbamate" EXACT [PMID:6887244]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
 intersection_of: PATO:0001551
@@ -2832,6 +2830,7 @@ creation_date: 2011-04-13T03:41:10Z
 id: FYPO:0000197
 name: abnormal horsetail movement
 def: "A cellular process phenotype in which horsetail movement is abnormal. Horsetail movement is the oscillatory movement of the nucleus that takes place during meiotic prophase I." [GO:0030989, PomBase:mah]
+comment: Consider also annotating to 'abnormal horsetail nucleus morphology' (FYPO:0002890).
 synonym: "abnormal dynein-driven meiotic oscillatory nuclear movement" EXACT [GO:0030989, PomBase:mah]
 synonym: "abnormal horsetail nuclear movement" EXACT [GO:0030989, PomBase:mah]
 is_a: FYPO:0001720 ! abnormal transport
@@ -3845,6 +3844,7 @@ is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
 intersection_of: PATO:0000498
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0000087
+relationship: has_output FYPO:0000420 ! delayed cytokinesis
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -5383,7 +5383,7 @@ def: "A cellular process phenotype in which traversing the start control point o
 synonym: "cell cycle passage through START: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal mitotic cell cycle passage through START" EXACT [PomBase:mah]
 synonym: "normal passage through START of mitotic cell cycle during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000411 ! normal cell cycle
+is_a: FYPO:0000411 ! normal mitotic cell cycle
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007089
@@ -5562,7 +5562,7 @@ def: "A cellular process phenotype in which the G2/M transition of the mitotic c
 synonym: "cell cycle progression through the G2/M phase transition: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
 synonym: "normal mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0002741 ! normal cell cycle process
+is_a: FYPO:0002741 ! normal mitotic cell cycle process
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
@@ -5628,17 +5628,17 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000411
-name: normal cell cycle
-def: "A cellular process phenotype in which cell cycle progression is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "cell cycle progression: normal" EXACT [SGD:phenotype_annotation]
-synonym: "normal cell cycle during mitotic cell cycle" RELATED [PomBase:mah]
+name: normal mitotic cell cycle
+def: "A cellular process phenotype in which mitotic cell cycle progression is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "mitotic cell cycle progression: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal cell cycle during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal cell cycle progression" EXACT [PomBase:mah]
-synonym: "normal cell-division cycle" EXACT [GO:0007049, PomBase:mah]
+synonym: "normal mitotic cell cycle progression" EXACT [PomBase:mah]
+synonym: "normal mitotic cell-division cycle" EXACT [GO:0007049, PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+is_a: FYPO:0003832 ! normal cell cycle
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0007049
+intersection_of: inheres_in GO:0000278
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
@@ -7692,7 +7692,7 @@ def: "A cellular process phenotype in which progression through the G1 phase of 
 synonym: "mitotic cell cycle progression in G1 phase: normal" EXACT [SGD:phenotype_annotation]
 synonym: "normal mitotic cell cycle progression in G1" EXACT [PomBase:mah]
 synonym: "normal mitotic G1 phase progression during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0002740 ! normal cell cycle phase
+is_a: FYPO:0002740 ! normal mitotic cell cycle phase
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000080
@@ -8007,7 +8007,9 @@ id: FYPO:0000581
 name: decreased spore germination
 def: "A cellular process phenotype in which the occurrence of spore germination is decreased. At the cellular level, an individual spore is less likely to germinate than normal." [PomBase:mah]
 comment: Note that this phenotype is usually assayed by observing a population of spores and measuring how many germinate. This term may be replaced by a cell population term in the future.
+synonym: "decreased spore viability" RELATED [PomBase:mah]
 synonym: "reduced spore germination" EXACT [PomBase:mah]
+synonym: "reduced spore viability" RELATED [PomBase:mah]
 synonym: "spore germination: decreased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000305 ! abnormal spore germination
 intersection_of: PATO:0002052
@@ -22066,7 +22068,7 @@ creation_date: 2012-09-13T15:02:01Z
 id: FYPO:0001532
 name: normal duration of mitotic S phase
 def: "A cell cycle phenotype in the duration of S phase of the mitotic cell cycle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-is_a: FYPO:0002740 ! normal cell cycle phase
+is_a: FYPO:0002740 ! normal mitotic cell cycle phase
 intersection_of: PATO:0001309
 intersection_of: inheres_in GO:0000084
 intersection_of: qualifier PATO:0000461
@@ -24528,14 +24530,14 @@ creation_date: 2012-11-02T15:39:06Z
 
 [Term]
 id: FYPO:0001686
-name: normal growth on MBC
-def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing the tubulin poison mecarzole (MBC)." [PomBase:mah]
-synonym: "normal cell population growth in presence of MBC" EXACT [PomBase:mah]
-synonym: "normal cell population growth on carbendazim" EXACT [CHEBI:3392]
-synonym: "normal cell population growth on MBC" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
-synonym: "normal cell population growth on mecarzole" EXACT [PomBase:al]
-synonym: "normal cellular response to MBC" RELATED [PomBase:al, PomBase:mah]
-synonym: "normal vegetative cell population growth on MBC" EXACT [PomBase:mah]
+name: normal growth on carbendazim
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing the tubulin poison carbendazim (mecarzole; MBC)." [PomBase:mah]
+synonym: "normal cell population growth in presence of carbendazimw" EXACT [PomBase:mah]
+synonym: "normal cell population growth on carbendazim" EXACT [CHEBI:3392, PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cell population growth on mecarzole" EXACT [CHEBI:3392, PomBase:al]
+synonym: "normal cellular response to carbendazim" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on MBC" EXACT [CHEBI:3392]
+synonym: "normal vegetative cell population growth on carbendazim" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: inheres_in BTO:0000316
@@ -24550,7 +24552,6 @@ name: normal growth on benomyl
 def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing benomyl." [PomBase:mah]
 synonym: "normal cell population growth in presence of benomyl" EXACT [PomBase:mah]
 synonym: "normal cell population growth on benomyl" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
-synonym: "normal cell population growth on MBC" EXACT [PMID:6887244]
 synonym: "normal cell population growth on methyl benzimidazole-2-yl-carbamate" EXACT [PMID:6887244]
 synonym: "normal cellular response to benomyl" RELATED [PomBase:al, PomBase:mah]
 synonym: "normal vegetative cell population growth on benomyl" EXACT [PomBase:mah]
@@ -25662,7 +25663,7 @@ name: normal mitotic G1/S phase transition
 def: "A cellular process phenotype in which the G1/S transition of the mitotic cell cycle is normal." [PomBase:mah]
 synonym: "normal cell cycle progression through mitotic G1/S phase transition" EXACT [PomBase:mah]
 synonym: "normal mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0002741 ! normal cell cycle process
+is_a: FYPO:0002741 ! normal mitotic cell cycle process
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000082
@@ -27700,17 +27701,19 @@ creation_date: 2013-01-30T17:14:13Z
 
 [Term]
 id: FYPO:0001904
-name: actomyosin contractile ring collapse
+name: premature actomyosin contractile ring disassembly
 def: "A cytokinesis phenotype observed in the vegetative growth phase of the life cycle in which the contractile ring collapses or disassembles upon initiation of contraction during anaphase B. Septum formation typically does not occur in cells in which the contractile ring has collapsed." [PMID:22174761, PomBase:mah]
 synonym: "abnormal contractile ring contraction with contractile ring collapse" EXACT [PomBase:mah]
-synonym: "actomyosin contractile ring collapse during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "actomyosin contractile ring collapse during vegetative growth" EXACT [PomBase:mah]
+synonym: "actomyosin contractile ring collapse" EXACT [PomBase:mah]
 synonym: "actomyosin contractile ring collapse upon contraction" EXACT [PomBase:mah]
+synonym: "actomyosin contractile ring disassembly before septation" EXACT [PomBase:vw]
 synonym: "cytokinesis defects, collapse of the actinomyosin ring" RELATED [PomBase:mah]
-is_a: FYPO:0001364 ! abnormal contractile ring contraction
-intersection_of: PATO:0001478
-intersection_of: happens_during GO:0000092
-intersection_of: inheres_in GO:0005826
+synonym: "premature actomyosin contractile ring disassembly during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "premature actomyosin contractile ring disassembly during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000032 ! abnormal cytokinesis
+intersection_of: PATO:0000694
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902621
 created_by: midori
 creation_date: 2013-01-30T17:33:34Z
 
@@ -35008,6 +35011,7 @@ name: microtubule bundles present in greater numbers
 def: "A physical cellular phenotype in which cells contain more microtubule bundles than normal." [PomBase:mah]
 synonym: "extra microtubule bundles" EXACT [PomBase:mah]
 synonym: "increased level of MT bundles" EXACT [PomBase:al]
+synonym: "increased microtubule bundling" RELATED [PomBase:vw]
 synonym: "increased number of microtubule bundles" EXACT [PomBase:mah]
 is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
 intersection_of: PATO:0002002
@@ -39926,12 +39930,14 @@ creation_date: 2013-10-01T15:17:46Z
 
 [Term]
 id: FYPO:0002740
-name: normal cell cycle phase
-def: "A cellular process phenotype in which a cell proceeds normally through a specific cell cycle phase. A cell cycle phase is any of the distinct periods or stages into which the cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
+name: normal mitotic cell cycle phase
+def: "A cellular process phenotype in which a cell proceeds normally through a specific mitotic cell cycle phase. A mitotic cell cycle phase is any of the distinct periods or stages into which the mitotic cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
-is_a: FYPO:0000411 ! normal cell cycle
+is_a: FYPO:0000411 ! normal mitotic cell cycle
+is_a: FYPO:0003833 ! normal cell cycle phase
 intersection_of: PATO:0000001
+intersection_of: during GO:0000278
 intersection_of: inheres_in GO:0022403
 intersection_of: qualifier PATO:0000461
 created_by: midori
@@ -39939,13 +39945,13 @@ creation_date: 2013-10-01T16:02:38Z
 
 [Term]
 id: FYPO:0002741
-name: normal cell cycle process
-def: "A cellular process phenotype in which a cell executes a cell cycle process normally. A cell cycle process is any of the processes that form part of the cell cycle, and thereby ensures successive accurate and complete genome replication and chromosome segregation." [GO:0022402, PomBase:mah]
+name: normal mitotic cell cycle process
+def: "A cellular process phenotype in which a cell executes a mitotic cell cycle process normally. A mitotic cell cycle process is any of the processes that form part of the mitotic cell cycle, and thereby ensures successive accurate and complete genome replication and chromosome segregation." [GO:1903047, PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
-is_a: FYPO:0000411 ! normal cell cycle
+is_a: FYPO:0000411 ! normal mitotic cell cycle
 intersection_of: PATO:0000051
-intersection_of: inheres_in GO:0022402
+intersection_of: inheres_in GO:1903047
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2013-10-01T16:03:12Z
@@ -41061,6 +41067,7 @@ id: FYPO:0002818
 name: microtubule bundles present in decreased numbers
 def: "A physical cellular phenotype in which cells contain fewer microtubule bundles than normal." [PomBase:mah]
 synonym: "decreased level of MT bundles" EXACT [PomBase:mah]
+synonym: "decreased microtubule bundling" RELATED [PomBase:vw]
 synonym: "microtubule bundles present in reduced numbers" EXACT [PomBase:mah]
 is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
 intersection_of: PATO:0002001
@@ -42140,7 +42147,7 @@ creation_date: 2013-11-19T12:47:35Z
 id: FYPO:0002890
 name: abnormal horsetail nucleus morphology
 def: "A physical cellular phenotype in which the size, shape, or structure of the horsetail nucleus is abnormal. The horsetail nucleus forms during the rapid oscillatory movement at meiotic prophase I." [PomBase:mah]
-comment: Note that an abnormal nucleus organization process may, but does not necessarily, result in abnormal nuclear morphology.
+comment: Note that an abnormal nucleus organization process may, but does not necessarily, result in abnormal nuclear morphology. Consider also annotating to 'abnormal horsetail movement' (FYPO:0000197).
 synonym: "abnormal horsetail nuclear morphology" EXACT [PomBase:mah]
 is_a: FYPO:0002256 ! abnormal nuclear morphology
 intersection_of: PATO:0000051
@@ -47551,7 +47558,7 @@ name: normal mitotic S phase progression
 def: "A cellular process phenotype in which progression through S phase of the mitotic cell cycle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal mitotic cell cycle progression in S" EXACT [PomBase:mah]
 synonym: "normal mitotic S phase progression during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0002740 ! normal cell cycle phase
+is_a: FYPO:0002740 ! normal mitotic cell cycle phase
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000084
@@ -52081,7 +52088,7 @@ creation_date: 2014-07-17T14:41:46Z
 id: FYPO:0003562
 name: normal horsetail nucleus morphology
 def: "A physical cellular phenotype in which the size, shape, or structure of the horsetail nucleus is normal (i.e. indistinguishable from wild type). The horsetail nucleus forms during the rapid oscillatory movement at meiotic prophase I." [PomBase:mah]
-comment: Note that an abnormal nucleus organization process may, but does not necessarily, result in abnormal nuclear morphology.
+comment: Note that an abnormal nucleus organization process may, but does not necessarily, result in abnormal nuclear morphology. Consider also annotating to 'normal horsetail movement' (FYPO:0003835).
 synonym: "normal horsetail nuclear morphology" EXACT [PomBase:mah]
 is_a: FYPO:0001233 ! normal subcellular component
 intersection_of: PATO:0000051
@@ -55753,10 +55760,10 @@ synonym: "nuclear division arrest in G2 without septation (normal cell length)" 
 is_a: FYPO:0001222 ! binucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000949 ! aseptate
 intersection_of: has_part FYPO:0001222 ! binucleate vegetative cell
-intersection_of: has_part FYPO:0000949
-intersection_of: has_part FYPO:0003373
 intersection_of: has_part FYPO:0002888 ! mitotic cell cycle arrest before cell separation
+intersection_of: has_part FYPO:0003373 ! abnormal cell cycle arrest in mitotic G2 phase
 relationship: has_part FYPO:0000949 ! aseptate
 relationship: has_part FYPO:0002888 ! mitotic cell cycle arrest before cell separation
 relationship: has_part FYPO:0003373 ! abnormal cell cycle arrest in mitotic G2 phase
@@ -55778,11 +55785,11 @@ synonym: "nuclear division arrest in G2 without septation (elongated cell)" EXAC
 is_a: FYPO:0003825 ! binucleate aseptate cell with mitotic cell cycle arrest in G2 before cell separation
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000949 ! aseptate
+intersection_of: has_part FYPO:0001122 ! elongated vegetative cell
 intersection_of: has_part FYPO:0001222 ! binucleate vegetative cell
-intersection_of: has_part FYPO:0000949
-intersection_of: has_part FYPO:0001122
-intersection_of: has_part FYPO:0003373
 intersection_of: has_part FYPO:0002888 ! mitotic cell cycle arrest before cell separation
+intersection_of: has_part FYPO:0003373 ! abnormal cell cycle arrest in mitotic G2 phase
 relationship: has_part FYPO:0000950 ! elongated aseptate cell
 relationship: has_part FYPO:0002888 ! mitotic cell cycle arrest before cell separation
 relationship: has_part FYPO:0003373 ! abnormal cell cycle arrest in mitotic G2 phase
@@ -55820,6 +55827,161 @@ intersection_of: during GO:0072690
 intersection_of: towards GO:0000022
 created_by: midori
 creation_date: 2014-10-14T16:26:09Z
+
+[Term]
+id: FYPO:0003830
+name: abnormal cytokinesis checkpoint
+def: "A cell cycle checkpoint phenotype in which the cytokinesis checkpoint of a mitotic cell cycle is abnormal. The mitotic cytokinesis checkpoint normally delays the G2/M transition of a mitotic cell cycle if cytokinesis was not completed correctly in the previous cell cycle. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0000078, PomBase:mah]
+synonym: "abnormal cytokinesis after mitosis checkpoint" EXACT [GO:0000078]
+synonym: "abnormal cytokinesis checkpoint activation" RELATED [PomBase:mah]
+synonym: "abnormal mitotic cell cycle cytokinesis checkpoint" EXACT [PomBase:mah]
+is_a: FYPO:0001704 ! abnormal cell cycle checkpoint
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000078
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-10-15T10:05:28Z
+
+[Term]
+id: FYPO:0003831
+name: abolished response to cytokinesis checkpoint signaling
+def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs in response to the cytokinesis checkpoint does not occur. The mitotic cytokinesis checkpoint normally delays the G2/M transition of a mitotic cell cycle if cytokinesis was not completed correctly in the previous cell cycle. Abolished arrest may result from a problem with detection of conditions that normally trigger a checkpoint, transduction of the checkpoint signal, or the response to the checkpoint signal." [PomBase:mah]
+comment: May indicate that a cell cycle checkpoint is not activated under conditions that normally trigger checkpoint signaling and subsequent cell cycle arrest.
+synonym: "abolished cytokinesis after mitosis checkpoint" RELATED [PomBase:mah]
+synonym: "abolished cytokinesis checkpoint activation" RELATED [PomBase:mah]
+synonym: "abolished cytokinesis checkpoint arrest" RELATED [PomBase:mah]
+synonym: "abolished response to cytokinesis after mitosis checkpoint signaling" EXACT [PomBase:mah]
+synonym: "abolished response to mitotic cell cycle cytokinesis checkpoint signaling" EXACT [PomBase:mah]
+synonym: "cell cycle arrest resulting from cytokinesis checkpoint activation abolished" EXACT [PomBase:mah]
+is_a: FYPO:0003830 ! abnormal cytokinesis checkpoint
+created_by: midori
+creation_date: 2014-10-15T10:24:37Z
+
+[Term]
+id: FYPO:0003832
+name: normal cell cycle
+def: "A cellular process phenotype in which cell cycle progression is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "cell cycle progression: normal" EXACT [SGD:phenotype_annotation]
+synonym: "normal cell cycle progression" EXACT [PomBase:mah]
+synonym: "normal cell-division cycle" EXACT [GO:0007049, PomBase:mah]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0007049
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-10-15T11:01:20Z
+
+[Term]
+id: FYPO:0003833
+name: normal cell cycle phase
+def: "A cellular process phenotype in which a cell proceeds normally through a specific cell cycle phase. A cell cycle phase is any of the distinct periods or stages into which the cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GO:0022403, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0003832 ! normal cell cycle
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0022403
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-10-15T11:04:03Z
+
+[Term]
+id: FYPO:0003834
+name: normal duration of meiotic interphase
+def: "A cell cycle phenotype in the duration of meiotic interphase, which begins after cytokinesis and ends when meiotic prophase begins, is normal (i.e. indistinguishable from wild type)." [GO:0051328, PomBase:mah]
+is_a: FYPO:0003833 ! normal cell cycle phase
+intersection_of: PATO:0001309
+intersection_of: inheres_in GO:0051328
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-10-15T11:05:28Z
+
+[Term]
+id: FYPO:0003835
+name: normal horsetail movement
+def: "A cellular process phenotype in which horsetail movement is normal (i.e. indistinguishable from wild type). Horsetail movement is the oscillatory movement of the nucleus that takes place during meiotic prophase I." [GO:0030989, PomBase:mah]
+comment: Consider also annotating to 'normal horsetail nucleus morphology' (FYPO:0003562).
+synonym: "normal dynein-driven meiotic oscillatory nuclear movement" EXACT [GO:0030989]
+synonym: "normal horsetail nuclear movement" EXACT [GO:0030989]
+is_a: FYPO:0000627 ! normal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0030989
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-10-15T11:08:48Z
+
+[Term]
+id: FYPO:0003836
+name: decreased RNA polymerase II carboxy-terminal domain kinase activity
+def: "A molecular function phenotype in which the observed rate of protein kinase activity is decreasedRNA polymerase II carboxy-terminal domain" [PomBase:mah]
+synonym: "reduced RNA polymerase II carboxy-terminal domain kinase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001381 ! abnormal protein kinase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0008353
+created_by: midori
+creation_date: 2014-10-15T11:28:58Z
+
+[Term]
+id: FYPO:0003837
+name: increased RNA polymerase II carboxy-terminal domain kinase activity
+def: "A molecular function phenotype in which the observed rate of RNA polymerase II carboxy-terminal domain kinase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001381 ! abnormal protein kinase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0008353
+created_by: midori
+creation_date: 2014-10-15T11:29:13Z
+
+[Term]
+id: FYPO:0003838
+name: abolished contractile ring contraction
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which contractile ring contraction does not occur. Contractile ring contraction is the part of cytokinesis in which the actomyosin contractile ring constricts." [GO:1902404, PomBase:mah]
+synonym: "abolished actomyosin contractile ring contraction" EXACT [GO:1902404, PomBase:mah]
+synonym: "abolished contractile ring constriction" EXACT [PomBase:mah]
+synonym: "abolished contractile ring contraction during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished mitotic contractile ring contraction" EXACT [PomBase:mah]
+synonym: "contractile ring contraction abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000419 ! decreased rate of cytokinesis
+is_a: FYPO:0001364 ! abnormal contractile ring contraction
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:1902404
+created_by: midori
+creation_date: 2014-10-15T13:54:53Z
+
+[Term]
+id: FYPO:0003839
+name: abnormal protein localization to nucleolus during mitotic M phase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleolus is abnormal during M phase of the mitotic cell cycle." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to nucleolus during mitotic M phase" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to nucleolus during M phase of mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to nucleolus during mitotic M phase during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0000087
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902570
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-10-15T14:03:34Z
+
+[Term]
+id: FYPO:0003840
+name: sensitive to carbendazim
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to carbendazim (mecarzole; MBC). Cells stop growing (and may die) at a concentration of carbendazim that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to carbendazim" EXACT [PomBase:mah]
+synonym: "sensitive to carbendazim during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to carbendazim during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to MBC" EXACT [CHEBI:3392, PomBase:mah]
+synonym: "sensitive to mecarzole" EXACT [CHEBI:3392]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:3392
+created_by: midori
+creation_date: 2014-10-15T14:20:59Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
