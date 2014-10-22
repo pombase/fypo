@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 21:10:2014 16:25
+date: 22:10:2014 15:07
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -19921,7 +19921,6 @@ comment: For S. pombe, high temperature usually means above 32 degrees C. Use th
 synonym: "loss of viability at restrictive temperature" RELATED [PomBase:mah]
 is_a: FYPO:0001985 ! abnormal phenotype
 is_a: FYPO:0002057 ! cell population viability
-relationship: includes_cells_with_phenotype FYPO:0000713 ! abnormal cellular response to starvation
 created_by: midori
 creation_date: 2012-08-10T14:55:36Z
 
@@ -56746,6 +56745,7 @@ name: normal growth on glycerol/ethanol carbon source
 def: "A vegetative cell population growth phenotype in which cells grow normally in a medium containing glycerol and ethanol as the carbon sources." [PomBase:mah]
 synonym: "normal cell population growth on glycerol/ethanol carbon source" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
 synonym: "normal vegetative cell population growth on glycerol/ethanol carbon source" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
 creation_date: 2014-10-21T15:56:28Z
 
@@ -56796,6 +56796,160 @@ intersection_of: inheres_in GO:0072690
 intersection_of: towards CHEBI:4911<
 created_by: midori
 creation_date: 2014-10-21T16:02:09Z
+
+[Term]
+id: FYPO:0003903
+name: loss of viability at low temperature
+def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when are grown at a temperature lower than standard." [PomBase:mah]
+comment: For S. pombe, low temperature usually means below 25 degrees C. Use this term to annotate experiments in which a culture is grown at low temperature, and then the number of cells viable enough to form a colony upon return to standard or high temperature is measured and compared to wild type.
+synonym: "loss of viability at restrictive temperature" RELATED [PomBase:mah]
+is_a: FYPO:0001985 ! abnormal phenotype
+is_a: FYPO:0002057 ! cell population viability
+created_by: midori
+creation_date: 2014-10-22T10:30:48Z
+
+[Term]
+id: FYPO:0003904
+name: normal plasma membrane morphology
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the plasma membrane is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal plasma membrane morphology during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal plasma membrane morphology during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001233 ! normal subcellular component
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005886
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-10-22T10:34:28Z
+
+[Term]
+id: FYPO:0003905
+name: normal meiotic spindle pole body morphology during meiosis II
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the spindle pole body is normal (i.e. indistinguishable from wild type) during te second meiotic nuclear division." [PomBase:mah]
+comment: Note that an abnormal spindle pole body organization process may, but does not necessarily, result in abnormal spindle pole body structure.
+synonym: "normal meiotic SPB morphology during meiosis II" EXACT [PomBase:mah]
+synonym: "normal meiotic spindle pole body structure during meiosis II" NARROW [PomBase:mah]
+synonym: "normal spindle pole body morphology during meiosis II" EXACT [PomBase:mah]
+synonym: "normal spindle pole body morphology during second meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0001233 ! normal subcellular component
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0007135
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0035974
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-10-22T10:37:14Z
+
+[Term]
+id: FYPO:0003906
+name: normal growth on bleomycin
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing bleomycin." [PomBase:mah]
+synonym: "normal cell population growth in presence of bleomycin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on bleomycin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to bleomycin" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on bleomycin" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:22907
+created_by: midori
+creation_date: 2014-10-22T10:57:17Z
+
+[Term]
+id: FYPO:0003907
+name: sensitive to okadaic acid
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to okadaic acid. Cells stop growing (and may die) at a concentration of okadaic acid that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to okadaic acid" EXACT [PomBase:mah]
+synonym: "sensitive to okadaic acid during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to okadaic acid during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:44658
+created_by: midori
+creation_date: 2014-10-22T11:00:34Z
+
+[Term]
+id: FYPO:0003908
+name: increased antisense RNA transcription at stress response genes
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which antisense RNA transcription occurs to a greater extent than normal at genes that are expressed in response to stress. All stress-responsive genes, or a specific subset of such genes, may be affected." [PomBase:mah]
+synonym: "increased antisense RNA transcription at stress response genes during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased antisense RNA transcription at stress response genes during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased antisense transcription at stress response genes" EXACT [PomBase:mah]
+synonym: "increased antisense transcription at stress response genes during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002913 ! increased antisense RNA transcription
+created_by: midori
+creation_date: 2014-10-22T11:40:02Z
+
+[Term]
+id: FYPO:0003909
+name: increased nucleosome occupancy at CRE site
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which nucleosome occupancy is greater than normal at promoters containing CRE sites. Nucleosome occupancy measures the tendency for DNA in a given region to be packaged into nucleosomes." [PMID:25122751, PomBase:mah]
+is_a: FYPO:0003812 ! abnormal nucleosome positioning at stress response genes
+created_by: midori
+creation_date: 2014-10-22T11:48:22Z
+
+[Term]
+id: FYPO:0003910
+name: abolished VLP localization to nucleus during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of retrotransposon nucleocapsid complexes (also called virus-like particles, VLPs) to the nucleus is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localization to nucleus, with protein mislocalized to cytoplasm during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished retrotransposon nucleocapsid localization to nucleus during vegetative growth" EXACT [GO:0000943]
+synonym: "abolished virus-like particle localization to nucleus during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished VLP localisation to nucleus during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished VLP localization in nucleus during vegetative growth" EXACT [PomBase:mah]
+synonym: "VLP localization to nucleus abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001424 ! abolished protein localization to nucleus during vegetative growth
+created_by: midori
+creation_date: 2014-10-22T13:59:34Z
+
+[Term]
+id: FYPO:0003911
+name: UGA suppression
+def: "A translation phenotype in which a tRNA pairs with mRNA at the stop codon UGA, and incorporates an amino acid residue into the nascent polypeptide." [PomBase:mah]
+synonym: "opal suppression" EXACT [PomBase:mah]
+synonym: "opal suppressor" EXACT [PomBase:mah]
+synonym: "UGA suppressor" EXACT [PomBase:mah]
+is_a: FYPO:0001797 ! abnormal translation
+created_by: midori
+creation_date: 2014-10-22T14:37:43Z
+
+[Term]
+id: FYPO:0003912
+name: decreased double-strand break repair via homologous recombination
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which double-strand break repair via homologous recombination occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased double-strand break repair via homologous recombination during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased double-strand break repair via homologous recombination during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced double-strand break repair via homologous recombination" EXACT [PomBase:mah]
+is_a: FYPO:0000777 ! abnormal double-strand break repair
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000724
+created_by: midori
+creation_date: 2014-10-22T14:54:20Z
+
+[Term]
+id: FYPO:0003913
+name: decreased minichromosome loss during vegetative growth
+def: "A cell phenotype in which minichromosomes are lost at a lower frequency than normal during the vegetative growth phase of the life cycle. Minichromosome loss occurs when one or both daughter cells do not inherit copies of a minichromosome from the mother cell, and may result from failure of minichromosome replication or segregation." [PomBase:mah]
+comment: Note that in budding yeast, a plasmid loss phenotype is often called a minichromosome maintenance defect, because "minichromosome" is roughly synonymous with an autonomously replicated and segregated plasmid in that organism. In fission yeast, a minichromosome is a large portion of a chromosome, usually about half of chromosome 3, that replicates and segregates autonomously. For smaller autonomously replicating and segregating constructs, consider 'decreased plasmid loss' (FYPO:0001311).
+synonym: "decreased plasmid loss during mitotic cell cycle" EXACT [PomBase:mah]
+is_a: FYPO:0001320 ! vegetative cell phenotype
+is_a: FYPO:0003037 ! abnormal cell phenotype
+created_by: midori
+creation_date: 2014-10-22T14:55:34Z
+
+[Term]
+id: FYPO:0003914
+name: increased protein level in stationary phase
+def: "A cell phenotype in which the amount of protein measured in a cell is higher than normal when the population in which the cell is found is in stationary phase. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "increased protein accumulation in stationary phase" RELATED [PomBase:mah]
+is_a: FYPO:0000836 ! increased protein level
+created_by: midori
+creation_date: 2014-10-22T15:05:22Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
