@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 22:10:2014 15:07
+date: 22:10:2014 17:39
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -56618,11 +56618,11 @@ creation_date: 2014-10-21T14:27:56Z
 
 [Term]
 id: FYPO:0003889
-name: increased cell wall thickness at old end during vegetative growth
-def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the fungal-type cell wall is thicker than normal at the old end of the cell." [PMID:10547441, PomBase:mah]
-synonym: "increased cell wall thickness at old end during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "thickened cell wall at old end during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001035 ! increased cell wall thickness during vegetative growth
+name: decreased cell wall thickness at old end during vegetative growth
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the fungal-type cell wall is thinner than normal at the old end of the cell." [PMID:10547441, PomBase:mah]
+synonym: "decreased cell wall thickness at old end during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "thin cell wall at old end during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002163 ! decreased cell wall thickness during vegetative growth
 created_by: midori
 creation_date: 2014-10-21T14:29:12Z
 
@@ -56950,6 +56950,70 @@ synonym: "increased protein accumulation in stationary phase" RELATED [PomBase:m
 is_a: FYPO:0000836 ! increased protein level
 created_by: midori
 creation_date: 2014-10-22T15:05:22Z
+
+[Term]
+id: FYPO:0003915
+name: decreased mitochondrial protein level
+def: "A cell phenotype in which the amount of protein measured in the mitochondrion is lower than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
+synonym: "decreased level of mitochondrial proteins" EXACT [PomBase:al]
+synonym: "decreased mitochondrial protein level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased mitochondrial protein level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein level in mitochondrion during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0005739
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-10-22T17:27:17Z
+
+[Term]
+id: FYPO:0003916
+name: abnormal nonsense-mediated decay
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the degradation of messenger RNA (mRNA) molecules that contain nonsense mutations is abnormal." [PomBase:mah]
+synonym: "abnormal NMD" EXACT [PomBase:mah]
+synonym: "abnormal nonsense-mediated decay during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal nonsense-mediated decay during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal nuclear-transcribed mRNA catabolic process, nonsense-mediated decay" EXACT [GO:0000184]
+is_a: FYPO:0000294 ! RNA metabolism phenotype
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000184
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-10-22T17:30:05Z
+
+[Term]
+id: FYPO:0003917
+name: decreased nonsense-mediated decay
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the degradation of messenger RNA (mRNA) molecules that contain nonsense mutations is decreased." [PomBase:mah]
+synonym: "abolished nuclear-transcribed mRNA catabolic process, nonsense-mediated decay" EXACT [GO:0000184]
+synonym: "decreased NMD" EXACT [PomBase:mah]
+synonym: "decreased nonsense-mediated decay during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased nonsense-mediated decay during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced nonsense-mediated decay" EXACT [PomBase:mah]
+is_a: FYPO:0003916 ! abnormal nonsense-mediated decay
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000184
+created_by: midori
+creation_date: 2014-10-22T17:30:30Z
+
+[Term]
+id: FYPO:0003918
+name: abolished nonsense-mediated decay
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the degradation of messenger RNA (mRNA) molecules that contain nonsense mutations does not occur." [PomBase:mah]
+synonym: "abolished NMD" EXACT [PomBase:mah]
+synonym: "abolished nonsense-mediated decay during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished nonsense-mediated decay during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished nuclear-transcribed mRNA catabolic process, nonsense-mediated decay" EXACT [GO:0000184]
+synonym: "nonsense-mediated decay abolished" EXACT [PomBase:mah]
+is_a: FYPO:0003916 ! abnormal nonsense-mediated decay
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0000184
+created_by: midori
+creation_date: 2014-10-22T17:31:00Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
