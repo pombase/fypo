@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 04:11:2014 16:47
+date: 05:11:2014 16:43
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -354,6 +354,7 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 synonym: "cell morphology, stubby cells" EXACT [PomBase:mah]
 synonym: "stubby cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "stubby cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "watermelon-shaped cell" EXACT [PomBase:mah]
 is_a: FYPO:0001126 ! abnormal cell shape
 is_a: FYPO:0001320 ! vegetative cell phenotype
 intersection_of: PATO:0001643
@@ -3133,11 +3134,14 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000220
 name: increased centromeric outer repeat transcript level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which RNAs transcribed from the centromere outer repeat region are present at greater levels than normal." [PMID:20211136, PomBase:mah]
+comment: This term encompasses both unprocessed RNA transcribed from the centromere outer repeat region and siRNAs derived by dicer-mediated processing of the primary transcripts. Use this term only for levels of RNA transcribed from endogenous centromere outer repeat sequences. For levels of RNA transcribed from an exogenous reporter gene placed in the outer repeat region, consider 'decreased chromatin silencing at centromere outer repeat region' (FYPO:0003412).
 synonym: "increased accumulation of centromeric outer repeat transcripts" RELATED [PomBase:mah]
 synonym: "increased accumulation of centromeric outer repeat transcripts during vegetative growth" RELATED [PomBase:mah]
 synonym: "increased accumulation of non-coding outer repeat transcripts" EXACT [PomBase:vw]
+synonym: "increased centromere outer repeat transcript level" EXACT [PomBase:mah]
 synonym: "increased centromeric outer repeat transcript level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased centromeric outer repeat transcript level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased centromeric outer repeat-derived transcript level" EXACT [PomBase:vw]
 synonym: "increased level of centromeric outer repeat transcripts" EXACT [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 intersection_of: PATO:0001162
@@ -3826,8 +3830,11 @@ creation_date: 2011-04-19T04:37:01Z
 id: FYPO:0000273
 name: centromeric outer repeat transcripts absent
 def: "An RNA metabolism phenotype observed in the vegetative growth phase of the life cycle in which RNAs transcribed from the centromere outer repeat region are absent." [PMID:20211136, PomBase:mah]
+comment: This term encompasses both unprocessed RNA transcribed from the centromere outer repeat region and siRNAs derived by dicer-mediated processing of the primary transcripts. Use this term only for levels of RNA transcribed from endogenous centromere outer repeat sequences. For levels of RNA transcribed from an exogenous reporter gene placed in the outer repeat region, consider 'abnormal chromatin silencing at centromere outer repeat region' (FYPO:0002346).
+synonym: "centromere outer repeat transcripts absent" EXACT [PomBase:mah]
 synonym: "centromeric outer repeat transcripts absent during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "centromeric outer repeat transcripts absent during vegetative growth" EXACT [PomBase:mah]
+synonym: "centromeric outer repeat-derived transcripts absent" EXACT [PomBase:vw]
 is_a: FYPO:0003094 ! decreased centromeric outer repeat transcript level
 intersection_of: PATO:0002000
 intersection_of: during GO:0072690
@@ -11530,7 +11537,6 @@ creation_date: 2012-03-09T03:40:40Z
 id: FYPO:0000833
 name: normal protein level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "normal protein level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein level during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein/peptide accumulation: normal" RELATED [SGD:phenotype_annotation]
@@ -11651,7 +11657,7 @@ creation_date: 2012-03-12T03:25:38Z
 id: FYPO:0000840
 name: normal RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 synonym: "normal cellular RNA level" EXACT [PomBase:mah]
 synonym: "normal mRNA level" NARROW [PomBase:mah]
@@ -14492,7 +14498,7 @@ synonym: "monopolar actin cortical patch localisation" EXACT [PomBase:mah]
 synonym: "monopolar actin cortical patch localization during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "monopolar actin cortical patch localization during vegetative growth" EXACT [PomBase:mah]
 synonym: "monopolar actin cortical patch location" RELATED [PomBase:mah]
-is_a: FYPO:0000190 ! abnormal actin cortical patch localization
+is_a: FYPO:0003988 ! mislocalized actin cortical patches
 created_by: midori
 creation_date: 2012-04-30T02:17:33Z
 
@@ -16201,7 +16207,6 @@ creation_date: 2012-06-08T15:41:39Z
 id: FYPO:0001134
 name: normal 18S rRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of 18S ribosomal RNA measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal 18S rRNA accumulation" RELATED [PomBase:mah]
 synonym: "normal 18S rRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal 18S rRNA level during vegetative growth" EXACT [PomBase:mah]
@@ -17862,7 +17867,6 @@ creation_date: 2012-07-16T16:15:13Z
 id: FYPO:0001246
 name: normal RNA level during cellular response to hydrogen peroxide
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hydrogen peroxide is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to hydrogen peroxide" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to H2O2" EXACT [PomBase:mah]
@@ -17993,7 +17997,6 @@ creation_date: 2012-07-19T16:03:44Z
 id: FYPO:0001257
 name: normal protein level during cellular response to oxygen
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to the level of oxygen is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "normal protein accumulation during cellular response to oxygen" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to oxygen during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to oxygen during vegetative growth" EXACT [PomBase:mah]
@@ -18012,7 +18015,6 @@ creation_date: 2012-07-19T16:05:22Z
 id: FYPO:0001258
 name: normal protein level during cellular response to hypoxia
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to hypoxia is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "normal protein accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to hyperoxic stress" EXACT [GO:0071456]
 synonym: "normal protein level during cellular response to hypoxia during mitotic cell cycle" RELATED [PomBase:mah]
@@ -18052,7 +18054,6 @@ creation_date: 2012-07-19T16:07:22Z
 id: FYPO:0001260
 name: normal RNA level during cellular response to hypoxia
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hypoxia is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to hypoxia" NARROW [PomBase:mah]
 synonym: "normal protein level during cellular response to increased oxygen tension" EXACT [GO:0071456]
 synonym: "normal RNA accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
@@ -18090,6 +18091,7 @@ name: stubby cell during cellular hyperosmotic response
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which the cell diameter is larger than normal and the cell length is shorter than normal, during a cellular hyperosmotic response." [PomBase:mah]
 synonym: "stubby cell during cellular hyperosmotic response during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "stubby cell during cellular hyperosmotic response during vegetative growth" EXACT [PomBase:mah]
+synonym: "watermelon-shaped cell during cellular hyperosmotic response" EXACT [PomBase:mah]
 is_a: FYPO:0000024 ! stubby cell
 intersection_of: PATO:0001643
 intersection_of: exists_during GO:0071474
@@ -18876,7 +18878,6 @@ creation_date: 2012-08-01T13:14:57Z
 id: FYPO:0001317
 name: normal RNA level during vegetative growth
 def: "A cell phenotype in which the amount of RNA measured in a cell is normal when the cell is in the vegetative growth phase of the life cycle. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal cellular RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000840 ! normal RNA level
@@ -21359,7 +21360,6 @@ creation_date: 2012-08-30T13:03:23Z
 id: FYPO:0001486
 name: normal RNA level during cellular response to salt stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to salt stress is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to salt stress" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to salt stress" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to salt stress during mitotic cell cycle" RELATED [PomBase:mah]
@@ -21378,7 +21378,6 @@ creation_date: 2012-08-30T13:08:09Z
 id: FYPO:0001487
 name: normal RNA level during cellular response to heat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to heat is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to heat" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to heat" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to heat during mitotic cell cycle" RELATED [PomBase:mah]
@@ -26131,7 +26130,6 @@ creation_date: 2012-11-21T16:14:26Z
 id: FYPO:0001794
 name: normal RNA level during cellular response to purvalanol A
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to purvalanol A is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to purvalanol A" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to purvalanol A" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to purvalanol A during mitotic cell cycle" RELATED [PomBase:mah]
@@ -26446,6 +26444,7 @@ id: FYPO:0001813
 name: sensitive to N-methyl-N'-nitro-N-nitrosoguanidine
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to N-methyl-N'-nitro-N-nitrosoguanidine. Cells stop growing (and may die) at a concentration of N-methyl-N'-nitro-N-nitrosoguanidine that allows wild type cells to grow." [PomBase:mah]
 synonym: "hypersensitive to N-methyl-N'-nitro-N-nitrosoguanidine" EXACT [PomBase:mah]
+synonym: "sensitive to MNNG" EXACT [CHEBI:21759]
 synonym: "sensitive to N-methyl-N'-nitro-N-nitrosoguanidine during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "sensitive to N-methyl-N'-nitro-N-nitrosoguanidine during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to nitrosoguanidine" EXACT [PomBase:mah]
@@ -29474,9 +29473,11 @@ creation_date: 2013-02-28T13:42:00Z
 id: FYPO:0002021
 name: dispersed actin cortical patch localization
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patches are localized throughout the cell cortex (rather than concentrated at the cell ends as in wild type cells)." [PMID:8834798, PomBase:mah]
+synonym: "delocalised actin cortical patches" EXACT [PomBase:vw]
+synonym: "delocalized actin cortical patches" EXACT [PomBase:vw]
 synonym: "dispersed actin cortical patch localisation" EXACT [PomBase:mah]
 synonym: "dispersed actin cortical patch location" RELATED [PomBase:mah]
-is_a: FYPO:0000190 ! abnormal actin cortical patch localization
+is_a: FYPO:0003988 ! mislocalized actin cortical patches
 intersection_of: PATO:0001630
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0030479
@@ -30394,6 +30395,7 @@ synonym: "large stubby cell" RELATED [PomBase:vw]
 synonym: "stubby cell with increased cell size" RELATED [PomBase:vw]
 synonym: "stubby cell with increased cell volume" EXACT [PomBase:mah]
 synonym: "swollen stubby vegetative cell" RELATED [PomBase:mah]
+synonym: "swollen watermelon-shaped cell" EXACT [PomBase:mah]
 is_a: FYPO:0000024 ! stubby cell
 is_a: FYPO:0000025 ! swollen cell
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -30725,6 +30727,7 @@ comment: Note that if you have done an experiment that assays the viability of a
 synonym: "stubby viable cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "stubby viable vegetative cell" EXACT [PomBase:mah]
 synonym: "viable stubby vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "viable watermelon-shaped vegetative cell" EXACT [PMID:9108274, PomBase:vw]
 is_a: FYPO:0000024 ! stubby cell
 is_a: FYPO:0001491 ! viable vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -30741,6 +30744,7 @@ def: "A cell morphology phenotype in which a vegetatively growing cell is inviab
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
 synonym: "essential; stubby vegetative cell" RELATED [PomBase:mah]
 synonym: "inviable stubby vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "inviable watermelon-shaped vegetative cell" EXACT [PomBase:mah]
 synonym: "stubby inviable cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "stubby inviable vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0000024 ! stubby cell
@@ -31316,7 +31320,6 @@ creation_date: 2013-05-09T10:17:24Z
 id: FYPO:0002146
 name: normal RNA level during cellular response to DEM
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to diethyl maleate (DEM) is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to DEM" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to DEM" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to DEM during mitotic cell cycle" RELATED [PomBase:mah]
@@ -32069,6 +32072,7 @@ comment: Note that if you have done an experiment that assays the viability of a
 synonym: "essential; stubby septated vegetative cell" RELATED [PomBase:mah]
 synonym: "inviable stubby septated cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable stubby septated vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "inviable watermelon-shaped septated vegetative cell" EXACT [PomBase:mah]
 synonym: "stubby septated inviable vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0002107 ! inviable stubby vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -33441,6 +33445,8 @@ creation_date: 2013-06-13T15:37:00Z
 id: FYPO:0002297
 name: dispersed actin cortical patch localization during mitotic interphase
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which actin cortical patches are localized throughout the cell cortex (rather than concentrated at the cell ends as in wild type cells) during interphase of the mitotic cell cycle." [PMID:8834798, PomBase:mah]
+synonym: "delocalised actin cortical patches during mitotic interphase" EXACT [PomBase:vw]
+synonym: "delocalized actin cortical patches during mitotic interphase" EXACT [PomBase:vw]
 synonym: "dispersed actin cortical patch localisation during mitotic interphase" EXACT [PomBase:mah]
 synonym: "dispersed actin cortical patch location during mitotic interphase" RELATED [PomBase:mah]
 is_a: FYPO:0002021 ! dispersed actin cortical patch localization
@@ -34183,11 +34189,12 @@ creation_date: 2013-07-12T14:43:28Z
 
 [Term]
 id: FYPO:0002346
-name: abnormal chromatin silencing at centromere outer repeat region
+name: abnormal heterochromatin silencing at centromere outer repeat region
 def: "A transcription regulation phenotype observed in the vegetative growth phase of the life cycle in which chromatin silencing at the outer repeat region of the centromere is abnormal." [PomBase:mah]
 comment: Note that the centromere outer repeat region corresponds to SO:0001799.
 synonym: "abnormal centromere outer repeat region chromatin silencing" EXACT [PomBase:mah]
 synonym: "abnormal chromatin silencing at centromere otr" EXACT [PomBase:mah]
+synonym: "abnormal chromatin silencing at centromere outer repeat region" EXACT [GO:1990141]
 synonym: "abnormal chromatin silencing at centromere outer repeat region during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal chromatin silencing at centromere outer repeat region during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal chromatin silencing at centromeric outer repeat region" EXACT [PomBase:mah]
@@ -35110,6 +35117,7 @@ comment: Note that if you have done an experiment that assays the viability of a
 synonym: "curved stubby viable cell" EXACT [PomBase:mah]
 synonym: "viable curved stubby cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "viable curved stubby vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "viable curved watermelon-shaped vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0002106 ! viable stubby vegetative cell
 is_a: FYPO:0002112 ! viable curved vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -35128,6 +35136,7 @@ comment: Note that if you have done an experiment that assays the viability of a
 synonym: "curved stubby septated viable cell" EXACT [PomBase:mah]
 synonym: "viable curved stubby septated cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "viable curved stubby septated vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "viable curved watermelon-shaped septated vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0002342 ! septated cell
 is_a: FYPO:0002405 ! viable curved stubby vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -37516,7 +37525,7 @@ creation_date: 2013-08-28T13:56:00Z
 id: FYPO:0002567
 name: normal centromeric outer repeat transcript level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNAs transcribed from the centromere outer repeat region measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: This term encompasses both unprocessed RNA transcribed from the centromere outer repeat region and siRNAs derived by dicer-mediated processing of the primary transcripts. Use this term only for levels of RNA transcribed from endogenous centromere outer repeat sequences.
 synonym: "normal accumulation of centromeric outer repeat transcripts" RELATED [PomBase:mah]
 synonym: "normal accumulation of centromeric outer repeat transcripts during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal accumulation of non-coding outer repeat transcripts" EXACT [PomBase:vw]
@@ -37724,7 +37733,6 @@ creation_date: 2013-08-28T16:07:23Z
 id: FYPO:0002580
 name: normal tRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of transfer RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total tRNA or a specific tRNA may be measured." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mature tRNA level" EXACT [SO:0000253]
 synonym: "normal transfer RNA level" EXACT [PomBase:mah]
 synonym: "normal tRNA accumulation" RELATED [PomBase:mah]
@@ -37754,7 +37762,6 @@ creation_date: 2013-08-28T16:12:36Z
 id: FYPO:0002582
 name: normal mitochondrial tRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mitochondrial transfer RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total tRNA or a specific tRNA may be measured." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mature mitochondrial tRNA level" EXACT [SO:0000253]
 synonym: "normal mitochondrial transfer RNA level" EXACT [PomBase:mah]
 synonym: "normal mitochondrial tRNA accumulation" RELATED [PomBase:mah]
@@ -41376,6 +41383,8 @@ creation_date: 2013-11-05T14:24:37Z
 id: FYPO:0002835
 name: centromeric outer repeat transcript-derived siRNA absent
 def: "An RNA metabolism phenotype observed in the vegetative growth phase of the life cycle in which small interfering RNA transcripts derived from the centromere outer repeat region are absent." [PMID:20211136, PomBase:mah]
+comment: This term refers specifically to siRNAs derived by dicer-mediated processing of RNA rom the centromere outer repeat region. Use this term only for levels of RNA transcribed from endogenous centromere outer repeat sequences. For levels of RNA transcribed from an exogenous reporter gene placed in the outer repeat region, consider 'abnormal chromatin silencing at centromere outer repeat region' (FYPO:0002346).
+synonym: "centromere outer repeat transcript-derived siRNA absent" EXACT [PomBase:mah]
 synonym: "centromeric outer repeat transcript-derived siRNA undetectable" EXACT [PomBase:mah]
 synonym: "siRNAs homologous to outer repeats absent" EXACT [PomBase:vw]
 synonym: "siRNAs homologous to outer repeats undetectable" EXACT [PomBase:mah]
@@ -41387,8 +41396,10 @@ creation_date: 2013-11-05T14:44:13Z
 id: FYPO:0002836
 name: increased centromeric outer repeat transcript-derived siRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which small interfering RNA transcripts derived from the centromere outer repeat region are present at greater levels than normal." [PMID:20211136, PomBase:mah]
+comment: This term refers specifically to siRNAs derived by dicer-mediated processing of RNA rom the centromere outer repeat region. Use this term only for levels of RNA transcribed from endogenous centromere outer repeat sequences. For levels of RNA transcribed from an exogenous reporter gene placed in the outer repeat region, consider 'decreased chromatin silencing at centromere outer repeat region' (FYPO:0003412).
 synonym: "increased accumulation of centromeric outer repeat transcript-derived siRNA" EXACT [PomBase:mah]
 synonym: "increased accumulation of siRNAs homologous to outer repeats" RELATED [PomBase:vw]
+synonym: "increased centromere outer repeat transcript-derived siRNA level" EXACT [PomBase:mah]
 synonym: "increased centromeric outer repeat transcript-derived siRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased centromeric outer repeat transcript-derived siRNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased level of centromeric outer repeat transcript-derived siRNA" EXACT [PomBase:mah]
@@ -41401,7 +41412,7 @@ creation_date: 2013-11-05T14:46:21Z
 id: FYPO:0002837
 name: normal centromeric outer repeat transcript-derived siRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small interfering RNA transcripts derived from the centromere outer repeat region measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: This term refers specifically to siRNAs derived by dicer-mediated processing of RNA rom the centromere outer repeat region. Use this term only for levels of RNA transcribed from endogenous centromere outer repeat sequences.
 synonym: "normal accumulation of centromeric outer repeat transcript-derived siRNA" RELATED [PomBase:mah]
 synonym: "normal accumulation of centromeric outer repeat transcript-derived siRNA during vegetative growth" RELATED [PomBase:mah]
 synonym: "normal accumulation of siRNAs homologous to outer repeats" RELATED [PomBase:vw]
@@ -42948,7 +42959,6 @@ creation_date: 2013-11-28T14:38:47Z
 id: FYPO:0002938
 name: normal mRNA level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of messenger RNA (mRNA) measured in a cell is normal (i.e. indistinguishable from wild type). Total mRNA or a specific mRNA may be measured." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA accumulation" RELATED [PomBase:mah]
 synonym: "normal mRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001317 ! normal RNA level during vegetative growth
@@ -43661,7 +43671,6 @@ creation_date: 2013-12-10T15:34:20Z
 id: FYPO:0002984
 name: normal RNA level during cellular response to methyl methanesulfonate
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to methyl methanesulfonate is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to methyl methanesulfonate" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to methyl methanesulfonate during mitotic cell cycle" RELATED [PomBase:mah]
@@ -44474,7 +44483,6 @@ creation_date: 2014-01-17T14:44:21Z
 id: FYPO:0003035
 name: normal RNA level during cellular response to UV
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to ultraviolet light is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to UV" NARROW [PomBase:mah]
 synonym: "normal protein level during cellular response to ultraviolet light" EXACT [GO:0034644]
 synonym: "normal RNA accumulation during cellular response to UV" RELATED [PomBase:mah]
@@ -45279,11 +45287,14 @@ creation_date: 2014-02-13T15:11:35Z
 id: FYPO:0003094
 name: decreased centromeric outer repeat transcript level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which RNAs transcribed from the centromere outer repeat region are present at lower levels than normal." [PMID:24095277, PomBase:mah]
+comment: This term encompasses both unprocessed RNA transcribed from the centromere outer repeat region and siRNAs derived by dicer-mediated processing of the primary transcripts. Use this term only for levels of RNA transcribed from endogenous centromere outer repeat sequences. For levels of RNA transcribed from an exogenous reporter gene placed in the outer repeat region, consider 'abnormal chromatin silencing at centromere outer repeat region' (FYPO:0002346).
 synonym: "decreased accumulation of centromeric outer repeat transcripts" RELATED [PomBase:mah]
 synonym: "decreased accumulation of centromeric outer repeat transcripts during vegetative growth" RELATED [PomBase:mah]
 synonym: "decreased accumulation of non-coding outer repeat transcripts" EXACT [PomBase:vw]
+synonym: "decreased centromere outer repeat transcript level" EXACT [PomBase:mah]
 synonym: "decreased centromeric outer repeat transcript level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased centromeric outer repeat transcript level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased centromeric outer repeat-derived transcript level" EXACT [PomBase:vw]
 synonym: "decreased level of centromeric outer repeat transcripts" EXACT [PomBase:mah]
 synonym: "reduced centromeric outer repeat transcript level" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
@@ -46082,7 +46093,6 @@ creation_date: 2014-02-26T11:43:44Z
 id: FYPO:0003144
 name: normal protein level during cellular response to methyl methanesulfonate
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to the level of methyl methanesulfonate is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "normal protein accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to methyl methanesulfonate during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
@@ -46213,7 +46223,6 @@ creation_date: 2014-02-26T15:57:07Z
 id: FYPO:0003153
 name: normal protein level during cellular response to heat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to heat is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "normal protein accumulation during cellular response to heat" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to heat during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
@@ -49817,7 +49826,6 @@ creation_date: 2014-06-03T13:29:06Z
 id: FYPO:0003399
 name: normal 27S rRNA precursor level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of 27S ribosomal RNA precursor measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal 27S rRNA precursor accumulation" RELATED [PomBase:mah]
 synonym: "normal 27S rRNA precursor level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal 27S rRNA precursor level during vegetative growth" EXACT [PomBase:mah]
@@ -49830,7 +49838,6 @@ creation_date: 2014-06-03T13:34:04Z
 id: FYPO:0003400
 name: normal 20S rRNA precursor level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of 20S ribosomal RNA precursor measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal 20S rRNA precursor accumulation" RELATED [PomBase:mah]
 synonym: "normal 20S rRNA precursor level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal 20S rRNA precursor level during vegetative growth" EXACT [PomBase:mah]
@@ -52941,7 +52948,6 @@ creation_date: 2014-08-06T12:06:30Z
 id: FYPO:0003620
 name: normal pre-mRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any unspliced or incompletely spliced mRNA precursor measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal pre-mRNA accumulation" RELATED [PomBase:mah]
 synonym: "normal pre-mRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal pre-mRNA level during vegetative growth" EXACT [PomBase:mah]
@@ -55075,7 +55081,6 @@ creation_date: 2014-09-08T16:10:02Z
 id: FYPO:0003772
 name: normal transposon gene mRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of messenger RNA derived from transposon-encoded genes measured in a cell is normal (i.e. indistinguishable from wild type)." [PMID:10022921, PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal level of transposon gene mRNA" EXACT [PomBase:mah]
 synonym: "normal transposon gene mRNA accumulation" RELATED [PomBase:mah]
 synonym: "normal transposon gene mRNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -55089,7 +55094,6 @@ creation_date: 2014-09-08T16:39:44Z
 id: FYPO:0003773
 name: normal level of transposon-encoded protein in cell
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more transposon-encoded proteins measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
 synonym: "normal level of transposon-encoded protein during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal level of transposon-encoded protein in cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal transposon-encoded protein accumulation" RELATED [PomBase:mah]
@@ -55383,7 +55387,6 @@ creation_date: 2014-09-09T14:41:21Z
 id: FYPO:0003793
 name: normal RNA level during cellular response to osmotic stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to osmotic stress is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
 synonym: "normal mRNA level during cellular response to osmotic stress" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to osmotic stress" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to osmotic stress during mitotic cell cycle" RELATED [PomBase:mah]
@@ -58031,6 +58034,125 @@ intersection_of: inheres_in CL:0000334
 intersection_of: towards CHEBI:33709
 created_by: midori
 creation_date: 2014-11-04T16:24:49Z
+
+[Term]
+id: FYPO:0003987
+name: abnormal actin cortical patch
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the amount, distribution, or morphology of actin cortical patches is abnormal." [PomBase:mah]
+synonym: "abnormal actin cortical patch during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal actin cortical patch during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal actin cortical patches" EXACT [PomBase:mah]
+is_a: FYPO:0002398 ! abnormal actin cytoskeleton
+intersection_of: PATO:0001241
+intersection_of: inheres_in GO:0030479
+intersection_of: qualifier PATO:0000460
+relationship: output_of FYPO:0000790 ! abnormal actin cortical patch organization
+created_by: midori
+creation_date: 2014-11-05T10:41:05Z
+
+[Term]
+id: FYPO:0003988
+name: mislocalized actin cortical patches
+def: "A physical cellular phenotype in which a cell has actin cortical patches in one or more abnormal locations." [PomBase:mah]
+subset: qc_do_not_manually_annotate
+synonym: "abnormal actin cortical patch location" EXACT [PomBase:mah]
+synonym: "abnormal actin cortical patch position" EXACT [PomBase:mah]
+synonym: "mislocalised actin cortical patches" EXACT [PomBase:mah]
+is_a: FYPO:0000136 ! cellular physical quality phenotype
+intersection_of: PATO:0000628
+intersection_of: inheres_in GO:0030479
+relationship: output_of FYPO:0000190 ! abnormal actin cortical patch localization
+created_by: midori
+creation_date: 2014-11-05T10:53:55Z
+
+[Term]
+id: FYPO:0003989
+name: inviable stubby mononucleate vegetative cell
+def: "A cell morphology phenotype in which a vegetatively growing cell is inviable and has one nucleus, and the cell diameter is larger than normal and the cell length is shorter than normal." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "essential; stubby mononucleate vegetative cell" RELATED [PomBase:mah]
+synonym: "inviable stubby mononucleate cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable stubby mononucleate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "inviable watermelon-shaped mononucleate vegetative cell" EXACT [PomBase:mah]
+synonym: "stubby mononucleate inviable vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0000060 ! mononucleate vegetative cell
+is_a: FYPO:0002107 ! inviable stubby vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000024 ! stubby cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0002731 ! mononucleate
+created_by: midori
+creation_date: 2014-11-05T11:44:54Z
+
+[Term]
+id: FYPO:0003990
+name: sensitive to DNA damage during mitotic S phase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to DNA damage during S phase of the mitotic cell cycle." [PMID:15643072, PomBase:mah]
+comment: Use this term if you have assayed growth of cells exposed to DNA damage in culture. If you have assayed the response to DNA damage at the subcellular or molecular level, consider annotating to 'abnormal cellular response to DNA damage stimulus' (FYPO:0000157). Also consider specific phenotype terms for sensitivity to substances or other stimuli that can damage DNA, e.g. 'sensitive to DNA damaging agents' (FYPO:0000266), 'sensitive to methyl methanesulfonate' (FYPO:0000089), 'sensitive to UV' (FYPO:0000268), etc.
+synonym: "hypersensitive to DNA damage during mitotic S phase" EXACT [PomBase:mah]
+synonym: "sensitive to DNA damage during mitotic S phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to DNA damage during S phase of mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0000265 ! sensitive to DNA damage
+created_by: midori
+creation_date: 2014-11-05T14:33:34Z
+
+[Term]
+id: FYPO:0003991
+name: increased RNA level in stationary phase
+def: "A cell phenotype in which the amount of RNA measured in a cell is higher than normal when the population in which the cell is found is in stationary phase. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased RNA accumulation in stationary phase" RELATED [PomBase:mah]
+is_a: FYPO:0001890 ! increased RNA level
+created_by: midori
+creation_date: 2014-11-05T15:01:20Z
+
+[Term]
+id: FYPO:0003992
+name: normal RNA level during cellular response to menadione
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to menadione is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+synonym: "normal mRNA level during cellular response to menadione" NARROW [PomBase:mah]
+synonym: "normal RNA accumulation during cellular response to menadione" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to menadione during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to menadione during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0036245
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-11-05T15:02:45Z
+
+[Term]
+id: FYPO:0003993
+name: decreased RNA level during cellular response to menadione
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to menadione is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased RNA accumulation during cellular response to menadione" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to menadione during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to menadione during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased transcript level during cellular response to menadione" EXACT [PomBase:vw]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0036245
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-11-05T15:33:14Z
+
+[Term]
+id: FYPO:0003994
+name: normal succinate dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of succinate dehydrogenase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0000104
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-11-05T15:36:33Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
