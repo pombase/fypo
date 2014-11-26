@@ -59227,6 +59227,7 @@ id: comprises_cells_with_phenotype
 name: comprises cells with phenotype
 def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in all of the individual cells in the population." [PomBase:mah]
 synonym: "includes only cells with phenotype" EXACT [PomBase:mah]
+property_value: usage "Local to FYPO. Consider just using has_part." xsd:string
 is_a: includes_cells_with_phenotype ! includes cells with phenotype
 created_by: midori
 creation_date: 2012-02-29T01:46:18Z
@@ -59234,45 +59235,40 @@ creation_date: 2012-02-29T01:46:18Z
 [Typedef]
 id: during
 name: during
+property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype is observed or relevant." xsd:string
 xref: GOREL:0000002
 
 [Typedef]
 id: exists_during
 name: exists_during
+property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype that affects a continuant, such as a cellular component or the level of a substance, is observed or relevant." xsd:string
 xref: GOREL:0000032
 
 [Typedef]
 id: happens_during
 name: happens_during
-xref: RO:0002092
-
-[Typedef]
-id: has_input
-name: has input
-xref: RO:0002233
-is_a: has_participant ! has_participant
+property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype that affects an occurrent, i.e. a biological process or molecular function, is observed or relevant." xsd:string
+xref: GOREL:0000001
 
 [Typedef]
 id: has_output
 name: has_output
-def: "p has_output c iff c participates_in p at the end of p and c is in some way changed by p or created by p. Implies that if p happens, c always ensues." [GOC:curators]
+def: "p has output c if either: p has direct output c or p has output input c. Implies that if p happens, c always ensues." [GOC:curators]
+property_value: usage "Def comes from gorel file. Used in FYPO where one phenotype (p) always results in an additional phenotype (c) as a consequence. There may be other ways to get phenotype (c)." xsd:string
 xref: RO:0002234
 
 [Typedef]
 id: has_part
 name: has_part
+property_value: usage "Used in FYPO to link phenotypes that are collections of features to phenotypes representing the features." xsd:string
 xref: BFO:0000051
 is_transitive: true
-
-[Typedef]
-id: has_participant
-name: has_participant
-xref: RO:0000057
 
 [Typedef]
 id: includes_cells_with_phenotype
 name: includes cells with phenotype
 def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in some or all of the individual cells in the population." [PomBase:mah]
+property_value: usage "Local to FYPO. Consider just using has_part." xsd:string
 is_a: has_part ! has_part
 created_by: midori
 creation_date: 2011-04-26T02:10:32Z
@@ -59280,67 +59276,54 @@ creation_date: 2011-04-26T02:10:32Z
 [Typedef]
 id: inheres_in
 name: inheres_in
+property_value: usage "Used in FYPO as described in PATO best practices; identifies an entity that displays a quality in an entity-quality logical definition. Used only in logical definitions (aka xps)." xsd:string
 xref: RO:0000052
-
-[Typedef]
-id: negatively_regulates
-name: negatively_regulates
-xref: RO:0002212
 
 [Typedef]
 id: occurs_at
 name: occurs_at
-def: "P occurs_at C : the execution of P is located at C." [GOC:cjm, GOC:mah]
-comment: This relation is not constrained with respect to whether C completely surrounds, or is adjacent to, the location where P is executed. Example: chromatin silencing at centromere unfolds_around centromere : Repression of transcription of centromeric DNA by the formation of heterochromatin.
+property_value: usage "This relation is not constrained with respect to whether the place where an event occurs completely surrounds, or is adjacent to, the location indicated. Example: chromatin silencing at centromere unfolds_around centromere : Repression of transcription of centromeric DNA by the formation of heterochromatin. Used in FYPO to identify a position where a phenotype is observed or relevant, usually a DNA or RNA sequence feature specified by a SO ID." xsd:string
 xref: GOREL:0000501
 
 [Typedef]
 id: occurs_in
 name: occurs in
+property_value: usage "Used in FYPO to identify a location, usually a cellular component or cell type, within which a phenotype is observed or relevant." xsd:string
 xref: BFO:0000066
 
 [Typedef]
 id: output_of
 name: output_of
-def: "Relation between a structure and a process that forms it, or between one process and a preceding process; A output_of B used where B has_output A isn't always true. Implies that process B is the only way to get output A." [PomBase:mah]
-comment: inverse of has_output
+property_value: usage "Inverse of has_output. Relation between a structure and a process that forms it, or between one process and a preceding process; A output_of B used where B has_output A isn't always true. Implies that process B is the only way to get output. Used in FYPO where one phenotype (c) always results when another phenotype (p) is present. Phenotype (p) may have other consequences in addition to phenotype (c)." xsd:string
 synonym: "formation results from" EXACT [PomBase:mah]
 xref: RO:0002353
 
 [Typedef]
 id: part_of
 name: part_of
+property_value: usage "Used in FYPO to identify phenotypes that are always observed in the context of another, usually larger-scale, phenotype." xsd:string
 xref: BFO:0000050
-
-[Typedef]
-id: positively_regulates
-name: positively_regulates
-xref: RO:0002213
 
 [Typedef]
 id: preceded_by
 name: preceded_by
+property_value: usage "Used in FYPO when a phenotype is observed after another event, usually a GO biological process, has ended, and where there isn't a suitable process to use with a during relation." xsd:string
 xref: BFO:0000062
 
 [Typedef]
 id: precedes
 name: precedes
+property_value: usage "Used in FYPO when a phenotype is observed before another event, usually a GO biological process, begins, and where there isn't a suitable process to use with a during relation." xsd:string
 xref: BFO:0000063
 
 [Typedef]
 id: qualifier
 name: qualifier
-comment: placeholder relation to indicate normality/abnormality.
-
-[Typedef]
-id: regulates
-name: regulates
-xref: RO:0002211
-transitive_over: part_of ! part_of
+property_value: usage "Used in FYPO as described in PATO best practices; placeholder relation to indicate normality/abnormality." xsd:string
 
 [Typedef]
 id: towards
 name: towards
-comment: Relation binding a relational quality or disposition to the relevant type of entity.
-xref: OBO_REL:towards
+property_value: usage "Relation binding a relational quality or disposition to the relevant type of entity. Used in FYPO as described in PATO best practices; identifies abolished GO processes; identifies substances affected by phenotypes." xsd:string
+xref: RO:0002503
 
