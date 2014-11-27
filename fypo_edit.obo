@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 27:11:2014 13:34
+date: 27:11:2014 15:46
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -3593,6 +3593,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000255
 name: increased nuclear protein level during vegetative growth
 def: "A cell phenotype in which the amount of protein measured in the cell nucleus is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PMID:12896976, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased nuclear protein level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased protein level in nucleus during vegetative growth" EXACT [PomBase:mah]
 synonym: "localization defects, nuclear accumulation of Pap1 and Sty1" NARROW [PomBase:mah]
@@ -6049,6 +6050,7 @@ id: FYPO:0000443
 name: abnormal protein localization during vegetative growth
 def: "A cell phenotype that affects the localization of a protein in a cell in the vegetative growth phase of the life cycle. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." [PomBase:mah]
 comment: We recommend using one of the more specific terms instead of annotating to this term directly, if possible. If this term is used, we recommend noting which protein(s) were used in the assay.
+subset: qc_do_not_manually_annotate
 synonym: "abnormal cellular protein localisation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal cellular protein localization during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal protein localisation during vegetative growth" EXACT [PomBase:mah]
@@ -10756,6 +10758,7 @@ id: FYPO:0000782
 name: mislocalized protein during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein is observed in a particular location where it is not normally found." [PomBase:mah]
 comment: The difference between this term and 'abnormal protein localization' (FYPO:0000443) is that 'mislocalized protein' describes a protein that is observed in a place where it is not normally found, whereas 'abnormal protein localization' additionally encompasses the absence of protein from a place where it is normally found. FYPO:0000782 can therefore be used in any case where a protein is in a different location in a mutant compared to wild type, whereas additional information is usually required to support annotation to FYPO:0000443 or its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+subset: qc_do_not_manually_annotate
 synonym: "mislocalised protein" EXACT [PomBase:mah]
 synonym: "mislocalized protein during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001320 ! vegetative cell phenotype
@@ -11403,7 +11406,7 @@ name: increased RNA level during vegetative growth
 alt_id: FYPO:0000910
 alt_id: FYPO:0001247
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased cellular RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased RNA accumulation during vegetative growth" RELATED [PomBase:mah]
 synonym: "increased RNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -11539,9 +11542,14 @@ creation_date: 2012-03-09T03:40:40Z
 id: FYPO:0000833
 name: normal protein level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal cellular protein level during nitrogen starvation" EXACT [PomBase:mah]
+synonym: "normal protein accumulation during nitrogen starvation" RELATED [PomBase:mah]
+synonym: "normal protein level during nitrogen depletion" EXACT [PomBase:vw]
+synonym: "normal protein level during nitrogen deprivation" EXACT [PomBase:vw]
 synonym: "normal protein level during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "protein/peptide accumulation: normal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+is_a: FYPO:0004083 ! normal protein level
 intersection_of: PATO:0001159
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -11804,6 +11812,7 @@ creation_date: 2012-03-14T03:09:26Z
 id: FYPO:0000849
 name: increased cytoplasmic protein level during vegetative growth
 def: "A cell phenotype in which the amount of protein measured in the cytoplasm of a cell is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "cytoplasmic accumulation of protein" EXACT [PomBase:mah]
 synonym: "cytoplasmic protein accumulation during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased cytoplasmic protein level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -12844,6 +12853,7 @@ creation_date: 2012-03-30T04:48:31Z
 id: FYPO:0000911
 name: increased nuclear RNA level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in the cell nucleus is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PMID:12896976, PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased nuclear RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased nuclear transcript level during vegetative growth" EXACT [PomBase:vw]
 synonym: "increased RNA level in nucleus during vegetative growth" EXACT [PomBase:mah]
@@ -15640,8 +15650,8 @@ creation_date: 2012-06-01T14:24:32Z
 [Term]
 id: FYPO:0001096
 name: normal RNA level during nitrogen starvation
-def: "A cell phenotype in which the amount of RNA measured in a cell during nitrogen starvation is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+def: "A cell phenotype in which the amount of RNA measured in a cell that is subject to nitrogen starvation is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal cellular RNA level during nitrogen starvation" EXACT [PomBase:mah]
 synonym: "normal mRNA level during nitrogen starvation" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during nitrogen starvation" RELATED [PomBase:mah]
@@ -15725,7 +15735,7 @@ creation_date: 2012-06-01T14:39:48Z
 id: FYPO:0001101
 name: decreased protein level during cellular response to hydrogen peroxide
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to hydrogen peroxide is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to H2O2" EXACT [PomBase:mah]
 synonym: "decreased protein level during cellular response to hydrogen peroxide during mitotic cell cycle" RELATED [PomBase:mah]
@@ -15745,7 +15755,7 @@ creation_date: 2012-06-01T14:47:37Z
 id: FYPO:0001102
 name: increased protein level during cellular response to hydrogen peroxide
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to hydrogen peroxide is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to H2O2" EXACT [PomBase:mah]
 synonym: "increased protein level during cellular response to hydrogen peroxide during mitotic cell cycle" RELATED [PomBase:mah]
@@ -15936,7 +15946,7 @@ creation_date: 2012-06-01T15:39:33Z
 id: FYPO:0001116
 name: decreased RNA level during cellular response to hydrogen peroxide
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hydrogen peroxide is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to hydrogen peroxide" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to H2O2" EXACT [PomBase:mah]
@@ -15957,7 +15967,7 @@ creation_date: 2012-06-07T11:25:57Z
 id: FYPO:0001117
 name: decreased RNA level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased cellular RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased RNA accumulation during vegetative growth" RELATED [PomBase:mah]
 synonym: "decreased RNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -16490,7 +16500,7 @@ creation_date: 2012-06-14T16:45:50Z
 id: FYPO:0001152
 name: decreased RNA level during nitrogen starvation
 def: "A cell phenotype in which the amount of RNA measured in a cell when the cell is subject to nitrogen starvation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during nitrogen starvation" RELATED [PomBase:mah]
 synonym: "decreased RNA level during nitrogen depletion" EXACT [PomBase:vw]
 synonym: "decreased RNA level during nitrogen deprivation" EXACT [PomBase:vw]
@@ -17425,7 +17435,7 @@ creation_date: 2012-07-12T14:41:50Z
 id: FYPO:0001219
 name: increased protein level during cellular response to nitrogen starvation
 def: "A cell phenotype in which the amount of protein measured in a cell during a cellular response to nitrogen starvation is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during cellular response to nitrogen starvation" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to nitrogen depletion" EXACT [PomBase:vw]
 synonym: "increased protein level during cellular response to nitrogen deprivation" EXACT [PomBase:vw]
@@ -17441,7 +17451,7 @@ creation_date: 2012-07-12T15:10:12Z
 id: FYPO:0001220
 name: increased protein level during cellular response to pheromone
 def: "A cell phenotype in which the amount of protein measured in a cell during a cellular response to a pheromone is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during cellular response to pheromone" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to pheromone during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to pheromone during vegetative growth" EXACT [PomBase:mah]
@@ -17569,6 +17579,7 @@ creation_date: 2012-07-13T16:15:07Z
 id: FYPO:0001228
 name: increased nuclear protein level during cellular response to hydrogen peroxide
 def: "A cell phenotype observed in vegetative growth phase of the life cycle, in which the amount of protein measured in the cell nucleus is higher than normal during a cellular response to hydrogen peroxide. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased nuclear protein level during cellular response to H2O2" EXACT [PomBase:mah]
 synonym: "increased nuclear protein level during cellular response to hydrogen peroxide during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased nuclear protein level during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
@@ -17787,7 +17798,7 @@ creation_date: 2012-07-16T15:31:50Z
 id: FYPO:0001242
 name: increased RNA level during cellular response to adenine starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to adenine starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mRNA level during cellular response to adenine starvation" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to adenine starvation" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to adenine depletion" EXACT [PomBase:vw]
@@ -17808,7 +17819,7 @@ creation_date: 2012-07-16T15:56:42Z
 id: FYPO:0001243
 name: increased RNA level during cellular response to vitamin B1
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to vitamin B1 is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mRNA level during cellular response to vitamin B1" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to vitamin B1" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to thiamine" EXACT [GO:0071301, PomBase:mah]
@@ -17828,7 +17839,7 @@ creation_date: 2012-07-16T15:57:59Z
 id: FYPO:0001244
 name: decreased RNA level during cellular response to vitamin B1 starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to vitamin B1 starvation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to vitamin B1 starvation" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to vitamin B1 starvation" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to thiamine starvation" EXACT [GO:0036225, PomBase:mah]
@@ -17866,6 +17877,7 @@ creation_date: 2012-07-16T16:15:13Z
 id: FYPO:0001246
 name: normal RNA level during cellular response to hydrogen peroxide
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hydrogen peroxide is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA level during cellular response to hydrogen peroxide" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to H2O2" EXACT [PomBase:mah]
@@ -17958,7 +17970,7 @@ creation_date: 2012-07-19T15:41:59Z
 id: FYPO:0001255
 name: increased protein level during cellular response to oxygen
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to the level of oxygen is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during cellular response to oxygen" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to oxygen during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to oxygen during vegetative growth" EXACT [PomBase:mah]
@@ -17976,7 +17988,7 @@ creation_date: 2012-07-19T16:01:11Z
 id: FYPO:0001256
 name: increased protein level during cellular response to hypoxia
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to hypoxia is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to hyperoxic stress" EXACT [GO:0071456]
 synonym: "increased protein level during cellular response to hypoxia during mitotic cell cycle" RELATED [PomBase:mah]
@@ -17996,6 +18008,7 @@ creation_date: 2012-07-19T16:03:44Z
 id: FYPO:0001257
 name: normal protein level during cellular response to oxygen
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to the level of oxygen is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein accumulation during cellular response to oxygen" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to oxygen during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to oxygen during vegetative growth" EXACT [PomBase:mah]
@@ -18014,6 +18027,7 @@ creation_date: 2012-07-19T16:05:22Z
 id: FYPO:0001258
 name: normal protein level during cellular response to hypoxia
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to hypoxia is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to hyperoxic stress" EXACT [GO:0071456]
 synonym: "normal protein level during cellular response to hypoxia during mitotic cell cycle" RELATED [PomBase:mah]
@@ -18033,7 +18047,7 @@ creation_date: 2012-07-19T16:06:01Z
 id: FYPO:0001259
 name: decreased RNA level during cellular response to hypoxia
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hypoxia is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to hyperoxic stress" EXACT [GO:0071456]
 synonym: "decreased RNA level during cellular response to hypoxia during mitotic cell cycle" RELATED [PomBase:mah]
@@ -18053,6 +18067,7 @@ creation_date: 2012-07-19T16:07:22Z
 id: FYPO:0001260
 name: normal RNA level during cellular response to hypoxia
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hypoxia is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA level during cellular response to hypoxia" NARROW [PomBase:mah]
 synonym: "normal protein level during cellular response to increased oxygen tension" EXACT [GO:0071456]
 synonym: "normal RNA accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
@@ -18258,7 +18273,7 @@ creation_date: 2012-07-19T17:15:33Z
 id: FYPO:0001274
 name: decreased protein level during cellular response to hypoxia
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to hypoxia is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to hypoxia" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to hypoxia during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to hypoxia during vegetative growth" EXACT [PomBase:mah]
@@ -18336,7 +18351,7 @@ creation_date: 2012-07-20T17:36:38Z
 id: FYPO:0001279
 name: increased RNA level during cellular response to oxidative stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to oxidative stress is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mRNA level during cellular response to oxidative stress" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to oxidative stress" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to DEM" NARROW [PomBase:al]
@@ -18357,7 +18372,7 @@ creation_date: 2012-07-26T10:59:25Z
 id: FYPO:0001280
 name: decreased RNA level during cellular response to oxidative stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to oxidative stress is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to oxidative stress" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to oxidative stress" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to DEM" NARROW [PomBase:al]
@@ -18412,7 +18427,7 @@ creation_date: 2012-07-26T11:50:10Z
 id: FYPO:0001283
 name: decreased protein level during cellular response to nitrogen starvation
 def: "A cell phenotype in which the amount of protein measured in a cell during a cellular response to nitrogen starvation is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to nitrogen starvation" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to nitrogen depletion" EXACT [PomBase:vw]
 synonym: "decreased protein level during cellular response to nitrogen deprivation" EXACT [PomBase:vw]
@@ -18877,6 +18892,7 @@ creation_date: 2012-08-01T13:14:57Z
 id: FYPO:0001317
 name: normal RNA level during vegetative growth
 def: "A cell phenotype in which the amount of RNA measured in a cell is normal when the cell is in the vegetative growth phase of the life cycle. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal cellular RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000840 ! normal RNA level
@@ -18991,7 +19007,7 @@ creation_date: 2012-08-01T14:57:41Z
 id: FYPO:0001324
 name: decreased protein level during vegetative growth
 def: "A cell phenotype in which the amount of protein measured in a cell is lower than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during vegetative growth" RELATED [PomBase:mah]
 synonym: "decreased protein level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "reduced protein level during vegetative growth" EXACT [PomBase:mah]
@@ -19026,7 +19042,7 @@ creation_date: 2012-08-01T15:11:16Z
 id: FYPO:0001326
 name: altered RNA level during vegetative growth
 def: "A cell phenotype in which the amount of RNA measured in a cell differs from normal when the cell is in the vegetative growth phase of the life cycle. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "abnormal RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cellular RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered RNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -19046,7 +19062,7 @@ id: FYPO:0001327
 name: increased protein level during vegetative growth
 alt_id: FYPO:0000762
 def: "A cell phenotype in which the amount of protein measured in a cell is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during vegetative growth" RELATED [PomBase:mah]
 synonym: "increased protein level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "protein accumulation during vegetative growth" RELATED [PomBase:mah]
@@ -19950,6 +19966,7 @@ creation_date: 2012-08-10T14:55:36Z
 id: FYPO:0001388
 name: decreased protein level in germinating spore
 def: "A cell phenotype in which the amount of protein measured in a cell is lower than normal during or just after spore germination. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 is_a: FYPO:0000835 ! decreased protein level
 intersection_of: PATO:0001163
 intersection_of: inheres_in CL:0000596
@@ -21359,6 +21376,7 @@ creation_date: 2012-08-30T13:03:23Z
 id: FYPO:0001486
 name: normal RNA level during cellular response to salt stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to salt stress is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA level during cellular response to salt stress" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to salt stress" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to salt stress during mitotic cell cycle" RELATED [PomBase:mah]
@@ -21377,6 +21395,7 @@ creation_date: 2012-08-30T13:08:09Z
 id: FYPO:0001487
 name: normal RNA level during cellular response to heat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to heat is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA level during cellular response to heat" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to heat" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to heat during mitotic cell cycle" RELATED [PomBase:mah]
@@ -22313,7 +22332,7 @@ creation_date: 2012-09-14T14:23:13Z
 id: FYPO:0001546
 name: decreased RNA level during cellular response to zinc ion
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to zinc ion is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to zinc ion" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to zinc ion" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to zinc" EXACT [GO:0071456]
@@ -22333,7 +22352,7 @@ creation_date: 2012-09-14T14:26:22Z
 id: FYPO:0001547
 name: increased RNA level during cellular response to zinc ion starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to zinc ion starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mRNA level during cellular response to zinc ion starvation" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to zinc ion starvation" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to zinc ion depletion" EXACT [PomBase:vw]
@@ -22354,7 +22373,7 @@ creation_date: 2012-09-14T14:28:30Z
 id: FYPO:0001548
 name: altered protein level during cellular response to hydrogen peroxide
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell differs from normal during a cellular response to hydrogen peroxide. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
 synonym: "altered cellular protein level during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered protein level during cellular response to H2O2" EXACT [PomBase:mah]
@@ -22373,7 +22392,7 @@ creation_date: 2012-09-14T14:32:40Z
 id: FYPO:0001549
 name: altered protein level during cellular response to hypoxia
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell differs from normal during a cellular response to hypoxia. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein level during cellular response to hypoxia" EXACT [PomBase:mah]
 synonym: "altered cellular protein level during cellular response to hypoxia during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered protein level during cellular response to hypoxia during mitotic cell cycle" RELATED [PomBase:mah]
@@ -22391,7 +22410,7 @@ creation_date: 2012-09-14T14:34:37Z
 id: FYPO:0001550
 name: altered protein level during cellular response to zinc ion
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell differs from normal during a cellular response to zinc ions. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein level during cellular response to zinc ion" EXACT [PomBase:mah]
 synonym: "altered cellular protein level during cellular response to zinc ion during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered protein level during cellular response to zinc" EXACT [PomBase:mah]
@@ -22409,7 +22428,7 @@ creation_date: 2012-09-14T14:36:13Z
 id: FYPO:0001551
 name: increased protein level during cellular response to zinc ion starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to zinc ion starvation is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during cellular response to zinc ion starvation" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to zinc ion depletion" EXACT [PomBase:vw]
 synonym: "increased protein level during cellular response to zinc ion deprivation" EXACT [PomBase:vw]
@@ -22767,7 +22786,7 @@ creation_date: 2012-09-20T13:55:30Z
 id: FYPO:0001573
 name: increased RNA level during cellular response to rapamycin
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to rapamycin is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mRNA level during cellular response to rapamycin" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to rapamycin" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to rapamycin during mitotic cell cycle" RELATED [PomBase:mah]
@@ -24510,7 +24529,7 @@ creation_date: 2012-11-02T15:04:44Z
 id: FYPO:0001684
 name: decreased RNA level during cellular response to purvalanol A
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to purvalanol A is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to purvalanol A" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to purvalanol A" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to purvalanol A during mitotic cell cycle" RELATED [PomBase:mah]
@@ -24530,7 +24549,7 @@ creation_date: 2012-11-02T15:37:15Z
 id: FYPO:0001685
 name: increased RNA level during cellular response to purvalanol A
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to purvalanol A is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mRNA level during cellular response to purvalanol A" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to purvalanol A" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to purvalanol A during mitotic cell cycle" RELATED [PomBase:mah]
@@ -26129,6 +26148,7 @@ creation_date: 2012-11-21T16:14:26Z
 id: FYPO:0001794
 name: normal RNA level during cellular response to purvalanol A
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to purvalanol A is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA level during cellular response to purvalanol A" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to purvalanol A" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to purvalanol A during mitotic cell cycle" RELATED [PomBase:mah]
@@ -27523,7 +27543,7 @@ creation_date: 2013-01-30T15:26:28Z
 id: FYPO:0001890
 name: increased RNA level
 def: "A cell phenotype in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 subset: qc_do_not_manually_annotate
 synonym: "increased cellular mRNA level" NARROW [PomBase:vw]
 synonym: "increased cellular RNA level" EXACT [PomBase:mah]
@@ -27796,7 +27816,7 @@ creation_date: 2013-01-31T14:27:37Z
 id: FYPO:0001908
 name: increased pre-mRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any unspliced or incompletely spliced mRNA precursor measured in a cell is higher than normal." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "accumulation of pre-mRNA transcripts" RELATED [PomBase:vw]
 synonym: "increased pre-mRNA accumulation" RELATED [PomBase:mah]
 synonym: "increased pre-mRNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -29357,7 +29377,7 @@ creation_date: 2013-02-27T15:20:19Z
 id: FYPO:0002014
 name: increased RNA level during cellular response to iron ion starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to iron ion starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mRNA level during cellular response to iron ion starvation" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to iron ion starvation" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to iron ion depletion" EXACT [PomBase:vw]
@@ -29459,7 +29479,7 @@ creation_date: 2013-02-28T13:34:43Z
 id: FYPO:0002020
 name: increased RNA level during nitrogen starvation
 def: "A cell phenotype in which the amount of RNA measured in a cell when the cell is subject to nitrogen starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased RNA accumulation during nitrogen starvation" RELATED [PomBase:mah]
 synonym: "increased RNA level during nitrogen depletion" EXACT [PomBase:vw]
 synonym: "increased RNA level during nitrogen deprivation" EXACT [PomBase:vw]
@@ -29774,7 +29794,7 @@ creation_date: 2013-03-08T11:33:48Z
 id: FYPO:0002042
 name: decreased RNA level during cellular response to iron ion starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to iron ion starvation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to iron ion starvation" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to iron ion starvation" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to iron ion depletion" EXACT [PomBase:vw]
@@ -30211,15 +30231,15 @@ creation_date: 2013-04-17T16:23:48Z
 
 [Term]
 id: FYPO:0002073
-name: protein mislocalized to nucleus during cellular response to copper
+name: protein mislocalized to nucleus during cellular response to copper ion
 def: "A cell phenotype in which a protein that is not normally found in the nucleus is observed there during a cellular response to copper ions." [PomBase:mah]
 comment: Note that this term can be used to annotate any case where a protein is found in the nucleus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "ectopic protein localization to nucleus during cellular response to copper" EXACT [PomBase:vw]
 synonym: "nuclear protein accumulation in response to copper" RELATED [PomBase:al]
-synonym: "protein mislocalised to nucleus during cellular response to copper" EXACT [PomBase:mah]
+synonym: "protein mislocalised to nucleus during cellular response to copper ion" EXACT [PomBase:mah]
 synonym: "protein mislocalised to nucleus during cellular response to copper ion during vegetative growth" EXACT [PomBase:mah]
 synonym: "protein mislocalized to nucleus during cellular response to copper during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "protein mislocalized to nucleus during cellular response to copper ion" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nucleus during cellular response to copper" EXACT [PomBase:mah]
 synonym: "protein mislocalized to nucleus during cellular response to copper ion during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000784 ! protein mislocalized to nucleus during vegetative growth
 intersection_of: PATO:0000628
@@ -31327,6 +31347,7 @@ creation_date: 2013-05-09T10:17:24Z
 id: FYPO:0002146
 name: normal RNA level during cellular response to DEM
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to diethyl maleate (DEM) is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA level during cellular response to DEM" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to DEM" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to DEM during mitotic cell cycle" RELATED [PomBase:mah]
@@ -33306,7 +33327,7 @@ creation_date: 2013-06-13T13:09:14Z
 id: FYPO:0002287
 name: decreased RNA level during cellular response to heat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to heat is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during cellular response to heat" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to heat during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
@@ -33544,7 +33565,7 @@ creation_date: 2013-06-20T13:59:28Z
 id: FYPO:0002304
 name: decreased RNA level during cellular response to salt stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to salt stress is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to salt stress" NARROW [PomBase:mah]
 synonym: "decreased RNA level during cellular response to salt stress during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
@@ -33563,7 +33584,7 @@ creation_date: 2013-06-20T14:29:07Z
 id: FYPO:0002305
 name: decreased RNA level during cellular response to non-ionic osmotic stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to non-ionic osmotic stress is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to non-ionic osmotic stress" NARROW [PomBase:mah]
 synonym: "decreased RNA level during cellular response to non-ionic osmotic stress during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to non-ionic osmotic stress during vegetative growth" EXACT [PomBase:mah]
@@ -37486,7 +37507,7 @@ creation_date: 2013-08-28T11:48:40Z
 id: FYPO:0002564
 name: increased tRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of transfer RNA (tRNA) measured in a cell is higher than normal. Total tRNA or a specific tRNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mature tRNA level" EXACT [SO:0000253]
 synonym: "increased transfer RNA level" EXACT [PomBase:mah]
 synonym: "increased tRNA accumulation" RELATED [PomBase:mah]
@@ -37728,7 +37749,7 @@ creation_date: 2013-08-28T15:27:26Z
 id: FYPO:0002579
 name: altered tRNA level during vegetative growth
 def: "A cell phenotype in which the amount of transfer RNA (tRNA) measured in a cell differs from normal when the cell is in the vegetative growth phase of the life cycle. Total tRNA or a specific tRNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "abnormal tRNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cellular transfer RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cellular tRNA level during vegetative growth" EXACT [PomBase:mah]
@@ -37748,6 +37769,7 @@ creation_date: 2013-08-28T16:07:23Z
 id: FYPO:0002580
 name: normal tRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of transfer RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total tRNA or a specific tRNA may be measured." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mature tRNA level" EXACT [SO:0000253]
 synonym: "normal transfer RNA level" EXACT [PomBase:mah]
 synonym: "normal tRNA accumulation" RELATED [PomBase:mah]
@@ -37777,6 +37799,7 @@ creation_date: 2013-08-28T16:12:36Z
 id: FYPO:0002582
 name: normal mitochondrial tRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mitochondrial transfer RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total tRNA or a specific tRNA may be measured." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mature mitochondrial tRNA level" EXACT [SO:0000253]
 synonym: "normal mitochondrial transfer RNA level" EXACT [PomBase:mah]
 synonym: "normal mitochondrial tRNA accumulation" RELATED [PomBase:mah]
@@ -37795,7 +37818,7 @@ creation_date: 2013-08-28T16:18:45Z
 id: FYPO:0002583
 name: decreased tRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of transfer RNA (tRNA) measured in a cell is lower than normal. Total tRNA or a specific tRNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mature tRNA level" EXACT [SO:0000253]
 synonym: "decreased transfer RNA level" EXACT [PomBase:mah]
 synonym: "decreased tRNA accumulation" RELATED [PomBase:mah]
@@ -37815,7 +37838,7 @@ creation_date: 2013-08-28T16:20:19Z
 id: FYPO:0002584
 name: decreased mitochondrial tRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mitochondrial transfer RNA (tRNA) measured in a cell is lower than normal. Total tRNA or a specific tRNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mature mitochondrial tRNA level" EXACT [SO:0000253]
 synonym: "decreased mitochondrial transfer RNA level" EXACT [PomBase:mah]
 synonym: "decreased mitochondrial tRNA accumulation" RELATED [PomBase:mah]
@@ -38064,8 +38087,8 @@ creation_date: 2013-09-04T16:18:49Z
 id: FYPO:0002601
 name: normal histone H2A phosphorylation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which histone H2A phosphorylation is normal. All histone H2A phosphorylation may be assayed, or phosphorylation of specific sites on histone H2A may be measured." [PomBase:mah]
-synonym: "abnormal histone H2A phosphorylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal histone H2A phosphorylation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal histone H2A phosphorylation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0002595 ! normal histone phosphorylation
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -38385,7 +38408,7 @@ creation_date: 2013-09-05T15:47:25Z
 id: FYPO:0002623
 name: decreased RNA level during cellular response to glucose stimulus
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to a glucose stimulus is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to glucose stimulus" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to glucose stimulus" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to glucose" EXACT [PomBase:mah]
@@ -39491,6 +39514,7 @@ creation_date: 2013-09-25T12:14:38Z
 id: FYPO:0002703
 name: increased protein level in autophagosome
 def: "A cell phenotype in which the amount of protein measured in autophagosomes is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased autophagosomal protein level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased protein level in autophagic vacuole during vegetative growth" EXACT [GO:0005776]
 synonym: "increased protein level in autophagosome during mitotic cell cycle" RELATED [PomBase:mah]
@@ -39798,6 +39822,9 @@ creation_date: 2013-09-26T14:51:13Z
 id: FYPO:0002724
 name: inviable after spore germination, single or double cell division, elongated cell
 def: "A phenotype in which a spore germinates to produce a cell that is longer than normal and undergoes one or two rounds of cell division." [PomBase:mah]
+synonym: "essential; germinating spore, single or double cell division, elongated cell" RELATED [PomBase:mah]
+synonym: "inviable following spore germination, single or double cell division, elongated cell" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, single or double cell division, elongated cell" EXACT [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0002421 ! inviable after spore germination, single or double cell division, abnormal cell shape
 created_by: midori
@@ -41590,7 +41617,7 @@ creation_date: 2013-11-05T16:59:57Z
 id: FYPO:0002847
 name: decreased protein level in proteasome
 def: "A cell phenotype in which the amount of a protein measured in the proteasome is lower than normal when the cell is in the vegetative growth phase of the life cycle." [PMID:22906049, PomBase:mah]
-comment: Use this term for cases where the relative abundance of one or more specific proteins in the proteasome is decreased, altering the proteasome stoichiometry.
+comment: Use this term for cases where the relative abundance of one or more specific proteins in the proteasome is decreased, altering the proteasome stoichiometry. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased proteasomal protein level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased protein level in proteasome during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level in proteasome during vegetative growth" EXACT [PomBase:mah]
@@ -42861,7 +42888,7 @@ creation_date: 2013-11-27T15:58:41Z
 id: FYPO:0002932
 name: decreased snoRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mature snoRNA measured in a cell is lower than normal." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mature snoRNA level" EXACT [PomBase:mah]
 synonym: "decreased small nucleolar RNA level" EXACT [PomBase:mah]
 synonym: "decreased snoRNA accumulation" RELATED [PomBase:mah]
@@ -42881,7 +42908,7 @@ creation_date: 2013-11-28T13:13:18Z
 id: FYPO:0002933
 name: increased snoRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mature snoRNA measured in a cell is higher than normal." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mature snoRNA level" EXACT [PomBase:mah]
 synonym: "increased small nucleolar RNA level" EXACT [PomBase:mah]
 synonym: "increased snoRNA accumulation" RELATED [PomBase:mah]
@@ -42900,7 +42927,7 @@ creation_date: 2013-11-28T13:16:00Z
 id: FYPO:0002934
 name: altered mRNA level during vegetative growth
 def: "A cell phenotype in which the amount of messenger RNA (mRNA) measured in a cell differs from normal when the cell is in the vegetative growth phase of the life cycle. Total mRNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "abnormal mRNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cellular messenger RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered cellular mRNA level during vegetative growth" EXACT [PomBase:mah]
@@ -42920,7 +42947,7 @@ creation_date: 2013-11-28T14:30:04Z
 id: FYPO:0002935
 name: decreased mRNA level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of messenger RNA (mRNA) measured in a cell is lower than normal. Total mRNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased cellular mRNA level during vegetative growth" EXACT [PomBase:vw]
 synonym: "decreased messenger RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased mRNA accumulation during vegetative growth" RELATED [PomBase:mah]
@@ -42940,7 +42967,7 @@ creation_date: 2013-11-28T14:32:25Z
 id: FYPO:0002936
 name: increased mRNA level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of messenger RNA (mRNA) measured in a cell is higher than normal. Total mRNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased cellular mRNA level during vegetative growth" EXACT [PomBase:vw]
 synonym: "increased messenger RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased mRNA accumulation during vegetative growth" RELATED [PomBase:mah]
@@ -42959,7 +42986,7 @@ creation_date: 2013-11-28T14:35:19Z
 id: FYPO:0002937
 name: decreased pre-mRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any unspliced or incompletely spliced mRNA precursor measured in a cell is lower than normal." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased accumulation of pre-mRNA transcripts" RELATED [PomBase:vw]
 synonym: "decreased pre-mRNA accumulation" RELATED [PomBase:mah]
 synonym: "decreased pre-mRNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -42974,6 +43001,7 @@ creation_date: 2013-11-28T14:38:47Z
 id: FYPO:0002938
 name: normal mRNA level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of messenger RNA (mRNA) measured in a cell is normal (i.e. indistinguishable from wild type). Total mRNA or a specific mRNA may be measured." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA accumulation" RELATED [PomBase:mah]
 synonym: "normal mRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001317 ! normal RNA level during vegetative growth
@@ -43081,7 +43109,7 @@ creation_date: 2013-12-04T14:18:36Z
 id: FYPO:0002944
 name: decreased RNA level during G0
 def: "A cell phenotype in which the amount of RNA measured in a cell is lower than normal when the cell is in G0 phase. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during G0" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cell quiescence" EXACT [PomBase:mah]
 synonym: "decreased transcript level during G0" EXACT [PomBase:vw]
@@ -43099,7 +43127,7 @@ creation_date: 2013-12-04T14:27:54Z
 id: FYPO:0002945
 name: increased RNA level during G0
 def: "A cell phenotype in which the amount of RNA measured in a cell when the cell is in G0 phase is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased RNA accumulation during G0" RELATED [PomBase:mah]
 synonym: "increased RNA level during cell quiescence" EXACT [PomBase:mah]
 synonym: "increased transcript level during G0" EXACT [PomBase:vw]
@@ -43292,7 +43320,7 @@ creation_date: 2013-12-04T15:52:20Z
 id: FYPO:0002959
 name: decreased RNA level during meiosis
 def: "A cell phenotype in which the amount of RNA measured in a cell is lower than normal when the cell undergoing meiosis. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during meiosis" RELATED [PomBase:mah]
 synonym: "decreased RNA level during meiotic nuclear division" EXACT [GO:0007126]
 synonym: "decreased transcript level during meiosis" EXACT [PomBase:vw]
@@ -43538,7 +43566,7 @@ creation_date: 2013-12-10T12:42:55Z
 id: FYPO:0002975
 name: decreased RNA level during cellular response to hydroxyurea
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hydroxyurea is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during cellular response to hydroxyurea" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to HU" EXACT [PomBase:mah]
 synonym: "decreased RNA level during cellular response to hydroxyurea during mitotic cell cycle" RELATED [PomBase:mah]
@@ -43686,6 +43714,7 @@ creation_date: 2013-12-10T15:34:20Z
 id: FYPO:0002984
 name: normal RNA level during cellular response to methyl methanesulfonate
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to methyl methanesulfonate is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA level during cellular response to methyl methanesulfonate" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to methyl methanesulfonate during mitotic cell cycle" RELATED [PomBase:mah]
@@ -43706,7 +43735,7 @@ creation_date: 2013-12-10T15:37:29Z
 id: FYPO:0002985
 name: increased RNA level during cellular response to methyl methanesulfonate
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to methyl methanesulfonate is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mRNA level during cellular response to methyl methanesulfonate" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to methyl methanesulfonate during mitotic cell cycle" RELATED [PomBase:mah]
@@ -44060,7 +44089,7 @@ creation_date: 2013-12-18T14:51:58Z
 id: FYPO:0003007
 name: decreased protein level during cellular response to caffeine
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to caffeine is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to caffeine" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to caffeine during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to caffeine during vegetative growth" EXACT [PomBase:mah]
@@ -44443,7 +44472,7 @@ creation_date: 2014-01-17T14:28:06Z
 id: FYPO:0003032
 name: decreased RNA level during glucose starvation
 def: "A cell phenotype in which the amount of RNA measured in a cell when the cell is subject to glucose starvation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for glucose. Note that cells may enter G0 (quiescence) when subjected to prolonged glucose starvation; this term is not restricted to G0.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for glucose. Note that cells may enter G0 (quiescence) when subjected to prolonged glucose starvation; this term is not restricted to G0. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during glucose starvation" RELATED [PomBase:mah]
 synonym: "decreased RNA level during glucose depletion" EXACT [PomBase:vw]
 synonym: "decreased RNA level during glucose deprivation" EXACT [PomBase:vw]
@@ -44461,7 +44490,7 @@ creation_date: 2014-01-17T14:30:03Z
 id: FYPO:0003033
 name: increased RNA level during glucose starvation
 def: "A cell phenotype in which the amount of RNA measured in a cell when the cell is subject to glucose starvation is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for glucose. Note that cells may enter G0 (quiescence) when subjected to prolonged glucose starvation; this term is not restricted to G0.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for glucose. Note that cells may enter G0 (quiescence) when subjected to prolonged glucose starvation; this term is not restricted to G0. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased RNA accumulation during glucose starvation" RELATED [PomBase:mah]
 synonym: "increased RNA level during glucose depletion" EXACT [PomBase:vw]
 synonym: "increased RNA level during glucose deprivation" EXACT [PomBase:vw]
@@ -44478,7 +44507,7 @@ creation_date: 2014-01-17T14:31:39Z
 id: FYPO:0003034
 name: decreased RNA level during cellular response to UV
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to ultraviolet light is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during cellular response to ultraviolet light" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to ultraviolet light" EXACT [GO:0034644]
 synonym: "decreased RNA level during cellular response to UV during mitotic cell cycle" RELATED [PomBase:mah]
@@ -44498,6 +44527,7 @@ creation_date: 2014-01-17T14:44:21Z
 id: FYPO:0003035
 name: normal RNA level during cellular response to UV
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to ultraviolet light is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA level during cellular response to UV" NARROW [PomBase:mah]
 synonym: "normal protein level during cellular response to ultraviolet light" EXACT [GO:0034644]
 synonym: "normal RNA accumulation during cellular response to UV" RELATED [PomBase:mah]
@@ -45470,7 +45500,7 @@ creation_date: 2014-02-13T16:19:52Z
 id: FYPO:0003103
 name: decreased mRNA-derived small RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small RNA (such as siRNA) derived from mRNA transcripts measured in a cell is lower than normal." [PMID:24095277, PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased accumulation of mRNA-derived small RNAs" RELATED [PomBase:vw]
 synonym: "decreased mRNA-derived small RNA accumulation" RELATED [PomBase:mah]
 synonym: "decreased mRNA-derived small RNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -45485,7 +45515,7 @@ creation_date: 2014-02-13T16:36:11Z
 id: FYPO:0003104
 name: increased mRNA-derived small RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small RNA (such as siRNA) derived from mRNA transcripts measured in a cell is greater than normal." [PMID:24095277, PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased accumulation of mRNA-derived small RNAs" RELATED [PomBase:vw]
 synonym: "increased mRNA-derived small RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased mRNA-derived small RNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -45499,7 +45529,7 @@ creation_date: 2014-02-13T16:38:10Z
 id: FYPO:0003105
 name: increased transposable element-derived small RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small RNA (such as siRNA) derived from transposable element transcripts measured in a cell is greater than normal." [PMID:24095277, PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased accumulation of transposable element-derived small RNAs" RELATED [PomBase:vw]
 synonym: "increased transposable element-derived small RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased transposable element-derived small RNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -45696,7 +45726,7 @@ creation_date: 2014-02-19T14:36:02Z
 id: FYPO:0003119
 name: increased nuclear polyadenylated mRNA level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of polyadenylated messenger RNA (mRNA) measured in the nucleus is higher than normal. Total mRNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased nuclear poly(A)+ mRNA level during vegetative growth" EXACT [PomBase:vw]
 synonym: "increased nuclear polyadenylated messenger RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased nuclear polyadenylated mRNA accumulation during vegetative growth" RELATED [PomBase:mah]
@@ -46068,7 +46098,7 @@ creation_date: 2014-02-26T11:24:17Z
 id: FYPO:0003142
 name: decreased RNA level during cellular response to methyl methanesulfonate
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to methyl methanesulfonate is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to methyl methanesulfonate" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to methyl methanesulfonate during mitotic cell cycle" RELATED [PomBase:mah]
@@ -46090,7 +46120,7 @@ creation_date: 2014-02-26T11:41:17Z
 id: FYPO:0003143
 name: decreased protein level during cellular response to methyl methanesulfonate
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to methyl methanesulfonate is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to methyl methanesulfonate during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
@@ -46110,6 +46140,7 @@ creation_date: 2014-02-26T11:43:44Z
 id: FYPO:0003144
 name: normal protein level during cellular response to methyl methanesulfonate
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to the level of methyl methanesulfonate is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein accumulation during cellular response to methyl methanesulfonate" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to methyl methanesulfonate during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to methyl methanesulfonate during vegetative growth" EXACT [PomBase:mah]
@@ -46205,7 +46236,7 @@ creation_date: 2014-02-26T15:48:02Z
 id: FYPO:0003151
 name: decreased protein level during cellular response to heat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to heat is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to heat" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to heat during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
@@ -46223,7 +46254,7 @@ creation_date: 2014-02-26T15:56:14Z
 id: FYPO:0003152
 name: increased protein level during cellular response to heat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to heat is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during cellular response to heat" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to heat during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
@@ -46240,6 +46271,7 @@ creation_date: 2014-02-26T15:57:07Z
 id: FYPO:0003153
 name: normal protein level during cellular response to heat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to heat is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein accumulation during cellular response to heat" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to heat during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
@@ -46368,6 +46400,7 @@ synonym: "RNA absent from cell during cellular response to salt stress during ve
 synonym: "transcripts absent from cell during cellular response to salt stress" EXACT [PomBase:vw]
 synonym: "undetectable RNA level during cellular response to salt stress" EXACT [PomBase:mah]
 is_a: FYPO:0001889 ! RNA absent from cell
+is_a: FYPO:0002304 ! decreased RNA level during cellular response to salt stress
 intersection_of: PATO:0002000
 intersection_of: during GO:0071472
 intersection_of: during GO:0072690
@@ -46831,7 +46864,7 @@ creation_date: 2014-03-13T16:08:23Z
 id: FYPO:0003195
 name: altered RNA level during cellular response to phosphate starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell differs from normal during a cellular response to phosphate starvation. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "abnormal RNA level during cellular response to phosphate starvation" EXACT [PomBase:mah]
 synonym: "altered cellular RNA level during cellular response to phosphate starvation" EXACT [PomBase:mah]
 synonym: "altered RNA level during cellular response to phosphate starvation during mitotic cell cycle" RELATED [PomBase:mah]
@@ -46853,7 +46886,7 @@ creation_date: 2014-03-13T16:42:48Z
 id: FYPO:0003196
 name: altered RNA level during cellular response to iron ion starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell differs from normal during a cellular response to iron ion starvation. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "abnormal RNA level during cellular response to iron ion starvation" EXACT [PomBase:mah]
 synonym: "altered cellular RNA level during cellular response to iron ion starvation" EXACT [PomBase:mah]
 synonym: "altered RNA level during cellular response to iron ion starvation during mitotic cell cycle" RELATED [PomBase:mah]
@@ -46876,7 +46909,7 @@ creation_date: 2014-03-13T16:52:11Z
 id: FYPO:0003197
 name: altered RNA level during cellular response to copper ion starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell differs from normal during a cellular response to copper ion starvation. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "abnormal RNA level during cellular response to copper ion starvation" EXACT [PomBase:mah]
 synonym: "altered cellular RNA level during cellular response to copper ion starvation" EXACT [PomBase:mah]
 synonym: "altered RNA level during cellular response to copper ion starvation during mitotic cell cycle" RELATED [PomBase:mah]
@@ -46899,7 +46932,7 @@ creation_date: 2014-03-13T16:54:50Z
 id: FYPO:0003198
 name: altered RNA level during cellular response to osmotic stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell differs from normal during a cellular response to osmotic stress. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "abnormal RNA level during cellular response to osmotic stress" EXACT [PomBase:mah]
 synonym: "altered cellular RNA level during cellular response to osmotic stress" EXACT [PomBase:mah]
 synonym: "altered RNA level during cellular response to osmotic stress during mitotic cell cycle" RELATED [PomBase:mah]
@@ -46921,7 +46954,7 @@ creation_date: 2014-03-13T16:55:44Z
 id: FYPO:0003199
 name: altered RNA level during cellular response to glucose starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell differs from normal during a cellular response to glucose starvation. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "abnormal RNA level during cellular response to glucose starvation" EXACT [PomBase:mah]
 synonym: "altered cellular RNA level during cellular response to glucose starvation" EXACT [PomBase:mah]
 synonym: "altered RNA level during cellular response to glucose starvation during mitotic cell cycle" RELATED [PomBase:mah]
@@ -47513,7 +47546,7 @@ creation_date: 2014-03-25T17:15:41Z
 id: FYPO:0003236
 name: decreased transposable element-derived small RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small RNA (such as siRNA) derived from transposable element transcripts measured in a cell is lower than normal." [PMID:24095277, PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased accumulation of transposable element-derived small RNAs" RELATED [PomBase:vw]
 synonym: "decreased transposable element-derived small RNA accumulation" RELATED [PomBase:mah]
 synonym: "decreased transposable element-derived small RNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -47860,7 +47893,7 @@ creation_date: 2014-04-01T14:33:51Z
 id: FYPO:0003261
 name: decreased small RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small RNA measured in a cell is lower than normal. All types of small RNA, a particular RNA type, or a specific small RNA may be affected." [PMID:24095277, PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased accumulation of small RNAs" RELATED [PomBase:vw]
 synonym: "decreased small RNA accumulation" RELATED [PomBase:mah]
 synonym: "decreased small RNA level" RELATED [PomBase:mah]
@@ -47875,7 +47908,7 @@ creation_date: 2014-04-01T14:36:05Z
 id: FYPO:0003262
 name: increased small RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small RNA measured in a cell is greater than normal. All types of small RNA, a particular RNA type, or a specific small RNA may be affected." [PMID:24095277, PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased accumulation of small RNAs" RELATED [PomBase:vw]
 synonym: "increased small RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased small RNA level" RELATED [PomBase:mah]
@@ -48136,7 +48169,7 @@ creation_date: 2014-04-03T14:07:34Z
 id: FYPO:0003280
 name: decreased RNA level during cellular response to copper ion starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to copper ion starvation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to copper ion starvation" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to copper ion starvation" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to copper ion depletion" EXACT [PomBase:vw]
@@ -49513,7 +49546,7 @@ creation_date: 2014-06-02T13:56:34Z
 id: FYPO:0003377
 name: decreased RNA level during cellular response to nitrosative stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to nitrosative stress is lower than normal. Total RNA or a specific RNA may be affected. Nitrosative stress often results from exposure to high levels of nitric oxide (NO) or the highly reactive oxidant peroxynitrite, which is produced following interaction of NO with superoxide anions." [GO:0071500, PMID:20204527, PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. NO levels can be increased experimentally by adding sodium nitroprusside to growth media.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. NO levels can be increased experimentally by adding sodium nitroprusside to growth media. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mRNA level during cellular response to nitrosative stress" NARROW [PomBase:mah]
 synonym: "decreased RNA accumulation during cellular response to nitrosative stress" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to nitrosative stress during mitotic cell cycle" RELATED [PomBase:mah]
@@ -50221,7 +50254,7 @@ creation_date: 2014-06-11T13:17:31Z
 id: FYPO:0003423
 name: decreased mitochondrial RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mitochondrial RNA measured in a cell is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased mitochondrial RNA accumulation" RELATED [PomBase:mah]
 synonym: "decreased mitochondrial RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased mitochondrial RNA level during vegetative growth" EXACT [PomBase:mah]
@@ -50240,7 +50273,7 @@ creation_date: 2014-06-11T13:44:20Z
 id: FYPO:0003424
 name: increased mitochondrial RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of mitochondrial RNA measured in a cell is greater than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mitochondrial RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased mitochondrial RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased mitochondrial RNA level during vegetative growth" EXACT [PomBase:mah]
@@ -50272,7 +50305,7 @@ creation_date: 2014-06-11T14:14:35Z
 id: FYPO:0003426
 name: decreased RNA level during cellular response to pheromone
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to a pheromone is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during cellular response to pheromone" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to pheromone during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to pheromone during vegetative growth" EXACT [PomBase:mah]
@@ -51363,7 +51396,7 @@ creation_date: 2014-07-01T17:33:44Z
 id: FYPO:0003504
 name: increased protein level in plasma membrane
 def: "A cell phenotype in which the amount of protein measured in the plasma membrane is higher than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: An increased level of a protein in the plasma membrane may result from increased protein transport to the membrane ('increased protein localization to plasma membrane FYPO:0002127), decreased endocytosis from the membrane ('abolished endocytosis' FYPO:0000421 or 'decreased endocytosis' FYPO:0000422), or both.
+comment: An increased level of a protein in the plasma membrane may result from increased protein transport to the membrane ('increased protein localization to plasma membrane FYPO:0002127), decreased endocytosis from the membrane ('abolished endocytosis' FYPO:0000421 or 'decreased endocytosis' FYPO:0000422), or both. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased plasma membrane protein level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased protein level in cell membrane during vegetative growth" EXACT [GO:0005886]
 synonym: "increased protein level in plasma membrane during mitotic cell cycle" RELATED [PomBase:mah]
@@ -52010,7 +52043,7 @@ creation_date: 2014-07-17T09:54:27Z
 id: FYPO:0003550
 name: decreased protein level during meiosis
 def: "A cell phenotype in which the amount of protein measured in a cell during one or both meiotic nuclear divisions is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during meiosis" RELATED [PomBase:mah]
 synonym: "decreased protein level during meiotic nuclear division" EXACT [GO:0007126]
 synonym: "reduced protein level during meiosis" EXACT [PomBase:mah]
@@ -52109,7 +52142,7 @@ creation_date: 2014-07-17T11:10:03Z
 id: FYPO:0003557
 name: increased antisense RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of antisense RNA measured in a cell is higher than normal. Antisense RNA is transcribed from the coding, rather than the template, strand of DNA." [PomBase:mah, SO:0000644]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased antisense RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased antisense RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased antisense RNA level during vegetative growth" EXACT [PomBase:mah]
@@ -52435,7 +52468,7 @@ creation_date: 2014-07-22T12:52:21Z
 id: FYPO:0003579
 name: normal RNA level during meiosis
 def: "A cell phenotype in which the amount of RNA measured in a cell during ore or both meiotic nuclear divisions is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal cellular RNA level during meiosis" EXACT [PomBase:mah]
 synonym: "normal mRNA level during meiosis" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during meiosis" RELATED [PomBase:mah]
@@ -52845,7 +52878,7 @@ creation_date: 2014-08-06T10:44:06Z
 id: FYPO:0003611
 name: increased protein level during meiosis
 def: "A cell phenotype in which the amount of protein measured in a cell during one or both meiotic nuclear divisions is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during meiosis" RELATED [PomBase:mah]
 synonym: "increased protein level during meiotic nuclear division" EXACT [PomBase:vw]
 is_a: FYPO:0000836 ! increased protein level
@@ -52967,6 +53000,7 @@ creation_date: 2014-08-06T12:06:30Z
 id: FYPO:0003620
 name: normal pre-mRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any unspliced or incompletely spliced mRNA precursor measured in a cell is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal pre-mRNA accumulation" RELATED [PomBase:mah]
 synonym: "normal pre-mRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal pre-mRNA level during vegetative growth" EXACT [PomBase:mah]
@@ -53292,6 +53326,7 @@ synonym: "RNA absent from cell during cellular response to vitamin B1 starvation
 synonym: "RNA absent from cell during cellular response to vitamin B1 starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "transcripts absent from cell during cellular response to vitamin B1 starvation" EXACT [PomBase:vw]
 synonym: "undetectable RNA level during cellular response to vitamin B1 starvation" EXACT [PomBase:mah]
+is_a: FYPO:0001244 ! decreased RNA level during cellular response to vitamin B1 starvation
 is_a: FYPO:0001889 ! RNA absent from cell
 intersection_of: PATO:0002000
 intersection_of: during GO:0036225
@@ -53377,7 +53412,7 @@ creation_date: 2014-08-06T16:11:05Z
 id: FYPO:0003650
 name: decreased protein level during cellular response to glucose starvation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to glucose starvation is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to glucose starvation" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to glucose depletion" EXACT [PomBase:mah]
 synonym: "decreased protein level during cellular response to glucose deprivation" EXACT [PomBase:mah]
@@ -53397,7 +53432,7 @@ creation_date: 2014-08-06T16:13:02Z
 id: FYPO:0003651
 name: decreased protein level during cellular response to nitrosative stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to nitrosative stress is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to nitrosative stress" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to nitrosative stress during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to nitrosative stress during vegetative growth" EXACT [PomBase:mah]
@@ -53715,7 +53750,7 @@ creation_date: 2014-08-12T14:07:00Z
 id: FYPO:0003675
 name: increased 5.8S rRNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of the mature 5.8S rRNA measured in a cell is higher than normal." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased 5.8S rRNA accumulation" RELATED [PomBase:mah]
 synonym: "increased 5.8S rRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased 5.8S rRNA level during vegetative growth" EXACT [PomBase:mah]
@@ -53816,6 +53851,7 @@ creation_date: 2014-08-12T14:52:07Z
 id: FYPO:0003681
 name: decreased protein level at centromere outer repeat
 def: "A cell phenotype in which the amount of a protein found associated with chromatin at the centromere outer repeat regions is lower than normal when the cell is in the vegetative growth phase of the life cycle." [PMID:20018856, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein level at centromere outer repeat during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001324 ! decreased protein level during vegetative growth
@@ -54830,7 +54866,7 @@ creation_date: 2014-09-01T16:26:37Z
 id: FYPO:0003753
 name: increased specific nuclear polyadenylated mRNA level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more specific polyadenylated messenger RNAs (mRNAs) measured in the nucleus is higher than normal." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased level of specific nuclear polyadenylated mRNA during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased nuclear specific poly(A)+ mRNA level during vegetative growth" EXACT [PomBase:vw]
 synonym: "increased specific nuclear polyadenylated messenger RNA level during vegetative growth" EXACT [PomBase:mah]
@@ -55016,7 +55052,7 @@ creation_date: 2014-09-08T12:38:50Z
 [Term]
 id: FYPO:0003766
 name: aggregated mtDNA
-def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which mitochondrial DNA molecules are  interlinked by unresolved recombination junctions." [PMID:10954073, PomBase:mah]
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which mitochondrial DNA molecules are interlinked by unresolved recombination junctions." [PMID:10954073, PomBase:mah]
 synonym: "aggregated mitochondrial chromosomes" EXACT [PomBase:mah]
 synonym: "aggregated mitochondrial DNA" EXACT [PomBase:mah]
 synonym: "fused mitochondrial chromosomes" RELATED [PomBase:mah]
@@ -55246,7 +55282,7 @@ creation_date: 2014-09-08T17:23:16Z
 id: FYPO:0003782
 name: normal nuclear pore distribution during mitotic interphase
 def: "A localization phenotype observed in the vegetative growth phase of the life cycle in which the spatial arrangement of nuclear pores within the nuclear envelope is normal (i.e. indistinguishable from wild type) during interphase of the mitotic cell cycle." [PomBase:mah]
-synonym: "normal nuclear pore distribution  during interphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal nuclear pore distribution during interphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal nuclear pore distribution during interphase of mitotic cell cycle" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 intersection_of: PATO:0000001
@@ -55408,6 +55444,7 @@ creation_date: 2014-09-09T14:41:21Z
 id: FYPO:0003793
 name: normal RNA level during cellular response to osmotic stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to osmotic stress is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA level during cellular response to osmotic stress" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to osmotic stress" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to osmotic stress during mitotic cell cycle" RELATED [PomBase:mah]
@@ -56400,7 +56437,7 @@ creation_date: 2014-10-16T15:57:29Z
 id: FYPO:0003865
 name: decreased protein level during G0
 def: "A cell phenotype in which the amount of protein measured in a cell is lower than normal when the cell is in G0 phase. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability as well as changes in translation.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability as well as changes in translation. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during G0" RELATED [PomBase:mah]
 synonym: "decreased protein level during cell quiescence" EXACT [PomBase:mah]
 synonym: "reduced protein level during G0" EXACT [PomBase:mah]
@@ -56416,7 +56453,7 @@ creation_date: 2014-10-16T16:00:08Z
 id: FYPO:0003866
 name: increased protein level during G0
 def: "A cell phenotype in which the amount of protein measured in a cell when the cell is in G0 phase is higher than normal. Total protein or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability as well as changes in translation.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability as well as changes in translation. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during G0" RELATED [PomBase:mah]
 synonym: "increased protein level during cell quiescence" EXACT [PomBase:mah]
 is_a: FYPO:0002949 ! increased level of substance in cell during G0
@@ -57043,7 +57080,7 @@ creation_date: 2014-10-22T14:55:34Z
 id: FYPO:0003914
 name: increased protein level in stationary phase
 def: "A cell phenotype in which the amount of protein measured in a cell is higher than normal when the population in which the cell is found is in stationary phase. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation in stationary phase" RELATED [PomBase:mah]
 is_a: FYPO:0000836 ! increased protein level
 created_by: midori
@@ -57053,6 +57090,7 @@ creation_date: 2014-10-22T15:05:22Z
 id: FYPO:0003915
 name: decreased mitochondrial protein level
 def: "A cell phenotype in which the amount of protein measured in the mitochondrion is lower than normal when the cell is in the vegetative growth phase of the life cycle. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased level of mitochondrial proteins" EXACT [PomBase:al]
 synonym: "decreased mitochondrial protein level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased mitochondrial protein level during vegetative growth" EXACT [PomBase:mah]
@@ -57263,7 +57301,7 @@ creation_date: 2014-10-28T16:33:39Z
 id: FYPO:0003930
 name: decreased protein level during cellular response to salt stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to salt stress is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to salt stress" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to salt stress during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
@@ -57773,7 +57811,7 @@ creation_date: 2014-11-04T11:33:24Z
 id: FYPO:0003966
 name: increased protein level during cellular response to salt stress
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to salt stress is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein accumulation during cellular response to salt stress" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to salt stress during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
@@ -57790,7 +57828,7 @@ creation_date: 2014-11-04T11:35:36Z
 id: FYPO:0003967
 name: decreased protein level in stationary phase
 def: "A cell phenotype in which the amount of protein measured in a cell is lover than normal when the population in which the cell is found is in stationary phase. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation in stationary phase" RELATED [PomBase:mah]
 synonym: "reduced protein level in stationary phase" EXACT [PomBase:mah]
 is_a: FYPO:0000835 ! decreased protein level
@@ -58122,7 +58160,7 @@ creation_date: 2014-11-05T14:33:34Z
 id: FYPO:0003991
 name: increased RNA level in stationary phase
 def: "A cell phenotype in which the amount of RNA measured in a cell is higher than normal when the population in which the cell is found is in stationary phase. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased RNA accumulation in stationary phase" RELATED [PomBase:mah]
 is_a: FYPO:0001890 ! increased RNA level
 created_by: midori
@@ -58132,6 +58170,7 @@ creation_date: 2014-11-05T15:01:20Z
 id: FYPO:0003992
 name: normal RNA level during cellular response to menadione
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to menadione is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "normal mRNA level during cellular response to menadione" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during cellular response to menadione" RELATED [PomBase:mah]
 synonym: "normal RNA level during cellular response to menadione during mitotic cell cycle" RELATED [PomBase:mah]
@@ -58150,7 +58189,7 @@ creation_date: 2014-11-05T15:02:45Z
 id: FYPO:0003993
 name: decreased RNA level during cellular response to menadione
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to menadione is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during cellular response to menadione" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to menadione during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased RNA level during cellular response to menadione during vegetative growth" EXACT [PomBase:mah]
@@ -58326,6 +58365,7 @@ creation_date: 2014-11-12T13:40:59Z
 id: FYPO:0004006
 name: normal protein level during cellular response to menadione
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to menadione is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein accumulation during cellular response to menadione" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to menadione during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein level during cellular response to menadione during vegetative growth" EXACT [PomBase:mah]
@@ -58343,7 +58383,7 @@ creation_date: 2014-11-12T13:49:44Z
 id: FYPO:0004007
 name: decreased protein level during cellular response to menadione
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to menadione is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to menadione" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to menadione during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to menadione during vegetative growth" EXACT [PomBase:mah]
@@ -58691,8 +58731,12 @@ creation_date: 2014-11-19T17:26:08Z
 id: FYPO:0004031
 name: decreased UV-damage excision repair
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which UV-damage excision repair occurs to a lower extent than normal. UV-damage excision repair is a DNA repair process that is initiated by an endonuclease that introduces a single-strand incision immediately 5' of a UV-induced damage site, and that acts on both cyclobutane pyrimidine dimers (CPDs) and pyrimidine-pyrimidone 6-4 photoproducts (6-4PPs)." [GO:0070914, PomBase:mah]
+synonym: "decreased cyclobutane pyrimidine dimer repair" NARROW [GO:0070914]
+synonym: "decreased pyrimidine-pyrimidone 6-4 photoproduct repair" NARROW [GO:0070914]
 synonym: "decreased UV-damage excision repair during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased UV-damage excision repair during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced removal of 6-4 photoproducts" NARROW [GO:0070914, PomBase:vw]
+synonym: "reduced removal of cyclobutane pyrimidine dimers" NARROW [GO:0070914, PomBase:vw]
 synonym: "reduced UV-damage excision repair" EXACT [PomBase:mah]
 is_a: FYPO:0000188 ! abnormal DNA repair
 intersection_of: PATO:0002052
@@ -58773,7 +58817,7 @@ creation_date: 2014-11-25T11:14:50Z
 id: FYPO:0004037
 name: decreased protein level during cellular response to mercury ion
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to mercury ions is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
-comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein accumulation during cellular response to mercury ion" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to mercury ion during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to mercury ion during vegetative growth" EXACT [PomBase:mah]
@@ -58962,6 +59006,7 @@ synonym: "RNA absent from cell during cellular response to hydrogen peroxide dur
 synonym: "RNA absent from cell during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
 synonym: "transcripts absent from cell during cellular response to hydrogen peroxide" EXACT [PomBase:vw]
 synonym: "undetectable RNA level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+is_a: FYPO:0001116 ! decreased RNA level during cellular response to hydrogen peroxide
 is_a: FYPO:0001889 ! RNA absent from cell
 intersection_of: PATO:0002000
 intersection_of: during GO:0070301
@@ -59229,6 +59274,240 @@ intersection_of: during GO:0072690
 intersection_of: towards GO:0071619
 created_by: midori
 creation_date: 2014-11-25T16:53:04Z
+
+[Term]
+id: FYPO:0004070
+name: RNA absent from cell during cellular response to copper ion starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is too low to detect during a cellular response to copper ion starvation. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "RNA absent from cell during cellular response to copper ion starvation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "RNA absent from cell during cellular response to copper ion starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "RNA absent from cell during cellular response to copper starvation" EXACT [PomBase:mah]
+synonym: "transcripts absent from cell during cellular response to copper ion starvation" EXACT [PomBase:vw]
+synonym: "undetectable RNA level during cellular response to copper ion starvation" EXACT [PomBase:mah]
+is_a: FYPO:0001889 ! RNA absent from cell
+is_a: FYPO:0003280 ! decreased RNA level during cellular response to copper ion starvation
+intersection_of: PATO:0002000
+intersection_of: during GO:0035874
+intersection_of: during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-11-27T14:03:28Z
+
+[Term]
+id: FYPO:0004071
+name: decreased RNA level during cellular response to copper ion
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to copper ions is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "decreased RNA accumulation during cellular response to copper ion" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to copper" EXACT [PomBase:mah]
+synonym: "decreased RNA level during cellular response to copper ion during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to copper ion during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased transcript level during cellular response to copper ion" EXACT [PomBase:vw]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0071280
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-11-27T14:06:20Z
+
+[Term]
+id: FYPO:0004072
+name: RNA absent from cell during cellular response to pheromone
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is too low to detect during a cellular response to a pheromone. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "RNA absent from cell during cellular response to pheromone during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "RNA absent from cell during cellular response to pheromone during vegetative growth" EXACT [PomBase:mah]
+synonym: "transcripts absent from cell during cellular response to pheromone" EXACT [PomBase:vw]
+synonym: "undetectable RNA level during cellular response to pheromone" EXACT [PomBase:mah]
+is_a: FYPO:0001889 ! RNA absent from cell
+is_a: FYPO:0003426 ! decreased RNA level during cellular response to pheromone
+intersection_of: PATO:0002000
+intersection_of: during GO:0071444
+intersection_of: during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-11-27T14:20:16Z
+
+[Term]
+id: FYPO:0004073
+name: two cell divisions prior to cell cycle arrest in mitotic G1 phase in response to pheromone
+def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to a pheromone occurs in G1 phase, but begins only after the cells have undergone two rounds of cell division in the presence of the pheromone." [PMID:9034336, PomBase:mah]
+synonym: "two cell divisions prior to cell cycle arrest in mitotic G1 phase during cellular response to pheromone" EXACT [PomBase:mah]
+synonym: "two cell divisions prior to mitotic cell cycle arrest in G1 phase in response to pheromone" EXACT [PomBase:mah]
+synonym: "two cell divisions prior to mitotic G1 arrest in response to pheromone" EXACT [PomBase:mah]
+synonym: "two cell divisions prior to pheromone-induced G1 arrest" EXACT [PomBase:mah]
+is_a: FYPO:0004074 ! delayed cell cycle arrest in mitotic G1 phase in response to pheromone
+created_by: midori
+creation_date: 2014-11-27T14:27:50Z
+
+[Term]
+id: FYPO:0004074
+name: delayed cell cycle arrest in mitotic G1 phase in response to pheromone
+def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to a pheromone occurs in G1 phase, but begins later than normal." [PomBase:mah]
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+synonym: "delayed cell cycle arrest in mitotic G1 phase during cellular response to pheromone" EXACT [PomBase:mah]
+synonym: "delayed mitotic cell cycle arrest in G1 phase in response to pheromone" EXACT [PomBase:mah]
+synonym: "delayed mitotic G1 arrest in response to pheromone" EXACT [PomBase:mah]
+synonym: "delayed pheromone-induced G1 arrest" EXACT [PomBase:mah]
+is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
+is_a: FYPO:0000530 ! abnormal mitotic cell cycle arrest in response to pheromone
+intersection_of: PATO:0000502
+intersection_of: happens_during GO:0000080
+intersection_of: inheres_in GO:0000751
+created_by: midori
+creation_date: 2014-11-27T14:28:30Z
+
+[Term]
+id: FYPO:0004075
+name: decreased cell growth
+def: "A cellular process phenotype in which cell growth is decreased. Cell growth is the irreversible increase in size over time by accretion and biosynthetic production of matter similar to that already present." [PomBase:mah]
+comment: Note that this term refers to growth, i.e. increase in size, of an individual cell. If you have measured the rate or extent of growth of a culture in liquid medium or on plates, use one of the 'cell population growth' terms.
+synonym: "reduced cell growth" EXACT [PomBase:mah]
+is_a: FYPO:0002862 ! abnormal cell growth
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0016049
+created_by: midori
+creation_date: 2014-11-27T14:34:56Z
+
+[Term]
+id: FYPO:0004076
+name: inviable after spore germination, single or double cell division, elongated multiseptate cell
+def: "A phenotype in which a spore germinates to produce a cell that is longer than normal, has more than one septum, and undergoes one or two rounds of cell division." [PomBase:mah]
+synonym: "essential; germinating spore, single or double cell division, elongated multiseptate cell" RELATED [PomBase:mah]
+synonym: "inviable following spore germination, single or double cell division, elongated multiseptate cell" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, single or double cell division, elongated multiseptate cell" EXACT [PomBase:mah]
+is_a: FYPO:0002724 ! inviable after spore germination, single or double cell division, elongated cell
+created_by: midori
+creation_date: 2014-11-27T14:47:33Z
+
+[Term]
+id: FYPO:0004077
+name: abnormal sporulation resulting in formation of ascus with single large spore
+def: "A sporulation phenotype that results in the formation of an ascus that contains a single spore that is larger than normal" [PMID:15331764, PomBase:mah, PomBase:vw]
+synonym: "abnormal ascospore formation resulting in formation of ascus with single large spore" EXACT [GO:0030437, PomBase:mah]
+synonym: "abnormal sporulation resulting in formation of single-spored asci" EXACT [PomBase:mah]
+is_a: FYPO:0003066 ! abnormal sporulation resulting in formation of ascus with fewer than four spores
+created_by: midori
+creation_date: 2014-11-27T14:57:32Z
+
+[Term]
+id: FYPO:0004078
+name: normal growth on cyclosporin A
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing cyclosporin A." [PomBase:mah]
+synonym: "normal cell population growth in presence of cyclosporin A" EXACT [PomBase:mah]
+synonym: "normal cell population growth on cyclosporin A" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to cyclosporin A" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on cyclosporin A" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:4031
+created_by: midori
+creation_date: 2014-11-27T15:00:41Z
+
+[Term]
+id: FYPO:0004079
+name: normal histone H3-S10 phosphorylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which phosphorylation of serine at position 10 of histone H3 is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal histone H3 phosphorylation at S10" EXACT [GO:0043987]
+synonym: "normal histone H3-S10 phosphorylation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal histone H3-S10 phosphorylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal histone H3S10 phosphorylation" EXACT [GO:0043987]
+is_a: FYPO:0002595 ! normal histone phosphorylation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043987
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-11-27T15:02:21Z
+
+[Term]
+id: FYPO:0004080
+name: increased histone H3-S10 phosphorylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which phosphorylation of serine at position 10 of histone H3 is increased." [PomBase:mah]
+synonym: "increased histone H3 phosphorylation at S10" EXACT [GO:0043987]
+synonym: "increased histone H3-S10 phosphorylation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone H3-S10 phosphorylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased histone H3S10 phosphorylation" EXACT [GO:0043987]
+is_a: FYPO:0002591 ! abnormal histone phosphorylation
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043987
+created_by: midori
+creation_date: 2014-11-27T15:05:52Z
+
+[Term]
+id: FYPO:0004081
+name: decreased protein localization to chromatin at tRNA genes
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin at genes encoding tRNA is decreased." [PMID:24945319, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to chromatin at tRNA genes" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromatin at transfer RNA genes" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromatin at tRNA genes during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein localization to chromatin at tRNA genes during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to chromatin at tRNA genes" EXACT [PomBase:mah]
+is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071168
+intersection_of: occurs_at SO:0001272
+created_by: midori
+creation_date: 2014-11-27T15:06:59Z
+
+[Term]
+id: FYPO:0004082
+name: normal protein phosphorylation during mitosis
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins is normal (i.e. indistinguishable from wild type) during mitosis." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein phosphorylation during mitosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein phosphorylation during mitotic M phase" RELATED [PomBase:mah]
+is_a: FYPO:0000776 ! normal protein phosphorylation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0007067
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-11-27T15:08:39Z
+
+[Term]
+id: FYPO:0004083
+name: normal protein level
+def: "A cell phenotype in which the amount of protein measured in a cell is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
+subset: qc_do_not_manually_annotate
+synonym: "protein/peptide accumulation: normal" RELATED [SGD:phenotype_annotation]
+is_a: FYPO:0001076 ! normal level of substance in cell
+intersection_of: PATO:0001159
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-11-27T15:14:06Z
+
+[Term]
+id: FYPO:0004084
+name: normal protein level during nitrogen starvation
+def: "A cell phenotype in which the amount of protein measured in a cell that is subject to nitrogen starvation is normal (i.e. indistinguishable from wild type). Total protein or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal cellular protein level during nitrogen starvation" EXACT [PomBase:mah]
+synonym: "normal protein accumulation during nitrogen starvation" RELATED [PomBase:mah]
+synonym: "normal protein level during nitrogen depletion" EXACT [PomBase:vw]
+synonym: "normal protein level during nitrogen deprivation" EXACT [PomBase:vw]
+is_a: FYPO:0004083 ! normal protein level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-11-27T15:15:19Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
