@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 25:11:2014 17:32
+date: 27:11:2014 13:34
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -81,7 +81,7 @@ synonym: "abnormal DNA damage checkpoint during mitotic cell cycle" RELATED [Pom
 synonym: "abnormal DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 synonym: "DNA damage checkpoint defects" EXACT [PomBase:mah]
 is_a: FYPO:0000157 ! abnormal response to DNA damage stimulus
-is_a: FYPO:0000643 ! abnormal DNA integrity checkpoint
+is_a: FYPO:0000643 ! abnormal mitotic DNA integrity checkpoint
 intersection_of: PATO:0000001
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0000077
@@ -2018,13 +2018,13 @@ creation_date: 2011-04-12T12:01:21Z
 
 [Term]
 id: FYPO:0000137
-name: cell cycle checkpoint phenotype
-def: "A cell phenotype that affects any cell cycle checkpoint." [PomBase:mah]
-synonym: "fission yeast cell cycle checkpoint phenotype" EXACT [PomBase:mah]
+name: mitotic cell cycle checkpoint phenotype
+def: "A cell phenotype that affects any mitotic cell cycle checkpoint." [PomBase:mah]
+synonym: "fission yeast mitotic cell cycle checkpoint phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000631 ! cell cycle phenotype
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
 intersection_of: FYPO:0000002 ! cell phenotype
-intersection_of: inheres_in GO:0000075
+intersection_of: inheres_in GO:0007093
 created_by: midori
 creation_date: 2011-04-12T12:55:38Z
 
@@ -2175,7 +2175,7 @@ creation_date: 2011-04-13T03:34:54Z
 id: FYPO:0000148
 name: abnormal regulation of mitotic cell cycle
 def: "A regulation phenotype in which regulation of the mitotic cell cycle is abnormal." [PomBase:mah]
-is_a: FYPO:0000631 ! cell cycle phenotype
+is_a: FYPO:0000059 ! abnormal mitotic cell cycle
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007346
@@ -2446,7 +2446,7 @@ name: abnormal mitotic cell cycle spindle assembly checkpoint
 def: "A cell cycle checkpoint phenotype in which the spindle assembly checkpoint of a mitotic cell cycle is abnormal. The mitotic spindle assembly checkpoint normally delays the metaphase/anaphase transition of a mitotic nuclear division until the spindle is correctly assembled and chromosomes are attached to the spindle. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0007094, PomBase:mah]
 synonym: "abnormal mitotic cell cycle spindle assembly checkpoint activation" RELATED [PomBase:mah]
 is_a: FYPO:0000200 ! abnormal regulation of mitotic metaphase/anaphase transition
-is_a: FYPO:0001704 ! abnormal cell cycle checkpoint
+is_a: FYPO:0001704 ! abnormal mitotic cell cycle checkpoint
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0007094
 intersection_of: qualifier PATO:0000460
@@ -2502,7 +2502,7 @@ def: "A cell cycle checkpoint phenotype in which the DNA replication checkpoint 
 synonym: "abnormal DNA replication checkpoint" BROAD [PomBase:mah]
 synonym: "abnormal mitotic cell cycle DNA replication checkpoint activation" EXACT [PomBase:mah]
 is_a: FYPO:0000166 ! abnormal regulation of G2/M transition of mitotic cell cycle
-is_a: FYPO:0000643 ! abnormal DNA integrity checkpoint
+is_a: FYPO:0000643 ! abnormal mitotic DNA integrity checkpoint
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0033314
 intersection_of: qualifier PATO:0000460
@@ -4806,7 +4806,6 @@ is_a: FYPO:0000005 ! abnormal cell morphology
 intersection_of: PATO:0000051
 intersection_of: inheres_in CL:0000596
 intersection_of: qualifier PATO:0000460
-relationship: output_of FYPO:0000121 ! abnormal sporulation
 created_by: midori
 creation_date: 2011-07-07T03:35:26Z
 
@@ -5590,7 +5589,7 @@ creation_date: 2011-07-14T06:45:37Z
 id: FYPO:0000407
 name: abnormally arrested cell cycle progression
 def: "A cellular process phenotype in which cell cycle progression is arrested under conditions where arrest does not normally occur." [PomBase:mah]
-comment: Note that this term should be used only for cell cycle arrest that occurs in mutants but not in wild type cells. For phenotypes affecting cell cycle that normally occurs, e.g. in response to mating pheromone, see 'normally arrested cell cycle progression' (FYPO:0001025), 'abnormal occurrence of normal cell cycle arrest' (FYPO:0001026), and their child terms.
+comment: Note that this term should be used only for cell cycle arrest that occurs in mutants but not in wild type cells. For phenotypes affecting cell cycle that normally occurs, e.g. in response to mating pheromone, see 'normally arrested mitotic cell cycle progression' (FYPO:0001025), 'abnormal occurrence of normal mitotic cell cycle arrest' (FYPO:0001026), and their child terms.
 synonym: "abnormal cell cycle arrest" EXACT [PomBase:mah]
 synonym: "abnormally arrested cell cycle progression during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormally arrested cell cycle progression during vegetative growth" EXACT [PomBase:mah]
@@ -6072,7 +6071,7 @@ comment: Arrest with replicated DNA may occur between late S and G2/M; if only D
 synonym: "abnormal mitotic cell cycle arrest with 2C DNA content" NARROW [PomBase:mah]
 synonym: "abnormal mitotic cell cycle arrest with replicated DNA" EXACT [PomBase:mah]
 synonym: "abnormal mitotic cell cycle arrest with replicated DNA during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle progression
 intersection_of: FYPO:0000407 ! abnormally arrested cell cycle progression
 intersection_of: during GO:0072690
 intersection_of: preceded_by GO:0006261
@@ -6847,10 +6846,11 @@ creation_date: 2011-08-15T10:19:32Z
 
 [Term]
 id: FYPO:0000502
-name: abnormally arrested mitotic cell cycle
+name: abnormally arrested mitotic cell cycle progression
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested under conditions where arrest does not normally occur." [PomBase:mah]
 synonym: "abnormal mitotic cell cycle arrest" RELATED [PomBase:mah]
-synonym: "abnormally arrested mitotic cell cycle during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormally arrested mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "abnormally arrested mitotic cell cycle progression during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle abnormally arrested" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle: arrested" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000059 ! abnormal mitotic cell cycle
@@ -7255,13 +7255,13 @@ creation_date: 2011-08-15T11:08:30Z
 
 [Term]
 id: FYPO:0000530
-name: abnormal cell cycle arrest in response to pheromone
-def: "A cellular process phenotype in which the cell cycle arrest that normally occurs in response to pheromone is abnormal." [PomBase:mah]
-synonym: "abnormal pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
+name: abnormal mitotic cell cycle arrest in response to pheromone
+def: "A cellular process phenotype in which the mitotic cell cycle arrest that normally occurs in response to pheromone is abnormal." [PomBase:mah]
+synonym: "abnormal pheromone-induced mitotic cell cycle arrest" EXACT [PomBase:mah]
 synonym: "pheromone-induced cell cycle arrest: abnormal" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000145 ! regulation phenotype
 is_a: FYPO:0000302 ! abnormal response to pheromone
-is_a: FYPO:0001026 ! abnormal occurrence of normal cell cycle arrest
+is_a: FYPO:0001026 ! abnormal occurrence of normal mitotic cell cycle arrest
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000751
 intersection_of: qualifier PATO:0000460
@@ -7270,13 +7270,13 @@ creation_date: 2011-08-15T11:08:30Z
 
 [Term]
 id: FYPO:0000531
-name: abolished cell cycle arrest in response to pheromone
-def: "A cellular process phenotype in which cell cycle arrest in response to pheromone does not occur." [PomBase:mah]
-synonym: "absent pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
-synonym: "cell cycle arrest in response to pheromone abolished" EXACT [PomBase:mah]
-synonym: "pheromone-induced cell cycle arrest abolished" EXACT [PomBase:mah]
+name: abolished mitotic cell cycle arrest in response to pheromone
+def: "A cellular process phenotype in which mitotic cell cycle arrest in response to pheromone does not occur." [PomBase:mah]
+synonym: "absent pheromone-induced mitotic cell cycle arrest" EXACT [PomBase:mah]
+synonym: "mitotic cell cycle arrest in response to pheromone abolished" EXACT [PomBase:mah]
 synonym: "pheromone-induced cell cycle arrest: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000530 ! abnormal cell cycle arrest in response to pheromone
+synonym: "pheromone-induced mitotic cell cycle arrest abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000530 ! abnormal mitotic cell cycle arrest in response to pheromone
 intersection_of: PATO:0001558
 intersection_of: towards GO:0000751
 created_by: midori
@@ -7284,12 +7284,12 @@ creation_date: 2011-08-15T11:08:30Z
 
 [Term]
 id: FYPO:0000532
-name: decreased cell cycle arrest in response to pheromone
-def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to pheromone is decreased." [PomBase:mah]
-synonym: "decreased pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
+name: decreased mitotic cell cycle arrest in response to pheromone
+def: "A cellular process phenotype in which the occurrence of mitotic cell cycle arrest in response to pheromone is decreased." [PomBase:mah]
+synonym: "decreased pheromone-induced mitotic cell cycle arrest" EXACT [PomBase:mah]
 synonym: "pheromone-induced cell cycle arrest: decreased" EXACT [SGD:phenotype_annotation]
-synonym: "reduced cell cycle arrest in response to pheromone" EXACT [PomBase:mah]
-is_a: FYPO:0000530 ! abnormal cell cycle arrest in response to pheromone
+synonym: "reduced mitotic cell cycle arrest in response to pheromone" EXACT [PomBase:mah]
+is_a: FYPO:0000530 ! abnormal mitotic cell cycle arrest in response to pheromone
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0000751
 created_by: midori
@@ -7297,11 +7297,11 @@ creation_date: 2011-08-15T11:08:30Z
 
 [Term]
 id: FYPO:0000533
-name: normal cell cycle arrest in response to pheromone
-def: "A cellular process phenotype in which cell cycle arrest in response to pheromone is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
-synonym: "normal pheromone-induced cell cycle arrest" EXACT [PomBase:mah]
+name: normal mitotic cell cycle arrest in response to pheromone
+def: "A cellular process phenotype in which mitotic cell cycle arrest in response to pheromone is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal pheromone-induced mitotic cell cycle arrest" EXACT [PomBase:mah]
 synonym: "pheromone-induced cell cycle arrest: normal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0001025 ! normally arrested cell cycle progression
+is_a: FYPO:0001025 ! normally arrested mitotic cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000751
 intersection_of: qualifier PATO:0000461
@@ -8374,7 +8374,7 @@ synonym: "abnormal mitotic cell cycle arrest in M phase" EXACT [PomBase:mah]
 synonym: "abnormal mitotic cell cycle arrest with condensed chromosomes" EXACT [PomBase:vw]
 synonym: "abnormal mitotic nuclear division arrest" EXACT [PomBase:vw]
 synonym: "mitotic cell cycle progression in M phase: arrested" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle progression
 is_a: FYPO:0000607 ! abnormal mitotic M phase progression
 intersection_of: during GO:0000087
 intersection_of: during GO:0072690
@@ -8849,12 +8849,12 @@ creation_date: 2011-09-28T12:16:57Z
 
 [Term]
 id: FYPO:0000643
-name: abnormal DNA integrity checkpoint
-def: "A cell cycle checkpoint phenotype in which a DNA integrity checkpoint is abnormal. A DNA integrity checkpoint normally regulates cell cycle progression in response to changes in DNA structure. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [PomBase:mah]
-synonym: "abnormal DNA integrity checkpoint activation" EXACT [PomBase:mah]
-is_a: FYPO:0001704 ! abnormal cell cycle checkpoint
+name: abnormal mitotic DNA integrity checkpoint
+def: "A cell cycle checkpoint phenotype in which a mitotic DNA integrity checkpoint is abnormal. A DNA integrity checkpoint normally regulates cell cycle progression in response to changes in DNA structure. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [PomBase:mah]
+synonym: "abnormal mitotic DNA integrity checkpoint activation" EXACT [PomBase:mah]
+is_a: FYPO:0001704 ! abnormal mitotic cell cycle checkpoint
 intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0031570
+intersection_of: inheres_in GO:0044774
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-09-28T12:28:26Z
@@ -9597,7 +9597,7 @@ synonym: "abolished DNA damage checkpoint override in response to caffeine durin
 synonym: "caffeine-mediated DNA damage checkpoint override abolished" EXACT [GOC:mah, GOC:vw]
 synonym: "DNA damage checkpoint override in response to caffeine abolished" EXACT [PomBase:mah]
 synonym: "DNA damage checkpoint override in response to caffeine abolished during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+is_a: FYPO:0000137 ! mitotic cell cycle checkpoint phenotype
 is_a: FYPO:0000207 ! abnormal cellular response to caffeine
 created_by: midori
 creation_date: 2011-12-05T01:59:12Z
@@ -9723,14 +9723,14 @@ creation_date: 2011-12-05T04:43:53Z
 
 [Term]
 id: FYPO:0000710
-name: abnormal cell cycle arrest in response to nitrogen starvation
-def: "A cellular process phenotype in which cell cycle arrest in response to nitrogen starvation, which normally occurs in G1 phase, is abnormal." [PomBase:mah]
+name: abnormal mitotic cell cycle arrest in response to nitrogen starvation
+def: "A cellular process phenotype in which mitotic cell cycle arrest in response to nitrogen starvation, which normally occurs in G1 phase, is abnormal." [PomBase:mah]
 comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
-synonym: "abnormal cell cycle arrest in response to nitrogen depletion" EXACT [PomBase:vw]
-synonym: "abnormal cell cycle arrest in response to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "abnormal mitotic cell cycle arrest in response to nitrogen depletion" EXACT [PomBase:vw]
+synonym: "abnormal mitotic cell cycle arrest in response to nitrogen deprivation" EXACT [PomBase:vw]
 is_a: FYPO:0000145 ! regulation phenotype
 is_a: FYPO:0000152 ! abnormal cellular response to nitrogen starvation
-is_a: FYPO:0001026 ! abnormal occurrence of normal cell cycle arrest
+is_a: FYPO:0001026 ! abnormal occurrence of normal mitotic cell cycle arrest
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030996
 intersection_of: qualifier PATO:0000460
@@ -9750,7 +9750,7 @@ synonym: "decreased mitotic G1 arrest in response to nitrogen starvation" EXACT 
 synonym: "decreased nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
 synonym: "reduced cell cycle arrest in mitotic G1 phase in response to nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
-is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
+is_a: FYPO:0000710 ! abnormal mitotic cell cycle arrest in response to nitrogen starvation
 intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0030996
 created_by: midori
@@ -9768,7 +9768,7 @@ synonym: "delayed mitotic cell cycle arrest in G1 phase in response to nitrogen 
 synonym: "delayed mitotic G1 arrest in response to nitrogen starvation" EXACT [PomBase:mah]
 synonym: "delayed nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
 is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
-is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
+is_a: FYPO:0000710 ! abnormal mitotic cell cycle arrest in response to nitrogen starvation
 intersection_of: PATO:0000502
 intersection_of: inheres_in GO:0030996
 created_by: midori
@@ -11608,7 +11608,7 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 synonym: "cell cycle arrest in mitotic interphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest in interphase" EXACT [PomBase:mah]
 synonym: "mitotic interphase cell cycle arrest" EXACT [PomBase:mah]
-is_a: FYPO:0001024 ! cell cycle arrest phenotype
+is_a: FYPO:0004040 ! mitotic cell cycle arrest phenotype
 intersection_of: FYPO:0001024 ! cell cycle arrest phenotype
 intersection_of: during GO:0051329
 intersection_of: during GO:0072690
@@ -14192,7 +14192,7 @@ synonym: "normal cell cycle arrest in mitotic G1 phase during nitrogen depletion
 synonym: "normal cell cycle arrest in mitotic G1 phase during nitrogen deprivation" EXACT [PomBase:vw]
 synonym: "normal mitotic cell cycle arrest in G1 phase during nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
-is_a: FYPO:0001025 ! normally arrested cell cycle progression
+is_a: FYPO:0001025 ! normally arrested mitotic cell cycle progression
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0030996
 intersection_of: qualifier PATO:0000461
@@ -14210,7 +14210,7 @@ synonym: "abnormal mitotic cell cycle arrest in G2 phase during nitrogen starvat
 synonym: "advanced nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
 synonym: "cell cycle arrest in mitotic G2 phase during nitrogen starvation" EXACT [PomBase:mah]
 synonym: "mitotic G2 phase arrest during nitrogen starvation" EXACT [PomBase:mah]
-is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
+is_a: FYPO:0000710 ! abnormal mitotic cell cycle arrest in response to nitrogen starvation
 is_a: FYPO:0001151 ! cell cycle arrest in mitotic G2 phase during starvation
 intersection_of: PATO:0001561
 intersection_of: during GO:0000085
@@ -14569,8 +14569,6 @@ creation_date: 2012-04-30T02:59:00Z
 id: FYPO:0001024
 name: cell cycle arrest phenotype
 def: "A cell cycle phenotype that affects or involves the normal or abnormal occurrence of cell cycle arrest. In cell cycle arrest, progression through the cell cycle is halted during one of the normal phases (G1, S, G2, or M)." [PomBase:mah]
-synonym: "cell cycle arrest phenotype during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "cell cycle arrest phenotype during vegetative growth" EXACT [PomBase:mah]
 synonym: "fission yeast cell cycle arrest phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000631 ! cell cycle phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -14580,24 +14578,23 @@ creation_date: 2012-05-09T01:15:41Z
 
 [Term]
 id: FYPO:0001025
-name: normally arrested cell cycle progression
-def: "A cellular process phenotype in which cell cycle progression is arrested under conditions where arrest normally occurs." [PomBase:mah]
-synonym: "normal cell cycle arrest" EXACT [PomBase:mah]
-synonym: "normal cell cycle arrest in mitotic interphase" EXACT [PomBase:mah]
+name: normally arrested mitotic cell cycle progression
+def: "A cellular process phenotype in which mitotic cell cycle progression is arrested under conditions where arrest normally occurs." [PomBase:mah]
+synonym: "normal mitotic cell cycle arrest" EXACT [PomBase:mah]
 is_a: FYPO:0000627 ! normal cellular process
-is_a: FYPO:0001024 ! cell cycle arrest phenotype
+is_a: FYPO:0004040 ! mitotic cell cycle arrest phenotype
 intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0007050
+intersection_of: inheres_in GO:0071850
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-05-09T01:38:00Z
 
 [Term]
 id: FYPO:0001026
-name: abnormal occurrence of normal cell cycle arrest
-def: "A cellular process phenotype in which a cell cycle arrest that normally occurs is abnormal (does not occur, or occurs abnormally)." [PomBase:mah]
+name: abnormal occurrence of normal mitotic cell cycle arrest
+def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs is abnormal (does not occur, or occurs abnormally)." [PomBase:mah]
 is_a: FYPO:0000628 ! abnormal cellular process
-is_a: FYPO:0001024 ! cell cycle arrest phenotype
+is_a: FYPO:0004040 ! mitotic cell cycle arrest phenotype
 created_by: midori
 creation_date: 2012-05-09T01:43:53Z
 
@@ -14610,7 +14607,7 @@ synonym: "mitotic G1 phase arrest during glucose starvation" EXACT [PomBase:mah]
 synonym: "normal cell cycle arrest in mitotic G2 phase during glucose depletion" EXACT [PomBase:vw]
 synonym: "normal cell cycle arrest in mitotic G2 phase during glucose deprivation" EXACT [PomBase:vw]
 synonym: "normal mitotic cell cycle arrest in G2 phase during glucose starvation" EXACT [PomBase:mah]
-is_a: FYPO:0001025 ! normally arrested cell cycle progression
+is_a: FYPO:0001025 ! normally arrested mitotic cell cycle progression
 is_a: FYPO:0001151 ! cell cycle arrest in mitotic G2 phase during starvation
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0036227
@@ -14624,7 +14621,7 @@ name: abnormal cell cycle arrest in mitotic interphase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in any part of interphase, under conditions where arrest is not a normal occurrence." [PomBase:mah]
 synonym: "abnormal mitotic cell cycle arrest in interphase" EXACT [PomBase:mah]
 synonym: "abnormal mitotic interphase cell cycle arrest" EXACT [PomBase:mah]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle progression
 is_a: FYPO:0000837 ! cell cycle arrest in mitotic interphase
 intersection_of: PATO:0001561
 intersection_of: during GO:0051329
@@ -15893,7 +15890,7 @@ synonym: "advanced mitotic cell cycle arrest in G1 phase in response to nitrogen
 synonym: "advanced mitotic G1 arrest in response to nitrogen starvation" EXACT [PomBase:mah]
 synonym: "advanced nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
 is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
-is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
+is_a: FYPO:0000710 ! abnormal mitotic cell cycle arrest in response to nitrogen starvation
 intersection_of: PATO:0000694
 intersection_of: during GO:0006995
 intersection_of: inheres_in GO:0030996
@@ -20587,7 +20584,7 @@ comment: Arrest with unreplicated DNA may occur between mitosis and the beginnin
 synonym: "abnormal mitotic cell cycle arrest with 1C DNA content" NARROW [PomBase:mah]
 synonym: "abnormal mitotic cell cycle arrest with unreplicated DNA" EXACT [PomBase:mah]
 synonym: "abnormal mitotic cell cycle arrest with unreplicated DNA during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle progression
 intersection_of: inheres_in GO:0071850
 intersection_of: precedes GO:0033260
 intersection_of: qualifier PATO:0000467
@@ -24809,76 +24806,76 @@ creation_date: 2012-11-02T16:57:43Z
 
 [Term]
 id: FYPO:0001703
-name: normal cell cycle checkpoint
-def: "A cell cycle phenotype in which a specific cell cycle checkpoint is normal (i.e. indistinguishable from wild type). A cell cycle checkpoint controls cell cycle progression by monitoring the timing and integrity of specific cell cycle events." [GO:0000075, PomBase:mah]
+name: normal mitotic cell cycle checkpoint
+def: "A cell cycle phenotype in which a specific mitotic cell cycle checkpoint is normal (i.e. indistinguishable from wild type). A cell cycle checkpoint controls cell cycle progression by monitoring the timing and integrity of specific cell cycle events." [GO:0000075, GO:0007093, PomBase:mah]
 synonym: "normal cell cycle checkpoint activation" EXACT [PomBase:mah]
-is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+is_a: FYPO:0000137 ! mitotic cell cycle checkpoint phenotype
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0000075
+intersection_of: inheres_in GO:0007093
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-11-07T16:00:24Z
 
 [Term]
 id: FYPO:0001704
-name: abnormal cell cycle checkpoint
-def: "A cell cycle phenotype in which a specific cell cycle checkpoint is abnormal. A cell cycle checkpoint normally controls cell cycle progression by monitoring the timing and integrity of specific cell cycle events. In a mutant, the checkpoint may fail to activate under appropriate conditions, or may occur to a greater or lesser extent than wild type under any specified set of conditions." [GO:0000075, PomBase:mah]
-synonym: "abnormal cell cycle checkpoint activation" EXACT [PomBase:mah]
-is_a: FYPO:0000137 ! cell cycle checkpoint phenotype
+name: abnormal mitotic cell cycle checkpoint
+def: "A cell cycle phenotype in which a specific mitotic cell cycle checkpoint is abnormal. A cell cycle checkpoint normally controls cell cycle progression by monitoring the timing and integrity of specific cell cycle events. In a mutant, the checkpoint may fail to activate under appropriate conditions, or may occur to a greater or lesser extent than wild type under any specified set of conditions." [GO:0000075, GO:0007093, PomBase:mah]
+synonym: "abnormal mitotic cell cycle checkpoint activation" EXACT [PomBase:mah]
+is_a: FYPO:0000137 ! mitotic cell cycle checkpoint phenotype
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
 intersection_of: PATO:0000001
 intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0000075
+intersection_of: inheres_in GO:0007093
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2012-11-07T16:03:57Z
 
 [Term]
 id: FYPO:0001705
-name: normal DNA damage checkpoint
-def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal (i.e. indistinguishable from wild type). A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
-synonym: "normal DNA damage checkpoint activation" EXACT [PomBase:mah]
-synonym: "normal DNA damage checkpoint activation under non-stressed conditions" NARROW [PomBase:al]
-synonym: "normal DNA damage checkpoint during cellular response to DNA damage" EXACT [PomBase:al]
-synonym: "normal DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "normal DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001703 ! normal cell cycle checkpoint
+name: normal mitotic DNA damage checkpoint
+def: "A cell cycle checkpoint phenotype in which any mitotic DNA damage checkpoint is normal (i.e. indistinguishable from wild type). A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
+synonym: "normal DNA damage checkpoint during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "normal mitotic DNA damage checkpoint activation" EXACT [PomBase:mah]
+synonym: "normal mitotic DNA damage checkpoint activation under non-stressed conditions" NARROW [PomBase:al]
+synonym: "normal mitotic DNA damage checkpoint during cellular response to DNA damage" EXACT [PomBase:al]
+synonym: "normal mitotic DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001703 ! normal mitotic cell cycle checkpoint
 intersection_of: PATO:0000001
 intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0000077
+intersection_of: inheres_in GO:0044773
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-11-07T16:37:55Z
 
 [Term]
 id: FYPO:0001706
-name: normal DNA damage checkpoint during cellular response to ionizing radiation
+name: normal mitotic DNA damage checkpoint during cellular response to ionizing radiation
 def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal (i.e. indistinguishable from wild type) when the cell is exposed to ionizing radiation. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
-synonym: "normal DNA damage checkpoint activation during cellular response to ionizing radiation" EXACT [PomBase:al]
-synonym: "normal DNA damage checkpoint during cellular response to gamma radiation" NARROW [PomBase:al, PomBase:mah]
-synonym: "normal DNA damage checkpoint during cellular response to ionizing radiation during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "normal DNA damage checkpoint during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal DNA damage checkpoint during gamma irradiation" NARROW [PomBase:al]
-is_a: FYPO:0001705 ! normal DNA damage checkpoint
+synonym: "normal DNA damage checkpoint during cellular response to ionizing radiation during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "normal mitotic DNA damage checkpoint activation during cellular response to ionizing radiation" EXACT [PomBase:al]
+synonym: "normal mitotic DNA damage checkpoint during cellular response to gamma radiation" NARROW [PomBase:al, PomBase:mah]
+synonym: "normal mitotic DNA damage checkpoint during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal mitotic DNA damage checkpoint during gamma irradiation" NARROW [PomBase:al]
+is_a: FYPO:0001705 ! normal mitotic DNA damage checkpoint
 is_a: FYPO:0001927 ! normal cell cycle regulation during cellular response to ionizing radiation
 intersection_of: PATO:0000001
 intersection_of: during GO:0071480
 intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0000077
+intersection_of: inheres_in GO:0044773
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2012-11-07T16:41:15Z
 
 [Term]
 id: FYPO:0001707
-name: increased DNA damage checkpoint activation
-def: "A cell cycle checkpoint phenotype in which the incidence of cell cycle arrest or delay due to regulation by any DNA damage checkpoint is greater than in wild type under any specified set of conditions." [PomBase:mah]
-synonym: "increased DNA damage checkpoint activation under non-stressed conditions" NARROW [PomBase:al]
+name: increased mitotic DNA damage checkpoint activation
+def: "A cell cycle checkpoint phenotype in which the incidence of mitotic cell cycle arrest or delay due to regulation by any mitotic DNA damage checkpoint is greater than in wild type under any specified set of conditions." [PomBase:mah]
+synonym: "increased mitotic DNA damage checkpoint activation under non-stressed conditions" NARROW [PomBase:al]
 is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
 intersection_of: PATO:0002051
-intersection_of: inheres_in GO:0000077
+intersection_of: inheres_in GO:0044773
 created_by: midori
 creation_date: 2012-11-07T16:53:08Z
 
@@ -28103,7 +28100,7 @@ id: FYPO:0001928
 name: normal regulation of mitotic cell cycle
 def: "A regulation phenotype in which regulation of the mitotic cell cycle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cell cycle regulation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000631 ! cell cycle phenotype
+is_a: FYPO:0000411 ! normal mitotic cell cycle
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
 intersection_of: PATO:0000001
@@ -28157,7 +28154,7 @@ synonym: "abnormal cell cycle delay following gamma radiation" EXACT [PomBase:al
 synonym: "abnormal cell cycle regulation in response to gamma radiation" EXACT [PomBase:mah]
 synonym: "abnormal mitotic cell cycle regulation during cellular response to gamma radiation" EXACT [PomBase:mah]
 is_a: FYPO:0001930 ! abnormal cellular response to gamma radiation
-is_a: FYPO:0003489 ! abnormal cell cycle regulation during cellular response to ionizing radiation
+is_a: FYPO:0003489 ! abnormal mitotic cell cycle regulation during cellular response to ionizing radiation
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0071480
 intersection_of: happens_during GO:0072690
@@ -28184,12 +28181,12 @@ creation_date: 2013-02-06T16:01:04Z
 
 [Term]
 id: FYPO:0001933
-name: abnormal cell cycle regulation during cellular response to hydroxyurea
+name: abnormal mitotic cell cycle regulation during cellular response to hydroxyurea
 def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to hydroxyurea is abnormal. Normally, cell cycle progression is slowed or arrested transiently following exposure to hydroxyurea. The most common abnormality is for the cell cycle to progress as in the absence of hydroxyurea." [PomBase:mah]
-synonym: "abnormal cell cycle delay following hydroxyurea exposure" EXACT [PomBase:al]
-synonym: "abnormal cell cycle regulation during cellular response to HU" EXACT [PomBase:mah]
-synonym: "abnormal cell cycle regulation in response to hydroxyurea" EXACT [PomBase:mah]
-synonym: "abnormal mitotic cell cycle regulation during cellular response to hydroxyurea" EXACT [PomBase:mah]
+synonym: "abnormal cell cycle regulation during cellular response to hydroxyurea" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle delay following hydroxyurea exposure" EXACT [PomBase:al]
+synonym: "abnormal mitotic cell cycle regulation during cellular response to HU" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle regulation in response to hydroxyurea" EXACT [PomBase:mah]
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
 is_a: FYPO:0001932 ! abnormal cellular response to hydroxyurea
 intersection_of: PATO:0000001
@@ -28383,7 +28380,7 @@ synonym: "abnormal mitotic cell cycle arrest in anaphase, with unseparated siste
 synonym: "absence of chromosome separation, abnormal mitotic anaphase arrest with condensed chromosomes" EXACT [PomBase:vw]
 is_a: FYPO:0000608 ! abnormal cell cycle arrest in mitotic M phase
 is_a: FYPO:0000616 ! abnormal mitotic anaphase progression
-intersection_of: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+intersection_of: FYPO:0000502 ! abnormally arrested mitotic cell cycle progression
 intersection_of: during GO:0000090
 intersection_of: during GO:0072690
 intersection_of: has_part FYPO:0001946 ! abolished mitotic chromosome separation
@@ -30670,9 +30667,9 @@ synonym: "normal DNA damage checkpoint activation during cellular response to UV
 synonym: "normal DNA damage checkpoint during cellular response to ultraviolet light" EXACT [PomBase:mah]
 synonym: "normal DNA damage checkpoint during cellular response to UV during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal DNA damage checkpoint during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001705 ! normal DNA damage checkpoint
+is_a: FYPO:0001705 ! normal mitotic DNA damage checkpoint
 is_a: FYPO:0001927 ! normal cell cycle regulation during cellular response to ionizing radiation
-is_a: FYPO:0004014 ! normal cell cycle regulation during cellular response to UV
+is_a: FYPO:0004014 ! normal mitotic cell cycle regulation during cellular response to UV
 intersection_of: PATO:0000001
 intersection_of: during GO:0034644
 intersection_of: during GO:0072690
@@ -36768,12 +36765,12 @@ creation_date: 2013-08-15T14:12:36Z
 [Term]
 id: FYPO:0002517
 name: abnormal response to mitotic cell cycle checkpoint signaling
-def: "A cellular process phenotype in which a cell cycle arrest that normally occurs in response to cell cycle checkpoint signaling is abnormal (does not occur, or occurs abnormally). Abnormal arrest may result from a problem with detection of conditions that normally trigger a checkpoint, transduction of the checkpoint signal, or the response to the checkpoint signal." [PomBase:mah]
-synonym: "abnormal cell cycle checkpoint arrest" RELATED [PomBase:mah]
-synonym: "abnormal occurrence of cell cycle arrest resulting from checkpoint activation" RELATED [PomBase:mah]
-synonym: "abnormal occurrence of cell cycle arrest resulting from defective checkpoint activation" RELATED [PomBase:vw]
-is_a: FYPO:0001026 ! abnormal occurrence of normal cell cycle arrest
-is_a: FYPO:0001704 ! abnormal cell cycle checkpoint
+def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs in response to mitotic cell cycle checkpoint signaling is abnormal (does not occur, or occurs abnormally). Abnormal arrest may result from a problem with detection of conditions that normally trigger a checkpoint, transduction of the checkpoint signal, or the response to the checkpoint signal." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle checkpoint arrest" RELATED [PomBase:mah]
+synonym: "abnormal occurrence of mitotic cell cycle arrest resulting from checkpoint activation" RELATED [PomBase:mah]
+synonym: "abnormal occurrence of mitotic cell cycle arrest resulting from defective checkpoint activation" RELATED [PomBase:vw]
+is_a: FYPO:0001026 ! abnormal occurrence of normal mitotic cell cycle arrest
+is_a: FYPO:0001704 ! abnormal mitotic cell cycle checkpoint
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0072414
 intersection_of: qualifier PATO:0000460
@@ -38615,7 +38612,7 @@ def: "A cell cycle checkpoint phenotype in which the spindle assembly checkpoint
 comment: Checkpoint activation in a mutant usually implies that the mutation is causing problems that the checkpoint detects.
 synonym: "increased mitotic cell cycle spindle assembly checkpoint activation" EXACT [PomBase:mah]
 is_a: FYPO:0000168 ! abnormal mitotic cell cycle spindle assembly checkpoint
-is_a: FYPO:0001704 ! abnormal cell cycle checkpoint
+is_a: FYPO:0001704 ! abnormal mitotic cell cycle checkpoint
 intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0090268
 created_by: midori
@@ -39958,8 +39955,7 @@ subset: qc_do_not_manually_annotate
 is_a: FYPO:0000059 ! abnormal mitotic cell cycle
 is_a: FYPO:0002734 ! abnormal cell cycle process
 intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0022402
-intersection_of: part_of GO:0000278
+intersection_of: inheres_in GO:1903047
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2013-10-01T15:15:09Z
@@ -39988,8 +39984,7 @@ subset: qc_do_not_manually_annotate
 is_a: FYPO:0000052 ! abnormal meiotic cell cycle
 is_a: FYPO:0002734 ! abnormal cell cycle process
 intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0022402
-intersection_of: part_of GO:0051321
+intersection_of: inheres_in GO:1903046
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2013-10-01T15:17:46Z
@@ -42186,7 +42181,7 @@ name: mitotic cell cycle arrest before cell separation
 def: "A cellular process phenotype in which the mitotic cell cycle is arrested after the septum has formed, but before cells have separated, under conditions where arrest does not normally occur." [PMID:8978671, PomBase:mah]
 synonym: "mitotic cell cycle arrest before cell separation during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest before mitotic cytokinetic cell separation" EXACT [GO:1902409]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle progression
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0071850
 intersection_of: precedes GO:1902409
@@ -49050,7 +49045,7 @@ synonym: "abolished mitotic G1 arrest in response to nitrogen starvation" EXACT 
 synonym: "abolished nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
 synonym: "cell cycle arrest in mitotic G1 phase in response to nitrogen starvation abolished" EXACT [PomBase:mah]
 is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
-is_a: FYPO:0000710 ! abnormal cell cycle arrest in response to nitrogen starvation
+is_a: FYPO:0000710 ! abnormal mitotic cell cycle arrest in response to nitrogen starvation
 intersection_of: PATO:0001558
 intersection_of: towards GO:0030996
 created_by: midori
@@ -49885,10 +49880,10 @@ creation_date: 2014-06-03T14:18:47Z
 
 [Term]
 id: FYPO:0003402
-name: abnormal cell cycle regulation during cellular response to osmotic stress
+name: abnormal mitoitc cell cycle regulation during cellular response to osmotic stress
 def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to osmotic stress is abnormal." [PomBase:mah]
-synonym: "abnormal cell cycle regulation in response to osmotic stress" EXACT [PomBase:mah]
-synonym: "abnormal mitotic cell cycle regulation during cellular response to osmotic stress" EXACT [PomBase:mah]
+synonym: "abnormal cell cycle regulation during cellular response to osmotic stress" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle regulation in response to osmotic stress" EXACT [PomBase:mah]
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
 is_a: FYPO:0000180 ! abnormal cellular response to oxidative stress
 intersection_of: PATO:0000001
@@ -51156,12 +51151,12 @@ creation_date: 2014-07-01T16:27:33Z
 
 [Term]
 id: FYPO:0003489
-name: abnormal cell cycle regulation during cellular response to ionizing radiation
+name: abnormal mitotic cell cycle regulation during cellular response to ionizing radiation
 def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to ionizing radiation is abnormal. Normally, cell cycle progression is slowed or arrested transiently following exposure to ionizing radiation. The most common abnormality is for the cell cycle to progress as in the absence of ionizing radiation." [PomBase:mah]
-synonym: "abnormal cell cycle delay following ionizing radiation" EXACT [PomBase:al]
-synonym: "abnormal cell cycle regulation during cellular response to IR" EXACT [PomBase:mah]
-synonym: "abnormal cell cycle regulation in response to ionizing radiation" EXACT [PomBase:mah]
-synonym: "abnormal mitotic cell cycle regulation during cellular response to ionizing radiation" EXACT [PomBase:mah]
+synonym: "abnormal cell cycle regulation during cellular response to ionizing radiation" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle delay following ionizing radiation" EXACT [PomBase:al]
+synonym: "abnormal mitotic cell cycle regulation during cellular response to IR" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle regulation in response to ionizing radiation" EXACT [PomBase:mah]
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
 is_a: FYPO:0001930 ! abnormal cellular response to gamma radiation
 intersection_of: PATO:0000001
@@ -51757,7 +51752,7 @@ synonym: "normal intra-S DNA damage checkpoint" EXACT [PomBase:mah]
 synonym: "normal S-phase DNA damage checkpoint activation" EXACT [PomBase:mah]
 synonym: "normal S-phase DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal S-phase DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001705 ! normal DNA damage checkpoint
+is_a: FYPO:0001705 ! normal mitotic DNA damage checkpoint
 intersection_of: PATO:0000001
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0031573
@@ -54613,7 +54608,7 @@ id: FYPO:0003738
 name: abnormal mitotic cell cycle arrest with condensed chromosomes
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested when cells have condensed chromosomes, but show no other signs of having entered mitosis or M phase, under conditions where arrest does not normally occur." [PomBase:mah]
 synonym: "abnormal mitotic cell cycle arrest with condensed chromosomes during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle
+is_a: FYPO:0000502 ! abnormally arrested mitotic cell cycle progression
 intersection_of: FYPO:0000407 ! abnormally arrested cell cycle progression
 intersection_of: during GO:0072690
 intersection_of: preceded_by GO:0007076
@@ -54960,9 +54955,9 @@ id: FYPO:0003762
 name: normal mitotic cell cycle spindle assembly checkpoint
 def: "A cell cycle checkpoint phenotype in which the mitotic cell cycle spindle assembly checkpoint is normal (i.e. indistinguishable from wild type). The mitotic spindle assembly checkpoint normally delays the metaphase/anaphase transition of a mitotic nuclear division until the spindle is correctly assembled and chromosomes are attached to the spindle." [PomBase:mah]
 synonym: "normal mitotic spindle assembly checkpoint activation" EXACT [PomBase:mah]
-synonym: "normal spindle assembly checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal spindle assembly checkpoint during mitotic cell cycle" EXACT [PomBase:mah]
 synonym: "normal spindle assembly checkpoint during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001703 ! normal cell cycle checkpoint
+is_a: FYPO:0001703 ! normal mitotic cell cycle checkpoint
 intersection_of: PATO:0000001
 intersection_of: during GO:0072690
 intersection_of: inheres_in GO:0007094
@@ -55935,7 +55930,7 @@ def: "A cell cycle checkpoint phenotype in which the cytokinesis checkpoint of a
 synonym: "abnormal cytokinesis after mitosis checkpoint" EXACT [GO:0000078]
 synonym: "abnormal cytokinesis checkpoint activation" RELATED [PomBase:mah]
 synonym: "abnormal mitotic cell cycle cytokinesis checkpoint" EXACT [PomBase:mah]
-is_a: FYPO:0001704 ! abnormal cell cycle checkpoint
+is_a: FYPO:0001704 ! abnormal mitotic cell cycle checkpoint
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0000078
 intersection_of: qualifier PATO:0000460
@@ -58456,13 +58451,13 @@ creation_date: 2014-11-13T15:06:16Z
 
 [Term]
 id: FYPO:0004014
-name: normal cell cycle regulation during cellular response to UV
+name: normal mitotic cell cycle regulation during cellular response to UV
 def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to ultraviolet light (UV) is normal (i.e. indistinguishable from wild type). Normally, cell cycle progression is slowed or arrested transiently following exposure to UV." [PMID:7957098, PomBase:mah]
-synonym: "normal cell cycle delay following UV exposure" EXACT [PomBase:mah]
-synonym: "normal cell cycle regulation during cellular response to ultraviolet light" EXACT [PomBase:mah]
-synonym: "normal cell cycle regulation during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
-synonym: "normal cell cycle regulation in response to UV" EXACT [PomBase:mah]
-synonym: "normal mitotic cell cycle regulation during cellular response to UV" EXACT [PomBase:mah]
+synonym: "normal cell cycle regulation during cellular response to UV" EXACT [PomBase:mah]
+synonym: "normal mitotic cell cycle delay following UV exposure" EXACT [PomBase:mah]
+synonym: "normal mitotic cell cycle regulation during cellular response to ultraviolet light" EXACT [PomBase:mah]
+synonym: "normal mitotic cell cycle regulation during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal mitotic cell cycle regulation in response to UV" EXACT [PomBase:mah]
 is_a: FYPO:0001925 ! normal cellular response to gamma radiation
 is_a: FYPO:0001928 ! normal regulation of mitotic cell cycle
 intersection_of: PATO:0000001
@@ -58803,6 +58798,19 @@ intersection_of: PATO:0001558
 intersection_of: towards GO:0008131
 created_by: midori
 creation_date: 2014-11-25T11:22:59Z
+
+[Term]
+id: FYPO:0004040
+name: mitotic cell cycle arrest phenotype
+def: "A cell cycle phenotype that affects or involves the normal or abnormal occurrence of mitotic cell cycle arrest. In mitotic cell cycle arrest, progression through the mitotic cell cycle is halted during one of the normal phases (G1, S, G2, or M)." [PomBase:mah]
+synonym: "cell cycle arrest phenotype during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "cell cycle arrest phenotype during vegetative growth" EXACT [PomBase:mah]
+synonym: "fission yeast mitotic cell cycle arrest phenotype" EXACT [PomBase:mah]
+is_a: FYPO:0001024 ! cell cycle arrest phenotype
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: inheres_in GO:0071850
+created_by: midori
+creation_date: 2014-11-27T12:18:23Z
 
 [Term]
 id: FYPO:0004041
@@ -59227,94 +59235,94 @@ id: comprises_cells_with_phenotype
 name: comprises cells with phenotype
 def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in all of the individual cells in the population." [PomBase:mah]
 synonym: "includes only cells with phenotype" EXACT [PomBase:mah]
-property_value: usage "Local to FYPO. Consider just using has_part." xsd:string
 is_a: includes_cells_with_phenotype ! includes cells with phenotype
+property_value: usage "Local to FYPO. Consider just using has_part." xsd:string
 created_by: midori
 creation_date: 2012-02-29T01:46:18Z
 
 [Typedef]
 id: during
 name: during
-property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype is observed or relevant." xsd:string
 xref: GOREL:0000002
+property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype is observed or relevant." xsd:string
 
 [Typedef]
 id: exists_during
 name: exists_during
-property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype that affects a continuant, such as a cellular component or the level of a substance, is observed or relevant." xsd:string
 xref: GOREL:0000032
+property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype that affects a continuant, such as a cellular component or the level of a substance, is observed or relevant." xsd:string
 
 [Typedef]
 id: happens_during
 name: happens_during
-property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype that affects an occurrent, i.e. a biological process or molecular function, is observed or relevant." xsd:string
 xref: GOREL:0000001
+property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype that affects an occurrent, i.e. a biological process or molecular function, is observed or relevant." xsd:string
 
 [Typedef]
 id: has_output
 name: has_output
 def: "p has output c if either: p has direct output c or p has output input c. Implies that if p happens, c always ensues." [GOC:curators]
-property_value: usage "Def comes from gorel file. Used in FYPO where one phenotype (p) always results in an additional phenotype (c) as a consequence. There may be other ways to get phenotype (c)." xsd:string
 xref: RO:0002234
+property_value: usage "Def comes from gorel file. Used in FYPO where one phenotype (p) always results in an additional phenotype (c) as a consequence. There may be other ways to get phenotype (c)." xsd:string
 
 [Typedef]
 id: has_part
 name: has_part
-property_value: usage "Used in FYPO to link phenotypes that are collections of features to phenotypes representing the features." xsd:string
 xref: BFO:0000051
 is_transitive: true
+property_value: usage "Used in FYPO to link phenotypes that are collections of features to phenotypes representing the features." xsd:string
 
 [Typedef]
 id: includes_cells_with_phenotype
 name: includes cells with phenotype
 def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in some or all of the individual cells in the population." [PomBase:mah]
-property_value: usage "Local to FYPO. Consider just using has_part." xsd:string
 is_a: has_part ! has_part
+property_value: usage "Local to FYPO. Consider just using has_part." xsd:string
 created_by: midori
 creation_date: 2011-04-26T02:10:32Z
 
 [Typedef]
 id: inheres_in
 name: inheres_in
-property_value: usage "Used in FYPO as described in PATO best practices; identifies an entity that displays a quality in an entity-quality logical definition. Used only in logical definitions (aka xps)." xsd:string
 xref: RO:0000052
+property_value: usage "Used in FYPO as described in PATO best practices; identifies an entity that displays a quality in an entity-quality logical definition. Used only in logical definitions (aka xps)." xsd:string
 
 [Typedef]
 id: occurs_at
 name: occurs_at
-property_value: usage "This relation is not constrained with respect to whether the place where an event occurs completely surrounds, or is adjacent to, the location indicated. Example: chromatin silencing at centromere unfolds_around centromere : Repression of transcription of centromeric DNA by the formation of heterochromatin. Used in FYPO to identify a position where a phenotype is observed or relevant, usually a DNA or RNA sequence feature specified by a SO ID." xsd:string
 xref: GOREL:0000501
+property_value: usage "This relation is not constrained with respect to whether the place where an event occurs completely surrounds, or is adjacent to, the location indicated. Example: chromatin silencing at centromere unfolds_around centromere : Repression of transcription of centromeric DNA by the formation of heterochromatin. Used in FYPO to identify a position where a phenotype is observed or relevant, usually a DNA or RNA sequence feature specified by a SO ID." xsd:string
 
 [Typedef]
 id: occurs_in
 name: occurs in
-property_value: usage "Used in FYPO to identify a location, usually a cellular component or cell type, within which a phenotype is observed or relevant." xsd:string
 xref: BFO:0000066
+property_value: usage "Used in FYPO to identify a location, usually a cellular component or cell type, within which a phenotype is observed or relevant." xsd:string
 
 [Typedef]
 id: output_of
 name: output_of
-property_value: usage "Inverse of has_output. Relation between a structure and a process that forms it, or between one process and a preceding process; A output_of B used where B has_output A isn't always true. Implies that process B is the only way to get output. Used in FYPO where one phenotype (c) always results when another phenotype (p) is present. Phenotype (p) may have other consequences in addition to phenotype (c)." xsd:string
 synonym: "formation results from" EXACT [PomBase:mah]
 xref: RO:0002353
+property_value: usage "Inverse of has_output. Relation between a structure and a process that forms it, or between one process and a preceding process; A output_of B used where B has_output A isn't always true. Implies that process B is the only way to get output. Used in FYPO where one phenotype (c) always results when another phenotype (p) is present. Phenotype (p) may have other consequences in addition to phenotype (c)." xsd:string
 
 [Typedef]
 id: part_of
 name: part_of
-property_value: usage "Used in FYPO to identify phenotypes that are always observed in the context of another, usually larger-scale, phenotype." xsd:string
 xref: BFO:0000050
+property_value: usage "Used in FYPO to identify phenotypes that are always observed in the context of another, usually larger-scale, phenotype." xsd:string
 
 [Typedef]
 id: preceded_by
 name: preceded_by
-property_value: usage "Used in FYPO when a phenotype is observed after another event, usually a GO biological process, has ended, and where there isn't a suitable process to use with a during relation." xsd:string
 xref: BFO:0000062
+property_value: usage "Used in FYPO when a phenotype is observed after another event, usually a GO biological process, has ended, and where there isn't a suitable process to use with a during relation." xsd:string
 
 [Typedef]
 id: precedes
 name: precedes
-property_value: usage "Used in FYPO when a phenotype is observed before another event, usually a GO biological process, begins, and where there isn't a suitable process to use with a during relation." xsd:string
 xref: BFO:0000063
+property_value: usage "Used in FYPO when a phenotype is observed before another event, usually a GO biological process, begins, and where there isn't a suitable process to use with a during relation." xsd:string
 
 [Typedef]
 id: qualifier
@@ -59324,6 +59332,6 @@ property_value: usage "Used in FYPO as described in PATO best practices; placeho
 [Typedef]
 id: towards
 name: towards
-property_value: usage "Relation binding a relational quality or disposition to the relevant type of entity. Used in FYPO as described in PATO best practices; identifies abolished GO processes; identifies substances affected by phenotypes." xsd:string
 xref: RO:0002503
+property_value: usage "Relation binding a relational quality or disposition to the relevant type of entity. Used in FYPO as described in PATO best practices; identifies abolished GO processes; identifies substances affected by phenotypes." xsd:string
 
