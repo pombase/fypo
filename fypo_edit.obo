@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 03:12:2014 12:49
+date: 09:12:2014 15:31
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -188,9 +188,6 @@ synonym: "delayed entry into mitosis" EXACT [PomBase:vw]
 synonym: "delayed mitotic entry" EXACT [PomBase:vw]
 synonym: "delayed mitotic G2 phase progression" RELATED [PomBase:mah]
 synonym: "delayed onset of mitotic M phase" RELATED [PomBase:vw]
-synonym: "DNA replication arrest" RELATED [PomBase:vw]
-synonym: "DNA replication checkpoint activated" RELATED [PomBase:mah]
-synonym: "G2/M transition DNA damage checkpoint activated" RELATED [PomBase:mah]
 synonym: "increased duration of mitotic G2 phase" RELATED [PomBase:mah]
 synonym: "increased duration of mitotic G2 phase during vegetative growth" RELATED [PomBase:mah]
 synonym: "increased mitotic G2 duration" RELATED [PomBase:mah]
@@ -198,8 +195,10 @@ synonym: "mitotic cell cycle delay at G2/M transition" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle progression in G2 phase: decreased rate" RELATED [SGD:phenotype_annotation]
 synonym: "mitotic cell cycle progression in G2 phase: delayed" RELATED [SGD:phenotype_annotation]
 synonym: "mitotic cell cycle progression in G2 phase: increased duration" RELATED [SGD:phenotype_annotation]
+synonym: "mitotic DNA replication checkpoint activated" RELATED [PomBase:mah]
 synonym: "mitotic G2 delay" RELATED [PomBase:mah]
 synonym: "mitotic G2/M transition delay during vegetative growth" EXACT [PomBase:mah]
+synonym: "mitotic G2/M transition DNA damage checkpoint activated" RELATED [PomBase:mah]
 synonym: "reduced rate of mitotic G2 phase progression" RELATED [PomBase:mah]
 is_a: FYPO:0000399 ! abnormal mitotic G2/M phase transition
 is_a: FYPO:0000409 ! delayed cell cycle phase transition
@@ -3458,8 +3457,10 @@ id: FYPO:0000244
 name: loss of viability upon nutrient depletion
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when cells are deprived of nutrients such as carbon or nitrogen." [PomBase:mah]
 comment: Use this term to annotate experiments in which a culture is grown under nutrient-depleted conditions, and then the number of cells viable enough to form a colony upon return to nutrient-replete conditions is measured and compared to wild type. Also consider 'sensitive to nitrogen starvation' (FYPO:0002124).
+synonym: "decreased viability upon nutrient depletion" EXACT [PomBase:mah]
 synonym: "growth defect, required during nutrient depletion" RELATED [PomBase:mah]
 synonym: "loss of viability upon nutrient starvation" EXACT [PomBase:al]
+synonym: "reduced viability upon nutrient depletion" EXACT [PomBase:mah]
 is_a: FYPO:0001985 ! abnormal phenotype
 is_a: FYPO:0002057 ! cell population viability
 relationship: includes_cells_with_phenotype FYPO:0000713 ! abnormal cellular response to starvation
@@ -16850,7 +16851,10 @@ id: FYPO:0001178
 name: loss of viability in stationary phase upon nitrogen depletion
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when cells in a culture in stationary phase are deprived of nitrogen." [PomBase:mah]
 comment: Use this term to annotate experiments in which a culture is grown to stationary phase under nitrogen-depleted conditions, and then the number of cells viable enough to form a colony upon return to conditions supporting vegetative growth is measured and compared to wild type. Also consider 'sensitive to nitrogen starvation' (FYPO:0002124).
+synonym: "decreased viability in stationary phase upon nitrogen depletion" EXACT [PomBase:mah]
+synonym: "loss of viability in stationary phase upon nitrogen deprivation" EXACT [PomBase:mah]
 synonym: "loss of viability upon nitrogen starvation" EXACT [PomBase:al]
+synonym: "reduced viability in stationary phase upon nitrogen depletion" EXACT [PomBase:mah]
 is_a: FYPO:0000244 ! loss of viability upon nutrient depletion
 is_a: FYPO:0000245 ! loss of viability in stationary phase
 created_by: midori
@@ -17433,6 +17437,7 @@ comment: Consider annotating to a term describing abnormal translation or abnorm
 synonym: "increased protein accumulation during cellular response to nitrogen starvation" RELATED [PomBase:mah]
 synonym: "increased protein level during cellular response to nitrogen depletion" EXACT [PomBase:vw]
 synonym: "increased protein level during cellular response to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "increased protein level during nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000836 ! increased protein level
 intersection_of: PATO:0001162
 intersection_of: exists_during GO:0006995
@@ -18348,8 +18353,6 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "increased mRNA level during cellular response to oxidative stress" NARROW [PomBase:mah]
 synonym: "increased RNA accumulation during cellular response to oxidative stress" RELATED [PomBase:mah]
-synonym: "increased RNA level during cellular response to DEM" NARROW [PomBase:al]
-synonym: "increased RNA level during cellular response to diethyl maleate" NARROW [PomBase:mah]
 synonym: "increased RNA level during cellular response to oxidative stress during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased RNA level during cellular response to oxidative stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased transcript level during cellular response to oxidative stress" EXACT [PomBase:vw]
@@ -18425,6 +18428,7 @@ comment: Consider annotating to a term describing abnormal translation or abnorm
 synonym: "decreased protein accumulation during cellular response to nitrogen starvation" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to nitrogen depletion" EXACT [PomBase:vw]
 synonym: "decreased protein level during cellular response to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "decreased protein level during nitrogen starvation" EXACT [PomBase:mah]
 synonym: "reduced protein level during cellular response to nitrogen starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000835 ! decreased protein level
 intersection_of: PATO:0001163
@@ -19949,7 +19953,9 @@ id: FYPO:0001387
 name: loss of viability at high temperature
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when are grown at a temperature higher than standard." [PomBase:mah]
 comment: For S. pombe, high temperature usually means above 32 degrees C. Use this term to annotate experiments in which a culture is grown at high temperature, and then the number of cells viable enough to form a colony upon return to standard or low temperature is measured and compared to wild type.
+synonym: "decreased viability at high temperature" EXACT [PomBase:mah]
 synonym: "loss of viability at restrictive temperature" RELATED [PomBase:mah]
+synonym: "reduced viability at high temperature" EXACT [PomBase:mah]
 is_a: FYPO:0001985 ! abnormal phenotype
 is_a: FYPO:0002057 ! cell population viability
 created_by: midori
@@ -20743,7 +20749,7 @@ synonym: "abnormal cellular protein complex localization" EXACT [GO:0034629, Pom
 synonym: "abnormal protein complex localisation" EXACT [GO:0034629, PomBase:mah]
 synonym: "abnormal protein complex localization during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal protein complex localization during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001370
+is_a: FYPO:0001370 ! abnormal protein localization
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0034629
 intersection_of: qualifier PATO:0000460
@@ -21938,14 +21944,13 @@ creation_date: 2012-09-13T13:53:17Z
 
 [Term]
 id: FYPO:0001521
-name: increased cellular glutathione level
+name: increased cellular glutathione level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of glutathione (GSH) measured in a cell is higher than normal." [PomBase:mah]
 synonym: "increased cellular glutathione level during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "increased cellular glutathione level during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased cellular GSH level" EXACT [CHEBI:16856, PomBase:al]
-synonym: "increased cellular L-gamma-glutamyl-L-cysteinylglycine level" EXACT [CHEBI:16856]
-synonym: "increased cellular reduced glutathione level" EXACT [CHEBI:16856, PomBase:al]
-synonym: "increased glutathione accumulation" RELATED [PomBase:mah]
+synonym: "increased cellular GSH level during vegetative growth" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased cellular L-gamma-glutamyl-L-cysteinylglycine level during vegetative growth" EXACT [CHEBI:16856]
+synonym: "increased cellular reduced glutathione level during vegetative growth" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased glutathione accumulation during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
@@ -22733,15 +22738,14 @@ creation_date: 2012-09-14T16:51:00Z
 
 [Term]
 id: FYPO:0001570
-name: decreased cellular glutathione level
+name: decreased cellular glutathione level during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of glutathione (GSH) measured in a cell is lower than normal." [PomBase:mah]
 synonym: "decreased cellular glutathione level during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "decreased cellular glutathione level during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased cellular GSH level" EXACT [CHEBI:16856, PomBase:al]
-synonym: "decreased cellular L-gamma-glutamyl-L-cysteinylglycine level" EXACT [CHEBI:16856]
-synonym: "decreased cellular reduced glutathione level" EXACT [CHEBI:16856, PomBase:al]
-synonym: "decreased glutathione accumulation" RELATED [PomBase:mah]
-synonym: "reduced cellular glutathione level" EXACT [PomBase:mah]
+synonym: "decreased cellular GSH level during vegetative growth" EXACT [CHEBI:16856, PomBase:al]
+synonym: "decreased cellular L-gamma-glutamyl-L-cysteinylglycine level during vegetative growth" EXACT [CHEBI:16856]
+synonym: "decreased cellular reduced glutathione level during vegetative growth" EXACT [CHEBI:16856, PomBase:al]
+synonym: "decreased glutathione accumulation during vegetative growth" RELATED [PomBase:mah]
+synonym: "reduced cellular glutathione level during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
 intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
@@ -29223,7 +29227,6 @@ creation_date: 2013-02-27T13:18:22Z
 id: FYPO:0002003
 name: abolished RNA polymerase II core promoter proximal region sequence-specific DNA binding
 def: "A molecular function phenotype in which DNA binding at an RNA polymerase II core promoter proximal region by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene. An RNA polymerase II core promoter proximal region is a sequence of DNA that is in cis with and relatively close to a core promoter for RNA polymerase II." [GO:0000978, PomBase:mah]
-synonym: "abolished origin binding" EXACT [PomBase:mah]
 synonym: "abolished transcription factor binding to promoter region" RELATED [PomBase:al]
 synonym: "RNA polymerase II core promoter proximal region sequence-specific DNA binding abolished" EXACT [PomBase:mah]
 is_a: FYPO:0000659 ! abolished DNA binding
@@ -33751,7 +33754,7 @@ name: increased cellular squalene level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of squalene measured in a cell is higher than normal." [PomBase:mah]
 synonym: "increased cellular squalene level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased cellular squalene level during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased citrulline accumulation" RELATED [PomBase:mah]
+synonym: "increased squalene accumulation" RELATED [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
 intersection_of: PATO:0001162
 intersection_of: exists_during GO:0072690
@@ -33813,7 +33816,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "decreased cellular ergosterol level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased cellular ergosterol level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased ergosterol accumulation" RELATED [PomBase:al]
-synonym: "reduced cellular squalene level" EXACT [PomBase:mah]
+synonym: "reduced cellular ergosterol level" EXACT [PomBase:mah]
 is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
 intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
@@ -39793,10 +39796,10 @@ id: FYPO:0002723
 name: increased cellular pigment accumulation during cellular response to cadmium ion
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of cellular pigment accumulation is increased during a cellular response to cadmium ion." [PomBase:mah]
 comment: Note that normal cells do not accumulate detectable levels of any pigment; for this reason, FYPO does not include separate terms for 'increased' and 'abnormal' pigment accumulation. Also note that pigment accumulates in the vacuole. This term refers to GO:0033059 'cellular pigmentation', rather than GO:0043482 'cellular pigment accumulation', because GO:0043482 has paths to 'response to stimulus' in GO.
-synonym: "increased cellular pigment accumulation during cellular response to cadmium" EXACT [PomBase:mah]
 synonym: "abnormal cellular pigment accumulation during cellular response to cadmium ion" EXACT [PomBase:mah]
 synonym: "altered colony color during cellular response to cadmium ion" RELATED [PomBase:al, PomBase:mah]
 synonym: "altered colony colour during cellular response to cadmium ion" RELATED [PomBase:al, PomBase:mah]
+synonym: "increased cellular pigment accumulation during cellular response to cadmium" EXACT [PomBase:mah]
 synonym: "increased cellular pigment accumulation during cellular response to cadmium ion during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased cellular pigment accumulation during cellular response to cadmium ion during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000741 ! increased cellular pigment accumulation
@@ -42544,7 +42547,7 @@ synonym: "decreased protein localisation to chromatin at transcribed regions dur
 synonym: "decreased protein localization to chromatin at transcribed regions during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein localization to transcribed chromatin regions during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced protein localization to chromatin at transcribed regions during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
+is_a: FYPO:0002909 ! decreased protein localization to chromatin during vegetative growth
 created_by: midori
 creation_date: 2013-11-26T11:59:17Z
 
@@ -46596,7 +46599,7 @@ is_a: FYPO:0000628 ! abnormal cellular process
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0031619
 intersection_of: qualifier PATO:0000460
-relationship: part_of FYPO:0000151 ! abnormal meiotic chromosome segregation
+relationship: part_of FYPO:0004159 ! abnormal homologous chromosome segregation
 created_by: midori
 creation_date: 2014-03-05T16:19:48Z
 
@@ -49658,10 +49661,10 @@ creation_date: 2014-06-02T15:36:35Z
 id: FYPO:0003385
 name: increased cellular cadmium level during cellular response to cadmium ion
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of cadmium ions measured in a cell is higher than normal during a cellular response to cadmium ion." [PomBase:mah]
-synonym: "increased cellular cadmium level during cellular response to cadmium" EXACT [PomBase:mah]
 synonym: "increased cadmium accumulation during cellular response to cadmium" RELATED [PomBase:al]
 synonym: "increased cellular cadmium accumulation during cellular response to cadmium" RELATED [PomBase:mah]
 synonym: "increased cellular cadmium ion level during cellular response to cadmium" EXACT [PomBase:mah]
+synonym: "increased cellular cadmium level during cellular response to cadmium" EXACT [PomBase:mah]
 synonym: "increased cellular cadmium level during cellular response to cadmium during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased cellular cadmium level during cellular response to cadmium during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
@@ -56929,7 +56932,9 @@ id: FYPO:0003903
 name: loss of viability at low temperature
 def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when are grown at a temperature lower than standard." [PomBase:mah]
 comment: For S. pombe, low temperature usually means below 25 degrees C. Use this term to annotate experiments in which a culture is grown at low temperature, and then the number of cells viable enough to form a colony upon return to standard or high temperature is measured and compared to wild type.
+synonym: "decreased viability at low temperature" EXACT [PomBase:mah]
 synonym: "loss of viability at restrictive temperature" RELATED [PomBase:mah]
+synonym: "reduced viability at low temperature" EXACT [PomBase:mah]
 is_a: FYPO:0001985 ! abnormal phenotype
 is_a: FYPO:0002057 ! cell population viability
 created_by: midori
@@ -57263,6 +57268,7 @@ def: "A cell population phenotype in which a smaller than normal proportion of t
 comment: This phenotype is commonly assayed by continuous expression of the HO endonuclease.
 synonym: "decreased frequency of HO survivors" NARROW [PMID:22093869]
 synonym: "decreased population viability in presence of nuclease" RELATED [PomBase:mah]
+synonym: "reduced population viability in presence of persistent double-strand breaks" EXACT [PomBase:mah]
 is_a: FYPO:0002057 ! cell population viability
 created_by: midori
 creation_date: 2014-10-28T16:27:07Z
@@ -57668,7 +57674,6 @@ is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0019432
-relationship: has_output FYPO:0001413 ! increased cellular sulfide level
 created_by: midori
 creation_date: 2014-10-29T13:54:00Z
 
@@ -59226,7 +59231,7 @@ synonym: "decreased phosphorylation of RNA polymerase II C-terminal domain serin
 synonym: "decreased phosphorylation of RNA polymerase II C-terminal domain serine 2 residues during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased phosphorylation of RNA polymerase II CTD serine 2 residues" EXACT [PomBase:mah]
 synonym: "reduced phosphorylation of RNA polymerase II C-terminal domain serine 2 residues" EXACT [PomBase:mah]
-is_a: FYPO:0001838 ! decreased protein phosphorylation during vegetative growth
+is_a: FYPO:0002644 ! decreased protein serine phosphorylation
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0071619
@@ -59242,7 +59247,7 @@ synonym: "decreased phosphorylation of RNA polymerase II C-terminal domain serin
 synonym: "decreased phosphorylation of RNA polymerase II C-terminal domain serine 5 residues during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased phosphorylation of RNA polymerase II CTD serine 5 residues" EXACT [PomBase:mah]
 synonym: "reduced phosphorylation of RNA polymerase II C-terminal domain serine 5 residues" EXACT [PomBase:mah]
-is_a: FYPO:0001838 ! decreased protein phosphorylation during vegetative growth
+is_a: FYPO:0002644 ! decreased protein serine phosphorylation
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0071620
@@ -59984,7 +59989,7 @@ creation_date: 2014-12-03T11:56:13Z
 
 [Term]
 id: FYPO:0004119
-name: inviable after spore germination, multiple cell divisions, elongated multinucleate cell with abnormal septum morphology formation
+name: inviable after spore germination, multiple cell divisions, elongated multinucleate cell with abnormal septum morphology
 def: "A phenotype in which a spore germinates to produce an inviable cell that is longer than normal, has more than one nucleus, has one or more septa with abnormal size, shape, or structure, and that undergoes two or more rounds of cell division, and then dies." [PMID:15116432, PomBase:mah]
 synonym: "essential; germinating spore, multiple cell divisions, elongated multinucleate cell with abnormal septum morphology" RELATED [PomBase:mah]
 synonym: "inviable after spore germination, multiple cell divisions, elongated multinucleate cell with abnormal septum morphology" EXACT [PomBase:mah]
@@ -60117,7 +60122,7 @@ is_a: FYPO:0002330 ! abnormal histone H3-K4 methylation
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0044648
-intersection_of: occurs_at SO:0001217<
+intersection_of: occurs_at SO:0001217
 created_by: midori
 creation_date: 2014-12-03T12:38:48Z
 
@@ -60144,6 +60149,610 @@ intersection_of: PATO:0002051
 intersection_of: inheres_in GO:0004197
 created_by: midori
 creation_date: 2014-12-03T12:46:36Z
+
+[Term]
+id: FYPO:0004130
+name: decreased succinate dehydrogenase (ubiquinone) activity
+def: "A molecular function phenotype in which the observed rate of succinate dehydrogenase (ubiquinone) activity is decreased." [PomBase:mah]
+synonym: "reduced succinate dehydrogenase (ubiquinone) activity" EXACT [PomBase:mah]
+is_a: FYPO:0003322 ! abnormal succinate dehydrogenase (ubiquinone) activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0008177
+created_by: midori
+creation_date: 2014-12-09T11:35:33Z
+
+[Term]
+id: FYPO:0004131
+name: increased succinate dehydrogenase (ubiquinone) activity
+def: "A molecular function phenotype in which the observed rate of succinate dehydrogenase (ubiquinone) activity is increased." [PomBase:mah]
+is_a: FYPO:0003322 ! abnormal succinate dehydrogenase (ubiquinone) activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0008177
+created_by: midori
+creation_date: 2014-12-09T11:35:44Z
+
+[Term]
+id: FYPO:0004132
+name: normal sulfite reductase activity
+def: "A molecular function phenotype in which the observed rate of sulfite reductase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal sulphite reductase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0016002
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-12-09T11:43:30Z
+
+[Term]
+id: FYPO:0004133
+name: normal reactive oxygen species level during nitrogen starvation
+def: "A cell phenotype in which the amount of reactive oxygen species (ROS)  measured in a cell that is subject to nitrogen starvation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cellular reactive oxygen species level during nitrogen starvation" EXACT [PomBase:mah]
+synonym: "normal reactive oxygen species level during nitrogen depletion" EXACT [PomBase:vw]
+synonym: "normal reactive oxygen species level during nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "normal ROS accumulation during nitrogen starvation" RELATED [PomBase:mah]
+synonym: "normal ROS level during nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0001076 ! normal level of substance in cell
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:26523
+created_by: midori
+creation_date: 2014-12-09T11:47:25Z
+
+[Term]
+id: FYPO:0004134
+name: decreased RNA level during cellular response to diethyl maleate
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to diethyl maleate is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "decreased mRNA level during cellular response to diethyl maleate" NARROW [PomBase:mah]
+synonym: "decreased RNA accumulation during cellular response to diethyl maleate" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to DEM" EXACT [PomBase:al]
+synonym: "decreased RNA level during cellular response to diethyl maleate during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to diethyl maleate during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased transcript level during cellular response to diethyl maleate" EXACT [PomBase:vw]
+synonym: "reduced RNA level during cellular response to diethyl maleate" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:1902112
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-12-09T11:52:45Z
+
+[Term]
+id: FYPO:0004135
+name: resistance to copper
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of copper ions than normal." [PomBase:mah]
+synonym: "resistance to copper during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "resistance to copper during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to copper ion" EXACT [PomBase:mah]
+synonym: "resistant to copper" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:23378
+created_by: midori
+creation_date: 2014-12-09T11:56:58Z
+
+[Term]
+id: FYPO:0004136
+name: abolished histone H3-K9 dimethylation at telomere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which dimethylation of lysine at position 9 of histone H3 in telomeric regions does not occur." [PomBase:mah]
+synonym: "abolished histone H3 K9 dimethylation at telomere" EXACT [GO:0036123, PomBase:mah]
+synonym: "abolished histone H3-K9 dimethylation at telomere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished histone H3-K9 dimethylation at telomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished histone H3-K9 dimethylation at telomeric region" EXACT [PomBase:vw]
+synonym: "abolished histone H3K9me2 at telomere" EXACT [PomBase:mah]
+synonym: "abolished histone lysine H3 K9 dimethylation at telomere" EXACT [GO:0036123, PomBase:mah]
+synonym: "abolished telomeric histone H3-K9 dimethylation" EXACT [PomBase:mah]
+synonym: "histone H3-K9 dimethylation abolished at telomere" EXACT [PomBase:mah]
+synonym: "histone H3-K9 dimethylation absent at telomere" EXACT [PomBase:al]
+is_a: FYPO:0000458 ! abnormal histone H3-K9 methylation
+is_a: FYPO:0002565 ! abolished histone methylation
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: occurs_at SO:0000624
+intersection_of: towards GO:0036123
+created_by: midori
+creation_date: 2014-12-09T11:58:04Z
+
+[Term]
+id: FYPO:0004137
+name: decreased histone H3-K9 dimethylation at subtelomeric heterochromatin
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which dimethylation of lysine at position 9 of histone H3 in heterochromatin at subtelomeric regions occurs to a lower extent than normal." [PMID:25245948, PomBase:mah]
+synonym: "decreased histone H3 K9 dimethylation at subtelomeric heterochromatin" EXACT [GO:0036123, PomBase:mah]
+synonym: "decreased histone H3-K9 dimethylation at subtelomeres" EXACT [PomBase:al]
+synonym: "decreased histone H3-K9 dimethylation at subtelomeric heterochromatin during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased histone H3-K9 dimethylation at subtelomeric heterochromatin during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased histone H3K9me2 at subtelomeric heterochromatin" EXACT [PomBase:mah]
+synonym: "decreased histone lysine H3 K9 dimethylation at subtelomeric heterochromatin" EXACT [GO:0036123, PomBase:mah]
+synonym: "reduced histone H3-K9 dimethylation at subtelomeric heterochromatin" EXACT [PomBase:mah]
+is_a: FYPO:0000870 ! decreased histone methylation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0036123
+intersection_of: occurs_in GO:1990421
+created_by: midori
+creation_date: 2014-12-09T12:06:04Z
+
+[Term]
+id: FYPO:0004138
+name: increased histone H3-K9 dimethylation at telomere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dimethylation of lysine at position 9 of histone H3 in telomeric regions occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased histone H3 K9 dimethylation at telomere" EXACT [GO:0036123, PomBase:mah]
+synonym: "increased histone H3-K9 dimethylation at telomere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone H3-K9 dimethylation at telomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased histone H3K9 dimethylation at telomere" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me2 at telomere" EXACT [PomBase:mah]
+synonym: "increased histone lysine H3 K9 dimethylation at telomere" EXACT [GO:0036123, PomBase:mah]
+synonym: "increased telomeric histone H3-K9 dimethylation" EXACT [PomBase:mah]
+is_a: FYPO:0000873 ! increased histone H3-K9 dimethylation
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0036123
+intersection_of: occurs_at SO:0000624
+created_by: midori
+creation_date: 2014-12-09T12:08:36Z
+
+[Term]
+id: FYPO:0004139
+name: altered level of substance in cell during nitrogen starvation
+def: "A cell phenotype in which the amount of a specific substance measured in a cell that is subject to nitrogen starvation differs from normal." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
+synonym: "abnormal level of substance in cell during nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000989 ! altered level of substance in cell
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000460
+intersection_of: towards CHEBI:24431
+created_by: midori
+creation_date: 2014-12-09T12:14:06Z
+
+[Term]
+id: FYPO:0004140
+name: increased cellular glutathione level during nitrogen starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of glutathione (GSH) measured in a cell that is subject to nitrogen starvation is higher than normal." [PomBase:mah]
+synonym: "increased cellular glutathione level during nitrogen depletion" EXACT [PomBase:mah]
+synonym: "increased cellular glutathione level during nitrogen deprivation" EXACT [PomBase:mah]
+synonym: "increased cellular GSH level during nitrogen starvation" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased cellular L-gamma-glutamyl-L-cysteinylglycine level during nitrogen starvation" EXACT [CHEBI:16856]
+synonym: "increased cellular reduced glutathione level during nitrogen starvation" EXACT [CHEBI:16856, PomBase:al]
+synonym: "increased glutathione accumulation during nitrogen starvation" RELATED [PomBase:mah]
+is_a: FYPO:0000990 ! increased level of substance in cell
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:16856
+created_by: midori
+creation_date: 2014-12-09T12:21:47Z
+
+[Term]
+id: FYPO:0004141
+name: decreased cellular glutathione level during nitrogen starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of glutathione (GSH) measured in a cell that is subject to nitrogen starvation is lower than normal." [PomBase:mah]
+synonym: "decreased cellular glutathione level during nitrogen depletion" EXACT [PomBase:mah]
+synonym: "decreased cellular glutathione level during nitrogen deprivation" EXACT [PomBase:mah]
+synonym: "decreased cellular GSH level during nitrogen starvation" EXACT [CHEBI:16856, PomBase:al]
+synonym: "decreased cellular L-gamma-glutamyl-L-cysteinylglycine level during nitrogen starvation" EXACT [CHEBI:16856]
+synonym: "decreased cellular reduced glutathione level during nitrogen starvation" EXACT [CHEBI:16856, PomBase:al]
+synonym: "decreased glutathione accumulation during nitrogen starvation" RELATED [PomBase:mah]
+synonym: "reduced cellular glutathione level during nitrogen starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000991 ! decreased level of substance in cell
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:16856
+created_by: midori
+creation_date: 2014-12-09T12:24:06Z
+
+[Term]
+id: FYPO:0004142
+name: decreased RNA polymerase II core promoter proximal region sequence-specific DNA binding
+def: "A molecular function phenotype in which DNA binding at an RNA polymerase II core promoter proximal region by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene. An RNA polymerase II core promoter proximal region is a sequence of DNA that is in cis with and relatively close to a core promoter for RNA polymerase II." [GO:0000978, PomBase:mah]
+synonym: "decreased transcription factor binding to promoter region" RELATED [PomBase:al]
+synonym: "reduced RNA polymerase II core promoter proximal region sequence-specific DNA binding" EXACT [PomBase:mah]
+is_a: FYPO:0000658 ! decreased DNA binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0000978
+created_by: midori
+creation_date: 2014-12-09T12:29:29Z
+
+[Term]
+id: FYPO:0004143
+name: increased cellular nitrite level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of nitrite (NO2-) ions measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular nitrite accumulation" RELATED [PomBase:mah]
+synonym: "increased cellular nitrite ion level" EXACT [PomBase:al]
+synonym: "increased cellular nitrite level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased cellular nitrite level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+is_a: FYPO:0001411 ! altered cellular sulfide level
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:16301
+created_by: midori
+creation_date: 2014-12-09T12:46:07Z
+
+[Term]
+id: FYPO:0004144
+name: decreased catalase activity during cellular response to nitrosative stress
+def: "A molecular function phenotype in which the observed rate of catalase activity is decreased during a cellular response to nitrosative stress." [PomBase:mah]
+synonym: "decreased catalase activity during nitrosative stress" EXACT [PomBase:al]
+synonym: "reduced catalase activity during cellular response to nitrosative stress" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001104 ! abnormal catalase activity
+intersection_of: PATO:0002052
+intersection_of: during GO:0071500
+intersection_of: inheres_in GO:0004096
+created_by: midori
+creation_date: 2014-12-09T12:48:20Z
+
+[Term]
+id: FYPO:0004145
+name: abnormal pyridoxine:NADP 4-dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of pyridoxine:NADP 4-dehydrogenase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0050236
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-12-09T13:01:24Z
+
+[Term]
+id: FYPO:0004146
+name: decreased pyridoxine:NADP 4-dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of pyridoxine:NADP 4-dehydrogenase activity is decreased." [PomBase:mah]
+synonym: "reduced pyridoxine:NADP 4-dehydrogenase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0004145 ! abnormal pyridoxine:NADP 4-dehydrogenase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0050236
+created_by: midori
+creation_date: 2014-12-09T13:01:30Z
+
+[Term]
+id: FYPO:0004147
+name: increased pyridoxine:NADP 4-dehydrogenase activity
+def: "A molecular function phenotype in which the observed rate of pyridoxine:NADP 4-dehydrogenase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0004145 ! abnormal pyridoxine:NADP 4-dehydrogenase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0050236
+created_by: midori
+creation_date: 2014-12-09T13:01:35Z
+
+[Term]
+id: FYPO:0004148
+name: normal pyridoxamine-phosphate oxidase activity
+def: "A molecular function phenotype in which the observed rate of pyridoxamine-phosphate oxidase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004733
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-12-09T13:03:25Z
+
+[Term]
+id: FYPO:0004149
+name: normal pyridoxal kinase activity
+def: "A molecular function phenotype in which the observed rate of pyridoxal kinase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0008478
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-12-09T13:04:09Z
+
+[Term]
+id: FYPO:0004150
+name: decreased cellular pyridoxamine 5'-phosphate level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of pyridoxamine 5'-phosphate measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular pyridoxamine 5'-phosphate level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased cellular pyridoxamine 5'-phosphate level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased pyridoxamine 5'-phosphate accumulation" RELATED [PomBase:al]
+synonym: "reduced cellular pyridoxamine 5'-phosphate level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:18335
+created_by: midori
+creation_date: 2014-12-09T13:16:47Z
+
+[Term]
+id: FYPO:0004151
+name: decreased cellular pyridoxine level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of pyridoxine measured in a cell is lower than normal." [PomBase:mah]
+synonym: "decreased cellular pyridoxine level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased cellular pyridoxine level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased pyridoxine accumulation" RELATED [PomBase:al]
+synonym: "reduced cellular pyridoxine level" EXACT [PomBase:mah]
+is_a: FYPO:0001329 ! decreased level of substance in cell during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:16709
+created_by: midori
+creation_date: 2014-12-09T13:19:20Z
+
+[Term]
+id: FYPO:0004152
+name: increased cellular pyridoxal level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of pyridoxal measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular pyridoxal level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased cellular pyridoxal level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased pyridoxal accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:17310
+created_by: midori
+creation_date: 2014-12-09T13:20:26Z
+
+[Term]
+id: FYPO:0004153
+name: increased flocculation in stationary phase
+def: "A cell population phenotype that reflects increased occurrence of flocculation when the population is in stationary phase. Flocculation is the non-sexual aggregation of single cells." [PMID:15047724, PomBase:mah]
+is_a: FYPO:0000155 ! increased flocculation
+created_by: midori
+creation_date: 2014-12-09T13:21:34Z
+
+[Term]
+id: FYPO:0004154
+name: normal protein phosphorylation during cellular response to heat
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins is normal (i.e. indistinguishable from wild type) during a cellular response to heat." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein phosphorylation during cellular response to heat during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal protein phosphorylation during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000776 ! normal protein phosphorylation
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0034605
+intersection_of: inheres_in GO:0006468
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-12-09T13:37:08Z
+
+[Term]
+id: FYPO:0004155
+name: increased protein tyrosine phosphorylation during mitotic G1 phase
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of tyrosine residues in one or more specific proteins, or of specific protein sites, occurs to a greater extent than normal during G1 phase of the mitotic cell cycle." [PomBase:mah]
+synonym: "increased peptidyl-tyrosine phosphorylation during mitotic G1 phase" EXACT [GO:0018108, PomBase:mah]
+synonym: "increased protein tyrosine phosphorylation during cellular response to heat during G1 phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein tyrosine phosphorylation during cellular response to heat during G1 phase of mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "increased tyrosine phosphorylation during mitotic G1 phase" EXACT [PomBase:al]
+is_a: FYPO:0001038 ! increased protein phosphorylation during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0000080
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0018108
+created_by: midori
+creation_date: 2014-12-09T13:38:08Z
+
+[Term]
+id: FYPO:0004156
+name: decreased protein level during mitosis
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during mitosis is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein accumulation during mitosis" RELATED [PomBase:mah]
+synonym: "decreased protein level during mitosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein level during mitotic nuclear division" EXACT [GO:0007067]
+synonym: "reduced protein level during mitosis" EXACT [PomBase:mah]
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0007067
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-12-09T13:42:41Z
+
+[Term]
+id: FYPO:0004157
+name: increased protein level during mitosis
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during mitosis is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein accumulation during mitosis" RELATED [PomBase:mah]
+synonym: "increased protein level during mitosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein level during mitotic nuclear division" EXACT [GO:0007067]
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0007067
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:36080
+created_by: midori
+creation_date: 2014-12-09T13:44:15Z
+
+[Term]
+id: FYPO:0004158
+name: elongated vegetative cell with fragmented septum and more than four nuclei
+def: "A cell morphology phenotype in which vegetative a cell is longer than normal, and contains more than four nuclei and pieces of a septum that does not completely bisect the cell." [PMID:21931816, PomBase:mah]
+synonym: "elongated cell with fragmented septum and more than four nuclei during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "elongated cell with fragmented septum and more than four nuclei during vegetative growth" EXACT [PomBase:mah]
+synonym: "long vegetative cell with fragmented septum and more than four nuclei" EXACT [PomBase:mah]
+is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
+created_by: midori
+creation_date: 2014-12-09T14:09:30Z
+
+[Term]
+id: FYPO:0004159
+name: abnormal homologous chromosome segregation
+def: "A cellular process phenotype in which homologous chromosome segregation is abnormal. Homologous chromosome segregation is the process in which replicated homologous chromosomes are organized and then physically separated and apportioned to two sets during the first division of the meiotic cell cycle." [GO:0045143, PomBase:mah]
+synonym: "abnormal chromosome segregation during meiosis I" EXACT [PomBase:mah]
+is_a: FYPO:0000051 ! abnormal meiosis
+is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0045143
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2014-12-09T14:12:55Z
+
+[Term]
+id: FYPO:0004160
+name: normal meiotic spindle
+def: "A physical cellular phenotype in which the meiotic spindle is normal (i.e. indistinguishable from wild type) with respect to structure, composition, location, and orientation." [PomBase:mah]
+synonym: "normal spindle during meiosis" EXACT [PomBase:mah]
+synonym: "normal spindle during meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0001231 ! normal cell cortex morphology
+intersection_of: PATO:0000001
+intersection_of: exists_during GO:0007067
+intersection_of: inheres_in GO:0072687
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2014-12-09T14:23:08Z
+
+[Term]
+id: FYPO:0004161
+name: decreased protein localization to chromatin at RNA polymerase II-regulated genes during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to regions of chromatin containing genes that can be transcribed by RNA polymerase II is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to chromatin at RNA polymerase II-regulated genes during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromatin at polymerase II regulated genes" EXACT [PomBase:vw]
+synonym: "decreased protein localization to chromatin at RNA polymerase II-regulated genes during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "reduced protein localization to chromatin at RNA polymerase II-regulated genes during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002909 ! decreased protein localization to chromatin during vegetative growth
+created_by: midori
+creation_date: 2014-12-09T14:30:07Z
+
+[Term]
+id: FYPO:0004162
+name: loss of viability upon glucose starvation
+def: "A cell population phenotype in which a smaller than normal proportion of the population remains viable when cells the population are subject to glucose starvation." [PomBase:mah]
+synonym: "decreased viability upon glucose starvation" EXACT [PomBase:mah]
+synonym: "loss of viability upon glucose depletion" EXACT [PomBase:al]
+synonym: "loss of viability upon glucose deprivation" EXACT [PomBase:mah]
+synonym: "reduced viability upon glucose starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000244 ! loss of viability upon nutrient depletion
+created_by: midori
+creation_date: 2014-12-09T14:38:44Z
+
+[Term]
+id: FYPO:0004163
+name: increased viability upon glucose starvation
+def: "A cell population phenotype in which a larger than normal proportion of the population remains viable when cells the population are subject to glucose starvation." [PomBase:mah]
+synonym: "increased viability upon glucose depletion" EXACT [PomBase:al]
+synonym: "increased viability upon glucose deprivation" EXACT [PomBase:mah]
+is_a: FYPO:0002057 ! cell population viability
+created_by: midori
+creation_date: 2014-12-09T14:42:38Z
+
+[Term]
+id: FYPO:0004164
+name: increased cellular reactive oxygen species level in stationary phase
+def: "A cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is higher than normal when the population in which the cell is found is in stationary phase." [PomBase:mah]
+synonym: "increased cellular reactive oxygen species accumulation in stationary phase" RELATED [PomBase:mah]
+synonym: "increased cellular ROS accumulation in stationary phase" RELATED [PomBase:mah]
+synonym: "increased cellular ROS level in stationary phase" EXACT [PomBase:mah]
+synonym: "increased ROS accumulation in stationary phase" RELATED [PomBase:al]
+is_a: FYPO:0002142 ! altered cellular reactive oxygen species level
+created_by: midori
+creation_date: 2014-12-09T14:49:31Z
+
+[Term]
+id: FYPO:0004165
+name: normal glucose consumption
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the amount of glucose consumed by cells in a given time is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal glucose uptake" RELATED [PomBase:vw]
+is_a: FYPO:0000257 ! normal phenotype
+is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
+created_by: midori
+creation_date: 2014-12-09T14:50:40Z
+
+[Term]
+id: FYPO:0004166
+name: increased oxygen consumption
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the amount of oxygen consumed by cells in a given time is higher than in wild type." [PomBase:mah]
+comment: Also see 'increased cellular respiration' (FYPO:0000565).
+synonym: "increased oxygen uptake" RELATED [PomBase:vw]
+is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
+created_by: midori
+creation_date: 2014-12-09T14:54:31Z
+
+[Term]
+id: FYPO:0004167
+name: increased cell population growth on glycerol carbon source
+def: "A vegetative cell population growth phenotype in which cell growth is increased relative to normal in a medium containing glycerol as the carbon source." [PomBase:al, PomBase:mah]
+comment: Note that trace amounts of another carbon source are usually required for S. pombe growth on glycerol; yeast extract-based rich medium supplies the trace substance, but minimal medium must be supplemented. It is therefore important to annotate the growth medium as an experimental condition when using this term. Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+synonym: "increased growth on glycerol carbon source" BROAD [PomBase:mah]
+synonym: "increased vegetative cell growth on glycerol carbon source" EXACT [PomBase:mah]
+is_a: FYPO:0003937 ! increased cell population growth
+intersection_of: FYPO:0003937
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:17754
+created_by: midori
+creation_date: 2014-12-09T15:00:22Z
+
+[Term]
+id: FYPO:0004168
+name: normal viability in stationary phase during glucose limitation
+def: "A cell population phenotype in which a normal proportion of the population remains viable after entering stationary phase, under conditions of glucose limitation, such as in a medium that contains a low level of glucose and no other carbon source." [PomBase:mah]
+comment: Use this term if you have assayed growth of cells exposed to glucose limitation in culture. Note that glucose limitation differs from glucose starvation in that starvation results from complete absence of glucose, whereas limitation results from a shift from high to low glucose levels. Glucose concentrations below about 4.4 mM (0.08%) are typically regarded as limiting.
+is_a: FYPO:0001310 ! normal viability in stationary phase
+is_a: FYPO:0002057 ! cell population viability
+created_by: midori
+creation_date: 2014-12-09T15:02:19Z
+
+[Term]
+id: FYPO:0004169
+name: decreased RNA level in stationary phase
+def: "A cell phenotype in which the amount of RNA measured in a cell is lower than normal when the population in which the cell is found is in stationary phase. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "decreased RNA accumulation in stationary phase" RELATED [PomBase:mah]
+synonym: "reduced RNA level in stationary phase" EXACT [PomBase:mah]
+is_a: FYPO:0000826 ! decreased RNA level
+created_by: midori
+creation_date: 2014-12-09T15:05:27Z
+
+[Term]
+id: FYPO:0004170
+name: abolished histone H3-K9 dimethylation at centromere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which dimethylation of lysine at position 9 of histone H3 in centromeric regions does not occur." [PomBase:mah]
+synonym: "abolished centromeric histone H3-K9 dimethylation" EXACT [PomBase:mah]
+synonym: "abolished histone H3 K9 dimethylation at centromere" EXACT [GO:0036123, PomBase:mah]
+synonym: "abolished histone H3-K9 dimethylation at centromere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished histone H3-K9 dimethylation at centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished histone H3-K9 dimethylation at centromeric region" EXACT [PomBase:vw]
+synonym: "abolished histone H3K9me2 at centromere" EXACT [PomBase:mah]
+synonym: "abolished histone lysine H3 K9 dimethylation at centromere" EXACT [GO:0036123, PomBase:mah]
+synonym: "histone H3-K9 dimethylation abolished at centromere" EXACT [PomBase:mah]
+synonym: "histone H3-K9 dimethylation absent at centromere" EXACT [PomBase:al]
+is_a: FYPO:0000458 ! abnormal histone H3-K9 methylation
+is_a: FYPO:0002565 ! abolished histone methylation
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: occurs_at SO:0001795
+intersection_of: towards GO:0036123
+created_by: midori
+creation_date: 2014-12-09T15:23:37Z
+
+[Term]
+id: FYPO:0004171
+name: normal RNA level during glucose starvation
+def: "A cell phenotype in which the amount of RNA measured in a cell that is subject to glucose starvation is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "normal cellular RNA level during glucose starvation" EXACT [PomBase:mah]
+synonym: "normal mRNA level during glucose starvation" NARROW [PomBase:mah]
+synonym: "normal RNA accumulation during glucose starvation" RELATED [PomBase:mah]
+synonym: "normal RNA level during glucose depletion" EXACT [PomBase:vw]
+synonym: "normal RNA level during glucose deprivation" EXACT [PomBase:vw]
+is_a: FYPO:0000840 ! normal RNA level
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0042149
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-12-09T15:27:27Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
