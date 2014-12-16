@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:12:2014 15:31
+date: 16:12:2014 16:31
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -203,6 +203,7 @@ synonym: "reduced rate of mitotic G2 phase progression" RELATED [PomBase:mah]
 is_a: FYPO:0000399 ! abnormal mitotic G2/M phase transition
 is_a: FYPO:0000409 ! delayed cell cycle phase transition
 is_a: FYPO:0000563 ! abnormal mitotic G2 phase progression
+is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000086
@@ -4585,6 +4586,7 @@ synonym: "mitotic G1/S transition delay during vegetative growth" EXACT [PomBase
 is_a: FYPO:0000394 ! abnormal mitotic G1/S phase transition
 is_a: FYPO:0000409 ! delayed cell cycle phase transition
 is_a: FYPO:0000602 ! abnormal mitotic G1 phase progression
+is_a: FYPO:0001069 ! increased duration of mitotic cell cycle phase
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000082
@@ -5467,15 +5469,13 @@ creation_date: 2011-07-14T06:06:09Z
 id: FYPO:0000397
 name: decreased duration of mitotic G1/S phase transition
 def: "A cellular process phenotype in which the duration of progression through the G1/S transition of the mitotic cell cycle is shorter than normal." [PomBase:mah]
+comment: This term was made obsolete because a cell cycle transition is a time point, rather than a stage or phase that can have a duration.
 synonym: "cell cycle progression through the G1/S phase transition: increased rate" RELATED [SGD:phenotype_annotation]
 synonym: "decreased duration of cell cycle progression through mitotic G1/S phase transition" EXACT [PomBase:mah]
 synonym: "decreased duration of mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased rate of cell cycle progression through mitotic G1/S phase transition" RELATED [PomBase:mah]
 synonym: "reduced duration of mitotic G1/S phase transition" EXACT [PomBase:mah]
-is_a: FYPO:0000394 ! abnormal mitotic G1/S phase transition
-intersection_of: PATO:0000499
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000082
+is_obsolete: true
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
@@ -5547,13 +5547,11 @@ creation_date: 2011-07-14T06:45:37Z
 id: FYPO:0000403
 name: increased duration of mitotic G2/M phase transition
 def: "A cellular process phenotype in which the duration of progression through the G2/M transition of the mitotic cell cycle is increased." [PomBase:mah]
+comment: This term was made obsolete because a cell cycle transition is a time point, rather than a stage or phase that can have a duration.
 synonym: "cell cycle progression through the G2/M phase transition: increased duration" EXACT [SGD:phenotype_annotation]
 synonym: "increased duration of cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
 synonym: "increased duration of mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000399 ! abnormal mitotic G2/M phase transition
-intersection_of: PATO:0000498
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000086
+is_obsolete: true
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
@@ -5561,15 +5559,13 @@ creation_date: 2011-07-14T06:45:37Z
 id: FYPO:0000404
 name: decreased duration of mitotic G2/M phase transition
 def: "A cellular process phenotype in which the duration of progression through the G2/M transition of the mitotic cell cycle is shorter than normal." [PomBase:mah]
+comment: This term was made obsolete because a cell cycle transition is a time point, rather than a stage or phase that can have a duration.
 synonym: "cell cycle progression through the G2/M phase transition: increased rate" EXACT [SGD:phenotype_annotation]
 synonym: "decreased duration of cell cycle progression through mitotic G2/M phase transition" EXACT [PomBase:mah]
 synonym: "decreased duration of cell cycle progression through mitotic G2/M phase transition during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased rate of mitotic G2/M phase transition" RELATED [PomBase:mah]
 synonym: "reduced duration of mitotic G2/M phase transition" EXACT [PomBase:mah]
-is_a: FYPO:0000399 ! abnormal mitotic G2/M phase transition
-intersection_of: PATO:0000499
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0000086
+is_obsolete: true
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
@@ -5663,38 +5659,44 @@ creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000412
-name: abnormal cell fusion
-def: "A cellular process phenotype in which plasma membrane fusion is abnormal." [PomBase:mah]
-synonym: "cell fusion: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000628 ! abnormal cellular process
+name: abnormal cell fusion during conjugation
+def: "A cellular process phenotype in which plasma membrane fusion involved in cytogamy is abnormal." [PomBase:mah]
+synonym: "abnormal cell fusion during mating" EXACT []
+synonym: "abnormal plasma membrane fusion involved in cytogamy" EXACT [GO:0032220]
+synonym: "cell fusion: abnormal" RELATED [SGD:phenotype_annotation]
+is_a: FYPO:0000031 ! abnormal conjugation
 intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0045026
+intersection_of: inheres_in GO:0032220
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000413
-name: abolished cell fusion
-def: "A cellular process phenotype in which plasma membrane fusion does not occur." [PomBase:mah]
-synonym: "absent cell fusion" EXACT [PomBase:mah]
-synonym: "cell fusion abolished" EXACT [PomBase:mah]
-synonym: "cell fusion: absent" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000412 ! abnormal cell fusion
+name: abolished cell fusion during conjugation
+def: "A cellular process phenotype in which plasma membrane fusion involved in cytogamy does not occur." [PomBase:mah]
+synonym: "abolished cell fusion during mating" EXACT []
+synonym: "abolished plasma membrane fusion involved in cytogamy" EXACT [GO:0032220]
+synonym: "absent cell fusion during conjugation" EXACT [PomBase:mah]
+synonym: "cell fusion abolished during conjugation" EXACT [PomBase:mah]
+synonym: "cell fusion: absent" RELATED [SGD:phenotype_annotation]
+is_a: FYPO:0000412 ! abnormal cell fusion during conjugation
 intersection_of: PATO:0001558
-intersection_of: towards GO:0045026
+intersection_of: towards GO:0032220
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
 [Term]
 id: FYPO:0000414
-name: decreased cell fusion
-def: "A cellular process phenotype in which the occurrence of plasma membrane fusion is decreased." [PomBase:mah]
-synonym: "cell fusion: decreased" EXACT [SGD:phenotype_annotation]
-synonym: "reduced cell fusion" EXACT [PomBase:mah]
-is_a: FYPO:0000412 ! abnormal cell fusion
+name: decreased cell fusion during conjugation
+def: "A cellular process phenotype in which plasma membrane fusion involved in cytogamy is decreased." [PomBase:mah]
+synonym: "cell fusion: decreased" RELATED [SGD:phenotype_annotation]
+synonym: "decreased cell fusion during mating" EXACT []
+synonym: "decreased plasma membrane fusion involved in cytogamy" EXACT [GO:0032220]
+synonym: "reduced cell fusion during conjugation" EXACT [PomBase:mah]
+is_a: FYPO:0000412 ! abnormal cell fusion during conjugation
 intersection_of: PATO:0002052
-intersection_of: inheres_in GO:0045026
+intersection_of: inheres_in GO:0032220
 created_by: midori
 creation_date: 2011-07-14T06:45:37Z
 
@@ -49233,6 +49235,10 @@ def: "A phenotype in which cells show increased sensitivity to papuamide B durin
 synonym: "sensitive to papuamide B during conjugation with cellular fusion" EXACT [GO:0000747]
 synonym: "sensitivity to chemicals interfering with lipids during mating" BROAD [PMID:24514900]
 is_a: FYPO:0002683 ! increased sensitivity to chemical
+intersection_of: FYPO:0002683
+intersection_of: during GO:0000747
+intersection_of: towards CHEBI:83265
+created_by: midori
 created_by: midori
 creation_date: 2014-05-12T15:40:53Z
 
@@ -49268,12 +49274,11 @@ creation_date: 2014-05-12T15:47:17Z
 
 [Term]
 id: FYPO:0003359
-name: sensitive to myriocin
+name: sensitive to myriocin< during vegetative growth
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to myriocin. Cells stop growing (and may die) at a concentration of myriocin that allows wild type cells to grow." [PomBase:mah]
-synonym: "hypersensitive to myriocin" EXACT [PomBase:mah]
+synonym: "hypersensitive to myriocin during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to myriocin during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "sensitive to myriocin during vegetative growth" EXACT [PomBase:mah]
-synonym: "sensitivity to chemicals interfering with lipids" BROAD [PMID:24514900]
+synonym: "sensitivity to chemicals interfering with lipids during vegetative growth" BROAD [PMID:24514900]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
 intersection_of: PATO:0001551
 intersection_of: inheres_in GO:0072690
@@ -50298,16 +50303,13 @@ creation_date: 2014-06-11T14:14:35Z
 [Term]
 id: FYPO:0003426
 name: decreased RNA level during cellular response to pheromone
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to a pheromone is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to a pheromone is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "decreased RNA accumulation during cellular response to pheromone" RELATED [PomBase:mah]
-synonym: "decreased RNA level during cellular response to pheromone during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "decreased RNA level during cellular response to pheromone during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased transcript level during cellular response to pheromone" EXACT [PomBase:vw]
-is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+is_a: FYPO:0000826 ! decreased RNA level
 intersection_of: PATO:0001163
 intersection_of: exists_during GO:0071444
-intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
 intersection_of: towards CHEBI:33697
 created_by: midori
@@ -53340,7 +53342,6 @@ synonym: "normal protein serine phosphorylation during mitotic cell cycle" RELAT
 synonym: "normal protein serine phosphorylation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000776 ! normal protein phosphorylation
 intersection_of: PATO:0000001
-intersection_of: happens_during GO:0034605
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0018105
 intersection_of: qualifier PATO:0000461
@@ -58829,6 +58830,16 @@ created_by: midori
 creation_date: 2014-11-25T11:17:44Z
 
 [Term]
+id: FYPO:0004038
+name: delayed increase in RNA level during cellular response to hydrogen peroxide
+def: "A cell phenotype in which an increase in RNA level that occurs as part of a cellular response to hydrogen peroxide begins later than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PMID:9450957, PomBase:mah]
+synonym: "delayed increase in RNA level during cellular response to H2O2" EXACT []
+synonym: "delayed increase in transcript level during cellular response to hydrogen peroxide" EXACT []
+is_a: FYPO:0000194 ! abnormal cellular response to hydrogen peroxide
+created_by: midori
+creation_date: 2014-12-16T14:47:06Z
+
+[Term]
 id: FYPO:0004039
 name: abolished primary amine oxidase activity
 def: "A molecular function phenotype in which primary amine oxidase activity is absent." [PomBase:mah]
@@ -59311,17 +59322,14 @@ creation_date: 2014-11-27T14:06:20Z
 [Term]
 id: FYPO:0004072
 name: RNA absent from cell during cellular response to pheromone
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is too low to detect during a cellular response to a pheromone. Total RNA or a specific RNA may be affected." [PomBase:mah]
+def: "A cell phenotype in which the amount of RNA measured in a cell is too low to detect during a cellular response to a pheromone. Total RNA or a specific RNA may be affected." [PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
-synonym: "RNA absent from cell during cellular response to pheromone during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "RNA absent from cell during cellular response to pheromone during vegetative growth" EXACT [PomBase:mah]
 synonym: "transcripts absent from cell during cellular response to pheromone" EXACT [PomBase:vw]
 synonym: "undetectable RNA level during cellular response to pheromone" EXACT [PomBase:mah]
 is_a: FYPO:0001889 ! RNA absent from cell
 is_a: FYPO:0003426 ! decreased RNA level during cellular response to pheromone
 intersection_of: PATO:0002000
 intersection_of: during GO:0071444
-intersection_of: during GO:0072690
 intersection_of: inheres_in CL:0000334
 intersection_of: towards CHEBI:33697
 created_by: midori
@@ -60214,8 +60222,8 @@ synonym: "decreased transcript level during cellular response to diethyl maleate
 synonym: "reduced RNA level during cellular response to diethyl maleate" EXACT [PomBase:mah]
 is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
 intersection_of: PATO:0001163
-intersection_of: exists_during GO:1902112
 intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:1902112
 intersection_of: inheres_in CL:0000334
 intersection_of: towards CHEBI:33697
 created_by: midori
@@ -60512,8 +60520,8 @@ synonym: "normal protein phosphorylation during cellular response to heat during
 synonym: "normal protein phosphorylation during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000776 ! normal protein phosphorylation
 intersection_of: PATO:0000001
-intersection_of: happens_during GO:0072690
 intersection_of: happens_during GO:0034605
+intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006468
 intersection_of: qualifier PATO:0000461
 created_by: midori
@@ -60683,7 +60691,7 @@ comment: Note that trace amounts of another carbon source are usually required f
 synonym: "increased growth on glycerol carbon source" BROAD [PomBase:mah]
 synonym: "increased vegetative cell growth on glycerol carbon source" EXACT [PomBase:mah]
 is_a: FYPO:0003937 ! increased cell population growth
-intersection_of: FYPO:0003937
+intersection_of: FYPO:0003937 ! increased cell population growth
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0000467
@@ -60752,6 +60760,206 @@ intersection_of: qualifier PATO:0000461
 intersection_of: towards CHEBI:33697
 created_by: midori
 creation_date: 2014-12-09T15:27:27Z
+
+[Term]
+id: FYPO:0004172
+name: decreased protein kinase activity during cellular response to heat
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is decreased during a cellular response to heat." [PomBase:mah]
+synonym: "decreased protein kinase activity during cellular response to heat stress" EXACT [GO:0034605]
+synonym: "reduced protein kinase activity during cellular response to heat" EXACT [PomBase:mah]
+is_a: FYPO:0001382 ! decreased protein kinase activity
+intersection_of: PATO:0002052
+intersection_of: during GO:0034605
+intersection_of: inheres_in GO:0004672
+created_by: midori
+creation_date: 2014-12-16T14:49:39Z
+
+[Term]
+id: FYPO:0004173
+name: decreased protein phosphorylation during cellular response to heat
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a lower extent than normal during a cellular response to heat." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein phosphorylation during cellular response to heat during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein phosphorylation during cellular response to heat during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein phosphorylation during cellular response to heat stress" EXACT [GO:0034605]
+synonym: "reduced protein phosphorylation during cellular response to heat" EXACT [PomBase:mah]
+is_a: FYPO:0001838 ! decreased protein phosphorylation during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0034605
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2014-12-16T15:05:28Z
+
+[Term]
+id: FYPO:0004174
+name: h+ specific sterility
+def: "A cellular process phenotype in which conjugation does not occur in cells of the h+ mating type." [PMID:9003326, PomBase:mah]
+synonym: "h+-specific sterility" EXACT [PomBase:mah]
+synonym: "h-plus-specific mating defect" RELATED [PMID:24727291]
+synonym: "h-plus-specific sterility" EXACT [PomBase:mah]
+is_a: FYPO:0000280 ! sterile
+created_by: midori
+creation_date: 2014-12-16T15:14:55Z
+
+[Term]
+id: FYPO:0004175
+name: decreased mating efficiency in h- cells
+def: "A biological process phenotype in which the observed mating efficiency is lower than normal in cells of the h- mating type." [PMID:8668157, PomBase:al, PomBase:mah]
+comment: Note that mating efficiency is often measured by counting zygotes plus asci, sometimes also including spores, so a change in measured mating efficiency may reflect a change in conjugation frequency (see FYPO:0000031 and its descendants), a change in sporulation (see FYPO:0000121 and its descendants), or both. For this reason, this term is not a child of 'mating phenotype' (FYPO:0000031).
+synonym: "reduced mating efficiency in h- cells" EXACT [PomBase:mah]
+is_a: FYPO:0000708 ! decreased mating efficiency
+created_by: midori
+creation_date: 2014-12-16T15:16:01Z
+
+[Term]
+id: FYPO:0004176
+name: decreased RNA level during cellular response to pheromone and nitrogen starvation
+def: "A cell phenotype in which the amount of RNA measured in a cell during a cellular response to a pheromone that occurs when the cell is subject to nitrogen starvation is lower than normal. Total RNA or a specific RNA may be affected." [PMID:8668157, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "decreased RNA accumulation during cellular response to pheromone and nitrogen starvation" RELATED [PomBase:mah]
+synonym: "decreased transcript level during cellular response to pheromone and nitrogen starvation" EXACT [PomBase:vw]
+is_a: FYPO:0001152 ! decreased RNA level during nitrogen starvation
+is_a: FYPO:0003426 ! decreased RNA level during cellular response to pheromone
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0071444
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-12-16T15:26:56Z
+
+[Term]
+id: FYPO:0004177
+name: increased RNA level during nitrogen starvation in h- cells
+def: "A cell phenotype in which the amount of RNA measured in a cell of the h- mating type when the cell is subject to nitrogen starvation is higher than normal. Total RNA or a specific RNA may be affected." [PMID:8668157, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "increased RNA accumulation during nitrogen starvation in h- cells" RELATED [PomBase:mah]
+synonym: "increased RNA level during nitrogen depletion in h- cells" EXACT [PomBase:vw]
+synonym: "increased RNA level during nitrogen deprivation in h- cells" EXACT [PomBase:vw]
+synonym: "increased transcript level during nitrogen starvation in h- cells" EXACT [PomBase:vw]
+is_a: FYPO:0002020 ! increased RNA level during nitrogen starvation
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0002674
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-12-16T15:28:56Z
+
+[Term]
+id: FYPO:0004178
+name: increased RNA level during nitrogen starvation in h+ cells
+def: "A cell phenotype in which the amount of RNA measured in a cell of the h+ mating type when the cell is subject to nitrogen starvation is higher than normal. Total RNA or a specific RNA may be affected." [PMID:8668157, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "increased RNA accumulation during nitrogen starvation in h+ cells" RELATED [PomBase:mah]
+synonym: "increased RNA level during nitrogen depletion in h+ cells" EXACT [PomBase:vw]
+synonym: "increased RNA level during nitrogen deprivation in h+ cells" EXACT [PomBase:vw]
+synonym: "increased transcript level during nitrogen starvation in h+ cells" EXACT [PomBase:vw]
+is_a: FYPO:0002020 ! increased RNA level during nitrogen starvation
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0006995
+intersection_of: inheres_in CL:0002675
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2014-12-16T15:34:31Z
+
+[Term]
+id: FYPO:0004179
+name: decreased protein aggregate fusion
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which small aggregates of misfolded protein fuse into larger aggregates to a lower extent than normal." [PMID:24936793, PomBase:mah]
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+created_by: midori
+creation_date: 2014-12-16T15:49:33Z
+
+[Term]
+id: FYPO:0004180
+name: increased cellular protein aggregate level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein present as aggregates of misfolded protein is greater than normal." [PMID:24936793, PomBase:mah]
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+created_by: midori
+creation_date: 2014-12-16T15:52:38Z
+
+[Term]
+id: FYPO:0004181
+name: normal protein localization to cell-cell contact point during conjugation
+def: "A cell phenotype in which the localization of a protein to the region of contact between two cells undergoing conjugation is normal (i.e. indistinguishable from wild type)." [PMID:24514900, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+is_a: FYPO:0003627 ! normal protein localization
+created_by: midori
+creation_date: 2014-12-16T15:57:02Z
+
+[Term]
+id: FYPO:0004182
+name: normal vegetative growth on papuamide B
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing papuamide B." [PomBase:mah]
+synonym: "normal cellular response to papuamide B during vegetative growth" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth in presence of papuamide B" EXACT [PomBase:mah]
+synonym: "normal vegetative cell population growth on papuamide B" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:83265
+created_by: midori
+creation_date: 2014-12-16T16:00:05Z
+
+[Term]
+id: FYPO:0004183
+name: normal growth on papuamide B during mating
+def: "A phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing papuamide B when cells in the population are undergoing conjugation." [PomBase:mah]
+synonym: "normal cell population growth in presence of papuamide B during mating" EXACT [PomBase:mah]
+synonym: "normal cell population growth on papuamide B during mating" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to papuamide B during mating" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on papuamide B during conjugation with cellular fusion" EXACT [GO:0000747]
+is_a: FYPO:0000047 ! normal cell population growth
+intersection_of: FYPO:0000047
+intersection_of: happens_during GO:0000747
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:83265
+created_by: midori
+creation_date: 2014-12-16T16:02:45Z
+
+[Term]
+id: FYPO:0004184
+name: sensitive to papuamide B during vegetative growth
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to papuamide B. Cells stop growing (and may die) at a concentration of papuamide B that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to papuamide B during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to papuamide B during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:83265
+created_by: midori
+creation_date: 2014-12-16T16:08:57Z
+
+[Term]
+id: FYPO:0004185
+name: sensitive to myriocin during mating
+def: "A phenotype in which cells show increased sensitivity to myriocin during mating. Cells stop growing (and may die) at a concentration of myriocin that allows wild type cells to grow." [PMID:24514900, PomBase:mah]
+synonym: "sensitive to myriocin during conjugation with cellular fusion" EXACT [GO:0000747]
+synonym: "sensitivity to chemicals interfering with lipids during mating" BROAD [PMID:24514900]
+is_a: FYPO:0002683 ! increased sensitivity to chemical
+intersection_of: FYPO:0002683
+intersection_of: during GO:0000747
+intersection_of: towards CHEBI:582124
+created_by: midori
+creation_date: 2014-12-16T16:10:07Z
+
+[Term]
+id: FYPO:0004186
+name: normal vegetative growth on myriocin
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing myriocin." [PomBase:mah]
+synonym: "normal cellular response to myriocin during vegetative growth" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth in presence of myriocin" EXACT [PomBase:mah]
+synonym: "normal vegetative cell population growth on myriocin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:582124
+created_by: midori
+creation_date: 2014-12-16T16:16:39Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
