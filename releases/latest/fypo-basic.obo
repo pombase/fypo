@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2014-12-16
-date: 16:12:2014 16:31
+data-version: releases/2014-12-17
+date: 17:12:2014 15:27
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -39,7 +39,7 @@ subsetdef: ubprop:upper_level "abstract upper-level terms not directly useful fo
 subsetdef: value_slim "Value slim"
 subsetdef: virus_checked "Viral overhaul terms"
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 1112 $
+remark: svn version: $Revision: 1114 $
 ontology: fypo
 
 [Term]
@@ -387,7 +387,7 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000029
 name: abnormal chromosome segregation
 alt_id: FYPO:0000226
-def: "A cellular process phenotype in which chromosome segregation is abnormal. Chromosome segregation begins with the alignment of chromosomes at the metaphase plate, includes chromosome separation, and ends when chromosomes have completed movement to the spindle poles." [GO:0007059, PomBase:mah]
+def: "A cellular process phenotype in which chromosome segregation is abnormal. Chromosome segregation begins with the alignment of chromosomes at the metaphase plate, includes sister chromatid separation, and ends when chromosomes have completed movement to the spindle poles." [GO:0007059, PomBase:mah]
 synonym: "centromere function defective" RELATED [PomBase:mah]
 synonym: "chromosome segregation defects" EXACT [PomBase:mah]
 synonym: "chromosome segregation: abnormal" EXACT [SGD:phenotype_annotation]
@@ -2668,7 +2668,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "chromosome segregation defects, lagging mitotic chromosomes" EXACT [PomBase:mah]
 synonym: "lagging chromosomes during vegetative growth" EXACT [PomBase:mah]
 synonym: "lagging mitotic sister chromatids" EXACT [PomBase:mah]
-is_a: FYPO:0000670 ! abnormal mitotic chromosome separation
+is_a: FYPO:0000670 ! abnormal mitotic sister chromatid separation
 is_a: FYPO:0002090 ! lagging chromosomes
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -4713,7 +4713,7 @@ creation_date: 2011-07-14T06:45:37Z
 id: FYPO:0000412
 name: abnormal cell fusion during conjugation
 def: "A cellular process phenotype in which plasma membrane fusion involved in cytogamy is abnormal." [PomBase:mah]
-synonym: "abnormal cell fusion during mating" EXACT []
+synonym: "abnormal cell fusion during mating" EXACT [PomBase:mah]
 synonym: "abnormal plasma membrane fusion involved in cytogamy" EXACT [GO:0032220]
 synonym: "cell fusion: abnormal" RELATED [SGD:phenotype_annotation]
 is_a: FYPO:0000031 ! abnormal conjugation
@@ -4725,7 +4725,7 @@ creation_date: 2011-07-14T06:45:37Z
 id: FYPO:0000413
 name: abolished cell fusion during conjugation
 def: "A cellular process phenotype in which plasma membrane fusion involved in cytogamy does not occur." [PomBase:mah]
-synonym: "abolished cell fusion during mating" EXACT []
+synonym: "abolished cell fusion during mating" EXACT [PomBase:mah]
 synonym: "abolished plasma membrane fusion involved in cytogamy" EXACT [GO:0032220]
 synonym: "absent cell fusion during conjugation" EXACT [PomBase:mah]
 synonym: "cell fusion abolished during conjugation" EXACT [PomBase:mah]
@@ -4739,7 +4739,7 @@ id: FYPO:0000414
 name: decreased cell fusion during conjugation
 def: "A cellular process phenotype in which plasma membrane fusion involved in cytogamy is decreased." [PomBase:mah]
 synonym: "cell fusion: decreased" RELATED [SGD:phenotype_annotation]
-synonym: "decreased cell fusion during mating" EXACT []
+synonym: "decreased cell fusion during mating" EXACT [PomBase:mah]
 synonym: "decreased plasma membrane fusion involved in cytogamy" EXACT [GO:0032220]
 synonym: "reduced cell fusion during conjugation" EXACT [PomBase:mah]
 is_a: FYPO:0000412 ! abnormal cell fusion during conjugation
@@ -7602,10 +7602,10 @@ creation_date: 2011-11-11T10:46:47Z
 
 [Term]
 id: FYPO:0000670
-name: abnormal mitotic chromosome separation
-def: "A cellular process phenotype in which mitotic chromosome separation is abnormal." [PomBase:mah]
-synonym: "abnormal chromosome separation during vegetative growth" EXACT [PomBase:mah]
-synonym: "abnormal mitotic sister chromatid separation" EXACT [GO:0051306]
+name: abnormal mitotic sister chromatid separation
+def: "A cellular process phenotype in which mitotic sister chromatid separation is abnormal." [PomBase:mah]
+synonym: "abnormal mitotic chromosome separation" EXACT [PomBase:mah]
+synonym: "abnormal sister chromatid separation during vegetative growth" EXACT [PomBase:mah]
 synonym: "aneuploidy" RELATED [PomBase:vw]
 synonym: "mitotic chromosome nondisjunction" EXACT [PomBase:mah]
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
@@ -7623,7 +7623,7 @@ synonym: "abnormal rDNA separation during mitotic cell cycle" RELATED [PomBase:m
 synonym: "abnormal rDNA separation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal ribosomal DNA separation" EXACT [PomBase:mah]
 synonym: "abnormal segregation of nucleolar rDNA" RELATED [PomBase:mah]
-is_a: FYPO:0000670 ! abnormal mitotic chromosome separation
+is_a: FYPO:0000670 ! abnormal mitotic sister chromatid separation
 created_by: midori
 creation_date: 2011-11-11T01:59:59Z
 
@@ -17534,7 +17534,7 @@ creation_date: 2012-08-30T14:32:53Z
 id: FYPO:0001497
 name: inviable elongated vegetative cell with mitotic cell cycle arrest in interphase
 def: "A cell morphology phenotype in which a vegetative cell is inviable and longer than normal, and progress through the mitotic cell cycle is arrested in interphase. The cell contains one nucleus and no septum." [PomBase:mah]
-comment: A population of cells with this phenotype usually shows a marginal increase in cell number before all cells die. Cells arrested in S phase typically have more than 1C, but less than 2C, DNA content. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+comment: A population of cells with this phenotype usually shows a marginal increase in cell number before all cells die. Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
 synonym: "elongated inviable cell with mitotic cell cycle arrest in interphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "elongated inviable vegetative cell with mitotic cell cycle arrest in interphase" EXACT [PomBase:mah]
 synonym: "essential; elongated vegetative cell with mitotic cell cycle arrest in interphase" RELATED [PomBase:mah]
@@ -22941,13 +22941,12 @@ creation_date: 2013-02-06T17:11:58Z
 
 [Term]
 id: FYPO:0001946
-name: abolished mitotic chromosome separation
-def: "A cellular process phenotype in which mitotic chromosome separation does not occur." [PomBase:mah]
-synonym: "abolished mitotic sister chromatid separation" EXACT [GO:0051306]
-synonym: "absent mitotic chromosome separation" EXACT [PomBase:mah]
-synonym: "mitotic chromosome separation abolished" EXACT [PomBase:mah]
+name: abolished mitotic sister chromatid separation
+def: "A cellular process phenotype in which mitotic sister chromatid separation does not occur." [PomBase:mah]
+synonym: "abolished mitotic chromosome separation" EXACT [PomBase:mah]
+synonym: "absent mitoitc sister chromatid separation" EXACT [PomBase:mah]
 synonym: "mitotic sister chromatid separation abolished" EXACT [PomBase:mah]
-is_a: FYPO:0000670 ! abnormal mitotic chromosome separation
+is_a: FYPO:0000670 ! abnormal mitotic sister chromatid separation
 created_by: midori
 creation_date: 2013-02-07T11:58:07Z
 
@@ -30148,6 +30147,7 @@ synonym: "abolished protein localization to nucleoplasm during cellular response
 synonym: "protein localization to nucleoplasm abolished during cellular response to hydroxyurea" EXACT [PomBase:mah]
 is_a: FYPO:0002531 ! abolished protein localization to nucleoplasm
 is_a: FYPO:0002537 ! abnormal protein localization to nucleoplasm during cellular response to hydroxyurea
+is_a: FYPO:0004188 ! abolished protein localization to nucleus during cellular response to hydroxyurea
 created_by: midori
 creation_date: 2013-08-27T15:00:01Z
 
@@ -33684,6 +33684,7 @@ synonym: "centromeric outer repeat transcript-derived siRNA undetectable" EXACT 
 synonym: "siRNAs homologous to outer repeats absent" EXACT [PomBase:vw]
 synonym: "siRNAs homologous to outer repeats undetectable" EXACT [PomBase:mah]
 is_a: FYPO:0000273 ! centromeric outer repeat transcripts absent
+is_a: FYPO:0004201 ! decreased centromeric outer repeat transcript-derived siRNA level
 created_by: midori
 creation_date: 2013-11-05T14:44:13Z
 
@@ -34312,14 +34313,13 @@ creation_date: 2013-11-14T16:10:54Z
 
 [Term]
 id: FYPO:0002887
-name: normal protein localization to telomere
+name: normal protein localization to telomere during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the telomere of a chromosome is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "normal protein localisation to chromosome, telomeric region" EXACT [GO:0070198, PomBase:mah]
-synonym: "normal protein localisation to telomere" EXACT [PomBase:mah]
-synonym: "normal protein localization to chromosome, telomeric region" EXACT [GO:0070198, PomBase:mah]
+synonym: "normal protein localisation to chromosome, telomeric region, during vegetative growth" EXACT [GO:0070198, PomBase:mah]
+synonym: "normal protein localisation to telomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to chromosome, telomeric region, during vegetative growth" EXACT [GO:0070198, PomBase:mah]
 synonym: "normal protein localization to telomere during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "normal protein localization to telomere during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
 created_by: midori
 creation_date: 2013-11-14T16:13:58Z
@@ -44650,10 +44650,10 @@ creation_date: 2014-09-01T17:20:24Z
 
 [Term]
 id: FYPO:0003756
-name: multiple mitotic spindles with abolished chromosome separation
+name: multiple mitotic spindles with abolished sister chromatid separation
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell has more than one mitotic spindle, and mitotic sister chromatid separation does not occur." [PMID:8978688, PomBase:mah]
-synonym: "multiple mitotic spindles with abolished chromosome segregation" RELATED [PomBase:vw]
-synonym: "multiple mitotic spindles with abolished sister chromatid separation" EXACT [GO:0051306, PomBase:mah]
+synonym: "multiple mitotic spindles with abolished chromosome separation" EXACT [PomBase:mah]
+synonym: "multiple mitotic spindles with abolished sister chromatid segregation" RELATED [PomBase:vw]
 is_a: FYPO:0003755 ! abnormal vegetative cell phenotype
 created_by: midori
 creation_date: 2014-09-01T17:24:07Z
@@ -45481,8 +45481,10 @@ synonym: "mitotic cell cycle arrest in G2 before cell separation with inviable e
 synonym: "mitotic G2 arrest after failed cytokinesis, with inviable elongated cell" RELATED [PomBase:vw]
 is_a: FYPO:0001223 ! binucleate multiseptate cell
 is_a: FYPO:0001494 ! inviable elongated multiseptate vegetative cell
+is_a: FYPO:0001497 ! inviable elongated vegetative cell with mitotic cell cycle arrest in interphase
+is_a: FYPO:0002001 ! mononucleate multiseptate vegetative cell
 is_a: FYPO:0002024 ! inviable elongated multinucleate aseptate vegetative cell
-is_a: FYPO:0002066 ! inviable elongated aseptate cell
+is_a: FYPO:0002337 ! inviable elongated mononucleate vegetative cell with mislocalized nucleus
 is_a: FYPO:0002452 ! inviable septated vegetative cell with abnormal cell morphology
 is_a: FYPO:0003825 ! inviable binucleate aseptate cell with mitotic cell cycle arrest in G2 before cell separation
 created_by: midori
@@ -47882,8 +47884,8 @@ creation_date: 2014-11-25T11:17:44Z
 id: FYPO:0004038
 name: delayed increase in RNA level during cellular response to hydrogen peroxide
 def: "A cell phenotype in which an increase in RNA level that occurs as part of a cellular response to hydrogen peroxide begins later than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PMID:9450957, PomBase:mah]
-synonym: "delayed increase in RNA level during cellular response to H2O2" EXACT []
-synonym: "delayed increase in transcript level during cellular response to hydrogen peroxide" EXACT []
+synonym: "delayed increase in RNA level during cellular response to H2O2" EXACT [PomBase:mah]
+synonym: "delayed increase in transcript level during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
 is_a: FYPO:0000194 ! abnormal cellular response to hydrogen peroxide
 created_by: midori
 creation_date: 2014-12-16T14:47:06Z
@@ -48608,11 +48610,12 @@ creation_date: 2014-12-02T15:32:33Z
 
 [Term]
 id: FYPO:0004101
-name: lagging mitotic chromosomes, with complete chromosome separation
+name: lagging mitotic chromosomes, with complete sister chromatid separation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which sister chromatids do not move towards the spindle poles at the same time during mitosis prior to completion of chromosome segregation. Although one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has separated, mitotic sister chromatid segregation does eventually go on to complete separation of chromosomes." [PMID:17561805, PomBase:mah]
-synonym: "chromosome segregation defects, lagging mitotic chromosomes, with complete chromosome separation" EXACT [PomBase:mah]
-synonym: "lagging chromosomes, with complete chromosome separation, during vegetative growth" EXACT [PomBase:mah]
-synonym: "lagging mitotic sister chromatids, with complete chromosome separation" EXACT [PomBase:mah]
+synonym: "chromosome segregation defects, lagging mitotic chromosomes, with complete sister chromatid separation" EXACT [PomBase:mah]
+synonym: "lagging chromosomes, with complete sister chromatid separation, during vegetative growth" EXACT [PomBase:mah]
+synonym: "lagging mitotic chromosomes, with complete chromosome separation" EXACT [PomBase:mah]
+synonym: "lagging mitotic sister chromatids, with complete sister chromatid separation" EXACT [PomBase:mah]
 is_a: FYPO:0000228 ! lagging mitotic chromosomes
 created_by: midori
 creation_date: 2014-12-02T15:38:56Z
@@ -49608,6 +49611,241 @@ synonym: "normal vegetative cell population growth on myriocin" EXACT [PomBase:a
 is_a: FYPO:0001357 ! normal vegetative cell population growth
 created_by: midori
 creation_date: 2014-12-16T16:16:39Z
+
+[Term]
+id: FYPO:0004187
+name: abolished protein export from nucleus during cellular response to hydroxyurea
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein export from the nucleus does not occur  during a cellular response to hydroxyurea. Export of all proteins or a specific protein may be affected." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein export from nucleus during cellular response to hydroxyurea during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "absent protein export from nucleus during cellular response to hydroxyurea" EXACT [PomBase:mah]
+synonym: "protein export from nucleus abolished during cellular response to hydroxyurea" EXACT [PomBase:mah]
+synonym: "protein export from nucleus abolished during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001921 ! abolished protein export from nucleus
+created_by: midori
+creation_date: 2014-12-16T16:19:00Z
+
+[Term]
+id: FYPO:0004188
+name: abolished protein localization to nucleus during cellular response to hydroxyurea
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleus is abolished during a cellular response to hydroxyurea." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to nucleus during cellular response to hydroxyurea" EXACT [PomBase:mah]
+synonym: "abolished protein localization to nucleus during cellular response to HU" EXACT [PomBase:al]
+synonym: "abolished protein localization to nucleus during cellular response to hydroxyurea during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished protein localization to nucleus during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to nucleus abolished during cellular response to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0001424 ! abolished protein localization to nucleus during vegetative growth
+created_by: midori
+creation_date: 2014-12-16T16:21:30Z
+
+[Term]
+id: FYPO:0004189
+name: increased protein level during cellular response to hydroxyurea
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to hydroxyurea is higher than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein accumulation during cellular response to hydroxyurea" RELATED [PomBase:mah]
+synonym: "increased protein level during cellular response to HU" EXACT [PomBase:mah]
+synonym: "increased protein level during cellular response to hydroxyurea during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased protein level during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001327 ! increased protein level during vegetative growth
+created_by: midori
+creation_date: 2014-12-16T16:23:00Z
+
+[Term]
+id: FYPO:0004190
+name: decreased protein level during cellular response to ionizing radiation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to ionizing radiation is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein accumulation during cellular response to ionizing radiation" RELATED [PomBase:mah]
+synonym: "decreased protein level during cellular response to ionizing radiation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein level during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein level during cellular response to ionizing radiation" EXACT [PomBase:mah]
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+created_by: midori
+creation_date: 2014-12-16T16:25:07Z
+
+[Term]
+id: FYPO:0004191
+name: increased RNA level during cellular response to hydroxyurea
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hydroxyurea is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "increased mRNA level during cellular response to hydroxyurea" NARROW [PomBase:mah]
+synonym: "increased RNA accumulation during cellular response to hydroxyurea" RELATED [PomBase:mah]
+synonym: "increased RNA level during cellular response to HU" EXACT [PomBase:mah]
+synonym: "increased RNA level during cellular response to hydroxyurea during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased RNA level during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased transcript level during cellular response to hydroxyurea" EXACT [PomBase:vw]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+created_by: midori
+creation_date: 2014-12-16T16:26:11Z
+
+[Term]
+id: FYPO:0004192
+name: decreased RNA level during cellular response to ionizing radiation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to ionizing radiation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "decreased RNA accumulation during cellular response to ionizing radiation" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to ionizing radiation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased transcript level during cellular response to ionizing radiation" EXACT [PomBase:vw]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+created_by: midori
+creation_date: 2014-12-17T11:46:42Z
+
+[Term]
+id: FYPO:0004193
+name: decreased protein level during mitotic S phase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during S phase of the mitotic cell cycle is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein accumulation during mitotic S phase" RELATED [PomBase:mah]
+synonym: "decreased protein level during mitotic S phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein level during S phase of mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "reduced protein level during mitotic S phase" EXACT [PomBase:mah]
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+created_by: midori
+creation_date: 2014-12-17T12:02:18Z
+
+[Term]
+id: FYPO:0004194
+name: decreased protein level during cellular response to hydroxyurea
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of protein measured in a cell during a cellular response to hydroxyurea is lower than normal. Total protein or a specific protein may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein accumulation during cellular response to hydroxyurea" RELATED [PomBase:mah]
+synonym: "decreased protein level during cellular response to HU" EXACT [PomBase:mah]
+synonym: "decreased protein level during cellular response to hydroxyurea during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein level during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein level during cellular response to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0001274 ! decreased protein level during cellular response to hypoxia
+created_by: midori
+creation_date: 2014-12-17T12:03:24Z
+
+[Term]
+id: FYPO:0004195
+name: normal protein localization to telomere during meiosis
+def: "A cell phenotype in which the localization of a protein to the telomere of a chromosome is normal (i.e. indistinguishable from wild type) during one or both meiotic nuclear divisions." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to chromosome, telomeric region, during meiosis" EXACT [GO:0070198, PomBase:mah]
+synonym: "normal protein localisation to telomere during meiosis" EXACT [PomBase:mah]
+synonym: "normal protein localization to chromosome, telomeric region, during meiosis" EXACT [GO:0070198, PomBase:mah]
+synonym: "normal protein localization to telomere during meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0003790 ! normal protein localization during meiosis
+created_by: midori
+creation_date: 2014-12-17T12:34:00Z
+
+[Term]
+id: FYPO:0004196
+name: inviable after spore germination, single or double cell division, elongated multiseptate cell with fragmented nucleus
+def: "A phenotype in which a spore germinates to produce a cell that is longer than normal, has more than one septum and a nucleus that is broken into multiple small fragments, and undergoes one or two rounds of cell division." [PomBase:mah]
+synonym: "essential; germinating spore, single or double cell division, elongated multiseptate cell with fragmented nucleus" RELATED [PomBase:mah]
+synonym: "inviable following spore germination, single or double cell division, elongated multiseptate cell with fragmented nucleus" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, single or double cell division, elongated multiseptate cell with fragmented nucleus" EXACT [PomBase:mah]
+is_a: FYPO:0004076 ! inviable after spore germination, single or double cell division, elongated multiseptate cell
+created_by: midori
+creation_date: 2014-12-17T13:22:48Z
+
+[Term]
+id: FYPO:0004197
+name: inviable elongated vegetative cell with fragmented nucleus and mitotic cell cycle arrest in interphase
+def: "A cell morphology phenotype in which a vegetative cell is inviable and longer than normal, has a nucleus that is broken into multiple small fragments, and progress through the mitotic cell cycle is arrested in interphase. The cell contains no septum." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "elongated inviable cell with fragmented nucleus and  mitotic cell cycle arrest in interphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated inviable vegetative cell with fragmented nucleus and mitotic cell cycle arrest in interphase" EXACT [PomBase:mah]
+synonym: "essential; elongated vegetative cell with fragmented nucleus and mitotic cell cycle arrest in interphase" RELATED [PomBase:mah]
+synonym: "inviable elongated mononucleate aseptate vegetative cell with fragmented nucleus and cell cycle arrest in mitotic interphase" EXACT [PomBase:vw]
+synonym: "mitotic cell cycle arrest in interphase and elongated inviable cell with fragmented nucleus" EXACT [PomBase:vw]
+synonym: "mitotic interphase arrested elongated inviable vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0001497 ! inviable elongated vegetative cell with mitotic cell cycle arrest in interphase
+created_by: midori
+creation_date: 2014-12-17T13:28:37Z
+
+[Term]
+id: FYPO:0004198
+name: decreased protein degradation during mitosis
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is decreased during mitosis." [PomBase:mah]
+synonym: "decreased protein breakdown during  during mitosis" EXACT [GO:0030163, PomBase:mah]
+synonym: "decreased protein catabolic process during mitosis" EXACT [GO:0030163, PomBase:mah]
+synonym: "decreased protein catabolism during mitosis" EXACT [GO:0030163, PomBase:mah]
+synonym: "decreased protein degradation during mitotic M phase" RELATED [PomBase:mah]
+synonym: "decreased protein degradation during mitotic nuclear division" EXACT [GO:0007067]
+synonym: "reduced protein degradation during mitosis" EXACT [PomBase:mah]
+is_a: FYPO:0000846 ! decreased protein degradation during vegetative growth
+created_by: midori
+creation_date: 2014-12-17T13:44:14Z
+
+[Term]
+id: FYPO:0004199
+name: increased protein degradation during mitosis
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is increased during mitosis." [PomBase:mah]
+synonym: "increased protein breakdown during  during mitosis" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein catabolic process during mitosis" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein catabolism during mitosis" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein degradation during mitotic M phase" RELATED [PomBase:mah]
+synonym: "increased protein degradation during mitotic nuclear division" EXACT [GO:0007067]
+is_a: FYPO:0000847 ! increased protein degradation during vegetative growth
+created_by: midori
+creation_date: 2014-12-17T13:46:11Z
+
+[Term]
+id: FYPO:0004200
+name: increased protein degradation during mitotic G1 phase
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is increased during G1 phase of the mitotic cell cycle." [PomBase:mah]
+synonym: "increased protein breakdown during  during mitotic G1 phase" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein catabolic process during mitotic G1 phase" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein catabolism during mitotic G1 phase during vegetative growth" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein degradation during G1 phase of mitotic cell cycle" EXACT [PomBase:mah]
+is_a: FYPO:0000847 ! increased protein degradation during vegetative growth
+created_by: midori
+creation_date: 2014-12-17T13:47:17Z
+
+[Term]
+id: FYPO:0004201
+name: decreased centromeric outer repeat transcript-derived siRNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which small interfering RNA transcripts derived from the centromere outer repeat region are present at lower levels than normal." [PMID:20211136, PomBase:mah]
+comment: This term refers specifically to siRNAs derived by dicer-mediated processing of RNA from the centromere outer repeat region. Use this term only for levels of RNA transcribed from endogenous centromere outer repeat sequences.
+synonym: "decreased accumulation of centromeric outer repeat transcript-derived siRNA" EXACT [PomBase:mah]
+synonym: "decreased accumulation of siRNAs homologous to outer repeats" RELATED [PomBase:vw]
+synonym: "decreased centromere outer repeat transcript-derived siRNA level" EXACT [PomBase:mah]
+synonym: "decreased centromeric outer repeat transcript-derived siRNA level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased centromeric outer repeat transcript-derived siRNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased level of centromeric outer repeat transcript-derived siRNA" EXACT [PomBase:mah]
+synonym: "decreased level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
+synonym: "reduced centromeric outer repeat transcript-derived siRNA level" EXACT [PomBase:mah]
+is_a: FYPO:0003094 ! decreased centromeric outer repeat transcript level
+is_a: FYPO:0003261 ! decreased small RNA level
+created_by: midori
+creation_date: 2014-12-17T14:54:21Z
+
+[Term]
+id: FYPO:0004202
+name: decreased spliced cen-dg RNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which spliced forms of RNAs transcribed from dg repeats in the centromere outer repeat region are present at lower levels than normal." [PMID:25274039, PomBase:mah]
+synonym: "decreased level of spliced cen-dg RNA" EXACT [PomBase:mah]
+synonym: "decreased level of spliced cen-dg transcripts" EXACT [PomBase:mah]
+synonym: "decreased level of spliced centromeric dg repeat RNA" EXACT [PomBase:mah]
+synonym: "decreased level of spliced centromeric dg repeat transcripts" EXACT [PomBase:mah]
+synonym: "decreased spliced cen-dg RNA accumulation" RELATED [PomBase:mah]
+synonym: "decreased spliced cen-dg RNA level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased spliced cen-dg RNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased spliced cen-dg transcript level" EXACT [PomBase:mah]
+is_a: FYPO:0003094 ! decreased centromeric outer repeat transcript level
+created_by: midori
+creation_date: 2014-12-17T14:57:59Z
+
+[Term]
+id: FYPO:0004203
+name: increased calcium import
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the import of calcium ions into a cell occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased calcium import during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased calcium import during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased calcium import into cell" EXACT [PomBase:mah]
+synonym: "increased calcium ion import" EXACT [PomBase:mah]
+synonym: "increased calcium uptake" EXACT [PomBase:mah]
+synonym: "increased calcium uptake into intracellular compartments" RELATED [PomBase:vw]
+synonym: "increased cellular calcium import" EXACT [PomBase:al]
+is_a: FYPO:0001953 ! abnormal calcium import
+created_by: midori
+creation_date: 2014-12-17T15:05:32Z
 
 [Typedef]
 id: adjacent_to
