@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 22:12:2014 11:01
+date: 22:12:2014 14:42
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -2235,8 +2235,9 @@ creation_date: 2011-04-13T03:34:54Z
 
 [Term]
 id: FYPO:0000153
-name: clumped cells
-def: "A colony morphology phenotype in which cells form clumps. Clumping usually results from incomplete hydrolysis of septum edging material; cells remain attached via remnants of the septum edging." [PMID:15194814, PomBase:mah]
+name: clumped colony morphology
+def: "A colony morphology phenotype in which cells form clumps. Clumping may result from incomplete hydrolysis of septum edging material, causing cells to remain attached via remnants of the septum edging, or from cell-cell adhesion between cells that do not have a shared origin." [PMID:15194814, PomBase:ch, PomBase:mah]
+comment: For clumpy colonies resulting from incomplete hydrolysis of septum edging material, also consider 'abnormal septum disassembly' (FYPO:0000132) or 'abnormal cytokinetic cell separation resulting in chained cells' (FYPO:0001971).
 is_a: FYPO:0000150 ! abnormal colony morphology
 created_by: midori
 creation_date: 2011-04-19T02:50:53Z
@@ -41441,6 +41442,7 @@ synonym: "increased centromeric outer repeat transcript-derived siRNA level duri
 synonym: "increased level of centromeric outer repeat transcript-derived siRNA" EXACT [PomBase:mah]
 synonym: "increased level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 is_a: FYPO:0000220 ! increased centromeric outer repeat transcript level
+is_a: FYPO:0004207 ! increased siRNA level
 created_by: midori
 creation_date: 2013-11-05T14:46:21Z
 
@@ -42885,7 +42887,7 @@ synonym: "decreased snoRNA level during mitotic cell cycle" RELATED [PomBase:mah
 synonym: "decreased snoRNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased snoRNA transcript level" BROAD [PomBase:vw]
 synonym: "reduced snoRNA level" EXACT [PomBase:mah]
-is_a: FYPO:0003261 ! decreased small RNA level
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
 intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -45496,7 +45498,7 @@ synonym: "decreased mRNA-derived small RNA level during mitotic cell cycle" RELA
 synonym: "decreased mRNA-derived small RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased protein-coding gene-derived small RNA level" RELATED [PomBase:mah]
 synonym: "reduced mRNA-derived small RNA level" EXACT [PomBase:mah]
-is_a: FYPO:0003261 ! decreased small RNA level
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
 created_by: midori
 creation_date: 2014-02-13T16:36:11Z
 
@@ -45510,7 +45512,7 @@ synonym: "increased mRNA-derived small RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased mRNA-derived small RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased mRNA-derived small RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased protein-coding gene-derived small RNA level" RELATED [PomBase:mah]
-is_a: FYPO:0003262 ! increased small RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2014-02-13T16:38:10Z
 
@@ -45524,7 +45526,7 @@ synonym: "increased transposable element-derived small RNA accumulation" RELATED
 synonym: "increased transposable element-derived small RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased transposable element-derived small RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased transposon-derived small RNA level" EXACT [PomBase:mah]
-is_a: FYPO:0003262 ! increased small RNA level
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
 created_by: midori
 creation_date: 2014-02-13T16:42:33Z
 
@@ -47881,14 +47883,14 @@ creation_date: 2014-04-01T14:33:51Z
 id: FYPO:0003261
 name: decreased small RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small RNA measured in a cell is lower than normal. All types of small RNA, a particular RNA type, or a specific small RNA may be affected." [PMID:24095277, PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+comment: This term was made obsolete because "small RNA" is not specific enough to indicate what type(s) of RNA is affected.
 synonym: "decreased accumulation of small RNAs" RELATED [PomBase:vw]
 synonym: "decreased small RNA accumulation" RELATED [PomBase:mah]
 synonym: "decreased small RNA level" RELATED [PomBase:mah]
 synonym: "decreased small RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased small RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced small RNA level" EXACT [PomBase:mah]
-is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+is_obsolete: true
 created_by: midori
 creation_date: 2014-04-01T14:36:05Z
 
@@ -47896,14 +47898,14 @@ creation_date: 2014-04-01T14:36:05Z
 id: FYPO:0003262
 name: increased small RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small RNA measured in a cell is greater than normal. All types of small RNA, a particular RNA type, or a specific small RNA may be affected." [PMID:24095277, PomBase:mah]
-comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+comment: This term was made obsolete because "small RNA" is not specific enough to indicate what type(s) of RNA is affected.
 synonym: "increased accumulation of small RNAs" RELATED [PomBase:vw]
 synonym: "increased small RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased small RNA level" RELATED [PomBase:mah]
 synonym: "increased small RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased small RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced small RNA level" EXACT [PomBase:mah]
-is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+is_obsolete: true
 created_by: midori
 creation_date: 2014-04-01T14:38:04Z
 
@@ -61214,7 +61216,7 @@ synonym: "decreased level of centromeric outer repeat transcript-derived siRNA" 
 synonym: "decreased level of siRNAs homologous to outer repeats" EXACT [PomBase:vw]
 synonym: "reduced centromeric outer repeat transcript-derived siRNA level" EXACT [PomBase:mah]
 is_a: FYPO:0003094 ! decreased centromeric outer repeat transcript level
-is_a: FYPO:0003261 ! decreased small RNA level
+is_a: FYPO:0004205 ! decreased siRNA level
 created_by: midori
 creation_date: 2014-12-17T14:54:21Z
 
@@ -61264,7 +61266,7 @@ synonym: "decreased snRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased snRNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased snRNA transcript level" BROAD [PomBase:vw]
 synonym: "reduced snRNA level" EXACT [PomBase:mah]
-is_a: FYPO:0003261 ! decreased small RNA level
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
 intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -61283,7 +61285,7 @@ synonym: "decreased siRNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased siRNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased small interfering RNA level" EXACT [PomBase:mah]
 synonym: "reduced siRNA level" EXACT [PomBase:mah]
-is_a: FYPO:0003261 ! decreased small RNA level
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
 intersection_of: PATO:0001163
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -61736,6 +61738,8 @@ id: FYPO:0004235
 name: normal RNA level oscillation during mitotic cell cycle
 def: "A gene expression phenotype in which RNA levels vary over the course of the mitotic cell cycle normally (i.e. levels are indistinguishable from wild type at any assayed point). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PMID:21118960, PomBase:mah]
 comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "normal periodic expression of RNA during mitotic cell cycle" EXACT [PomBase:al]
+synonym: "normal RNA level fluctuation during mitotic cell cycle" EXACT [PomBase:mah]
 is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0001333 ! gene expression regulation phenotype during vegetative growth
 created_by: midori
