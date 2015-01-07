@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 23:12:2014 12:06
+date: 07:01:2015 17:40
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -1820,6 +1820,7 @@ def: "A physical cellular phenotype observed in the vegetative growth phase of t
 synonym: "large vacuoles during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "vacuole organization defects, large vacuoles" EXACT [PomBase:mah]
 is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
+is_a: FYPO:0004247 ! normal vacuolar morphology during vegetative growth
 intersection_of: PATO:0000586
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
@@ -2021,6 +2022,8 @@ creation_date: 2011-04-12T12:01:21Z
 id: FYPO:0000137
 name: mitotic cell cycle checkpoint phenotype
 def: "A cell phenotype that affects any mitotic cell cycle checkpoint." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast mitotic cell cycle checkpoint phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000631 ! cell cycle phenotype
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
@@ -3943,6 +3946,7 @@ synonym: "vacuole fusion defects" RELATED [PomBase:vw]
 synonym: "vacuole organization defects, fragmented vacuoles during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
 is_a: FYPO:0002258 ! small vacuoles present in greater numbers
+is_a: FYPO:0004247 ! normal vacuolar morphology during vegetative growth
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0002787 ! small vacuoles
@@ -8690,6 +8694,8 @@ creation_date: 2011-08-19T04:12:58Z
 id: FYPO:0000631
 name: cell cycle phenotype
 def: "A cellular process phenotype that affects progression of the mitotic or meiotic cell cycle, or regulation of cell cycle progression." [PomBase:mah]
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 synonym: "cell-division cycle phenotype" EXACT [GO:0007049, PomBase:mah]
 synonym: "fission yeast cell cycle phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000114 ! cellular process phenotype
@@ -11658,6 +11664,7 @@ is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0001916 ! elongated mononucleate vegetative cell
 is_a: FYPO:0002066 ! inviable elongated aseptate cell
 is_a: FYPO:0003931 ! inviable aseptate vegetative cell
+is_a: FYPO:0004255 ! inviable elongated mononucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
@@ -14577,6 +14584,7 @@ creation_date: 2012-04-30T02:59:00Z
 id: FYPO:0001024
 name: cell cycle arrest phenotype
 def: "A cell cycle phenotype that affects or involves the normal or abnormal occurrence of cell cycle arrest. In cell cycle arrest, progression through the cell cycle is halted during one of the normal phases (G1, S, G2, or M)." [PomBase:mah]
+subset: qc_do_not_manually_annotate
 synonym: "fission yeast cell cycle arrest phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000631 ! cell cycle phenotype
 intersection_of: FYPO:0000002 ! cell phenotype
@@ -18828,7 +18836,7 @@ creation_date: 2012-08-01T11:18:45Z
 [Term]
 id: FYPO:0001313
 name: normal subcellular component during vegetative growth
-def: "A cell phenotype in which the amount, distribution, or morphology of a cell part is normal when the cell is in the vegetative growth phase of the life cycle." [PomBase:mah]
+def: "A cell phenotype in which the amount, distribution, or morphology of a cell part is normal (i.e. indistinguishable from wild type) when the cell is in the vegetative growth phase of the life cycle." [PomBase:mah]
 synonym: "normal subcellular component during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal subcellular structure during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0001233 ! normal subcellular component
@@ -21573,6 +21581,7 @@ synonym: "inviable elongated mononucleate aseptate vegetative cell with cell cyc
 synonym: "mitotic cell cycle arrest in interphase with elongated inviable cell" EXACT [PomBase:vw]
 synonym: "mitotic interphase arrested elongated inviable vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0000839 ! inviable elongated mononucleate aseptate cell
+is_a: FYPO:0004255 ! inviable elongated mononucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
@@ -24825,6 +24834,7 @@ creation_date: 2012-11-02T16:57:43Z
 id: FYPO:0001703
 name: normal mitotic cell cycle checkpoint
 def: "A cell cycle phenotype in which a specific mitotic cell cycle checkpoint is normal (i.e. indistinguishable from wild type). A cell cycle checkpoint controls cell cycle progression by monitoring the timing and integrity of specific cell cycle events." [GO:0000075, GO:0007093, PomBase:mah]
+subset: qc_do_not_manually_annotate
 synonym: "normal cell cycle checkpoint activation" EXACT [PomBase:mah]
 is_a: FYPO:0000137 ! mitotic cell cycle checkpoint phenotype
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
@@ -24839,6 +24849,7 @@ creation_date: 2012-11-07T16:00:24Z
 id: FYPO:0001704
 name: abnormal mitotic cell cycle checkpoint
 def: "A cell cycle phenotype in which a specific mitotic cell cycle checkpoint is abnormal. A cell cycle checkpoint normally controls cell cycle progression by monitoring the timing and integrity of specific cell cycle events. In a mutant, the checkpoint may fail to activate under appropriate conditions, or may occur to a greater or lesser extent than wild type under any specified set of conditions." [GO:0000075, GO:0007093, PomBase:mah]
+subset: qc_do_not_manually_annotate
 synonym: "abnormal mitotic cell cycle checkpoint activation" EXACT [PomBase:mah]
 is_a: FYPO:0000137 ! mitotic cell cycle checkpoint phenotype
 is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
@@ -28738,10 +28749,12 @@ creation_date: 2013-02-07T15:01:22Z
 [Term]
 id: FYPO:0001971
 name: abnormal cytokinetic cell separation resulting in chained cells
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytokinetic cell separation is abnormal, and results in the formation of a chain of cells. Cells in the chain visually resemble wild-type cells, except that they remain connected, and may continue to undergo normal mitosis and septum formation." [PMID:8873452, PomBase:mah, PomBase:vw]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytokinetic cell separation is abnormal, and results in the formation of a chain of cells. Cells in the chain visually resemble wild-type cells, except that they remain connected, often via remnants of septum edging material, and may continue to undergo normal mitosis and septum formation." [PMID:8873452, PomBase:mah, PomBase:vw]
 comment: This phenotype usually results from a defect late in septum degradation.
 synonym: "abnormal cytokinetic cell separation resulting in chained cells during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal cytokinetic cell separation resulting in chained cells during vegetative growth" EXACT [PomBase:mah]
+synonym: "cell clumping" RELATED [PomBase:vw]
+synonym: "clumped cells" RELATED [PomBase:vw]
 is_a: FYPO:0000164 ! abnormal cytokinetic cell separation
 created_by: midori
 creation_date: 2013-02-07T15:15:49Z
@@ -28829,7 +28842,6 @@ creation_date: 2013-02-07T16:08:34Z
 id: FYPO:0001978
 name: bent mitotic spindle
 def: "A spindle phenotype in which the mitotic spindle is not straight, but instead forms an angle where microtubules from opposite poles interdigitate." [PMID:1538784, PMID:2145514, PomBase:mah]
-comment: Note that short mitotic spindles are usually not parallel to the long axis of the cell, because short spindle formation takes place before spindle orientation is established (see GO:0000132).
 synonym: "bent bipolar mitotic spindle" EXACT [PomBase:vw]
 synonym: "bent mitotic spindle during vegetative growth" EXACT [PomBase:mah]
 synonym: "V-shaped bipolar mitotic spindle" EXACT [PomBase:vw]
@@ -29038,6 +29050,7 @@ synonym: "inviable vegetative elongated mononucleate cell with mislocalized sept
 is_a: FYPO:0001226 ! inviable mononucleate vegetative cell with mislocalized septum
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0001917 ! elongated mononucleate monoseptate vegetative cell
+is_a: FYPO:0004255 ! inviable elongated mononucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
@@ -29142,7 +29155,7 @@ creation_date: 2013-02-25T16:53:52Z
 id: FYPO:0001998
 name: decreased nucleoside diphosphate kinase activity
 def: "A molecular function phenotype in which the observed rate of nucleoside diphosphate kinase activity is decreased." [PomBase:mah]
-synonym: "reduced glucosyltransferase activity" EXACT [PomBase:mah]
+synonym: "reduced nucleoside diphosphate kinase activity" EXACT [PomBase:mah]
 is_a: FYPO:0000663 ! decreased catalytic activity
 is_a: FYPO:0001997 ! abnormal nucleoside diphosphate kinase activity
 intersection_of: PATO:0002052
@@ -32824,6 +32837,7 @@ synonym: "swollen elongated mononucleate cell with normal septum position" NARRO
 synonym: "swollen elongated mononucleate cell with normally localized septum near new end during vegetative growth" EXACT [PomBase:mah]
 synonym: "swollen elongated mononucleate cell with normally placed septum" EXACT [PomBase:vw]
 is_a: FYPO:0002251 ! inviable swollen elongated vegetative cell
+is_a: FYPO:0004255 ! inviable elongated mononucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
@@ -34082,6 +34096,7 @@ synonym: "inviable long mononucleate cell with mislocalized nucleus" EXACT [PomB
 synonym: "inviable vegetative elongated mononucleate cell with mislocalized nucleus" EXACT [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0001916 ! elongated mononucleate vegetative cell
+is_a: FYPO:0004255 ! inviable elongated mononucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
@@ -40716,6 +40731,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "small vacuoles during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
 is_a: FYPO:0002787 ! small vacuoles
+is_a: FYPO:0004247 ! normal vacuolar morphology during vegetative growth
 intersection_of: PATO:0000596
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000324
@@ -40768,6 +40784,7 @@ synonym: "small vacuoles present in greater numbers during cellular hypotonic re
 synonym: "small vacuoles present in greater numbers during hypotonic stress" EXACT [PomBase:al]
 is_a: FYPO:0000368 ! abnormal vacuolar morphology during vegetative growth
 is_a: FYPO:0002258 ! small vacuoles present in greater numbers
+is_a: FYPO:0004247 ! normal vacuolar morphology during vegetative growth
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0071476
 intersection_of: has_part FYPO:0002787 ! small vacuoles
@@ -43884,7 +43901,9 @@ creation_date: 2013-12-11T16:53:07Z
 [Term]
 id: FYPO:0002995
 name: normal regulation of DNA replication
-def: "A regulation phenotype in which regulation of DNA replication during the mitotic cell cycle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which regulation of DNA replication is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal regulation of DNA replication during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "normal regulation of DNA replication during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal regulation of nuclear cell cycle DNA replication" EXACT [GO:0033262]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
@@ -53843,8 +53862,12 @@ id: FYPO:0003681
 name: decreased protein level at centromere outer repeat
 def: "A cell phenotype in which the amount of a protein found associated with chromatin at the centromere outer repeat regions is lower than normal when the cell is in the vegetative growth phase of the life cycle." [PMID:20018856, PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein level at centromere otr" EXACT [PomBase:mah]
 synonym: "decreased protein level at centromere outer repeat during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein level at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "decreased protein level at pericentric region" RELATED [PomBase:mah]
+synonym: "decreased protein level at pericentromeric region" RELATED [PomBase:mah]
 is_a: FYPO:0001324 ! decreased protein level during vegetative growth
 created_by: midori
 creation_date: 2014-08-12T16:51:31Z
@@ -55568,7 +55591,6 @@ name: increased histone H3-K14 acetylation at telomere
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 14 of histone H3 in telomeric regions occurs to a greater extent than normal." [PomBase:mah]
 synonym: "increased histone H3-K14 acetylation at telomere during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased histone H3-K14 acetylation at telomere during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased histone H3K14 acetylation at centromere outer repeat" EXACT [GO:0044154, PomBase:vw]
 is_a: FYPO:0000332 ! increased histone acetylation
 is_a: FYPO:0000788 ! abnormal histone H3-K14 acetylation
 intersection_of: PATO:0002051
@@ -55743,6 +55765,7 @@ is_a: FYPO:0000007 ! abnormal S-phase DNA damage checkpoint
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0072429
+relationship: has_output FYPO:0004241 ! decreased rate of DNA replication during cellular response to DNA damage
 created_by: midori
 creation_date: 2014-09-12T15:40:24Z
 
@@ -61757,6 +61780,444 @@ intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:1990023
 created_by: midori
 creation_date: 2014-12-19T16:21:43Z
+
+[Term]
+id: FYPO:0004237
+name: decreased protein localization to chromatin at centromere outer repeat
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin at centromere outer repeat regions of a chromosome is decreased." [PMID:20299449, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to chromatin at centromere otr" EXACT [PomBase:mah]
+synonym: "decreased protein localisation to chromatin at centromere outer repeat" EXACT [PomBase:mah]
+synonym: "decreased protein localisation to chromatin at centromeric outer repeat region" EXACT [PomBase:mah]
+synonym: "decreased protein localisation to chromatin at pericentric region" RELATED [PomBase:mah]
+synonym: "decreased protein localisation to chromatin at pericentromeric region" RELATED [PomBase:mah]
+synonym: "decreased protein localization to chromatin at centromere outer repeat during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein localization to chromatin at centromere outer repeat during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to chromatin at centromere outer repeat" EXACT [PomBase:mah]
+is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
+is_a: FYPO:0002842 ! decreased protein localization to centromere outer repeat
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071168
+intersection_of: occurs_at SO:0001799
+created_by: midori
+creation_date: 2015-01-07T10:46:02Z
+
+[Term]
+id: FYPO:0004238
+name: increased histone H3-K4 acetylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 4 of histone H3 occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased histone H3-K4 acetylation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone H3-K4 acetylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased histone H3K4 acetylation" EXACT [GO:0043973]
+is_a: FYPO:0000456 ! abnormal histone acetylation
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043973
+created_by: midori
+creation_date: 2015-01-07T11:15:51Z
+
+[Term]
+id: FYPO:0004239
+name: decreased histone H3-K4 acetylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 4 of histone H3 occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased histone H3-K4 acetylation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased histone H3-K4 acetylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased histone H3K4 acetylation" EXACT [GO:0043973]
+synonym: "reduced histone H3-K4 acetylation" RELATED [PomBase:mah]
+is_a: FYPO:0000456 ! abnormal histone acetylation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043973
+created_by: midori
+creation_date: 2015-01-07T11:17:08Z
+
+[Term]
+id: FYPO:0004240
+name: decreased histone H3-K56 acetylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 56 of histone H3 occurs to a lower extent than normal." [PomBase:mah]
+synonym: "decreased histone H3-56 acetylation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased histone H3-K56 acetylation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased histone H3K56 acetylation" EXACT [PomBase:mah]
+synonym: "reduced histone H3-K56 acetylation" RELATED [PomBase:mah]
+is_a: FYPO:0000456 ! abnormal histone acetylation
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0097043
+created_by: midori
+creation_date: 2015-01-07T11:18:00Z
+
+[Term]
+id: FYPO:0004241
+name: decreased rate of DNA replication during cellular response to DNA damage
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the rate, or speed, of DNA replication is decreased during a cellular response to DNA damage." [PomBase:mah]
+synonym: "decreased rate of DNA replication during cellular response to DNA damage during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased rate of DNA replication during cellular response to DNA damage during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased rate of DNA replication in response to DNA damage" RELATED [PomBase:vw]
+synonym: "reduced rate of DNA replication during cellular response to DNA damage" EXACT [PomBase:mah]
+is_a: FYPO:0001343 ! abnormal DNA replication during vegetative growth
+is_a: FYPO:0001982 ! decreased rate of DNA replication during vegetative growth
+intersection_of: PATO:0000911
+intersection_of: happens_during GO:0006974
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006261
+created_by: midori
+creation_date: 2015-01-07T11:21:55Z
+
+[Term]
+id: FYPO:0004242
+name: decreased protein kinase activity during mitotic S phase
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is decreased during the S phase of the mitotic cell cycle." [PomBase:mah]
+synonym: "reduced protein kinase activity during mitotic S phase" EXACT [PomBase:mah]
+is_a: FYPO:0003331 ! decreased protein kinase activity during mitotic interphase
+intersection_of: PATO:0002052
+intersection_of: during GO:0000084
+intersection_of: inheres_in GO:0004672
+created_by: midori
+creation_date: 2015-01-07T11:52:30Z
+
+[Term]
+id: FYPO:0004243
+name: decreased protein kinase activity during cellular response to DNA damage
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is decreased during a cellular response to DNA damage." [PomBase:mah]
+synonym: "decreased protein kinase activity in response to DNA damage" RELATED [PomBase:vw]
+synonym: "reduced protein kinase activity during cellular response to DNA damage" EXACT [PomBase:mah]
+is_a: FYPO:0001382 ! decreased protein kinase activity
+intersection_of: PATO:0002052
+intersection_of: during GO:0006974
+intersection_of: inheres_in GO:0004672
+created_by: midori
+creation_date: 2015-01-07T12:02:39Z
+
+[Term]
+id: FYPO:0004244
+name: decreased protein kinase activity during mitotic S phase during cellular response to DNA damage
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is decreased during S phase of the mitotic cell cycle during a cellular response to DNA damage." [PomBase:mah]
+synonym: "decreased protein kinase activity during mitotic S phase in response to DNA damage" RELATED [PomBase:vw]
+synonym: "reduced protein kinase activity during mitotic S phase during cellular response to DNA damage" EXACT [PomBase:mah]
+is_a: FYPO:0004242 ! decreased protein kinase activity during mitotic S phase
+is_a: FYPO:0004243 ! decreased protein kinase activity during cellular response to DNA damage
+intersection_of: PATO:0002052
+intersection_of: during GO:0000084
+intersection_of: during GO:0006974
+intersection_of: inheres_in GO:0004672
+created_by: midori
+creation_date: 2015-01-07T12:03:45Z
+
+[Term]
+id: FYPO:0004245
+name: normal protein kinase activity during mitotic S phase during cellular response to DNA damage
+def: "A molecular function phenotype in which the observed rate of a protein kinase activity is normal (i.e. indistinguishable from wild type) during S phase of the mitotic cell cycle during a cellular response to DNA damage." [PomBase:mah]
+synonym: "normal protein kinase activity during mitotic S phase in response to DNA damage" RELATED [PomBase:vw]
+is_a: FYPO:0003075 ! normal protein kinase activity
+intersection_of: PATO:0000001
+intersection_of: during GO:0000084
+intersection_of: during GO:0006974
+intersection_of: inheres_in GO:0004672
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-07T12:10:54Z
+
+[Term]
+id: FYPO:0004246
+name: abnormal microtubule cytoskeleton morphology during prophase I
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the microtubule cytoskeleton is abnormal during prophase of the first meiotic nuclear division." [PMID:11907273, PomBase:mah]
+comment: Note that an abnormal microtubule cytoskeleton organization process may, but does not necessarily, result in abnormal microtubule cytoskeleton morphology.
+synonym: "abnormal microtubule cytoskeleton morphology during meiotic prophase I" EXACT [PomBase:mah]
+is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
+is_a: FYPO:0003063 ! abnormal cytoskeleton morphology
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0007128
+intersection_of: inheres_in GO:0015630
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-07T12:18:35Z
+
+[Term]
+id: FYPO:0004247
+name: normal vacuolar morphology during vegetative growth
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the fungal-type vacuole is normal (i.e. indistinguishable from wild type).." [PomBase:mah]
+comment: Note that an abnormal vacuole organization process may, but does not necessarily, result in abnormal vacuolar morphology.
+synonym: "normal vacuolar morphology during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0000324
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-07T13:07:33Z
+
+[Term]
+id: FYPO:0004248
+name: normal protein localization to vacuolar membrane
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the vacuolar membrane is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to vacuolar membrane" EXACT [PomBase:mah]
+synonym: "normal protein localization in vacuolar membrane" EXACT [GO:1903778]
+synonym: "normal protein localization to vacuolar membrane during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal protein localization to vacuolar membrane during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1903778
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-07T13:16:32Z
+
+[Term]
+id: FYPO:0004249
+name: abnormal protein localization to vacuolar membrane
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the vacuolar membrane is abnormal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to vacuolar membrane" EXACT [PomBase:mah]
+synonym: "abnormal protein localization in vacuolar membrane" EXACT [GO:1903778]
+synonym: "abnormal protein localization to vacuolar membrane during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal protein localization to vacuolar membrane during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1903778
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-07T13:18:23Z
+
+[Term]
+id: FYPO:0004250
+name: abolished protein localization to vacuolar membrane
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the vacuolar membrane is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to vacuolar membrane" EXACT [PomBase:mah]
+synonym: "abolished protein localization in vacuolar membrane" EXACT [GO:1903778]
+synonym: "abolished protein localization to vacuolar membrane during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished protein localization to vacuolar membrane during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to vacuolar membrane abolished" EXACT [PomBase:mah]
+is_a: FYPO:0004249 ! abnormal protein localization to vacuolar membrane
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:1903778
+created_by: midori
+creation_date: 2015-01-07T13:18:29Z
+
+[Term]
+id: FYPO:0004251
+name: increased DNA resection during replication fork processing
+def: "A cell phenotype in which the extent of DNA resection upstream of a stalled replication fork is greater than normal. DNA resection is the 5'-to-3' degradation of one strand of DNA, leaving a stretch of single-stranded DNA." [PMID:20051983, PMID:24806966, PomBase:mah]
+synonym: "increased DNA resectioning during replication fork processing" EXACT [PomBase:amc]
+synonym: "increased extent of DNA resection during replication fork processing" EXACT [PomBase:mah]
+synonym: "increased extent of exonucleolytic DNA cleavage during replication fork processing" EXACT [PomBase:mah]
+is_a: FYPO:0003586 ! abnormal replication fork processing
+created_by: midori
+creation_date: 2015-01-07T14:13:46Z
+
+[Term]
+id: FYPO:0004252
+name: normal regulation of DNA replication during replication fork arrest
+def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which regulation of DNA replication is normal (i.e. indistinguishable from wild type) when one or more replication forks arrest." [PMID:24806966, PomBase:mah]
+synonym: "normal regulation of DNA replication during replication fork arrest during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "normal regulation of DNA replication during replication fork arrest during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal regulation of nuclear cell cycle DNA replication during replication fork arrest" EXACT [GO:0033262]
+is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
+is_a: FYPO:0002995 ! normal regulation of DNA replication
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0043111
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0033262
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-07T14:53:56Z
+
+[Term]
+id: FYPO:0004253
+name: decreased nuclease activity
+def: "A molecular function phenotype in which the observed rate of a nuclease activity is decreased." [PomBase:mah]
+synonym: "reduced nuclease activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0003163 ! abnormal nuclease activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004518
+created_by: midori
+creation_date: 2015-01-07T15:00:06Z
+
+[Term]
+id: FYPO:0004254
+name: abnormal mitotic cell cycle regulation during cellular response to UV
+def: "A cellular response phenotype observed in the vegetative growth phase of the life cycle in which the regulation of the mitotic cell cycle in response to ultraviolet light (UV) is abnormal. Normally, cell cycle progression is slowed or arrested transiently following exposure to UV. The most common abnormality is for the cell cycle to progress as in the absence of UV exposure." [PomBase:mah]
+synonym: "abnormal cell cycle regulation during cellular response to UV" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle delay following UV exposure" EXACT [PomBase:al]
+synonym: "abnormal mitotic cell cycle regulation during cellular response to ultraviolet light" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle regulation in response to UV" EXACT [PomBase:mah]
+is_a: FYPO:0000148 ! abnormal regulation of mitotic cell cycle
+is_a: FYPO:0001932 ! abnormal cellular response to hydroxyurea
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0034644
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0007346
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-07T15:01:50Z
+
+[Term]
+id: FYPO:0004255
+name: inviable elongated mononucleate vegetative cell
+def: "A cell phenotype in which a cell contains one nucleus, is elongated, and is inviable." [PomBase:mah, PomBase:vw]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "inviable elongated mononucleate cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable elongated mononucleate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "inviable long mononucleate vegetative cell" EXACT [PomBase:vw]
+synonym: "inviable vegetative elongated mononucleate cell" EXACT [PomBase:mah]
+is_a: FYPO:0000060 ! mononucleate vegetative cell
+is_a: FYPO:0001490 ! inviable elongated vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2015-01-07T15:09:10Z
+
+[Term]
+id: FYPO:0004256
+name: viable lemon-shaped cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a single cell is viable, and grows in the form of a lemon. A lemon shape is defined mathematically as having a quadric surface in three dimensions obtained by rotating less than half of a circular arc about an axis passing through the endpoints of the arc." [http://mathworld.wolfram.com/Lemon.html, PomBase:mah]
+synonym: "viable lemon-shaped cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "viable lemon-shaped cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "viable lemon-shaped vegetative cell" EXACT [PomBase:mah]
+is_a: FYPO:0000224 ! lemon-shaped cell
+is_a: FYPO:0001491 ! viable vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000224 ! lemon-shaped cell
+intersection_of: has_part FYPO:0001491 ! viable vegetative cell
+created_by: midori
+creation_date: 2015-01-07T15:34:48Z
+
+[Term]
+id: FYPO:0004257
+name: swollen multinucleate vegetative cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more than one nucleus and has a larger volume than normal." [PMID:10503548, PomBase:mah]
+synonym: "enlarged multinucleate cell" RELATED [PomBase:mah]
+synonym: "large multinucleate cell" RELATED [PomBase:vw]
+synonym: "multinucleate cell with increased cell size" RELATED [PomBase:vw]
+synonym: "multinucleate cell with increased cell volume" EXACT [PomBase:mah]
+synonym: "swollen multinucleate cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "swollen multinucleate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0000061 ! multinucleate vegetative cell
+is_a: FYPO:0000646 ! swollen vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
+created_by: midori
+creation_date: 2015-01-07T15:46:08Z
+
+[Term]
+id: FYPO:0004258
+name: decreased protein tyrosine phosphorylation during cellular response to hydroxyurea
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of tyrosine residues in one or more specific proteins, or of specific protein sites, occurs to a lower extent than normal during a cellular response to hydroxyurea." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased peptidyl-tyrosine phosphorylation during cellular response to hydroxyurea" EXACT [GO:0018108, PomBase:mah]
+synonym: "decreased protein tyrosine phosphorylation during cellular response to HU" EXACT [PomBase:mah]
+synonym: "decreased protein tyrosine phosphorylation during cellular response to hydroxyurea during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein tyrosine phosphorylation during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased tyrosine phosphorylation during cellular response to hydroxyurea" EXACT [PomBase:al]
+synonym: "reduced protein tyrosine phosphorylation during cellular response to hydroxyurea" EXACT [PomBase:mah]
+is_a: FYPO:0002375 ! decreased protein tyrosine phosphorylation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0072711
+intersection_of: inheres_in GO:0018108
+created_by: midori
+creation_date: 2015-01-07T15:58:13Z
+
+[Term]
+id: FYPO:0004259
+name: abolished mitotic G2 DNA damage checkpoint
+def: "A cell cycle checkpoint phenotype in which cell cycle regulation mediated by the mitotic G2 DNA damage checkpoint does not occur under conditions that normally trigger the checkpoint signaling and response. Normally, the mitotic G2 DNA damage checkpoint negatively regulates progression through the G2/M transition of the cell cycle in response to DNA damage." [GO:0007095, PMID:21098122, PomBase:mah]
+is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0007095
+created_by: midori
+creation_date: 2015-01-07T16:18:15Z
+
+[Term]
+id: FYPO:0004260
+name: increased duration of protein localization to double-strand break site
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein is localized to to the region of a chromosome at which a DNA double-strand break has occurred for longer than normal." [PMID:21098122, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased duration of protein localisation to double-strand break site" EXACT [PomBase:mah]
+synonym: "increased duration of protein localization to double-strand break site during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased duration of protein localization to double-strand break site during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased duration of protein localization to DSB site" EXACT [PomBase:al]
+synonym: "increased duration of protein localization to site of double-strand break" EXACT [GO:0035861, PomBase:mah]
+is_a: FYPO:0002473 ! abnormal protein localization to double-strand break site
+intersection_of: PATO:0000498
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990166
+created_by: midori
+creation_date: 2015-01-07T16:34:48Z
+
+[Term]
+id: FYPO:0004261
+name: decreased protein phosphorylation during mitotic G2 phase during cellular response to ionizing radiation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a lower extent than normal  during G2 phase of the mitotic cell cycle and during a cellular response to ionizing radiation." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein phosphorylation during cellular response to ionizing radiation during G2 phase of mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "decreased protein phosphorylation during cellular response to ionizing radiation during mitotic G2 phase" EXACT [PomBase:mah]
+synonym: "decreased protein phosphorylation during mitotic G2 phase during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein phosphorylation during mitotic G2 phase during cellular response to IR" EXACT [PomBase:mah]
+synonym: "reduced protein phosphorylation during cellular response to IR" EXACT [PomBase:mah]
+synonym: "reduced protein phosphorylation during mitotic G2 phase during cellular response to ionizing radiation" EXACT [PomBase:mah]
+is_a: FYPO:0002470 ! decreased protein phosphorylation during cellular response to ionizing radiation
+is_a: FYPO:0004111 ! decreased protein phosphorylation during mitotic G2 phase
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0000085
+intersection_of: happens_during GO:0071479
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2015-01-07T16:38:24Z
+
+[Term]
+id: FYPO:0004262
+name: abolished protein phosphorylation during mitotic G2 phase during cellular response to ionizing radiation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, does not occur during G2 phase of the mitotic cell cycle and during a cellular response to ionizing radiation." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein phosphorylation during cellular response to ionizing radiation during G2 phase of mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "abolished protein phosphorylation during cellular response to ionizing radiation during mitotic G2 phase" EXACT [PomBase:mah]
+synonym: "abolished protein phosphorylation during mitotic G2 phase during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished protein phosphorylation during mitotic G2 phase during cellular response to IR" EXACT [PomBase:mah]
+synonym: "protein phosphorylation abolished during mitotic G2 phase during cellular response to ionizing radiation" EXACT [PomBase:mah]
+is_a: FYPO:0002471 ! abolished protein phosphorylation during cellular response to ionizing radiation
+intersection_of: PATO:0001558
+intersection_of: during GO:0000085
+intersection_of: during GO:0071479
+intersection_of: during GO:0072690
+intersection_of: towards GO:0006468
+created_by: midori
+creation_date: 2015-01-07T16:41:21Z
+
+[Term]
+id: FYPO:0004263
+name: normal viability in stationary phase during nitrogen limitation
+def: "A cell population phenotype in which a normal proportion of the population remains viable after entering stationary phase, under conditions of nitrogen limitation, such as in a medium that contains a low level of NH4Cl and no other nitrogen source." [PomBase:mah]
+comment: Use this term if you have assayed growth of cells exposed to glucose limitation in culture. Note that glucose limitation differs from glucose starvation in that starvation results from complete absence of glucose, whereas limitation results from a shift from high to low glucose levels. Glucose concentrations below about 4.4 mM (0.08%) are typically regarded as limiting.
+is_a: FYPO:0001310 ! normal viability in stationary phase
+is_a: FYPO:0002057 ! cell population viability
+created_by: midori
+creation_date: 2015-01-07T16:52:15Z
+
+[Term]
+id: FYPO:0004264
+name: decreased cAMP-dependent protein kinase activity
+def: "A molecular function phenotype in which the observed rate of cAMP-dependent protein kinase activity is decreased." [PomBase:mah]
+synonym: "reduced cAMP-dependent protein kinase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0001381 ! abnormal protein kinase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004691
+created_by: midori
+creation_date: 2015-01-07T16:56:02Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
