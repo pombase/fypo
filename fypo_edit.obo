@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:01:2015 17:42
+date: 14:01:2015 17:13
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -650,7 +650,7 @@ synonym: "abnormal glucose repression during vegetative growth" EXACT [PomBase:m
 synonym: "abnormal negative regulation of transcription by glucose during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal negative regulation of transcription by glucose during vegetative growth" EXACT [PomBase:mah]
 synonym: "glucose repression defects" EXACT [PomBase:mah]
-is_a: FYPO:0000624 ! abnormal negative regulation of transcription
+is_a: FYPO:0000624 ! abnormal negative regulation of transcription during vegetative growth
 is_a: FYPO:0001342 ! cellular response phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -1740,14 +1740,14 @@ creation_date: 2011-03-29T05:54:40Z
 
 [Term]
 id: FYPO:0000118
-name: multiseptate
-def: "A septation phenotype characterized by the presence of more than one septum in a cell." [PomBase:mah]
-synonym: "multiseptate cells" EXACT [PomBase:al]
+name: multiseptate vegetative cell
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle characterized by the presence of more than one septum in a cell." [PomBase:mah]
 synonym: "multiseptate during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "multiseptate during vegetative growth" EXACT [PomBase:mah]
-synonym: "septation defects, multiple septa" EXACT [PomBase:mah]
+synonym: "septation defects, multiple septa during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
-is_a: FYPO:0002342 ! septated cell
+is_a: FYPO:0002342 ! septated vegetative cell
+is_a: FYPO:0004295 ! multiseptate cell
 intersection_of: PATO:0002002
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -1939,7 +1939,7 @@ creation_date: 2011-03-29T05:54:40Z
 [Term]
 id: FYPO:0000132
 name: abnormal septum disassembly
-def: "A cellular process phenotype characterized by abnormal primary cell septum disassembly; may result in the formation of chains of attached cells." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which primary cell septum disassembly is abnormal; may result in the formation of chains of attached cells." [PomBase:mah]
 synonym: "abnormal septum disassembly during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal septum disassembly during vegetative growth" EXACT [PomBase:mah]
 synonym: "chained cells" RELATED [PomBase:mah]
@@ -1982,7 +1982,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0000118 ! multiseptate vegetative cell
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
 
@@ -2124,7 +2124,7 @@ def: "A transcription regulation phenotype observed in the vegetative growth pha
 synonym: "abnormal chromatin silencing during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal chromatin silencing during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000574 ! abnormal gene silencing
-is_a: FYPO:0000624 ! abnormal negative regulation of transcription
+is_a: FYPO:0000624 ! abnormal negative regulation of transcription during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006342
@@ -3108,7 +3108,7 @@ creation_date: 2011-04-13T03:41:10Z
 [Term]
 id: FYPO:0000218
 name: decreased Mre11 complex assembly
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of Mre11 complex assembly is reduced." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of Mre11 complex assembly is decreased." [PomBase:mah]
 synonym: "decreased Mre11 complex assembly during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased Mre11 complex assembly during vegetative growth" EXACT [PomBase:mah]
 synonym: "MRN complex formation, reduced" EXACT [PomBase:mah]
@@ -3174,12 +3174,12 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 synonym: "elongated multiseptate cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "elongated multiseptate cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "long multiseptate cells" EXACT [PomBase:vw]
-is_a: FYPO:0000118 ! multiseptate
+is_a: FYPO:0000118 ! multiseptate vegetative cell
 is_a: FYPO:0001122 ! elongated vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0000118 ! multiseptate vegetative cell
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -4675,20 +4675,19 @@ creation_date: 2011-06-03T01:43:41Z
 
 [Term]
 id: FYPO:0000339
-name: mislocalized septum
+name: mislocalized septum during vegetative growth
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell has a septum in an abnormal location. The normal location is at the midpoint of the long axis of the cell." [PomBase:mah]
 comment: Note that the location of the septum is determined by the location of the contractile ring, which in turn is determined by the location of the cell division site, so an abnormality in cell division site determination can be inferred from this phenotype. Consider also annotating to 'mislocalized actomyosin contractile ring' (FYPO:0001369) because if the contractile ring forms in an abnormal location, the septum will also do so.
-synonym: "abnormal septum localization" RELATED [PomBase:mah]
-synonym: "abnormal septum location" EXACT [PomBase:mah]
-synonym: "abnormal septum position" EXACT [PomBase:mah]
-synonym: "abnormal septum positioning" RELATED [PomBase:mah]
-synonym: "asymmetric septum" EXACT [PomBase:mah]
-synonym: "asymmetrically located septum" EXACT [PomBase:mah]
-synonym: "mislocalised septum" EXACT [PomBase:mah]
+synonym: "abnormal septum localization during vegetative growth" RELATED [PomBase:mah]
+synonym: "abnormal septum location during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal septum position during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal septum positioning during vegetative growth" RELATED [PomBase:mah]
+synonym: "asymmetric septum during vegetative growth" EXACT [PomBase:mah]
+synonym: "asymmetrically located septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "mislocalized septum during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "mislocalized septum during vegetative growth" EXACT [PomBase:mah]
-synonym: "misplaced septum" EXACT [PomBase:vw]
-is_a: FYPO:0002455 ! abnormal septum
+synonym: "misplaced septum during vegetative growth" EXACT [PomBase:vw]
+is_a: FYPO:0002455 ! abnormal septum during vegetative growth
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -8583,23 +8582,22 @@ creation_date: 2011-08-19T03:38:05Z
 
 [Term]
 id: FYPO:0000624
-name: abnormal negative regulation of transcription
-def: "A transcription regulation phenotype in which any process of negative regulation of transcription is abnormal." [PomBase:mah]
+name: abnormal negative regulation of transcription during vegetative growth
+def: "A transcription regulation phenotype observed in the vegetative growth phase of the life cycle in which any process of negative regulation of transcription is abnormal." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. There may be enough evidence to support annotation to a more specific term such as 'abnormal chromatin silencing' (FYPO:0000144); if not, it is safer to annotate to 'increased transcription during vegetative growth' (FYPO:0000780) or 'decreased transcription during vegetative growth' (FYPO:0000781) rather than explicitly claiming that an effect on regulation was observed.
 subset: qc_do_not_annotate
-synonym: "abnormal down regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
-synonym: "abnormal down regulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
-synonym: "abnormal down-regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
-synonym: "abnormal down-regulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
-synonym: "abnormal downregulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
-synonym: "abnormal downregulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
-synonym: "abnormal inhibition of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
-synonym: "abnormal inhibition of transcription, DNA-dependent" NARROW [GO:0045892, PomBase:mah]
-synonym: "abnormal negative regulation of cellular transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
-synonym: "abnormal negative regulation of gene-specific transcription" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal down regulation of gene-specific transcription during vegetative growth" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal down regulation of transcription, DNA-dependent, during vegetative growth" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal down-regulation of gene-specific transcription during vegetative growth" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal down-regulation of transcription, DNA-dependent, during vegetative growth" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal downregulation of gene-specific transcription during vegetative growth" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal downregulation of transcription, DNA-dependent, during vegetative growth" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal inhibition of gene-specific transcription during vegetative growth" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal inhibition of transcription, DNA-dependent, during vegetative growth" NARROW [GO:0045892, PomBase:mah]
+synonym: "abnormal negative regulation of cellular transcription, DNA-dependent, during vegetative growth" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal negative regulation of gene-specific transcription during vegetative growth" RELATED [GO:0045892, PomBase:mah]
 synonym: "abnormal negative regulation of transcription during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abnormal negative regulation of transcription during vegetative growth" EXACT [PomBase:mah]
-synonym: "abnormal negative regulation of transcription, DNA-dependent" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal negative regulation of transcription, DNA-dependent, during vegetative growth" EXACT [GO:0045892, PomBase:mah]
 is_a: FYPO:0001335 ! transcription regulation phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -9210,7 +9208,7 @@ creation_date: 2011-11-11T10:46:47Z
 [Term]
 id: FYPO:0000670
 name: abnormal mitotic sister chromatid separation
-def: "A cellular process phenotype in which mitotic sister chromatid separation is abnormal." [PomBase:mah]
+def: "A cellular process phenotype in which mitotic sister chromatid separation is abnormal. Mitotic sister chromatid separation is the process in which sister chromatids are physically detached from each other during mitosis." [GO:0051306, PomBase:mah]
 synonym: "abnormal mitotic chromosome separation" EXACT [PomBase:mah]
 synonym: "abnormal sister chromatid separation during vegetative growth" EXACT [PomBase:mah]
 synonym: "aneuploidy" RELATED [PomBase:vw]
@@ -10079,9 +10077,11 @@ id: FYPO:0000733
 name: long mitotic spindle
 def: "A spindle phenotype in which the mitotic spindle is longer than normal." [PomBase:mah]
 synonym: "elongated mitotic spindle" EXACT [PomBase:mah]
+synonym: "increased mitotic spindle length" EXACT [PomBase:vw]
 synonym: "long bipolar mitotic spindle" EXACT [PomBase:vw]
 synonym: "long mitotic spindle during vegetative growth" EXACT [PomBase:mah]
 synonym: "long mitotic spindles" EXACT [PomBase:mah]
+synonym: "long spindle during mitosis" EXACT [PomBase:mah]
 is_a: FYPO:0000730 ! long spindle
 is_a: FYPO:0001574 ! abnormal bipolar mitotic spindle
 intersection_of: PATO:0000573
@@ -13237,14 +13237,13 @@ creation_date: 2012-04-02T03:52:49Z
 
 [Term]
 id: FYPO:0000938
-name: abolished protein localization to cortical microtubule cytoskeleton
+name: abolished protein localization to cortical microtubule cytoskeleton during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the cortical microtubule cytoskeleton does not occur." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abolished protein localisation to cortical microtubule cytoskeleton" EXACT [PomBase:mah]
+synonym: "abolished protein localisation to cortical microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
 synonym: "abolished protein localization to cortical microtubule cytoskeleton during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abolished protein localization to cortical microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
-synonym: "protein absent from cortical microtubule cytoskeleton" RELATED [PomBase:mah]
-synonym: "protein localization to cortical microtubule cytoskeleton abolished" EXACT [PomBase:mah]
+synonym: "protein absent from cortical microtubule cytoskeleton during vegetative growth" RELATED [PomBase:mah]
+synonym: "protein localization to cortical microtubule cytoskeleton abolished during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
@@ -14317,6 +14316,7 @@ intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007067
 intersection_of: qualifier PATO:0000461
+relationship: has_part FYPO:0001513 ! normal mitotic sister chromatid segregation
 created_by: midori
 creation_date: 2012-04-25T04:16:58Z
 
@@ -17513,7 +17513,7 @@ is_a: FYPO:0001222 ! binucleate vegetative cell
 is_a: FYPO:0001252 ! multinucleate multiseptate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
-intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0000118 ! multiseptate vegetative cell
 intersection_of: has_part FYPO:0001222 ! binucleate vegetative cell
 created_by: midori
 creation_date: 2012-07-12T15:39:43Z
@@ -17534,7 +17534,7 @@ def: "A physical cellular phenotype observed in the vegetative growth phase of t
 synonym: "monoseptate during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "monoseptate during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
-is_a: FYPO:0002342 ! septated cell
+is_a: FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2012-07-12T15:42:41Z
 
@@ -17552,12 +17552,12 @@ synonym: "inviable mononucleate vegetative cell with mislocalised septum" EXACT 
 synonym: "inviable mononucleate vegetative cell with mislocalized septum during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "inviable mononucleate vegetative cell with misplaced septum" EXACT [PomBase:vw]
 synonym: "inviable mononucleate vegetative cell with single mislocalized septum" EXACT [PomBase:mah]
-is_a: FYPO:0000339 ! mislocalized septum
+is_a: FYPO:0000339 ! mislocalized septum during vegetative growth
 is_a: FYPO:0002303 ! inviable mononucleate monoseptate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
-intersection_of: has_part FYPO:0000339 ! mislocalized septum
+intersection_of: has_part FYPO:0000339 ! mislocalized septum during vegetative growth
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
@@ -17943,11 +17943,11 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 synonym: "multinucleate multiseptate cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "multinucleate multiseptate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000061 ! multinucleate vegetative cell
-is_a: FYPO:0000118 ! multiseptate
+is_a: FYPO:0000118 ! multiseptate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
-intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0000118 ! multiseptate vegetative cell
 created_by: midori
 creation_date: 2012-07-19T15:38:21Z
 
@@ -19999,14 +19999,13 @@ creation_date: 2012-08-15T11:46:28Z
 
 [Term]
 id: FYPO:0001390
-name: misoriented septum
+name: misoriented septum during vegetative growth
 def: "A septation phenotype observed in the vegetative growth phase of the life cycle in which a cell forms a septum that is not perpendicular to the long axis of the cell." [PomBase:mah]
 comment: Consider also annotating to 'angled actomyosin contractile ring' (FYPO:0002027) because if the contractile ring forms at an abnormal angle, the septum will also do so.
-synonym: "abnormal septum orientation" EXACT [PomBase:mah]
+synonym: "abnormal septum orientation during vegetative growth" EXACT [PomBase:mah]
 synonym: "misoriented septum during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "misoriented septum during vegetative growth" EXACT [PomBase:mah]
-synonym: "tilted septum" EXACT [PomBase:al]
-is_a: FYPO:0002455 ! abnormal septum
+synonym: "tilted septum during vegetative growth" EXACT [PomBase:al]
+is_a: FYPO:0002455 ! abnormal septum during vegetative growth
 intersection_of: PATO:0000133
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -20033,7 +20032,7 @@ synonym: "mislocalized septum, near new end, during vegetative growth" EXACT [Po
 synonym: "mislocalized septum, near non-growing end" NARROW [PomBase:mah]
 synonym: "mislocalized septum, near non-growing end, during vegetative growth" NARROW [PomBase:mah]
 synonym: "misplaced septum, near new end" EXACT [PomBase:vw]
-is_a: FYPO:0000339 ! mislocalized septum
+is_a: FYPO:0000339 ! mislocalized septum during vegetative growth
 is_a: FYPO:0001225 ! monoseptate
 created_by: midori
 creation_date: 2012-08-15T13:08:14Z
@@ -20229,7 +20228,7 @@ synonym: "increased septum thickness during mitotic cell cycle" RELATED [PomBase
 synonym: "increased septum thickness during vegetative growth" EXACT [PomBase:mah]
 synonym: "thick septum" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
-is_a: FYPO:0002023 ! abnormal septum morphology
+is_a: FYPO:0002023 ! abnormal septum morphology during vegetative growth
 intersection_of: PATO:0000591
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -21527,7 +21526,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000049 ! inviable cell
-intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0000118 ! multiseptate vegetative cell
 created_by: midori
 creation_date: 2012-08-30T14:30:53Z
 
@@ -21562,7 +21561,7 @@ is_a: FYPO:0001492 ! viable elongated vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0000118 ! multiseptate vegetative cell
 intersection_of: has_part FYPO:0000124 ! viable cell
 created_by: midori
 creation_date: 2012-08-30T14:32:53Z
@@ -21828,7 +21827,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2012-09-13T10:58:38Z
 
@@ -21838,11 +21837,14 @@ name: normal mitotic sister chromatid segregation
 def: "A cellular process phenotype in which mitotic sister chromatid segregation is normal (i.e. indistinguishable from wild type). Mitotic sister chromatid segregation is the entire process in which replicated homologous chromosomes are organized and then physically separated and apportioned to two sets during the mitotic cell cycle." [GO:0000070, PomBase:mah]
 synonym: "normal mitotic chromosome segregation" EXACT [PomBase:mah]
 synonym: "normal mitotic sister chromatid segregation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001007 ! normal mitosis
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000070
 intersection_of: qualifier PATO:0000461
+relationship: has_part FYPO:0002390 ! normal mitotic sister chromatid cohesion
+relationship: has_part FYPO:0004099 ! normal mitotic chromosome condensation
+relationship: has_part FYPO:0004301 ! normal mitotic sister chromatid separation
 created_by: midori
 creation_date: 2012-09-13T11:23:11Z
 
@@ -26307,8 +26309,8 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 synonym: "multiseptate cell during cellular response to caffeine during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "multiseptate cell during cellular response to caffeine during vegetative growth" EXACT [PomBase:mah]
 synonym: "multiseptate in response to caffeine" EXACT [PomBase:al]
-is_a: FYPO:0000118 ! multiseptate
-intersection_of: FYPO:0000118 ! multiseptate
+is_a: FYPO:0000118 ! multiseptate vegetative cell
+intersection_of: FYPO:0000118 ! multiseptate vegetative cell
 intersection_of: exists_during GO:0071313
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -29053,7 +29055,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
-intersection_of: has_part FYPO:0000339 ! mislocalized septum
+intersection_of: has_part FYPO:0000339 ! mislocalized septum during vegetative growth
 intersection_of: has_part FYPO:0001225 ! monoseptate
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
@@ -29192,7 +29194,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 intersection_of: has_part FYPO:0002069 ! mislocalized nucleus
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 relationship: output_of FYPO:0001973 ! abnormal cytokinetic cell separation, with abnormal nuclear division
 created_by: midori
 creation_date: 2013-02-27T13:08:58Z
@@ -29209,12 +29211,12 @@ synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, Pom
 synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
 synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
 synonym: "vegetative cell with premature septation" RELATED [PomBase:al, PomBase:vw]
-is_a: FYPO:0000118 ! multiseptate
+is_a: FYPO:0000118 ! multiseptate vegetative cell
 is_a: FYPO:0002000 ! inviable septated mononucleate vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
-intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0000118 ! multiseptate vegetative cell
 created_by: midori
 creation_date: 2013-02-27T13:11:43Z
 
@@ -29230,7 +29232,7 @@ synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, Pom
 synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
 synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
 synonym: "vegetative cell with premature septation" RELATED [PomBase:al, PomBase:vw]
-is_a: FYPO:0000118 ! multiseptate
+is_a: FYPO:0000118 ! multiseptate vegetative cell
 created_by: midori
 creation_date: 2013-02-27T13:18:22Z
 
@@ -29527,12 +29529,11 @@ creation_date: 2013-02-28T13:57:25Z
 
 [Term]
 id: FYPO:0002023
-name: abnormal septum morphology
+name: abnormal septum morphology during vegetative growth
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the septum is abnormal." [PomBase:mah]
 comment: Note that an abnormal septum organization process may, but does not necessarily, result in abnormal septum morphology.
 synonym: "abnormal septum morphology during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abnormal septum morphology during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0002455 ! abnormal septum
+is_a: FYPO:0002455 ! abnormal septum during vegetative growth
 intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -29576,7 +29577,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000049 ! inviable cell
 intersection_of: has_part FYPO:0000061 ! multinucleate vegetative cell
-intersection_of: has_part FYPO:0002023 ! abnormal septum morphology
+intersection_of: has_part FYPO:0002023 ! abnormal septum morphology during vegetative growth
 created_by: midori
 creation_date: 2013-02-28T14:18:31Z
 
@@ -31461,7 +31462,7 @@ intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0000918
 intersection_of: qualifier PATO:0000460
-relationship: has_output FYPO:0000339 ! mislocalized septum
+relationship: has_output FYPO:0000339 ! mislocalized septum during vegetative growth
 created_by: midori
 creation_date: 2013-05-10T15:13:11Z
 
@@ -31491,7 +31492,7 @@ synonym: "binucleate monoseptate cell, with angled septum during mitotic cell cy
 synonym: "binucleate monoseptate cell, with angled septum, during vegetative growth" EXACT [PomBase:mah]
 synonym: "binucleate monoseptate cell, with septum not orthogonal to long axis" RELATED [PomBase:mah]
 is_a: FYPO:0001222 ! binucleate vegetative cell
-is_a: FYPO:0001390 ! misoriented septum
+is_a: FYPO:0001390 ! misoriented septum during vegetative growth
 created_by: midori
 creation_date: 2013-05-10T15:43:47Z
 
@@ -31972,13 +31973,13 @@ synonym: "inviable, septated, increased spheroid vegetative cell volume" EXACT [
 is_a: FYPO:0000025 ! swollen cell
 is_a: FYPO:0002190 ! inviable swollen spheroid vegetative cell
 is_a: FYPO:0002240 ! swollen septated spheroid vegetative cell
-is_a: FYPO:0002342 ! septated cell
+is_a: FYPO:0002342 ! septated vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000021 ! spheroid vegetative cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-06-04T17:09:31Z
 
@@ -32001,13 +32002,13 @@ synonym: "inviable normal volume septated rounded vegetative cell" RELATED [PomB
 synonym: "inviable normal volume septated spheroid cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable normal volume septated spheroid vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0002187 ! inviable normal volume spheroid vegetative cell
-is_a: FYPO:0002342 ! septated cell
+is_a: FYPO:0002342 ! septated vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000926 ! normal volume vegetative cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 intersection_of: has_part FYPO:0001955 ! spheroid cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-06-04T17:28:33Z
 
@@ -32111,7 +32112,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000024 ! stubby cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-06-05T13:23:12Z
 
@@ -32664,7 +32665,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000021 ! spheroid vegetative cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-06-06T16:24:19Z
 
@@ -32678,7 +32679,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000021 ! spheroid vegetative cell
 intersection_of: has_part FYPO:0000926 ! normal volume vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-06-06T16:26:51Z
 
@@ -33249,12 +33250,12 @@ synonym: "essential; curved septated vegetative cell" RELATED [PomBase:mah]
 synonym: "inviable curved septated cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable curved septated vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0002113 ! inviable curved vegetative cell
-is_a: FYPO:0002342 ! septated cell
+is_a: FYPO:0002342 ! septated vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000016 ! curved vegetative cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-06-12T16:30:43Z
 
@@ -34166,12 +34167,13 @@ creation_date: 2013-07-09T15:43:06Z
 
 [Term]
 id: FYPO:0002342
-name: septated cell
-def: "A physical cellular phenotype in which the cell contains one or more septa." [PomBase:mah]
+name: septated vegetative cell
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the cell contains one or more septa." [PomBase:mah]
 synonym: "septated cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "septated cell during vegetative growth" EXACT [PomBase:mah]
-synonym: "septum present" EXACT [PomBase:mah]
+synonym: "septum present during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+is_a: FYPO:0004296 ! septated cell
 intersection_of: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
 intersection_of: inheres_in CL:0000334
 intersection_of: qualifier PATO:0000467
@@ -34920,7 +34922,7 @@ name: normal mitotic sister chromatid cohesion
 def: "A cellular process phenotype in which mitotic sister chromatid cohesion is normal (i.e. indistinguishable from wild type). Mitotic sister chromatid cohesion is the process in which the sister chromatids of a replicated chromosome are joined along the entire length of the chromosome, from their formation in S phase through metaphase during a mitotic cell cycle." [GO:0007064, PomBase:mah]
 synonym: "normal mitotic chromosome cohesion" EXACT [PomBase:mah]
 synonym: "normal mitotic sister chromatid cohesion during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001007 ! normal mitosis
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007064
@@ -35177,14 +35179,14 @@ synonym: "curved stubby septated viable cell" EXACT [PomBase:mah]
 synonym: "viable curved stubby septated cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "viable curved stubby septated vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "viable curved watermelon-shaped septated vegetative cell" EXACT [PomBase:mah]
-is_a: FYPO:0002342 ! septated cell
+is_a: FYPO:0002342 ! septated vegetative cell
 is_a: FYPO:0002405 ! viable curved stubby vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000016 ! curved vegetative cell
 intersection_of: has_part FYPO:0000024 ! stubby cell
 intersection_of: has_part FYPO:0001491 ! viable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-07-31T13:49:44Z
 
@@ -35817,7 +35819,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0001118 ! abnormal vegetative cell morphology
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-08-06T14:42:46Z
 
@@ -35843,14 +35845,15 @@ creation_date: 2013-08-06T14:46:31Z
 
 [Term]
 id: FYPO:0002455
-name: abnormal septum
-def: "A physical cellular phenotype in which the position or morphology of all or part of the septum is abnormal." [PomBase:mah]
-comment: Note that an septum cytoskeleton organization process may, but does not necessarily, result in a physically abnormal septum.
+name: abnormal septum during vegetative growth
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the position or morphology of all or part of the septum is abnormal." [PomBase:mah]
+comment: Note that an septum organization process may, but does not necessarily, result in a physically abnormal septum.
 synonym: "abnormal septum during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abnormal septum during vegetative growth" EXACT [PomBase:mah]
-synonym: "abnormal septum physical object quality" EXACT [PomBase:mah]
+synonym: "abnormal septum physical object quality during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+is_a: FYPO:0004292 ! abnormal septum
 intersection_of: PATO:0001241
+intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
 intersection_of: qualifier PATO:0000460
 created_by: midori
@@ -35870,7 +35873,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000016 ! curved vegetative cell
 intersection_of: has_part FYPO:0001491 ! viable vegetative cell
-intersection_of: has_part FYPO:0002455 ! abnormal septum
+intersection_of: has_part FYPO:0002455 ! abnormal septum during vegetative growth
 created_by: midori
 creation_date: 2013-08-06T15:04:59Z
 
@@ -35890,7 +35893,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000016 ! curved vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0001491 ! viable vegetative cell
-intersection_of: has_part FYPO:0002455 ! abnormal septum
+intersection_of: has_part FYPO:0002455 ! abnormal septum during vegetative growth
 created_by: midori
 creation_date: 2013-08-06T15:08:11Z
 
@@ -35907,7 +35910,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0001491 ! viable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-08-06T15:19:59Z
 
@@ -35929,7 +35932,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0001491 ! viable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-08-06T15:21:13Z
 
@@ -35950,7 +35953,7 @@ intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000016 ! curved vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0001491 ! viable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-08-06T15:25:18Z
 
@@ -35967,7 +35970,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-08-06T15:54:30Z
 
@@ -35988,7 +35991,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-08-06T15:55:03Z
 
@@ -36010,7 +36013,7 @@ intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000016 ! curved vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-08-06T15:55:34Z
 
@@ -36228,7 +36231,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000016 ! curved vegetative cell
 intersection_of: has_part FYPO:0001491 ! viable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-08-08T13:12:52Z
 
@@ -36295,7 +36298,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000016 ! curved vegetative cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-08-08T13:40:20Z
 
@@ -41601,12 +41604,12 @@ synonym: "inviable swollen elongated septated vegetative cell" EXACT [PomBase:ma
 is_a: FYPO:0001429 ! swollen elongated cell
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0002251 ! inviable swollen elongated vegetative cell
-is_a: FYPO:0002342 ! septated cell
+is_a: FYPO:0002342 ! septated vegetative cell
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0000025 ! swollen cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-intersection_of: has_part FYPO:0002342 ! septated cell
+intersection_of: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2013-11-05T16:06:04Z
 
@@ -42236,7 +42239,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000017 ! elongated cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
-intersection_of: has_part FYPO:0002455 ! abnormal septum
+intersection_of: has_part FYPO:0002455 ! abnormal septum during vegetative growth
 created_by: midori
 creation_date: 2013-11-19T12:47:35Z
 
@@ -42289,7 +42292,7 @@ synonym: "decreased negative regulation of transcription from RNA polymerase II 
 synonym: "decreased repression of transcription during cellular response to cAMP during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased repression of transcription during cellular response to cAMP during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased transcriptional repression during cellular response to cAMP" EXACT [PomBase:mah]
-is_a: FYPO:0000624 ! abnormal negative regulation of transcription
+is_a: FYPO:0000624 ! abnormal negative regulation of transcription during vegetative growth
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0071320
 intersection_of: happens_during GO:0072690
@@ -44117,7 +44120,7 @@ synonym: "decreased negative regulation of transcription from RNA polymerase II 
 synonym: "decreased repression of transcription during cellular response to zinc during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased repression of transcription during cellular response to zinc during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased transcriptional repression during cellular response to zinc" EXACT [PomBase:mah]
-is_a: FYPO:0000624 ! abnormal negative regulation of transcription
+is_a: FYPO:0000624 ! abnormal negative regulation of transcription during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0071294
 intersection_of: happens_during GO:0072690
@@ -47027,7 +47030,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "curved septum during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "curved septum during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
-is_a: FYPO:0002023 ! abnormal septum morphology
+is_a: FYPO:0002023 ! abnormal septum morphology during vegetative growth
 intersection_of: PATO:0000406
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -47036,13 +47039,12 @@ creation_date: 2014-03-13T17:15:03Z
 
 [Term]
 id: FYPO:0003204
-name: secondary cell septum absent from cell
+name: secondary cell septum absent from cell during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain a detectable secondary cell septum." [PomBase:mah]
-synonym: "absent secondary cell septum" EXACT [PomBase:mah]
+synonym: "absent secondary cell septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "secondary cell septum absent from cell during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "secondary cell septum absent from cell during vegetative growth" EXACT [PomBase:mah]
-synonym: "secondary septum absent from cell" EXACT [PomBase:mah]
-is_a: FYPO:0002455 ! abnormal septum
+synonym: "secondary septum absent from cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002455 ! abnormal septum during vegetative growth
 intersection_of: PATO:0002000
 intersection_of: during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -47059,7 +47061,7 @@ synonym: "decreased primary cell septum thickness during vegetative growth" EXAC
 synonym: "decreased primary septum thickness" EXACT [PomBase:mah]
 synonym: "thin primary septum" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
-is_a: FYPO:0002023 ! abnormal septum morphology
+is_a: FYPO:0002023 ! abnormal septum morphology during vegetative growth
 intersection_of: PATO:0000592
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000936
@@ -47139,11 +47141,11 @@ synonym: "mislocalised, misoriented septum" EXACT [PomBase:mah]
 synonym: "mislocalized, misoriented septum during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "mislocalized, misoriented septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "misplaced, misoriented septum" EXACT [PomBase:vw]
-is_a: FYPO:0000339 ! mislocalized septum
-is_a: FYPO:0001390 ! misoriented septum
-intersection_of: FYPO:0002455 ! abnormal septum
-intersection_of: has_part FYPO:0000339 ! mislocalized septum
-intersection_of: has_part FYPO:0001390 ! misoriented septum
+is_a: FYPO:0000339 ! mislocalized septum during vegetative growth
+is_a: FYPO:0001390 ! misoriented septum during vegetative growth
+intersection_of: FYPO:0002455 ! abnormal septum during vegetative growth
+intersection_of: has_part FYPO:0000339 ! mislocalized septum during vegetative growth
+intersection_of: has_part FYPO:0001390 ! misoriented septum during vegetative growth
 created_by: midori
 creation_date: 2014-03-19T10:50:08Z
 
@@ -47172,7 +47174,7 @@ synonym: "kinked septum during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "kinked septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "twisted septum" RELATED [PATO:0001798, PMID:22891259]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
-is_a: FYPO:0002023 ! abnormal septum morphology
+is_a: FYPO:0002023 ! abnormal septum morphology during vegetative growth
 intersection_of: PATO:0001798
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -50020,15 +50022,15 @@ name: abnormal CENP-A containing nucleosome assembly
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the formation of nucleosomes containing the histone H3 variant CenH3 (also called CENP-A; Cnp1 in S. pombe) is abnormal. CENP-A-containing nucleosomes are normally assembled into chromatin around centromeres, encompassing the central core and centromeric inner repeat regions." [GO:0034080, PMID:24710126, PomBase:mah, PomBase:vw]
 synonym: "abnormal CenH3-containing nucleosome assembly" RELATED [GO:0034080]
 synonym: "abnormal CENP-A containing nucleosome assembly at centromere" EXACT [GO:0034080]
-synonym: "abnormal CENP-A containing nucleosome assembly centromere during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal CENP-A containing nucleosome assembly during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal CENP-A containing nucleosome assembly during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal CENP-A deposition" RELATED [GO:0034080]
 synonym: "abnormal CENP-A loading" RELATED [GO:0034080]
 synonym: "abnormal centromere-specific histone exchange" EXACT [GO:0034080]
 synonym: "abnormal centromere-specific nucleosome assembly" EXACT [GO:0034080]
 synonym: "abnormal centromeric DNA replication-independent nucleosome assembly" EXACT [GO:0034080]
 synonym: "abnormal DNA replication-independent nucleosome assembly at centromere" EXACT [GO:0034080]
-is_a: FYPO:0001352 ! abnormal chromatin organization during vegetative growth
+is_a: FYPO:0004308 ! abnormal  CENP-A containing chromatin organization
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0034080
@@ -50106,7 +50108,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0000118 ! multiseptate vegetative cell
 intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2014-06-05T16:14:54Z
@@ -50476,7 +50478,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "branched septum during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "branched septum during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
-is_a: FYPO:0002023 ! abnormal septum morphology
+is_a: FYPO:0002023 ! abnormal septum morphology during vegetative growth
 intersection_of: PATO:0000402
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -50953,8 +50955,8 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 synonym: "multiseptate cell during cellular response to salt stress during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "multiseptate cell during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "multiseptate in response to salt stress" EXACT [PomBase:al]
-is_a: FYPO:0000118 ! multiseptate
-intersection_of: FYPO:0000118 ! multiseptate
+is_a: FYPO:0000118 ! multiseptate vegetative cell
+intersection_of: FYPO:0000118 ! multiseptate vegetative cell
 intersection_of: exists_during GO:0071472
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
@@ -51346,7 +51348,7 @@ intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0000118 ! multiseptate vegetative cell
 intersection_of: has_part FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2014-07-01T17:16:27Z
@@ -53801,7 +53803,7 @@ intersection_of: exists_during GO:0072690
 intersection_of: has_part FYPO:0000015 ! branched vegetative cell
 intersection_of: has_part FYPO:0000016 ! curved vegetative cell
 intersection_of: has_part FYPO:0000017 ! elongated cell
-intersection_of: has_part FYPO:0000118 ! multiseptate
+intersection_of: has_part FYPO:0000118 ! multiseptate vegetative cell
 created_by: midori
 creation_date: 2014-08-12T14:33:51Z
 
@@ -55376,11 +55378,6 @@ synonym: "long mitotic spindle microtubules protruding from spindle pole body du
 synonym: "long mitotic spindle microtubules protruding from spindle pole body during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000055 ! long microtubules
 is_a: FYPO:0000338 ! abnormal mitotic spindle
-intersection_of: PATO:0001646
-intersection_of: exists_during GO:0007067
-intersection_of: exists_during GO:0072690
-intersection_of: inheres_in GO:0005876
-intersection_of: towards GO:0044732
 created_by: midori
 creation_date: 2014-09-09T13:26:10Z
 
@@ -55973,13 +55970,13 @@ creation_date: 2014-10-14T16:26:09Z
 [Term]
 id: FYPO:0003830
 name: abnormal cytokinesis checkpoint
-def: "A cell cycle checkpoint phenotype in which the cytokinesis checkpoint of a mitotic cell cycle is abnormal. The mitotic cytokinesis checkpoint normally delays the G2/M transition of a mitotic cell cycle if cytokinesis was not completed correctly in the previous cell cycle. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0000078, PomBase:mah]
-synonym: "abnormal cytokinesis after mitosis checkpoint" EXACT [GO:0000078]
+def: "A cell cycle checkpoint phenotype in which the cytokinesis after mitosis checkpoint of a mitotic cell cycle is abnormal. The cytokinesis after mitosis checkpoint normally delays the G2/M transition of a mitotic cell cycle if cytokinesis was not completed correctly in the previous cell cycle. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0044878, PomBase:mah]
+synonym: "abnormal cytokinesis after mitosis checkpoint" EXACT [GO:0044878]
 synonym: "abnormal cytokinesis checkpoint activation" RELATED [PomBase:mah]
 synonym: "abnormal mitotic cell cycle cytokinesis checkpoint" EXACT [PomBase:mah]
 is_a: FYPO:0001704 ! abnormal mitotic cell cycle checkpoint
 intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0000078
+intersection_of: inheres_in GO:0044878
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2014-10-15T10:05:28Z
@@ -55987,7 +55984,7 @@ creation_date: 2014-10-15T10:05:28Z
 [Term]
 id: FYPO:0003831
 name: abolished response to cytokinesis checkpoint signaling
-def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs in response to the cytokinesis checkpoint does not occur. The mitotic cytokinesis checkpoint normally delays the G2/M transition of a mitotic cell cycle if cytokinesis was not completed correctly in the previous cell cycle. Abolished arrest may result from a problem with detection of conditions that normally trigger a checkpoint, transduction of the checkpoint signal, or the response to the checkpoint signal." [PomBase:mah]
+def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs in response to the cytokinesis after mitosis checkpoint does not occur. The cytokinesis after mitosis checkpoint normally delays the G2/M transition of a mitotic cell cycle if cytokinesis was not completed correctly in the previous cell cycle. Abolished arrest may result from a problem with detection of conditions that normally trigger a checkpoint, transduction of the checkpoint signal, or the response to the checkpoint signal." [GO:0044878, PomBase:mah]
 comment: May indicate that a cell cycle checkpoint is not activated under conditions that normally trigger checkpoint signaling and subsequent cell cycle arrest.
 synonym: "abolished cytokinesis after mitosis checkpoint" RELATED [PomBase:mah]
 synonym: "abolished cytokinesis checkpoint activation" RELATED [PomBase:mah]
@@ -56601,14 +56598,14 @@ creation_date: 2014-10-21T12:04:07Z
 [Term]
 id: FYPO:0003876
 name: normal cytokinesis checkpoint
-def: "A cell cycle checkpoint phenotype in which the cytokinesis checkpoint of a mitotic cell cycle is normal (i.e. indistinguishable from wild type). The mitotic cytokinesis checkpoint normally delays the G2/M transition of a mitotic cell cycle if cytokinesis was not completed correctly in the previous cell cycle." [GO:0000078, PomBase:mah]
-synonym: "normal cytokinesis after mitosis checkpoint" EXACT [GO:0000078]
+def: "A cell cycle checkpoint phenotype in which the cytokinesis after mitosis checkpoint of a mitotic cell cycle is normal (i.e. indistinguishable from wild type). The cytokinesis after mitosis checkpoint normally delays the G2/M transition of a mitotic cell cycle if cytokinesis was not completed correctly in the previous cell cycle." [GO:0044878, PomBase:mah]
+synonym: "normal cytokinesis after mitosis checkpoint" EXACT [GO:0044878]
 synonym: "normal cytokinesis checkpoint activation" RELATED [PomBase:mah]
 synonym: "normal mitotic cell cycle cytokinesis checkpoint" EXACT [PomBase:mah]
 synonym: "normally activated cytokinesis checkpoint" RELATED [PomBase:vw]
 is_a: FYPO:0000627 ! normal cellular process
 intersection_of: PATO:0000001
-intersection_of: inheres_in GO:0000078
+intersection_of: inheres_in GO:0044878
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2014-10-21T12:15:43Z
@@ -58894,7 +58891,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "fragmented septum during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "fragmented septum during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
-is_a: FYPO:0002023 ! abnormal septum morphology
+is_a: FYPO:0002023 ! abnormal septum morphology during vegetative growth
 intersection_of: PATO:0001444
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000935
@@ -60205,7 +60202,7 @@ creation_date: 2014-12-09T11:43:30Z
 [Term]
 id: FYPO:0004133
 name: normal reactive oxygen species level during nitrogen starvation
-def: "A cell phenotype in which the amount of reactive oxygen species (ROS)  measured in a cell that is subject to nitrogen starvation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell that is subject to nitrogen starvation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal cellular reactive oxygen species level during nitrogen starvation" EXACT [PomBase:mah]
 synonym: "normal reactive oxygen species level during nitrogen depletion" EXACT [PomBase:vw]
 synonym: "normal reactive oxygen species level during nitrogen deprivation" EXACT [PomBase:vw]
@@ -60976,7 +60973,7 @@ creation_date: 2014-12-16T16:16:39Z
 [Term]
 id: FYPO:0004187
 name: abolished protein export from nucleus during cellular response to hydroxyurea
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein export from the nucleus does not occur  during a cellular response to hydroxyurea. Export of all proteins or a specific protein may be affected." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein export from the nucleus does not occur during a cellular response to hydroxyurea. Export of all proteins or a specific protein may be affected." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abolished protein export from nucleus during cellular response to hydroxyurea during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "absent protein export from nucleus during cellular response to hydroxyurea" EXACT [PomBase:mah]
@@ -61154,7 +61151,7 @@ id: FYPO:0004197
 name: inviable elongated vegetative cell with fragmented nucleus and mitotic cell cycle arrest in interphase
 def: "A cell morphology phenotype in which a vegetative cell is inviable and longer than normal, has a nucleus that is broken into multiple small fragments, and progress through the mitotic cell cycle is arrested in interphase. The cell contains no septum." [PomBase:mah]
 comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
-synonym: "elongated inviable cell with fragmented nucleus and  mitotic cell cycle arrest in interphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated inviable cell with fragmented nucleus and mitotic cell cycle arrest in interphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "elongated inviable vegetative cell with fragmented nucleus and mitotic cell cycle arrest in interphase" EXACT [PomBase:mah]
 synonym: "essential; elongated vegetative cell with fragmented nucleus and mitotic cell cycle arrest in interphase" RELATED [PomBase:mah]
 synonym: "inviable elongated mononucleate aseptate vegetative cell with fragmented nucleus and cell cycle arrest in mitotic interphase" EXACT [PomBase:vw]
@@ -61174,7 +61171,7 @@ creation_date: 2014-12-17T13:28:37Z
 id: FYPO:0004198
 name: decreased protein degradation during mitosis
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is decreased during mitosis." [PomBase:mah]
-synonym: "decreased protein breakdown during  during mitosis" EXACT [GO:0030163, PomBase:mah]
+synonym: "decreased protein breakdown during during mitosis" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolic process during mitosis" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolism during mitosis" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein degradation during mitotic M phase" RELATED [PomBase:mah]
@@ -61192,7 +61189,7 @@ creation_date: 2014-12-17T13:44:14Z
 id: FYPO:0004199
 name: increased protein degradation during mitosis
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is increased during mitosis." [PomBase:mah]
-synonym: "increased protein breakdown during  during mitosis" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein breakdown during during mitosis" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolic process during mitosis" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolism during mitosis" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein degradation during mitotic M phase" RELATED [PomBase:mah]
@@ -61209,7 +61206,7 @@ creation_date: 2014-12-17T13:46:11Z
 id: FYPO:0004200
 name: increased protein degradation during mitotic G1 phase
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is increased during G1 phase of the mitotic cell cycle." [PomBase:mah]
-synonym: "increased protein breakdown during  during mitotic G1 phase" EXACT [GO:0030163, PomBase:mah]
+synonym: "increased protein breakdown during during mitotic G1 phase" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolic process during mitotic G1 phase" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolism during mitotic G1 phase during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein degradation during G1 phase of mitotic cell cycle" EXACT [PomBase:mah]
@@ -61375,7 +61372,7 @@ creation_date: 2014-12-19T11:30:30Z
 [Term]
 id: FYPO:0004210
 name: incomplete mitotic sister chromatid segregation, with unseparated DNA and centromeric DNA dissociated from spindle
-def: "A cellular process phenotype in which mitotic sister chromatid segregation stops before completing separation of chromosomes,  DNA remains in a single mass at or near the midpoint of the mitotic spindle, and centromeric DNA is not closely associated with the mitotic spindle." [PMID:16855021, PomBase:mah]
+def: "A cellular process phenotype in which mitotic sister chromatid segregation stops before completing separation of chromosomes, DNA remains in a single mass at or near the midpoint of the mitotic spindle, and centromeric DNA is not closely associated with the mitotic spindle." [PMID:16855021, PomBase:mah]
 synonym: "incomplete mitotic sister chromatid segregation, with unseparated DNA and centromeric DNA dissociated from spindle during vegetative growth" EXACT [PomBase:mah]
 synonym: "incomplete mitotic sister chromatid separation, with unseparated DNA and centromeric DNA dissociated from spindle" RELATED [PomBase:mah]
 is_a: FYPO:0003758 ! incomplete mitotic sister chromatid segregation, with unseparated DNA
@@ -61385,7 +61382,7 @@ creation_date: 2014-12-19T12:42:19Z
 [Term]
 id: FYPO:0004211
 name: incomplete mitotic sister chromatid segregation, with unseparated DNA and centromeric DNA associated with spindle
-def: "A cellular process phenotype in which mitotic sister chromatid segregation stops before completing separation of chromosomes,  DNA remains in a single mass at or near the midpoint of the mitotic spindle, and centromeric DNA is closely associated with the mitotic spindle." [PomBase:mah, PomBase:vw]
+def: "A cellular process phenotype in which mitotic sister chromatid segregation stops before completing separation of chromosomes, DNA remains in a single mass at or near the midpoint of the mitotic spindle, and centromeric DNA is closely associated with the mitotic spindle." [PomBase:mah, PomBase:vw]
 synonym: "incomplete mitotic sister chromatid segregation, with unseparated DNA and centromeric DNA associated with spindle during vegetative growth" EXACT [PomBase:mah]
 synonym: "incomplete mitotic sister chromatid separation, with unseparated DNA and centromeric DNA associated with spindle" RELATED [PomBase:mah]
 is_a: FYPO:0003758 ! incomplete mitotic sister chromatid segregation, with unseparated DNA
@@ -61932,7 +61929,6 @@ creation_date: 2015-01-07T12:18:35Z
 id: FYPO:0004247
 name: normal vacuolar morphology during vegetative growth
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the fungal-type vacuole is normal (i.e. indistinguishable from wild type).." [PomBase:mah]
-comment: Note that an abnormal vacuole organization process may, but does not necessarily, result in abnormal vacuolar morphology.
 synonym: "normal vacuolar morphology during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
 intersection_of: PATO:0000051
@@ -62155,7 +62151,7 @@ creation_date: 2015-01-07T16:34:48Z
 [Term]
 id: FYPO:0004261
 name: decreased protein phosphorylation during mitotic G2 phase during cellular response to ionizing radiation
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a lower extent than normal  during G2 phase of the mitotic cell cycle and during a cellular response to ionizing radiation." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a lower extent than normal during G2 phase of the mitotic cell cycle and during a cellular response to ionizing radiation." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein phosphorylation during cellular response to ionizing radiation during G2 phase of mitotic cell cycle" EXACT [PomBase:mah]
 synonym: "decreased protein phosphorylation during cellular response to ionizing radiation during mitotic G2 phase" EXACT [PomBase:mah]
@@ -62196,7 +62192,7 @@ creation_date: 2015-01-07T16:41:21Z
 id: FYPO:0004263
 name: normal viability in stationary phase during nitrogen limitation
 def: "A cell population phenotype in which a normal proportion of the population remains viable after entering stationary phase, under conditions of nitrogen limitation, such as in a medium that contains a low level of NH4Cl and no other nitrogen source." [PomBase:mah]
-comment: Use this term if you have assayed growth of cells exposed to glucose limitation in culture. Note that glucose limitation differs from glucose starvation in that starvation results from complete absence of glucose, whereas limitation results from a shift from high to low glucose levels. Glucose concentrations below about 4.4 mM (0.08%) are typically regarded as limiting.
+comment: Use this term if you have assayed growth of cells exposed to nitrogen limitation in culture. Note that nitrogen limitation differs from nitrogen starvation in that starvation results from complete absence of nitrogen, whereas limitation results from a shift from high to low nitrogen levels.
 is_a: FYPO:0001310 ! normal viability in stationary phase
 is_a: FYPO:0002057 ! cell population viability
 created_by: midori
@@ -62213,6 +62209,593 @@ intersection_of: PATO:0002052
 intersection_of: inheres_in GO:0004691
 created_by: midori
 creation_date: 2015-01-07T16:56:02Z
+
+[Term]
+id: FYPO:0004265
+name: abnormal protein localization to cortical microtubule cytoskeleton
+def: "A cell phenotype in which the localization of a protein to the cortical microtubule cytoskeleton is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with the cortical microtubule cytoskeleton and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to cortical microtubule cytoskeleton" EXACT [PomBase:mah]
+is_a: FYPO:0001370 ! abnormal protein localization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0072699
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T12:28:35Z
+
+[Term]
+id: FYPO:0004266
+name: abolished protein localization to cortical microtubule cytoskeleton
+def: "A cell phenotype in which the localization of a protein to the cortical microtubule cytoskeleton does not occur." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to cortical microtubule cytoskeleton" EXACT [PomBase:mah]
+synonym: "protein absent from cortical microtubule cytoskeleton" RELATED [PomBase:mah]
+synonym: "protein localization to cortical microtubule cytoskeleton abolished" EXACT [PomBase:mah]
+is_a: FYPO:0004265 ! abnormal protein localization to cortical microtubule cytoskeleton
+intersection_of: PATO:0001558
+intersection_of: towards GO:0072699
+created_by: midori
+creation_date: 2015-01-14T12:34:09Z
+
+[Term]
+id: FYPO:0004267
+name: normal septum disassembly
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which primary cell septum disassembly is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal septum disassembly during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal septum disassembly during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030994
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-14T12:55:16Z
+
+[Term]
+id: FYPO:0004268
+name: decreased septum disassembly
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of septum disassembly is decreased." [PomBase:mah]
+synonym: "decreased septum disassembly during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased septum disassembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced septum disassembly" EXACT [PomBase:mah]
+is_a: FYPO:0000132 ! abnormal septum disassembly
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030994
+created_by: midori
+creation_date: 2015-01-14T13:09:37Z
+
+[Term]
+id: FYPO:0004269
+name: abnormal cell septum edging catabolic process
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dissolution of the cell septum edging material is abnormal; may result in the formation of chains of attached cells." [PomBase:mah]
+synonym: "abnormal cell septum edging catabolic process during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal cell septum edging catabolic process during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cell septum edging catabolism" EXACT [PomBase:mah]
+synonym: "abnormal cell septum edging hydrolysis" EXACT [GO:0030995]
+synonym: "chained cells" RELATED [PomBase:mah]
+is_a: FYPO:0001353 ! abnormal cellular component organization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030995
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T13:18:47Z
+
+[Term]
+id: FYPO:0004270
+name: decreased cell septum edging catabolic process
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dissolution of the cell septum edging material is decreased." [PomBase:mah]
+synonym: "decreased cell septum edging catabolic process during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased cell septum edging catabolic process during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased cell septum edging hydrolysis" EXACT [GO:030995]
+synonym: "reduced cell septum edging catabolic process" EXACT [PomBase:mah]
+is_a: FYPO:0004269 ! abnormal cell septum edging catabolic process
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030995
+created_by: midori
+creation_date: 2015-01-14T13:18:53Z
+
+[Term]
+id: FYPO:0004271
+name: normal cell septum edging catabolic process
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the dissolution of the cell septum edging material is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cell septum edging catabolic process during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal cell septum edging catabolic process during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal cell septum edging catabolism" EXACT [PomBase:mah]
+synonym: "normal cell septum edging hydrolysis" EXACT [GO:0030995]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030995
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-14T13:22:29Z
+
+[Term]
+id: FYPO:0004272
+name: abnormal ascospore release from ascus
+def: "A cellular process phenotype in which ascospore release from an ascus is abnormal." [GO:0071998, PomBase:mah]
+is_a: FYPO:0000628 ! abnormal cellular process
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0071998
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T13:27:27Z
+
+[Term]
+id: FYPO:0004273
+name: decreased ascospore release from ascus
+def: "A cellular process phenotype in which the occurrence of ascospore release from an ascus is decreased." [GO:0071998, PomBase:mah]
+synonym: "reduced ascospore release from ascus" EXACT [PomBase:mah]
+is_a: FYPO:0004272 ! abnormal ascospore release from ascus
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0071998
+created_by: midori
+creation_date: 2015-01-14T13:27:37Z
+
+[Term]
+id: FYPO:0004274
+name: abolished ascospore release from ascus
+def: "A cellular process phenotype in which ascospore release from an ascus does not occur." [GO:0071998, PomBase:mah]
+synonym: "absent ascospore release from ascus" EXACT [PomBase:mah]
+synonym: "ascospore release from ascus abolished" EXACT [PomBase:mah]
+is_a: FYPO:0004272 ! abnormal ascospore release from ascus
+intersection_of: PATO:0001558
+intersection_of: towards GO:0071998
+created_by: midori
+creation_date: 2015-01-14T13:27:37Z
+
+[Term]
+id: FYPO:0004275
+name: abnormal positive regulation of transcription during G0 phase
+def: "A transcription regulation phenotype in which any process of positive regulation of transcription is abnormal during G0 phase." [PomBase:mah]
+synonym: "abnormal activation of gene-specific transcription during G0 phase" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal activation of transcription, DNA-dependent, during G0 phase" NARROW [GO:0045893, PomBase:mah]
+synonym: "abnormal positive regulation of cellular transcription, DNA-dependent, during G0 phase" EXACT [GO:0045893, PomBase:mah]
+synonym: "abnormal positive regulation of gene-specific transcription during G0 phase" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal positive regulation of transcription, DNA-dependent, during G0 phase" EXACT [GO:0045893, PomBase:mah]
+synonym: "abnormal stimulation of gene-specific transcription during G0 phase" NARROW [GO:0045893, PomBase:mah]
+synonym: "abnormal stimulation of transcription, DNA-dependent, during G0 phase" NARROW [GO:0045893, PomBase:mah]
+synonym: "abnormal up regulation of gene-specific transcription during G0 phase" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal up regulation of transcription, DNA-dependent, during G0 phase" EXACT [GO:0045893, PomBase:mah]
+synonym: "abnormal up-regulation of gene-specific transcription during G0 phase" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal up-regulation of transcription, DNA-dependent during G0 phase" EXACT [GO:0045893, PomBase:mah]
+synonym: "abnormal upregulation of gene-specific transcription during G0 phase" RELATED [GO:0045893, PomBase:mah]
+synonym: "abnormal upregulation of transcription, DNA-dependent, during G0 phase" EXACT [GO:0045893, PomBase:mah]
+is_a: FYPO:0000143 ! transcription regulation phenotype
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0044838
+intersection_of: inheres_in GO:0045893
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T13:32:28Z
+
+[Term]
+id: FYPO:0004276
+name: abnormal negative regulation of transcription during G0 phase
+def: "A transcription regulation phenotype in which any process of negative regulation of transcription is abnormal during G0 phase." [PomBase:mah]
+synonym: "abnormal down regulation of gene-specific transcription during G0 phase" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal down regulation of transcription, DNA-dependent, during G0 phase" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal down-regulation of gene-specific transcription during G0 phase" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal down-regulation of transcription, DNA-dependent, during G0 phase" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal downregulation of gene-specific transcription during G0 phase" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal downregulation of transcription, DNA-dependent, during G0 phase" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal inhibition of gene-specific transcription during G0 phase" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal inhibition of transcription, DNA-dependent, during G0 phase" NARROW [GO:0045892, PomBase:mah]
+synonym: "abnormal negative regulation of cellular transcription, DNA-dependent, during G0 phase" EXACT [GO:0045892, PomBase:mah]
+synonym: "abnormal negative regulation of gene-specific transcription during G0 phase" RELATED [GO:0045892, PomBase:mah]
+synonym: "abnormal negative regulation of transcription, DNA-dependent, during G0 phase" EXACT [GO:0045892, PomBase:mah]
+is_a: FYPO:0000143 ! transcription regulation phenotype
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0044838
+intersection_of: inheres_in GO:0045892
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T13:34:50Z
+
+[Term]
+id: FYPO:0004277
+name: abnormal uracil DNA N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of uracil DNA N-glycosylase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004844
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T13:44:14Z
+
+[Term]
+id: FYPO:0004278
+name: decreased uracil DNA N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of uracil DNA N-glycosylase activity is decreased." [PomBase:mah]
+synonym: "reduced uracil DNA N-glycosylase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0004277 ! abnormal uracil DNA N-glycosylase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0004844
+created_by: midori
+creation_date: 2015-01-14T13:44:21Z
+
+[Term]
+id: FYPO:0004279
+name: abnormal hypoxanthine DNA N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of hypoxanthine DNA N-glycosylase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0097507
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T13:46:33Z
+
+[Term]
+id: FYPO:0004280
+name: decreased hypoxanthine DNA N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of hypoxanthine DNA N-glycosylase activity is decreased." [PomBase:mah]
+synonym: "reduced hypoxanthine DNA N-glycosylase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0004279 ! abnormal hypoxanthine DNA N-glycosylase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0097507
+created_by: midori
+creation_date: 2015-01-14T13:46:42Z
+
+[Term]
+id: FYPO:0004281
+name: abnormal xanthine DNA N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of xanthine DNA N-glycosylase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0097508
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T13:47:41Z
+
+[Term]
+id: FYPO:0004282
+name: decreased xanthine DNA N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of xanthine DNA N-glycosylase activity is decreased." [PomBase:mah]
+synonym: "reduced xanthine DNA N-glycosylase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0004281 ! abnormal xanthine DNA N-glycosylase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0097508
+created_by: midori
+creation_date: 2015-01-14T13:47:45Z
+
+[Term]
+id: FYPO:0004283
+name: abnormal oxanine DNA N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of oxanine DNA N-glycosylase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0097509
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T13:48:23Z
+
+[Term]
+id: FYPO:0004284
+name: decreased oxanine DNA N-glycosylase activity
+def: "A molecular function phenotype in which the observed rate of oxanine DNA N-glycosylase activity is decreased." [PomBase:mah]
+synonym: "reduced oxanine DNA N-glycosylase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0004283 ! abnormal oxanine DNA N-glycosylase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0097509
+created_by: midori
+creation_date: 2015-01-14T13:48:26Z
+
+[Term]
+id: FYPO:0004285
+name: normal growth on mitomycin C
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing mitomycin C." [PomBase:mah]
+synonym: "normal cell population growth in presence of mitomycin C" EXACT [PomBase:mah]
+synonym: "normal cell population growth on mitomycin C" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal vegetative cell population growth on mitomycin C" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:27504
+created_by: midori
+creation_date: 2015-01-14T14:04:16Z
+
+[Term]
+id: FYPO:0004286
+name: normal double-strand break repair via nonhomologous end joining
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of double-strand break repair via nonhomologous end joining (NHEJ) is normal (i.e. indistinguishable from wild type). NHEJ is the repair of double-strand breaks in DNA in which the two broken ends are rejoined with little or no sequence complementarity." [GO:0006303, PomBase:mah]
+synonym: "normal double-strand break repair via nonhomologous end joining during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal double-strand break repair via nonhomologous end joining during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal NHEJ" EXACT [GO:0006303]
+synonym: "normal nonhomologous end joining" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006303
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-14T14:06:23Z
+
+[Term]
+id: FYPO:0004287
+name: decreased double-strand break repair via nonhomologous end joining
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of double-strand break repair via nonhomologous end joining (NHEJ) is decreased. NHEJ is the repair of double-strand breaks in DNA in which the two broken ends are rejoined with little or no sequence complementarity." [GO:0006303, PomBase:mah]
+synonym: "decreased double-strand break repair via nonhomologous end joining during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased double-strand break repair via nonhomologous end joining during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased NHEJ" EXACT [GO:0006303]
+synonym: "decreased nonhomologous end joining" EXACT [PomBase:mah]
+synonym: "reduced double-strand break repair via nonhomologous end joining" EXACT [PomBase:mah]
+is_a: FYPO:0000777 ! abnormal double-strand break repair
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006303
+created_by: midori
+creation_date: 2015-01-14T14:07:13Z
+
+[Term]
+id: FYPO:0004288
+name: decreased GT repeat stability
+def: "A cell phenotype in which the number of GT dinucleotide microsatellite repeats present in a sequence varies more than normal." [PMID:18062930, PomBase:al, PomBase:mah]
+synonym: "decreased GT dinucleotide repeat stability" EXACT [SO:0001862]
+synonym: "decreased GT microsatellite repeat stability" EXACT [PMID:18062930]
+is_a: FYPO:0001320 ! vegetative cell phenotype
+is_a: FYPO:0003037 ! abnormal cell phenotype
+created_by: midori
+creation_date: 2015-01-14T14:09:12Z
+
+[Term]
+id: FYPO:0004289
+name: decreased GU repeat RNA binding
+def: "A molecular function phenotype in which occurrence of RNA binding to GU repeat regions by a gene product is decreased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." [PomBase:mah]
+synonym: "reduced GU repeat RNA binding" EXACT [PomBase:mah]
+is_a: FYPO:0002132 ! abnormal RNA binding
+created_by: midori
+creation_date: 2015-01-14T14:25:05Z
+
+[Term]
+id: FYPO:0004290
+name: decreased microsatellite DNA binding
+def: "A molecular function phenotype in which occurrence of DNA binding at microsatellite repeat regions by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." [PomBase:mah]
+synonym: "decreased microsatellite repeat binding" EXACT [PomBase:mah]
+synonym: "reduced microsatellite DNA binding" EXACT [PomBase:mah]
+is_a: FYPO:0000658 ! decreased DNA binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0035939
+created_by: midori
+creation_date: 2015-01-14T14:30:06Z
+
+[Term]
+id: FYPO:0004291
+name: decreased GT microsatellite DNA binding
+def: "A molecular function phenotype in which occurrence of DNA binding at GT dinucleotide microsatellite repeat regions by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." [PomBase:mah]
+synonym: "decreased GT dinucleotide microsatellite repeat binding" EXACT [PomBase:mah, SO:0001862]
+synonym: "decreased microsatellite (GT) DNA binding" EXACT [PomBase:al]
+synonym: "reduced GT microsatellite DNA binding" EXACT [PomBase:mah]
+is_a: FYPO:0004290 ! decreased microsatellite DNA binding
+created_by: midori
+creation_date: 2015-01-14T14:31:59Z
+
+[Term]
+id: FYPO:0004292
+name: abnormal septum
+def: "A physical cellular phenotype in which the position or morphology of all or part of the septum is abnormal." [PomBase:mah]
+comment: Note that an septum organization process may, but does not necessarily, result in a physically abnormal septum.
+synonym: "abnormal septum physical object quality" EXACT [PomBase:mah]
+is_a: FYPO:0000287 ! abnormal subcellular component
+intersection_of: PATO:0001241
+intersection_of: inheres_in GO:0000935
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T14:54:41Z
+
+[Term]
+id: FYPO:0004293
+name: mislocalized septum
+def: "A physical cellular phenotype in which a cell has a septum in an abnormal location. The normal location is at the midpoint of the long axis of the cell." [PomBase:mah]
+comment: Note that the location of the septum is determined by the location of the contractile ring, which in turn is determined by the location of the cell division site, so an abnormality in cell division site determination can be inferred from this phenotype.
+synonym: "abnormal septum localization" RELATED [PomBase:mah]
+synonym: "abnormal septum location" EXACT [PomBase:mah]
+synonym: "abnormal septum position" EXACT [PomBase:mah]
+synonym: "abnormal septum positioning" RELATED [PomBase:mah]
+synonym: "asymmetric septum" EXACT [PomBase:mah]
+synonym: "asymmetrically located septum" EXACT [PomBase:mah]
+synonym: "mislocalised septum" EXACT [PomBase:mah]
+synonym: "misplaced septum" EXACT [PomBase:vw]
+is_a: FYPO:0004292 ! abnormal septum
+intersection_of: PATO:0000628
+intersection_of: inheres_in GO:0000935
+created_by: midori
+creation_date: 2015-01-14T14:55:00Z
+
+[Term]
+id: FYPO:0004294
+name: mislocalized septum in stationary phase
+def: "A cell phenotype in which a cell has a septum in an abnormal location when the population in which the cell is found is in stationary phase." [PomBase:mah]
+synonym: "abnormal septum localization in stationary phase" RELATED [PomBase:mah]
+synonym: "abnormal septum location in stationary phase" EXACT [PomBase:mah]
+synonym: "abnormal septum position in stationary phase" EXACT [PomBase:mah]
+synonym: "abnormal septum positioning in stationary phase" RELATED [PomBase:mah]
+synonym: "asymmetric septum in stationary phase" EXACT [PomBase:mah]
+synonym: "asymmetrically located septum in stationary phase" EXACT [PomBase:mah]
+synonym: "misplaced septum in stationary phase" EXACT [PomBase:vw]
+is_a: FYPO:0004293 ! mislocalized septum
+created_by: midori
+creation_date: 2015-01-14T15:03:00Z
+
+[Term]
+id: FYPO:0004295
+name: multiseptate cell
+def: "A physical cellular phenotype characterized by the presence of more than one septum in a cell." [PomBase:mah]
+is_a: FYPO:0000287 ! abnormal subcellular component
+is_a: FYPO:0004296 ! septated cell
+intersection_of: PATO:0002002
+intersection_of: inheres_in CL:0000000
+intersection_of: towards GO:0000935
+created_by: midori
+creation_date: 2015-01-14T15:06:08Z
+
+[Term]
+id: FYPO:0004296
+name: septated cell
+def: "A physical cellular phenotype in which the cell contains one or more septa." [PomBase:mah]
+synonym: "septum present" EXACT [PomBase:mah]
+is_a: FYPO:0000136 ! cellular physical quality phenotype
+intersection_of: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+intersection_of: inheres_in CL:0000000
+intersection_of: qualifier PATO:0000467
+intersection_of: towards GO:0000935
+created_by: midori
+creation_date: 2015-01-14T15:10:27Z
+
+[Term]
+id: FYPO:0004297
+name: multiseptate cell in stationary phase
+def: "A cell phenotype in which a cell contains more than one septum when the population in which the cell is found is in stationary phase." [PomBase:mah]
+is_a: FYPO:0004295 ! multiseptate cell
+created_by: midori
+creation_date: 2015-01-14T15:15:18Z
+
+[Term]
+id: FYPO:0004298
+name: abnormal polynucleotide 5'-phosphatase activity
+def: "A molecular function phenotype in which the observed rate of polynucleotide 5'-phosphatase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004651
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T15:27:37Z
+
+[Term]
+id: FYPO:0004299
+name: abolished polynucleotide 5'-phosphatase activity
+def: "A molecular function phenotype in which polynucleotide 5'-phosphatase activity is absent." [PomBase:mah]
+synonym: "polynucleotide 5'-phosphatase activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0004298 ! abnormal polynucleotide 5'-phosphatase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0004651
+created_by: midori
+creation_date: 2015-01-14T15:27:43Z
+
+[Term]
+id: FYPO:0004300
+name: normal ATPase activity
+def: "A molecular function phenotype in which the observed rate of an ATPase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0016887
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-14T15:34:37Z
+
+[Term]
+id: FYPO:0004301
+name: normal mitotic sister chromatid separation
+def: "A cellular process phenotype in which mitotic sister chromatid separation is normal (i.e. indistinguishable from wild type). Mitotic sister chromatid separation is the process in which sister chromatids are physically detached from each other during mitosis." [GO:0051306, PomBase:mah]
+synonym: "normal mitotic chromosome separation" EXACT [PomBase:mah]
+synonym: "normal mitotic sister chromatid separation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051306
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-14T15:40:03Z
+
+[Term]
+id: FYPO:0004302
+name: abnormal phosphatase activity
+def: "A molecular function phenotype in which the observed rate of a phosphatase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0016791
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T15:47:31Z
+
+[Term]
+id: FYPO:0004303
+name: abolished phosphatase activity
+def: "A molecular function phenotype in which a phosphatase activity is absent." [PomBase:mah]
+synonym: "phosphatase activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0004302 ! abnormal phosphatase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0016791
+created_by: midori
+creation_date: 2015-01-14T15:47:36Z
+
+[Term]
+id: FYPO:0004304
+name: decreased phosphatase activity
+def: "A molecular function phenotype in which the observed rate of a phosphatase activity is decreased." [PomBase:mah]
+synonym: "reduced phosphatase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0004302 ! abnormal phosphatase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0016791
+created_by: midori
+creation_date: 2015-01-14T15:47:44Z
+
+[Term]
+id: FYPO:0004305
+name: abnormal CTD phosphatase activity
+def: "A molecular function phenotype in which the observed rate of CTD phosphatase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0008420
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T15:49:49Z
+
+[Term]
+id: FYPO:0004306
+name: decreased CTD phosphatase activity
+def: "A molecular function phenotype in which the observed rate of CTD phosphatase activity is decreased." [PomBase:mah]
+synonym: "reduced CTD phosphatase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0004305 ! abnormal CTD phosphatase activity
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0008420
+created_by: midori
+creation_date: 2015-01-14T15:50:09Z
+
+[Term]
+id: FYPO:0004307
+name: long mitotic spindle during metaphase
+def: "A spindle phenotype in which the mitotic spindle is longer than normal during metaphase." [PMID:10398680, PomBase:mah]
+synonym: "elongated mitotic spindle during metaphase" EXACT [PomBase:mah]
+synonym: "increased mitotic spindle length during metaphase" EXACT [PomBase:vw]
+synonym: "long bipolar mitotic spindle during metaphase" EXACT [PomBase:vw]
+synonym: "long mitotic spindle during metaphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "long mitotic spindles during metaphase" EXACT [PomBase:mah]
+synonym: "long spindle during metaphase of mitosis" EXACT [PomBase:mah]
+is_a: FYPO:0000730 ! long spindle
+is_a: FYPO:0000733 ! long mitotic spindle
+intersection_of: PATO:0000573
+intersection_of: exists_during GO:0000089
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0072686
+created_by: midori
+creation_date: 2015-01-14T16:46:02Z
+
+[Term]
+id: FYPO:0004308
+name: abnormal CENP-A containing chromatin organization
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which CENP-A containing chromatin organization is abnormal." [GO:0061641, PMID:9230309, PomBase:mah, PomBase:vw]
+synonym: "abnormal CENP-A containing chromatin organization during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal CENP-A containing chromatin organization during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal chromatin organization at centromere central core " RELATED [PomBase:vw]
+is_a: FYPO:0001352 ! abnormal chromatin organization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0061641
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-14T17:08:06Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
