@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 16:01:2015 14:54
+date: 19:01:2015 12:33
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -15089,9 +15089,9 @@ id: FYPO:0001059
 name: abnormal glutamate import during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the import of glutamate into the cell is abnormal in the vegetative growth phase of the life cycle." [PomBase:mah]
 synonym: "abnormal glutamate import during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abnormal glutamate import into cell" EXACT [PomBase:al]
-synonym: "abnormal glutamate uptake" EXACT [PomBase:mah]
-synonym: "abnormal L-glutamate import" EXACT [PomBase:mah]
+synonym: "abnormal glutamate import into cell during vegetative growth" EXACT [PomBase:al]
+synonym: "abnormal glutamate uptake during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal L-glutamate import during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001361 ! abnormal amino acid import during vegetative growth
 is_a: FYPO:0001646 ! abnormal glutamate import
 intersection_of: PATO:0000001
@@ -15126,7 +15126,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "abnormal glutamine import during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal glutamine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal glutamine import into cell" EXACT [PomBase:al]
-synonym: "abnormal glutamine uptake" EXACT []
+synonym: "abnormal glutamine uptake" EXACT [PomBase:mah]
 synonym: "abnormal L-glutamine import" NARROW [PomBase:mah]
 is_a: FYPO:0001361 ! abnormal amino acid import during vegetative growth
 intersection_of: PATO:0000001
@@ -15143,7 +15143,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "decreased glutamine import during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased glutamine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased glutamine import into cell" EXACT [PomBase:al]
-synonym: "decreased glutamine uptake" EXACT []
+synonym: "decreased glutamine uptake" EXACT [PomBase:mah]
 synonym: "decreased L-glutamine import" NARROW [PomBase:mah]
 synonym: "reduced glutamine import" EXACT [PomBase:mah]
 is_a: FYPO:0001061 ! abnormal glutamine import
@@ -16174,7 +16174,6 @@ id: FYPO:0001131
 name: abnormal protein localization to heterochromatin
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to heterochromatin is abnormal." [PomBase:mah]
 comment: Encompasses both presence of proteins not normally found associated with heterochromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abnormal protein heterochromatin to chromatin" EXACT [PomBase:mah]
 synonym: "abnormal protein localisation to heterochromatin" EXACT [PomBase:mah]
 synonym: "abnormal protein localization to heterochromatin during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal protein localization to heterochromatin during vegetative growth" EXACT [PomBase:mah]
@@ -18238,6 +18237,7 @@ creation_date: 2012-07-19T16:54:02Z
 id: FYPO:0001270
 name: complete but unequal mitotic sister chromatid segregation
 def: "A cellular process phenotype in which mitotic sister chromatid segregation results in the separation of chromosomes into two distinct unequal masses, located at or near the ends of an elongated mitotic spindle." [PMID:22711988, PomBase:mah]
+synonym: "aneuploidy" RELATED [PomBase:vw]
 synonym: "complete but unequal mitotic chromosome segregation" EXACT [PomBase:mah]
 synonym: "complete but unequal mitotic sister chromatid separation" RELATED [PomBase:mah]
 synonym: "complete but unequal mitotic sister chromatid separation during vegetative growth" EXACT [PomBase:mah]
@@ -20409,7 +20409,7 @@ creation_date: 2012-08-16T17:03:37Z
 [Term]
 id: FYPO:0001417
 name: mislocalized equatorial microtubule organizing center
-def: "A cell phenotype in which a cell forms an equatorial microtubule organizing center in an abnormal location. The normal location is at the center of the cell." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms an equatorial microtubule organizing center in an abnormal location. The normal location is at the center of the cell." [PomBase:mah]
 synonym: "mislocalised equatorial microtubule organizing center" EXACT [PomBase:mah]
 synonym: "mislocalized equatorial microtubule organizing center during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "mislocalized equatorial microtubule organizing center during vegetative growth" EXACT [PomBase:mah]
@@ -20653,6 +20653,9 @@ synonym: "resistance to decamethylenediguanidine during mitotic cell cycle" RELA
 synonym: "resistance to decamethylenediguanidine during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to decamethylenediguanidine" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:84333
 created_by: midori
 creation_date: 2012-08-23T12:49:28Z
 
@@ -23971,6 +23974,9 @@ id: FYPO:0001646
 name: abnormal glutamate import
 def: "A cellular process phenotype in which the import of glutamate into the cell is abnormal." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+synonym: "abnormal glutamate import into cell" EXACT [PomBase:al]
+synonym: "abnormal glutamate uptake" EXACT [PomBase:mah]
+synonym: "abnormal L-glutamate import" EXACT [PomBase:mah]
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
@@ -24054,6 +24060,9 @@ id: FYPO:0001651
 name: abnormal lysine import
 def: "A cellular process phenotype in which the import of lysine into the cell is abnormal." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+synonym: "abnormal L-lysine import" EXACT [PomBase:mah]
+synonym: "abnormal lysine import into cell" EXACT [PomBase:al]
+synonym: "abnormal lysine uptake" EXACT [PomBase:mah]
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0001057 ! abnormal amino acid import
 intersection_of: PATO:0000001
@@ -26921,7 +26930,7 @@ creation_date: 2012-12-18T12:05:03Z
 [Term]
 id: FYPO:0001846
 name: increased duration of mitotic anaphase A
-def: "A cellular process phenotype in which the duration of progression through anaphase A of mitosis is longer than normal." [PomBase:mah]
+def: "A cellular process phenotype in which the duration of progression through anaphase A of mitosis is longer than normal. Anaphase A is the mitotic cell cycle phase during which the kinetochore microtubules shorten as chromosomes move toward the spindle poles." [GO:0000091, PomBase:mah]
 synonym: "delayed mitotic anaphase A progression" RELATED [PomBase:mah]
 synonym: "increased duration of mitotic anaphase A during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased duration of mitotic anaphase A progression" EXACT [PomBase:mah]
@@ -35041,10 +35050,8 @@ creation_date: 2013-07-30T15:39:37Z
 [Term]
 id: FYPO:0002397
 name: abnormal cytoskeleton
-def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the amount, distribution, or morphology of all or part of the cytoskeleton is abnormal." [PomBase:mah]
+def: "A physical cellular phenotype in which the amount, distribution, or morphology of all or part of the cytoskeleton is abnormal." [PomBase:mah]
 comment: Note that an abnormal cytoskeleton organization process may, but does not necessarily, result in a physically abnormal cytoskeleton.
-synonym: "abnormal cytoskeleton during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abnormal cytoskeleton during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal cytoskeleton physical object quality" EXACT [PomBase:mah]
 is_a: FYPO:0000287 ! abnormal subcellular component
 intersection_of: PATO:0001241
@@ -35076,8 +35083,6 @@ id: FYPO:0002399
 name: abnormal microtubule cytoskeleton
 def: "A physical cellular phenotype in which the amount, distribution, or morphology of all or part of the microtubule cytoskeleton is abnormal." [PomBase:mah]
 comment: Note that an abnormal microtubule cytoskeleton organization process may, but does not necessarily, result in a physically abnormal microtubule cytoskeleton.
-synonym: "abnormal microtubule cytoskeleton during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abnormal microtubule cytoskeleton during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal microtubule cytoskeleton physical object quality" EXACT [PomBase:mah]
 is_a: FYPO:0002397 ! abnormal cytoskeleton
 intersection_of: PATO:0001241
@@ -35090,8 +35095,8 @@ creation_date: 2013-07-30T17:07:17Z
 [Term]
 id: FYPO:0002400
 name: single microtubule bundle
-def: "A physical cellular phenotype in which all detectable microtubules are present in a single bundle." [PomBase:al, PomBase:mah]
-is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which all detectable microtubules are present in a single bundle." [PomBase:al, PomBase:mah]
+is_a: FYPO:0004315 ! abnormal microtubule cytoskeleton during vegetative growth
 created_by: midori
 creation_date: 2013-07-30T17:51:31Z
 
@@ -39141,7 +39146,7 @@ is_a: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: FYPO:0001357 ! normal vegetative cell population growth
 intersection_of: inheres_in BTO:0000316
 intersection_of: qualifier PATO:0000467
-intersection_of: towards CHEBI:805446
+intersection_of: towards CHEBI:84327
 created_by: midori
 creation_date: 2013-09-18T16:36:46Z
 
@@ -39277,6 +39282,9 @@ def: "A phenotype in which germinating spores show increased sensitivity to phlo
 synonym: "hypersensitive to phlorizin" EXACT [PomBase:mah]
 synonym: "sensitive to phloridzin during spore germination" EXACT [CHEBI:8113, PomBase:mah]
 is_a: FYPO:0002683 ! increased sensitivity to chemical
+intersection_of: FYPO:0002683 ! increased sensitivity to chemical
+intersection_of: during GO:0009847
+intersection_of: towards CHEBI:8113
 created_by: midori
 creation_date: 2013-09-19T12:58:01Z
 
@@ -39505,7 +39513,7 @@ synonym: "sensitive to torin1 during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
 intersection_of: PATO:0001551
 intersection_of: inheres_in GO:0072690
-intersection_of: towards CHEBI:805446
+intersection_of: towards CHEBI:84327
 created_by: midori
 creation_date: 2013-09-19T16:16:01Z
 
@@ -45863,7 +45871,7 @@ synonym: "PAA absent from cell" EXACT [PMID:9601091]
 synonym: "post-anaphase array absent from cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "post-anaphase array absent from cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "post-anaphase microtubule array absent from cell" EXACT [PomBase:mah]
-is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+is_a: FYPO:0004316 ! abnormal post-anaphase array
 intersection_of: PATO:0002000
 intersection_of: inheres_in CL:0000334
 intersection_of: towards GO:1990295
@@ -47408,7 +47416,7 @@ id: FYPO:0003227
 name: cytoplasmic microtubules present during mitosis
 def: "A physical cellular phenotype in which the long cytoplasmic microtubules characteristic of interphase cells remain present after mitosis begins and the mitotic spindle forms." [PMID:18799626, PomBase:mah]
 synonym: "interphase cytoplasmic microtubules present during mitosis" EXACT [PomBase:mah]
-is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
+is_a: FYPO:0004315 ! abnormal microtubule cytoskeleton during vegetative growth
 created_by: midori
 creation_date: 2014-03-25T13:59:34Z
 
@@ -48522,7 +48530,7 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "mislocalised post-anaphase array" EXACT [PomBase:mah]
 synonym: "mislocalized PAA" EXACT [PomBase:mah]
 synonym: "mislocalized post-anaphase microtubule array" EXACT [PomBase:mah]
-is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+is_a: FYPO:0004316 ! abnormal post-anaphase array
 intersection_of: PATO:0000628
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:1990295
@@ -50372,7 +50380,7 @@ creation_date: 2014-06-11T14:54:21Z
 [Term]
 id: FYPO:0003430
 name: microtubules present in decreased numbers
-def: "A physical cellular phenotype in which cells contain fewer microtubules than normal." [PomBase:mah]
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer microtubules than normal." [PomBase:mah]
 synonym: "decreased level of MTs" EXACT [PomBase:mah]
 synonym: "microtubules present in reduced numbers" EXACT [PomBase:mah]
 is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
@@ -50634,6 +50642,7 @@ name: abnormal cell cycle arrest at mitotic G1/S phase transition
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested at the mitotic G1/S phase transition, under conditions where arrest is not a normal occurrence." [PomBase:mah]
 comment: Use this term if the cell cycle is abnormally arrested after completion of DNA replication (S phase) but before the G2/M transition.
 synonym: "abnormal cell cycle arrest at mitotic G1/S phase transition during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cell cycle arrest with unreplicated DNA at mitotic G1/S phase transition" EXACT [PomBase:vw]
 synonym: "abnormal mitotic cell cycle arrest at G1/S phase transition" EXACT [PomBase:mah]
 is_a: FYPO:0000395 ! cell cycle arrest at mitotic G1/S phase transition
 is_a: FYPO:0001028 ! abnormal cell cycle arrest in mitotic interphase
@@ -51261,6 +51270,9 @@ synonym: "resistance to hypothemycin during mitotic cell cycle" RELATED [PomBase
 synonym: "resistance to hypothemycin during vegetative growth" EXACT [PomBase:mah]
 synonym: "resistant to hypothemycin" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:83275
 created_by: midori
 creation_date: 2014-07-01T16:43:41Z
 
@@ -54023,6 +54035,10 @@ synonym: "increased cellular 5-demethoxyubiquinone-10 level during mitotic cell 
 synonym: "increased cellular 5-demethoxyubiquinone-10 level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased cellular demethoxyubiquinone-10 level" BROAD [PMID:18808426]
 is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:50772
 created_by: midori
 creation_date: 2014-08-18T11:55:27Z
 
@@ -54207,6 +54223,9 @@ synonym: "hypersensitive to trapoxin A" EXACT [PomBase:mah]
 synonym: "sensitive to trapoxin A during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "sensitive to trapoxin A during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:84057
 created_by: midori
 creation_date: 2014-08-18T14:12:35Z
 
@@ -55376,15 +55395,17 @@ creation_date: 2014-09-09T13:24:06Z
 [Term]
 id: FYPO:0003787
 name: long mitotic spindle microtubules protruding beyond spindle pole body
-def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form mitotic spindle microtubules that are longer than normal, and extend beyond the spindle pole body." [PMID:17486116, PomBase:mah]
-comment: Consider also annotating to 'nuclear envelope protrusion present' (FYPO:0003788), because the protruding spindle microtubules are usually surrounded by an extension of the nuclear envelope.
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form mitotic spindle microtubules that are longer than normal, and extend beyond the spindle pole body. The protruding spindle microtubules are surrounded by an extension of the nuclear envelope." [PMID:17486116, PomBase:mah]
 synonym: "elongated mitotic spindle microtubules protruding from spindle pole body" EXACT [PomBase:mah]
 synonym: "elongated mitotic spindle microtubules protruding from spindle pole body during M-phase" EXACT [PomBase:vw]
+synonym: "long mitotic spindle microtubules protruding beyond spindle pole body, with nuclear envelope protrusion" EXACT [PomBase:vw]
 synonym: "long mitotic spindle microtubules protruding from SPB" EXACT [PomBase:mah]
 synonym: "long mitotic spindle microtubules protruding from spindle pole body during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "long mitotic spindle microtubules protruding from spindle pole body during vegetative growth" EXACT [PomBase:mah]
+synonym: "nuclear envelope protrusion with long mitotic spindle microtubules protruding beyond spindle pole body" EXACT [PomBase:vw]
 is_a: FYPO:0000055 ! long microtubules
 is_a: FYPO:0000338 ! abnormal mitotic spindle
+relationship: has_part FYPO:0003788 ! nuclear envelope protrusion present during mitosis
 created_by: midori
 creation_date: 2014-09-09T13:26:10Z
 
@@ -56222,6 +56243,9 @@ synonym: "hypersensitive to hydrazinocurcumin" EXACT [PomBase:mah]
 synonym: "sensitive to hydrazinocurcumin during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "sensitive to hydrazinocurcumin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:84340
 created_by: midori
 creation_date: 2014-10-16T13:30:30Z
 
@@ -56250,6 +56274,10 @@ synonym: "normal cell population growth on oligomycin" EXACT [PomBase:al, PomBas
 synonym: "normal cellular response to oligomycin" RELATED [PomBase:al, PomBase:mah]
 synonym: "normal vegetative cell population growth on oligomycin" EXACT [PomBase:mah]
 is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:25675
 created_by: midori
 creation_date: 2014-10-16T14:33:29Z
 
@@ -56308,6 +56336,9 @@ synonym: "hypersensitive to oligomycin" EXACT [PomBase:mah]
 synonym: "sensitive to oligomycin during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "sensitive to oligomycin during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:25675
 created_by: midori
 creation_date: 2014-10-16T14:45:52Z
 
@@ -62586,7 +62617,7 @@ creation_date: 2015-01-14T14:31:59Z
 id: FYPO:0004292
 name: abnormal septum
 def: "A physical cellular phenotype in which the position or morphology of all or part of the septum is abnormal." [PomBase:mah]
-comment: Note that an septum organization process may, but does not necessarily, result in a physically abnormal septum.
+comment: Note that an abnormal septum organization process may, but does not necessarily, result in a physically abnormal septum.
 synonym: "abnormal septum physical object quality" EXACT [PomBase:mah]
 is_a: FYPO:0000287 ! abnormal subcellular component
 intersection_of: PATO:0001241
@@ -62801,6 +62832,158 @@ intersection_of: inheres_in GO:0061641
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2015-01-14T17:08:06Z
+
+[Term]
+id: FYPO:0004309
+name: delayed mitotic anaphase B
+def: "A cellular process phenotype in which anaphase B of mitosis begins later than normal. Aanphase B is the mitotic cell cycle phase during which the polar microtubules elongate and the two poles of the spindle move farther apart." [GO:0000092, PomBase:mah]
+synonym: "delayed mitotic anaphase B during vegetative growth" EXACT [PomBase:mah]
+synonym: "delayed onset of mitotic anaphase " EXACT [PomBase:mah]
+synonym: "mitotic anaphase B delay" EXACT [PomBase:mah]
+is_a: FYPO:0000616 ! abnormal mitotic anaphase progression
+intersection_of: PATO:0000502
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000092
+created_by: midori
+creation_date: 2015-01-19T11:24:09Z
+
+[Term]
+id: FYPO:0004310
+name: normal duration of mitotic M phase
+def: "A cell cycle phenotype in the duration of M phase of the mitotic cell cycle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0002740 ! normal mitotic cell cycle phase
+intersection_of: PATO:0001309
+intersection_of: inheres_in GO:0000087
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-19T11:37:06Z
+
+[Term]
+id: FYPO:0004311
+name: abnormal protein localization to CENP-A containing chromatin
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to CENP-A containing chromatin is abnormal." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with heterochromatin and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to CENP-A containing chromatin" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to CENP-A containing chromatin during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal protein localization to CENP-A containing chromatin during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to centromeric core region chromatin" EXACT [GO:0061638]
+is_a: FYPO:0000449 ! abnormal protein localization to centromere
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0061644
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-19T11:48:30Z
+
+[Term]
+id: FYPO:0004312
+name: abolished protein localization to CENP-A containing chromatin
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to CENP-A containing chromatin is abolished." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to CENP-A containing chromatin" EXACT [PomBase:mah]
+synonym: "abolished protein localization to CENP-A containing chromatin during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished protein localization to CENP-A containing chromatin during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished protein localization to centromeric core region chromatin" EXACT [GO:0061638]
+synonym: "protein localization to CENP-A containing chromatin abolished" EXACT [PomBase:mah]
+is_a: FYPO:0004311 ! abnormal protein localization to CENP-A containing chromatin
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0061644
+created_by: midori
+creation_date: 2015-01-19T11:49:05Z
+
+[Term]
+id: FYPO:0004313
+name: decreased protein localization to CENP-A containing chromatin
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to CENP-A containing chromatin is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to CENP-A containing chromatin" EXACT [PomBase:mah]
+synonym: "decreased protein localization to CENP-A containing chromatin during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein localization to CENP-A containing chromatin during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein localization to centromeric core region chromatin" EXACT [GO:0061638]
+synonym: "reduced protein localization to CENP-A containing chromatin" EXACT [PomBase:mah]
+is_a: FYPO:0004311 ! abnormal protein localization to CENP-A containing chromatin
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0061644
+created_by: midori
+creation_date: 2015-01-19T11:49:39Z
+
+[Term]
+id: FYPO:0004314
+name: normal protein localization to CENP-A containing chromatin
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the CENP-A containing chromatin is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to CENP-A containing chromatin" EXACT [PomBase:mah]
+synonym: "normal protein localization to CENP-A containing chromatin during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal protein localization to CENP-A containing chromatin during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to centromeric core region chromatin" EXACT [GO:0061638]
+is_a: FYPO:0002574 ! normal protein localization to centromere
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0061644
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-19T11:51:16Z
+
+[Term]
+id: FYPO:0004315
+name: abnormal microtubule cytoskeleton during vegetative growth
+def: "A physical cellular phenotype in which the amount, distribution, or morphology of all or part of the microtubule cytoskeleton is abnormal." [PomBase:mah]
+comment: Note that an abnormal microtubule cytoskeleton organization process may, but does not necessarily, result in a physically abnormal microtubule cytoskeleton.
+synonym: "abnormal microtubule cytoskeleton during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal microtubule cytoskeleton physical object quality during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
+intersection_of: PATO:0001241
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0015630
+intersection_of: qualifier PATO:0000460
+relationship: output_of FYPO:0001350 ! abnormal microtubule cytoskeleton organization during vegetative growth
+created_by: midori
+creation_date: 2015-01-19T12:11:31Z
+
+[Term]
+id: FYPO:0004316
+name: abnormal post-anaphase array
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the amount, distribution, or morphology of all or part of the post-anaphase array of microtubules is abnormal." [PomBase:mah]
+synonym: "abnormal post-anaphase array during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal post-anaphase array physical object quality during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal post-anaphase microtubule array during vegetative growth" EXACT [GO:1990295]
+is_a: FYPO:0004315 ! abnormal microtubule cytoskeleton during vegetative growth
+intersection_of: PATO:0001241
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:1990295
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-19T12:17:46Z
+
+[Term]
+id: FYPO:0004317
+name: abnormal post-anaphase array morphology
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the post-anaphase array of microtubules is abnormal." [PomBase:mah]
+synonym: "abnormal microtubule cytoskeleton morphology during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal post-anaphase array morphology during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal post-anaphase microtubule array morphology" EXACT [GO:1990295]
+is_a: FYPO:0000352 ! abnormal cytoskeleton morphology during vegetative growth
+is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology during vegetative growth
+is_a: FYPO:0004316 ! abnormal post-anaphase array
+intersection_of: PATO:0000051
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:1990295
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-19T12:18:25Z
+
+[Term]
+id: FYPO:0004318
+name: abolished mitotic cell cycle spindle assembly checkpoint
+def: "A cell cycle checkpoint phenotype in which cell cycle regulation mediated by the mitotic cell cycle spindle assembly checkpoint does not occur under conditions that normally trigger the checkpoint signaling and response. Normally, the mitotic spindle assembly checkpoint delays the metaphase/anaphase transition of a mitotic nuclear division until the spindle is correctly assembled and chromosomes are attached to the spindle." [GO:0007094, PMID:11432827, PomBase:mah]
+is_a: FYPO:0000168 ! abnormal mitotic cell cycle spindle assembly checkpoint
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0007094
+created_by: midori
+creation_date: 2015-01-19T12:30:47Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
