@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 21:01:2015 15:36
+date: 29:01:2015 15:58
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -2151,6 +2151,7 @@ name: abnormal chromatin silencing at centromere
 def: "A transcription regulation phenotype observed in the vegetative growth phase of the life cycle in which chromatin silencing at centromeric regions is abnormal." [PomBase:mah]
 synonym: "abnormal chromatin silencing at centromere during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal chromatin silencing at centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal heterochromatin silencing at centromere" RELATED [PomBase:mah]
 is_a: FYPO:0000144 ! abnormal chromatin silencing
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -8744,6 +8745,7 @@ synonym: "abolished protein localization to chromosome, centric region" EXACT [G
 synonym: "abolished protein localization to chromosome, centromeric region" EXACT [GO:0071459, PomBase:mah]
 synonym: "protein absent from centromere" RELATED [PomBase:mah]
 synonym: "protein localization to centromere abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000449 ! abnormal protein localization to centromere
 is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
@@ -8821,7 +8823,6 @@ synonym: "abnormal centromere central core chromatin silencing" EXACT [PomBase:m
 synonym: "abnormal chromatin silencing at centromere central core during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal chromatin silencing at centromere central core during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal chromatin silencing at centromeric central core" EXACT [PomBase:mah]
-synonym: "abnormal heterochromatic silencing at centromere central core" EXACT [PomBase:mah]
 is_a: FYPO:0000146 ! abnormal chromatin silencing at centromere
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -11757,6 +11758,7 @@ creation_date: 2012-03-14T01:27:55Z
 id: FYPO:0000845
 name: abnormal protein degradation during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein degradation is abnormal. Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein breakdown during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "abnormal protein catabolic process during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "abnormal protein catabolism during vegetative growth" EXACT [GO:0030163, PomBase:mah]
@@ -11774,6 +11776,7 @@ creation_date: 2012-03-14T02:33:44Z
 id: FYPO:0000846
 name: decreased protein degradation during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein breakdown during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolic process during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolism during vegetative growth" EXACT [GO:0030163, PomBase:mah]
@@ -11791,6 +11794,7 @@ creation_date: 2012-03-14T02:57:05Z
 id: FYPO:0000847
 name: increased protein degradation during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is increased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein breakdown during vegetative growth" EXACT [GO:0030163]
 synonym: "increased protein catabolic process during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolism during vegetative growth" EXACT [GO:0030163, PomBase:mah]
@@ -13124,6 +13128,7 @@ synonym: "abolished protein localization to cell cortex during mitotic cell cycl
 synonym: "protein absent from cell cortex" RELATED [PomBase:mah]
 synonym: "protein localization to cell cortex abolished" EXACT [PomBase:mah]
 synonym: "protein localization to cell cortex abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000928 ! abnormal protein localization to cell cortex
 is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
@@ -16419,6 +16424,7 @@ creation_date: 2012-06-14T16:00:30Z
 id: FYPO:0001146
 name: decreased misfolded glycoprotein degradation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of misfolded glycoprotein degradation is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased misfolded glycoprotein catabolic process" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased misfolded glycoprotein catabolism" EXACT [PomBase:mah]
 synonym: "decreased misfolded glycoprotein degradation during mitotic cell cycle" RELATED [PomBase:mah]
@@ -27519,22 +27525,17 @@ creation_date: 2013-01-30T12:58:39Z
 
 [Term]
 id: FYPO:0001886
-name: meiosis in haploid
-def: "A cellular process phenotype in which haploid cells undergo meiotic division. Haploid meiosis often results in the formation of a structure that resembles an azygotic ascus." [DOI:10.1007/BF00332932, PomBase:mah]
-synonym: "haploid meiosis" EXACT [PomBase:al]
-synonym: "increased haploid meiosis" EXACT [PomBase:mah]
-is_a: FYPO:0000051 ! abnormal meiosis
+name: meiosis and sporulation in haploid
+alt_id: FYPO:0001887
+def: "A cellular process phenotype in which haploid cells undergo meiotic division and attempt to sporulate. Haploid meiosis often results in the formation of a structure that resembles an azygotic ascus. Spores produced from a haploid cell have poor viability and appear to contain only 1/2C DNA on average." [DOI:10.1007/BF00332932, PomBase:mah]
+synonym: "haploid meiosis" RELATED [PomBase:al]
+synonym: "haploid sporulation" RELATED [PomBase:al]
+synonym: "increased haploid meiosis" RELATED [PomBase:mah]
+synonym: "meiosis in haploid" RELATED [PomBase:mah]
+synonym: "sporulation in haploid" RELATED [PomBase:mah]
+is_a: FYPO:0000052 ! abnormal meiotic cell cycle
 created_by: midori
 creation_date: 2013-01-30T13:14:48Z
-
-[Term]
-id: FYPO:0001887
-name: sporulation in haploid
-def: "A cellular process phenotype in which haploid cells that have undergone a meiotic division attempt to sporulate. Spores produced from a haploid cell have poor viability and appear to contain only 1/2C DNA on average." [DOI:10.1007/BF00332932, PomBase:mah]
-synonym: "haploid sporulation" EXACT [PomBase:al]
-is_a: FYPO:0000121 ! abnormal sporulation
-created_by: midori
-creation_date: 2013-01-30T13:19:08Z
 
 [Term]
 id: FYPO:0001888
@@ -33183,6 +33184,7 @@ creation_date: 2013-06-12T15:51:09Z
 id: FYPO:0002275
 name: abnormal protein degradation
 def: "A cellular process phenotype in which protein degradation is abnormal. Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein breakdown" EXACT [GO:0030163, PomBase:mah]
 synonym: "abnormal protein catabolic process" EXACT [GO:0030163, PomBase:mah]
 synonym: "abnormal protein catabolism" EXACT [GO:0030163, PomBase:mah]
@@ -33197,6 +33199,7 @@ creation_date: 2013-06-12T15:53:25Z
 id: FYPO:0002276
 name: increased protein degradation
 def: "A cellular process phenotype in which the occurrence of protein degradation is increased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein breakdown" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolic process" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolism" EXACT [GO:0030163, PomBase:mah]
@@ -33211,7 +33214,7 @@ creation_date: 2013-06-12T15:56:44Z
 id: FYPO:0002277
 name: increased protein degradation during nitrogen starvation
 def: "A cellular process phenotype in which the occurrence of protein degradation is increased when the cell is subject to nitrogen starvation." [PomBase:mah]
-comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein breakdown during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolic process during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolism during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
@@ -34245,7 +34248,7 @@ creation_date: 2013-07-12T14:43:28Z
 
 [Term]
 id: FYPO:0002346
-name: abnormal heterochromatin silencing at centromere outer repeat region
+name: abnormal chromatin silencing at centromere outer repeat region
 def: "A transcription regulation phenotype observed in the vegetative growth phase of the life cycle in which chromatin silencing at the outer repeat region of the centromere is abnormal." [PomBase:mah]
 comment: Note that the centromere outer repeat region corresponds to SO:0001799.
 synonym: "abnormal centromere outer repeat region chromatin silencing" EXACT [PomBase:mah]
@@ -34257,6 +34260,7 @@ synonym: "abnormal chromatin silencing at centromeric outer repeat region" EXACT
 synonym: "abnormal chromatin silencing at pericentric region" RELATED [PomBase:mah]
 synonym: "abnormal chromatin silencing at pericentromeric region" RELATED [PomBase:mah]
 synonym: "abnormal heterochromatic silencing at centromere outer repeat region" EXACT [PomBase:mah]
+synonym: "abnormal heterochromatin silencing at centromere outer repeat region" EXACT [PomBase:mah]
 is_a: FYPO:0000146 ! abnormal chromatin silencing at centromere
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -40855,7 +40859,7 @@ creation_date: 2013-10-16T16:02:59Z
 id: FYPO:0002796
 name: abnormal protein degradation during nitrogen starvation
 def: "A cellular process phenotype in which protein degradation is abnormal when the cell is subject to nitrogen starvation. Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
-comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abnormal protein breakdown during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
 synonym: "abnormal protein catabolic process during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
 synonym: "abnormal protein catabolism during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
@@ -40873,6 +40877,7 @@ creation_date: 2013-10-16T16:11:43Z
 id: FYPO:0002797
 name: decreased protein degradation
 def: "A cellular process phenotype in which the occurrence of protein degradation is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein breakdown" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolic process" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolism" EXACT [GO:0030163, PomBase:mah]
@@ -40888,7 +40893,7 @@ creation_date: 2013-10-16T16:12:20Z
 id: FYPO:0002798
 name: decreased protein degradation during nitrogen starvation
 def: "A cellular process phenotype in which the occurrence of protein degradation is decreased when the cell is subject to nitrogen starvation." [PomBase:mah]
-comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein catabolic process during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolism during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein degradation during nitrogen depletion" EXACT [PomBase:vw]
@@ -40906,6 +40911,7 @@ creation_date: 2013-10-16T16:12:34Z
 id: FYPO:0002799
 name: normal protein degradation
 def: "A cellular process phenotype in which protein degradation is normal (i.e. indistinguishable from wild type). Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein breakdown" EXACT [GO:0030163, PomBase:mah]
 synonym: "normal protein catabolic process" EXACT [GO:0030163, PomBase:mah]
 synonym: "normal protein catabolism" EXACT [GO:0030163, PomBase:mah]
@@ -40920,6 +40926,7 @@ creation_date: 2013-10-16T16:17:41Z
 id: FYPO:0002800
 name: normal protein degradation during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein degradation is normal (i.e. indistinguishable from wild type). Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein breakdown during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "normal protein catabolic process during vegetative growth" EXACT [GO:0030163, PomBase:mah]
 synonym: "normal protein catabolism during vegetative growth" EXACT [GO:0030163, PomBase:mah]
@@ -40936,7 +40943,7 @@ creation_date: 2013-10-16T16:23:50Z
 id: FYPO:0002801
 name: normal protein degradation during nitrogen starvation
 def: "A cellular process phenotype in which protein degradation is normal (i.e. indistinguishable from wild type) when the cell is subject to nitrogen starvation. Protein degradation, also known as protein catabolism, is any metabolic process that results in the destruction of the native, active configuration of a protein, with or without the hydrolysis of peptide bonds." [GO:0030163, PomBase:mah]
-comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein breakdown during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
 synonym: "normal protein catabolic process during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
 synonym: "normal protein catabolism during nitrogen starvation" EXACT [GO:0030163, PomBase:mah]
@@ -41441,6 +41448,7 @@ name: decreased chromatin silencing at centromere
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of chromatin silencing at centromeric regions is decreased." [PomBase:mah]
 synonym: "decreased chromatin silencing at centromere during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased chromatin silencing at centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased heterochromatin silencing at centromere" RELATED [PomBase:mah]
 synonym: "reduced chromatin silencing at centromere" EXACT [PomBase:mah]
 is_a: FYPO:0002353 ! decreased chromatin silencing
 intersection_of: PATO:0002052
@@ -43238,7 +43246,6 @@ synonym: "increased L-ergothioneine level during cell quiescence" EXACT [PomBase
 is_a: FYPO:0002949 ! increased level of substance in cell during G0
 intersection_of: PATO:0001162
 intersection_of: exists_during GO:0044838
-intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CL:0000334
 intersection_of: towards CHEBI:4828
 created_by: midori
@@ -45562,7 +45569,7 @@ synonym: "increased transposable element-derived small RNA accumulation" RELATED
 synonym: "increased transposable element-derived small RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased transposable element-derived small RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased transposon-derived small RNA level" EXACT [PomBase:mah]
-is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+is_a: FYPO:0003558 ! increased repeat element RNA level
 created_by: midori
 creation_date: 2014-02-13T16:42:33Z
 
@@ -48466,6 +48473,7 @@ creation_date: 2014-04-16T16:28:34Z
 id: FYPO:0003299
 name: normal protein degradation via N-end rule pathway during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which ubiquitin-dependent protein degradation via the N-end rule pathway is normal (i.e. indistinguishable from wild type). In the N-end rule pathway, destabilizing N-terminal residues (N-degrons) in substrates are recognized by E3 ligases (N-recognins), whereupon the substrates are linked to ubiquitin and then delivered to the proteasome for degradation." [GO:0071596, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal protein degradation via N-end rule pathway during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal ubiquitin-dependent protein breakdown via the N-end rule pathway during vegetative growth" EXACT [GO:0071596, PomBase:mah]
 synonym: "normal ubiquitin-dependent protein catabolic process via the N-end rule pathway during vegetative growth" EXACT [GO:0071596]
@@ -48483,6 +48491,7 @@ creation_date: 2014-04-16T16:37:32Z
 id: FYPO:0003300
 name: decreased protein degradation via N-end rule pathway during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of ubiquitin-dependent protein degradation via the N-end rule pathway is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein degradation via N-end rule pathway during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased ubiquitin-dependent protein breakdown via the N-end rule pathway during vegetative growth" EXACT [GO:0071596]
 synonym: "decreased ubiquitin-dependent protein catabolic process via the N-end rule pathway during vegetative growth" EXACT [GO:0071596]
@@ -48501,6 +48510,7 @@ creation_date: 2014-04-16T16:41:59Z
 id: FYPO:0003301
 name: delayed protein degradation via N-end rule pathway during meiosis
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which ubiquitin-dependent protein degradation via the N-end rule pathway begins later than normal during one or both meiotic nuclear divisions." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "delayed ubiquitin-dependent protein breakdown via the N-end rule pathway during meiosis" EXACT [GO:0071596]
 synonym: "delayed ubiquitin-dependent protein catabolic process via the N-end rule pathway during meiosis" EXACT [GO:0071596]
 synonym: "delayed ubiquitin-dependent protein catabolism via the N-end rule pathway during meiosis" EXACT [GO:0071596, PomBase:mah]
@@ -50084,6 +50094,7 @@ synonym: "decreased chromatin silencing at centromere imr" EXACT [PomBase:mah]
 synonym: "decreased chromatin silencing at centromere inner repeat during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased chromatin silencing at centromere inner repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased chromatin silencing at centromeric inner repeat region" EXACT [PomBase:mah]
+synonym: "decreased heterochromatin silencing at centromere inner repeat" EXACT [PomBase:mah]
 synonym: "reduced chromatin silencing at centromere inner repeat" EXACT [PomBase:mah]
 is_a: FYPO:0002353 ! decreased chromatin silencing
 intersection_of: PATO:0002052
@@ -50103,12 +50114,12 @@ synonym: "decreased chromatin silencing at centromere outer repeat during vegeta
 synonym: "decreased chromatin silencing at centromeric outer repeat region" EXACT [PomBase:mah]
 synonym: "decreased chromatin silencing at pericentric region" RELATED [PomBase:mah]
 synonym: "decreased chromatin silencing at pericentromeric region" RELATED [PomBase:mah]
+synonym: "decreased heterochromatin silencing at centromere outer repeat region" EXACT [PomBase:mah]
 synonym: "reduced chromatin silencing at centromere outer repeat" EXACT [PomBase:mah]
 is_a: FYPO:0002353 ! decreased chromatin silencing
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:0030702
-intersection_of: occurs_at SO:0001799
+intersection_of: inheres_in GO:1990141
 created_by: midori
 creation_date: 2014-06-03T15:54:43Z
 
@@ -52192,6 +52203,7 @@ id: FYPO:0003558
 name: increased repeat element RNA level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any RNA transcribed from repeat elements, such as LTRs, retrotransposons, or wtf elements, measured in a cell is higher than normal." [PMID:24957674, PomBase:mah]
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+subset: qc_do_not_manually_annotate
 synonym: "increased repeat element RNA accumulation" RELATED [PomBase:mah]
 synonym: "increased repeat element RNA level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased repeat element RNA level during vegetative growth" EXACT [PomBase:mah]
@@ -52576,6 +52588,7 @@ creation_date: 2014-07-22T14:39:47Z
 id: FYPO:0003585
 name: decreased anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of ubiquitin-dependent protein degradation with ubiquitin-protein ligation catalyzed by the anaphase-promoting complex, and mediated by the proteasome, is decreased." [GO:0031145, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein degradation" EXACT [GO:0031145, PomBase:mah]
@@ -52672,6 +52685,7 @@ creation_date: 2014-07-23T16:56:15Z
 id: FYPO:0003593
 name: abolished anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of ubiquitin-dependent protein degradation with ubiquitin-protein ligation catalyzed by the anaphase-promoting complex, and mediated by the proteasome, is abolished." [GO:0031145, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "abolished anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abolished anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process during vegetative growth" EXACT [PomBase:mah]
 synonym: "abolished anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein degradation" EXACT [GO:0031145, PomBase:mah]
@@ -52688,6 +52702,7 @@ creation_date: 2014-07-23T16:58:29Z
 id: FYPO:0003594
 name: normal anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of ubiquitin-dependent protein degradation with ubiquitin-protein ligation catalyzed by the anaphase-promoting complex, and mediated by the proteasome, is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "normal anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein catabolic process during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal anaphase-promoting complex-dependent proteasomal ubiquitin-dependent protein degradation" EXACT [GO:0031145, PomBase:mah]
@@ -56902,7 +56917,6 @@ intersection_of: PATO:0000051
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005739
 intersection_of: qualifier PATO:0000461
-relationship: output_of FYPO:0000809 ! abnormal mitochondrion organization
 created_by: midori
 creation_date: 2014-10-21T15:37:07Z
 
@@ -58814,7 +58828,7 @@ creation_date: 2014-11-25T10:59:45Z
 [Term]
 id: FYPO:0004033
 name: increased protein localization to chromatin at tRNA genes
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin at genes encoding tRNA is increased." [PMID:25392932, PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin at tRNA genes is increased." [PMID:25392932, PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein localisation to chromatin at tRNA genes" EXACT [PomBase:mah]
 synonym: "increased protein localization to chromatin at transfer RNA genes" EXACT [PomBase:mah]
@@ -59498,7 +59512,7 @@ creation_date: 2014-11-27T15:05:52Z
 [Term]
 id: FYPO:0004081
 name: decreased protein localization to chromatin at tRNA genes
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin at genes encoding tRNA is decreased." [PMID:24945319, PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin at tRNA genes is decreased." [PMID:24945319, PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein localisation to chromatin at tRNA genes" EXACT [PomBase:mah]
 synonym: "decreased protein localization to chromatin at transfer RNA genes" EXACT [PomBase:mah]
@@ -60696,6 +60710,7 @@ creation_date: 2014-12-09T14:38:44Z
 id: FYPO:0004163
 name: increased viability upon glucose starvation
 def: "A cell population phenotype in which a larger than normal proportion of the population remains viable when cells the population are subject to glucose starvation." [PomBase:mah]
+synonym: "increased viability during glucose starvation" EXACT [PomBase:mah]
 synonym: "increased viability upon glucose depletion" EXACT [PomBase:al]
 synonym: "increased viability upon glucose deprivation" EXACT [PomBase:mah]
 is_a: FYPO:0002057 ! cell population viability
@@ -61212,6 +61227,7 @@ creation_date: 2014-12-17T13:28:37Z
 id: FYPO:0004198
 name: decreased protein degradation during mitosis
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is decreased during mitosis." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein breakdown during during mitosis" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolic process during mitosis" EXACT [GO:0030163, PomBase:mah]
 synonym: "decreased protein catabolism during mitosis" EXACT [GO:0030163, PomBase:mah]
@@ -61230,6 +61246,7 @@ creation_date: 2014-12-17T13:44:14Z
 id: FYPO:0004199
 name: increased protein degradation during mitosis
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is increased during mitosis." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein breakdown during during mitosis" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolic process during mitosis" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolism during mitosis" EXACT [GO:0030163, PomBase:mah]
@@ -61247,6 +61264,7 @@ creation_date: 2014-12-17T13:46:11Z
 id: FYPO:0004200
 name: increased protein degradation during mitotic G1 phase
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of protein degradation is increased during G1 phase of the mitotic cell cycle." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "increased protein breakdown during during mitotic G1 phase" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolic process during mitotic G1 phase" EXACT [GO:0030163, PomBase:mah]
 synonym: "increased protein catabolism during mitotic G1 phase during vegetative growth" EXACT [GO:0030163, PomBase:mah]
@@ -62743,6 +62761,8 @@ intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0051306
 intersection_of: qualifier PATO:0000461
+relationship: has_part FYPO:0004329 ! normal mitotic rDNA separation
+relationship: has_part FYPO:0004330 ! normal mitotic telomere separation
 created_by: midori
 creation_date: 2015-01-14T15:40:03Z
 
@@ -63128,6 +63148,551 @@ intersection_of: inheres_in GO:0006468
 intersection_of: qualifier PATO:0000461
 created_by: midori
 creation_date: 2015-01-21T14:44:18Z
+
+[Term]
+id: FYPO:0004328
+name: normal protein localization during mitosis
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cellular protein localization is normal (i.e. indistinguishable from wild type) during mitosis." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal cellular protein localization during mitosis" EXACT [PomBase:mah]
+synonym: "normal protein localisation during mitosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization during mitotic nuclear division" EXACT [GO:0007067]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+is_a: FYPO:0001071 ! normal transport
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0007067
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034613
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-29T11:18:47Z
+
+[Term]
+id: FYPO:0004329
+name: normal mitotic rDNA separation
+def: "A cellular process phenotype in which mitotic sister chromatid separation is normal (i.e. indistinguishable from wild type) in regions containing ribosomal DNA (rDNA). Mitotic sister chromatid separation is the process in which sister chromatids are physically detached from each other during mitosis." [GO:0051306, PMID:17032733, PomBase:mah]
+synonym: "normal mitotic chromosome separation at rDNA" EXACT [PomBase:mah]
+synonym: "normal mitotic rDNA separation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal mitotic ribosomal DNA separation" EXACT [PomBase:mah]
+synonym: "normal mitotic sister chromatid separation at rDNA" EXACT [GO:0051306]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051306
+intersection_of: occurs_at SO:0001637
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-29T11:23:10Z
+
+[Term]
+id: FYPO:0004330
+name: normal mitotic telomere separation
+def: "A cellular process phenotype in which mitotic sister chromatid separation is normal (i.e. indistinguishable from wild type) at telomeres. Mitotic sister chromatid separation is the process in which sister chromatids are physically detached from each other during mitosis." [GO:0051306, PMID:17032733, PomBase:mah]
+synonym: "normal mitotic chromosome separation at telomere" EXACT [PomBase:mah]
+synonym: "normal mitotic sister chromatid separation at telomere" EXACT [GO:0051306]
+synonym: "normal mitotic telomere separation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051306
+intersection_of: occurs_at GO:0000781
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-29T11:25:47Z
+
+[Term]
+id: FYPO:0004331
+name: normal chromatin silencing at centromere central core
+def: "A transcription regulation phenotype observed in the vegetative growth phase of the life cycle in which chromatin silencing at the central core of the centromeric regions is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: Note that the centromere central core corresponds to SO:0001796.
+synonym: "normal centromere central core chromatin silencing" EXACT [PomBase:mah]
+synonym: "normal chromatin silencing at centromere central core during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal chromatin silencing at centromere central core during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal chromatin silencing at centromeric central core" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072692
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-01-29T11:31:51Z
+
+[Term]
+id: FYPO:0004332
+name: delayed protein degradation during mitosis
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein degradation begins later than normal during mitosis." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "delayed protein breakdown during mitosis" EXACT [GO:0030163]
+synonym: "delayed protein catabolic process during mitosis" EXACT [GO:0030163]
+synonym: "delayed protein catabolism during mitosis" EXACT [GO:0030163, PomBase:mah]
+synonym: "delayed protein degradation during mitosis" EXACT [GO:0030163, PomBase:mah]
+is_a: FYPO:0000845 ! abnormal protein degradation during vegetative growth
+intersection_of: PATO:0000502
+intersection_of: happens_during GO:0007067
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071596
+created_by: midori
+creation_date: 2015-01-29T12:03:37Z
+
+[Term]
+id: FYPO:0004333
+name: increased protein phosphorylation during cellular response to hydrogen peroxide
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a greater extent than normal during a cellular response to hydrogen peroxide." [PMID:22139357, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein phosphorylation during cellular response to H2O2" EXACT [PomBase:mah]
+synonym: "increased protein phosphorylation during cellular response to hydrogen peroxide during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased protein phosphorylation during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001038 ! increased protein phosphorylation during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0070301
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2015-01-29T13:34:48Z
+
+[Term]
+id: FYPO:0004334
+name: increased protein localization to nucleus during cellular response to hydrogen peroxide
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleus is increased during a cellular response to hydrogen peroxide." [PMID:22139357, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to nucleus during cellular response to hydrogen peroxide" EXACT [GO:0034504, PomBase:mah]
+synonym: "increased protein localization to nucleus during cellular response to H2O2" EXACT [PomBase:mah]
+synonym: "increased protein localization to nucleus during cellular response to hydrogen peroxide during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased protein localization to nucleus during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001129 ! abnormal protein localization to nucleus during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0070301
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034504
+created_by: midori
+creation_date: 2015-01-29T13:39:28Z
+
+[Term]
+id: FYPO:0004335
+name: abolished protein binding during cellular response to hydrogen peroxide
+def: "A molecular function phenotype in which the binding of one protein to another does not occur during a cellular response to hydrogen peroxide. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." [PMID:22139357, PomBase:mah]
+comment: This term can be used for any protein-protein interaction that is affected by a mutation, whether or not the mutated gene product is one of the interacting proteins. We recommend noting which proteins were used in the assay when annotating to this term.
+synonym: "abolished protein binding during cellular response to H2O2" EXACT [PomBase:mah]
+synonym: "abolished protein-protein interaction during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+synonym: "protein binding abolished during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+is_a: FYPO:0000704 ! abnormal protein binding
+intersection_of: PATO:0001558
+intersection_of: during GO:0070301
+intersection_of: during GO:0072752
+intersection_of: towards GO:0005515
+created_by: midori
+creation_date: 2015-01-29T13:42:03Z
+
+[Term]
+id: FYPO:0004336
+name: abnormal protein localization to mitochondrion
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitochondrion is abnormal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to mitochondrion" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to mitochondria" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to mitochondrion during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal protein localization to mitochondrion during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000443 ! abnormal protein localization during vegetative growth
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0070585
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-29T13:59:03Z
+
+[Term]
+id: FYPO:0004337
+name: abolished protein localization to mitochondrion
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitochondrion does not occur." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to mitochondrion" EXACT [PomBase:mah]
+synonym: "abolished protein localization to mitochondrion during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "protein absent from mitochondrion" RELATED [PomBase:mah]
+synonym: "protein localization to mitochondrion abolished" EXACT [PomBase:mah]
+synonym: "protein localization to mitochondrion abolished during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
+is_a: FYPO:0004336 ! abnormal protein localization to mitochondrion
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0070585
+created_by: midori
+creation_date: 2015-01-29T14:05:52Z
+
+[Term]
+id: FYPO:0004338
+name: abolished cell population growth on ethanol carbon source
+def: "A vegetative cell population growth phenotype in which a cell population does not grow in a medium containing ethanol as the carbon source." [PMID:22139357, PomBase:mah]
+comment: Use this term for a population of cells that does not grow with ethanol as the carbon source, but does grow using a different carbon source (a cell population that does not grow on any media would be considered inviable). Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+synonym: "abolished ethanol utilization" RELATED [PomBase:mah, PomBase:vw]
+synonym: "abolished growth on ethanol carbon source" BROAD [PomBase:mah]
+synonym: "abolished vegetative cell population growth on ethanol carbon source" EXACT [PomBase:mah]
+synonym: "cell population growth on ethanol carbon source abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000684 ! decreased cell population growth on glycerol carbon source
+is_a: FYPO:0001575 ! abolished vegetative cell population growth
+intersection_of: FYPO:0001575 ! abolished vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:16236
+created_by: midori
+creation_date: 2015-01-29T14:07:32Z
+
+[Term]
+id: FYPO:0004339
+name: decreased protein localization to nucleus during cellular response to hydrogen peroxide
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleus is decreased during a cellular response to hydrogen peroxide." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to nucleus during cellular response to hydrogen peroxide" EXACT [GO:0034504, PomBase:mah]
+synonym: "decreased protein localization to nucleus during cellular response to H2O2" EXACT [PomBase:mah]
+synonym: "decreased protein localization to nucleus during cellular response to hydrogen peroxide during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein localization to nucleus during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to nucleus during cellular response to hydrogen peroxide" EXACT [PomBase:mah]
+is_a: FYPO:0001129 ! abnormal protein localization to nucleus during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0070301
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0034504
+created_by: midori
+creation_date: 2015-01-29T14:09:16Z
+
+[Term]
+id: FYPO:0004340
+name: abnormal mitochondrial fission
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which mitochondrial fission, the division of a mitochondrion into two or more separate compartments, is abnormal." [GO:0000266, PomBase:mah]
+synonym: "abnormal mitochondrial division" EXACT [GO:0000266, PomBase:mah]
+synonym: "abnormal mitochondrial fission during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal mitochondrial fission during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitochondrial proliferation" RELATED [GO:0000266, PomBase:mah]
+is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000266
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-01-29T14:11:28Z
+
+[Term]
+id: FYPO:0004341
+name: delayed mitochondrial fission during cellular response to hydrogen peroxide
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which mitochondrial fission, the division of a mitochondrion into two or more separate compartments, begins later than normal during a cellular response to hydrogen peroxide." [PMID:22139357, PomBase:mah]
+synonym: "delayed mitochondrial fission during cellular response to H2O2" EXACT [PomBase:mah]
+synonym: "delayed mitochondrial fission during cellular response to hydrogen peroxide during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "delayed mitochondrial fission during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
+synonym: "delayed mitochondrial division" EXACT [GO:0000266, PomBase:mah]
+synonym: "delayed mitochondrial fission during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "delayed mitochondrial fission during vegetative growth" EXACT [PomBase:mah]
+synonym: "delayed mitochondrial proliferation" RELATED [GO:0000266, PomBase:mah]
+is_a: FYPO:0004340 ! abnormal mitochondrial fission
+intersection_of: PATO:0000502
+intersection_of: happens_during GO:0070301
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000266
+created_by: midori
+creation_date: 2015-01-29T14:13:00Z
+
+[Term]
+id: FYPO:0004342
+name: increased LTR-derived RNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any RNA transcribed from long terminal repeat elements (LTRs) measured in a cell is higher than normal." [PMID:24095277, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "increased accumulation of LTR-derived RNAs" RELATED [PomBase:vw]
+synonym: "increased long terminal repeat-derived RNA level" EXACT [PomBase:mah]
+synonym: "increased LTR-derived RNA accumulation" RELATED [PomBase:mah]
+synonym: "increased LTR-derived RNA level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased LTR-derived RNA level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003558 ! increased repeat element RNA level
+created_by: midori
+creation_date: 2015-01-29T14:47:36Z
+
+[Term]
+id: FYPO:0004343
+name: increased wtf-derived RNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any RNA transcribed from wtf elements measured in a cell is higher than normal." [PMID:24095277, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "increased accumulation of wtf-derived RNAs" RELATED [PomBase:vw]
+synonym: "increased wtf element-derived RNA level" EXACT [PomBase:mah]
+synonym: "increased wtf-derived RNA accumulation" RELATED [PomBase:mah]
+synonym: "increased wtf-derived RNA level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased wtf-derived RNA level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003558 ! increased repeat element RNA level
+created_by: midori
+creation_date: 2015-01-29T14:50:29Z
+
+[Term]
+id: FYPO:0004344
+name: increased viability upon nitrogen starvation
+def: "A cell population phenotype in which a larger than normal proportion of the population remains viable when cells the population are subject to nitrogen starvation." [PomBase:mah]
+synonym: " increased viability during nitrogen starvation" EXACT [PomBase:al]
+synonym: "increased viability upon nitrogen depletion" EXACT [PomBase:al]
+synonym: "increased viability upon nitrogen deprivation" EXACT [PomBase:mah]
+is_a: FYPO:0002057 ! cell population viability
+created_by: midori
+creation_date: 2015-01-29T14:54:06Z
+
+[Term]
+id: FYPO:0004345
+name: decreased protein localization to chromatin at LTRs
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin at long terminal repeats is decreased." [PMID:25002536, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to chromatin at LTRs" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromatin at long terminal repeats" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromatin at LTRs during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein localization to chromatin at LTRs during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to chromatin at LTRs" EXACT [PomBase:mah]
+is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071168
+intersection_of: occurs_at SO:0000286
+created_by: midori
+creation_date: 2015-01-29T14:58:45Z
+
+[Term]
+id: FYPO:0004346
+name: decreased protein localization to chromatin at ncRNA genes
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to chromatin at non-coding RNA genes is decreased." [PMID:25002536, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to chromatin at ncRNA genes" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromatin at ncRNA genes during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein localization to chromatin at ncRNA genes during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein localization to chromatin at non-coding RNA genes" EXACT [PomBase:mah]
+synonym: "reduced protein localization to chromatin at ncRNA genes" EXACT [PomBase:mah]
+is_a: FYPO:0000452 ! abnormal protein localization to chromatin during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0071168
+intersection_of: occurs_at SO:0001263
+created_by: midori
+creation_date: 2015-01-29T15:00:04Z
+
+[Term]
+id: FYPO:0004347
+name: increased histone H3-K9 acetylation at protein coding gene
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 9 of histone H3 occurs to a greater extent than normal  in regions containing protein-coding genes." [PomBase:mah]
+synonym: "increased histone H3-K9 acetylation at protein coding gene during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone H3-K9 acetylation at protein coding gene during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased histone H3-K9 acetylation at protein-coding gene" EXACT [PomBase:mah]
+synonym: "increased histone H3K9 acetylation at protein coding gene" EXACT [GO:0044154, PomBase:mah]
+is_a: FYPO:0000892 ! increased histone H3-K9 acetylation
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043970
+intersection_of: occurs_at SO:0001217
+created_by: midori
+creation_date: 2015-01-29T15:02:24Z
+
+[Term]
+id: FYPO:0004348
+name: normal growth on methylglyoxal
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing methylglyoxal." [PomBase:mah]
+synonym: "normal cell population growth in presence of methylglyoxal" EXACT [PomBase:mah]
+synonym: "normal cell population growth on methylglyoxal" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to methylglyoxal" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on methylglyoxal" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:17158
+created_by: midori
+creation_date: 2015-01-29T15:17:53Z
+
+[Term]
+id: FYPO:0004349
+name: decreased RNA level during cellular response to methylglyoxal
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to methylglyoxal is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "decreased RNA accumulation during cellular response to methylglyoxal" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to methylglyoxal during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to methylglyoxal during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased transcript level during cellular response to methylglyoxal" EXACT [PomBase:vw]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:0097238
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2015-01-29T15:20:59Z
+
+[Term]
+id: FYPO:0004350
+name: normal RNA level during cellular response to methylglyoxal
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to methylglyoxal is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "normal mRNA level during cellular response to methylglyoxal" NARROW [PomBase:mah]
+synonym: "normal RNA accumulation during cellular response to methylglyoxal" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to methylglyoxal during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to methylglyoxal during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: exists_during GO:0097238
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2015-01-29T15:23:34Z
+
+[Term]
+id: FYPO:0004351
+name: increased protein localization to nucleus during cellular response to methylglyoxal
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleus is increased during a cellular response to methylglyoxal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to nucleus during cellular response to methylglyoxal" EXACT [GO:0034504, PomBase:mah]
+synonym: "increased protein localization to nucleus during cellular response to methylglyoxal during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased protein localization to nucleus during cellular response to methylglyoxal during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001129 ! abnormal protein localization to nucleus during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0097238
+intersection_of: inheres_in GO:0034504
+created_by: midori
+creation_date: 2015-01-29T15:24:30Z
+
+[Term]
+id: FYPO:0004352
+name: decreased protein localization to nucleus during cellular response to methylglyoxal
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleus is decreased during a cellular response to methylglyoxal." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to nucleus during cellular response to methylglyoxal" EXACT [GO:0034504, PomBase:mah]
+synonym: "decreased protein localization to nucleus during cellular response to methylglyoxal during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein localization to nucleus during cellular response to methylglyoxal during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein localization to nucleus during cellular response to methylglyoxal" EXACT [PomBase:mah]
+is_a: FYPO:0001129 ! abnormal protein localization to nucleus during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: happens_during GO:0097238
+intersection_of: inheres_in GO:0034504
+created_by: midori
+creation_date: 2015-01-29T15:25:11Z
+
+[Term]
+id: FYPO:0004353
+name: increased protein phosphorylation during mitotic S phase
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a greater extent than normal during S phase of the mitotic cell cycle." [PomBase:mah]
+synonym: "increased protein phosphorylation during mitotic S phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein phosphorylation during mitotic S-phase" EXACT [PomBase:vw]
+synonym: "increased protein/peptide phosphorylation during mitotic S phase" EXACT [PomBase:mah]
+is_a: FYPO:0001038 ! increased protein phosphorylation during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0000084
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2015-01-29T15:32:00Z
+
+[Term]
+id: FYPO:0004354
+name: increased protein phosphorylation during mitotic G1 phase
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a greater extent than normal during G1 phase of the mitotic cell cycle." [PomBase:mah]
+synonym: "increased protein phosphorylation during mitotic G1 phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein phosphorylation during mitotic G1-phase" EXACT [PomBase:vw]
+synonym: "increased protein/peptide phosphorylation during mitotic G1 phase" EXACT [PomBase:mah]
+is_a: FYPO:0001038 ! increased protein phosphorylation during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0000080
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2015-01-29T15:32:39Z
+
+[Term]
+id: FYPO:0004355
+name: increased protein phosphorylation during mitosis
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a greater extent than normal during mitosis." [PomBase:mah]
+synonym: "increased protein phosphorylation during mitosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein phosphorylation during mitotic nuclear division" EXACT [GO:0007067]
+synonym: "increased protein/peptide phosphorylation during mitosis" EXACT [PomBase:mah]
+is_a: FYPO:0001038 ! increased protein phosphorylation during vegetative growth
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0007067
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2015-01-29T15:33:18Z
+
+[Term]
+id: FYPO:0004356
+name: increased protein localization to nucleolus
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the nucleolus is increased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to nucleolus" EXACT [PomBase:mah]
+synonym: "increased protein localization to nucleolus during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased protein localization to nucleolus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0003687 ! abnormal protein localization to nucleolus
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1902570
+created_by: midori
+creation_date: 2015-01-29T15:36:57Z
+
+[Term]
+id: FYPO:0004357
+name: decreased protein phosphorylation during mitosis
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a lower extent than normal during mitosis." [PomBase:mah]
+synonym: "decreased protein phosphorylation during mitosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein/peptide phosphorylation during mitosis" EXACT [PomBase:mah]
+synonym: "reduced protein phosphorylation during mitosis" EXACT [PomBase:mah]
+is_a: FYPO:0002832 ! decreased protein phosphorylation during mitotic M phase
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0007067
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2015-01-29T15:40:46Z
+
+[Term]
+id: FYPO:0004358
+name: increased protein phosphatase activity during mitosis
+def: "A molecular function phenotype in which the observed rate of a protein phosphatase activity is increased during mitosis." [PomBase:mah]
+synonym: "increased phosphoprotein phosphatase activity during mitosis" EXACT [GO:0004721, PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0001758 ! increased protein phosphatase activity
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0007067
+intersection_of: inheres_in GO:0004721
+created_by: midori
+creation_date: 2015-01-29T15:43:00Z
+
+[Term]
+id: FYPO:0004359
+name: abolished mitotic cell cycle DNA replication checkpoint
+def: "A cell cycle checkpoint phenotype in which cell cycle regulation mediated by the mitotic cell cycle DNA replication checkpoint does not occur under conditions that normally trigger the checkpoint signaling and response. The DNA replication checkpoint normally prevents the initiation of mitosis until DNA replication is complete." [GO:0033314, PMID:11988741, PomBase:mah]
+is_a: FYPO:0000173 ! abnormal mitotic cell cycle DNA replication checkpoint
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0033314
+created_by: midori
+creation_date: 2015-01-29T15:48:14Z
+
+[Term]
+id: FYPO:0004360
+name: decreased duration of mitotic cell cycle DNA replication checkpoint
+def: "A cell cycle checkpoint phenotype in which the duration of mitotic cell cycle arrest or delay due to regulation by the DNA replication checkpoint is shorter than normal. The DNA replication checkpoint normally prevents the initiation of mitosis until DNA replication is complete." [PomBase:mah]
+synonym: "decreased duration of DNA replication checkpoint" BROAD [PomBase:mah]
+synonym: "decreased duration of mitotic cell cycle DNA replication checkpoint activation" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "reduced duration of mitotic cell cycle DNA replication checkpoint" EXACT [PomBase:mah]
+is_a: FYPO:0000173 ! abnormal mitotic cell cycle DNA replication checkpoint
+intersection_of: PATO:0000499
+intersection_of: inheres_in GO:0033314
+created_by: midori
+creation_date: 2015-01-29T15:49:40Z
+
+[Term]
+id: FYPO:0004361
+name: meiosis and sporulation in haploid during nitrogen starvation
+def: "A cellular process phenotype in which haploid cells undergo meiotic division and attempt to sporulate when the cells are subject to nitrogen starvation. Haploid meiosis often results in the formation of a structure that resembles an azygotic ascus. Spores produced from a haploid cell have poor viability and appear to contain only 1/2C DNA on average." [DOI:10.1007/BF00332932, PomBase:mah]
+synonym: "haploid meiosis during nitrogen starvation" RELATED [PomBase:al]
+synonym: "haploid sporulation during nitrogen starvation" RELATED [PomBase:al]
+synonym: "increased haploid meiosis during nitrogen starvation" RELATED [PomBase:mah]
+synonym: "meiosis in haploid during nitrogen starvation" RELATED [PomBase:mah]
+synonym: "sporulation in haploid during nitrogen starvation" RELATED [PomBase:mah]
+is_a: FYPO:0001886 ! meiosis and sporulation in haploid
+created_by: midori
+creation_date: 2015-01-29T15:56:24Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
