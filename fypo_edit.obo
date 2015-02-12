@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:02:2015 13:27
+date: 12:02:2015 16:53
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -9238,7 +9238,6 @@ def: "A cellular process phenotype in which mitotic sister chromatid separation 
 synonym: "abnormal mitotic chromosome separation" EXACT [PomBase:mah]
 synonym: "abnormal sister chromatid separation during vegetative growth" EXACT [PomBase:mah]
 synonym: "aneuploidy" RELATED [PomBase:vw]
-synonym: "mitotic chromosome nondisjunction" EXACT [PomBase:mah]
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -9352,10 +9351,10 @@ creation_date: 2011-11-29T05:16:27Z
 
 [Term]
 id: FYPO:0000678
-name: chromosome nondisjunction during meiosis I
-def: "A cellular process phenotype in which homologous chromosomes fail to segregate properly, or disjoin, during meiosis I." [PomBase:mah]
-synonym: "abolished homologous chromosome segregation" EXACT [GO:0045143]
+name: unequal homologous chromosome segregation
+def: "A cellular process phenotype in which homologous chromosomes are not segregated equally to both spindle poles in the first meiotic nuclear division." [PomBase:mah]
 synonym: "chromosome nondisjunction at meiosis I" EXACT [PomBase:mah]
+synonym: "chromosome nondisjunction during meiosis I" EXACT [PomBase:mah]
 is_a: FYPO:0000925 ! unequal meiotic chromosome segregation
 intersection_of: PATO:0001558
 intersection_of: towards GO:0045143
@@ -13077,6 +13076,7 @@ creation_date: 2012-04-02T02:43:27Z
 id: FYPO:0000925
 name: unequal meiotic chromosome segregation
 def: "A cellular process phenotype in which chromosomes are not segregated equally to both spindle poles in a meiotic division." [PomBase:mah]
+synonym: "meiotic chromosome nondisjunction" EXACT [PomBase:mah]
 is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
 created_by: midori
 creation_date: 2012-04-02T03:09:45Z
@@ -38882,7 +38882,7 @@ id: FYPO:0002651
 name: merotelic kinetochore attachment
 def: "A cellular process phenotype in which the attachment of spindle microtubules to the kinetochore during a mitotic or meiotic nuclear division results in the connection of a single kinetochore to both spindle poles." [PMID:17426725, PMID:21306900]
 comment: Also consider 'lagging chromosomes' (FYPO:0002090), because merotelic attachment often causes chromosomes to lag during segregation.
-synonym: "merotelic attachment of spindle microtubules to kinetochore" EXACT []
+synonym: "merotelic attachment of spindle microtubules to kinetochore" EXACT [PomBase:mah]
 is_a: FYPO:0000325 ! abnormal attachment of spindle microtubules to kinetochore
 created_by: midori
 creation_date: 2013-09-12T14:10:20Z
@@ -46728,10 +46728,12 @@ creation_date: 2014-03-05T16:50:04Z
 
 [Term]
 id: FYPO:0003182
-name: chromosome nondisjunction during meiosis II
-def: "A cellular process phenotype in which sister chromatids fail to segregate properly, or disjoin, during meiosis II." [PomBase:mah]
-synonym: "abolished meiotic sister chromatid segregation" EXACT [GO:0045144]
+name: unequal meiotic sister chromatid segregation
+alt_id: FYPO:0003605
+def: "A cellular process phenotype in which sister chromatids are not segregated equally to both spindle poles in the second meiotic nuclear division." [PMID:10440376, PomBase:mah]
 synonym: "chromosome nondisjunction at meiosis II" EXACT [PomBase:mah]
+synonym: "chromosome nondisjunction during meiosis II" EXACT [PomBase:mah]
+synonym: "unequal meiotic chromosome segregation during meiosis II" EXACT [PomBase:mah]
 is_a: FYPO:0000925 ! unequal meiotic chromosome segregation
 intersection_of: PATO:0001558
 intersection_of: towards GO:0045144
@@ -47676,6 +47678,7 @@ creation_date: 2014-03-25T17:27:18Z
 id: FYPO:0003241
 name: unequal mitotic sister chromatid segregation
 def: "A cellular process phenotype in which mitotic sister chromatid segregation fails to separate chromosomes into two equal masses. Unequal mitotic sister chromatid separation may be complete, with two distinct unequal DNA masses located at or near the ends of an elongated mitotic spindle, or incomplete." [PomBase:mah]
+synonym: "mitotic chromosome nondisjunction" EXACT [PomBase:mah]
 synonym: "unequal mitotic chromosome segregation" EXACT [PomBase:mah]
 synonym: "unequal mitotic sister chromatid segregation during vegetative growth" EXACT [PomBase:mah]
 synonym: "unequal mitotic sister chromatid separation" RELATED [PomBase:mah]
@@ -52888,14 +52891,6 @@ is_a: FYPO:0003603 ! abnormal meiosis I
 relationship: output_of FYPO:0002093 ! decreased meiotic sister chromatid cohesion
 created_by: midori
 creation_date: 2014-07-29T16:08:54Z
-
-[Term]
-id: FYPO:0003605
-name: unequal meiotic chromosome segregation during meiosis II
-def: "A cellular process phenotype in which chromosomes are not segregated equally to both spindle poles in the second meiotic nuclear division." [PMID:10440376, PomBase:mah]
-is_a: FYPO:0000925 ! unequal meiotic chromosome segregation
-created_by: midori
-creation_date: 2014-07-29T16:16:34Z
 
 [Term]
 id: FYPO:0003606
@@ -63507,7 +63502,7 @@ creation_date: 2015-01-29T15:00:04Z
 [Term]
 id: FYPO:0004347
 name: increased histone H3-K9 acetylation at protein coding gene
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 9 of histone H3 occurs to a greater extent than normal  in regions containing protein-coding genes." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 9 of histone H3 occurs to a greater extent than normal in regions containing protein-coding genes." [PomBase:mah]
 synonym: "increased histone H3-K9 acetylation at protein coding gene during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased histone H3-K9 acetylation at protein coding gene during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3-K9 acetylation at protein-coding gene" EXACT [PomBase:mah]
@@ -63881,7 +63876,7 @@ creation_date: 2015-02-10T14:07:50Z
 [Term]
 id: FYPO:0004372
 name: decreased response to mitotic G2 DNA damage checkpoint signaling
-def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs in response to the mitotic G2 DNA damage checkpoint is decreased.  The mitotic G2 DNA damage checkpoint negatively regulates progression through the G2/M transition of the mitotic cell cycle in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0072435, PomBase:mah]
+def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs in response to the mitotic G2 DNA damage checkpoint is decreased. The mitotic G2 DNA damage checkpoint negatively regulates progression through the G2/M transition of the mitotic cell cycle in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0072435, PomBase:mah]
 synonym: "decreased G2 DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased mitotic G2 DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced response to mitotic G2 DNA damage checkpoint signaling" EXACT [PomBase:mah]
@@ -64051,6 +64046,115 @@ intersection_of: inheres_in GO:1902480
 created_by: midori
 creation_date: 2015-02-12T13:24:05Z
 
+[Term]
+id: FYPO:0004384
+name: normal single-stranded DNA binding
+def: "A molecular function phenotype in which occurrence of single-stranded DNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." [PomBase:mah]
+synonym: "normal ssDNA binding" EXACT [GO:0003697]
+is_a: FYPO:0000655 ! normal DNA binding
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003697
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-02-12T16:23:46Z
+
+[Term]
+id: FYPO:0004385
+name: decreased single-stranded DNA binding
+def: "A molecular function phenotype in which occurrence of single-stranded DNA binding by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." [PomBase:mah]
+synonym: "decreased ssDNA binding" EXACT [GO:0003697]
+synonym: "reduced single-stranded DNA binding" EXACT [PomBase:mah]
+is_a: FYPO:0000658 ! decreased DNA binding
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0003697
+created_by: midori
+creation_date: 2015-02-12T16:25:06Z
+
+[Term]
+id: FYPO:0004386
+name: abolished single-stranded DNA binding
+def: "A molecular function phenotype in which single-stranded DNA binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." [PomBase:mah]
+synonym: "abolished ssDNA binding" EXACT [GO:0003697]
+synonym: "single-stranded DNA binding abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000659 ! abolished DNA binding
+intersection_of: PATO:0001558
+intersection_of: towards GO:0003697
+created_by: midori
+creation_date: 2015-02-12T16:25:42Z
+
+[Term]
+id: FYPO:0004387
+name: decreased positive regulation of DNA-directed DNA polymerase activity
+def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which positive regulation of DNA-directed DNA polymerase activity occurs to a lower extent than normal." [PMID:14766746, PomBase:mah]
+synonym: "decreased activation of DNA-directed DNA polymerase activity" NARROW [GO:1900264]
+synonym: "decreased positive regulation of DNA polymerase activity" BROAD [PomBase:mah]
+is_a: FYPO:0000682 ! abnormal regulation of molecular function
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:1900264
+created_by: midori
+creation_date: 2015-02-12T16:28:05Z
+
+[Term]
+id: FYPO:0004388
+name: increased level of pyrimidine salvage gene RNA during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more pyrimidine salvage RNAs measured in a cell is higher than normal (i.e. higher than observed in wild-type cells). Pyrimidine salvage RNAs are transcribed from genes whose products are involved in pyrimidine salvage." [PMID:23695302, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased level of pyrimidine salvage gene RNA during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased level of pyrimidine salvage gene transcripts during vegetative growth" EXACT [PomBase:vw]
+synonym: "increased pyrimidine salvage gene RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+created_by: midori
+creation_date: 2015-02-12T16:35:02Z
+
+[Term]
+id: FYPO:0004389
+name: increased level of amino acid catabolism gene RNA during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more amino acid catabolism RNAs measured in a cell is higher than normal (i.e. higher than observed in wild-type cells). Amino acid catabolism RNAs are transcribed from genes whose products are involved in amino acid catabolism." [PMID:23695302, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased amino acid catabolism gene RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+synonym: "increased level of amino acid catabolism gene RNA during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased level of amino acid catabolism gene transcripts during vegetative growth" EXACT [PomBase:vw]
+is_a: FYPO:0002743 ! increased level of amino acid metabolism gene RNA during vegetative growth
+created_by: midori
+creation_date: 2015-02-12T16:37:09Z
+
+[Term]
+id: FYPO:0004390
+name: increased level of arginine catabolism gene RNA during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more arginine catabolism RNAs measured in a cell is higher than normal (i.e. higher than observed in wild-type cells). Arginine catabolism RNAs are transcribed from genes whose products are involved in arginine catabolism." [PMID:23695302, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "increased arginine catabolism gene RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+synonym: "increased level of arginine catabolism gene RNA during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased level of arginine catabolism gene transcripts during vegetative growth" EXACT [PomBase:vw]
+is_a: FYPO:0004389 ! increased level of amino acid catabolism gene RNA during vegetative growth
+created_by: midori
+creation_date: 2015-02-12T16:38:01Z
+
+[Term]
+id: FYPO:0004391
+name: abolished cell population growth on uracil nitrogen source
+def: "A vegetative cell population growth phenotype in which a cell population does not grow in a medium containing uracil as the nitrogen source." [PomBase:mah]
+comment: Use this term for a population of cells that does not grow with uracil as the nitrogen source, but does grow using a different nitrogen source (a cell population that does not grow on any media would be considered inviable). Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+synonym: "abolished growth on uracil nitrogen source" BROAD [PomBase:mah]
+synonym: "abolished uracil utilization" RELATED [PomBase:mah, PomBase:vw]
+synonym: "abolished vegetative cell population growth on uracil nitrogen source" EXACT [PomBase:mah]
+synonym: "cell population growth on uracil nitrogen source abolished" EXACT [PomBase:mah]
+is_a: FYPO:0001575 ! abolished vegetative cell population growth
+created_by: midori
+creation_date: 2015-02-12T16:39:43Z
+
+[Term]
+id: FYPO:0004392
+name: abolished positive regulation of DNA-directed DNA polymerase activity
+def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which positive regulation of DNA-directed DNA polymerase activity does not occur." [PMID:14766746, PomBase:mah]
+synonym: "abolished activation of DNA-directed DNA polymerase activity" NARROW [GO:1900264]
+synonym: "positive regulation of DNA-directed DNA polymerase activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000682 ! abnormal regulation of molecular function
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:1900264
+created_by: midori
+creation_date: 2015-02-12T16:49:04Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
@@ -64155,3 +64259,4 @@ id: towards
 name: towards
 xref: RO:0002503
 property_value: usage "Relation binding a relational quality or disposition to the relevant type of entity. Used in FYPO as described in PATO best practices; identifies abolished GO processes; identifies substances affected by phenotypes." xsd:string
+
