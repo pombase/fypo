@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:02:2015 16:19
+date: 10:02:2015 14:44
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -95,7 +95,7 @@ name: abnormal S-phase DNA damage checkpoint
 alt_id: FYPO:0000195
 def: "A cell cycle checkpoint phenotype in which the S phase DNA damage checkpoint (also known as the intra-S phase DNA damage checkpoint) is abnormal. The S phase DNA damage checkpoint slows progression through S phase in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [PomBase:mah]
 synonym: "abnormal intra-S DNA damage checkpoint" EXACT [PomBase:mah]
-synonym: "abnormal S-phase DNA damage checkpoint activation" EXACT [PomBase:mah]
+synonym: "abnormal S-phase DNA damage checkpoint activation" RELATED [PomBase:mah]
 synonym: "abnormal S-phase DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal S-phase DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 synonym: "DNA damage checkpoint defects, S-phase" EXACT [PomBase:mah]
@@ -4453,6 +4453,7 @@ is_a: FYPO:0002737 ! abnormal mitotic cell cycle process
 intersection_of: PATO:0000502
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007091
+relationship: has_output FYPO:0000274 ! increased duration of mitotic M phase
 created_by: midori
 creation_date: 2011-05-09T04:36:10Z
 
@@ -4460,6 +4461,7 @@ creation_date: 2011-05-09T04:36:10Z
 id: FYPO:0000325
 name: abnormal attachment of spindle microtubules to kinetochore
 def: "A cellular process phenotype in which the attachment of spindle microtubules to the kinetochore during a mitotic or meiotic nuclear division is abnormal." [PomBase:mah]
+synonym: "merotelic attachment of spindle microtubules to kinetochore" EXACT [PomBase:mah]
 is_a: FYPO:0000145 ! regulation phenotype
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -8187,7 +8189,6 @@ synonym: "transposable element transposition: absent" EXACT [SGD:phenotype_annot
 synonym: "transposition abolished" EXACT [PomBase:mah]
 synonym: "transposition abolished during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000591 ! abnormal transposition
-intersection_of: PATO:0000001
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0032196
@@ -14324,6 +14325,7 @@ intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0007067
 intersection_of: qualifier PATO:0000461
 relationship: has_part FYPO:0001513 ! normal mitotic sister chromatid segregation
+relationship: has_part FYPO:0004367 ! normal mitotic spindle assembly
 created_by: midori
 creation_date: 2012-04-25T04:16:58Z
 
@@ -28416,17 +28418,14 @@ creation_date: 2013-02-07T11:58:07Z
 id: FYPO:0001947
 name: abnormal cell cycle arrest in mitotic anaphase, with unseparated sister chromatids
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in anaphase under conditions where arrest does not normally occur, and sister chromatids have not separated. The unseparated chromosomes remain condensed." [PomBase:mah]
+comment: This term was made obsolete because a cell with unseparated sister chromatids is by definition in metaphase.
 synonym: "abnormal cell cycle arrest in mitotic anaphase, with unseparated sister chromatids, during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal cell cycle arrest in mitotic anaphase, with unseparated, condensed chromosomes" EXACT [PomBase:mah, PomBase:vw]
 synonym: "abnormal cell cycle arrest in mitotic anaphase, with unseparated, condensed sister chromatids" EXACT [PomBase:mah, PomBase:vw]
 synonym: "abnormal mitotic cell cycle arrest in anaphase, with unseparated sister chromatids" EXACT [PomBase:mah]
 synonym: "absence of chromosome separation, abnormal mitotic anaphase arrest with condensed chromosomes" EXACT [PomBase:vw]
-is_a: FYPO:0000608 ! abnormal cell cycle arrest in mitotic M phase
-is_a: FYPO:0000616 ! abnormal mitotic anaphase progression
-intersection_of: FYPO:0000502 ! abnormally arrested mitotic cell cycle progression
-intersection_of: during GO:0000090
-intersection_of: during GO:0072690
-intersection_of: has_part FYPO:0001946 ! abolished mitotic sister chromatid separation
+is_obsolete: true
+consider: FYPO:0000392
 created_by: midori
 creation_date: 2013-02-07T12:21:22Z
 
@@ -34179,7 +34178,7 @@ creation_date: 2013-07-09T15:19:36Z
 [Term]
 id: FYPO:0002341
 name: increased duration of DNA damage checkpoint
-def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any DNA damage checkpoint is greater than in wild type when the cell is exposed to ultraviolet light." [PomBase:mah]
+def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any DNA damage checkpoint is greater than in wild type." [PomBase:mah]
 synonym: "delayed DNA damage checkpoint deactivation" EXACT [PomBase:mah]
 is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
 intersection_of: PATO:0000498
@@ -38853,7 +38852,7 @@ creation_date: 2013-09-12T13:45:31Z
 [Term]
 id: FYPO:0002651
 name: merotelic kinetochore attachment
-def: "A cellular process phenotype in which the attachment of spindle microtubules to the kinetochore during a mitotic or meiotic nuclear division results in the connection of single kinetochore to both spindle poles." [PMID:21306900]
+def: "A cellular process phenotype in which the attachment of spindle microtubules to the kinetochore during a mitotic or meiotic nuclear division results in the connection of a single kinetochore to both spindle poles." [PMID:17426725, PMID:21306900]
 comment: Also consider 'lagging chromosomes' (FYPO:0002090), because merotelic attachment often causes chromosomes to lag during segregation.
 is_a: FYPO:0000325 ! abnormal attachment of spindle microtubules to kinetochore
 created_by: midori
@@ -39040,6 +39039,7 @@ synonym: "increased level of stress responsive gene transcripts during vegetativ
 synonym: "increased mRNA level of stress responsive genes during vegetative growth" EXACT [PomBase:al]
 synonym: "increased stress responsive gene mRNA accumulation during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+is_a: FYPO:0004363 ! altered level of stress responsive gene mRNA during vegetative growth
 created_by: midori
 creation_date: 2013-09-18T16:06:04Z
 
@@ -62188,7 +62188,7 @@ creation_date: 2015-01-07T15:58:13Z
 id: FYPO:0004259
 name: abolished mitotic G2 DNA damage checkpoint
 def: "A cell cycle checkpoint phenotype in which cell cycle regulation mediated by the mitotic G2 DNA damage checkpoint does not occur under conditions that normally trigger the checkpoint signaling and response. Normally, the mitotic G2 DNA damage checkpoint negatively regulates progression through the G2/M transition of the cell cycle in response to DNA damage." [GO:0007095, PMID:21098122, PomBase:mah]
-is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+is_a: FYPO:0004373 ! abnormal mitotic G2 DNA damage checkpoint
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0007095
@@ -63714,6 +63714,167 @@ intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:1903858
 created_by: midori
 creation_date: 2015-02-02T16:15:35Z
+
+[Term]
+id: FYPO:0004363
+name: altered level of stress responsive gene mRNA during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more messenger RNAs that are normally expressed during a cellular response to stress measured in a cell differs from normal (i.e. is higher or lower than observed in wild-type cells during vegetative growth)." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "abnormal level of stress responsive gene mRNA during vegetative growth" EXACT [PomBase:mah]
+synonym: "altered level of cellular response to stress responsive gene mRNA" EXACT [PomBase:al]
+synonym: "altered level of stress responsive gene mRNA during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "altered level of stress responsive gene transcripts during vegetative growth" EXACT [PomBase:vw]
+synonym: "altered mRNA level of stress responsive genes during vegetative growth" EXACT [PomBase:al]
+synonym: "altered stress responsive gene mRNA accumulation during vegetative growth" RELATED [PomBase:mah]
+is_a: FYPO:0002934 ! altered mRNA level during vegetative growth
+created_by: midori
+creation_date: 2015-02-10T12:15:37Z
+
+[Term]
+id: FYPO:0004364
+name: abnormal dioxygenase activity
+def: "A molecular function phenotype in which the observed rate of a dioxygenase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051213
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-02-10T12:26:02Z
+
+[Term]
+id: FYPO:0004365
+name: abolished dioxygenase activity
+def: "A molecular function phenotype in which a dioxygenase activity is absent." [PomBase:mah]
+synonym: "dioxygenase activity abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000664 ! abolished catalytic activity
+is_a: FYPO:0004364 ! abnormal dioxygenase activity
+intersection_of: PATO:0001558
+intersection_of: towards GO:0051213
+created_by: midori
+creation_date: 2015-02-10T12:26:07Z
+
+[Term]
+id: FYPO:0004366
+name: syntelic kinetochore attachment during mitosis
+def: "A cellular process phenotype in which the attachment of spindle microtubules to the kinetochore during a mitotic nuclear division results in the connection of both sister kinetochores to microtubules from the same spindle pole." [PMID:17426725]
+comment: Syntelic attachment activates the spindle assembly checkpoint, presumably due to lack of tension between the sister chromatids. If uncorrected, syntelic attachment will result in segregation of both sister chromatids to the same daughter cell, generating aneuploidy.
+synonym: "syntelic attachment of spindle microtubules to kinetochore during mitosis" EXACT [PomBase:mah]
+synonym: "syntelic kinetochore attachment during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000325 ! abnormal attachment of spindle microtubules to kinetochore
+created_by: midori
+creation_date: 2015-02-10T12:37:25Z
+
+[Term]
+id: FYPO:0004367
+name: normal mitotic spindle assembly
+def: "A cellular process phenotype in which assembly of the mitotic spindle is normal (i.e. indistinguishable from wild type). Spindle assembly is the aggregation, arrangement and bonding together of a set of components to form the spindle." [PomBase:mah]
+synonym: "normal mitotic spindle assembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal spindle assembly during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051225
+intersection_of: inheres_in GO:0090307
+intersection_of: qualifier PATO:0000461
+relationship: has_output FYPO:0001399 ! normal mitotic spindle
+created_by: midori
+creation_date: 2015-02-10T13:22:16Z
+
+[Term]
+id: FYPO:0004368
+name: normal growth on arsenic
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing an arsenic-containing substance." [PomBase:mah]
+synonym: "normal cell population growth in presence of arsenic" EXACT [PomBase:mah]
+synonym: "normal cell population growth on arsenic" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to arsenic" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal growth on arsenic molecular entity" EXACT [CHEBI:22632]
+synonym: "normal growth on arsenic-containing substance" EXACT [PomBase:mah]
+synonym: "normal vegetative cell population growth on arsenic" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:22632
+created_by: midori
+creation_date: 2015-02-10T13:48:12Z
+
+[Term]
+id: FYPO:0004369
+name: decreased vacuolar phytochelatin level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of phytochelatin measured in the vacuole is lower than normal." [PomBase:mah]
+synonym: "decreased level of phytochelatin in vacuole" EXACT [PomBase:mah]
+synonym: "decreased vacuolar phytochelatin level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased vacuolar phytochelatin level during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced level of phytochelatin in vacuole" EXACT [PomBase:mah]
+synonym: "reduced vacuolar phytochelatin level" EXACT [PomBase:mah]
+is_a: FYPO:0001602 ! decreased level of substance in vacuole
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0000324
+intersection_of: towards CHEBI:60836
+created_by: midori
+creation_date: 2015-02-10T13:57:23Z
+
+[Term]
+id: FYPO:0004370
+name: decreased cadmium ion import into vacuole
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the import of cadmium ions into the vacuole occurs to a lower extent than normal." [GO:0036249, PomBase:mah]
+synonym: "decreased cadmium import into vacuole" EXACT [PomBase:al]
+synonym: "decreased cadmium ion import into vacuole during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased cadmium ion import into vacuole during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced cadmium ion import into vacuole" EXACT [PomBase:mah]
+is_a: FYPO:0001720 ! abnormal transport
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0036249
+created_by: midori
+creation_date: 2015-02-10T14:05:17Z
+
+[Term]
+id: FYPO:0004371
+name: decreased duration of S-phase DNA damage checkpoint
+def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by the S-phase DNA damage checkpoint is lower than in wild type." [PomBase:mah]
+synonym: "decreased duration of intra-S DNA damage checkpoint" EXACT [PomBase:mah]
+synonym: "decreased duration of S-phase DNA damage checkpoint activation" RELATED [PomBase:mah]
+synonym: "decreased duration of S-phase DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased duration of S-phase DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
+synonym: "premature S-phase DNA damage checkpoint deactivation" RELATED [PomBase:mah]
+is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+intersection_of: PATO:0000499
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0031573
+created_by: midori
+creation_date: 2015-02-10T14:07:50Z
+
+[Term]
+id: FYPO:0004372
+name: decreased response to mitotic G2 DNA damage checkpoint signaling
+def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs in response to the mitotic G2 DNA damage checkpoint is decreased.  The mitotic G2 DNA damage checkpoint negatively regulates progression through the G2/M transition of the mitotic cell cycle in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0072435, PomBase:mah]
+synonym: "decreased G2 DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased mitotic G2 DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced response to mitotic G2 DNA damage checkpoint signaling" EXACT [PomBase:mah]
+is_a: FYPO:0004373 ! abnormal mitotic G2 DNA damage checkpoint
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0072435
+created_by: midori
+creation_date: 2015-02-10T14:20:52Z
+
+[Term]
+id: FYPO:0004373
+name: abnormal mitotic G2 DNA damage checkpoint
+def: "A cell cycle checkpoint phenotype in which the mitotic G2 DNA damage checkpoint is abnormal. The mitotic G2 DNA damage checkpoint negatively regulates progression through the G2/M transition of the mitotic cell cycle in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0007095, PomBase:mah]
+synonym: "abnormal G2 DNA damage checkpoint during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "abnormal mitotic cell cycle G2/M transition DNA damage checkpoint" EXACT [GO:0007095]
+synonym: "abnormal mitotic G2 DNA damage checkpoint activation" RELATED [PomBase:mah]
+synonym: "abnormal mitotic G2 DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+intersection_of: PATO:0000001
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0007095
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-02-10T14:21:16Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
