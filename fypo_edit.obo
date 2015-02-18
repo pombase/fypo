@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:02:2015 16:53
+date: 17:02:2015 16:33
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -1915,6 +1915,7 @@ creation_date: 2011-03-29T05:54:40Z
 id: FYPO:0000130
 name: short spindle
 def: "A spindle phenotype in which the spindle is shorter than normal." [PomBase:mah]
+synonym: "decreased spindle length" EXACT [PomBase:mah]
 synonym: "short spindles" EXACT [PomBase:mah]
 synonym: "spindle defects, short spindles" EXACT [PomBase:mah]
 is_a: FYPO:0003607 ! abnormal spindle morphology
@@ -1928,6 +1929,7 @@ id: FYPO:0000131
 name: abnormal mitotic spindle elongation
 def: "A spindle phenotype in which mitotic spindle elongation, i.e. the process of lengthening the distance between poles of the mitotic spindle, is abnormal." [GO:0000022, PomBase:mah]
 synonym: "abnormal mitotic spindle elongation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal spindle elongation during mitosis" EXACT [PomBase:mah]
 synonym: "spindle elongation defects" EXACT [PomBase:mah]
 is_a: FYPO:0001362 ! abnormal cellular process during vegetative growth
 intersection_of: PATO:0000001
@@ -3238,6 +3240,7 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000228
 name: lagging mitotic chromosomes
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which sister chromatids do not move towards the spindle poles at the same time during mitosis, but instead one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has separated. Mitotic sister chromatid segregation may stop before completing separation of chromosomes, or may eventually be completed." [PMID:11809834, PMID:20211136, PomBase:mah]
+comment: Consider also annotating to 'unequal mitotic sister chromatid segregation' (FYPO:0003241) or one of its descendants, because chromosomes that lag at anaphase are often missegregated at telophase.
 synonym: "chromosome segregation defects, lagging mitotic chromosomes" EXACT [PomBase:mah]
 synonym: "lagging chromosomes during vegetative growth" EXACT [PomBase:mah]
 synonym: "lagging mitotic sister chromatids" EXACT [PomBase:mah]
@@ -10058,6 +10061,7 @@ id: FYPO:0000730
 name: long spindle
 def: "A spindle phenotype in which the spindle is longer than normal." [PomBase:mah]
 synonym: "elongated spindle" EXACT [PomBase:mah]
+synonym: "increased spindle length" EXACT [PomBase:mah]
 synonym: "long spindles" EXACT [PomBase:mah]
 is_a: FYPO:0003607 ! abnormal spindle morphology
 intersection_of: PATO:0000573
@@ -10087,9 +10091,11 @@ id: FYPO:0000732
 name: short mitotic spindle
 def: "A spindle phenotype in which the mitotic spindle is shorter than normal." [PomBase:mah]
 comment: Note that short mitotic spindles are usually not parallel to the long axis of the cell, because short spindle formation takes place before spindle orientation is established (see GO:0000132).
+synonym: "decreased mitotic spindle length" EXACT [PomBase:mah]
 synonym: "short bipolar mitotic spindle" EXACT [PomBase:vw]
 synonym: "short mitotic spindle during vegetative growth" EXACT [PomBase:mah]
 synonym: "short mitotic spindles" EXACT [PomBase:mah]
+synonym: "short spindle during mitosis" EXACT [PomBase:mah]
 is_a: FYPO:0000130 ! short spindle
 is_a: FYPO:0001574 ! abnormal bipolar mitotic spindle
 intersection_of: PATO:0000574
@@ -10131,7 +10137,9 @@ creation_date: 2012-01-11T11:30:13Z
 id: FYPO:0000735
 name: short meiotic spindle
 def: "A spindle phenotype in which the meiotic spindle is shorter than normal." [PomBase:mah]
+synonym: "decreased meiotic spindle length" EXACT [PomBase:mah]
 synonym: "short meiotic spindles" EXACT [PomBase:mah]
+synonym: "short spindle during meiosis" EXACT [PomBase:mah]
 is_a: FYPO:0000130 ! short spindle
 is_a: FYPO:0000734 ! abnormal meiotic spindle
 intersection_of: PATO:0000574
@@ -10144,6 +10152,7 @@ id: FYPO:0000736
 name: long meiotic spindle
 def: "A spindle phenotype in which the meiotic spindle is longer than normal." [PomBase:mah]
 synonym: "elongated meiotic spindle" EXACT [PomBase:mah]
+synonym: "increased meiotic spindle length" EXACT [PomBase:mah]
 synonym: "long meiotic spindles" EXACT [PomBase:mah]
 is_a: FYPO:0000730 ! long spindle
 is_a: FYPO:0000734 ! abnormal meiotic spindle
@@ -14349,6 +14358,7 @@ intersection_of: inheres_in GO:0007067
 intersection_of: qualifier PATO:0000461
 relationship: has_part FYPO:0001513 ! normal mitotic sister chromatid segregation
 relationship: has_part FYPO:0004367 ! normal mitotic spindle assembly
+relationship: has_part FYPO:0004396 ! normal mitotic spindle elongation
 created_by: midori
 creation_date: 2012-04-25T04:16:58Z
 
@@ -46513,6 +46523,7 @@ creation_date: 2014-03-05T10:47:49Z
 id: FYPO:0003166
 name: septation following abnormal chromosome segregation, with anucleate cell formation
 def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell undergoes septation despite abnormal chromosome segregation, producing inviable daughter cells, and in which the septum forms in a position that partitions both nuclei into one daughter cell." [PomBase:mah, PomBase:vw]
+comment: Consider also annotating to 'unequal mitotic sister chromatid segregation' (FYPO:0003241) or one of its descendants, because the abnormal chromosome segregation seen in these mutants often separates DNA into unequal portions.
 synonym: "abnormal nuclear segregation" RELATED [PomBase:al]
 synonym: "nuclear missegregation" RELATED [PomBase:al]
 synonym: "septation following abnormal chromosome segregation, with binucleate cell formation" EXACT [PomBase:mah]
@@ -59825,6 +59836,7 @@ creation_date: 2014-12-02T15:32:33Z
 id: FYPO:0004101
 name: lagging mitotic chromosomes, with complete sister chromatid separation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which sister chromatids do not move towards the spindle poles at the same time during mitosis prior to completion of chromosome segregation. Although one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has separated, mitotic sister chromatid segregation does eventually go on to complete separation of chromosomes." [PMID:17561805, PomBase:mah]
+comment: Consider also annotating to 'unequal mitotic sister chromatid segregation' (FYPO:0003241) or one of its descendants, because chromosomes that lag at anaphase are often missegregated at telophase.
 synonym: "chromosome segregation defects, lagging mitotic chromosomes, with complete sister chromatid separation" EXACT [PomBase:mah]
 synonym: "lagging chromosomes, with complete sister chromatid separation, during vegetative growth" EXACT [PomBase:mah]
 synonym: "lagging mitotic chromosomes, with complete chromosome separation" EXACT [PomBase:mah]
@@ -62866,7 +62878,7 @@ synonym: "long bipolar mitotic spindle during metaphase" EXACT [PomBase:vw]
 synonym: "long mitotic spindle during metaphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "long mitotic spindles during metaphase" EXACT [PomBase:mah]
 synonym: "long spindle during metaphase of mitosis" EXACT [PomBase:mah]
-is_a: FYPO:0000730 ! long spindle
+synonym: "long spindle during mitotic metaphase" EXACT [PomBase:mah]
 is_a: FYPO:0000733 ! long mitotic spindle
 intersection_of: PATO:0000573
 intersection_of: exists_during GO:0000089
@@ -64155,6 +64167,344 @@ intersection_of: during GO:0072690
 intersection_of: towards GO:1900264
 created_by: midori
 creation_date: 2015-02-12T16:49:04Z
+
+[Term]
+id: FYPO:0004393
+name: lagging chromosomes during meiosis I
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which homologous chromosomes or sister chromatids do not move towards the spindle poles at the same time during meiosis I, but instead one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has separated. Segregation may stop before completing separation of chromosomes, or may eventually be completed." [PomBase:mah]
+synonym: "lagging chromosomes during first meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
+is_a: FYPO:0002091 ! lagging meiotic chromosomes
+created_by: midori
+creation_date: 2015-02-17T12:22:32Z
+
+[Term]
+id: FYPO:0004394
+name: lagging chromosomes during meiosis II
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which homologous chromosomes or sister chromatids do not move towards the spindle poles at the same time during meiosis II, but instead one or more chromosomes remain distant from the spindle pole after the bulk of the DNA has separated. Segregation may stop before completing separation of chromosomes, or may eventually be completed." [PomBase:mah]
+synonym: "lagging chromosomes during second meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
+is_a: FYPO:0002091 ! lagging meiotic chromosomes
+created_by: midori
+creation_date: 2015-02-17T12:23:19Z
+
+[Term]
+id: FYPO:0004395
+name: short mitotic spindle during metaphase
+def: "A spindle phenotype in which the mitotic spindle is shorter than normal during metaphase." [PomBase:mah]
+synonym: "decreased mitotic spindle length during metaphase" EXACT [PomBase:mah]
+synonym: "short bipolar mitotic spindle during metaphase" EXACT [PomBase:vw]
+synonym: "short mitotic spindle during metaphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "short mitotic spindles during metaphase" EXACT [PomBase:mah]
+synonym: "short spindle during mitotic metaphase" EXACT [PomBase:mah]
+is_a: FYPO:0000732 ! short mitotic spindle
+intersection_of: PATO:0000574
+intersection_of: exists_during GO:0000089
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0072686
+created_by: midori
+creation_date: 2015-02-17T14:17:40Z
+
+[Term]
+id: FYPO:0004396
+name: normal mitotic spindle elongation
+def: "A spindle phenotype in which mitotic spindle elongation, i.e. the process of lengthening the distance between poles of the mitotic spindle, is normal (i.e. indistinguishable from wild type)." [GO:0000022, PomBase:mah]
+synonym: "normal mitotic spindle elongation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal spindle elongation during mitosis" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0000022
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-02-17T14:40:51Z
+
+[Term]
+id: FYPO:0004397
+name: normal protein export from nucleus
+def: "A transport phenotype observed in the vegetative growth phase of the life cycle in which the export of protein from the nucleus is normal (i.e. indistinguishable from wild type). Export of all proteins or a specific protein may be assayed." [PomBase:mah]
+synonym: "normal protein export from nucleus during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal protein export from nucleus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006611
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-02-17T14:47:14Z
+
+[Term]
+id: FYPO:0004398
+name: resistance to phenylarsine oxide
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of phenylarsine oxide than normal." [PomBase:mah]
+synonym: "resistance to phenylarsine oxide during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "resistance to phenylarsine oxide during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to phenylarsine oxide" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:75253
+created_by: midori
+creation_date: 2015-02-17T14:50:01Z
+
+[Term]
+id: FYPO:0004399
+name: normal growth on KT5720
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing the protein kinase inhibitor KT5720." [PomBase:mah]
+synonym: "normal cell population growth in presence of KT5720" EXACT [PomBase:mah]
+synonym: "normal cell population growth on KT5720" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to KT5720" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on KT5720" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+created_by: midori
+creation_date: 2015-02-17T15:03:10Z
+
+[Term]
+id: FYPO:0004400
+name: normal growth on KT5823
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing the protein kinase inhibitor KT5823." [PomBase:mah]
+synonym: "normal cell population growth in presence of KT5823" EXACT [PomBase:mah]
+synonym: "normal cell population growth on KT5823" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to KT5823" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on KT5823" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+created_by: midori
+creation_date: 2015-02-17T15:04:00Z
+
+[Term]
+id: FYPO:0004401
+name: normal growth on KT5926
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing the protein kinase inhibitor KT5926." [PomBase:mah]
+synonym: "normal cell population growth in presence of KT5926" EXACT [PomBase:mah]
+synonym: "normal cell population growth on KT5926" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to KT5926" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on KT5926" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+created_by: midori
+creation_date: 2015-02-17T15:04:37Z
+
+[Term]
+id: FYPO:0004402
+name: sensitive to JM216
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to JM216 (also called satraplatin). Cells stop growing (and may die) at a concentration of JM216 that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to JM216" EXACT [PomBase:mah]
+synonym: "sensitive to JM216 during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to JM216 during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to satraplatin" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2015-02-17T15:19:23Z
+
+[Term]
+id: FYPO:0004403
+name: resistance to JM216
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of JM216 (also called satraplatin) than normal." [PomBase:mah]
+synonym: "resistance to JM216 during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "resistance to JM216 during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to satraplatin" EXACT [PomBase:mah]
+synonym: "resistant to JM216" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+created_by: midori
+creation_date: 2015-02-17T15:31:56Z
+
+[Term]
+id: FYPO:0004404
+name: normal growth on JM216
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing JM216 (also called satraplatin)." [PomBase:mah]
+synonym: "normal cell population growth in presence of JM216" EXACT [PomBase:mah]
+synonym: "normal cell population growth on JM216" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cell population growth on satraplatin" EXACT [PomBase:mah]
+synonym: "normal cellular response to JM216" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on JM216" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+created_by: midori
+creation_date: 2015-02-17T15:32:53Z
+
+[Term]
+id: FYPO:0004405
+name: sensitive to JM335
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to JM335. Cells stop growing (and may die) at a concentration of JM335 that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to JM335" EXACT [PomBase:mah]
+synonym: "sensitive to JM335 during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to JM335 during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2015-02-17T15:40:47Z
+
+[Term]
+id: FYPO:0004406
+name: normal growth on JM335
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing JM335." [PomBase:mah]
+synonym: "normal cell population growth in presence of JM335" EXACT [PomBase:mah]
+synonym: "normal cell population growth on JM335" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to JM335" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on JM335" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+created_by: midori
+creation_date: 2015-02-17T15:42:00Z
+
+[Term]
+id: FYPO:0004407
+name: sensitive to triplatin tetranitrate
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to triplatin tetranitrate (also called BBR 3464). Cells stop growing (and may die) at a concentration of triplatin tetranitrate that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to triplatin tetranitrate" EXACT [PomBase:mah]
+synonym: "sensitive to BBR 3464" EXACT [PomBase:mah]
+synonym: "sensitive to triplatin tetranitrate during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to triplatin tetranitrate during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2015-02-17T15:43:49Z
+
+[Term]
+id: FYPO:0004408
+name: normal growth on triplatin tetranitrate
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing triplatin tetranitrate (also called BBR 3464)." [PomBase:mah]
+synonym: "normal cell population growth in presence of triplatin tetranitrate" EXACT [PomBase:mah]
+synonym: "normal cell population growth on BBR 3464" EXACT [PomBase:mah]
+synonym: "normal cell population growth on triplatin tetranitrate" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to triplatin tetranitrate" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on triplatin tetranitrate" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+created_by: midori
+creation_date: 2015-02-17T15:47:54Z
+
+[Term]
+id: FYPO:0004409
+name: sensitive to tetraplatin
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to tetraplatin. Cells stop growing (and may die) at a concentration of tetraplatin that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to tetraplatin" EXACT [PomBase:mah]
+synonym: "sensitive to tetraplatin during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to tetraplatin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2015-02-17T15:51:03Z
+
+[Term]
+id: FYPO:0004410
+name: normal growth on tetraplatin
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing tetraplatin." [PomBase:mah]
+synonym: "normal cell population growth in presence of tetraplatin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on tetraplatin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to tetraplatin" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on tetraplatin" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+created_by: midori
+creation_date: 2015-02-17T15:52:00Z
+
+[Term]
+id: FYPO:0004411
+name: normal growth on oxaliplatin
+def: "A phenotype in which vegetative cell population growth is normal (i.e. indistinguishable from wild type) in a medium containing oxaliplatin." [PomBase:mah]
+synonym: "normal cell population growth in presence of oxaliplatin" EXACT [PomBase:mah]
+synonym: "normal cell population growth on oxaliplatin" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "normal cellular response to oxaliplatin" RELATED [PomBase:al, PomBase:mah]
+synonym: "normal vegetative cell population growth on oxaliplatin" EXACT [PomBase:mah]
+is_a: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: FYPO:0001357 ! normal vegetative cell population growth
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0000467
+intersection_of: towards CHEBI:31941
+created_by: midori
+creation_date: 2015-02-17T15:52:29Z
+
+[Term]
+id: FYPO:0004412
+name: abolished protein localization to mitotic spindle midzone during anaphase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the mitotic spindle midzone during anaphase does not occur. The mitotic spindle midzone is the area in the center of the mitotic spindle where the spindle microtubules from opposite poles overlap. Anaphase is the stage of mitosis in which chromosomes separate and migrate towards the poles of the spindle." [GO:0000090, GO:1902967, GO:1990023, PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "protein absent from mitotic spindle midzone during anaphase" RELATED [PomBase:mah]
+synonym: "protein localisation to mitotic spindle midzone abolished during anaphase" EXACT [PomBase:mah]
+synonym: "protein localization to mitotic spindle midzone abolished during anaphase" EXACT [PomBase:mah]
+synonym: "protein localization to spindle midzone abolished during anaphase during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
+is_a: FYPO:0002824 ! abnormal protein localization to mitotic spindle
+intersection_of: PATO:0001558
+intersection_of: during GO:0000090
+intersection_of: during GO:0072690
+intersection_of: towards GO:1902967
+created_by: midori
+creation_date: 2015-02-17T16:00:11Z
+
+[Term]
+id: FYPO:0004413
+name: decreased phosphatase activity during cellular response to phosphate starvation
+def: "A molecular function phenotype in which the observed rate of a phosphatase activity is decreased during a cellular response to phosphate starvation" [PomBase:mah]
+synonym: "decreased phosphatase activity during phosphate starvation" EXACT [PomBase:al]
+synonym: "reduced phosphatase activity during cellular response to phosphate starvation" EXACT [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0004302 ! abnormal phosphatase activity
+intersection_of: PATO:0002052
+intersection_of: during GO:0016036
+intersection_of: inheres_in GO:0016791
+created_by: midori
+creation_date: 2015-02-17T16:15:43Z
+
+[Term]
+id: FYPO:0004414
+name: increased phosphatase activity during cellular response to phosphate starvation
+def: "A molecular function phenotype in which the observed rate of a phosphatase activity is increased during a cellular response to phosphate starvation" [PomBase:mah]
+synonym: "increased phosphatase activity during phosphate starvation" EXACT [PomBase:al]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0004302 ! abnormal phosphatase activity
+intersection_of: PATO:0002051
+intersection_of: during GO:0016036
+intersection_of: inheres_in GO:0016791
+created_by: midori
+creation_date: 2015-02-17T16:16:42Z
+
+[Term]
+id: FYPO:0004415
+name: increased phosphatase activity
+def: "A molecular function phenotype in which the observed rate of a phosphatase activity is increased." [PomBase:mah]
+is_a: FYPO:0000663 ! decreased catalytic activity
+is_a: FYPO:0004302 ! abnormal phosphatase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0016791
+created_by: midori
+creation_date: 2015-02-17T16:17:01Z
+
+[Term]
+id: FYPO:0004416
+name: decreased RNA level during cellular response to phosphate starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to phosphate starvation is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "decreased mRNA level during cellular response to phosphate starvation" NARROW [PomBase:mah]
+synonym: "decreased RNA accumulation during cellular response to phosphate starvation" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to phosphate depletion" EXACT [PomBase:vw]
+synonym: "decreased RNA level during cellular response to phosphate deprivation" EXACT [PomBase:vw]
+synonym: "decreased RNA level during cellular response to phosphate starvation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to phosphate starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased RNA level during phosphate starvation" EXACT [PomBase:al]
+synonym: "decreased transcript level during cellular response to phosphate starvation" EXACT [PomBase:vw]
+synonym: "reduced RNA level during cellular response to phosphate starvation" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0016036
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2015-02-17T16:29:12Z
+
+[Term]
+id: FYPO:0004417
+name: normal RNA level during cellular response to phosphate starvation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to phosphate starvation is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "normal mRNA level during cellular response to phosphate starvation" NARROW [PomBase:mah]
+synonym: "normal RNA accumulation during cellular response to phosphate starvation" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to phosphate starvation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal RNA level during cellular response to phosphate starvation during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal RNA level during phosphate starvation" EXACT [PomBase:al]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0016036
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2015-02-17T16:31:11Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
