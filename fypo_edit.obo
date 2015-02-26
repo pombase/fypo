@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 24:02:2015 15:44
+date: 26:02:2015 15:27
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -3172,11 +3172,12 @@ creation_date: 2011-04-19T02:59:38Z
 id: FYPO:0000221
 name: transcription regulation phenotype, adaptive response to loss of mtDNA
 def: "A transcription regulation phenotype observed in the vegetative growth phase of the life cycle in which the transcription of specific genes is regulated in response to the loss of mitochondrial DNA." [PMID:17868468, PomBase:mah]
+comment: This term was made obsolete because it was used only to map a legacy vocabulary term that described expression patterns captured by an expression profiling link.
 synonym: "adaptive expression responses" EXACT [PomBase:mah]
 synonym: "fission yeast transcription regulation phenotype, adaptive response to loss of mtDNA" EXACT [PomBase:mah]
 synonym: "transcription regulation phenotype, adaptive response to loss of mtDNA during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "transcription regulation phenotype, adaptive response to loss of mtDNA during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001335 ! transcription regulation phenotype during vegetative growth
+is_obsolete: true
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -19371,9 +19372,10 @@ creation_date: 2012-08-01T17:33:51Z
 
 [Term]
 id: FYPO:0001344
-name: abnormal DNA replication initiation during vegetative growth
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the initiation of DNA replication is abnormal." [PomBase:mah]
-synonym: "abnormal DNA replication initiation during mitotic cell cycle" RELATED [PomBase:mah]
+name: abnormal mitotic DNA replication initiation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the initiation of nuclear DNA replication is abnormal." [PomBase:mah]
+synonym: "abnormal DNA replication initiation during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "abnormal DNA replication initiation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal DNA-dependent DNA replication initiation during vegetative growth" EXACT [GO:0006270]
 is_a: FYPO:0000176 ! abnormal DNA replication initiation
 is_a: FYPO:0001343 ! abnormal DNA replication during vegetative growth
@@ -39319,6 +39321,7 @@ id: FYPO:0002683
 name: increased sensitivity to chemical
 def: "A phenotype in which cells in a population show decreased resistance to a chemical stimulus. Resistance to a chemical is measured by determining the maximum concentration of the chemical at which a population of cells grow and divide. Typically, cells are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type cells to grow." [PomBase:mah]
 synonym: "resistance to chemicals: decreased" EXACT [SGD:phenotype_annotation]
+synonym: "sensitive to chemical" EXACT [PomBase:mah]
 is_a: FYPO:0000139 ! cell population growth phenotype
 created_by: midori
 creation_date: 2013-09-19T12:14:37Z
@@ -51392,11 +51395,12 @@ creation_date: 2014-07-01T16:51:50Z
 
 [Term]
 id: FYPO:0003498
-name: advanced DNA replication initiation during vegetative growth
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the initiation of DNA replication begins earlier than normal." [PMID:22970243, PomBase:mah]
-synonym: "advanced DNA replication initiation during mitotic cell cycle" RELATED [PomBase:mah]
+name: advanced mitotic DNA replication initiation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the initiation of nuclear DNA replication begins earlier than normal." [PMID:22970243, PomBase:mah]
+synonym: "advanced DNA replication initiation during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "advanced DNA replication initiation during vegetative growth" EXACT [PomBase:mah]
 synonym: "advanced DNA-dependent DNA replication initiation during vegetative growth" EXACT [GO:0006270, PomBase:mah]
-is_a: FYPO:0001344 ! abnormal DNA replication initiation during vegetative growth
+is_a: FYPO:0001344 ! abnormal mitotic DNA replication initiation
 intersection_of: PATO:0000694
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0006270
@@ -65244,6 +65248,162 @@ intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:1990151
 created_by: midori
 creation_date: 2015-02-24T15:41:04Z
+
+[Term]
+id: FYPO:0004469
+name: normal phosphatase activity
+def: "A molecular function phenotype in which the observed rate of a phosphatase activity is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0000660 ! normal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0016791
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-02-26T11:21:01Z
+
+[Term]
+id: FYPO:0004470
+name: decreased protein localization to actomyosin contractile ring during mitotic anaphase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the actomyosin contractile ring is decreased during anaphase of mitosis." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein localisation to actomyosin contractile ring during mitotic anaphase" EXACT [PomBase:mah]
+synonym: "decreased protein localization to actomyosin contractile ring during anaphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased protein localization to actomyosin contractile ring during anaphase of mitosis" EXACT [PomBase:mah]
+synonym: "decreased protein localization to cytokinetic contractile ring during mitotic anaphase" EXACT [PomBase:vw]
+synonym: "reduced protein localization to actomyosin contractile ring during mitotic anaphase" EXACT [PomBase:mah]
+is_a: FYPO:0002560 ! abnormal protein localization to actomyosin contractile ring
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0000090
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1990179
+created_by: midori
+creation_date: 2015-02-26T11:22:18Z
+
+[Term]
+id: FYPO:0004471
+name: protein mislocalized to nucleolus during mitotic telophase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the nucleolus is observed there during telophase of mitosis." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the nucleolus in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to nucleolus during mitotic telophase" EXACT [PomBase:vw]
+synonym: "protein mislocalised to nucleolus during mitotic telophase" EXACT [PomBase:mah]
+synonym: "protein mislocalised to nucleolus during telophase during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nucleolus during mitotic telophase during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nucleolus during telophase of mitosis" EXACT [PomBase:mah]
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0000093
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005730
+created_by: midori
+creation_date: 2015-02-26T11:25:05Z
+
+[Term]
+id: FYPO:0004472
+name: abolished protein localization to cytoplasm with protein mislocalized to nucleolus during cellular response to latrunculin B
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the cytoplasm is abolished, and the protein is instead present in the nucleolus, during a cellular response to latrunculin B." [PMID:18951025, PomBase:al, PomBase:mah]
+synonym: "abolished protein localization to cytoplasm with protein mislocalized to nucleolus during cellular response to latrunculin B during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished protein localization to cytoplasm with protein mislocalized to nucleolus during cellular response to latrunculin B during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein localization to cytoplasm abolished with protein mislocalized to nucleolus during cellular response to latrunculin B" EXACT [PomBase:mah]
+is_a: FYPO:0001179 ! protein localization abolished during vegetative growth
+created_by: midori
+creation_date: 2015-02-26T11:28:29Z
+
+[Term]
+id: FYPO:0004473
+name: inviable after spore germination, without cell division, cell cycle arrest with unreplicated DNA
+def: "A phenotype in which a spore germinates to produce a cell that enters the cell cycle but then undergoes cell cycle arrest with unreplicated DNA, and eventually dies." [PMID:9356477, PomBase:mah]
+synonym: "essential; germinating spore, without cell division, cell cycle arrest with unreplicated DNA" RELATED [PomBase:mah]
+synonym: "inviable following spore germination, without cell division, cell cycle arrest with unreplicated DNA" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, without cell division, cell cycle arrest with unreplicated DNA" EXACT [PomBase:mah]
+is_a: FYPO:0001924 ! inviable after spore germination, without cell division, cell cycle arrest
+intersection_of: FYPO:0000316 ! inviable after spore germination
+intersection_of: has_part FYPO:0001430 ! abnormal mitotic cell cycle arrest with unreplicated DNA
+created_by: midori
+creation_date: 2015-02-26T11:41:02Z
+
+[Term]
+id: FYPO:0004474
+name: normal mitotic cell cycle DNA replication checkpoint
+def: "A cell cycle checkpoint phenotype in which the mitotic cell cycle DNA replication checkpoint is normal (i.e. indistinguishable from wild type). The mitotic DNA replication checkpoint normally prevents the initiation of mitosis until DNA replication is complete." [PomBase:mah]
+synonym: "normal DNA replication checkpoint during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "normal DNA replication checkpoint during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal mitotic DNA replication checkpoint activation" EXACT [PomBase:mah]
+is_a: FYPO:0001703 ! normal mitotic cell cycle checkpoint
+intersection_of: PATO:0000001
+intersection_of: during GO:0072690
+intersection_of: inheres_in GO:0033314
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-02-26T11:44:01Z
+
+[Term]
+id: FYPO:0004475
+name: decreased mitotic DNA replication initiation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the initiation of nuclear DNA replication is decreased. Initiation may be affected at one or moer origins." [PMID:22970243, PomBase:mah]
+synonym: "decreased DNA replication initiation during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "decreased DNA replication initiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased DNA-dependent DNA replication initiation during vegetative growth" EXACT [GO:0006270, PomBase:mah]
+synonym: "reduced mitotic DNA replication initiation" EXACT [PomBase:mah]
+is_a: FYPO:0001344 ! abnormal mitotic DNA replication initiation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006270
+created_by: midori
+creation_date: 2015-02-26T14:29:51Z
+
+[Term]
+id: FYPO:0004476
+name: decreased protein phosphorylation during cellular response to calcium ion
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a lower extent than normal during a cellular response to calcium ions." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased protein phosphorylation during cellular response to calcium" EXACT [PomBase:mah]
+synonym: "decreased protein phosphorylation during cellular response to calcium ion during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased protein phosphorylation during cellular response to calcium ion during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced protein phosphorylation during cellular response to calcium ion" EXACT [PomBase:mah]
+is_a: FYPO:0001838 ! decreased protein phosphorylation during vegetative growth
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0071277
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006468
+created_by: midori
+creation_date: 2015-02-26T14:48:35Z
+
+[Term]
+id: FYPO:0004477
+name: decreased RNA level during cellular response to calcium ion
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to calcium ions is lower than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "decreased RNA accumulation during cellular response to calcium ion" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to calcium" EXACT [PomBase:mah]
+synonym: "decreased RNA level during cellular response to calcium ion during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased RNA level during cellular response to calcium ion during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased transcript level during cellular response to calcium ion" EXACT [PomBase:vw]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+intersection_of: PATO:0001163
+intersection_of: exists_during GO:0071277
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2015-02-26T14:50:10Z
+
+[Term]
+id: FYPO:0004478
+name: protein mislocalized to mitochondrion
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is not normally found in the mitochondrion is observed there." [PomBase:mah]
+comment: Note that this term can be used to annotate any case where a protein is found in the mitochondrion in a mutant, but not in wild type. In some cases, there may be enough additional information to annotate to 'abnormal protein localization' (FYPO:0000443) or one of its descendants. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "ectopic protein localization to mitochondrion" EXACT [PomBase:vw]
+synonym: "protein mislocalised to mitochondrion" EXACT [PomBase:mah]
+synonym: "protein mislocalised to mitochondrion during vegetative growth" EXACT [PomBase:mah]
+synonym: "protein mislocalized to mitochondrion during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "protein mislocalized to mitochondrion during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000782 ! mislocalized protein during vegetative growth
+intersection_of: PATO:0000628
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CHEBI:36080
+intersection_of: towards GO:0005739
+created_by: midori
+creation_date: 2015-02-26T15:24:49Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
