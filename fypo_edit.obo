@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 10:03:2015 11:28
+date: 11:03:2015 16:41
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -46455,7 +46455,7 @@ creation_date: 2014-02-26T17:15:41Z
 [Term]
 id: FYPO:0003160
 name: elongated cell during stationary phase
-def: "A cell morphology phenotype in which cells are longer than normal, i.e. the maximum distance between the cell ends is greater than normal, when the cell is in a culture in stationary phase." [PomBase:mah]
+def: "A cell morphology phenotype in which a cell is longer than normal, i.e. the maximum distance between the cell ends is greater than normal, when the cell is in a culture in stationary phase." [PomBase:mah]
 comment: Note that this term is classified as a type of abnormal cell shape, because wild-type cells are never seen with the proportions (length:width ratio) observed in elongated cells. Small cells, in contrast, have the same proportions as a subset of wild-type cells, and simply do not grow to the full length seen in wild type.
 synonym: "long cell during stationary phase" EXACT [PomBase:mah]
 is_a: FYPO:0000017 ! elongated cell
@@ -46843,7 +46843,6 @@ intersection_of: exists_during GO:0007067
 intersection_of: exists_during GO:0072690
 intersection_of: inheres_in CHEBI:36080
 intersection_of: towards GO:0000235
-relationship: output_of FYPO:0000742 ! abnormal protein localization to actin cortical patch
 created_by: midori
 creation_date: 2014-03-13T11:49:41Z
 
@@ -47750,7 +47749,7 @@ creation_date: 2014-03-28T14:09:33Z
 [Term]
 id: FYPO:0003245
 name: telophase nuclear clustering
-def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the daughter nuclei formed by mitosis cluster in the middle of the cell during telophase. Normally, daughter nuclei move away from the cell division site during mitotic telophase." [PMID:0, PomBase:mah]
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the daughter nuclei formed by mitosis cluster in the middle of the cell during telophase. Normally, daughter nuclei move away from the cell division site during mitotic telophase." [PMID:23087209, PomBase:mah]
 comment: This phenotype may be observed when cytokinesis fails.
 synonym: "daughter nuclei clustered at cell division site during mitotic telophase" EXACT [PomBase:vw]
 synonym: "kissing nuclei" EXACT [PMID:23087209]
@@ -65630,6 +65629,59 @@ synonym: "inviable germinated spore, single cell division, small cell" EXACT [Po
 is_a: FYPO:0002280 ! inviable after spore germination, single cell division
 created_by: midori
 creation_date: 2015-03-10T11:24:28Z
+
+[Term]
+id: FYPO:0004494
+name: inviable branched, swollen, elongated vegetative cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, branched, septated, and has a larger volume and is longer, than normal. In a swollen cell, both length and diameter are greater than normal, although the cell is only considered elongated if the length:width ratio is also greater than normal." [PomBase:jh, PomBase:mah]
+synonym: "inviable branched, elongated, swollen vegetative cell" EXACT [PomBase:vw]
+synonym: "inviable branched, swollen, elongated cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable branched, swollen, elongated vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0001489 ! inviable vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000015 ! branched vegetative cell
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2015-03-11T16:01:12Z
+
+[Term]
+id: FYPO:0004495
+name: inviable branched, swollen, elongated, multiseptate vegetative cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, branched, has more than one septum, and has a larger volume and is longer, than normal. In a swollen cell, both length and diameter are greater than normal, although the cell is only considered elongated if the length:width ratio is also greater than normal." [PomBase:jh, PomBase:mah]
+synonym: "inviable branched, elongated, swollen, multiseptate vegetative cell" EXACT [PomBase:vw]
+synonym: "inviable branched, swollen, elongated, multiseptate cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable branched, swollen, elongated, multiseptate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0001489 ! inviable vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000015 ! branched vegetative cell
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+intersection_of: has_part FYPO:0004295 ! multiseptate cell
+created_by: midori
+creation_date: 2015-03-11T16:04:12Z
+
+[Term]
+id: FYPO:0004496
+name: small multiseptate cell during stationary phase
+def: "A cell morphology phenotype in which a cell is smaller than normal and contains more than one septum, when the cell is in a culture in stationary phase." [PMID:8292390, PomBase:mah]
+is_a: FYPO:0000023 ! small cell
+is_a: FYPO:0004297 ! multiseptate cell in stationary phase
+created_by: midori
+creation_date: 2015-03-11T16:31:01Z
+
+[Term]
+id: FYPO:0004497
+name: small binucleate cell during stationary phase
+def: "A cell morphology phenotype in which a cell is smaller than normal and contains two nuclei, when the cell is in a culture in stationary phase." [PMID:8292390, PomBase:mah]
+is_a: FYPO:0000023 ! small cell
+is_a: FYPO:0003341 ! multinucleate
+created_by: midori
+creation_date: 2015-03-11T16:33:41Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
