@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 16:03:2015 15:26
+date: 24:03:2015 12:33
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -27413,15 +27413,17 @@ creation_date: 2013-01-30T11:46:48Z
 
 [Term]
 id: FYPO:0001876
-name: abnormally symmetric protein localization to mitotic spindle pole bodies during anaphase
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a protein that is normally preferentially localized to either the old or new spindle pole body (SPB) during mitotic anaphase is instead symmetrically localized to both SPBs." [PMID:22119525, PMID:22419817, PMID:24920823, PomBase:mah]
+name: decreased asymmetric protein localization to old or new mitotic spindle pole body during anaphase, with protein symmetrically localized to both spindle pole bodies
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the preferential localization of a protein to either the old or new spindle pole body is decreased during mitotic anaphase, and the protein is instead symmetrically localized to both SPBs." [PMID:22119525, PMID:22419817, PMID:24920823, PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
-synonym: "abnormally symmetric protein localisation to mitotic spindle pole bodies during anaphase" EXACT [PomBase:mah]
 synonym: "abnormally symmetric protein localization to mitotic SPB during anaphase" EXACT [PomBase:mah]
-synonym: "abnormally symmetric protein localization to mitotic spindle pole bodies during anaphase during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormally symmetric protein localization to mitotic spindle pole bodies during anaphase" EXACT [PomBase:mah]
 synonym: "abnormally symmetric protein localization to spindle pole bodies during mitotic anaphase" EXACT [PomBase:mah]
 synonym: "abolished asymmetric protein localization to old or new mitotic SPB" RELATED [PomBase:mah]
-is_a: FYPO:0001874 ! abnormal asymmetric protein localization to old or new mitotic spindle pole body
+synonym: "decreased asymmetric protein localisation to old or new mitotic spindle pole body during anaphase, with protein symmetrically localised to both spindle pole bodies" EXACT [PomBase:mah]
+synonym: "decreased asymmetric protein localization to old or new mitotic spindle pole body during anaphase, with protein symmetrically localized to both spindle pole bodies, during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased asymmetric protein localization to old or new mitotic spindle pole body during mitotic anaphase, with protein symmetrically localized to both spindle pole bodies" EXACT [PomBase:mah]
+is_a: FYPO:0001875 ! decreased asymmetric protein localization to old or new mitotic spindle pole body
 created_by: midori
 creation_date: 2013-01-30T11:47:20Z
 
@@ -48918,7 +48920,7 @@ creation_date: 2014-04-29T13:48:16Z
 [Term]
 id: FYPO:0003327
 name: curved cytoplasmic microtubules
-def: "A microtubule organization phenotype observed in the vegetative growth phase of the life cycle in which cells form cytoplasmic microtubules that are curved, i.e. follow a smooth bend rather than a straight line." [PomBase:mah]
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form cytoplasmic microtubules that are curved, i.e. follow a smooth bend rather than a straight line." [PomBase:mah]
 synonym: "curved cytoplasmic microtubules during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "curved cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
@@ -65876,6 +65878,96 @@ intersection_of: qualifier PATO:0000460
 relationship: has_output FYPO:0000734 ! abnormal meiotic spindle
 created_by: midori
 creation_date: 2015-03-16T14:52:17Z
+
+[Term]
+id: FYPO:0004511
+name: long curved cytoplasmic microtubules
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form cytoplasmic microtubules that are longer than normal and are curved, i.e. follow a smooth bend rather than a straight line." [PomBase:mah]
+synonym: "elongated curved cytoplasmic microtubules" EXACT [PomBase:mah]
+synonym: "long curved cytoplasmic microtubules during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "long curved cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001322 ! abnormal subcellular component during vegetative growth
+intersection_of: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology during vegetative growth
+intersection_of: has_part FYPO:0000233 ! long cytoplasmic microtubules
+intersection_of: has_part FYPO:0003327 ! curved cytoplasmic microtubules
+created_by: midori
+creation_date: 2015-03-24T11:57:56Z
+
+[Term]
+id: FYPO:0004512
+name: sensitive to EGTA
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to EGTA. Cells stop growing (and may die) at a concentration of EGTA that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to EGTA" EXACT [PomBase:mah]
+synonym: "sensitive to EGTA during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to EGTA during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to ethylene glycol bis(2-aminoethyl)tetraacetic acid" EXACT [CHEBI:30740]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:30740
+created_by: midori
+creation_date: 2015-03-24T12:13:26Z
+
+[Term]
+id: FYPO:0004513
+name: resistance to latrunculin A
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of latrunculin A than normal." [PomBase:mah]
+synonym: "resistance to latrunculin A during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "resistance to latrunculin A during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistant to latrunculin A" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:69136
+created_by: midori
+creation_date: 2015-03-24T12:15:08Z
+
+[Term]
+id: FYPO:0004514
+name: viable elongated aseptate cell
+def: "A cell phenotype in which a cell has no septum, is elongated, and is viable." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'inviable cell population' (FYPO:0002059) or one of its descendants.
+synonym: "viable elongated aseptate cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "viable elongated aseptate cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "viable long aseptate cell" EXACT [PomBase:vw]
+is_a: FYPO:0000950 ! elongated aseptate cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000949 ! aseptate
+intersection_of: has_part FYPO:0001491 ! viable vegetative cell
+created_by: midori
+creation_date: 2015-03-24T12:16:09Z
+
+[Term]
+id: FYPO:0004515
+name: abnormal chromosome morphology, indistinct DNA
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which DNA is not visible in a distinct structure corresponding to the nucleus, but is instead diffuse or not visible at all." [PMID:25552606, PomBase:mah]
+is_a: FYPO:0000848 ! abnormal chromosome morphology
+created_by: midori
+creation_date: 2015-03-24T12:26:57Z
+
+[Term]
+id: FYPO:0004516
+name: decreased number of Rad52 foci
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites at which the protein Rad52 (also called Rad22) accumulates is lower than normal." [PMID:22064477, PomBase:mah]
+synonym: "decreased number of Rad22 foci" EXACT [PomBase:mah]
+synonym: "decreased number of Rad52 foci during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased number of Rad52 foci during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+created_by: midori
+creation_date: 2015-03-24T12:28:30Z
+
+[Term]
+id: FYPO:0004517
+name: viable vegetative cell enlarged around nucleus
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is viable and has a diameter larger than normal only near the middle of the cell, around the nucleus." [PMID:25552606, PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
+synonym: "viable cell enlarged around nucleus during vegetative growth" EXACT [PomBase:mah]
+synonym: "viable vegetative cell enlarged around nucleus during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0002197 ! viable vegetative cell with abnormal cell shape
+created_by: midori
+creation_date: 2015-03-24T12:30:06Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
