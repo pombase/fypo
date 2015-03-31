@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 24:03:2015 12:33
+date: 31:03:2015 14:41
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -8539,6 +8539,7 @@ creation_date: 2011-08-16T10:03:01Z
 id: FYPO:0000620
 name: abnormal cell cycle arrest in mitotic metaphase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in metaphase under conditions where arrest does not normally occur." [PomBase:mah]
+comment: Metaphase is defined as the part of mitosis when chromosomes are aligned in the middle of the spindle. If no spindle is present, do not use this term, but consider 'abnormal cell cycle arrest in mitotic prophase' (FYPO:0003145). If you cannot tell whether a spindle is present, or if metaphase cannot be clearly detected, annotate to the more general term 'abnormal cell cycle arrest in mitotic M phase' (FYPO:0000608).
 synonym: "abnormal cell cycle arrest in mitotic metaphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal cell cycle arrest in mitotic metaphase with condensed chromosomes" EXACT [Pombase:vw]
 synonym: "abnormal mitotic cell cycle arrest in metaphase" EXACT [GO:0000089]
@@ -9132,7 +9133,7 @@ creation_date: 2011-11-11T10:46:28Z
 [Term]
 id: FYPO:0000661
 name: abnormal catalytic activity
-def: "A molecular function phenotype in which the observed rate of a specified catalytic activity is abnormal." [PomBase:mah]
+def: "A molecular function phenotype in which the observed rate or other catalytic property of a specified catalytic activity is abnormal." [PomBase:mah]
 is_a: FYPO:0000654 ! catalytic activity phenotype
 is_a: FYPO:0000707 ! abnormal molecular function
 intersection_of: PATO:0000001
@@ -12686,6 +12687,7 @@ creation_date: 2012-03-29T02:42:20Z
 id: FYPO:0000895
 name: mitochondrial aggregation
 def: "An abnormal intracellular mitochondrion distribution phenotype observed in the vegetative growth phase of the life cycle in which mitochondria cluster together more than normal." [PomBase:mah]
+synonym: "aggregated mitochondria" EXACT [PomBase:vw]
 synonym: "mitochondrial aggregation during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "mitochondrial aggregation during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000894 ! abnormal intracellular mitochondrion distribution
@@ -12699,6 +12701,7 @@ creation_date: 2012-03-29T02:45:02Z
 id: FYPO:0000896
 name: mitochondrial aggregation at cell tip
 def: "An abnormal intracellular mitochondrion distribution phenotype observed in the vegetative growth phase of the life cycle in which mitochondria cluster together more than normal, with a cluster at one or both ends of the cell." [PomBase:mah]
+synonym: "aggregated mitochondria at cell tip" EXACT [PomBase:vw]
 synonym: "mitochondrial aggregation at cell tip during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "mitochondrial aggregation at cell tip during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000895 ! mitochondrial aggregation
@@ -30071,8 +30074,8 @@ synonym: "decreased mitochondrial translation during mitotic cell cycle" RELATED
 synonym: "decreased mitochondrial translation during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased rate of mitochondrial protein synthesis" RELATED [PomBase:mah]
 synonym: "reduced mitochondrial translation" EXACT [PomBase:mah]
-is_a: FYPO:0000632 ! mitochondrial translation phenotype
 is_a: FYPO:0001798 ! decreased translation
+is_a: FYPO:0004528 ! abnormal mitochondrial translation
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0032543
@@ -39906,7 +39909,6 @@ def: "A phenotype in which a spore germinates to produce a cell that is longer t
 synonym: "essential; germinating spore, single or double cell division, elongated cell" RELATED [PomBase:mah]
 synonym: "inviable following spore germination, single or double cell division, elongated cell" EXACT [PomBase:mah]
 synonym: "inviable germinated spore, single or double cell division, elongated cell" EXACT [PomBase:mah]
-is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0002421 ! inviable after spore germination, single or double cell division, abnormal cell shape
 created_by: midori
 creation_date: 2013-09-26T14:54:57Z
@@ -56987,6 +56989,7 @@ creation_date: 2014-10-21T15:37:07Z
 id: FYPO:0003897
 name: mitochondrial aggregation at cell tip during cellular response to reactive oxygen species
 def: "An abnormal intracellular mitochondrion distribution phenotype observed in the vegetative growth phase of the life cycle in which mitochondria cluster together more than normal, with a cluster at one or both ends of the cell, during a cellular response to reactive oxygen species." [PomBase:mah]
+synonym: "aggregated mitochondria at cell tip during cellular response to reactive oxygen species" NARROW [PomBase:vw]
 synonym: "mitochondrial aggregation at cell tip during cellular response to reactive oxygen species during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "mitochondrial aggregation at cell tip during cellular response to reactive oxygen species during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitochondrial aggregation at cell tip during cellular response to ROS" EXACT [GO:0034614]
@@ -65968,6 +65971,242 @@ synonym: "viable vegetative cell enlarged around nucleus during mitotic cell cyc
 is_a: FYPO:0002197 ! viable vegetative cell with abnormal cell shape
 created_by: midori
 creation_date: 2015-03-24T12:30:06Z
+
+[Term]
+id: FYPO:0004518
+name: inviable after spore germination, multiple cell divisions, branched, curved, elongated cell
+def: "A phenotype in which a spore germinates to produce a cell that is elongated and branched (and septated) and is curved along the long axis, and undergoes two or more rounds of cell division and then dies." [PomBase:al, PomBase:mah]
+synonym: "essential; germinating spore, multiple cell divisions, branched, curved, elongated cell" RELATED [PomBase:mah]
+synonym: "inviable after spore germination, multiple cell divisions, elongated, curved and branched cell" EXACT [PomBase:al]
+synonym: "inviable following spore germination, multiple cell divisions, branched, curved, elongated cell" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, multiple cell divisions, branched, curved, elongated cell" EXACT [PomBase:mah]
+is_a: FYPO:0002170 ! inviable after spore germination, multiple cell divisions, branched, elongated cell
+created_by: midori
+creation_date: 2015-03-31T12:12:54Z
+
+[Term]
+id: FYPO:0004519
+name: abnormal DNA-directed DNA polymerase activity
+def: "A molecular function phenotype in which the observed rate or other catalytic property of a DNA-directed DNA polymerase activity is abnormal." [PomBase:mah]
+synonym: "abnormal DNA polymerase activity" BROAD [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0003887
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-03-31T12:23:55Z
+
+[Term]
+id: FYPO:0004520
+name: decreased DNA-directed DNA polymerase processivity
+def: "A molecular function phenotype in which the observed processivity of a DNA-directed DNA polymerase activity is abnormal. Processivity refers to the number of nucleotides incorporated into a nascent DNA strand per polymerase-DNA binding event." [DOI:10.1038/npg.els.0001052, PomBase:mah]
+synonym: "decreased DNA polymerase processivity" BROAD [PomBase:mah]
+synonym: "reduced DNA-directed DNA polymerase processivity" EXACT [PomBase:mah]
+is_a: FYPO:0004519 ! abnormal DNA-directed DNA polymerase activity
+created_by: midori
+creation_date: 2015-03-31T12:26:08Z
+
+[Term]
+id: FYPO:0004521
+name: inviable after spore germination, single or double cell division, branched, elongated cell
+def: "A phenotype in which a spore germinates to produce a cell that is elongated and branched (and septated), and undergoes one or two rounds of cell division and then dies." [PomBase:mah]
+synonym: "essential; germinating spore, single or double cell division, branched, elongated cell" RELATED [PomBase:mah]
+synonym: "inviable after spore germination, single or double cell division, elongated and branched cell" EXACT [PomBase:al]
+synonym: "inviable following spore germination, single or double cell division, branched, elongated cell" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, single or double cell division, branched, elongated cell" EXACT [PomBase:mah]
+is_a: FYPO:0002724 ! inviable after spore germination, single or double cell division, elongated cell
+created_by: midori
+creation_date: 2015-03-31T13:05:06Z
+
+[Term]
+id: FYPO:0004522
+name: inviable after spore germination, single or double cell division, branched, curved, elongated cell
+def: "A phenotype in which a spore germinates to produce a cell that is elongated and branched (and septated) and is curved along the long axis, and undergoes one or two rounds of cell division and then dies." [PomBase:mah]
+synonym: "essential; germinating spore, single or double cell division, branched, curved, elongated cell" RELATED [PomBase:mah]
+synonym: "inviable after spore germination, single or double cell division, elongated, curved and branched cell" EXACT [PomBase:al]
+synonym: "inviable following spore germination, single or double cell division, branched, curved, elongated cell" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, single or double cell division, branched, curved, elongated cell" EXACT [PomBase:mah]
+is_a: FYPO:0004521 ! inviable after spore germination, single or double cell division, branched, elongated cell
+is_a: FYPO:0004523 ! inviable after spore germination, single or double cell division, curved, elongated cell
+created_by: midori
+creation_date: 2015-03-31T13:05:36Z
+
+[Term]
+id: FYPO:0004523
+name: inviable after spore germination, single or double cell division, curved, elongated cell
+def: "A phenotype in which a spore germinates to produce a cell that is elongated and is curved along the long axis, and undergoes one or two rounds of cell division and then dies." [PomBase:mah]
+synonym: "essential; germinating spore, single or double cell division, curved, elongated cell" RELATED [PomBase:mah]
+synonym: "inviable after spore germination, single or double cell division, elongated and curved cell" EXACT [PomBase:al]
+synonym: "inviable following spore germination, single or double cell division, curved, elongated cell" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, single or double cell division, curved, elongated cell" EXACT [PomBase:mah]
+is_a: FYPO:0002724 ! inviable after spore germination, single or double cell division, elongated cell
+created_by: midori
+creation_date: 2015-03-31T13:06:12Z
+
+[Term]
+id: FYPO:0004524
+name: decreased number of Rad54 foci during cellular response to doxorubicin
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites at which the protein Rad54 (also called Rhp54) accumulates is lower than normal." [PMID:25701403, PomBase:mah]
+synonym: "decreased number of Rad54 foci during cellular response to doxorubicin during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased number of Rad54 foci during cellular response to doxorubicin during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased number of Rhp54 foci during cellular response to doxorubicin" EXACT [PomBase:mah]
+is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+created_by: midori
+creation_date: 2015-03-31T13:20:50Z
+
+[Term]
+id: FYPO:0004525
+name: abnormal membrane organization during conjugation
+def: "A cellular process phenotype in which cellular membrane organization is abnormal during mating." [PomBase:mah]
+synonym: "abnormal cellular membrane organization during conjugation" EXACT [GO:0061024, PomBase:mah]
+synonym: "abnormal membrane organisation during conjugation" EXACT [PomBase:mah]
+synonym: "abnormal membrane organization during conjugation with cellular fusion" EXACT [GO:0000747]
+synonym: "abnormal membrane organization during mating" EXACT [PomBase:mah]
+is_a: FYPO:0001013 ! abnormal membrane organization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0000747
+intersection_of: inheres_in GO:0061024
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-03-31T13:30:32Z
+
+[Term]
+id: FYPO:0004526
+name: abnormal regulation of transcription
+def: "A transcription regulation phenotype in which any process of regulation of transcription is abnormal." [PomBase:mah]
+synonym: "abnormal regulation of cellular transcription, DNA-dependent" EXACT [GO:0006355, PomBase:mah]
+synonym: "abnormal regulation of gene-specific transcription" RELATED [GO:006355, PomBase:mah]
+synonym: "abnormal regulation of transcription, DNA-dependent" EXACT [GO:0006355, PomBase:mah]
+is_a: FYPO:0000143 ! transcription regulation phenotype
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0044838
+intersection_of: inheres_in GO:0006355
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-03-31T13:35:07Z
+
+[Term]
+id: FYPO:0004527
+name: abnormal regulation of transcription during vegetative growth
+def: "A transcription regulation phenotype in which any process of regulation of transcription is abnormal in the vegetative growth phase of the life cycle." [PomBase:mah]
+synonym: "abnormal regulation of cellular transcription, DNA-dependent during vegetative growth" EXACT [GO:0006355, PomBase:mah]
+synonym: "abnormal regulation of gene-specific transcription during vegetative growth" RELATED [GO:006355, PomBase:mah]
+synonym: "abnormal regulation of transcription during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal regulation of transcription, DNA-dependent during vegetative growth" EXACT [GO:0006355, PomBase:mah]
+is_a: FYPO:0004526 ! abnormal regulation of transcription
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0044838
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006355
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-03-31T13:37:24Z
+
+[Term]
+id: FYPO:0004528
+name: abnormal mitochondrial translation
+def: "A metabolism phenotype observed in the vegetative growth phase of the life cycle in which mitochondrial translation is abnormal." [PomBase:mah]
+comment: Note that this term should be used only when an experiment measures protein synthesis directly, e.g. by measuring incorporation of a radiolabeled amino acid. Consider annotating to 'altered protein level' (FYPO:0000834) or one of its descendants.
+synonym: "abnormal mitochondrial protein biosynthesis" EXACT [GO:0032543]
+synonym: "abnormal mitochondrial protein synthesis" EXACT [GO:0032543]
+synonym: "abnormal mitochondrial translation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal mitochondrial translation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000632 ! mitochondrial translation phenotype
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0032543
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-03-31T13:41:31Z
+
+[Term]
+id: FYPO:0004529
+name: normal mitochondrial translation
+def: "A metabolism phenotype observed in the vegetative growth phase of the life cycle in which mitochondrial translation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+comment: Note that this term should be used only when an experiment measures protein synthesis directly, e.g. by measuring incorporation of a radiolabeled amino acid.
+synonym: "normal mitochondrial protein biosynthesis" EXACT [GO:0032543]
+synonym: "normal mitochondrial protein synthesis" EXACT [GO:0032543]
+synonym: "normal mitochondrial translation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal mitochondrial translation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0032543
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-03-31T13:46:55Z
+
+[Term]
+id: FYPO:0004530
+name: abolished mitochondrial translation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which mitochondrial translation does not occur." [PomBase:mah]
+comment: Note that this term should be used only when an experiment measures mitochondrial protein synthesis directly, e.g. by measuring incorporation of a radiolabeled amino acid. Consider annotating to 'decreased protein level' (FYPO:0000835) or one of its descendants.
+synonym: "abolished mitochondrial protein biosynthesis" EXACT [GO:0032543]
+synonym: "abolished mitochondrial protein synthesis" EXACT [GO:0032543]
+synonym: "abolished mitochondrial translation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished mitochondrial translation during vegetative growth" EXACT [PomBase:mah]
+synonym: "mitochondrial translation abolished" EXACT [PomBase:mah]
+is_a: FYPO:0004528 ! abnormal mitochondrial translation
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0032543
+created_by: midori
+creation_date: 2015-03-31T13:47:36Z
+
+[Term]
+id: FYPO:0004531
+name: inviable after spore germination, single or double cell division, small cell
+def: "A phenotype in which a spore germinates to produce a cell that is smaller than normal and undergoes one or two rounds of cell division." [PomBase:mah]
+synonym: "essential; germinating spore, single or double cell division, small cell" RELATED [PomBase:mah]
+synonym: "inviable following spore germination, single or double cell division, small cell" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, single cell or double division, small cell" EXACT [PomBase:mah]
+is_a: FYPO:0001042 ! inviable after spore germination, single or double cell division
+created_by: midori
+creation_date: 2015-03-31T13:52:55Z
+
+[Term]
+id: FYPO:0004532
+name: abnormal cell cycle arrest in mitotic metaphase with abnormal spindle
+def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in metaphase under conditions where arrest does not normally occur, and the position or morphology of the mitotic spindle is abnormal." [PomBase:mah]
+comment: Metaphase is defined as the part of mitosis when chromosomes are aligned in the middle of the spindle. If no spindle is present, do not use this term, but consider 'abnormal cell cycle arrest in mitotic prophase' (FYPO:0003145). If you cannot tell whether a spindle is present, or if metaphase cannot be clearly detected, annotate to the more general term 'abnormal cell cycle arrest in mitotic M phase' (FYPO:0000608).
+synonym: "abnormal cell cycle arrest in mitotic metaphase with abnormal mitotic spindle" EXACT [PomBase:mah]
+synonym: "abnormal cell cycle arrest in mitotic metaphase with abnormal spindle during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal cell cycle arrest in mitotic metaphase with condensed chromosomes and abnormal spindle" EXACT [Pombase:vw]
+synonym: "abnormal mitotic cell cycle arrest in metaphase with abnormal spindle" EXACT [GO:0000089]
+is_a: FYPO:0000620 ! abnormal cell cycle arrest in mitotic metaphase
+intersection_of: FYPO:0001320 ! vegetative cell phenotype
+intersection_of: has_part FYPO:0000620 ! abnormal cell cycle arrest in mitotic metaphase
+intersection_of: has_part FYPO:0000338 ! abnormal mitotic spindle
+created_by: midori
+creation_date: 2015-03-31T14:23:17Z
+
+[Term]
+id: FYPO:0004533
+name: normal cell wall beta-glucan level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of beta-D-glucan measured in the cell wall is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal cell wall beta-D-glucan level" EXACT [CHEBI:28793, PomBase:mah]
+synonym: "normal cell wall beta-glucan accumulation" RELATED [PomBase:mah]
+synonym: "normal cell wall beta-glucan level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal cell wall beta-glucan level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001316 ! normal level of substance in cell during vegetative growth
+intersection_of: PATO:0001159
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0009277
+intersection_of: qualifier PATO:0000461
+intersection_of: towards CHEBI:28793
+created_by: midori
+creation_date: 2015-03-31T14:37:09Z
+
+[Term]
+id: FYPO:0004534
+name: premature ascospore release from ascus
+def: "A cellular process phenotype in which the occurrence of ascospore release from an ascus begins earlier than normal." [GO:0071998, PMID:16751704, PomBase:mah]
+synonym: "accelerated ascospore release from ascus" RELATED [PomBase:al]
+is_a: FYPO:0004272 ! abnormal ascospore release from ascus
+intersection_of: PATO:0000694
+intersection_of: inheres_in GO:0071998
+created_by: midori
+creation_date: 2015-03-31T14:39:36Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
