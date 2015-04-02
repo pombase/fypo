@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 31:03:2015 14:41
+date: 02:04:2015 15:34
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -2925,11 +2925,13 @@ id: FYPO:0000202
 name: abnormal regulation of cytokinetic cell separation
 def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which regulation of cytokinetic cell separation is abnormal." [PomBase:mah]
 synonym: "abnormal regulation of cytokinetic cell separation during vegetative growth" EXACT [PomBase:mah]
-synonym: "abnormal regulation of mitotic cytokinetic cell separation" EXACT [GO:1902467, PomBase:mah]
+synonym: "abnormal regulation of cell separation after cytokinesis" EXACT [GO:0010590, PomBase:mah]
+synonym: "abnormal regulation of cell separation following cytokinesis" EXACT [GO:0010590, PomBase:mah]
+synonym: "abnormal regulation of mitotic cytokinetic cell separation" EXACT [GO:0010590, PomBase:mah]
 is_a: FYPO:0001334 ! regulation phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO:1902467
+intersection_of: inheres_in GO:0010590
 intersection_of: qualifier PATO:0000460
 created_by: midori
 creation_date: 2011-04-13T03:41:10Z
@@ -42356,7 +42358,7 @@ creation_date: 2013-11-19T13:34:36Z
 [Term]
 id: FYPO:0002892
 name: normal heterochromatin organization during vegetative growth
-def: "A cellular process phenotype in which any process of heterochromatin organization is normal (i.e. indistinguishable from wild type) in the vegetative growth phase of the life cycle. Heterochromatin organization results in the specification, formation or maintenance of the physical structure of eukaryotic heterochromatin, a compact and highly condensed form of chromatin." [GO:0006325, PomBase:mah]
+def: "A cellular process phenotype in which any process of heterochromatin organization is normal (i.e. indistinguishable from wild type) in the vegetative growth phase of the life cycle. Heterochromatin organization results in the specification, formation or maintenance of the physical structure of eukaryotic heterochromatin, a compact and highly condensed form of chromatin." [GO:0070828, PomBase:mah]
 synonym: "normal heterochromatin organisation during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal heterochromatin organization during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
@@ -50454,6 +50456,7 @@ name: short cytoplasmic microtubules present in decreased numbers
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell contains fewer, and shorter, cytoplasmic microtubules than normal." [PomBase:mah]
 synonym: "short cytoplasmic microtubules present in decreased numbers during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "short cytoplasmic microtubules present in decreased numbers during vegetative growth" EXACT [PomBase:mah]
+synonym: "short cytoplasmic microtubules present in reduced numbers" EXACT [PomBase:mah]
 is_a: FYPO:0002760 ! short cytoplasmic microtubules
 intersection_of: FYPO:0000002 ! cell phenotype
 intersection_of: has_part FYPO:0002760 ! short cytoplasmic microtubules
@@ -59278,7 +59281,7 @@ synonym: "decreased UV-damage excision repair during mitotic G1 during vegetativ
 synonym: "reduced UV-damage excision repair during mitotic G1 phase" EXACT [PomBase:mah]
 is_a: FYPO:0000188 ! abnormal DNA repair
 intersection_of: PATO:0002052
-intersection_of: happens_during GO:0000081
+intersection_of: happens_during GO:0000080
 intersection_of: happens_during GO:0072690
 intersection_of: inheres_in GO:0070914
 created_by: midori
@@ -61735,7 +61738,7 @@ synonym: "reduced histone H4-K20 trimethylation" EXACT [PomBase:mah]
 is_a: FYPO:0004215 ! abnormal histone H4-K20 methylation
 intersection_of: PATO:0002052
 intersection_of: happens_during GO:0072690
-intersection_of: inheres_in GO0034773
+intersection_of: inheres_in GO:0034773
 created_by: midori
 creation_date: 2014-12-19T15:22:07Z
 
@@ -65679,8 +65682,10 @@ creation_date: 2015-03-11T16:04:12Z
 id: FYPO:0004496
 name: small multiseptate cell during stationary phase
 def: "A cell morphology phenotype in which a cell is smaller than normal and contains more than one septum, when the cell is in a culture in stationary phase." [PMID:8292390, PomBase:mah]
-is_a: FYPO:0000023 ! small cell
 is_a: FYPO:0004297 ! multiseptate cell in stationary phase
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000023 ! small cell
+intersection_of: has_part FYPO:0004297 ! multiseptate cell in stationary phase
 created_by: midori
 creation_date: 2015-03-11T16:31:01Z
 
@@ -65860,7 +65865,7 @@ is_a: FYPO:0001889 ! RNA absent from cell
 is_a: FYPO:0002935 ! decreased mRNA level during vegetative growth
 intersection_of: PATO:0002000
 intersection_of: during GO:0072690
-intersection_of: inheres_in GO:0005739
+intersection_of: inheres_in CL:0000000
 intersection_of: towards SO:0000234
 created_by: midori
 creation_date: 2015-03-16T14:41:10Z
@@ -66175,8 +66180,8 @@ synonym: "abnormal cell cycle arrest in mitotic metaphase with condensed chromos
 synonym: "abnormal mitotic cell cycle arrest in metaphase with abnormal spindle" EXACT [GO:0000089]
 is_a: FYPO:0000620 ! abnormal cell cycle arrest in mitotic metaphase
 intersection_of: FYPO:0001320 ! vegetative cell phenotype
-intersection_of: has_part FYPO:0000620 ! abnormal cell cycle arrest in mitotic metaphase
 intersection_of: has_part FYPO:0000338 ! abnormal mitotic spindle
+intersection_of: has_part FYPO:0000620 ! abnormal cell cycle arrest in mitotic metaphase
 created_by: midori
 creation_date: 2015-03-31T14:23:17Z
 
@@ -66207,6 +66212,177 @@ intersection_of: PATO:0000694
 intersection_of: inheres_in GO:0071998
 created_by: midori
 creation_date: 2015-03-31T14:39:36Z
+
+[Term]
+id: FYPO:0004535
+name: inviable small spore with abnormal shape
+def: "A viability phenotype in which a spore is unable to survive under conditions in which wild type spores survive, and has a smaller volume than normal and an abnormal shape. An inviable spore does not germinate." [PomBase:mah]
+synonym: "inviable small abnormally shaped spore" EXACT [PomBase:mah]
+synonym: "inviable small spore with abnormal morphology" EXACT [PomBase:mah]
+synonym: "inviable spore with decreased size and abnormal shape" RELATED [PomBase:vw]
+synonym: "inviable spore with decreased spore size and abnormal shape" RELATED [PomBase:vw]
+synonym: "inviable spore with decreased spore volume and abnormal shape" EXACT [PomBase:mah]
+synonym: "inviable spore with decreased volume and abnormal shape" EXACT [PomBase:mah]
+synonym: "spore germination abolished, small misshapen spores" RELATED [PomBase:mah]
+synonym: "spore germination abolished, small spore with abnormal shape" RELATED [PomBase:mah]
+synonym: "spore germination abolished, spore with abnormal shape and decreased cell size" RELATED [PomBase:vw]
+synonym: "spore germination abolished, spore with abnormal shape and decreased cell volume" EXACT [PomBase:mah]
+is_a: FYPO:0000307 ! inviable small spore
+is_a: FYPO:0002427 ! inviable spore with abnormal shape
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0000346 ! small spores
+intersection_of: has_part FYPO:0001126 ! abnormal cell shape
+intersection_of: has_part FYPO:0002151 ! inviable spore
+created_by: midori
+creation_date: 2015-04-02T13:48:30Z
+
+[Term]
+id: FYPO:0004536
+name: abnormal response to mitotic cell cycle spindle assembly checkpoint signaling
+def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs in response to mitotic cell cycle spindle assembly checkpoint signaling is abnormal (does not occur, or occurs abnormally). Abnormal arrest may result from a problem with detection of conditions that normally trigger a checkpoint, transduction of the checkpoint signal, or the response to the checkpoint signal." [PomBase:mah]
+synonym: "abnormal mitotic cell cycle spindle assembly checkpoint arrest" RELATED [PomBase:mah]
+synonym: "abnormal occurrence of mitotic cell cycle arrest resulting from spindle assembly checkpoint activation" RELATED [PomBase:mah]
+synonym: "abnormal occurrence of mitotic cell cycle arrest resulting from spindle assembly defective checkpoint activation" RELATED [PomBase:vw]
+synonym: "abnormal response to mitotic spindle assembly checkpoint signaling" EXACT [PomBase:mah]
+is_a: FYPO:0001026 ! abnormal occurrence of normal mitotic cell cycle arrest
+is_a: FYPO:0002517 ! abnormal response to mitotic cell cycle checkpoint signaling
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0072476
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-04-02T14:00:45Z
+
+[Term]
+id: FYPO:0004537
+name: mitotic spindle assembly checkpoint override
+def: "A cell cycle phenotype in which the septation initiation network (SIN) signaling pathway is activated despite activation of the mitotic spindle assembly checkpoint (SAC). Normally, under conditions that activate the SAC, SIN activation is inhibited and the cell cycle arrests in anaphase. In this phenotype, premature SIN activation leads to premature cytokinesis and the formation of cut cells." [PMID:11952833, PomBase:mah, PomBase:vw]
+synonym: "mitotic cell cycle spindle assembly checkpoint override" EXACT [PomBase:mah]
+synonym: "mitotic SAC override" EXACT [PomBase:mah]
+synonym: "septation initiation signaling activation in presence of active mitotic spindle assembly checkpoint" EXACT [PomBase:mah]
+synonym: "SIN activation in presence of active mitotic SAC" EXACT [PomBase:mah]
+is_a: FYPO:0004536 ! abnormal response to mitotic cell cycle spindle assembly checkpoint signaling
+relationship: has_output FYPO:0003165 ! cut
+relationship: has_output FYPO:0003250 ! premature septation
+created_by: midori
+creation_date: 2015-04-02T14:10:40Z
+
+[Term]
+id: FYPO:0004538
+name: microtubules present in greater numbers
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells contain more microtubules than normal." [PomBase:mah]
+synonym: "increased level of MTs" EXACT [PomBase:mah]
+synonym: "microtubules present in decreased numbers" EXACT [PomBase:mah]
+is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
+intersection_of: PATO:0002002
+intersection_of: exists_during GO:0072690
+intersection_of: towards GO:0005874
+created_by: midori
+creation_date: 2015-04-02T14:31:19Z
+
+[Term]
+id: FYPO:0004539
+name: short cytoplasmic microtubules present in greater numbers
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell contains more, and shorter, cytoplasmic microtubules than normal." [PomBase:mah]
+synonym: "broken cytoplasmic microtubules" RELATED [PomBase:vw]
+synonym: "short cytoplasmic microtubules present in greater numbers during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "short cytoplasmic microtubules present in greater numbers during vegetative growth" EXACT [PomBase:mah]
+synonym: "short cytoplasmic microtubules present in increased numbers" EXACT [PomBase:mah]
+is_a: FYPO:0002760 ! short cytoplasmic microtubules
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: has_part FYPO:0002760 ! short cytoplasmic microtubules
+intersection_of: has_part FYPO:0004538 ! microtubules present in greater numbers
+created_by: midori
+creation_date: 2015-04-02T14:32:10Z
+
+[Term]
+id: FYPO:0004540
+name: increased chromatin silencing
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of chromatin silencing is increased." [PomBase:mah]
+synonym: "increased chromatin silencing during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased chromatin silencing during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000144 ! abnormal chromatin silencing
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006342
+created_by: midori
+creation_date: 2015-04-02T15:08:22Z
+
+[Term]
+id: FYPO:0004541
+name: increased chromatin silencing at centromere inner repeat
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of chromatin silencing at centromere inner repeat regions is increased." [PomBase:mah]
+synonym: "increased chromatin silencing at centromere imr" EXACT [PomBase:mah]
+synonym: "increased chromatin silencing at centromere inner repeat during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased chromatin silencing at centromere inner repeat during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased chromatin silencing at centromeric inner repeat region" EXACT [PomBase:mah]
+synonym: "increased heterochromatin silencing at centromere inner repeat" EXACT [PomBase:mah]
+is_a: FYPO:0004540 ! increased chromatin silencing
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0030702
+intersection_of: occurs_at SO:0001798
+created_by: midori
+creation_date: 2015-04-02T15:08:31Z
+
+[Term]
+id: FYPO:0004542
+name: increased chromatin silencing at telomere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of chromatin silencing at telomeric regions is increased." [PomBase:mah]
+synonym: "increased chromatin silencing at telomere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased chromatin silencing at telomere during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0004540 ! increased chromatin silencing
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006348
+created_by: midori
+creation_date: 2015-04-02T15:08:36Z
+
+[Term]
+id: FYPO:0004543
+name: abnormal heterochromatin organization during vegetative growth
+def: "A cellular process phenotype in which any process of heterochromatin organization is abnormal in the vegetative growth phase of the life cycle. Heterochromatin organization results in the specification, formation or maintenance of the physical structure of eukaryotic heterochromatin, a compact and highly condensed form of chromatin." [GO:0070828, PomBase:mah]
+synonym: "abnormal heterochromatin organisation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal heterochromatin organization during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0000642 ! abnormal chromatin organization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0070828
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-04-02T15:13:19Z
+
+[Term]
+id: FYPO:0004544
+name: increased duration of heterochromatin maintenance
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the duration of heterochromatin maintenance is increased. Heterochromatin maintenance is the process that preserves heterochromatin in a stable functional or structural state." [GO:0070829, PomBase:mah]
+synonym: "increased duration of heterochromatin maintenance during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased duration of heterochromatin maintenance during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0004543 ! abnormal heterochromatin organization during vegetative growth
+intersection_of: PATO:0000498
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0070829
+created_by: midori
+creation_date: 2015-04-02T15:14:36Z
+
+[Term]
+id: FYPO:0004545
+name: decreased proteasomal ubiquitin-dependent protein degradation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of ubiquitin-dependent protein degradation via the N-end rule pathway is decreased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "decreased proteasomal ubiquitin-dependent protein breakdown" EXACT [GO:0043161]
+synonym: "decreased proteasomal ubiquitin-dependent protein catabolic process" EXACT [GO:0043161, PomBase:mah]
+synonym: "decreased proteasomal ubiquitin-dependent protein catabolism" EXACT [GO:0043161, PomBase:mah]
+synonym: "decreased proteasomal ubiquitin-dependent protein degradation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased proteasomal ubiquitin-dependent protein degradation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased proteasome-mediated ubiquitin-dependent protein catabolic process" EXACT [GO:0043161]
+synonym: "reduced proteasomal ubiquitin-dependent protein degradation" EXACT [PomBase:mah]
+is_a: FYPO:0000845 ! abnormal protein degradation during vegetative growth
+is_a: FYPO:0002797 ! decreased protein degradation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043161
+created_by: midori
+creation_date: 2015-04-02T15:25:01Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
