@@ -29,7 +29,7 @@ property_value: local_domain FYPO:0000001 ! phenotype
 [Typedef]
 id: assayed_using
 name: assayed_using
-def: "Relation between a phenotype and a substrate, such as a gene product, with which the phenotype was assayed." [PomBase:mah]
+def: "Relation between a phenotype and an entity, such as a gene product that acts as an enzyme or substrate, with which the phenotype was assayed." [PomBase:mah]
 comment: Frequently used example: normal or abnormal protein localization assayed_using PomBase:SPBC11B10.09
 property_value: local_domain FYPO:0000001 ! phenotype
 
@@ -39,3 +39,17 @@ name: occurs_in
 def: "p occurs_in c if and only if all of the participants of p are part_of c." [BFO:cjm]
 xref: BFO:0000066
 property_value: local_domain FYPO:0000300 ! biological process phenotype
+
+[Typedef]
+id: assayed_enzyme
+name: assayed_enzyme
+def: "Relation between a catalytic activity phenotype and an enzyme, such as a gene product, with which the phenotype was assayed." [PomBase:mah]
+comment: normal or abnormal protein kinase activity assayed_enzyme PomBase:SPBC11B10.09
+property_value: local_domain FYPO:0000654 ! catalytic activity phenotype
+
+[Typedef]
+id: assayed_substrate
+name: assayed_substrate
+def: "Relation between a catalytic activity phenotype and a substrate, such as a gene product, with which the phenotype was assayed." [PomBase:mah]
+comment: normal or abnormal protein kinase activity assayed_substrate PomBase:SPBC11B10.09
+property_value: local_domain FYPO:0000654 ! catalytic activity phenotype
