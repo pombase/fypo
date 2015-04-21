@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 14:04:2015 16:53
+date: 21:04:2015 15:32
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -1078,7 +1078,7 @@ synonym: "resistant to caffeine" EXACT [PomBase:mah]
 is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
 intersection_of: PATO:0001552
 intersection_of: inheres_in GO:0072690
-intersection_of: towards CHEBI:27732
+intersection_of: towards CHEBI:
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -1171,14 +1171,26 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000080
-name: sensitive to cold
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to cold; cells fail to grow or grow more slowly than normal at low temperatures." [PomBase:mah]
-synonym: "cold sensitive" EXACT [PomBase:mah]
-synonym: "cold sensitivity: increased" EXACT [SGD:phenotype_annotation]
-synonym: "hypersensitive to cold" EXACT [PomBase:mah]
+name: decreased cell population growth at low temperature
+alt_id: FYPO:0002175
+def: "A vegetative cell population growth phenotype in which cell growth is decreased relative to normal at a low temperature." [PomBase:mah]
+comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise. For fission yeast, low temperature usually corresponds to below 25 degrees Celsius.
+synonym: "cold sensitive" RELATED [PomBase:mah]
+synonym: "cold sensitivity: increased" RELATED [SGD:phenotype_annotation]
+synonym: "decreased growth at low temperature" BROAD [PomBase:mah]
+synonym: "decreased vegetative cell population growth at low temperature" EXACT [PomBase:mah]
+synonym: "growth defect, slow growth at low temperatures" RELATED [PomBase:mah]
+synonym: "hypersensitive to cold" RELATED [PomBase:mah]
+synonym: "reduced growth at low temperature" RELATED [PomBase:mah]
+synonym: "sensitive to cold" RELATED [PomBase:mah]
 synonym: "sensitive to cold during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "sensitive to cold during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000304 ! sensitive to stress during vegetative growth
+synonym: "slow growth at low temperature" RELATED [PomBase:mah]
+is_a: FYPO:0001355 ! decreased vegetative cell population growth
+intersection_of: FYPO:0000046 ! decreased cell population growth
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in BTO:0000316
+intersection_of: qualifier PATO:0001306
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -1429,11 +1441,10 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000097
-name: sensitive to caffeine
+name: sensitive to caffeine during vegetative growth
 def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to caffeine. Cells stop growing (and may die) at a concentration of caffeine that allows wild type cells to grow." [PomBase:mah]
-synonym: "hypersensitive to caffeine" EXACT [PomBase:mah]
+synonym: "hypersensitive to caffeine during vegetative growth" EXACT [PomBase:mah]
 synonym: "sensitive to caffeine during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "sensitive to caffeine during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
 intersection_of: PATO:0001551
 intersection_of: inheres_in GO:0072690
@@ -9454,12 +9465,12 @@ creation_date: 2011-12-01T04:41:03Z
 id: FYPO:0000685
 name: transcriptional response to pheromone at decreased pheromone level
 def: "A cellular response phenotype in which pheromone-responsive positive regulation of transcription from an RNA polymerase II promoter occurs at a lower level of pheromone than normal." [PomBase:mah]
+comment: This term was made obsolete because it has a confusing name and represents a non-useful distinction.
 synonym: "increased sensitivity of positive regulation of transcription from RNA polymerase II promoter by pheromones to pheromone" RELATED [PomBase:mah]
 synonym: "increased transcriptional response to pheromone" RELATED [PomBase:mah]
 synonym: "positive regulation of transcription from RNA polymerase II promoter by pheromones at decreased pheromone level" EXACT [GO:0007329, PomBase:mah]
 synonym: "sensitive to pheromone" RELATED [PomBase:al, PomBase:mah]
-is_a: FYPO:0000623 ! abnormal positive regulation of transcription
-is_a: FYPO:0000984 ! abnormal transcriptional response to pheromone
+is_obsolete: true
 created_by: midori
 creation_date: 2011-12-01T04:46:17Z
 
@@ -9784,7 +9795,7 @@ creation_date: 2011-12-06T12:15:03Z
 [Term]
 id: FYPO:0000711
 name: decreased cell cycle arrest in mitotic G1 phase in response to nitrogen starvation
-def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation occurs in G1 phase, but its occurrence is decreased." [PomBase:mah]
+def: "A cellular process phenotype in which cell cycle arrest in response to nitrogen starvation occurs in G1 phase, but its occurrence is decreased." [PomBase:mah]
 comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
 synonym: "decreased cell cycle arrest in mitotic G1 phase during cellular response to nitrogen starvation" EXACT [PomBase:mah]
 synonym: "decreased cell cycle arrest in mitotic G1 phase in response to nitrogen depletion" EXACT [PomBase:vw]
@@ -12632,7 +12643,7 @@ name: abnormal histone H3-K9 acetylation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 9 of histone H3 is abnormal." [PomBase:mah]
 synonym: "abnormal histone H3-K9 acetylation during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal histone H3-K9 acetylation during vegetative growth" EXACT [PomBase:mah]
-synonym: "abnormal histone H3K9 acetylation" EXACT [GO:0044154, PomBase:vw]
+synonym: "abnormal histone H3K9 acetylation" EXACT [GO:0043970, PomBase:vw]
 is_a: FYPO:0000456 ! abnormal histone acetylation
 intersection_of: PATO:0000001
 intersection_of: happens_during GO:0072690
@@ -12647,7 +12658,7 @@ name: increased histone H3-K9 acetylation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 9 of histone H3 occurs to a greater extent than normal." [PomBase:mah]
 synonym: "increased histone H3-K9 acetylation during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased histone H3-K9 acetylation during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased histone H3K9 acetylation" EXACT [GO:0044154, PomBase:vw]
+synonym: "increased histone H3K9 acetylation" EXACT [GO:0043970, PomBase:vw]
 is_a: FYPO:0000456 ! abnormal histone acetylation
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
@@ -12659,10 +12670,10 @@ creation_date: 2012-03-20T01:47:46Z
 id: FYPO:0000893
 name: increased histone H3-K9 acetylation at centromere
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 9 of histone H3 in centromeric regions occurs to a greater extent than normal." [PomBase:mah]
-synonym: "increased centromeric histone H3K9 acetylation" EXACT [GO:0044154, PomBase:mah]
+synonym: "increased centromeric histone H3K9 acetylation" EXACT [GO:0043970, PomBase:mah]
 synonym: "increased histone H3-K9 acetylation at centromere during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased histone H3-K9 acetylation at centromere during vegetative growth" EXACT [PomBase:mah]
-synonym: "increased histone H3K9 acetylation at centromere" EXACT [GO:0044154, PomBase:mah]
+synonym: "increased histone H3K9 acetylation at centromere" EXACT [GO:0043970, PomBase:mah]
 is_a: FYPO:0000892 ! increased histone H3-K9 acetylation
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
@@ -14014,12 +14025,12 @@ creation_date: 2012-04-25T12:26:50Z
 id: FYPO:0000985
 name: transcriptional response to pheromone at increased pheromone level
 def: "A cellular response phenotype in which pheromone-responsive positive regulation of transcription from an RNA polymerase II promoter occurs only at a higher level of pheromone than normal." [PomBase:mah]
+comment: This term was made obsolete because it has a confusing name and represents a non-useful distinction.
 synonym: "decreased sensitivity of positive regulation of transcription from RNA polymerase II promoter by pheromones to pheromone" RELATED [PomBase:mah]
 synonym: "decreased transcriptional response to pheromone" RELATED [PomBase:mah]
 synonym: "positive regulation of transcription from RNA polymerase II promoter by pheromones at increased pheromone level" EXACT [GO:0007329, PomBase:mah]
 synonym: "resistant to pheromone" RELATED [PomBase:al, PomBase:mah]
-is_a: FYPO:0000623 ! abnormal positive regulation of transcription
-is_a: FYPO:0000984 ! abnormal transcriptional response to pheromone
+is_obsolete: true
 created_by: midori
 creation_date: 2012-04-25T12:29:45Z
 
@@ -14027,12 +14038,12 @@ creation_date: 2012-04-25T12:29:45Z
 id: FYPO:0000986
 name: increased transcriptional response to pheromone at normal pheromone level
 def: "A cellular response phenotype in which pheromone-responsive positive regulation of transcription from an RNA polymerase II promoter results in a higher-than-normal level of transcription at a given pheromone level." [PomBase:mah]
+comment: This term was made obsolete because it has a confusing name and represents a non-useful distinction.
 synonym: "increased positive regulation of transcription from RNA polymerase II promoter by pheromones at normal pheromone level" EXACT [GO:0007329, PomBase:mah]
 synonym: "increased sensitivity of positive regulation of transcription from RNA polymerase II promoter by pheromones to pheromone" RELATED [PomBase:mah]
 synonym: "increased transcriptional response to pheromone" RELATED [PomBase:mah]
 synonym: "sensitive to pheromone" RELATED [PomBase:al, PomBase:mah]
-is_a: FYPO:0000623 ! abnormal positive regulation of transcription
-is_a: FYPO:0000984 ! abnormal transcriptional response to pheromone
+is_obsolete: true
 created_by: midori
 creation_date: 2012-04-25T12:34:59Z
 
@@ -14040,13 +14051,13 @@ creation_date: 2012-04-25T12:34:59Z
 id: FYPO:0000987
 name: decreased transcriptional response to pheromone at normal pheromone level
 def: "A cellular response phenotype in which pheromone-responsive positive regulation of transcription from an RNA polymerase II promoter results in a lower-than-normal level of transcription at a given pheromone level." [PomBase:mah]
+comment: This term was made obsolete because it has a confusing name and represents a non-useful distinction.
 synonym: "decreased positive regulation of transcription from RNA polymerase II promoter by pheromones at normal pheromone level" EXACT [GO:0007329, PomBase:mah]
 synonym: "decreased sensitivity of positive regulation of transcription from RNA polymerase II promoter by pheromones to pheromone" RELATED [PomBase:mah]
 synonym: "decreased transcriptional response to pheromone" RELATED [PomBase:mah]
 synonym: "reduced transcriptional response to pheromone at normal pheromone level" EXACT [PomBase:mah]
 synonym: "resistant to pheromone" RELATED [PomBase:al, PomBase:mah]
-is_a: FYPO:0000984 ! abnormal transcriptional response to pheromone
-is_a: FYPO:0003770 ! decreased positive regulation of transcription from RNA polymerase II promoter by pheromones
+is_obsolete: true
 created_by: midori
 creation_date: 2012-04-25T12:49:41Z
 
@@ -17558,7 +17569,7 @@ creation_date: 2012-07-12T15:37:08Z
 
 [Term]
 id: FYPO:0001223
-name: binucleate multiseptate cell
+name: binucleate multiseptate vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has two nuclei and more than one septum. The septa are grouped together between the two nuclei." [PomBase:mah]
 synonym: "binucleate multiseptate cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "binucleate multiseptate cell during vegetative growth" EXACT [PomBase:mah]
@@ -30578,7 +30589,7 @@ creation_date: 2013-05-01T16:44:51Z
 [Term]
 id: FYPO:0002089
 name: abnormal exocytosis
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which exocytosis is abnormal. Exocytosis is the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle by fusion of the vesicle with the plasma membrane of a cell. A phenotype may affect exocytosis of all cargoes, or of specific cargo such as a particular protein." [GO:0006897, PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which exocytosis is abnormal. Exocytosis is the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle by fusion of the vesicle with the plasma membrane of a cell. A phenotype may affect exocytosis of all cargoes, or of specific cargo such as a particular protein." [GO:0006887, PomBase:mah]
 synonym: "abnormal exocytosis during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal exocytosis during vegetative growth" EXACT [PomBase:mah]
 synonym: "exocytosis defects" EXACT [PomBase:vw]
@@ -31589,7 +31600,6 @@ is_a: FYPO:0002519 ! abolished response to mitotic G2/M transition checkpoint si
 intersection_of: PATO:0001558
 intersection_of: during GO:0072690
 intersection_of: towards GO:0072435
-relationship: has_output FYPO:0000827 ! advanced cell cycle phase transition
 created_by: midori
 creation_date: 2013-10-29T16:27:16Z
 
@@ -31818,24 +31828,6 @@ is_a: FYPO:0002137 ! decreased RNA catabolic process during vegetative growth
 is_a: FYPO:0003552 ! decreased RNA catabolic process
 created_by: midori
 creation_date: 2013-05-14T16:03:57Z
-
-[Term]
-id: FYPO:0002175
-name: decreased cell population growth at low temperature
-def: "A vegetative cell population growth phenotype in which cell growth is decreased relative to normal at a low temperature." [PomBase:mah]
-comment: Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise. For fission yeast, low temperature usually corresponds to below 25 degrees Celsius.
-synonym: "decreased growth at low temperature" BROAD [PomBase:mah]
-synonym: "decreased vegetative cell population growth at low temperature" EXACT [PomBase:mah]
-synonym: "growth defect, slow growth at low temperatures" RELATED [PomBase:mah]
-synonym: "reduced growth at low temperature" RELATED [PomBase:mah]
-synonym: "slow growth at low temperature" RELATED [PomBase:mah]
-is_a: FYPO:0001355 ! decreased vegetative cell population growth
-intersection_of: FYPO:0000046 ! decreased cell population growth
-intersection_of: happens_during GO:0072690
-intersection_of: inheres_in BTO:0000316
-intersection_of: qualifier PATO:0001306
-created_by: midori
-creation_date: 2013-05-14T16:14:51Z
 
 [Term]
 id: FYPO:0002176
@@ -36867,11 +36859,12 @@ def: "A cellular process phenotype in which a mitotic cell cycle arrest that nor
 synonym: "abnormal mitotic cell cycle checkpoint arrest" RELATED [PomBase:mah]
 synonym: "abnormal occurrence of mitotic cell cycle arrest resulting from checkpoint activation" RELATED [PomBase:mah]
 synonym: "abnormal occurrence of mitotic cell cycle arrest resulting from defective checkpoint activation" RELATED [PomBase:vw]
-is_a: FYPO:0001026 ! abnormal occurrence of normal mitotic cell cycle arrest
-is_a: FYPO:0001704 ! abnormal mitotic cell cycle checkpoint
+is_a: FYPO:0000631 ! cell cycle phenotype
+is_a: FYPO:0001342 ! cellular response phenotype during vegetative growth
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0072414
 intersection_of: qualifier PATO:0000460
+relationship: has_output FYPO:0001026 ! abnormal occurrence of normal mitotic cell cycle arrest
 created_by: midori
 creation_date: 2013-08-15T14:28:54Z
 
@@ -41260,8 +41253,8 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "increased histone H3-K9 acetylation at telomere during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased histone H3-K9 acetylation at telomere during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3-K9 acetylation at telomeric region" EXACT [PomBase:vw]
-synonym: "increased histone H3K9 acetylation at telomere" EXACT [GO:0044154, PomBase:mah]
-synonym: "increased telomeric histone H3K9 acetylation" EXACT [GO:0044154, PomBase:mah]
+synonym: "increased histone H3K9 acetylation at telomere" EXACT [GO:0043970, PomBase:mah]
+synonym: "increased telomeric histone H3K9 acetylation" EXACT [GO:0043970, PomBase:mah]
 is_a: FYPO:0000892 ! increased histone H3-K9 acetylation
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
@@ -47806,7 +47799,7 @@ creation_date: 2014-03-28T15:10:35Z
 id: FYPO:0003249
 name: decreased level of histone H3 at dh repeat
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of histone H3 measured at centromeric dh repeat regions is lower than normal." [PMID:22291963, PomBase:mah]
-is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+is_a: FYPO:0004578 ! decreased level of histone H3 in cell
 created_by: midori
 creation_date: 2014-03-28T15:14:44Z
 
@@ -55230,9 +55223,9 @@ creation_date: 2014-09-08T15:29:40Z
 
 [Term]
 id: FYPO:0003770
-name: decreased positive regulation of transcription from RNA polymerase II promoter by pheromones
+name: decreased transcriptional response to pheromone
 def: "A transcription regulation phenotype in which pheromone-responsive positive regulation of transcription from an RNA polymerase II promoter is decreased." [GO:0007329, PomBase:mah]
-synonym: "decreased transcriptional response to pheromone" BROAD [PomBase:al]
+synonym: "decreased positive regulation of transcription from RNA polymerase II promoter by pheromones" EXACT [GO:0007329]
 synonym: "reduced positive regulation of transcription from RNA polymerase II promoter by pheromones" EXACT [GO:0007329]
 is_a: FYPO:0000623 ! abnormal positive regulation of transcription
 intersection_of: PATO:0002052
@@ -59034,8 +59027,6 @@ creation_date: 2014-11-25T11:58:10Z
 id: FYPO:0004044
 name: elongated tetranucleate vegetative cell
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which a cell contains four nuclei and is longer than normal." [PomBase:mah]
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
 synonym: "elongated tetranucleate cells during vegetative growth" EXACT [PomBase:al]
 synonym: "elongated tetranucleate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "long tetranucleate vegetative cell" EXACT [PomBase:mah]
@@ -61848,7 +61839,7 @@ creation_date: 2014-12-19T15:45:21Z
 [Term]
 id: FYPO:0004233
 name: decreased and delayed cell cycle arrest in mitotic G1 phase in response to nitrogen starvation
-def: "A cellular process phenotype in which the occurrence of cell cycle arrest in response to nitrogen starvation occurs in G1 phase, but its occurrence is decreased and begins later than normal." [PMID:21118960, PomBase:mah]
+def: "A cellular process phenotype in which cell cycle arrest in response to nitrogen starvation occurs in G1 phase, but its occurrence is decreased and begins later than normal." [PMID:21118960, PomBase:mah]
 comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
 synonym: "decreased and delayed cell cycle arrest in mitotic G1 phase during cellular response to nitrogen starvation" EXACT [PomBase:mah]
 synonym: "decreased and delayed cell cycle arrest in mitotic G1 phase in response to nitrogen depletion" EXACT [PomBase:vw]
@@ -63539,7 +63530,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "increased histone H3-K9 acetylation at protein coding gene during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased histone H3-K9 acetylation at protein coding gene during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased histone H3-K9 acetylation at protein-coding gene" EXACT [PomBase:mah]
-synonym: "increased histone H3K9 acetylation at protein coding gene" EXACT [GO:0044154, PomBase:mah]
+synonym: "increased histone H3K9 acetylation at protein coding gene" EXACT [GO:0043970, PomBase:mah]
 is_a: FYPO:0000892 ! increased histone H3-K9 acetylation
 intersection_of: PATO:0002051
 intersection_of: happens_during GO:0072690
@@ -66239,7 +66230,6 @@ synonym: "abnormal mitotic cell cycle spindle assembly checkpoint arrest" RELATE
 synonym: "abnormal occurrence of mitotic cell cycle arrest resulting from spindle assembly checkpoint activation" RELATED [PomBase:mah]
 synonym: "abnormal occurrence of mitotic cell cycle arrest resulting from spindle assembly defective checkpoint activation" RELATED [PomBase:vw]
 synonym: "abnormal response to mitotic spindle assembly checkpoint signaling" EXACT [PomBase:mah]
-is_a: FYPO:0001026 ! abnormal occurrence of normal mitotic cell cycle arrest
 is_a: FYPO:0002517 ! abnormal response to mitotic cell cycle checkpoint signaling
 intersection_of: PATO:0000001
 intersection_of: inheres_in GO:0072476
@@ -66451,8 +66441,8 @@ synonym: "abolished protein phosphorylation during cellular response to hydroxyu
 synonym: "protein phosphorylation abolished during cellular response to hydroxyurea" EXACT [PomBase:mah]
 is_a: FYPO:0002033 ! abolished protein phosphorylation during vegetative growth
 intersection_of: PATO:0001558
-intersection_of: during GO:0072711
 intersection_of: during GO:0072690
+intersection_of: during GO:0072711
 intersection_of: towards GO:0006468
 created_by: midori
 creation_date: 2015-04-14T15:54:04Z
@@ -66502,8 +66492,8 @@ synonym: "cut during cellular response to ionizing radiation during S phase of m
 synonym: "cut during cellular response to IR during mitotic S phase" EXACT [PomBase:mah]
 is_a: FYPO:0003487 ! cut during cellular response to ionizing radiation
 intersection_of: FYPO:0003165 ! cut
-intersection_of: during GO:0071479
 intersection_of: during GO:0000084
+intersection_of: during GO:0071479
 created_by: midori
 creation_date: 2015-04-14T16:22:56Z
 
@@ -66583,6 +66573,356 @@ synonym: "inviable germinated spore, without cell division, with abnormal cell m
 is_a: FYPO:0001991 ! inviable after spore germination, without cell division
 created_by: midori
 creation_date: 2015-04-14T16:49:44Z
+
+[Term]
+id: FYPO:0004559
+name: viable swollen spheroid vegetative cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is viable, is shaped in the form of a spheroid, and has a larger volume than normal. In a swollen cell, both length and diameter are greater than normal, although the cell is only considered elongated if the length:width ratio is also greater than normal." [PomBase:mah]
+synonym: "viable enlarged spheroid vegetative cell" RELATED [PomBase:mah]
+synonym: "viable enlarged volume spheroid vegetative cell" EXACT [PomBase:mah]
+synonym: "viable large spheroid vegetative cell" RELATED [PomBase:vw]
+synonym: "viable swollen rounded vegetative cell" EXACT [PomBase:mah]
+synonym: "viable swollen spheroid cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "viable swollen spheroid vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0000945 ! swollen spheroid vegetative cell
+is_a: FYPO:0002377 ! viable swollen vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000021 ! spheroid vegetative cell
+intersection_of: has_part FYPO:0000025 ! swollen cell
+intersection_of: has_part FYPO:0001491 ! viable vegetative cell
+created_by: midori
+creation_date: 2015-04-21T11:02:12Z
+
+[Term]
+id: FYPO:0004560
+name: sensitive to BE49385A
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to BE49385A (a GPI synthesis inhibitor, also called YW3548). Cells stop growing (and may die) at a concentration of BE49385A that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to BE49385A" EXACT [PomBase:mah]
+synonym: "sensitive to BE49385A during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to BE49385A during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to YW3548" EXACT [CHEBI:79385, PMID:11297516]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:79385
+created_by: midori
+creation_date: 2015-04-21T11:17:51Z
+
+[Term]
+id: FYPO:0004561
+name: resistance to BE49385A
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of BE49385A (a GPI synthesis inhibitor, also called YW3548) tahn normal." [PomBase:mah]
+synonym: "resistance to BE49385A during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "resistance to BE49385A during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to YW3548" EXACT [CHEBI:79385, PMID:11297516]
+synonym: "resistant to BE49385A" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+intersection_of: PATO:0001552
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:79385
+created_by: midori
+creation_date: 2015-04-21T11:23:28Z
+
+[Term]
+id: FYPO:0004562
+name: binucleate aseptate vegetative cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has two nuclei and no septum." [PomBase:mah]
+synonym: "binucleate aseptate cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "binucleate aseptate cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001222 ! binucleate vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000949 ! aseptate
+intersection_of: has_part FYPO:0001222 ! binucleate vegetative cell
+created_by: midori
+creation_date: 2015-04-21T11:29:09Z
+
+[Term]
+id: FYPO:0004563
+name: abnormal alpha-galactosidase activity
+def: "A molecular function phenotype in which the observed rate of alpha-galactosidase activity is abnormal." [PomBase:mah]
+is_a: FYPO:0000661 ! abnormal catalytic activity
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0004557
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-04-21T11:42:08Z
+
+[Term]
+id: FYPO:0004564
+name: increased alpha-galactosidase activity
+def: "A molecular function phenotype in which the observed rate of alpha-galactosidase activity is increased." [PomBase:mah]
+is_a: FYPO:0000662 ! increased catalytic activity
+is_a: FYPO:0004563 ! abnormal alpha-galactosidase activity
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0004557
+created_by: midori
+creation_date: 2015-04-21T11:42:13Z
+
+[Term]
+id: FYPO:0004565
+name: increased transcription of pheromone response gene RNA during vegetative growth
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which transcription of pheromone response genes is increased. Pheromone response genes are normally transcribed in response to a pheromone stimulus." [PMID:15580593, PomBase:al, PomBase:mah]
+synonym: "increased transcription of pheromone response gene RNA during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0000780 ! increased transcription during vegetative growth
+created_by: midori
+creation_date: 2015-04-21T11:54:28Z
+
+[Term]
+id: FYPO:0004566
+name: sensitive to caffeine during meiosis II
+def: "A phenotype in which cells show increased sensitivity to caffeine during the second meiotic nuclear division. Cells stop growing (and may die) at a concentration of caffeine that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to caffeine during meiosis II" EXACT [PomBase:mah]
+synonym: "sensitive to caffeine during second meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0002683 ! increased sensitivity to chemical
+intersection_of: FYPO:0002683 ! increased sensitivity to chemical
+intersection_of: during GO:0007135
+intersection_of: towards CHEBI:27732
+created_by: midori
+creation_date: 2015-04-21T12:19:16Z
+
+[Term]
+id: FYPO:0004567
+name: fragmented spindle during meiosis II
+def: "A cell phenotype which the spindle is broken into fragments during the second meiotic nuclear division." [PomBase:mah]
+synonym: "fragmented meiotic spindle during meiosis II" EXACT [PomBase:mah]
+synonym: "fragmented spindle during second meiotic nuclear division" EXACT [PomBase:mah]
+synonym: "fragmented spindle pole body during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "spindle fragmentation during meiosis II" EXACT [PomBase:vw]
+is_a: FYPO:0000734 ! abnormal meiotic spindle
+intersection_of: PATO:0001444
+intersection_of: exists_during GO:0007135
+intersection_of: inheres_in GO:0072687
+created_by: midori
+creation_date: 2015-04-21T12:45:06Z
+
+[Term]
+id: FYPO:0004568
+name: normal spindle
+def: "A physical cellular phenotype in which the presence, distribution, or morphology of the mitotic or meiotic spindle is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+is_a: FYPO:0001233 ! normal subcellular component
+intersection_of: PATO:0001241
+intersection_of: inheres_in GO:0005819
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-04-21T12:59:45Z
+
+[Term]
+id: FYPO:0004569
+name: normal spindle during meiosis I
+def: "A physical cellular phenotype in which the presence, distribution, or morphology of the meiotic spindle is normal (i.e. indistinguishable from wild type) during the first meiotic nuclear division." [PomBase:mah]
+synonym: "normal meiosis I spindle" EXACT [PomBase:al]
+synonym: "normal meiotic spindle during meiosis I" EXACT [PomBase:mah]
+synonym: "normal spindle during first meiotic nuclear division" RELATED [PomBase:mah]
+is_a: FYPO:0004568 ! normal spindle
+intersection_of: PATO:0001241
+intersection_of: exists_during GO:0007127
+intersection_of: inheres_in GO:0072687
+intersection_of: qualifier PATO:0000461
+created_by: midori
+creation_date: 2015-04-21T13:01:43Z
+
+[Term]
+id: FYPO:0004570
+name: decreased meiotic sister chromatid separation
+def: "A cellular process phenotype in which the occurrence of meiotic sister chromatid separation is decreased." [PomBase:mah]
+synonym: "decreased chromosome separation during meiosis II" EXACT [PomBase:al]
+synonym: "reduced meiotic sister chromatid separation" EXACT [PomBase:mah]
+is_a: FYPO:0000151 ! abnormal meiotic chromosome segregation
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0051757
+created_by: midori
+creation_date: 2015-04-21T13:22:43Z
+
+[Term]
+id: FYPO:0004571
+name: increased RNA level during cellular response to hydrogen peroxide
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell during a cellular response to hydrogen peroxide is higher than normal. Total RNA or a specific RNA may be affected." [PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "increased mRNA level during cellular response to hydrogen peroxide" NARROW [PomBase:mah]
+synonym: "increased RNA accumulation during cellular response to hydrogen peroxide" RELATED [PomBase:mah]
+synonym: "increased RNA level during cellular response to H2O2" EXACT [PomBase:mah]
+synonym: "increased RNA level during cellular response to hydrogen peroxide during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased RNA level during cellular response to hydrogen peroxide during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased transcript level during cellular response to hydrogen peroxide" EXACT [PomBase:vw]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0070301
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:33697
+created_by: midori
+creation_date: 2015-04-21T13:36:54Z
+
+[Term]
+id: FYPO:0004572
+name: decreased exocytosis
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which exocytosis occurs to a lower extent than normal. Exocytosis is the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle by fusion of the vesicle with the plasma membrane of a cell. A phenotype may affect exocytosis of all cargoes, or of specific cargo such as a particular protein." [GO:0006887, PomBase:mah]
+synonym: "decreased exocytosis during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased exocytosis during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced exocytosis" EXACT [PomBase:mah]
+is_a: FYPO:0002089 ! abnormal exocytosis
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0006887
+created_by: midori
+creation_date: 2015-04-21T13:38:15Z
+
+[Term]
+id: FYPO:0004573
+name: increased telomeric transcript level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of non-coding RNA transcribed from telomeric regions measured in a cell is higher than normal." [PMID:25398909, PomBase:mah, SO:0001927]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "increased telomeric lncRNA level" EXACT [PomBase:al]
+synonym: "increased telomeric transcript accumulation" RELATED [PomBase:mah]
+synonym: "increased telomeric transcript level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased telomeric transcript level during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards SO:0001927
+created_by: midori
+creation_date: 2015-04-21T13:59:10Z
+
+[Term]
+id: FYPO:0004574
+name: increased subtelomere-derived RNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of any RNA transcribed from sub-telomeric regions measured in a cell is higher than normal." [PMID:25398909, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "accumulation of subtelomere-derived RNA transcripts" RELATED [PomBase:vw]
+synonym: "increased subtelomere-derived RNA accumulation" RELATED [PomBase:mah]
+synonym: "increased subtelomere-derived RNA level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased subtelomere-derived RNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased subtelomere-derived RNA transcript level" EXACT [PomBase:vw]
+is_a: FYPO:0000825 ! increased RNA level during vegetative growth
+created_by: midori
+creation_date: 2015-04-21T14:11:01Z
+
+[Term]
+id: FYPO:0004575
+name: increased histone H3-K9 acetylation at subtelomere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 9 of histone H3 in subtelomeric regions occurs to a greater extent than normal." [PMID:25398909, PomBase:mah]
+synonym: "increased histone H3-K9 acetylation at subtelomere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone H3-K9 acetylation at subtelomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased histone H3-K9 acetylation at subtelomeric region" EXACT [PomBase:vw]
+synonym: "increased histone H3K9 acetylation at subtelomere" EXACT [GO:0043970, PomBase:mah]
+synonym: "increased subtelomeric histone H3K9 acetylation" EXACT [GO:0043970, PomBase:mah]
+is_a: FYPO:0000892 ! increased histone H3-K9 acetylation
+intersection_of: PATO:0002051
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043970
+intersection_of: occurs_at SO:0001997
+created_by: midori
+creation_date: 2015-04-21T14:13:15Z
+
+[Term]
+id: FYPO:0004576
+name: decreased histone H3-K9 acetylation at subtelomere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which acetylation of lysine at position 9 of histone H3 in subtelomeric regions occurs to a lower extent than normal." [PMID:25398909, PomBase:mah]
+synonym: "decreased histone H3-K9 acetylation at subtelomere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased histone H3-K9 acetylation at subtelomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased histone H3-K9 acetylation at subtelomeric region" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9 acetylation at subtelomere" EXACT [GO:0043970, PomBase:mah]
+synonym: "decreased subtelomeric histone H3K9 acetylation" EXACT [GO:0043970, PomBase:mah]
+synonym: "reduced histone H3-K9 acetylation at subtelomere" EXACT [PomBase:mah]
+is_a: FYPO:0001442 ! decreased histone H3-K9 acetylation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0043970
+intersection_of: occurs_at SO:0001997
+created_by: midori
+creation_date: 2015-04-21T14:14:18Z
+
+[Term]
+id: FYPO:0004577
+name: decreased histone H3-K9 trimethylation at subtelomere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which trimethylation of lysine at position 9 of histone H3 in subtelomeric regions occurs to a lower extent than normal." [PMID:25398909, PomBase:mah]
+synonym: "decreased histone H3-K9 trimethylation at subtelomere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased histone H3-K9 trimethylation at subtelomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased histone H3-K9 trimethylation at subtelomeric region" EXACT [PomBase:vw]
+synonym: "decreased histone H3K9 trimethylation at subtelomere" EXACT [GO:0036124, PomBase:mah]
+synonym: "decreased subtelomeric histone H3K9 trimethylation" EXACT [GO:0036124, PomBase:mah]
+synonym: "reduced histone H3-K9 trimethylation at subtelomere" EXACT [PomBase:mah]
+is_a: FYPO:0000787 ! abnormal histone H3-K9 trimethylation
+intersection_of: PATO:0002052
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0036124
+intersection_of: occurs_at SO:0001997
+created_by: midori
+creation_date: 2015-04-21T14:15:38Z
+
+[Term]
+id: FYPO:0004578
+name: decreased level of histone H3 in cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of histone H3 measured in the cell is lower than normal." [PomBase:mah]
+synonym: "decreased accumulation of histone H3 in cell" RELATED [PomBase:mah]
+synonym: "decreased cellular histone H3 level" EXACT [PomBase:mah]
+synonym: "decreased histone H3 level during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased level of histone H3 in cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased level of histone H3 in cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced level of histone H3 in cell" EXACT [PomBase:mah]
+is_a: FYPO:0001324 ! decreased protein level during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards PR:000027594
+created_by: midori
+creation_date: 2015-04-21T14:20:31Z
+
+[Term]
+id: FYPO:0004579
+name: normal transposable element-derived small RNA level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of small RNA (such as siRNA) derived from transposable element transcripts measured in a cell normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal transposable element-derived small RNA accumulation" RELATED [PomBase:mah]
+synonym: "normal transposable element-derived small RNA level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal transposable element-derived small RNA level during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal transposable element-derived small RNA transcript level" EXACT [PomBase:vw]
+is_a: FYPO:0001317 ! normal RNA level during vegetative growth
+created_by: midori
+creation_date: 2015-04-21T14:23:38Z
+
+[Term]
+id: FYPO:0004580
+name: increased number of plasmid catenanes
+def: "A cell phenotype in which a cell contains a larger number plasmid catenanes than normal. Plasmid catenanes are structures formed by two or more copies of a circular plasmid DNA molecule catenated together." [PMID:15957215, PomBase:mah]
+synonym: "increased number of catenated plasmids" EXACT [PomBase:mah]
+synonym: "increased number of plasmid catenanes during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased number of plasmid catenanes during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased plasmid catenane level" EXACT [PomBase:mah]
+is_a: FYPO:0003755 ! abnormal vegetative cell phenotype
+created_by: midori
+creation_date: 2015-04-21T15:00:53Z
+
+[Term]
+id: FYPO:0004581
+name: increased transcriptional response to pheromone
+def: "A transcription regulation phenotype in which pheromone-responsive positive regulation of transcription from an RNA polymerase II promoter is increased." [GO:0007329, PomBase:mah]
+synonym: "increased positive regulation of transcription from RNA polymerase II promoter by pheromones" EXACT [GO:0007329]
+is_a: FYPO:0000623 ! abnormal positive regulation of transcription
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0007329
+created_by: midori
+creation_date: 2015-04-21T15:25:40Z
+
+[Term]
+id: FYPO:0004582
+name: increased cell cycle arrest in mitotic G1 phase in response to nitrogen starvation
+def: "A cellular process phenotype in which cell cycle arrest in response to nitrogen starvation occurs in G1 phase, but its occurrence is increased." [PomBase:mah]
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+synonym: "increased cell cycle arrest in mitotic G1 phase during cellular response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "increased cell cycle arrest in mitotic G1 phase in response to nitrogen depletion" EXACT [PomBase:vw]
+synonym: "increased cell cycle arrest in mitotic G1 phase in response to nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "increased mitotic cell cycle arrest in G1 phase in response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "increased mitotic G1 arrest in response to nitrogen starvation" EXACT [PomBase:mah]
+synonym: "increased nitrogen deprivation-induced G1 arrest" EXACT [PomBase:vw]
+is_a: FYPO:0000445 ! cell cycle arrest in mitotic G1 phase
+is_a: FYPO:0000710 ! abnormal mitotic cell cycle arrest in response to nitrogen starvation
+intersection_of: PATO:0002051
+intersection_of: inheres_in GO:0030996
+created_by: midori
+creation_date: 2015-04-21T15:28:40Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
