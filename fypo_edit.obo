@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 01:05:2015 16:34
+date: 05:05:2015 16:37
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -20479,6 +20479,7 @@ id: FYPO:0001417
 name: mislocalized equatorial microtubule organizing center
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell forms an equatorial microtubule organizing center in an abnormal location. The normal location is at the center of the cell." [PomBase:mah]
 synonym: "mislocalised equatorial microtubule organizing center" EXACT [PomBase:mah]
+synonym: "mislocalized eMTOC" EXACT [GO:0000923]
 synonym: "mislocalized equatorial microtubule organizing center during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "mislocalized equatorial microtubule organizing center during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
@@ -24607,7 +24608,7 @@ creation_date: 2012-11-02T14:52:25Z
 [Term]
 id: FYPO:0001683
 name: abolished mitotic spindle assembly
-def: "A cell phenotype in which mitotic spindle assembly abolished." [PomBase:mah]
+def: "A cell phenotype in which mitotic spindle assembly does not occur." [PomBase:mah]
 synonym: "abolished mitotic spindle assembly during vegetative growth" EXACT [PomBase:mah]
 synonym: "spindle assembly involved in mitosis abolished" EXACT [PomBase:mah]
 is_a: FYPO:0000177 ! abnormal mitotic spindle assembly
@@ -29332,8 +29333,10 @@ creation_date: 2013-02-27T13:45:01Z
 [Term]
 id: FYPO:0002004
 name: microtubules absent from cell
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain detectable microtubules." [PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain detectable microtubules of one or more types." [PomBase:mah]
 synonym: "absent microtubules" EXACT [PomBase:mah]
+synonym: "microtubules absent from cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "microtubules absent from cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0002399 ! abnormal microtubule cytoskeleton
 intersection_of: PATO:0002000
 intersection_of: inheres_in CL:0000000
@@ -48551,8 +48554,8 @@ creation_date: 2014-04-16T16:44:49Z
 
 [Term]
 id: FYPO:0003302
-name: nucleus mislocalized to cell tip during interphase
-def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the nucleus is located at or near one cell tip (instead of at the midpoint of the long axis of the cell) during interphase." [PMID:9348288, PomBase:mah]
+name: nucleus mislocalized towards cell tip during interphase
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the nucleus is located near one cell tip (instead of at the midpoint of the long axis of the cell) during interphase." [PMID:9348288, PomBase:mah]
 synonym: "displaced interphase nucleus" RELATED [PomBase:vw]
 synonym: "displaced premitotic nucleus" RELATED [PomBase:vw]
 synonym: "interphase nucleus mislocalized to cell tip" EXACT [PomBase:vw]
@@ -62994,6 +62997,7 @@ creation_date: 2015-01-19T12:11:31Z
 id: FYPO:0004316
 name: abnormal post-anaphase array
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the amount, distribution, or morphology of all or part of the post-anaphase array of microtubules is abnormal." [PomBase:mah]
+comment: Note that an abnormal post-anaphase microtubule array organization process may, but does not necessarily, result in abnormal post-anaphase microtubule array structure.
 synonym: "abnormal post-anaphase array during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal post-anaphase array physical object quality during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal post-anaphase microtubule array during vegetative growth" EXACT [GO:1990295]
@@ -63009,6 +63013,7 @@ creation_date: 2015-01-19T12:17:46Z
 id: FYPO:0004317
 name: abnormal post-anaphase array morphology
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of the post-anaphase array of microtubules is abnormal." [PomBase:mah]
+comment: Note that an abnormal post-anaphase microtubule array organization process may, but does not necessarily, result in abnormal post-anaphase microtubule array structure.
 synonym: "abnormal microtubule cytoskeleton morphology during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal post-anaphase array morphology during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal post-anaphase microtubule array morphology" EXACT [GO:1990295]
@@ -66966,6 +66971,7 @@ synonym: "abnormally arrested meiosis I with duplicated spindle pole bodies" EXA
 synonym: "abnormally arrested meiosis I with four SPBs" EXACT [PomBase:mah]
 synonym: "cell cycle arrest in meiosis I with four spindle pole bodies" EXACT [PomBase:mah]
 is_a: FYPO:0002817 ! abnormally arrested meiosis I
+relationship: has_part FYPO:0004609 ! spindle pole bodies present in greater numbers during meiosis
 created_by: midori
 creation_date: 2015-04-29T11:15:56Z
 
@@ -67359,6 +67365,217 @@ intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0000235
 created_by: midori
 creation_date: 2015-05-01T16:23:12Z
+
+[Term]
+id: FYPO:0004613
+name: spindle pole body detached from cytoplasmic microtubules
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the spindle pole body is not attached to any cytoplasmic microtubules. Normally, the spindle pole body is attached to a single cytoplasmic microtubule bundle." [PMID:15772152, PomBase:mah]
+comment: This phenotype may result from either absence of the microtubule bundle that would normally attach to the SPB, or from a problem with the SPB-microtubule attachment process.
+synonym: "cytoplasmic microtubules absent from mitotic spindle pole body" EXACT [PomBase:vw]
+synonym: "SPB detached from cytoplasmic microtubules" EXACT [PomBase:mah]
+synonym: "spindle pole body detached from cytoplasmic microtubules during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "spindle pole body detached from cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001474 ! abnormal spindle pole body morphology during vegetative growth
+intersection_of: PATO:0001453
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in GO:0044732
+intersection_of: towards GO:0005881
+created_by: midori
+creation_date: 2015-05-05T13:11:24Z
+
+[Term]
+id: FYPO:0004614
+name: abnormal microtubule polymerization
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which microtubule polymerization, i.e. the addition of tubulin dimers to the plus end of a microtubule, is abnormal." [GO:0046785, PomBase:mah]
+synonym: "abnormal microtubule polymerization during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal microtubule polymerization during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000901 ! abnormal microtubule polymerization or depolymerization
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0046785
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-05-05T13:33:03Z
+
+[Term]
+id: FYPO:0004615
+name: increased rate of cytoplasmic microtubule polymerization
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytoplasmic microtubule polymerization, i.e. the additon of tubulin dimers to the plus end of a cytoplasmic microtubule, occurs at a higher rate, or speed, than normal." [GO:0046785, PomBase:mah]
+synonym: "increased cytoplasmic microtubule polymerization rate" EXACT [PomBase:mah]
+synonym: "increased microtubule plus end growth rate" EXACT [PomBase:vw]
+synonym: "increased rate of cytoplasmic microtubule polymerization during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased rate of cytoplasmic microtubule polymerization during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0004614 ! abnormal microtubule polymerization
+intersection_of: PATO:0000912
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0046785
+created_by: midori
+creation_date: 2015-05-05T13:39:51Z
+
+[Term]
+id: FYPO:0004616
+name: abolished cytoplasmic microtubule depolymerization at plus end at cell tip
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which cytoplasmic microtubule depolymerization, i.e. the removal of tubulin dimers from a cytoplasmic microtubule, does not occur at the plus end of the microtubule at the cell tip. Normally, rapid depolymerization takes place when the growing plus end of the microtubule reaches the cell tip." [GO:0070462, PMID:15772152, PomBase:mah]
+synonym: "abolished cytoplasmic microtubule depolymerization at plus end at cell tip during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished cytoplasmic microtubule depolymerization at plus end at cell tip during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished microtubule catastrophe at cell tip" RELATED [PomBase:vw]
+synonym: "abolished microtubule plus end shrinkage at cell tip" RELATED [PomBase:vw]
+synonym: "abolished plus-end specific microtubule depolymerization at cell tip" EXACT [GO:0070462]
+synonym: "cytoplasmic microtubule depolymerization at plus end at cell tip abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000902 ! abnormal microtubule depolymerization
+created_by: midori
+creation_date: 2015-05-05T13:59:40Z
+
+[Term]
+id: FYPO:0004617
+name: increased rate of microtubule depolymerization at minus end
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which minus-end specific microtubule depolymerization, i.e. the removal of tubulin dimers from the minus end of a microtubule, occurs at a greater rate, or speed, than normal." [GO:0036078, PomBase:mah]
+synonym: "decreased microtubule stability" RELATED [PomBase:vw]
+synonym: "increased microtubule depolymerization rate at minus end" EXACT [PomBase:mah]
+synonym: "increased microtubule minus end shrinkage" RELATED [PomBase:vw]
+synonym: "increased rate of microtubule depolymerization at minus end during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased rate of microtubule depolymerization at minus end during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased rate of minus-end specific microtubule depolymerization" EXACT [GO:0036078]
+is_a: FYPO:0003194 ! increased rate of microtubule depolymerization
+intersection_of: PATO:0000912
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0036078
+created_by: midori
+creation_date: 2015-05-05T14:03:39Z
+
+[Term]
+id: FYPO:0004618
+name: astral microtubules absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain detectable astral microtubules." [PomBase:mah]
+synonym: "absent astral microtubules" EXACT [PomBase:mah]
+synonym: "astral microtubules absent from cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "astral microtubules absent from cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "cytoplasmic astral microtubules absent from cell" EXACT [PomBase:vw]
+is_a: FYPO:0002004 ! microtubules absent from cell
+intersection_of: PATO:0002000
+intersection_of: inheres_in CL:0000000
+intersection_of: towards GO:0000235
+created_by: midori
+creation_date: 2015-05-05T14:20:14Z
+
+[Term]
+id: FYPO:0004619
+name: cytoplasmic microtubules nucleated from equatorial microtubule organizing center absent from cell
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the cell does not contain detectable cytoplasmic microtubules nucleated from the equatorial microtubule organizing center." [PMID:15772152, PomBase:mah]
+synonym: "cytoplasmic microtubules nucleated from eMTOC absent from cell" EXACT [PomBase:mah]
+synonym: "cytoplasmic microtubules nucleated from equatorial microtubule organizing center absent from cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "cytoplasmic microtubules nucleated from equatorial microtubule organizing center absent from cell during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0002004 ! microtubules absent from cell
+created_by: midori
+creation_date: 2015-05-05T15:03:04Z
+
+[Term]
+id: FYPO:0004620
+name: abnormal spindle disassembly
+def: "A cellular process phenotype in which spindle disassembly is abnormal. Spindle disassembly is the controlled breakdown of the spindle." [GO:0051230, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000054 ! abnormal microtubule cytoskeleton organization
+intersection_of: PATO:0000001
+intersection_of: inheres_in GO:0051230
+intersection_of: qualifier PATO:0000460
+relationship: has_output FYPO:0004438 ! long mitotic spindle during anaphase
+created_by: midori
+creation_date: 2015-05-05T15:09:51Z
+
+[Term]
+id: FYPO:0004621
+name: abnormal mitotic spindle disassembly
+def: "A cellular process phenotype in which disassembly of the mitotic spindle is abnormal." [PomBase:mah]
+synonym: "abnormal spindle disassembly during mitosis" EXACT [PomBase:mah]
+synonym: "abnormal spindle disassembly during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001350 ! abnormal microtubule cytoskeleton organization during vegetative growth
+is_a: FYPO:0004620 ! abnormal spindle disassembly
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:0051228
+intersection_of: qualifier PATO:0000460
+relationship: part_of FYPO:0000337 ! abnormal mitosis
+created_by: midori
+creation_date: 2015-05-05T15:10:09Z
+
+[Term]
+id: FYPO:0004622
+name: abolished mitotic spindle disassembly
+def: "A cell phenotype in which mitotic spindle disassembly does not occur." [PomBase:mah]
+synonym: "abolished mitotic spindle disassembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "spindle disassembly involved in mitosis abolished" EXACT [PomBase:mah]
+is_a: FYPO:0004621 ! abnormal mitotic spindle disassembly
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:0051228
+created_by: midori
+creation_date: 2015-05-05T15:11:01Z
+
+[Term]
+id: FYPO:0004623
+name: abolished astral microtubule anchoring at mitotic spindle pole body
+def: "A cell phenotype in which astral microtubule anchoring at the mitotic spindle pole body does not occur." [PMID:15004232, PomBase:mah]
+synonym: "abolished astral microtubule anchoring at mitotic spindle pole body during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished astral microtubule anchoring at mitotic spindle pole body during vegetative growth" EXACT [PomBase:mah]
+synonym: "astral microtubule anchoring at mitotic spindle pole body abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000054 ! abnormal microtubule cytoskeleton organization
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:1990734
+created_by: midori
+creation_date: 2015-05-05T15:20:37Z
+
+[Term]
+id: FYPO:0004624
+name: abolished equatorial microtubule organizing center assembly
+def: "A cell phenotype in which equatorial microtubule organizing center (eMTOC) assembly does not occur. eMTOC assembly is the aggregation, arrangement and bonding together of a set of components to form an equatorial microtubule organizing center." [GO:1904185, PMID:15004232, PomBase:mah]
+synonym: "abolished eMTOC assembly" EXACT [GO:1904185]
+synonym: "abolished eMTOC formation" EXACT [PomBase:mah]
+synonym: "abolished equatorial microtubule organizing center assembly during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished equatorial microtubule organizing center assembly during vegetative growth" EXACT [PomBase:mah]
+synonym: "abolished equatorial microtubule organizing center formation" EXACT [GO:1904185]
+synonym: "equatorial microtubule organizing center assembly abolished" EXACT [PomBase:mah]
+is_a: FYPO:0001350 ! abnormal microtubule cytoskeleton organization during vegetative growth
+intersection_of: PATO:0001558
+intersection_of: during GO:0072690
+intersection_of: towards GO:1904185
+created_by: midori
+creation_date: 2015-05-05T15:24:59Z
+
+[Term]
+id: FYPO:0004625
+name: abnormal post-anaphase microtubule array organization
+def: "A microtubule cytoskeleton organization phenotype observed in the vegetative growth phase of the life cycle in which post-anaphase microtubule array organization is abnormal. Post-anaphase microtubule array organization is a cellular process that results in the assembly, arrangement of constituent parts, or disassembly of the post-anaphase microtubule array." [PMID:1904186, PomBase:mah]
+comment: Note that an abnormal post-anaphase microtubule array organization process may, but does not necessarily, result in abnormal post-anaphase microtubule array structure.
+synonym: "abnormal PAA organization" EXACT [GO:1904186]
+synonym: "abnormal post-anaphase array organization" EXACT [GO:1904186]
+synonym: "abnormal post-anaphase microtubule array organization during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal post-anaphase microtubule array organization during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001350 ! abnormal microtubule cytoskeleton organization during vegetative growth
+intersection_of: PATO:0000001
+intersection_of: happens_during GO:0072690
+intersection_of: inheres_in GO:1904186
+intersection_of: qualifier PATO:0000460
+created_by: midori
+creation_date: 2015-05-05T15:38:26Z
+
+[Term]
+id: FYPO:0004626
+name: inviable curved elongated mononucleate vegetative cell
+def: "A cell morphology phenotype in which a vegetatively growing cell is inviable, is longer than normal, is curved along the long axis, and contains one nucleus. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
+synonym: "essential; curved elongated mononucleate vegetative cell" RELATED [PomBase:mah]
+synonym: "inviable curved elongated mononucleate cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "inviable curved elongated mononucleate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0002411 ! inviable curved elongated vegetative cell
+intersection_of: FYPO:0000002 ! cell phenotype
+intersection_of: exists_during GO:0072690
+intersection_of: has_part FYPO:0000016 ! curved vegetative cell
+intersection_of: has_part FYPO:0000017 ! elongated cell
+intersection_of: has_part FYPO:0000060 ! mononucleate vegetative cell
+intersection_of: has_part FYPO:0001489 ! inviable vegetative cell
+created_by: midori
+creation_date: 2015-05-05T16:03:34Z
 
 [Typedef]
 id: comprises_cells_with_phenotype
