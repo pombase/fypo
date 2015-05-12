@@ -3490,7 +3490,6 @@ synonym: "loss of viability upon nutrient starvation" EXACT [PomBase:al]
 synonym: "reduced viability upon nutrient depletion" EXACT [PomBase:mah]
 is_a: FYPO:0001985 ! abnormal phenotype
 is_a: FYPO:0002057 ! cell population viability
-relationship: includes_cells_with_phenotype FYPO:0000713 ! abnormal cellular response to starvation
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -8998,7 +8997,6 @@ synonym: "increased septation" RELATED [PomBase:mah]
 synonym: "septated" RELATED [PomBase:vw]
 is_a: FYPO:0000003 ! cell population phenotype
 is_a: FYPO:0001985 ! abnormal phenotype
-relationship: includes_cells_with_phenotype FYPO:0000651 ! increased duration of septation
 created_by: midori
 creation_date: 2011-10-13T12:34:42Z
 
@@ -16165,7 +16163,6 @@ synonym: "decreased septation" RELATED [PomBase:mah]
 synonym: "reduced septation index" EXACT [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
 is_a: FYPO:0001985 ! abnormal phenotype
-relationship: includes_cells_with_phenotype FYPO:0000567 ! decreased duration of septation
 created_by: midori
 creation_date: 2012-06-08T11:45:02Z
 
@@ -30055,7 +30052,6 @@ def: "A cell population phenotype in which cells in the population are viable." 
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note that a viable population may contain individual cells that are inviable. Usually it is difficult to detect inviable cells within an otherwise viable population, especially if population growth is simply assayed by OD increase in liquid culture or by colony formation on plates. If you have done an experiment that detects individual inviable cells, consider using the term 'mixed population including viable and inviable cells' (FYPO:0000908).
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0002057 ! cell population viability
-relationship: includes_cells_with_phenotype FYPO:0000124 ! viable cell
 created_by: midori
 creation_date: 2013-04-04T13:51:27Z
 
@@ -30065,7 +30061,6 @@ name: inviable cell population
 def: "A cell population phenotype in which none of the cells in the population are viable." [PomBase:mah]
 subset: qc_do_not_manually_annotate
 is_a: FYPO:0002057 ! cell population viability
-relationship: comprises_cells_with_phenotype FYPO:0000049 ! inviable cell
 created_by: midori
 creation_date: 2013-04-04T13:54:32Z
 
@@ -30076,7 +30071,6 @@ def: "A cell population phenotype in which cells in the population are viable in
 synonym: "viable cell population during vegetative growth" EXACT [PomBase:mah]
 synonym: "viable vegetative cell population during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0002058 ! viable cell population
-relationship: includes_cells_with_phenotype FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2013-04-04T14:14:35Z
 
@@ -30087,7 +30081,6 @@ def: "A cell population phenotype in which all cells in the population are invia
 synonym: "inviable cell population during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable vegetative cell population during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0002059 ! inviable cell population
-relationship: comprises_cells_with_phenotype FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2013-04-04T14:15:53Z
 
@@ -51796,7 +51789,6 @@ synonym: "increased septation index during stationary phase" EXACT [PomBase:mah]
 synonym: "septated in stationary phase" RELATED [PomBase:vw]
 is_a: FYPO:0000650 ! increased septation index
 is_a: FYPO:0001985 ! abnormal phenotype
-relationship: includes_cells_with_phenotype FYPO:0000651 ! increased duration of septation
 created_by: midori
 creation_date: 2014-07-15T10:50:15Z
 
@@ -67677,16 +67669,6 @@ created_by: midori
 creation_date: 2015-05-11T16:17:31Z
 
 [Typedef]
-id: comprises_cells_with_phenotype
-name: comprises cells with phenotype
-def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in all of the individual cells in the population." [PomBase:mah]
-synonym: "includes only cells with phenotype" EXACT [PomBase:mah]
-is_a: includes_cells_with_phenotype ! includes cells with phenotype
-property_value: usage "Local to FYPO. Consider just using has_part." xsd:string
-created_by: midori
-creation_date: 2012-02-29T01:46:18Z
-
-[Typedef]
 id: during
 name: during
 xref: GOREL:0000002
@@ -67717,15 +67699,6 @@ name: has_part
 xref: BFO:0000051
 is_transitive: true
 property_value: usage "Used in FYPO to link phenotypes that are collections of features to phenotypes representing the features." xsd:string
-
-[Typedef]
-id: includes_cells_with_phenotype
-name: includes cells with phenotype
-def: "Relation between a phenotype that inheres in a population of cell and a phenotype that inheres in some or all of the individual cells in the population." [PomBase:mah]
-is_a: has_part ! has_part
-property_value: usage "Local to FYPO. Consider just using has_part." xsd:string
-created_by: midori
-creation_date: 2011-04-26T02:10:32Z
 
 [Typedef]
 id: inheres_in
