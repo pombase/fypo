@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:06:2015 15:12
+date: 12:06:2015 15:14
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
@@ -2365,7 +2365,6 @@ synonym: "fragmented DNA during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "fragmented DNA during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000287 ! abnormal subcellular component
 intersection_of: PATO:0001444
-intersection_of: happens_during GO:0072690
 intersection_of: inheres_in CHEBI:16991
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
@@ -4001,9 +4000,10 @@ synonym: "chromosome fragmentation upon mitotic chromosome segregation" EXACT [P
 synonym: "chromosome fragmentation upon segregation during mitosis" EXACT [PomBase:mah]
 synonym: "chromosome fragmentation upon segregation during vegetative growth" EXACT [PomBase:mah]
 synonym: "chromosome segregation defects, chromosome fragmentation" EXACT [PomBase:mah]
+synonym: "fragmented mitotic chromosames upon segregation" EXACT [PomBase:mah]
 is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 intersection_of: PATO:0001444
-intersection_of: happens_during GO:0072690
+intersection_of: exists_during GO:0072690
 intersection_of: inheres_in GO:0005694
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
@@ -14313,15 +14313,17 @@ creation_date: 2012-04-25T03:50:33Z
 
 [Term]
 id: FYPO:0001005
-name: DNA fragmentation during nitrogen starvation
+name: fragmented DNA during nitrogen starvation
 def: "A cell phenotype in which DNA is broken into small fragments when the cell is subject to nitrogen starvation." [PMID:19366728, PomBase:mah]
 comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
-synonym: "DNA fragmentation during nitrogen depletion" EXACT [PomBase:vw]
-synonym: "DNA fragmentation during nitrogen deprivation" EXACT [PomBase:vw]
+synonym: "DNA fragmentation during nitrogen starvation" EXACT [PomBase:mah]
+synonym: "fragmented DNA during nitrogen depletion" EXACT [PomBase:vw]
+synonym: "fragmented DNA during nitrogen deprivation" EXACT [PomBase:vw]
 is_a: FYPO:0000160 ! fragmented DNA
 intersection_of: PATO:0001444
-intersection_of: happens_during GO:0006995
+intersection_of: exists_during GO:0006995
 intersection_of: inheres_in CHEBI:16991
+relationship: exists_during GO:0006995
 created_by: midori
 creation_date: 2012-04-25T04:01:19Z
 
@@ -32440,6 +32442,8 @@ creation_date: 2013-06-05T16:52:35Z
 id: FYPO:0002227
 name: increased cellular triglyceride level
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more triglycerides measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular TAG level" EXACT [PomBase:mah]
+synonym: "increased cellular triacylglycerol level" EXACT [PomBase:mah]
 synonym: "increased cellular triglyceride level during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased cellular triglyceride level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased triglyceride accumulation" RELATED [PomBase:mah]
@@ -57624,7 +57628,9 @@ creation_date: 2014-10-29T13:38:00Z
 id: FYPO:0003953
 name: abnormal triglyceride biosynthetic process
 def: "A metabolism phenotype observed in the vegetative growth phase of the life cycle in which triglyceride biosynthesis is abnormal." [PomBase:mah]
+synonym: "abnormal TAG biosynthetic process" EXACT [PomBase:mah]
 synonym: "abnormal triacylglycerol biosynthesis" EXACT [GO:0019432]
+synonym: "abnormal triacylglycerol biosynthetic process" EXACT [PomBase:mah]
 synonym: "abnormal triglyceride biosynthesis" EXACT [PomBase:mah]
 synonym: "abnormal triglyceride biosynthetic process during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal triglyceride biosynthetic process during vegetative growth" EXACT [PomBase:mah]
@@ -57640,7 +57646,9 @@ creation_date: 2014-10-29T13:51:09Z
 id: FYPO:0003954
 name: decreased triglyceride biosynthetic process
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which triglyceride biosynthesis is decreased." [GO:0019493, PomBase:mah]
+synonym: "decreased TAG biosynthetic process" EXACT [PomBase:mah]
 synonym: "decreased triacylglycerol biosynthesis" EXACT [GO:0019432]
+synonym: "decreased triacylglycerol biosynthetic process" EXACT [PomBase:mah]
 synonym: "decreased triglyceride biosynthesis" EXACT [PomBase:mah]
 synonym: "decreased triglyceride biosynthetic process during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased triglyceride biosynthetic process during vegetative growth" EXACT [PomBase:mah]
@@ -57656,7 +57664,9 @@ creation_date: 2014-10-29T13:52:23Z
 id: FYPO:0003955
 name: increased triglyceride biosynthetic process
 def: "A cellular metabolism phenotype observed in the vegetative growth phase of the life cycle in which triglyceride biosynthesis is increased." [PomBase:mah]
+synonym: "increased TAG biosynthetic process" EXACT [PomBase:mah]
 synonym: "increased triacylglycerol biosynthesis" EXACT [GO:0019432]
+synonym: "increased triacylglycerol biosynthetic process" EXACT [PomBase:mah]
 synonym: "increased triglyceride biosynthesis" EXACT [GO:0019432]
 synonym: "increased triglyceride biosynthetic process during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "increased triglyceride biosynthetic process during vegetative growth" EXACT [PomBase:mah]
@@ -68450,6 +68460,74 @@ is_a: FYPO:0000257 ! normal phenotype
 is_a: FYPO:0002057 ! cell population viability
 created_by: midori
 creation_date: 2015-06-09T15:08:04Z
+
+[Term]
+id: FYPO:0004694
+name: fragmented DNA during stationary phase
+def: "A cell phenotype in which DNA is broken into small fragments when the population in which the cell is found is in stationary phase." [PMID:12963726, PomBase:mah]
+comment: This term can be used for any circumstances in which cells are starved for nitrogen. Note that cells may enter G0 (quiescence) when subjected to prolonged nitrogen starvation; this term is not restricted to G0.
+synonym: "DNA fragmentation during stationary phase" EXACT [PomBase:mah]
+is_a: FYPO:0000160 ! fragmented DNA
+created_by: midori
+creation_date: 2015-06-12T13:45:52Z
+
+[Term]
+id: FYPO:0004695
+name: increased cellular diglyceride level
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more diglycerides measured in a cell is higher than normal." [PomBase:mah]
+synonym: "increased cellular DAG level" EXACT [PomBase:mah]
+synonym: "increased cellular diacylglycerol level" EXACT [CHEBI:18035]
+synonym: "increased cellular diglyceride level during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased cellular diglyceride level during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased diglyceride accumulation" RELATED [PomBase:mah]
+is_a: FYPO:0001330 ! increased level of substance in cell during vegetative growth
+intersection_of: PATO:0001162
+intersection_of: exists_during GO:0072690
+intersection_of: inheres_in CL:0000334
+intersection_of: towards CHEBI:18035
+created_by: midori
+creation_date: 2015-06-12T13:52:54Z
+
+[Term]
+id: FYPO:0004696
+name: sensitive to fatty acid
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to one or more fatty acids (usually supplied as the corresponding anions). Cells stop growing (and may die) at a concentration of fatty acid that allows wild type cells to grow." [PMID:12963726, PomBase:mah]
+synonym: "hypersensitive to fatty acid" EXACT [PomBase:mah]
+synonym: "sensitive to fatty acid anion" EXACT [CHEBI:28868, CHEBI:35366]
+synonym: "sensitive to fatty acid during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to fatty acid during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to free fatty acids" EXACT [PomBase:al]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+intersection_of: PATO:0001551
+intersection_of: inheres_in GO:0072690
+intersection_of: towards CHEBI:28868
+created_by: midori
+creation_date: 2015-06-12T14:33:27Z
+
+[Term]
+id: FYPO:0004697
+name: sensitive to 1,2-dioctanoyl-sn-glycerol
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 1,2-dioctanoyl-sn-glycerol (DiC8 DAG). Cells stop growing (and may die) at a concentration of 1,2-dioctanoyl-sn-glycerol that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to 1,2-dioctanoyl-sn-glycerol" EXACT [PomBase:mah]
+synonym: "sensitive to 1,2-dioctanoyl-sn-glycerol during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to 1,2-dioctanoyl-sn-glycerol during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to DiC8 DAG" EXACT [PMID:12963726]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2015-06-12T14:54:29Z
+
+[Term]
+id: FYPO:0004698
+name: decreased heme binding
+def: "A molecular function phenotype in which occurrence of heme binding by a gene product (usually a protein) in a mutant is decreased. The affected gene product may be encoded by the mutated gene, or by a different gene." [PomBase:mah]
+comment: This term can mean that the mutated gene product itself binds heme more than wild type, or that a mutation in one gene increases heme binding by a second gene product. When using this term, it is therefore recommended to note the specific protein(s) affected.
+synonym: "decreased haem binding" EXACT [PomBase:mah]
+is_a: FYPO:0000707 ! abnormal molecular function
+is_a: FYPO:0001092 ! binding phenotype
+intersection_of: PATO:0002052
+intersection_of: inheres_in GO:0020037
+created_by: midori
+creation_date: 2015-06-12T15:05:16Z
 
 [Typedef]
 id: during
