@@ -1,26 +1,22 @@
 #!/usr/bin/env bash
 
-if [ $# = 0 ]
+if [ $# != 0 ]
 then
-    echo usage: $0 sourceforge_username 1>&2
+    echo usage: $0 1>&2
     exit 1
 fi
 
-# this is a dirty hack: DNS problems at SysBiol mean that sometimes
+# This is a dirty hack: DNS problems at SysBiol mean that sometimes
 # the lookup of obo.cvs.sourceforge.net by owltools falls.  If we
-# query before we start it works.  Sigh.
+# query before we start it works.
 dig obo.cvs.sourceforge.net > /dev/null 2>&1
 
-username=$1
+git pull
 
 CURRENT_DIR=`pwd`
 
-cd /data/pombase/sources/phenotype_ontology
-
-svn update
-
-OUT_DIR=`pwd`/oort.tmp
-rm -rf $OUT_DIR
+OORT_TMP=oort.tmp
+rm -rf $OORT_TMP
 
 OORT_LOG_FILE=$CURRENT_DIR/ontology-release-runner.log
 
@@ -34,35 +30,27 @@ PATO_OBO=http://purl.obolibrary.org/obo/pato.owl
 SO_OBO=/home/mah79/song-svn/so-xp.owl
 
 echo running ontology-release-runner
-#/usr/local/OBOReleaseManager-0.4.0/scripts/ontology-release-runner -outdir $OUT_DIR \
-/usr/local/OBOReleaseManager-0.4.0-20130521/scripts/ontology-release-runner -outdir $OUT_DIR \
+/usr/local/OBOReleaseManager-0.4.0-20130521/scripts/ontology-release-runner -outdir $OORT_TMP \
     --no-subsets -reasoner elk --simple \
     $FYPO_OBO $GO_OBO $PATO_OBO $CHEBI_OBO $CELL_TYPE_OBO $BRENDA_TISSUE_OBO $SO_OBO \
     > $OORT_LOG_FILE 2>&1
 
-release_path=`echo $OUT_DIR/releases/*`
-release=`basename $release_path`
-
-if [ ! -e $release_path ]
+if [ ! -e $OORT_TMP/releases/fypo.owl ]
 then
-  echo "error: no directories found in $OUT_DIR/releases/ - check $OORT_LOG_FILE" 1>&2
+  echo "error: no output found in $OORT_TMP/releases/ - check $OORT_LOG_FILE" 1>&2
   exit 1
 fi
 
 grep -v '^relationship: has_part' $release_path/fypo-simple.obo | 
-  grep -v '^relationship: inheres_in' | grep -v '^synonymtypedef: ' > $release_path/fypo-basic.obo
+  grep -v '^relationship: inheres_in' | grep -v '^synonymtypedef: ' > $OORT_TMP/releases/fypo-basic.obo
 
-files_to_move="fypo.obo fypo-merged.obo fypo-simple.obo fypo-basic.obo fypo.owl fypo-merged.owl fypo-simple.owl"
-
-for file in $files_to_move
+for file in fypo.obo fypo-merged.obo fypo-simple.obo fypo-basic.obo fypo.owl fypo-merged.owl fypo-simple.owl
 do
-  mv $release_path/$file releases/latest
+  mv $OORT_TMP/releases/$file release
 done
 
-new_release_dir=./releases/$release
-svn cp releases/latest $new_release_dir ||
-  (echo "error: can't make new release directory: $new_release_dir" 1>&2; exit 1)
+git add release/* || (echo git add failed 1>&2; exit 1)
 
-svn commit --username=$username -m 'FYPO release' releases
+git commit -m 'FYPO release'
 
-cp $new_release_dir/* /var/www/pombase/ontologies/fypo/latest/
+scp release/* oliver0:/var/www/pombase/ontologies/fypo/latest/
