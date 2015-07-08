@@ -30,27 +30,34 @@ PATO_OBO=http://purl.obolibrary.org/obo/pato.owl
 SO_OBO=/home/mah79/song-svn/so-xp.owl
 
 echo running ontology-release-runner
-/usr/local/OBOReleaseManager-0.4.0-20130521/scripts/ontology-release-runner -outdir $OORT_TMP \
+/usr/local/owltools-git/OWLTools-Oort/bin/ontology-release-runner -outdir $OORT_TMP \
     --no-subsets -reasoner elk --simple \
     $FYPO_OBO $GO_OBO $PATO_OBO $CHEBI_OBO $CELL_TYPE_OBO $BRENDA_TISSUE_OBO $SO_OBO \
     > $OORT_LOG_FILE 2>&1
 
-if [ ! -e $OORT_TMP/releases/fypo.owl ]
+if [ ! -e $OORT_TMP/fypo.owl ]
 then
-  echo "error: no output found in $OORT_TMP/releases/ - check $OORT_LOG_FILE" 1>&2
+  echo "error: no output found in $OORT_TMP/ - check $OORT_LOG_FILE" 1>&2
   exit 1
 fi
 
-grep -v '^relationship: has_part' $release_path/fypo-simple.obo | 
-  grep -v '^relationship: inheres_in' | grep -v '^synonymtypedef: ' > $OORT_TMP/releases/fypo-basic.obo
+grep -v '^relationship: has_part' $OORT_TMP/fypo-simple.obo | 
+  grep -v '^relationship: inheres_in' | grep -v '^synonymtypedef: ' > $OORT_TMP/fypo-basic.obo
 
 for file in fypo.obo fypo-merged.obo fypo-simple.obo fypo-basic.obo fypo.owl fypo-merged.owl fypo-simple.owl
 do
-  mv $OORT_TMP/releases/$file release
+  mv $OORT_TMP/$file release
 done
 
 git add release/* || (echo git add failed 1>&2; exit 1)
 
 git commit -m 'FYPO release'
 
+VERSION_TAG=v`date +'%Y-%m-%d'`
+
+git tag -m $VERSION_TAG
+
+git push --tags
+
 scp release/* oliver0:/var/www/pombase/ontologies/fypo/latest/
+scp -r release oliver0:/var/www/pombase/ontologies/fypo/$VERSION_TAG
