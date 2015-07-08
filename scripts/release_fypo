@@ -56,8 +56,10 @@ git commit -m 'FYPO release'
 VERSION_TAG=v`date +'%Y-%m-%d'`
 
 git tag -m $VERSION_TAG
-
 git push --tags
 
+echo Tagged release $VERSION_TAG and pushed to GitHub
+
+echo Copying release to oliver0 web directory
 scp release/* oliver0:/var/www/pombase/ontologies/fypo/latest/
 scp -r release oliver0:/var/www/pombase/ontologies/fypo/$VERSION_TAG
