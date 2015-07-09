@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2015-06-12
-date: 12:06:2015 15:14
+data-version: releases/2015-07-09
+date: 08:07:2015 16:46
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -61,7 +61,7 @@ synonymtypedef: SMILES "SMILES"
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 synonymtypedef: VAR "variant annotation term"
 default-namespace: fission_yeast_phenotype
-remark: svn version: $Revision: 1228 $
+remark: svn version: $Revision: 303 $
 ontology: fypo
 
 [Term]
@@ -284,7 +284,6 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000016
 name: curved vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is curved along the long axis. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
-synonym: "bent cell" EXACT [PomBase:mah]
 synonym: "cell morphology, curved" EXACT [PomBase:mah]
 synonym: "comma-shaped cell" EXACT [PomBase:vw]
 synonym: "curved cell" EXACT [PomBase:mah]
@@ -3364,7 +3363,7 @@ synonym: "chromosome fragmentation upon mitotic chromosome segregation" EXACT [P
 synonym: "chromosome fragmentation upon segregation during mitosis" EXACT [PomBase:mah]
 synonym: "chromosome fragmentation upon segregation during vegetative growth" EXACT [PomBase:mah]
 synonym: "chromosome segregation defects, chromosome fragmentation" EXACT [PomBase:mah]
-synonym: "fragmented mitotic chromosames upon segregation" EXACT [PomBase:mah]
+synonym: "fragmented mitotic chromosomes upon segregation" EXACT [PomBase:mah]
 is_a: FYPO:0000141 ! abnormal mitotic sister chromatid segregation
 is_a: FYPO:0000848 ! abnormal chromosome morphology
 created_by: midori
@@ -34250,7 +34249,6 @@ creation_date: 2013-11-08T12:07:19Z
 id: FYPO:0002849
 name: curved cell during recovery from stationary phase
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is curved when the cell population has been in stationary phase and is then placed in conditions that allow recovery. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:jh, PomBase:mah]
-synonym: "bent cell during recovery from stationary phase" EXACT [PomBase:vw]
 synonym: "comma-shaped cell during recovery from stationary phase" EXACT [PomBase:mah]
 synonym: "curved cell during recovery from stationary phase during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "curved cell during vegetative growth following stationary phase" EXACT [PomBase:mah]
@@ -38128,9 +38126,12 @@ name: septation following abnormal chromosome segregation, with anucleate cell f
 def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell undergoes septation despite abnormal chromosome segregation, producing inviable daughter cells, and in which the septum forms in a position that partitions both nuclei into one daughter cell." [PomBase:mah, PomBase:vw]
 comment: Consider also annotating to 'unequal mitotic sister chromatid segregation' (FYPO:0003241) or one of its descendants, because the abnormal chromosome segregation seen in these mutants often separates DNA into unequal portions.
 synonym: "abnormal nuclear segregation" RELATED [PomBase:al]
+synonym: "monoseptate vegetative cell with binucleate and anucleate compartments following abnormal chromosome segregation" EXACT [PomBase:mah]
 synonym: "nuclear missegregation" RELATED [PomBase:al]
 synonym: "septation following abnormal chromosome segregation, with binucleate cell formation" EXACT [PomBase:mah]
 is_a: FYPO:0000229 ! septation following abnormal mitotic chromosome segregation
+is_a: FYPO:0001489 ! inviable vegetative cell
+is_a: FYPO:0004699 ! monoseptate vegetative cell with binucleate and anucleate compartments
 created_by: midori
 creation_date: 2014-03-05T11:09:42Z
 
@@ -56371,6 +56372,30 @@ is_a: FYPO:0000707 ! abnormal molecular function
 is_a: FYPO:0001092 ! binding phenotype
 created_by: midori
 creation_date: 2015-06-12T15:05:16Z
+
+[Term]
+id: FYPO:0004699
+name: monoseptate vegetative cell with binucleate and anucleate compartments
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which a cell has two nuclei and one septum, but both nuclei are in a single compartment on one side of the septum." [PomBase:mah]
+synonym: "binucleate monoseptate cell with nuclei grouped" RELATED [PomBase:al]
+synonym: "monoseptate cell with binucleate and anucleate compartments during vegetative growth" EXACT [PomBase:mah]
+synonym: "monoseptate vegetative cell with binucleate and anucleate compartments during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0001225 ! monoseptate
+relationship: has_part FYPO:0002071 ! mislocalized nucleus during vegetative growth
+created_by: midori
+creation_date: 2015-07-08T16:07:58Z
+
+[Term]
+id: FYPO:0004700
+name: bent vegetative cell
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is bent along the long axis. In a bent cell, the long axis has one or more angles, rather than following a straight line." [PomBase:mah]
+synonym: "bent cell" EXACT [PomBase:mah]
+synonym: "bent cell during vegetative growth" EXACT [PomBase:mah]
+synonym: "bent vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "cell morphology, bent" EXACT [PomBase:mah]
+is_a: FYPO:0002196 ! abnormal vegetative cell shape
+created_by: midori
+creation_date: 2015-07-08T16:24:25Z
 
 [Typedef]
 id: adjacent_to
