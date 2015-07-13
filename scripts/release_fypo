@@ -60,5 +60,5 @@ git push --follow-tags || (echo 'git push failed - exiting'; exit 1)
 echo Tagged release $VERSION_TAG and pushed to GitHub
 
 echo Copying release to oliver0 web directory
-scp release/* oliver0:/var/www/pombase/ontologies/fypo/latest/
-scp -r release oliver0:/var/www/pombase/ontologies/fypo/$VERSION_TAG
+cp release/* /var/www/pombase/ontologies/fypo/latest/
+cp -r release /var/www/pombase/ontologies/fypo/$VERSION_TAG
