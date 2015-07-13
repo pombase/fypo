@@ -50,13 +50,12 @@ do
 done
 
 git add release/* || (echo git add failed 1>&2; exit 1)
-
 git commit -m 'FYPO release' || (echo 'git commit failed - exiting'; exit 1)
 
 VERSION_TAG=v`date +'%Y-%m-%d'`
 
 git tag -m "Release FYPO" v$VERSION_TAG || (echo 'git tag failed - exiting'; exit 1)
-git push --tags || (echo 'git push failed - exiting'; exit 1)
+git push --follow-tags || (echo 'git push failed - exiting'; exit 1)
 
 echo Tagged release $VERSION_TAG and pushed to GitHub
 
