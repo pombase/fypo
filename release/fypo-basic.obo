@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2015-07-28
-date: 28:07:2015 15:04
+data-version: releases/2015-07-29
+date: 29:07:2015 16:27
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -50033,8 +50033,9 @@ def: "A cell phenotype in which the localization of a protein to the kinetochore
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased protein localisation to kinetochore during meiosis I" EXACT [PomBase:mah]
 synonym: "decreased protein localization to kinetochore during first meiotic nuclear division" EXACT [PomBase:mah]
+synonym: "decreased protein localization to meiotic kinetochore during meiosis I" EXACT [PomBase:vw]
 synonym: "reduced protein localization to kinetochore during meiosis I" EXACT [PomBase:mah]
-is_a: FYPO:0003549 ! abnormal protein localization during meiosis
+is_a: FYPO:0004762 ! abnormal protein localization to kinetochore during meiosis
 created_by: midori
 creation_date: 2014-12-19T13:00:18Z
 
@@ -56294,6 +56295,7 @@ synonym: "normal protein localization to cytoplasmic microtubule plus end" EXACT
 synonym: "normal protein localization to cytoplasmic microtubule plus-end during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein localization to cytoplasmic microtubule plus-end during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
 created_by: midori
 creation_date: 2015-07-27T14:07:56Z
 
@@ -56534,7 +56536,6 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "decreased histone exchange at dh repeat" NARROW [PomBase:al]
 synonym: "decreased histone exchange at pericentric heterochromatin during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased histone exchange at pericentric heterochromatin during vegetative growth" EXACT [PomBase:mah]
-synonym: "decreased histone replacement at protein coding gene" EXACT [GO:0043486, PomBase:mah]
 synonym: "reduced histone exchange at pericentric heterochromatin" EXACT [PomBase:mah]
 is_a: FYPO:0001352 ! abnormal chromatin organization during vegetative growth
 created_by: midori
@@ -56626,6 +56627,7 @@ synonym: "abnormal protein localization to microtubule minus end" EXACT [PomBase
 synonym: "abnormal protein localization to microtubule minus-end during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal protein localization to microtubule minus-end during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000931 ! abnormal protein localization to microtubule cytoskeleton during vegetative growth
+is_a: FYPO:0004639 ! abnormal cellular physical quality phenotype during vegetative growth
 created_by: midori
 creation_date: 2015-07-28T13:54:16Z
 
@@ -56689,6 +56691,65 @@ is_a: FYPO:0001893 ! abnormal sporulation resulting in formation of azygotic asc
 is_a: FYPO:0003263 ! abnormal sporulation resulting in formation of ascus with more than four spores
 created_by: midori
 creation_date: 2015-07-28T14:26:07Z
+
+[Term]
+id: FYPO:0004761
+name: increased histone exchange at pericentric heterochromatin
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which histone exchange occurs to a greater extent than normal in regions of pericentric heterochromatin. Histone exchange is replacement, within chromatin, of resident histones or histone subunits with alternative, sometimes variant, histones or subunits." [GO:0005721, GO:0043486, PMID:24095277, PomBase:mah]
+synonym: "increased histone exchange at dh repeat" NARROW [PomBase:al]
+synonym: "increased histone exchange at pericentric heterochromatin during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone exchange at pericentric heterochromatin during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001352 ! abnormal chromatin organization during vegetative growth
+created_by: midori
+creation_date: 2015-07-29T15:54:04Z
+
+[Term]
+id: FYPO:0004762
+name: abnormal protein localization to kinetochore during meiosis
+def: "A cell phenotype in which the localization of a protein to the kinetochore is abnormal during one or both meiotic nuclear divisions." [PomBase:mah]
+comment: Encompasses both presence of proteins not normally found associated with the kinetochore and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abnormal protein localisation to kinetochore during meiosis" EXACT [PomBase:mah]
+synonym: "abnormal protein localization to kinetochore during meiotic nuclear division" EXACT [GO:0007126]
+synonym: "abnormal protein localization to meiotic kinetochore" EXACT [PomBase:vw]
+is_a: FYPO:0003549 ! abnormal protein localization during meiosis
+created_by: midori
+creation_date: 2015-07-29T16:05:37Z
+
+[Term]
+id: FYPO:0004763
+name: abolished protein localization to kinetochore during meiosis I
+def: "A cell phenotype in which the localization of a protein to the kinetochore of a chromosome does not occur during the first meiotic nuclear division." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "abolished protein localisation to kinetochore during meiosis I" EXACT [PomBase:mah]
+synonym: "abolished protein localization to kinetochore during first meiotic nuclear division" EXACT [PomBase:mah]
+synonym: "abolished protein localization to meiotic kinetochore during meiosis I" EXACT [PomBase:vw]
+synonym: "protein localization to kinetochore during meiosis I abolished" EXACT [PomBase:mah]
+is_a: FYPO:0001375 ! protein localization abolished
+is_a: FYPO:0004762 ! abnormal protein localization to kinetochore during meiosis
+created_by: midori
+creation_date: 2015-07-29T16:07:30Z
+
+[Term]
+id: FYPO:0004764
+name: normal protein localization to meiotic spindle pole body during meiosis I
+def: "A cell phenotype in which the localization of a protein to the meiotic spindle pole body is normal (i.e. indistinguishable from wild type) during the first meiotic nuclear division." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to meiotic spindle pole body during meiosis I" EXACT [PomBase:mah]
+synonym: "normal protein localization to meiotic SPB during meiosis I" EXACT [PomBase:mah]
+synonym: "normal protein localization to meiotic spindle pole body during first meiotic nuclear division" EXACT [PomBase:mah]
+is_a: FYPO:0003541 ! normal protein localization to meiotic spindle pole body
+created_by: midori
+creation_date: 2015-07-29T16:10:12Z
+
+[Term]
+id: FYPO:0004765
+name: normal cell population growth during glucose limitation
+def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) under conditions of glucose limitation, such as in a medium that contains a low level of glucose and no other carbon source." [PomBase:mah]
+comment: Use this term if you have assayed growth of cells exposed to glucose limitation in culture. Note that glucose limitation differs from glucose starvation in that starvation results from complete absence of glucose, whereas limitation results from a shift from high to low glucose levels. Glucose concentrations below about 4.4 mM (0.08%) are typically regarded as limiting.
+synonym: "normal growth during glucose limitation" BROAD [PomBase:mah]
+is_a: FYPO:0000047 ! normal cell population growth
+created_by: midori
+creation_date: 2015-07-29T16:20:55Z
 
 [Typedef]
 id: adjacent_to
