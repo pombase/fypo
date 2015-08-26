@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2015-08-18
-date: 18:08:2015 14:38
+data-version: releases/2015-08-26
+date: 26:08:2015 16:34
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -2487,7 +2487,9 @@ name: abnormal mRNA export from nucleus
 def: "A transport phenotype observed in the vegetative growth phase of the life cycle in which the export of mRNA from the nucleus is abnormal." [PomBase:mah]
 synonym: "abnormal mRNA export from nucleus during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal mRNA export from nucleus during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000360 ! abnormal RNA localization during vegetative growth
 is_a: FYPO:0000506 ! abnormal nuclear export
+is_a: FYPO:0004852 ! RNA transport phenotype
 created_by: midori
 creation_date: 2011-04-13T03:41:10Z
 
@@ -3440,14 +3442,12 @@ creation_date: 2011-04-21T02:25:06Z
 [Term]
 id: FYPO:0000290
 name: transcription phenotype during vegetative growth
-def: "A cellular process phenotype that affects DNA-dependent transcription." [PomBase:mah]
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle that affects DNA-dependent transcription." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-synonym: "fission yeast transcription phenotype" EXACT [PomBase:mah]
 synonym: "transcription phenotype during mitotic cell cycle" RELATED [PomBase:mah]
-is_a: FYPO:0000142 ! gene expression phenotype
-is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0004847 ! transcription phenotype
 created_by: midori
 creation_date: 2011-04-21T02:31:20Z
 
@@ -3500,7 +3500,7 @@ subset: qc_do_not_manually_annotate
 synonym: "fission yeast RNA metabolism phenotype" EXACT [PomBase:mah]
 synonym: "RNA metabolism phenotype during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "RNA metabolism phenotype during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
+is_a: FYPO:0000292 ! nucleic acid metabolism phenotype
 created_by: midori
 creation_date: 2011-04-21T02:31:20Z
 
@@ -4366,8 +4366,9 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "abnormal RNA modification during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal RNA modification during vegetative growth" EXACT [PomBase:mah]
 synonym: "RNA modification: abnormal" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
 is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
+is_a: FYPO:0004851 ! abnormal RNA metabolic process
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
@@ -7828,7 +7829,8 @@ synonym: "constitutive catalytic activity during mitotic cell cycle" RELATED [Po
 synonym: "constitutive catalytic activity during vegetative growth" EXACT [PomBase:mah]
 synonym: "constitutive enzymatic activity" EXACT [PomBase:mah]
 synonym: "constitutively active enzyme" RELATED [PomBase:mah]
-is_a: FYPO:0000682 ! abnormal regulation of molecular function
+is_a: FYPO:0000654 ! catalytic activity phenotype
+relationship: output_of FYPO:0000682 ! abnormal regulation of molecular function
 created_by: midori
 creation_date: 2011-12-01T01:51:53Z
 
@@ -12050,6 +12052,7 @@ def: "A cellular process phenotype in which progression through the mitotic cell
 synonym: "mitotic G1 phase arrest during glucose starvation" EXACT [PomBase:mah]
 synonym: "normal cell cycle arrest in mitotic G2 phase during glucose depletion" EXACT [PomBase:vw]
 synonym: "normal cell cycle arrest in mitotic G2 phase during glucose deprivation" EXACT [PomBase:vw]
+synonym: "normal cell cycle arrest in mitotic G2 phase during glucose limitation" EXACT [PomBase:mah]
 synonym: "normal mitotic cell cycle arrest in G2 phase during glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001025 ! normally arrested mitotic cell cycle progression
 is_a: FYPO:0001151 ! cell cycle arrest in mitotic G2 phase during starvation
@@ -12404,7 +12407,6 @@ synonym: "normal arginine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal arginine import into cell" EXACT [PomBase:al]
 synonym: "normal L-arginine import" EXACT [PomBase:mah]
 synonym: "normal L-arginine uptake" EXACT [PomBase:mah]
-is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 is_a: FYPO:0001596 ! normal amino acid import
 created_by: midori
 creation_date: 2012-05-11T03:49:08Z
@@ -12601,6 +12603,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "normal transport during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal transport during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-05-31T15:46:37Z
 
@@ -12613,7 +12616,6 @@ synonym: "normal myo-inositol import during vegetative growth" EXACT [PomBase:ma
 synonym: "normal myo-inositol import into cell" EXACT [PomBase:al]
 synonym: "normal myo-inositol uptake" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
-is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-05-31T15:59:13Z
 
@@ -13736,7 +13738,6 @@ synonym: "normal hydrogen ion transport" EXACT [PomBase:mah]
 synonym: "normal proton transport during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal proton transport during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
-is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-06-18T15:18:27Z
 
@@ -18395,8 +18396,9 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "abnormal RNA processing during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal RNA processing during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000142 ! gene expression phenotype
-is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
 is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
+is_a: FYPO:0004851 ! abnormal RNA metabolic process
 created_by: midori
 creation_date: 2012-09-14T15:07:19Z
 
@@ -18473,7 +18475,6 @@ synonym: "normal methionine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal methionine import into cell" EXACT [PomBase:al]
 synonym: "normal methionine uptake" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
-is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-09-14T16:34:42Z
 
@@ -19778,6 +19779,7 @@ def: "A cell phenotype in which the amount of trehalose measured in a cell is lo
 synonym: "decreased cellular cAMP accumulation during glucose starvation" RELATED [PomBase:mah]
 synonym: "decreased cellular cAMP level during glucose depletion" EXACT [PomBase:vw]
 synonym: "decreased cellular cAMP level during glucose deprivation" EXACT [PomBase:vw]
+synonym: "decreased cellular cAMP level during glucose limitation" EXACT [PomBase:mah]
 synonym: "decreased cellular cyclic AMP level during cellular response to glucose starvation" EXACT [PomBase:mah]
 synonym: "reduced cellular cAMP level during glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001660 ! decreased cellular cAMP level
@@ -19791,6 +19793,7 @@ def: "A cell phenotype in which the amount of cyclic AMP measured in a cell is h
 synonym: "increased cAMP accumulation during cellular response to glucose starvation" RELATED [PomBase:mah]
 synonym: "increased cellular cAMP level during glucose depletion" EXACT [PomBase:vw]
 synonym: "increased cellular cAMP level during glucose deprivation" EXACT [PomBase:vw]
+synonym: "increased cellular cAMP level during glucose limitation" EXACT [PomBase:mah]
 synonym: "increased cellular cAMP level in response to glucose starvation" EXACT [PomBase:al]
 synonym: "increased cellular cyclic AMP level and during cellular response to glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001661 ! increased cellular cAMP level
@@ -19837,6 +19840,7 @@ def: "A cell phenotype in which the amount of cyclic AMP measured in a cell duri
 synonym: "normal cAMP accumulation during glucose starvation" RELATED [PomBase:mah]
 synonym: "normal cAMP level during glucose depletion" EXACT [PomBase:vw]
 synonym: "normal cAMP level during glucose deprivation" EXACT [PomBase:vw]
+synonym: "normal cAMP level during glucose limitation" EXACT [PomBase:mah]
 synonym: "normal cellular cAMP level during glucose starvation" EXACT [PomBase:mah]
 synonym: "normal cyclic AMP level during glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001666 ! normal cAMP level
@@ -21467,7 +21471,6 @@ synonym: "normal adenine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal adenine import into cell" EXACT [PomBase:al]
 synonym: "normal adenine uptake" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
-is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-11-29T11:51:44Z
 
@@ -21480,7 +21483,6 @@ synonym: "normal guanine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal guanine import into cell" EXACT [PomBase:al]
 synonym: "normal guanine uptake" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
-is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 created_by: midori
 creation_date: 2012-11-29T11:52:06Z
 
@@ -22047,7 +22049,9 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "normal transcription during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal transcription during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal transcription, DNA-dependent, during vegetative growth" EXACT [GO:0006351, PomBase:mah]
+is_a: FYPO:0000290 ! transcription phenotype during vegetative growth
 is_a: FYPO:0000859 ! normal metabolic process during vegetative growth
+is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
 is_a: FYPO:0002882 ! normal transcription
 created_by: midori
 creation_date: 2012-12-18T14:22:58Z
@@ -22163,6 +22167,7 @@ synonym: "normal glucose repression during vegetative growth" EXACT [PomBase:mah
 synonym: "normal negative regulation of transcription by glucose during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal negative regulation of transcription by glucose during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001319 ! normal cellular process during vegetative growth
+is_a: FYPO:0001335 ! transcription regulation phenotype during vegetative growth
 is_a: FYPO:0001342 ! cellular response phenotype during vegetative growth
 created_by: midori
 creation_date: 2013-01-09T15:24:17Z
@@ -22580,6 +22585,7 @@ synonym: "fewer P-bodies present during glucose starvation" EXACT [PomBase:mah]
 synonym: "P bodies present in decreased numbers during glucose starvation" EXACT [GO:0000932]
 synonym: "P-bodies present in decreased numbers during glucose depletion" EXACT [PomBase:vw]
 synonym: "P-bodies present in decreased numbers during glucose deprivation" EXACT [PomBase:vw]
+synonym: "P-bodies present in decreased numbers during glucose limitation" EXACT [PomBase:mah]
 synonym: "P-bodies present in reduced numbers during glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001898 ! P-bodies present in decreased numbers
 created_by: midori
@@ -22620,6 +22626,7 @@ synonym: "small cytoplasmic mRNA processing bodies during glucose starvation" EX
 synonym: "small P bodies during glucose starvation" EXACT [GO:0000932]
 synonym: "small P-bodies during glucose depletion" EXACT [PomBase:vw]
 synonym: "small P-bodies during glucose deprivation" EXACT [PomBase:vw]
+synonym: "small P-bodies during glucose limitation" EXACT [PomBase:mah]
 is_a: FYPO:0001900 ! small P-bodies
 created_by: midori
 creation_date: 2013-01-30T17:12:02Z
@@ -24315,8 +24322,9 @@ name: abnormal deadenylation-independent decapping of nuclear-transcribed mRNA
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which deadenylation-independent decapping of nuclear-transcribed mRNA is abnormal. This decapping process is cleavage of the 5'-cap of a nuclear-transcribed mRNA, independent of poly(A) tail shortening. All RNA decapping may be abnormal, or one or more specific RNA molecules may be selectively affected." [GO:0031087, PomBase:mah]
 synonym: "abnormal deadenylation-independent decapping of nuclear-transcribed mRNA during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal deadenylation-independent decapping of nuclear-transcribed mRNA during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
 is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
+is_a: FYPO:0004851 ! abnormal RNA metabolic process
 created_by: midori
 creation_date: 2013-03-08T11:32:33Z
 
@@ -25527,7 +25535,7 @@ synonym: "abnormal RNA breakdown during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal RNA catabolic process during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal RNA catabolism during vegetative growth" EXACT [GO:0006401]
 synonym: "abnormal RNA degradation during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
 is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
 is_a: FYPO:0003551 ! abnormal RNA catabolic process
 created_by: midori
@@ -27048,7 +27056,6 @@ synonym: "normal leucine import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal leucine import into cell" EXACT [PomBase:al]
 synonym: "normal leucine uptake" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
-is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 created_by: midori
 creation_date: 2013-06-12T13:18:44Z
 
@@ -27063,7 +27070,6 @@ synonym: "normal glutamate import into cell" EXACT [PomBase:al]
 synonym: "normal glutamate uptake" EXACT [PomBase:mah]
 synonym: "normal glutamic acid import" EXACT [PomBase:mah]
 synonym: "normal L-glutamic acid import" EXACT [PomBase:mah]
-is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 is_a: FYPO:0001596 ! normal amino acid import
 created_by: midori
 creation_date: 2013-06-12T13:21:09Z
@@ -27226,8 +27232,9 @@ creation_date: 2013-06-12T15:40:14Z
 [Term]
 id: FYPO:0002274
 name: abnormal protein metabolic process
-def: "A cellular process phenotype that affects protein metabolism in the cell." [PomBase:mah]
+def: "A cellular process phenotype in which a protein metabolic process is abnormal. A protein metabolic process is a series of chemical reactions and pathways involving a specific protein." [GO:0019538, PomBase:mah]
 synonym: "abnormal cellular protein metabolic process" EXACT [PomBase:mah]
+synonym: "abnormal protein metabolism" EXACT [GO:0019538]
 is_a: FYPO:0000860 ! abnormal metabolic process
 created_by: midori
 creation_date: 2013-06-12T15:51:09Z
@@ -33726,7 +33733,6 @@ synonym: "normal sodium import during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal sodium import into cell" EXACT [PomBase:al]
 synonym: "normal sodium ion import into cell" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
-is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 created_by: midori
 creation_date: 2013-10-22T14:47:17Z
 
@@ -34617,6 +34623,7 @@ def: "A cellular process phenotype in which transcription occurs to a greater ex
 synonym: "increased transcription during cellular response to glucose starvation" EXACT [PomBase:mah]
 synonym: "increased transcription during glucose depletion" EXACT [PomBase:vw]
 synonym: "increased transcription during glucose deprivation" EXACT [PomBase:vw]
+synonym: "increased transcription during glucose limitation" EXACT [PomBase:mah]
 synonym: "increased transcription in response to glucose starvation" EXACT [PomBase:vw]
 is_a: FYPO:0002875 ! increased transcription
 created_by: midori
@@ -34630,6 +34637,7 @@ synonym: "abolished glucose deprivation induced gene expression" RELATED [PomBas
 synonym: "abolished transcription during cellular response to glucose starvation" EXACT [PomBase:mah]
 synonym: "abolished transcription during glucose depletion" EXACT [PomBase:vw]
 synonym: "abolished transcription during glucose deprivation" EXACT [PomBase:vw]
+synonym: "abolished transcription during glucose limitation" EXACT [PomBase:mah]
 synonym: "abolished transcription during glucose starvation during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abolished transcription during glucose starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abolished transcription in response to glucose starvation" EXACT [PomBase:vw]
@@ -34647,6 +34655,7 @@ comment: Use this term if there is evidence, such as labeled nucleotide incorpor
 synonym: "decreased transcription during cellular response to glucose starvation and oxidative stress" EXACT [PomBase:mah]
 synonym: "decreased transcription during glucose depletion and oxidative stress" EXACT [PomBase:vw]
 synonym: "decreased transcription during glucose deprivation and oxidative stress" EXACT [PomBase:vw]
+synonym: "decreased transcription during glucose limitation and oxidative stress" EXACT [PomBase:mah]
 synonym: "decreased transcription in response to glucose starvation and oxidative stress" EXACT [PomBase:mah]
 synonym: "decreased transcription in response to glucose starvation during oxidative stress" EXACT [PomBase:vw]
 synonym: "reduced transcription during glucose starvation and oxidative stress" EXACT [PomBase:mah]
@@ -34661,6 +34670,7 @@ def: "A cellular process phenotype in which transcription occurs to a greater ex
 comment: Use this term if there is evidence, such as labeled nucleotide incorporation, showing that transcription rather than RNA stability is affected; otherwise, use 'decreased RNA level' (FYPO:0000826).
 synonym: "increased transcription during glucose depletion and oxidative stress" EXACT [PomBase:vw]
 synonym: "increased transcription during glucose deprivation and oxidative stress" EXACT [PomBase:vw]
+synonym: "increased transcription during glucose limitation and oxidative stress" EXACT [PomBase:mah]
 synonym: "increased transcription in response to glucose starvation and oxidative stress" EXACT [PomBase:mah]
 synonym: "increased transcription in response to glucose starvation during oxidative stress" EXACT [PomBase:vw]
 is_a: FYPO:0002878 ! increased transcription during glucose starvation
@@ -34672,7 +34682,8 @@ id: FYPO:0002882
 name: normal transcription
 def: "A cellular process phenotype in which transcription occurs to a normal (i.e. indistinguishable from wild type) extent. All genes, or a specific subset of genes, may be measured." [PomBase:mah]
 synonym: "normal transcription, DNA-dependent" EXACT [GO:0006351]
-is_a: FYPO:0002496 ! normal metabolic process
+is_a: FYPO:0004847 ! transcription phenotype
+is_a: FYPO:0004850 ! normal RNA metabolic process
 created_by: midori
 creation_date: 2013-11-14T15:45:53Z
 
@@ -34683,6 +34694,7 @@ def: "A cellular process phenotype in which transcription occurs to a normal (i.
 synonym: "normal transcription during cellular response to glucose starvation" EXACT [PomBase:mah]
 synonym: "normal transcription during glucose depletion" EXACT [PomBase:vw]
 synonym: "normal transcription during glucose deprivation" EXACT [PomBase:vw]
+synonym: "normal transcription during glucose limitation" EXACT [PomBase:mah]
 synonym: "normal transcription in response to glucose starvation" EXACT [PomBase:vw]
 is_a: FYPO:0002882 ! normal transcription
 created_by: midori
@@ -36567,6 +36579,7 @@ comment: Consider annotating to a term describing abnormal transcription or abno
 synonym: "decreased RNA accumulation during glucose starvation" RELATED [PomBase:mah]
 synonym: "decreased RNA level during glucose depletion" EXACT [PomBase:vw]
 synonym: "decreased RNA level during glucose deprivation" EXACT [PomBase:vw]
+synonym: "decreased RNA level during glucose limitation" EXACT [PomBase:mah]
 synonym: "decreased transcript level during glucose starvation" EXACT [PomBase:vw]
 synonym: "reduced RNA level during glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000826 ! decreased RNA level
@@ -36581,6 +36594,7 @@ comment: Consider annotating to a term describing abnormal transcription or abno
 synonym: "increased RNA accumulation during glucose starvation" RELATED [PomBase:mah]
 synonym: "increased RNA level during glucose depletion" EXACT [PomBase:vw]
 synonym: "increased RNA level during glucose deprivation" EXACT [PomBase:vw]
+synonym: "increased RNA level during glucose limitation" EXACT [PomBase:mah]
 synonym: "increased transcript level during glucose starvation" EXACT [PomBase:vw]
 is_a: FYPO:0001890 ! increased RNA level
 created_by: midori
@@ -36856,8 +36870,8 @@ def: "A cell phenotype in which the localization of an RNA in a cell is abnormal
 synonym: "abnormal cellular RNA localisation" EXACT [PomBase:mah]
 synonym: "abnormal cellular RNA localization" EXACT [PomBase:mah]
 synonym: "abnormal RNA localisation" EXACT [PomBase:mah]
-is_a: FYPO:0000138 ! localization phenotype
 is_a: FYPO:0000628 ! abnormal cellular process
+is_a: FYPO:0004853 ! RNA localization phenotype
 created_by: midori
 creation_date: 2014-01-30T16:00:06Z
 
@@ -36868,8 +36882,8 @@ def: "A cell phenotype in which the localization of an RNA in a cell is normal (
 synonym: "normal cellular RNA localisation" EXACT [PomBase:mah]
 synonym: "normal cellular RNA localization" EXACT [PomBase:mah]
 synonym: "normal RNA localisation" EXACT [PomBase:mah]
-is_a: FYPO:0000138 ! localization phenotype
 is_a: FYPO:0000627 ! normal cellular process
+is_a: FYPO:0004853 ! RNA localization phenotype
 created_by: midori
 creation_date: 2014-01-30T16:05:30Z
 
@@ -37596,6 +37610,7 @@ comment: Use this term if there is evidence, such as labeled nucleotide incorpor
 synonym: "decreased transcription during cellular response to glucose starvation" EXACT [PomBase:mah]
 synonym: "decreased transcription during glucose depletion" EXACT [PomBase:vw]
 synonym: "decreased transcription during glucose deprivation" EXACT [PomBase:vw]
+synonym: "decreased transcription during glucose limitation" EXACT [PomBase:mah]
 synonym: "decreased transcription in response to glucose starvation" EXACT [PomBase:mah, PomBase:vw]
 synonym: "reduced transcription during glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0002876 ! decreased transcription
@@ -38572,6 +38587,9 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
 synonym: "abnormal RNA level during cellular response to glucose starvation" EXACT [PomBase:mah]
 synonym: "altered cellular RNA level during cellular response to glucose starvation" EXACT [PomBase:mah]
+synonym: "altered RNA level during cellular response to glucose depletion" EXACT [PomBase:mah]
+synonym: "altered RNA level during cellular response to glucose deprivation" EXACT [PomBase:mah]
+synonym: "altered RNA level during cellular response to glucose limitation" EXACT [PomBase:mah]
 synonym: "altered RNA level during cellular response to glucose starvation during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "altered RNA level during cellular response to glucose starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "altered RNA level during glucose starvation" EXACT [PomBase:mah]
@@ -38764,6 +38782,9 @@ id: FYPO:0003214
 name: normal protein phosphorylation during cellular response to glucose starvation
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins is normal (i.e. indistinguishable from wild type) during a cellular response to glucose starvation." [PomBase:mah]
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein phosphorylation during cellular response to glucose depletion" EXACT [PomBase:mah]
+synonym: "normal protein phosphorylation during cellular response to glucose deprivation" EXACT [PomBase:mah]
+synonym: "normal protein phosphorylation during cellular response to glucose limitation" EXACT [PomBase:mah]
 synonym: "normal protein phosphorylation during cellular response to glucose starvation during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal protein phosphorylation during cellular response to glucose starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal protein phosphorylation during glucose starvation" EXACT [PomBase:mah]
@@ -39764,7 +39785,6 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "normal UDP-galactose transmembrane transport during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal UDP-galactose transmembrane transport during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001071 ! normal transport
-is_a: FYPO:0001336 ! transport phenotype during vegetative growth
 created_by: midori
 creation_date: 2014-04-15T16:50:17Z
 
@@ -41856,8 +41876,9 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "normal RNA splicing during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal RNA splicing during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal RNA splicing, via transesterification reactions with bulged adenosine as nucleophile" EXACT [GO:0000377]
-is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
 is_a: FYPO:0001980 ! normal RNA processing
+is_a: FYPO:0004850 ! normal RNA metabolic process
 created_by: midori
 creation_date: 2014-06-24T14:46:38Z
 
@@ -41907,8 +41928,9 @@ creation_date: 2014-06-24T15:01:30Z
 
 [Term]
 id: FYPO:0003473
-name: septation following abnormal chromosome segregation, with binucleate cell formation during cellular response to salt stress
+name: septation following abnormal chromosome segregation, with anucleate cell formation during cellular response to salt stress
 def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell undergoes septation despite abnormal chromosome segregation, producing inviable daughter cells, and in which the septum forms in a position that partitions both nuclei into one daughter cell, when the cell is subject to salt stress." [PomBase:mah, PomBase:vw]
+synonym: "septation following abnormal chromosome segregation, with binucleate cell formation during cellular response to salt stress" EXACT [PomBase:mah]
 is_a: FYPO:0003166 ! septation following abnormal chromosome segregation, with anucleate cell formation
 created_by: midori
 creation_date: 2014-06-24T15:05:37Z
@@ -42818,8 +42840,7 @@ def: "A cellular process phenotype in which an RNA catabolic process is abnormal
 synonym: "abnormal RNA breakdown" EXACT [PomBase:mah]
 synonym: "abnormal RNA catabolism" EXACT [GO:0006401]
 synonym: "abnormal RNA degradation" EXACT [PomBase:mah]
-is_a: FYPO:0000292 ! nucleic acid metabolism phenotype
-is_a: FYPO:0000860 ! abnormal metabolic process
+is_a: FYPO:0004851 ! abnormal RNA metabolic process
 created_by: midori
 creation_date: 2014-07-17T10:43:12Z
 
@@ -42876,9 +42897,10 @@ synonym: "abnormal DNA-templated transcription, termination" EXACT [GO:0006353]
 synonym: "abnormal termination of transcription" EXACT [PomBase:al]
 synonym: "abnormal transcription termination during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal transcription termination during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000294 ! RNA metabolism phenotype
 is_a: FYPO:0001337 ! localization phenotype during vegetative growth
+is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
 is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
+is_a: FYPO:0004851 ! abnormal RNA metabolic process
 created_by: midori
 creation_date: 2014-07-17T11:10:03Z
 
@@ -43925,6 +43947,7 @@ comment: Consider annotating to a term describing abnormal translation or abnorm
 synonym: "decreased protein accumulation during cellular response to glucose starvation" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to glucose depletion" EXACT [PomBase:mah]
 synonym: "decreased protein level during cellular response to glucose deprivation" EXACT [PomBase:mah]
+synonym: "decreased protein level during cellular response to glucose limitation" EXACT [PomBase:mah]
 synonym: "decreased protein level during cellular response to glucose starvation during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased protein level during cellular response to glucose starvation during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced protein level during cellular response to glucose starvation" EXACT [PomBase:mah]
@@ -43951,7 +43974,7 @@ name: abnormal transcription initiation from RNA polymerase III promoter
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which transcription initiation from an RNA polymerase III promoter is abnormal." [GO:0006384, PomBase:mah]
 synonym: "abnormal transcription initiation from RNA polymerase III promoter during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal transcription initiation from RNA polymerase III promoter during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0004064 ! abnormal transcription
+is_a: FYPO:0004064 ! abnormal transcription during vegetative growth
 created_by: midori
 creation_date: 2014-08-06T16:28:13Z
 
@@ -44988,14 +45011,16 @@ creation_date: 2014-09-01T13:52:53Z
 
 [Term]
 id: FYPO:0003743
-name: decreased cell population growth during glucose limitation
-def: "A cell growth phenotype in which cell population growth is decreased relative to normal under conditions of glucose limitation, such as in a medium that contains a low level of glucose and no other carbon source." [PomBase:mah]
-comment: Use this term if you have assayed growth of cells exposed to glucose limitation in culture. Note that glucose limitation differs from glucose starvation in that starvation results from complete absence of glucose, whereas limitation results from a shift from high to low glucose levels. Glucose concentrations below about 4.4 mM (0.08%) are typically regarded as limiting.
-synonym: "decreased cell population growth in response to glucose limitation" EXACT [PomBase:mah]
-synonym: "hypersensitive to glucose limitation" RELATED [PomBase:mah]
-synonym: "reduced cell population growth during glucose limitation" RELATED [PomBase:mah]
-synonym: "sensitive to glucose limitation" RELATED [PomBase:vw]
-synonym: "slow cell population growth during glucose limitation" NARROW [PomBase:mah]
+name: decreased cell population growth during glucose starvation
+def: "A cell growth phenotype in which cell population growth is decreased relative to normal under conditions of glucose starvation." [PomBase:mah]
+synonym: "decreased cell population growth during glucose depletion" EXACT [PomBase:mah]
+synonym: "decreased cell population growth during glucose deprivation" EXACT [PomBase:mah]
+synonym: "decreased cell population growth during glucose limitation" EXACT [PomBase:mah]
+synonym: "decreased cell population growth in response to glucose starvation" EXACT [PomBase:mah]
+synonym: "hypersensitive to glucose starvation" RELATED [PomBase:mah]
+synonym: "reduced cell population growth during glucose starvation" RELATED [PomBase:mah]
+synonym: "sensitive to glucose starvation" RELATED [PomBase:vw]
+synonym: "slow cell population growth during glucose starvation" NARROW [PomBase:mah]
 is_a: FYPO:0000046 ! decreased cell population growth
 created_by: midori
 creation_date: 2014-09-08T11:52:09Z
@@ -45338,6 +45363,7 @@ def: "A transcription regulation phenotype in which pheromone-responsive positiv
 synonym: "decreased positive regulation of transcription from RNA polymerase II promoter by pheromones" EXACT [GO:0007329]
 synonym: "reduced positive regulation of transcription from RNA polymerase II promoter by pheromones" EXACT [GO:0007329]
 is_a: FYPO:0000623 ! abnormal positive regulation of transcription
+is_a: FYPO:0000984 ! abnormal transcriptional response to pheromone
 created_by: midori
 creation_date: 2014-09-08T15:44:26Z
 
@@ -45951,8 +45977,9 @@ creation_date: 2014-09-12T16:15:49Z
 
 [Term]
 id: FYPO:0003823
-name: septation following abnormal chromosome segregation, with binucleate cell formation during cellular response to hydroxyurea
+name: septation following abnormal chromosome segregation, with anucleate cell formation during cellular response to hydroxyurea
 def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell undergoes septation despite abnormal chromosome segregation, producing inviable daughter cells, and in which the septum forms in a position that partitions both nuclei into one daughter cell, when a cell is exposed to hydroxyurea." [PomBase:mah, PomBase:vw]
+synonym: "septation following abnormal chromosome segregation, with binucleate cell formation during cellular response to hydroxyurea" EXACT [PomBase:mah]
 is_a: FYPO:0003166 ! septation following abnormal chromosome segregation, with anucleate cell formation
 created_by: midori
 creation_date: 2014-09-15T17:42:18Z
@@ -47290,12 +47317,14 @@ creation_date: 2014-10-29T11:58:04Z
 
 [Term]
 id: FYPO:0003938
-name: increased cell population growth during glucose limitation
-def: "A cell growth phenotype in which cell population growth is increased relative to normal under conditions of glucose limitation, such as in a medium that contains a low level of glucose and no other carbon source." [PomBase:mah]
-comment: Use this term if you have assayed growth of cells exposed to glucose limitation in culture. Note that glucose limitation differs from glucose starvation in that starvation results from complete absence of glucose, whereas limitation results from a shift from high to low glucose levels. Glucose concentrations below about 4.4 mM (0.08%) are typically regarded as limiting.
-synonym: "fast cell population growth during glucose limitation" NARROW [PomBase:mah]
-synonym: "increased cell population growth in response to glucose limitation" EXACT [PomBase:mah]
-synonym: "resistant to glucose limitation" RELATED [PomBase:mah]
+name: increased cell population growth during glucose starvation
+def: "A cell growth phenotype in which cell population growth is increased relative to normal under conditions of glucose starvation." [PomBase:mah]
+synonym: "fast cell population growth during glucose starvation" NARROW [PomBase:mah]
+synonym: "increased cell population growth during glucose depletion" EXACT [PomBase:mah]
+synonym: "increased cell population growth during glucose deprivation" EXACT [PomBase:mah]
+synonym: "increased cell population growth during glucose limitation" EXACT [PomBase:mah]
+synonym: "increased cell population growth in response to glucose starvation" EXACT [PomBase:mah]
+synonym: "resistant to glucose starvation" RELATED [PomBase:mah]
 is_a: FYPO:0003937 ! increased cell population growth
 created_by: midori
 creation_date: 2014-10-29T11:58:39Z
@@ -47390,8 +47419,9 @@ synonym: "normal NMD" EXACT [PomBase:mah]
 synonym: "normal nonsense-mediated decay during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal nonsense-mediated decay during vegetative growth" EXACT [PomBase:mah]
 synonym: "normal nuclear-transcribed mRNA catabolic process, nonsense-mediated decay" EXACT [GO:0000184]
-is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
 is_a: FYPO:0002939 ! normal nuclear mRNA catabolic process
+is_a: FYPO:0004850 ! normal RNA metabolic process
 created_by: midori
 creation_date: 2014-10-29T13:19:05Z
 
@@ -48728,14 +48758,15 @@ creation_date: 2014-11-25T16:18:38Z
 
 [Term]
 id: FYPO:0004064
-name: abnormal transcription
+name: abnormal transcription during vegetative growth
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which transcription of RNA from one or more DNA templates is abnormal." [GO:0006351, PomBase:mah]
-synonym: "abnormal DNA-dependent transcription" EXACT [GO:0006351]
+synonym: "abnormal DNA-dependent transcription during vegetative growth" EXACT [GO:0006351]
 synonym: "abnormal transcription during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abnormal transcription during vegetative growth" EXACT [PomBase:mah]
-synonym: "abnormal transcription, DNA-templated" EXACT [GO:0006351]
+synonym: "abnormal transcription, DNA-templated, during vegetative growth" EXACT [GO:0006351]
 is_a: FYPO:0000290 ! transcription phenotype during vegetative growth
+is_a: FYPO:0001347 ! nucleic acid metabolism phenotype during vegetative growth
 is_a: FYPO:0001363 ! abnormal metabolic process during vegetative growth
+is_a: FYPO:0004851 ! abnormal RNA metabolic process
 created_by: midori
 creation_date: 2014-11-25T16:38:51Z
 
@@ -48746,7 +48777,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "abnormal RNA elongation from RNA polymerase II promoter" EXACT [GO:0006368]
 synonym: "abnormal transcription elongation from RNA polymerase II promoter during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal transcription elongation from RNA polymerase II promoter during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0004064 ! abnormal transcription
+is_a: FYPO:0004064 ! abnormal transcription during vegetative growth
 created_by: midori
 creation_date: 2014-11-25T16:41:18Z
 
@@ -49910,6 +49941,7 @@ synonym: "decreased viability upon glucose starvation" EXACT [PomBase:mah]
 synonym: "loss of cell population viability upon glucose starvation" EXACT [PomBase:mah]
 synonym: "loss of viability upon glucose depletion" EXACT [PomBase:al]
 synonym: "loss of viability upon glucose deprivation" EXACT [PomBase:mah]
+synonym: "loss of viability upon glucose limitation" EXACT [PomBase:mah]
 synonym: "reduced viability upon glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0000244 ! loss of viability upon nutrient depletion
 created_by: midori
@@ -49923,6 +49955,7 @@ synonym: "increased cell population viability upon glucose starvation" EXACT [Po
 synonym: "increased viability during glucose starvation" EXACT [PomBase:mah]
 synonym: "increased viability upon glucose depletion" EXACT [PomBase:al]
 synonym: "increased viability upon glucose deprivation" EXACT [PomBase:mah]
+synonym: "increased viability upon glucose limitation" EXACT [PomBase:mah]
 is_a: FYPO:0002057 ! cell population viability
 created_by: midori
 creation_date: 2014-12-09T14:42:38Z
@@ -49972,10 +50005,12 @@ creation_date: 2014-12-09T15:00:22Z
 
 [Term]
 id: FYPO:0004168
-name: normal viability in stationary phase during glucose limitation
-def: "A cell population phenotype in which a normal proportion of the population remains viable after entering stationary phase, under conditions of glucose limitation, such as in a medium that contains a low level of glucose and no other carbon source." [PomBase:mah]
-comment: Use this term if you have assayed growth of cells exposed to glucose limitation in culture. Note that glucose limitation differs from glucose starvation in that starvation results from complete absence of glucose, whereas limitation results from a shift from high to low glucose levels. Glucose concentrations below about 4.4 mM (0.08%) are typically regarded as limiting.
-synonym: "normal cell population viability in stationary phase during glucose limitation" EXACT [PomBase:mah]
+name: normal viability in stationary phase during glucose starvation
+def: "A cell population phenotype in which a normal proportion of the population remains viable after entering stationary phase, under conditions of glucose starvation." [PomBase:mah]
+synonym: "normal cell population viability in stationary phase during glucose starvation" EXACT [PomBase:mah]
+synonym: "normal viability in stationary phase during glucose depletion" EXACT [PomBase:mah]
+synonym: "normal viability in stationary phase during glucose deprivation" EXACT [PomBase:mah]
+synonym: "normal viability in stationary phase during glucose limitation" EXACT [PomBase:mah]
 is_a: FYPO:0001310 ! normal viability in stationary phase
 created_by: midori
 creation_date: 2014-12-09T15:02:19Z
@@ -50018,6 +50053,7 @@ synonym: "normal mRNA level during glucose starvation" NARROW [PomBase:mah]
 synonym: "normal RNA accumulation during glucose starvation" RELATED [PomBase:mah]
 synonym: "normal RNA level during glucose depletion" EXACT [PomBase:vw]
 synonym: "normal RNA level during glucose deprivation" EXACT [PomBase:vw]
+synonym: "normal RNA level during glucose limitation" EXACT [PomBase:mah]
 is_a: FYPO:0000840 ! normal RNA level
 created_by: midori
 creation_date: 2014-12-09T15:27:27Z
@@ -52497,6 +52533,7 @@ def: "A cell phenotype in which the localization of a protein to the cytoplasm i
 synonym: "abolished protein localisation to cytoplasm during glucose starvation" EXACT [PomBase:mah]
 synonym: "abolished protein localization to cytoplasm during glucose depletion" EXACT [PomBase:mah]
 synonym: "abolished protein localization to cytoplasm during glucose deprivation" EXACT [PomBase:mah]
+synonym: "abolished protein localization to cytoplasm during glucose limitation" EXACT [PomBase:mah]
 synonym: "protein localization to cytoplasm abolished during glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001375 ! protein localization abolished
 created_by: midori
@@ -53574,6 +53611,7 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "abolished protein localisation to nucleus during glucose starvation" EXACT [PomBase:mah]
 synonym: "abolished protein localization to nucleus during glucose depletion" EXACT [PomBase:mah]
 synonym: "abolished protein localization to nucleus during glucose deprivation" EXACT [PomBase:al]
+synonym: "abolished protein localization to nucleus during glucose limitation" EXACT [PomBase:mah]
 synonym: "protein localization to nucleus abolished during glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0003450 ! abolished protein localization to nucleus
 created_by: midori
@@ -55030,6 +55068,7 @@ name: increased transcriptional response to pheromone
 def: "A transcription regulation phenotype in which pheromone-responsive positive regulation of transcription from an RNA polymerase II promoter is increased." [GO:0007329, PomBase:mah]
 synonym: "increased positive regulation of transcription from RNA polymerase II promoter by pheromones" EXACT [GO:0007329]
 is_a: FYPO:0000623 ! abnormal positive regulation of transcription
+is_a: FYPO:0000984 ! abnormal transcriptional response to pheromone
 created_by: midori
 creation_date: 2015-04-21T15:25:40Z
 
@@ -57320,10 +57359,12 @@ creation_date: 2015-07-29T16:10:12Z
 
 [Term]
 id: FYPO:0004765
-name: normal cell population growth during glucose limitation
-def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) under conditions of glucose limitation, such as in a medium that contains a low level of glucose and no other carbon source." [PomBase:mah]
-comment: Use this term if you have assayed growth of cells exposed to glucose limitation in culture. Note that glucose limitation differs from glucose starvation in that starvation results from complete absence of glucose, whereas limitation results from a shift from high to low glucose levels. Glucose concentrations below about 4.4 mM (0.08%) are typically regarded as limiting.
-synonym: "normal growth during glucose limitation" BROAD [PomBase:mah]
+name: normal cell population growth during glucose starvation
+def: "A cell growth phenotype in which cell population growth is normal (i.e. indistinguishable from wild type) under conditions of glucose starvation." [PomBase:mah]
+synonym: "normal cell population growth during glucose depletion" EXACT [PomBase:mah]
+synonym: "normal cell population growth during glucose deprivation" EXACT [PomBase:mah]
+synonym: "normal cell population growth during glucose limitation" EXACT [PomBase:mah]
+synonym: "normal growth during glucose starvation" BROAD [PomBase:mah]
 is_a: FYPO:0000047 ! normal cell population growth
 created_by: midori
 creation_date: 2015-07-29T16:20:55Z
@@ -57594,6 +57635,7 @@ synonym: "increased peptidyl-serine phosphorylation during glucose starvation" E
 synonym: "increased protein serine phosphorylation during cellular response to glucose starvation" EXACT [PomBase:mah]
 synonym: "increased protein serine phosphorylation during glucose depletion" EXACT [PomBase:mah]
 synonym: "increased protein serine phosphorylation during glucose deprivation" EXACT [PomBase:mah]
+synonym: "increased protein serine phosphorylation during glucose limitation" EXACT [PomBase:mah]
 synonym: "increased serine phosphorylation during glucose starvation" EXACT [PomBase:al]
 is_a: FYPO:0004420 ! increased protein serine phosphorylation
 created_by: midori
@@ -57860,7 +57902,7 @@ synonym: "abnormal RNA polymerase II transcription termination" EXACT [GO:000636
 synonym: "abnormal termination of RNA polymerase II transcription during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal termination of RNA polymerase II transcription during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0003556 ! abnormal transcription termination
-is_a: FYPO:0004064 ! abnormal transcription
+is_a: FYPO:0004064 ! abnormal transcription during vegetative growth
 created_by: midori
 creation_date: 2015-08-17T12:21:31Z
 
@@ -58174,6 +58216,9 @@ id: FYPO:0004837
 name: abolished cell population growth during glucose starvation
 def: "A vegetative cell population growth phenotype in which a cell population does not grow in a medium containing little or no glucose." [PMID:25411338, PomBase:mah]
 comment: Use this term for a population of cells that does not grow under conditions where glucose is absent or limiting (below about 4.4 mM (0.08%)), but does grow using a different carbon source or when more glucose is available (a cell population that does not grow on any media would be considered inviable). Note that cell growth terms refer to growth under aerobic conditions unless stated otherwise.
+synonym: "abolished cell population growth during glucose depletion" EXACT [PomBase:mah]
+synonym: "abolished cell population growth during glucose deprivation" EXACT [PomBase:mah]
+synonym: "abolished cell population growth during glucose limitation" EXACT [PomBase:mah]
 synonym: "abolished growth during glucose starvation" BROAD [PomBase:mah]
 synonym: "abolished vegetative cell population growth during glucose starvation" EXACT [PomBase:mah]
 synonym: "cell population growth during glucose starvation abolished" EXACT [PomBase:mah]
@@ -58202,6 +58247,9 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 synonym: "abolished protein localisation to plasma membrane, with protein mislocalised to cytoplasm, during glucose starvation" EXACT [PomBase:mah]
 synonym: "abolished protein localization in plasma membrane, with protein mislocalized to cytoplasm, during glucose starvation" EXACT [GO:0072659]
 synonym: "abolished protein localization to cell membrane, with protein mislocalized to cytoplasm, during glucose starvation" EXACT [GO:0005886]
+synonym: "abolished protein localization to plasma membrane, with protein mislocalized to cytoplasm, during glucose depletion" EXACT [PomBase:mah]
+synonym: "abolished protein localization to plasma membrane, with protein mislocalized to cytoplasm, during glucose deprivation" EXACT [PomBase:mah]
+synonym: "abolished protein localization to plasma membrane, with protein mislocalized to cytoplasm, during glucose limitation" EXACT [PomBase:mah]
 synonym: "protein localization to plasma membrane abolished, with protein mislocalized to cytoplasm, during glucose starvation" EXACT [PomBase:mah]
 is_a: FYPO:0001375 ! protein localization abolished
 is_a: FYPO:0004838 ! abnormal protein localization to plasma membrane
@@ -58229,6 +58277,9 @@ comment: Note that this term can be used to annotate any case where a protein is
 synonym: "ectopic protein localization to nucleus during glucose starvation" EXACT [PomBase:vw]
 synonym: "protein mislocalised to nucleus during glucose starvation" EXACT [PomBase:mah]
 synonym: "protein mislocalized to nucleus during cellular response to glucose starvation" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nucleus during glucose depletion" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nucleus during glucose deprivation" EXACT [PomBase:mah]
+synonym: "protein mislocalized to nucleus during glucose limitation" EXACT [PomBase:mah]
 is_a: FYPO:0003453 ! protein mislocalized to nucleus
 created_by: midori
 creation_date: 2015-08-18T14:27:11Z
@@ -58243,6 +58294,165 @@ synonym: "protein mislocalised to cytoplasm" EXACT [PomBase:mah]
 is_a: FYPO:0003452 ! mislocalized protein
 created_by: midori
 creation_date: 2015-08-18T14:34:05Z
+
+[Term]
+id: FYPO:0004843
+name: multiseptate vegetative cell with binucleate and anucleate compartments
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has two nuclei and more than one septum, and the septa are grouped together between two compartments, one contains both nuclei." [PMID:25203555, PomBase:mah]
+synonym: "multiseptate cell with binucleate and anucleate compartments during vegetative growth" EXACT [PomBase:mah]
+synonym: "multiseptate vegetative cell with binucleate and anucleate compartments during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0000118 ! multiseptate vegetative cell
+created_by: midori
+creation_date: 2015-08-26T12:56:53Z
+
+[Term]
+id: FYPO:0004844
+name: abnormal mitotic DNA replication lagging strand elongation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which lagging strand elongation during nuclear DNA replication is abnormal." [PomBase:mah]
+synonym: "abnormal DNA replication lagging strand elongation during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "abnormal DNA replication lagging strand elongation during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic DNA replication lagging strand synthesis" EXACT [PomBase:al]
+is_a: FYPO:0001343 ! abnormal mitotic DNA replication
+is_a: FYPO:0004851 ! abnormal RNA metabolic process
+created_by: midori
+creation_date: 2015-08-26T14:30:48Z
+
+[Term]
+id: FYPO:0004845
+name: abnormal mitotic DNA replication lagging strand elongation at telomere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which lagging strand elongation during nuclear DNA replication is abnormal at telomeric regions." [PMID:26041456, PomBase:mah]
+synonym: "abnormal DNA replication lagging strand elongation at telomere during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "abnormal DNA replication lagging strand elongation at telomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "abnormal mitotic DNA replication lagging strand synthesis at telomere" EXACT [PomBase:al]
+is_a: FYPO:0004844 ! abnormal mitotic DNA replication lagging strand elongation
+created_by: midori
+creation_date: 2015-08-26T14:40:13Z
+
+[Term]
+id: FYPO:0004846
+name: increased number of Rad52 foci at telomeres
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of DNA replication pause sites in telomeric regions at which the protein Rad52 (also called Rad22) accumulates is greater than normal." [PMID:26041456, PomBase:mah]
+synonym: "increased number of Rad22 foci at telomeres" EXACT [PomBase:mah]
+synonym: "increased number of Rad52 foci at telomeres during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased number of Rad52 foci at telomeres during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000972 ! increased number of Rad52 foci during vegetative growth
+created_by: midori
+creation_date: 2015-08-26T14:42:20Z
+
+[Term]
+id: FYPO:0004847
+name: transcription phenotype
+def: "A cellular process phenotype that affects DNA-dependent transcription." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+synonym: "fission yeast transcription phenotype" EXACT [PomBase:mah]
+is_a: FYPO:0000142 ! gene expression phenotype
+is_a: FYPO:0000294 ! RNA metabolism phenotype
+created_by: midori
+creation_date: 2015-08-26T14:59:27Z
+
+[Term]
+id: FYPO:0004848
+name: normal protein transport
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which protein transport is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+synonym: "normal protein transport during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal protein transport during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000644 ! normal protein localization during vegetative growth
+is_a: FYPO:0001336 ! transport phenotype during vegetative growth
+created_by: midori
+creation_date: 2015-08-26T15:15:29Z
+
+[Term]
+id: FYPO:0004849
+name: normal protein metabolic process
+def: "A cellular process phenotype in which a protein metabolic process is normal (i.e. indistinguishable from wild type). A protein metabolic process is a series of chemical reactions and pathways involving a specific protein." [GO:0019538, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
+synonym: "normal cellular protein metabolic process" EXACT [PomBase:mah]
+synonym: "normal protein metabolism" EXACT [GO:0019538]
+is_a: FYPO:0000140 ! cellular metabolism phenotype
+is_a: FYPO:0002496 ! normal metabolic process
+created_by: midori
+creation_date: 2015-08-26T15:36:24Z
+
+[Term]
+id: FYPO:0004850
+name: normal RNA metabolic process
+def: "A cellular process phenotype in which a protein metabolic process is normal (i.e. indistinguishable from wild type). An RNA metabolic process is a series of chemical reactions and pathways involving any type of RNA." [GO:0016070, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
+synonym: "normal RNA metabolism" EXACT [GO:0016070]
+is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0002496 ! normal metabolic process
+created_by: midori
+creation_date: 2015-08-26T15:49:11Z
+
+[Term]
+id: FYPO:0004851
+name: abnormal RNA metabolic process
+def: "A cellular process phenotype in which a protein metabolic process is abnormal. An RNA metabolic process is a series of chemical reactions and pathways involving any type of RNA." [GO:0016070, PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_manually_annotate
+synonym: "abnormal RNA metabolism" EXACT [GO:0016070]
+is_a: FYPO:0000294 ! RNA metabolism phenotype
+is_a: FYPO:0000860 ! abnormal metabolic process
+created_by: midori
+creation_date: 2015-08-26T15:50:46Z
+
+[Term]
+id: FYPO:0004852
+name: RNA transport phenotype
+def: "A cell process phenotype that affects an RNA transport process." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: FYPO:0000149 ! transport phenotype
+is_a: FYPO:0004853 ! RNA localization phenotype
+created_by: midori
+creation_date: 2015-08-26T15:52:33Z
+
+[Term]
+id: FYPO:0004853
+name: RNA localization phenotype
+def: "A cell phenotype that affects the localization of an RNA in a cell." [PomBase:mah]
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+synonym: "fission yeast RNA localization phenotype" EXACT [PomBase:mah]
+synonym: "RNA localisation phenotype" EXACT [PomBase:mah]
+is_a: FYPO:0000138 ! localization phenotype
+created_by: midori
+creation_date: 2015-08-26T15:54:27Z
+
+[Term]
+id: FYPO:0004854
+name: decreased protein localization to actomyosin contractile ring
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to the actomyosin contractile ring is increased." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "increased protein localisation to actomyosin contractile ring" EXACT [PomBase:mah]
+synonym: "increased protein localization to actomyosin contractile ring during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased protein localization to actomyosin contractile ring during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased protein localization to actomyosin contractile ring involved in mitotic cytokinesis" EXACT [GO:1904498]
+synonym: "increased protein localization to cytokinetic contractile ring" EXACT [PomBase:vw]
+synonym: "increased protein localization to mitotic contractile ring" EXACT [PomBase:vw]
+is_a: FYPO:0002560 ! abnormal protein localization to actomyosin contractile ring
+is_a: FYPO:0004655 ! increased protein localization to cell division site
+created_by: midori
+creation_date: 2015-08-26T16:01:02Z
+
+[Term]
+id: FYPO:0004855
+name: abnormal negative regulation of premeiotic DNA replication initiation resulting in partial rereplication
+def: "A regulation phenotype observed in the vegetative growth phase of the life cycle in which negative regulation of the initiation of premeiotic DNA replication is abnormal, resulting in rereplication of part of the genome." [PomBase:mah]
+synonym: "abnormal negative regulation of DNA replication initiation resulting in partial rereplication during meiotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal negative regulation of initiation of premeiotic DNA replication, resulting in partial rereplication" EXACT [GO:1904513]
+synonym: "abnormal negative regulation of premeiotic DNA replication initiation resulting in partial re-replication" EXACT [PomBase:mah]
+synonym: "partial premeiotic DNA re-replication" RELATED [PomBase:mah]
+synonym: "partial premeiotic DNA rereplication" RELATED [PomBase:mah]
+is_a: FYPO:0004758 ! abnormal negative regulation of premeiotic DNA replication initiation
+created_by: midori
+creation_date: 2015-08-26T16:13:31Z
 
 [Typedef]
 id: adjacent_to
