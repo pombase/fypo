@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2015-09-01
-date: 01:09:2015 13:49
+data-version: releases/2015-09-23
+date: 23:09:2015 15:25
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -193,6 +193,7 @@ name: abnormal cell cycle
 alt_id: FYPO:0000406
 def: "A cellular process phenotype in which a cell does not proceed normally through a cell cycle." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "abnormal cell-division cycle" EXACT [GO:0007049, PomBase:mah]
 synonym: "cell cycle defects" EXACT [PomBase:mah]
@@ -3602,7 +3603,7 @@ creation_date: 2011-04-26T02:36:20Z
 [Term]
 id: FYPO:0000303
 name: decreased conjugation frequency
-def: "A conjugation phenotype in which conjugation occurs less frequently than normal." [PomBase:mah]
+def: "A cell population phenotype in which conjugation occurs less frequently than normal." [PomBase:mah]
 comment: Note that this term refers specifically to conjugation, whereas experiments that measure mating efficiency often do so by counting zygotes plus asci, sometimes also including spores. For such experiments, we recommend using 'decreased mating efficiency' (FYPO:0000708).
 synonym: "decreased conjugation efficiency" EXACT [PomBase:mah]
 synonym: "decreased occurrence of conjugation" EXACT [PomBase:mah]
@@ -3610,6 +3611,7 @@ synonym: "reduced conjugation efficiency" EXACT [PomBase:mah]
 synonym: "reduced conjugation frequency" EXACT [PomBase:mah]
 synonym: "reduced zygote formation" RELATED [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2011-04-26T02:40:00Z
 
@@ -4433,20 +4435,26 @@ creation_date: 2011-07-14T06:06:09Z
 
 [Term]
 id: FYPO:0000376
-name: decreased apoptosis
-def: "A cellular process phenotype in which the occurrence of apoptosis is decreased. Apoptosis is a form of cell death characterized by rounding-up of the cell, retraction of pseudopodes, reduction of cellular volume (pyknosis), chromatin condensation, nuclear fragmentation (karyorrhexis), plasma membrane blebbing and fragmentation of the cell into apoptotic bodies." [GO:0006915, PomBase:mah]
+name: decreased frequency of apoptosis
+def: "A cell population phenotype in which the frequency of occurrence of apoptosis is decreased. Apoptosis is a form of cell death characterized by rounding-up of the cell, retraction of pseudopodes, reduction of cellular volume (pyknosis), chromatin condensation, nuclear fragmentation (karyorrhexis), plasma membrane blebbing and fragmentation of the cell into apoptotic bodies." [GO:0006915, PomBase:mah]
 synonym: "apoptosis: decreased" EXACT [SGD:phenotype_annotation]
-synonym: "reduced apoptosis" EXACT [PomBase:mah]
-is_a: FYPO:0000629 ! abnormal apoptosis
+synonym: "decreased apoptosis" EXACT [PomBase:mah]
+synonym: "decreased apoptotic frequency" EXACT [PomBase:mah]
+synonym: "reduced frequency of apoptosis" EXACT [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
 [Term]
 id: FYPO:0000377
-name: increased apoptosis
-def: "A cellular process phenotype in which the occurrence of apoptosis is increased. Apoptosis is a form of cell death characterized by rounding-up of the cell, retraction of pseudopodes, reduction of cellular volume (pyknosis), chromatin condensation, nuclear fragmentation (karyorrhexis), plasma membrane blebbing and fragmentation of the cell into apoptotic bodies." [GO:0006915, PomBase:mah]
+name: increased frequency of apoptosis
+def: "A cell population phenotype in which the frequency of occurrence of apoptosis is increased. Apoptosis is a form of cell death characterized by rounding-up of the cell, retraction of pseudopodes, reduction of cellular volume (pyknosis), chromatin condensation, nuclear fragmentation (karyorrhexis), plasma membrane blebbing and fragmentation of the cell into apoptotic bodies." [GO:0006915, PomBase:mah]
 synonym: "apoptosis: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000629 ! abnormal apoptosis
+synonym: "increased apoptosis" EXACT [PomBase:mah]
+synonym: "increased apoptotic frequency" EXACT [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2011-07-14T06:06:09Z
 
@@ -5491,12 +5499,14 @@ creation_date: 2011-08-15T10:19:32Z
 
 [Term]
 id: FYPO:0000476
-name: decreased meiosis
-def: "A cellular process phenotype in which the occurrence of one or both meiotic nuclear division(s) is decreased." [PomBase:mah]
-synonym: "decreased meiotic nuclear division" EXACT [GO:0007126]
+name: decreased frequency of meiosis
+def: "A cell population phenotype in which the frequency of occurrence of one or both meiotic nuclear division(s) is decreased." [PomBase:mah]
+synonym: "decerased meiosis" EXACT [PomBase:mah]
+synonym: "decreased frequency of meiotic nuclear division" EXACT [GO:0007126]
 synonym: "meiosis: decreased" EXACT [SGD:phenotype_annotation]
-synonym: "reduced meiosis" EXACT [PomBase:mah]
-is_a: FYPO:0000051 ! abnormal meiosis
+synonym: "reduced frequency of meiosis" EXACT [PomBase:mah]
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2011-08-15T10:19:32Z
 
@@ -6715,14 +6725,16 @@ creation_date: 2011-08-15T11:41:34Z
 
 [Term]
 id: FYPO:0000581
-name: decreased spore germination
-def: "A cellular process phenotype in which the occurrence of spore germination is decreased. At the cellular level, an individual spore is less likely to germinate than normal." [PomBase:mah]
+name: decreased spore germination frequency
+def: "A cell population phenotype in which the frequency of occurrence of spore germination is decreased." [PomBase:mah]
 comment: Note that this phenotype is usually assayed by observing a population of spores and measuring how many germinate. This term may be replaced by a cell population term in the future.
+synonym: "decreased spore germination" EXACT [PomBase:mah]
 synonym: "decreased spore viability" RELATED [PomBase:mah]
-synonym: "reduced spore germination" EXACT [PomBase:mah]
+synonym: "reduced spore germination frequency" EXACT [PomBase:mah]
 synonym: "reduced spore viability" RELATED [PomBase:mah]
 synonym: "spore germination: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000305 ! abnormal spore germination
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2011-08-15T11:41:34Z
 
@@ -6750,15 +6762,16 @@ creation_date: 2011-08-15T12:00:20Z
 
 [Term]
 id: FYPO:0000584
-name: decreased sporulation
-def: "A cellular process phenotype in which the occurrence of ascospore formation is decreased." [PomBase:mah]
-synonym: "decreased ascospore formation" EXACT [PomBase:mah]
+name: decreased sporulation frequency
+def: "A cell population phenotype in which the frequency of occurrence of ascospore formation is decreased." [PomBase:mah]
+synonym: "decreased frequency of ascospore formation" EXACT [PomBase:mah]
 synonym: "decreased spore viability" RELATED [PomBase:vw]
-synonym: "decreased sporulation frequency" EXACT [PomBase:mah]
+synonym: "decreased sporulation" EXACT [PomBase:mah]
 synonym: "reduced spore viability" RELATED [PomBase:vw]
-synonym: "reduced sporulation" EXACT [PomBase:mah]
+synonym: "reduced sporulation frequency" EXACT [PomBase:mah]
 synonym: "sporulation: decreased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000121 ! abnormal sporulation
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2011-08-15T12:00:20Z
 
@@ -6799,11 +6812,13 @@ creation_date: 2011-08-15T12:00:20Z
 
 [Term]
 id: FYPO:0000588
-name: increased sporulation
-def: "A cellular process phenotype in which the occurrence of ascospore formation is increased." [PomBase:mah]
-synonym: "increased ascospore formation" EXACT [PomBase:mah]
+name: increased sporulation frequency
+def: "A cell population phenotype in which the frequency of occurrence of ascospore formation is increased." [PomBase:mah]
+synonym: "increased frequency of ascospore formation" EXACT [PomBase:mah]
+synonym: "increased sporulation" EXACT [PomBase:mah]
 synonym: "sporulation: increased" EXACT [SGD:phenotype_annotation]
-is_a: FYPO:0000121 ! abnormal sporulation
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2011-08-15T12:00:20Z
 
@@ -8084,6 +8099,7 @@ comment: Note that mating efficiency is often measured by counting zygotes plus 
 synonym: "mating efficiency: decreased" EXACT [SGD:phenotype_annotation]
 synonym: "reduced mating efficiency" EXACT [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2011-12-05T04:26:20Z
 
@@ -8709,12 +8725,13 @@ creation_date: 2012-01-18T03:02:59Z
 [Term]
 id: FYPO:0000761
 name: increased conjugation frequency
-def: "A conjugation phenotype in which conjugation occurs more frequently than normal." [PomBase:mah]
+def: "A cell population phenotype phenotype in which conjugation occurs more frequently than normal." [PomBase:mah]
 comment: Note that this term refers specifically to conjugation, whereas experiments that measure mating efficiency often do so by counting zygotes plus asci, sometimes also including spores. For such experiments, we recommend using 'increased mating efficiency' (FYPO:0001043).
 synonym: "increased conjugation efficiency" EXACT [PomBase:mah]
 synonym: "increased occurrence of conjugation" EXACT [PomBase:mah]
 synonym: "increased zygote formation" RELATED [PomBase:mah]
 is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2012-01-18T03:03:19Z
 
@@ -9632,6 +9649,7 @@ creation_date: 2012-03-09T03:51:05Z
 id: FYPO:0000837
 name: cell cycle arrest in mitotic interphase
 def: "A cellular process phenotype in which progression through the mitotic cell cycle is arrested in any part of interphase. Includes normal and abnormal occurrences of arrest." [PomBase:mah]
+subset: qc_do_not_manually_annotate
 synonym: "cell cycle arrest in mitotic interphase during vegetative growth" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest in interphase" EXACT [PomBase:mah]
 synonym: "mitotic interphase cell cycle arrest" EXACT [PomBase:mah]
@@ -12019,6 +12037,7 @@ creation_date: 2012-04-30T02:59:00Z
 id: FYPO:0001024
 name: cell cycle arrest phenotype
 def: "A cell cycle phenotype that affects or involves the normal or abnormal occurrence of cell cycle arrest. In cell cycle arrest, progression through the cell cycle is halted during one of the normal phases (G1, S, G2, or M)." [PomBase:mah]
+subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "fission yeast cell cycle arrest phenotype" EXACT [PomBase:mah]
 is_a: FYPO:0000145 ! regulation phenotype
@@ -12235,6 +12254,7 @@ def: "A biological process phenotype in which the observed mating efficiency is 
 comment: Note that mating efficiency is often measured by counting zygotes plus asci, sometimes also including spores, so a change in measured mating efficiency may reflect a change in conjugation frequency (see FYPO:0000031 and its descendants), a change in sporulation (see FYPO:0000121 and its descendants), or both. For this reason, this term is not a child of 'mating phenotype' (FYPO:0000031).
 synonym: "mating efficiency: increased" EXACT [SGD:phenotype_annotation]
 is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0001985 ! abnormal phenotype
 created_by: midori
 creation_date: 2012-05-09T05:15:28Z
 
@@ -24496,10 +24516,11 @@ creation_date: 2013-03-14T16:41:21Z
 [Term]
 id: FYPO:0002052
 name: normal sporulation frequency
-def: "A cellular process phenotype in which the occurrence of ascospore formation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A cell population phenotype in which the frequency of occurrence of ascospore formation is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 synonym: "normal ascospore formation frequency" EXACT [PomBase:mah]
 synonym: "normal sporulation occurrence" EXACT [PomBase:mah]
-is_a: FYPO:0000590 ! normal sporulation
+is_a: FYPO:0000003 ! cell population phenotype
+is_a: FYPO:0000257 ! normal phenotype
 created_by: midori
 creation_date: 2013-03-15T16:28:36Z
 
@@ -30292,7 +30313,7 @@ creation_date: 2013-08-15T14:49:04Z
 [Term]
 id: FYPO:0002520
 name: decreased frequency of conjugation with h+ cells
-def: "A conjugation phenotype in which conjugation by a mutant with wild type h+ occurs less frequently than normal." [PomBase:mah]
+def: "A cell population phenotype in which conjugation by a mutant with wild type h+ occurs less frequently than normal." [PomBase:mah]
 synonym: "decreased conjugation with WT h+ cells" EXACT [PomBase:vw]
 synonym: "decreased frequency of conjugation with h plus cells" EXACT [PomBase:mah]
 synonym: "reduced frequency of conjugation with h+ cells" EXACT [PomBase:mah]
@@ -30303,7 +30324,7 @@ creation_date: 2013-08-15T15:10:31Z
 [Term]
 id: FYPO:0002521
 name: decreased frequency of conjugation with h- cells
-def: "A conjugation phenotype in which conjugation by a mutant with wild type h- occurs less frequently than normal." [PomBase:mah]
+def: "A cell population phenotype in which conjugation by a mutant with wild type h- occurs less frequently than normal." [PomBase:mah]
 synonym: "decreased conjugation with WT h- cells" EXACT [PomBase:vw]
 synonym: "decreased frequency of conjugation with h minus cells" EXACT [PomBase:mah]
 synonym: "reduced frequency of conjugation with h- cells" EXACT [PomBase:mah]
@@ -40157,8 +40178,8 @@ name: curved cytoplasmic microtubules
 def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form cytoplasmic microtubules that are curved, i.e. follow a smooth bend rather than a straight line." [PomBase:mah]
 synonym: "curved cytoplasmic microtubules during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "curved cytoplasmic microtubules during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology during vegetative growth
 is_a: FYPO:0004088 ! abnormal cytoplasmic microtubules
+is_a: FYPO:0004862 ! curved microtubules
 created_by: midori
 creation_date: 2014-04-29T13:51:48Z
 
@@ -40792,12 +40813,13 @@ creation_date: 2014-06-02T14:31:32Z
 
 [Term]
 id: FYPO:0003380
-name: decreased meiosis I
-def: "A cellular process phenotype in which the occurrence of the first meiotic nuclear division, in which homologous chromosomes are normally paired and segregated from each other, is decreased." [PomBase:mah]
-synonym: "decreased first meiotic nuclear division" EXACT [PomBase:al]
-synonym: "meiosis I: decreased" EXACT [PomBase:mah]
-synonym: "reduced meiosis I" EXACT [PomBase:mah]
-is_a: FYPO:0000476 ! decreased meiosis
+name: decreased frequency of meiosis I
+def: "A cell population phenotype in which the frequency of occurrence of the first meiotic nuclear division, in which homologous chromosomes are normally paired and segregated from each other, is decreased." [PomBase:mah]
+synonym: "decreased frequency of first meiotic nuclear division" EXACT [PomBase:al]
+synonym: "decreased meiosis I" EXACT [PomBase:mah]
+synonym: "meiosis I: decreased frequency" EXACT [PomBase:mah]
+synonym: "reduced frequency of meiosis I" EXACT [PomBase:mah]
+is_a: FYPO:0000476 ! decreased frequency of meiosis
 created_by: midori
 creation_date: 2014-06-02T14:32:49Z
 
@@ -45594,12 +45616,13 @@ creation_date: 2014-09-09T13:34:47Z
 
 [Term]
 id: FYPO:0003789
-name: decreased meiosis II
-def: "A cellular process phenotype in which the occurrence of the second meiotic nuclear division, in which two chromatids in each chromosome are normally separated, is decreased." [PomBase:mah]
-synonym: "decreased second meiotic nuclear division" EXACT [PomBase:al]
-synonym: "meiosis II: decreased" EXACT [PomBase:mah]
-synonym: "reduced meiosis II" EXACT [PomBase:mah]
-is_a: FYPO:0000476 ! decreased meiosis
+name: decreased frequency of meiosis II
+def: "A cell population phenotype in which the frequency of occurrence of the second meiotic nuclear division, in which two chromatids in each chromosome are normally separated, is decreased." [PomBase:mah]
+synonym: "decreased frequency of second meiotic nuclear division" EXACT [PomBase:al]
+synonym: "decreased meiosis II" EXACT [PomBase:mah]
+synonym: "meiosis II: decreased frequency" EXACT [PomBase:mah]
+synonym: "reduced frequency of meiosis II" EXACT [PomBase:mah]
+is_a: FYPO:0000476 ! decreased frequency of meiosis
 created_by: midori
 creation_date: 2014-09-09T14:01:31Z
 
@@ -48483,6 +48506,7 @@ creation_date: 2014-11-25T11:22:59Z
 id: FYPO:0004040
 name: mitotic cell cycle arrest phenotype
 def: "A cell cycle phenotype that affects or involves the normal or abnormal occurrence of mitotic cell cycle arrest. In mitotic cell cycle arrest, progression through the mitotic cell cycle is halted during one of the normal phases (G1, S, G2, or M)." [PomBase:mah]
+subset: qc_do_not_manually_annotate
 synonym: "cell cycle arrest phenotype during mitotic cell cycle" EXACT [PomBase:mah]
 synonym: "cell cycle arrest phenotype during vegetative growth" EXACT [PomBase:mah]
 synonym: "fission yeast mitotic cell cycle arrest phenotype" EXACT [PomBase:mah]
@@ -51158,6 +51182,11 @@ creation_date: 2015-01-07T15:58:13Z
 id: FYPO:0004259
 name: abolished mitotic G2 DNA damage checkpoint
 def: "A cell cycle checkpoint phenotype in which cell cycle regulation mediated by the mitotic G2 DNA damage checkpoint does not occur under conditions that normally trigger the checkpoint signaling and response. Normally, the mitotic G2 DNA damage checkpoint negatively regulates progression through the G2/M transition of the cell cycle in response to DNA damage." [GO:0007095, PMID:21098122, PomBase:mah]
+synonym: "abolished G2 DNA damage checkpoint during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "abolished mitotic cell cycle G2/M transition DNA damage checkpoint" EXACT [GO:0007095]
+synonym: "abolished mitotic G2 DNA damage checkpoint activation" RELATED [PomBase:mah]
+synonym: "abolished mitotic G2 DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
+synonym: "mitotic G2 DNA damage checkpoint abolished during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0004373 ! abnormal mitotic G2 DNA damage checkpoint
 created_by: midori
 creation_date: 2015-01-07T16:18:15Z
@@ -52490,7 +52519,7 @@ id: FYPO:0004371
 name: decreased duration of S-phase DNA damage checkpoint
 def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by the S-phase DNA damage checkpoint is lower than in wild type." [PomBase:mah]
 synonym: "decreased duration of intra-S DNA damage checkpoint" EXACT [PomBase:mah]
-synonym: "decreased duration of S-phase DNA damage checkpoint activation" RELATED [PomBase:mah]
+synonym: "decreased duration of S-phase DNA damage checkpoint activation" EXACT [PomBase:mah]
 synonym: "decreased duration of S-phase DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased duration of S-phase DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 synonym: "premature S-phase DNA damage checkpoint deactivation" RELATED [PomBase:mah]
@@ -54354,7 +54383,7 @@ creation_date: 2015-03-31T13:06:12Z
 [Term]
 id: FYPO:0004524
 name: decreased number of Rad54 foci during cellular response to doxorubicin
-def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites at which the protein Rad54 (also called Rhp54) accumulates is lower than normal." [PMID:25701403, PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites at which the protein Rad54 (also called Rhp54) accumulates is lower than normal during a cellular response to doxorubicin." [PMID:25701403, PomBase:mah]
 synonym: "decreased number of Rad54 foci during cellular response to doxorubicin during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased number of Rad54 foci during cellular response to doxorubicin during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased number of Rhp54 foci during cellular response to doxorubicin" EXACT [PomBase:mah]
@@ -58518,6 +58547,221 @@ is_a: FYPO:0001079 ! normal galactomannan level
 is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
 created_by: midori
 creation_date: 2015-09-01T13:45:36Z
+
+[Term]
+id: FYPO:0004862
+name: curved microtubules
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form microtubules that are curved, i.e. follow a smooth bend rather than a straight line." [PomBase:mah]
+synonym: "curved microtubules during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "curved microtubules during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology during vegetative growth
+created_by: midori
+creation_date: 2015-09-23T11:56:09Z
+
+[Term]
+id: FYPO:0004863
+name: long curved microtubules
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form microtubules that are longer than normal and are curved, i.e. follow a smooth bend rather than a straight line." [PomBase:mah]
+synonym: "elongated curved microtubules" EXACT [PomBase:mah]
+synonym: "long curved microtubules during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "long curved microtubules during vegetative growth" EXACT [PomBase:mah]
+synonym: "microtubule organization defects, long curved microtubules" EXACT [PomBase:mah]
+is_a: FYPO:0001418 ! abnormal microtubule cytoskeleton morphology during vegetative growth
+relationship: has_part FYPO:0000055 ! long microtubules
+relationship: has_part FYPO:0004862 ! curved microtubules
+created_by: midori
+creation_date: 2015-09-23T11:58:15Z
+
+[Term]
+id: FYPO:0004864
+name: viable curved vegetative cell with long curved microtubules
+def: "A cell morphology phenotype in which a vegetatively growing cell is viable, is curved along the long axis, and contains microtubules that are longer than normal and curved. In a curved cell, the long axis follows a smooth bend rather than a straight line." [PomBase:mah]
+comment: Note that if you have done an experiment that assays the viability of a population of cells, such as looking at colony growth or growth in liquid culture, you should also annotate to 'viable cell population' (FYPO:0002058) or one of its descendants.
+synonym: "curved viable cell with elongated curved microtubules" EXACT [PomBase:mah]
+synonym: "viable curved cell with long curved microtubules during vegetative growth" EXACT [PomBase:mah]
+synonym: "viable curved vegetative cell with long curved microtubules during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0002112 ! viable curved vegetative cell
+relationship: has_part FYPO:0000016 ! curved vegetative cell
+relationship: has_part FYPO:0001491 ! viable vegetative cell
+relationship: has_part FYPO:0004863 ! long curved microtubules
+created_by: midori
+creation_date: 2015-09-23T12:12:52Z
+
+[Term]
+id: FYPO:0004865
+name: long astral microtubules during mitotic anaphase A
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which cells form astral microtubules that are longer than normal during anaphase A. Anaphase A is the stage of mitosis in which the kinetochore microtubules shorten as chromosomes move toward the spindle poles." [GO:0000091, PomBase:mah]
+synonym: "elongated astral microtubules during mitotic anaphase A" EXACT [PomBase:mah]
+synonym: "long astral microtubules during anaphase A during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "long astral microtubules during mitotic anaphase A during vegetative growth" EXACT [PomBase:mah]
+synonym: "long cytoplasmic astral microtubules during mitotic anaphase A" EXACT [PomBase:vw]
+is_a: FYPO:0004612 ! long astral microtubules
+created_by: midori
+creation_date: 2015-09-23T12:52:22Z
+
+[Term]
+id: FYPO:0004866
+name: increased number of microtubules in post-anaphase array
+def: "A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the post-anaphase array contains more microtubules than normal." [PMID:18418055, PomBase:mah]
+synonym: "increased number of microtubules in PAA" EXACT [PomBase:mah]
+synonym: "increased number of microtubules in post-anaphase array during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased number of microtubules in post-anaphase array during vegetative growth" EXACT [PomBase:mah]
+synonym: "microtubules present in increased numbers in post-anaphase array" EXACT [PomBase:mah]
+is_a: FYPO:0003430 ! microtubules present in decreased numbers
+is_a: FYPO:0004316 ! abnormal post-anaphase array
+created_by: midori
+creation_date: 2015-09-23T13:07:51Z
+
+[Term]
+id: FYPO:0004867
+name: decreased histone H2A phosphorylation during cellular response to ionizing radiation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which histone H2A phosphorylation occurs to a lower extent than normal during a cellular response to ionizing radiation. All histone H2A phosphorylation may be affected, or phosphorylation of specific sites on histone H2A may be decreased." [PomBase:mah]
+synonym: "decreased histone H2A phosphorylation during cellular response to ionizing radiation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased histone H2A phosphorylation during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced histone H2A phosphorylation during cellular response to ionizing radiation" EXACT [PomBase:mah]
+is_a: FYPO:0002470 ! decreased protein phosphorylation during cellular response to ionizing radiation
+is_a: FYPO:0002598 ! decreased histone H2A phosphorylation
+created_by: midori
+creation_date: 2015-09-23T13:28:58Z
+
+[Term]
+id: FYPO:0004868
+name: sensitive to ionizing radiation during mitotic G1 phase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to ionizing radiation during G1 phase of the mitotic cell cycle." [PomBase:mah]
+synonym: "hypersensitive to ionizing radiation during mitotic G1 phase" EXACT [PomBase:mah]
+synonym: "sensitive to gamma irradiation during mitotic G1 phase" NARROW [PomBase:al]
+synonym: "sensitive to gamma radiation during mitotic G1 phase" NARROW [PomBase:al]
+synonym: "sensitive to ionizing radiation during G1 phase of mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "sensitive to IR during mitotic G1 phase" EXACT [PomBase:mah]
+is_a: FYPO:0000267 ! sensitive to ionizing radiation during vegetative growth
+created_by: midori
+creation_date: 2015-09-23T13:31:19Z
+
+[Term]
+id: FYPO:0004869
+name: decreased number of Crb2 foci during cellular response to ionizing radiation
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites at which the protein Crb2 accumulates is lower than normal during a cellular response to ionizing radiation." [PMID:15226425, PomBase:mah]
+synonym: "decreased number of Crb2 foci during cellular response to ionizing radiation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased number of Crb2 foci during cellular response to ionizing radiation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased number of Crb2 foci during cellular response to IR" EXACT [PomBase:mah]
+synonym: "reduced number of Crb2 foci during cellular response to ionizing radiation" EXACT [PomBase:mah]
+is_a: FYPO:0001321 ! cellular physical quality phenotype during vegetative growth
+created_by: midori
+creation_date: 2015-09-23T13:34:33Z
+
+[Term]
+id: FYPO:0004870
+name: decreased duration of mitotic G2 DNA damage checkpoint
+def: "A cell cycle checkpoint phenotype in which the duration of mitotic cell cycle arrest or delay due to regulation by the mitotic G2 DNA damage checkpoint is shorter than normal. The DNA replication checkpoint normally prevents the initiation of mitosis until DNA replication is complete." [PomBase:mah]
+synonym: "decreased duration of G2 DNA damage checkpoint during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "decreased duration of mitotic cell cycle G2/M transition DNA damage checkpoint" EXACT [GO:0007095]
+synonym: "decreased duration of mitotic G2 DNA damage checkpoint activation" EXACT [PomBase:al, PomBase:mah, PomBase:vw]
+synonym: "decreased duration of mitotic G2 DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
+synonym: "reduced duration of mitotic G2 DNA damage checkpoint" EXACT [PomBase:mah]
+is_a: FYPO:0004373 ! abnormal mitotic G2 DNA damage checkpoint
+created_by: midori
+creation_date: 2015-09-23T13:40:23Z
+
+[Term]
+id: FYPO:0004871
+name: abnormal 2-oxoglutarate dioxygenase activity
+def: "A molecular function phenotype in which the observed rate of a 2-oxoglutarate-dependent dioxygenase activity is abnormal." [PomBase:mah]
+synonym: "abnormal 2-oxoglutarate-dependent dioxygenase activity" EXACT [GO:0016706]
+synonym: "abnormal oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors" EXACT [GO:0016706]
+is_a: FYPO:0004364 ! abnormal dioxygenase activity
+created_by: midori
+creation_date: 2015-09-23T13:47:56Z
+
+[Term]
+id: FYPO:0004872
+name: abolished 2-oxoglutarate dioxygenase activity
+def: "A molecular function phenotype in which a 2-oxoglutarate-dependent dioxygenase activity is absent." [PomBase:mah]
+synonym: "2-oxoglutarate dioxygenase activity abolished" EXACT [PomBase:mah]
+synonym: "abolished 2-oxoglutarate-dependent dioxygenase activity" EXACT [GO:0016706]
+synonym: "abolished oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors" EXACT [GO:0016706]
+is_a: FYPO:0004365 ! abolished dioxygenase activity
+is_a: FYPO:0004871 ! abnormal 2-oxoglutarate dioxygenase activity
+created_by: midori
+creation_date: 2015-09-23T13:48:03Z
+
+[Term]
+id: FYPO:0004873
+name: decreased 2-oxoglutarate dioxygenase activity
+def: "A molecular function phenotype in which a 2-oxoglutarate-dependent dioxygenase activity is decreased." [PomBase:mah]
+synonym: "decreased 2-oxoglutarate-dependent dioxygenase activity" EXACT [GO:0016706]
+synonym: "decreased oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors" EXACT [GO:0016706]
+synonym: "reduced 2-oxoglutarate dioxygenase activity" EXACT [PomBase:mah]
+is_a: FYPO:0000690 ! decreased oxidoreductase activity
+is_a: FYPO:0004871 ! abnormal 2-oxoglutarate dioxygenase activity
+created_by: midori
+creation_date: 2015-09-23T13:51:46Z
+
+[Term]
+id: FYPO:0004874
+name: decreased glucose consumption
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the amount of glucose consumed by cells in a given time is lower than normal." [PomBase:mah]
+synonym: "decreased glucose uptake" RELATED [PomBase:vw]
+synonym: "reduced glucose consumption" EXACT [PomBase:mah]
+is_a: FYPO:0000860 ! abnormal metabolic process
+is_a: FYPO:0001348 ! cellular metabolism phenotype during vegetative growth
+created_by: midori
+creation_date: 2015-09-23T14:08:21Z
+
+[Term]
+id: FYPO:0004875
+name: resistance to allyl alcohol
+def: "An increased chemical resistance phenotype observed in the vegetative growth phase of the life cycle in which cells grow in the presence of a higher concentration of allyl alcohol than normal." [PomBase:mah]
+synonym: "resistance to 3-propenol" EXACT [CHEBI:16605]
+synonym: "resistance to allyl alcohol during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "resistance to allyl alcohol during vegetative growth" EXACT [PomBase:mah]
+synonym: "resistance to allylalcohol" EXACT [PMID:15040954]
+synonym: "resistant to allyl alcohol" EXACT [PomBase:mah]
+is_a: FYPO:0000126 ! increased resistance to chemical during vegetative growth
+created_by: midori
+creation_date: 2015-09-23T14:14:58Z
+
+[Term]
+id: FYPO:0004876
+name: decreased chromatin binding at heat-shock-inducible genes during cellular response to heat shock
+def: "A molecular function phenotype in which occurrence of chromatin binding by a gene product (usually a protein) is decreased when the cell is subject to heat shock, at specific genes that are transcriptionally up-regulated during the heat shock." [PomBase:mah]
+synonym: "decreased chromatin binding at heat shock inducible genes during cellular response to heat shock" EXACT [PomBase:al]
+synonym: "reduced chromatin binding at heat-shock-inducible genes during cellular response to heat shock" EXACT [PomBase:mah]
+is_a: FYPO:0002577 ! decreased chromatin binding
+created_by: midori
+creation_date: 2015-09-23T15:12:19Z
+
+[Term]
+id: FYPO:0004877
+name: decreased chromatin binding at mitotically up-regulated genes
+def: "A molecular function phenotype in which occurrence of chromatin binding by a gene product (usually a protein) is decreased at specific genes that are transcriptionally up-regulated during mitosis." [PomBase:mah]
+synonym: "decreased chromatin binding at mitotically upregulated gene" EXACT [PomBase:al]
+synonym: "reduced chromatin binding at mitotically up-regulated genes" EXACT [PomBase:mah]
+is_a: FYPO:0002577 ! decreased chromatin binding
+created_by: midori
+creation_date: 2015-09-23T15:17:27Z
+
+[Term]
+id: FYPO:0004878
+name: decreased level of mitotically up-regulated gene RNA during vegetative growth
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of one or more mitotically up-regulated RNAs measured in a cell is lower than normal (i.e. lower than observed in wild-type cells)." [PMID:18203864, PomBase:mah]
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased level of mitotically up-regulated gene RNA during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "decreased level of mitotically up-regulated gene transcripts during vegetative growth" EXACT [PomBase:vw]
+synonym: "decreased level of mitotically upregulated gene RNA during vegetative growth" EXACT [PomBase:al]
+synonym: "decreased mitotically up-regulated gene RNA accumulation during vegetative growth" RELATED [PomBase:mah]
+synonym: "reduced level of mitotically up-regulated gene RNA during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001117 ! decreased RNA level during vegetative growth
+created_by: midori
+creation_date: 2015-09-23T15:19:17Z
+
+[Term]
+id: FYPO:0004879
+name: normal chromatin binding at centromere central core
+def: "A molecular function phenotype in which the occurrence of chromatin binding by a gene product (usually a protein) in a mutant is normal (i.e. indistinguishable from wild type) at the centromere central core." [PomBase:mah]
+is_a: FYPO:0002576 ! abnormal chromatin binding
+is_a: FYPO:0003086 ! normal chromatin binding
+created_by: midori
+creation_date: 2015-09-23T15:21:31Z
 
 [Typedef]
 id: adjacent_to
