@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2015-11-10
-date: 10:11:2015 14:57
+data-version: releases/2015-11-18
+date: 18:11:2015 17:19
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -126,13 +126,13 @@ creation_date: 2011-03-29T05:53:56Z
 
 [Term]
 id: FYPO:0000006
-name: abnormal DNA damage checkpoint
-def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is abnormal. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [PomBase:mah]
-synonym: "abnormal DNA damage checkpoint activation" EXACT [PomBase:mah]
-synonym: "abnormal DNA damage checkpoint during cellular response to DNA damage" EXACT [PomBase:al]
-synonym: "abnormal DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abnormal DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
-synonym: "DNA damage checkpoint defects" EXACT [PomBase:mah]
+name: abnormal mitotic DNA damage checkpoint
+def: "A cell cycle checkpoint phenotype in which any mitotic DNA damage checkpoint is abnormal. A mitotic DNA damage checkpoint normally regulates progression through the mitotic cell cycle in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [PomBase:mah]
+synonym: "abnormal DNA damage checkpoint during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "abnormal mitotic DNA damage checkpoint activation" EXACT [PomBase:mah]
+synonym: "abnormal mitotic DNA damage checkpoint during cellular response to DNA damage" EXACT [PomBase:al]
+synonym: "abnormal mitotic DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
+synonym: "mitotic DNA damage checkpoint defects" EXACT [PomBase:mah]
 is_a: FYPO:0000157 ! abnormal response to DNA damage stimulus
 is_a: FYPO:0000643 ! abnormal mitotic DNA integrity checkpoint
 created_by: midori
@@ -142,13 +142,14 @@ creation_date: 2011-03-29T05:53:56Z
 id: FYPO:0000007
 name: abnormal S-phase DNA damage checkpoint
 alt_id: FYPO:0000195
-def: "A cell cycle checkpoint phenotype in which the S phase DNA damage checkpoint (also known as the intra-S phase DNA damage checkpoint) is abnormal. The S phase DNA damage checkpoint slows progression through S phase in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [PomBase:mah]
+def: "A mitotic cell cycle checkpoint phenotype in which the S phase DNA damage checkpoint (also known as the intra-S phase DNA damage checkpoint) is abnormal. The S phase DNA damage checkpoint slows progression through S phase in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [PomBase:mah]
 synonym: "abnormal intra-S DNA damage checkpoint" EXACT [PomBase:mah]
+synonym: "abnormal mitotic S-phase DNA damage checkpoint" EXACT [PomBase:mah]
 synonym: "abnormal S-phase DNA damage checkpoint activation" RELATED [PomBase:mah]
-synonym: "abnormal S-phase DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abnormal S-phase DNA damage checkpoint during mitotic cell cycle" EXACT [PomBase:mah]
 synonym: "abnormal S-phase DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 synonym: "DNA damage checkpoint defects, S-phase" EXACT [PomBase:mah]
-is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+is_a: FYPO:0000006 ! abnormal mitotic DNA damage checkpoint
 created_by: midori
 creation_date: 2011-03-29T05:53:56Z
 
@@ -1688,8 +1689,8 @@ synonym: "elongated multinucleate cell during vegetative growth" EXACT [PomBase:
 synonym: "elongated multinucleate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "long multinucleate vegetative cell" EXACT [PomBase:vw]
 is_a: FYPO:0003342 ! elongated multinucleate cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: output_of FYPO:0000032 ! abnormal cytokinesis
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
@@ -1704,8 +1705,8 @@ synonym: "branched, long, multiseptate cell" EXACT [PomBase:vw]
 is_a: FYPO:0000223 ! elongated multiseptate vegetative cell
 is_a: FYPO:0004594 ! branched, elongated, septated cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2011-03-29T05:54:40Z
 
@@ -2693,9 +2694,9 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 synonym: "elongated multiseptate cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "elongated multiseptate cells during vegetative growth" EXACT [PomBase:mah]
 synonym: "long multiseptate cells" EXACT [PomBase:vw]
-is_a: FYPO:0000002 ! cell phenotype
-relationship: has_part FYPO:0000017 ! elongated cell
+is_a: FYPO:0004750 ! elongated septated vegetative cell
 relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2011-04-19T02:59:38Z
 
@@ -3363,8 +3364,8 @@ synonym: "small vacuoles present in increased numbers during mitotic cell cycle"
 synonym: "vacuole fusion defects" RELATED [PomBase:vw]
 synonym: "vacuole organization defects, fragmented vacuoles during vegetative growth" RELATED [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
+relationship: has_part FYPO:0000952 ! vacuoles present in increased numbers during vegetative growth
 relationship: has_part FYPO:0002787 ! small vacuoles
-relationship: has_part FYPO:0002790 ! vacuoles present in increased numbers
 created_by: midori
 creation_date: 2011-04-19T04:37:01Z
 
@@ -5295,7 +5296,7 @@ created_by: midori
 creation_date: 2011-08-12T02:39:05Z
 
 [Term]
-id: FYPO:0000455
+id: FYPO:0000455<
 name: increased number of double-strand break sites during vegetative growth
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites of double-strand breaks in DNA is greater than normal." [PomBase:mah]
 comment: Because Rad22 often accumulates at double-strand breaks, consider also annotating to 'increased number of Rad22 foci' (FYPO:0000972).
@@ -9504,8 +9505,7 @@ name: increased RNA level during vegetative growth
 alt_id: FYPO:0000910
 alt_id: FYPO:0001247
 def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Also consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term or its descendants.
-subset: qc_do_not_manually_annotate
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term or its descendants.
 synonym: "increased cellular RNA level during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased RNA accumulation during vegetative growth" RELATED [PomBase:mah]
 synonym: "increased RNA level during mitotic cell cycle" RELATED [PomBase:mah]
@@ -9709,9 +9709,9 @@ synonym: "long aseptate mononucleate cell" EXACT [PomBase:vw]
 is_a: FYPO:0002066 ! inviable elongated aseptate cell
 is_a: FYPO:0003763 ! inviable aseptate mononucleate vegetative cell
 is_a: FYPO:0004255 ! inviable elongated mononucleate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2012-03-12T03:25:38Z
@@ -10169,6 +10169,7 @@ synonym: "increased histone H3K9me2 at centromere" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 dimethylation at centromere" EXACT [GO:0036123, PomBase:mah]
 is_a: FYPO:0000867 ! abnormal histone H3-K9 dimethylation at centromere
 is_a: FYPO:0000873 ! increased histone H3-K9 dimethylation
+is_a: FYPO:0005066 ! increased histone H3-K9 methylation at centromere
 created_by: midori
 creation_date: 2012-03-20T01:25:10Z
 
@@ -10268,6 +10269,7 @@ synonym: "increased histone H3K9me3 at centromere" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 trimethylation at centromere" EXACT [GO:0036124, PomBase:mah]
 is_a: FYPO:0000864 ! abnormal histone H3-K9 trimethylation at centromere
 is_a: FYPO:0000879 ! increased histone H3-K9 trimethylation
+is_a: FYPO:0005066 ! increased histone H3-K9 methylation at centromere
 created_by: midori
 creation_date: 2012-03-20T01:42:53Z
 
@@ -11152,8 +11154,8 @@ def: "A cell phenotype observed in the vegetative growth phase of the life cycle
 synonym: "elongated aseptate cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "elongated aseptate cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2012-04-03T03:41:12Z
 
@@ -11837,10 +11839,10 @@ synonym: "inviable, elongated, multinucleate dumbbell-shaped vegetative cell" RE
 synonym: "long, multinucleate dumbbell-shaped cell" RELATED [PomBase:vw]
 synonym: "multinucleate dumbbell-shaped cell" RELATED [PomBase:mah]
 is_a: FYPO:0002024 ! inviable elongated multinucleate aseptate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
 relationship: has_part FYPO:0000779 ! inviable elongated vegetative cell with central constriction
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2012-04-25T04:07:50Z
@@ -13201,8 +13203,6 @@ creation_date: 2012-06-07T11:31:36Z
 id: FYPO:0001118
 name: abnormal vegetative cell morphology
 def: "A cell phenotype in which cell morphology (i.e. the size, shape, or structure of the cell) is altered in the vegetative growth phase of the life cycle." [PomBase:mah]
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: qc_do_not_manually_annotate
 synonym: "abnormal cell morphology during vegetative growth" EXACT [PomBase:mah]
 synonym: "abnormal vegetative cell morphology during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000005 ! abnormal cell morphology
@@ -14438,7 +14438,6 @@ creation_date: 2012-07-12T15:37:08Z
 id: FYPO:0001223
 name: binucleate multiseptate vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has two nuclei and more than one septum." [PomBase:mah]
-comment: In these cells the septa are usually grouped together between the two nuclei.
 synonym: "binucleate multiseptate cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "binucleate multiseptate cell during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001252 ! multinucleate multiseptate vegetative cell
@@ -14565,7 +14564,7 @@ creation_date: 2012-07-16T13:56:11Z
 [Term]
 id: FYPO:0001233
 name: normal subcellular component
-def: "A cell phenotype in which the amount, distribution, or morphology of a cell part is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
+def: "A cell phenotype in which the amount, distribution, composition or morphology of a cell part is normal (i.e. indistinguishable from wild type)." [PomBase:mah]
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_manually_annotate
 synonym: "normal subcellular structure" RELATED [PomBase:al]
@@ -14798,11 +14797,13 @@ creation_date: 2012-07-19T15:38:21Z
 
 [Term]
 id: FYPO:0001253
-name: elongated multinucleate multiseptate vegetative cell, septa between nuclei
-def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is longer than normal, has two or more nuclei and more than one septum, and the septa are located so as to form separate compartments with a single nucleus in each." [PomBase:mah, PomBase:vw]
-synonym: "elongated multinucleate multiseptate cell, septa between nuclei during vegetative growth" EXACT [PomBase:mah]
-synonym: "elongated multinucleate multiseptate vegetative cell, septa between nuclei during mitotic cell cycle" RELATED [PomBase:mah]
-is_a: FYPO:0003343 ! elongated multinucleate multiseptate cell, septa between nuclei
+name: elongated multinucleate multiseptate vegetative cell, single septa between nuclei
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is longer than normal, has two or more nuclei and more than one septum, and the septa not grouped together, but are located so as to form separate compartments with a single nucleus in each." [PomBase:mah, PomBase:vw]
+synonym: "elongated multinucleate multiseptate cell, single septa between nuclei during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated multinucleate multiseptate vegetative cell, single septa between nuclei during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
+is_a: FYPO:0000223 ! elongated multiseptate vegetative cell
+is_a: FYPO:0003343 ! elongated multinucleate multiseptate cell, single septa between nuclei
 created_by: midori
 creation_date: 2012-07-19T15:40:18Z
 
@@ -17674,7 +17675,7 @@ synonym: "elongated inviable vegetative cell" EXACT [PomBase:mah]
 synonym: "essential; elongated vegetative cell" RELATED [PomBase:mah]
 synonym: "inviable elongated vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0002451 ! inviable vegetative cell with abnormal cell shape
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2012-08-30T14:08:27Z
@@ -17700,7 +17701,7 @@ synonym: "elongated viable vegetative cell" EXACT [PomBase:mah]
 synonym: "viable elongated cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "viable elongated vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0002197 ! viable vegetative cell with abnormal cell shape
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2012-08-30T14:17:56Z
@@ -17716,8 +17717,8 @@ synonym: "essential; elongated multinucleate vegetative cell" RELATED [PomBase:m
 synonym: "inviable elongated multinucleate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2012-08-30T14:27:16Z
@@ -17733,8 +17734,9 @@ synonym: "essential; elongated multiseptate vegetative cell" RELATED [PomBase:ma
 synonym: "inviable elongated multiseptate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000223 ! elongated multiseptate vegetative cell
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+is_a: FYPO:0002452 ! inviable septated vegetative cell with abnormal cell morphology
 relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2012-08-30T14:30:53Z
@@ -17749,8 +17751,8 @@ synonym: "elongated multinucleate viable vegetative cell" EXACT [PomBase:mah]
 synonym: "viable elongated multinucleate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
 is_a: FYPO:0001492 ! viable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2012-08-30T14:32:23Z
@@ -17765,8 +17767,8 @@ synonym: "elongated viable multiseptate cell during vegetative growth" EXACT [Po
 synonym: "viable elongated multiseptate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000223 ! elongated multiseptate vegetative cell
 is_a: FYPO:0001492 ! viable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2012-08-30T14:32:53Z
@@ -17783,8 +17785,8 @@ synonym: "inviable elongated mononucleate aseptate vegetative cell with cell cyc
 synonym: "mitotic cell cycle arrest in interphase with elongated inviable cell" EXACT [PomBase:vw]
 synonym: "mitotic interphase arrested elongated inviable vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000837 ! cell cycle arrest in mitotic interphase
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2012-08-30T14:37:31Z
@@ -17977,7 +17979,7 @@ synonym: "branched, elongated cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "branched, long cell" EXACT [PomBase:vw]
 is_a: FYPO:0000002 ! cell phenotype
 relationship: has_part FYPO:0000015 ! branched vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2012-09-13T10:58:38Z
 
@@ -20386,7 +20388,7 @@ id: FYPO:0001707
 name: increased mitotic DNA damage checkpoint activation
 def: "A cell cycle checkpoint phenotype in which the incidence of mitotic cell cycle arrest or delay due to regulation by any mitotic DNA damage checkpoint is greater than in wild type under any specified set of conditions." [PomBase:mah]
 synonym: "increased mitotic DNA damage checkpoint activation under non-stressed conditions" NARROW [PomBase:al]
-is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+is_a: FYPO:0000006 ! abnormal mitotic DNA damage checkpoint
 created_by: midori
 creation_date: 2012-11-07T16:53:08Z
 
@@ -22411,7 +22413,7 @@ synonym: "thin, elongated viable vegetative cell" EXACT [PomBase:mah]
 synonym: "viable thin, elongated vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001492 ! viable elongated vegetative cell
 is_a: FYPO:0001877 ! viable thin vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 relationship: has_part FYPO:0001879 ! thin cell
 created_by: midori
@@ -22881,8 +22883,8 @@ synonym: "elongated mononucleate cell during mitotic cell cycle" RELATED [PomBas
 synonym: "elongated mononucleate cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "long mononucleate cell" EXACT [PomBase:vw]
 is_a: FYPO:0000002 ! cell phenotype
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2013-02-06T11:57:40Z
 
@@ -22895,8 +22897,8 @@ synonym: "elongated mononucleate monoseptate cell during vegetative growth" EXAC
 synonym: "long monoseptate mononucleate cell" EXACT [PomBase:vw]
 is_a: FYPO:0001916 ! elongated mononucleate vegetative cell
 is_a: FYPO:0004979 ! elongated monoseptate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001225 ! monoseptate
 created_by: midori
 creation_date: 2013-02-06T12:00:33Z
@@ -23808,11 +23810,12 @@ synonym: "inviable long mononucleate cell with mislocalized septum" EXACT [PomBa
 synonym: "inviable vegetative elongated mononucleate cell with mislocalized septum" EXACT [PomBase:mah]
 is_a: FYPO:0001226 ! inviable mononucleate vegetative cell with mislocalized septum
 is_a: FYPO:0001917 ! elongated mononucleate monoseptate vegetative cell
+is_a: FYPO:0002452 ! inviable septated vegetative cell with abnormal cell morphology
 is_a: FYPO:0002889 ! inviable elongated vegetative cell with abnormal septum
 is_a: FYPO:0004255 ! inviable elongated mononucleate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
 relationship: has_part FYPO:0000339 ! mislocalized septum during vegetative growth
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001225 ! monoseptate
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: output_of FYPO:0000229 ! septation following abnormal mitotic chromosome segregation
@@ -23852,11 +23855,10 @@ synonym: "swollen elongated mononucleate cell with mislocalized septum near non-
 synonym: "swollen elongated mononucleate vegetative cell with mislocalized septum near non-growing end" NARROW [PomBase:mah]
 is_a: FYPO:0001992 ! inviable elongated mononucleate vegetative cell with mislocalized septum
 is_a: FYPO:0002103 ! inviable swollen mononucleate monoseptate vegetative cell
-is_a: FYPO:0002415 ! inviable swollen vegetative cell with abnormal cell shape
-is_a: FYPO:0002845 ! inviable swollen elongated septated cell
-relationship: has_part FYPO:0000017 ! elongated cell
+is_a: FYPO:0002845 ! inviable swollen elongated septated vegetative cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
 relationship: has_part FYPO:0000646 ! swollen vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001225 ! monoseptate
 relationship: has_part FYPO:0001391 ! mislocalized septum, near new end
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
@@ -23932,12 +23934,11 @@ synonym: "inviable septated mononucleate vegetative cell with mislocalized nucle
 synonym: "septation in the absence of nuclear division" RELATED [PomBase:al, PomBase:vw]
 synonym: "septation independent of mitosis" RELATED [PomBase:al, PomBase:vw]
 synonym: "septation without nuclear division" RELATED [PomBase:al, PomBase:vw]
-is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0005070 ! septation following abolished mitotic sister chromatid separation, with mononucleate and anucleate cell formation
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0002069 ! mislocalized nucleus
 relationship: has_part FYPO:0002342 ! septated vegetative cell
-relationship: output_of FYPO:0000229 ! septation following abnormal mitotic chromosome segregation
 created_by: midori
 creation_date: 2013-02-27T13:08:58Z
 
@@ -24255,9 +24256,9 @@ is_a: FYPO:0001493 ! inviable elongated multinucleate vegetative cell
 is_a: FYPO:0002049 ! elongated multinucleate aseptate vegetative cell
 is_a: FYPO:0002066 ! inviable elongated aseptate cell
 is_a: FYPO:0004106 ! inviable multinucleate aseptate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2013-02-28T14:14:17Z
@@ -24273,8 +24274,8 @@ synonym: "inviable elongated multinucleate cell with abnormal septum morphology 
 synonym: "inviable elongated multinucleate vegetative cell with abnormal septum morphology during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001493 ! inviable elongated multinucleate vegetative cell
 is_a: FYPO:0002889 ! inviable elongated vegetative cell with abnormal septum
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0002023 ! abnormal septum morphology during vegetative growth
 created_by: midori
@@ -24564,9 +24565,9 @@ synonym: "elongated multinucleate aseptate cells during vegetative growth" EXACT
 synonym: "elongated multinucleate aseptate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
 is_a: FYPO:0000950 ! elongated aseptate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2013-03-14T16:36:18Z
 
@@ -24579,9 +24580,9 @@ synonym: "branched elongated multinucleate aseptate vegetative cell during mitot
 is_a: FYPO:0001512 ! branched, elongated cell
 is_a: FYPO:0002049 ! elongated multinucleate aseptate vegetative cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2013-03-14T16:40:20Z
 
@@ -24597,10 +24598,10 @@ synonym: "swollen elongated multinucleate aseptate vegetative cell during mitoti
 is_a: FYPO:0001429 ! swollen elongated cell
 is_a: FYPO:0002049 ! elongated multinucleate aseptate vegetative cell
 is_a: FYPO:0004257 ! swollen multinucleate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
 relationship: has_part FYPO:0000646 ! swollen vegetative cell
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2013-03-14T16:41:21Z
 
@@ -24759,8 +24760,8 @@ synonym: "inviable long aseptate cell" EXACT [PomBase:vw]
 is_a: FYPO:0000950 ! elongated aseptate vegetative cell
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0003931 ! inviable aseptate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2013-04-17T14:42:57Z
@@ -24901,7 +24902,7 @@ synonym: "elongated inviable cell with fragmented nucleus and increased septum t
 synonym: "inviable elongated cell with fragmented nucleus and increased septum thickness during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "long inviable cell with fragmented nucleus and increased septum thickness" EXACT [PomBase:vw]
 is_a: FYPO:0002889 ! inviable elongated vegetative cell with abnormal septum
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001406 ! increased septum thickness
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0001919 ! fragmented nucleus
@@ -25002,9 +25003,9 @@ synonym: "inviable swollen elongated vegetative cell with enlarged nucleus" EXAC
 synonym: "swollen elongated cell with enlarged nucleus" EXACT [PomBase:mah]
 synonym: "swollen elongated vegetative cell with enlarged nucleus" EXACT [PomBase:mah]
 is_a: FYPO:0002251 ! inviable swollen elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000344 ! enlarged nucleus during vegetative growth
 relationship: has_part FYPO:0000646 ! swollen vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2013-05-01T16:06:42Z
@@ -25228,12 +25229,12 @@ creation_date: 2013-05-02T12:40:04Z
 
 [Term]
 id: FYPO:0002102
-name: normal DNA damage checkpoint during cellular response to UV
-def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is normal (i.e. indistinguishable from wild type) when the cell is exposed to ultraviolet light. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
-synonym: "normal DNA damage checkpoint activation during cellular response to UV" EXACT [PomBase:al]
-synonym: "normal DNA damage checkpoint during cellular response to ultraviolet light" EXACT [PomBase:mah]
-synonym: "normal DNA damage checkpoint during cellular response to UV during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "normal DNA damage checkpoint during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
+name: normal mitotic DNA damage checkpoint during cellular response to UV
+def: "A cell cycle checkpoint phenotype in which any mitotic DNA damage checkpoint is normal (i.e. indistinguishable from wild type) when the cell is exposed to ultraviolet light. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
+synonym: "normal DNA damage checkpoint during cellular response to UV during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "normal mitotic DNA damage checkpoint activation during cellular response to UV" EXACT [PomBase:al]
+synonym: "normal mitotic DNA damage checkpoint during cellular response to ultraviolet light" EXACT [PomBase:mah]
+synonym: "normal mitotic DNA damage checkpoint during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0001705 ! normal mitotic DNA damage checkpoint
 is_a: FYPO:0004014 ! normal mitotic cell cycle regulation during cellular response to UV
 created_by: midori
@@ -26650,7 +26651,7 @@ synonym: "viable curved elongated vegetative cell during mitotic cell cycle" REL
 is_a: FYPO:0001492 ! viable elongated vegetative cell
 is_a: FYPO:0002112 ! viable curved vegetative cell
 relationship: has_part FYPO:0000016 ! curved vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2013-06-05T15:02:02Z
@@ -26977,7 +26978,7 @@ synonym: "inviable long tapered vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0002111 ! inviable tapered vegetative cell
 relationship: has_part FYPO:0000014 ! tapered cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2013-06-06T16:28:17Z
@@ -27072,8 +27073,8 @@ synonym: "inviable large elongated cell" RELATED [PomBase:vw]
 synonym: "inviable swollen elongated cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable swollen elongated vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001429 ! swollen elongated cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000646 ! swollen vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2013-06-07T15:48:12Z
@@ -27095,12 +27096,11 @@ synonym: "swollen elongated mononucleate cell with normally localized septum nea
 synonym: "swollen elongated mononucleate cell with normally placed septum" EXACT [PomBase:vw]
 is_a: FYPO:0001917 ! elongated mononucleate monoseptate vegetative cell
 is_a: FYPO:0002103 ! inviable swollen mononucleate monoseptate vegetative cell
-is_a: FYPO:0002415 ! inviable swollen vegetative cell with abnormal cell shape
-is_a: FYPO:0002845 ! inviable swollen elongated septated cell
+is_a: FYPO:0002845 ! inviable swollen elongated septated vegetative cell
 is_a: FYPO:0004255 ! inviable elongated mononucleate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
 relationship: has_part FYPO:0000646 ! swollen vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001225 ! monoseptate
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0002253 ! normal septum location
@@ -28131,8 +28131,8 @@ synonym: "inviable elongated mononucleate vegetative cell with mislocalized nucl
 synonym: "inviable long mononucleate cell with mislocalized nucleus" EXACT [PomBase:vw]
 synonym: "inviable vegetative elongated mononucleate cell with mislocalized nucleus" EXACT [PomBase:mah]
 is_a: FYPO:0004255 ! inviable elongated mononucleate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0002069 ! mislocalized nucleus
 created_by: midori
@@ -28180,11 +28180,11 @@ creation_date: 2013-07-09T15:19:36Z
 
 [Term]
 id: FYPO:0002341
-name: increased duration of DNA damage checkpoint
-def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any DNA damage checkpoint is greater than in wild type." [PomBase:mah]
-synonym: "delayed DNA damage checkpoint deactivation" EXACT [PomBase:mah]
-synonym: "prolonged DNA damage checkpoint" EXACT [PomBase:mah]
-is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+name: increased duration of mitotic DNA damage checkpoint
+def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any mitotic DNA damage checkpoint is greater than in wild type." [PomBase:mah]
+synonym: "delayed mitotic DNA damage checkpoint deactivation" EXACT [PomBase:mah]
+synonym: "prolonged mitotic DNA damage checkpoint" EXACT [PomBase:mah]
+is_a: FYPO:0000006 ! abnormal mitotic DNA damage checkpoint
 created_by: midori
 creation_date: 2013-07-09T15:43:06Z
 
@@ -29100,7 +29100,7 @@ synonym: "inviable curved elongated vegetative cell during mitotic cell cycle" R
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0002113 ! inviable curved vegetative cell
 relationship: has_part FYPO:0000016 ! curved vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2013-07-31T14:32:46Z
@@ -29668,7 +29668,7 @@ synonym: "viable curved elongated vegetative cell with abnormal septum during mi
 is_a: FYPO:0002215 ! viable curved elongated vegetative cell
 is_a: FYPO:0002456 ! viable curved vegetative cell with abnormal septum
 relationship: has_part FYPO:0000016 ! curved vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 relationship: has_part FYPO:0002455 ! abnormal septum during vegetative growth
 created_by: midori
@@ -29692,7 +29692,7 @@ synonym: "viable elongated branched cell" EXACT [PomBase:vw]
 is_a: FYPO:0001492 ! viable elongated vegetative cell
 is_a: FYPO:0004594 ! branched, elongated, septated cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 relationship: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
@@ -29718,7 +29718,7 @@ is_a: FYPO:0002215 ! viable curved elongated vegetative cell
 is_a: FYPO:0002459 ! viable branched, elongated vegetative cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
 relationship: has_part FYPO:0000016 ! curved vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 relationship: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
@@ -29742,7 +29742,7 @@ is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0002452 ! inviable septated vegetative cell with abnormal cell morphology
 is_a: FYPO:0004594 ! branched, elongated, septated cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
@@ -29770,7 +29770,7 @@ is_a: FYPO:0002411 ! inviable curved elongated vegetative cell
 is_a: FYPO:0002462 ! inviable branched, elongated vegetative cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
 relationship: has_part FYPO:0000016 ! curved vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
@@ -29974,8 +29974,8 @@ synonym: "viable large elongated cell" RELATED [PomBase:vw]
 synonym: "viable swollen elongated cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "viable swollen elongated vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001429 ! swollen elongated cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000646 ! swollen vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2013-08-08T13:22:32Z
@@ -34417,15 +34417,18 @@ creation_date: 2013-11-05T16:02:59Z
 
 [Term]
 id: FYPO:0002845
-name: inviable swollen elongated septated cell
+name: inviable swollen elongated septated vegetative cell
 def: "A cell morphology phenotype in which a vegetative cell is inviable, is swollen, is longer than normal, and contains one or more septa. In a swollen cell, both length and diameter are greater than normal, although the cell is only considered elongated if the length:width ratio is also greater than normal." [PomBase:mah]
 comment: The distinction between this phenotype and centrally constricted (dumbbell-shaped) cells (FYPO:0000779) is that swollen elongated cells do not have a constriction along the long axis. Swollen elongated cells may have a uniform diameter, or may be swollen only around the nucleus.
-synonym: "inviable enlarged elongated septated cell with enlarged nucleus" RELATED [PomBase:mah]
-synonym: "inviable large elongated septated cell" RELATED [PomBase:vw]
-synonym: "inviable swollen elongated septated vegetative cell" EXACT [PomBase:mah]
+synonym: "inviable enlarged elongated septated vegetative cell with enlarged nucleus" RELATED [PomBase:mah]
+synonym: "inviable large elongated septated vegetative cell" RELATED [PomBase:vw]
+is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0002251 ! inviable swollen elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+is_a: FYPO:0002415 ! inviable swollen vegetative cell with abnormal cell shape
+is_a: FYPO:0002452 ! inviable septated vegetative cell with abnormal cell morphology
+is_a: FYPO:0004750 ! elongated septated vegetative cell
 relationship: has_part FYPO:0000646 ! swollen vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
@@ -34444,7 +34447,7 @@ creation_date: 2013-11-05T16:59:57Z
 [Term]
 id: FYPO:0002847
 name: decreased protein level in proteasome
-def: "A cell phenotype in which the amount of a protein measured in the proteasome is lower than normal when the cell is in the vegetative growth phase of the life cycle." [PMID:22906049, PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of a protein measured in the proteasome is lower than normal." [PMID:22906049, PomBase:mah]
 comment: Use this term for cases where the relative abundance of one or more specific proteins in the proteasome is decreased, altering the proteasome stoichiometry. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased proteasomal protein level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased protein level in proteasome during mitotic cell cycle" RELATED [PomBase:mah]
@@ -34960,7 +34963,7 @@ synonym: "inviable elongated abnormally septated vegetative cell" EXACT [PomBase
 synonym: "inviable elongated cell with abnormal septum during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable elongated vegetative cell with abnormal septum during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0002455 ! abnormal septum during vegetative growth
 created_by: midori
@@ -35083,13 +35086,13 @@ creation_date: 2013-11-19T14:22:49Z
 
 [Term]
 id: FYPO:0002900
-name: abnormal DNA damage checkpoint during cellular response to UV
-def: "A cell cycle checkpoint phenotype in which any DNA damage checkpoint is abnormal when the cell is exposed to ultraviolet light. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
-synonym: "abnormal DNA damage checkpoint activation during cellular response to UV" EXACT [PomBase:al]
-synonym: "abnormal DNA damage checkpoint during cellular response to ultraviolet light" EXACT [PomBase:mah]
-synonym: "abnormal DNA damage checkpoint during cellular response to UV during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abnormal DNA damage checkpoint during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+name: abnormal mitotic DNA damage checkpoint during cellular response to UV
+def: "A cell cycle checkpoint phenotype in which any mitotic DNA damage checkpoint is abnormal when the cell is exposed to ultraviolet light. A DNA damage checkpoint normally regulates progression through the cell cycle in response to DNA damage." [PomBase:mah]
+synonym: "abnormal DNA damage checkpoint during cellular response to UV during mitotic cell cycle" EXACT [PomBase:mah]
+synonym: "abnormal mitotic DNA damage checkpoint activation during cellular response to UV" EXACT [PomBase:al]
+synonym: "abnormal mitotic DNA damage checkpoint during cellular response to ultraviolet light" EXACT [PomBase:mah]
+synonym: "abnormal mitotic DNA damage checkpoint during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000006 ! abnormal mitotic DNA damage checkpoint
 created_by: midori
 creation_date: 2013-11-19T14:24:36Z
 
@@ -36435,7 +36438,7 @@ synonym: "inviable after spore germination, without cell division, swollen, bran
 synonym: "inviable following spore germination with swollen, branched, elongated germ tube" EXACT [PomBase:mah]
 synonym: "inviable germinated spore with swollen, branched, elongated germ tube" EXACT [PomBase:mah]
 is_a: FYPO:0002515 ! inviable after spore germination, without cell division, with branched, elongated germ tube
-is_a: FYPO:0002845 ! inviable swollen elongated septated cell
+is_a: FYPO:0002845 ! inviable swollen elongated septated vegetative cell
 is_a: FYPO:0002911 ! inviable after spore germination, without cell division, with swollen elongated germ tube
 is_a: FYPO:0004494 ! inviable branched, swollen, elongated vegetative cell
 created_by: midori
@@ -36597,7 +36600,7 @@ synonym: "elongated inviable vegetative cell during cellular response to salt st
 synonym: "essential; elongated vegetative cell during cellular response to salt stress" RELATED [PomBase:mah]
 synonym: "inviable elongated vegetative cell during cellular response to salt stress during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2014-01-15T10:59:07Z
@@ -36612,7 +36615,7 @@ synonym: "elongated inviable vegetative cell during cellular response to non-ion
 synonym: "essential; elongated vegetative cell during cellular response to v stress" RELATED [PomBase:mah]
 synonym: "inviable elongated vegetative cell during cellular response to non-ionic osmotic stress during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2014-01-15T11:00:24Z
@@ -37936,10 +37939,10 @@ synonym: "mitotic cell cycle arrest in M-phase with elongated inviable mononucle
 synonym: "mitotic M-phase arrested elongated inviable mononucleate aseptate vegetative cell" EXACT [PomBase:mah]
 synonym: "nuclear division arrest without septation (elongated cell)" EXACT [PomBase:vw]
 is_a: FYPO:0004923 ! inviable elongated mononucleate aseptate vegetative cell with mitotic cell cycle arrest
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
 relationship: has_part FYPO:0000608 ! abnormal cell cycle arrest in mitotic M phase
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2014-02-20T14:09:34Z
@@ -40572,21 +40575,20 @@ creation_date: 2014-05-07T15:47:45Z
 
 [Term]
 id: FYPO:0003343
-name: elongated multinucleate multiseptate cell, septa between nuclei
-def: "A cell morphology phenotype in which a cell is longer than normal, has two or more nuclei and more than one septum, and the septa are located so as to form separate compartments with a single nucleus in each." [PomBase:mah, PomBase:vw]
-is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
-is_a: FYPO:0000223 ! elongated multiseptate vegetative cell
+name: elongated multinucleate multiseptate cell, single septa between nuclei
+def: "A cell morphology phenotype in which a cell is longer than normal, has two or more nuclei and more than one septum, and the septa not grouped together, but are located so as to form separate compartments with a single nucleus in each." [PomBase:mah, PomBase:vw]
 is_a: FYPO:0001252 ! multinucleate multiseptate vegetative cell
+is_a: FYPO:0003342 ! elongated multinucleate cell
 created_by: midori
 creation_date: 2014-05-07T15:51:02Z
 
 [Term]
 id: FYPO:0003344
-name: elongated multinucleate multiseptate cell, septa between nuclei, during stationary phase
-def: "A cell morphology phenotype observed when a cell population is in stationary phase in which a cell is longer than normal, has two or more nuclei and more than one septum, and the septa are located so as to form separate compartments with a single nucleus in each." [PomBase:mah, PomBase:vw]
-synonym: "elongated multinucleate multiseptate cell, septa between nuclei during vegetative growth" EXACT [PomBase:mah]
-synonym: "elongated multinucleate multiseptate cell, septa between nuclei, during stationary phase during mitotic cell cycle" RELATED [PomBase:mah]
-is_a: FYPO:0003343 ! elongated multinucleate multiseptate cell, septa between nuclei
+name: elongated multinucleate multiseptate cell, single septa between nuclei, during stationary phase
+def: "A cell morphology phenotype observed when a cell population is in stationary phase in which a cell is longer than normal, has two or more nuclei and more than one septum, and the septa not grouped together, but are located so as to form separate compartments with a single nucleus in each." [PomBase:mah, PomBase:vw]
+synonym: "elongated multinucleate multiseptate cell, single septa between nuclei during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated multinucleate multiseptate cell, single septa between nuclei, during stationary phase during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0003343 ! elongated multinucleate multiseptate cell, single septa between nuclei
 created_by: midori
 creation_date: 2014-05-07T15:52:21Z
 
@@ -41441,8 +41443,8 @@ is_a: FYPO:0000134 ! branched, elongated, multiseptate cell
 is_a: FYPO:0001494 ! inviable elongated multiseptate vegetative cell
 is_a: FYPO:0002462 ! inviable branched, elongated vegetative cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2014-06-05T16:14:54Z
@@ -41570,7 +41572,6 @@ synonym: "inviable following spore germination, multiple cell divisions, elongat
 synonym: "inviable germinated spore, multiple cell divisions, elongated multiseptate tapered cell" EXACT [PomBase:mah]
 is_a: FYPO:0001494 ! inviable elongated multiseptate vegetative cell
 is_a: FYPO:0002450 ! inviable after spore germination, multiple cell divisions, septated cell with abnormal morphology
-is_a: FYPO:0002452 ! inviable septated vegetative cell with abnormal cell morphology
 is_a: FYPO:0002733 ! inviable after spore germination, multiple cell divisions, elongated tapered cell
 created_by: midori
 creation_date: 2014-06-11T13:17:31Z
@@ -41830,12 +41831,12 @@ creation_date: 2014-06-16T13:01:12Z
 
 [Term]
 id: FYPO:0003445
-name: increased duration of DNA damage checkpoint during cellular response to UV
-def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any DNA damage checkpoint is greater than in wild type during a cellular response to ultraviolet light." [PomBase:mah]
+name: increased duration of mitotic DNA damage checkpoint during cellular response to UV
+def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any mitotic DNA damage checkpoint is greater than in wild type during a cellular response to ultraviolet light." [PomBase:mah]
 synonym: "delayed DNA damage checkpoint deactivation during cellular response to UV" EXACT [PomBase:mah]
 synonym: "prolonged DNA damage checkpoint during cellular response to UV" EXACT [PomBase:mah]
-is_a: FYPO:0002341 ! increased duration of DNA damage checkpoint
-is_a: FYPO:0002900 ! abnormal DNA damage checkpoint during cellular response to UV
+is_a: FYPO:0002341 ! increased duration of mitotic DNA damage checkpoint
+is_a: FYPO:0002900 ! abnormal mitotic DNA damage checkpoint during cellular response to UV
 created_by: midori
 creation_date: 2014-06-16T13:23:07Z
 
@@ -42177,6 +42178,7 @@ synonym: "septation following abnormal chromosome segregation, with anucleate ce
 synonym: "septation following abnormal chromosome segregation, with anucleate cell formation during cellular response to salt stress during vegetative growth" EXACT [PomBase:mah]
 synonym: "septation following abnormal chromosome segregation, with binucleate cell formation during cellular response to salt stress" EXACT [PomBase:mah]
 is_a: FYPO:0003166 ! septation following abnormal chromosome segregation, with binucleate and anucleate cell formation
+is_a: FYPO:0005070 ! septation following abolished mitotic sister chromatid separation, with mononucleate and anucleate cell formation
 created_by: midori
 creation_date: 2014-06-24T15:05:37Z
 
@@ -42378,12 +42380,12 @@ creation_date: 2014-07-01T16:28:40Z
 
 [Term]
 id: FYPO:0003490
-name: increased duration of DNA damage checkpoint during cellular response to ionizing radiation
-def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any DNA damage checkpoint is greater than in wild type during a cellular response to ionizing radiation." [PomBase:mah]
-synonym: "delayed DNA damage checkpoint deactivation during cellular response to ionizing radiation" EXACT [PomBase:mah]
-synonym: "increased duration of DNA damage checkpoint during cellular response to IR" EXACT [PomBase:mah]
-synonym: "prolonged DNA damage checkpoint during cellular response to ionizing radiation" EXACT [PomBase:mah]
-is_a: FYPO:0002341 ! increased duration of DNA damage checkpoint
+name: increased duration of mitotic DNA damage checkpoint during cellular response to ionizing radiation
+def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by any mitotic DNA damage checkpoint is greater than in wild type during a cellular response to ionizing radiation." [PomBase:mah]
+synonym: "delayed mitotic DNA damage checkpoint deactivation during cellular response to ionizing radiation" EXACT [PomBase:mah]
+synonym: "increased duration of mitotic DNA damage checkpoint during cellular response to IR" EXACT [PomBase:mah]
+synonym: "prolonged mitotic DNA damage checkpoint during cellular response to ionizing radiation" EXACT [PomBase:mah]
+is_a: FYPO:0002341 ! increased duration of mitotic DNA damage checkpoint
 created_by: midori
 creation_date: 2014-07-01T16:30:58Z
 
@@ -42494,8 +42496,8 @@ is_a: FYPO:0000134 ! branched, elongated, multiseptate cell
 is_a: FYPO:0001496 ! viable elongated multiseptate vegetative cell
 is_a: FYPO:0002459 ! viable branched, elongated vegetative cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2014-07-01T17:16:27Z
@@ -44507,8 +44509,8 @@ synonym: "branched, curved, long, multiseptate cell" EXACT [PomBase:vw]
 is_a: FYPO:0000134 ! branched, elongated, multiseptate cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
 relationship: has_part FYPO:0000016 ! curved vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2014-08-12T14:33:51Z
 
@@ -44901,8 +44903,8 @@ synonym: "swollen ice cream cone-shaped cell during vegetative growth" EXACT [PM
 synonym: "swollen pear-shaped cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "swollen pear-shaped vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0000002 ! cell phenotype
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0001120 ! pear-shaped vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2014-08-18T16:10:38Z
 
@@ -46168,6 +46170,7 @@ id: FYPO:0003814
 name: abolished response to S-phase DNA damage checkpoint signaling
 def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs in response to the S phase DNA damage checkpoint (also known as the intra-S phase DNA damage checkpoint) does not occur. The S phase DNA damage checkpoint slows progression through S phase in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0072429, PomBase:mah]
 synonym: "abolished response to intra-S DNA damage checkpoint signaling" EXACT [GO:0072429, PomBase:mah]
+synonym: "abolished response to mitotic S-phase DNA damage checkpoint signaling" EXACT [PomBase:mah]
 synonym: "abolished response to S-phase DNA damage checkpoint signaling abolished" EXACT [PomBase:mah]
 synonym: "abolished response to S-phase DNA damage checkpoint signaling during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abolished response to S-phase DNA damage checkpoint signaling during vegetative growth" EXACT [PomBase:mah]
@@ -46181,6 +46184,7 @@ id: FYPO:0003815
 name: decreased response to S-phase DNA damage checkpoint signaling
 def: "A cellular process phenotype in which a mitotic cell cycle arrest that normally occurs in response to the S phase DNA damage checkpoint (also known as the intra-S phase DNA damage checkpoint) is decreased. The S phase DNA damage checkpoint slows progression through S phase in response to DNA damage. In a mutant, the checkpoint may fail to arrest or delay cell cycle progression under appropriate conditions, or the incidence or duration of arrest or delay may differ from wild type under any specified set of conditions." [GO:0072429, PomBase:mah]
 synonym: "decreased response to intra-S DNA damage checkpoint signaling" EXACT [PomBase:mah]
+synonym: "decreased response to mitotic S-phase DNA damage checkpoint signaling" EXACT [PomBase:mah]
 synonym: "decreased S-phase DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased S-phase DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 synonym: "reduced response to intra-S DNA damage checkpoint signaling" EXACT [GO:0072429, PomBase:mah]
@@ -46267,6 +46271,7 @@ synonym: "septation following abnormal chromosome segregation, with anucleate ce
 synonym: "septation following abnormal chromosome segregation, with anucleate cell formation during cellular response to hydroxyurea during vegetative growth" EXACT [PomBase:mah]
 synonym: "septation following abnormal chromosome segregation, with binucleate cell formation during cellular response to hydroxyurea" EXACT [PomBase:mah]
 is_a: FYPO:0003166 ! septation following abnormal chromosome segregation, with binucleate and anucleate cell formation
+is_a: FYPO:0005070 ! septation following abolished mitotic sister chromatid separation, with mononucleate and anucleate cell formation
 created_by: midori
 creation_date: 2014-09-15T17:42:18Z
 
@@ -46502,11 +46507,11 @@ creation_date: 2014-10-16T11:19:29Z
 
 [Term]
 id: FYPO:0003842
-name: inviable following spore germination, single cell division, abolished chromosome segregation
-def: "A phenotype in which a spore germinates to produce a cell that undergoes a single round of cell division in which chromosome segregation does not occur, and then dies." [PomBase:mah]
-synonym: "essential; germinating spore, single cell division, abolished chromosome segregation" RELATED [PomBase:jh, PomBase:vw]
-synonym: "inviable following spore germination, single cell division, abolished chromosome segregation" EXACT [PomBase:mah]
-synonym: "inviable germinated spore, single cell division, abolished chromosome segregation" EXACT [PomBase:mah]
+name: inviable following spore germination, single cell division, abolished mitotic sister chromatid separation
+def: "A phenotype in which a spore germinates to produce a cell that undergoes a single round of cell division in which mitotic sister chromatid separation does not occur, and then dies." [PomBase:mah]
+synonym: "essential; germinating spore, single cell division, abolished mitotic sister chromatid separation" RELATED [PomBase:jh, PomBase:vw]
+synonym: "inviable following spore germination, single cell division, abolished mitotic sister chromatid separation" EXACT [PomBase:mah]
+synonym: "inviable germinated spore, single cell division, abolished mitotic sister chromatid separation" EXACT [PomBase:mah]
 is_a: FYPO:0002280 ! inviable after spore germination, single cell division
 created_by: midori
 creation_date: 2014-10-16T11:30:08Z
@@ -46880,8 +46885,8 @@ synonym: "elongated inviable cell with mitotic G2/M transition delay and M phase
 synonym: "long inviable cell with mitotic G2/M transition delay and cell cycle arrest in M phase" EXACT [PomBase:vw]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 relationship: has_part FYPO:0000012 ! mitotic G2/M transition delay
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000608 ! abnormal cell cycle arrest in mitotic M phase
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2014-10-21T12:04:07Z
@@ -49978,6 +49983,7 @@ synonym: "increased histone H3K9me2 at telomere" EXACT [PomBase:mah]
 synonym: "increased histone lysine H3 K9 dimethylation at telomere" EXACT [GO:0036123, PomBase:mah]
 synonym: "increased telomeric histone H3-K9 dimethylation" EXACT [PomBase:mah]
 is_a: FYPO:0000873 ! increased histone H3-K9 dimethylation
+is_a: FYPO:0005064 ! increased histone H3-K9 methylation at telomere
 created_by: midori
 creation_date: 2014-12-09T12:08:36Z
 
@@ -50679,8 +50685,8 @@ synonym: "inviable elongated mononucleate aseptate vegetative cell with fragment
 synonym: "mitotic cell cycle arrest in interphase and elongated inviable cell with fragmented nucleus" EXACT [PomBase:vw]
 synonym: "mitotic interphase arrested elongated inviable vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0001497 ! inviable elongated vegetative cell with mitotic cell cycle arrest in interphase
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000837 ! cell cycle arrest in mitotic interphase
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0001919 ! fragmented nucleus
 created_by: midori
@@ -51425,8 +51431,8 @@ synonym: "inviable long mononucleate vegetative cell" EXACT [PomBase:vw]
 synonym: "inviable vegetative elongated mononucleate cell" EXACT [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0001916 ! elongated mononucleate vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2015-01-07T15:09:10Z
@@ -52823,12 +52829,13 @@ id: FYPO:0004371
 name: decreased duration of S-phase DNA damage checkpoint
 def: "A cell cycle checkpoint phenotype in which the duration of cell cycle arrest or delay due to regulation by the S-phase DNA damage checkpoint is lower than in wild type." [PomBase:mah]
 synonym: "decreased duration of intra-S DNA damage checkpoint" EXACT [PomBase:mah]
+synonym: "decreased duration of mitotic S-phase DNA damage checkpoint" EXACT [PomBase:mah]
 synonym: "decreased duration of S-phase DNA damage checkpoint activation" EXACT [PomBase:mah]
 synonym: "decreased duration of S-phase DNA damage checkpoint during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "decreased duration of S-phase DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
 synonym: "premature S-phase DNA damage checkpoint deactivation" RELATED [PomBase:mah]
 synonym: "reduced duration of S-phase DNA damage checkpoint" EXACT [PomBase:mah]
-is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+is_a: FYPO:0000006 ! abnormal mitotic DNA damage checkpoint
 created_by: midori
 creation_date: 2015-02-10T14:07:50Z
 
@@ -52851,7 +52858,7 @@ synonym: "abnormal G2 DNA damage checkpoint during mitotic cell cycle" EXACT [Po
 synonym: "abnormal mitotic cell cycle G2/M transition DNA damage checkpoint" EXACT [GO:0007095]
 synonym: "abnormal mitotic G2 DNA damage checkpoint activation" RELATED [PomBase:mah]
 synonym: "abnormal mitotic G2 DNA damage checkpoint during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0000006 ! abnormal DNA damage checkpoint
+is_a: FYPO:0000006 ! abnormal mitotic DNA damage checkpoint
 is_a: FYPO:0000166 ! abnormal regulation of G2/M transition of mitotic cell cycle
 created_by: midori
 creation_date: 2015-02-10T14:21:16Z
@@ -54355,8 +54362,8 @@ is_a: FYPO:0001512 ! branched, elongated cell
 is_a: FYPO:0002251 ! inviable swollen elongated vegetative cell
 is_a: FYPO:0002415 ! inviable swollen vegetative cell with abnormal cell shape
 relationship: has_part FYPO:0000015 ! branched vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000646 ! swollen vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2015-03-11T16:01:12Z
@@ -54368,12 +54375,14 @@ def: "A cell morphology phenotype observed in the vegetative growth phase of the
 synonym: "inviable branched, elongated, swollen, multiseptate vegetative cell" EXACT [PomBase:vw]
 synonym: "inviable branched, swollen, elongated, multiseptate cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable branched, swollen, elongated, multiseptate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0002845 ! inviable swollen elongated septated vegetative cell
+is_a: FYPO:0003413 ! inviable branched, elongated, multiseptate vegetative cell
 is_a: FYPO:0004494 ! inviable branched, swollen, elongated vegetative cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
 relationship: has_part FYPO:0000646 ! swollen vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
-relationship: has_part FYPO:0004295 ! multiseptate cell
 created_by: midori
 creation_date: 2015-03-11T16:04:12Z
 
@@ -54600,8 +54609,8 @@ synonym: "viable elongated aseptate cell during vegetative growth" EXACT [PomBas
 synonym: "viable long aseptate cell" EXACT [PomBase:vw]
 is_a: FYPO:0000950 ! elongated aseptate vegetative cell
 is_a: FYPO:0001492 ! viable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2015-03-24T12:16:09Z
@@ -54943,7 +54952,7 @@ synonym: "increased chromatin silencing at centromere inner repeat during mitoti
 synonym: "increased chromatin silencing at centromere inner repeat during vegetative growth" EXACT [PomBase:mah]
 synonym: "increased chromatin silencing at centromeric inner repeat region" EXACT [PomBase:mah]
 synonym: "increased heterochromatin silencing at centromere inner repeat" EXACT [PomBase:mah]
-is_a: FYPO:0004540 ! increased chromatin silencing
+is_a: FYPO:0005071 ! increased chromatin silencing at centromere
 created_by: midori
 creation_date: 2015-04-02T15:08:31Z
 
@@ -55035,7 +55044,7 @@ synonym: "normal S-phase DNA damage checkpoint activation during cellular respon
 synonym: "normal S-phase DNA damage checkpoint during cellular response to ultraviolet light" EXACT [PomBase:mah]
 synonym: "normal S-phase DNA damage checkpoint during cellular response to UV during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "normal S-phase DNA damage checkpoint during cellular response to UV during vegetative growth" EXACT [PomBase:mah]
-is_a: FYPO:0002102 ! normal DNA damage checkpoint during cellular response to UV
+is_a: FYPO:0002102 ! normal mitotic DNA damage checkpoint during cellular response to UV
 is_a: FYPO:0003530 ! normal S-phase DNA damage checkpoint
 created_by: midori
 creation_date: 2015-04-14T15:50:36Z
@@ -55601,8 +55610,9 @@ synonym: "branched, elongated, septated cell during vegetative growth" EXACT [Po
 synonym: "branched, elongated, septated vegetative cell" EXACT [PomBase:mah]
 synonym: "branched, long, septated cell" EXACT [PomBase:vw]
 is_a: FYPO:0001512 ! branched, elongated cell
+is_a: FYPO:0004750 ! elongated septated vegetative cell
 relationship: has_part FYPO:0000015 ! branched vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0002342 ! septated vegetative cell
 created_by: midori
 creation_date: 2015-04-29T16:37:35Z
@@ -55699,6 +55709,7 @@ synonym: "inviable following spore germination, without cell division, elongated
 synonym: "inviable germinated spore, without cell division, elongated cell" EXACT [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
 is_a: FYPO:0001991 ! inviable after spore germination, without cell division
+is_a: FYPO:0002273 ! inviable vegetative cell with abnormal cell morphology
 created_by: midori
 creation_date: 2015-05-01T14:49:23Z
 
@@ -55980,8 +55991,8 @@ synonym: "inviable curved elongated mononucleate vegetative cell during mitotic 
 is_a: FYPO:0002411 ! inviable curved elongated vegetative cell
 is_a: FYPO:0004255 ! inviable elongated mononucleate vegetative cell
 relationship: has_part FYPO:0000016 ! curved vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2015-05-05T17:43:34Z
@@ -56329,10 +56340,10 @@ name: inviable mononucleate multiseptate vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, and has one nucleus and more than one septum." [PomBase:mah]
 synonym: "inviable mononucleate multiseptate cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable mononucleate multiseptate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0002001 ! mononucleate multiseptate vegetative cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
+relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
-relationship: has_part FYPO:0004295 ! multiseptate cell
 created_by: midori
 creation_date: 2015-05-27T16:23:27Z
 
@@ -56342,10 +56353,10 @@ name: inviable binucleate multiseptate vegetative cell
 def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is inviable, and has two nuclei and more than one septum." [PomBase:mah]
 synonym: "inviable binucleate multiseptate cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "inviable binucleate multiseptate vegetative cell during mitotic cell cycle" RELATED [PomBase:mah]
-is_a: FYPO:0000002 ! cell phenotype
+is_a: FYPO:0001223 ! binucleate multiseptate vegetative cell
+relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
 relationship: has_part FYPO:0001222 ! binucleate vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
-relationship: has_part FYPO:0004295 ! multiseptate cell
 created_by: midori
 creation_date: 2015-05-27T16:24:42Z
 
@@ -56510,8 +56521,8 @@ synonym: "inviable elongated cell with fragmented DNA during vegetative growth" 
 synonym: "inviable elongated vegetative cell with fragmented DNA" EXACT [PomBase:mah, PomBase:vw]
 synonym: "inviable elongated vegetative cell with fragmented DNA during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001490 ! inviable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000160 ! fragmented DNA
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2015-05-28T13:10:33Z
@@ -56526,9 +56537,9 @@ synonym: "inviable elongated multiseptate cell with fragmented DNA during vegeta
 synonym: "inviable elongated multiseptate vegetative cell with fragmented DNA during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001493 ! inviable elongated multinucleate vegetative cell
 is_a: FYPO:0004672 ! inviable elongated vegetative cell with fragmented DNA
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
 relationship: has_part FYPO:0000160 ! fragmented DNA
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2015-05-28T13:16:02Z
@@ -56916,8 +56927,8 @@ is_a: FYPO:0002215 ! viable curved elongated vegetative cell
 is_a: FYPO:0002402 ! viable swollen vegetative cell with abnormal cell shape
 is_a: FYPO:0002479 ! viable swollen elongated vegetative cell
 relationship: has_part FYPO:0000016 ! curved vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000646 ! swollen vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2015-07-10T15:04:39Z
@@ -59402,9 +59413,9 @@ is_a: FYPO:0000133 ! elongated multinucleate vegetative cell
 is_a: FYPO:0000223 ! elongated multiseptate vegetative cell
 is_a: FYPO:0001252 ! multinucleate multiseptate vegetative cell
 relationship: has_part FYPO:0000016 ! curved vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000061 ! multinucleate vegetative cell
 relationship: has_part FYPO:0000118 ! multiseptate vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 created_by: midori
 creation_date: 2015-10-07T13:32:10Z
 
@@ -59655,9 +59666,9 @@ synonym: "mitotic cell cycle arrest in G2-phase with elongated inviable mononucl
 synonym: "mitotic G2-phase arrested elongated inviable mononucleate aseptate vegetative cell" EXACT [PomBase:mah]
 is_a: FYPO:0001497 ! inviable elongated vegetative cell with mitotic cell cycle arrest in interphase
 is_a: FYPO:0004923 ! inviable elongated mononucleate aseptate vegetative cell with mitotic cell cycle arrest
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 relationship: has_part FYPO:0003373 ! abnormal cell cycle arrest in mitotic G2 phase
 created_by: midori
@@ -59675,10 +59686,10 @@ synonym: "essential; elongated mononucleate aseptate vegetative cell with cell c
 synonym: "inviable elongated mononucleate aseptate vegetative cell with arrested cell cycle" EXACT [PomBase:mah]
 synonym: "mitotic cell cycle arrest with elongated inviable mononucleate aseptate cell" EXACT [PomBase:vw]
 is_a: FYPO:0000839 ! inviable elongated mononucleate aseptate cell
-relationship: has_part FYPO:0000017 ! elongated cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
 relationship: has_part FYPO:0000502 ! abnormally arrested mitotic cell cycle progression
 relationship: has_part FYPO:0000949 ! aseptate
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001489 ! inviable vegetative cell
 created_by: midori
 creation_date: 2015-10-14T10:42:11Z
@@ -60245,7 +60256,7 @@ synonym: "viable elongated cell during phosphate starvation during vegetative gr
 synonym: "viable elongated vegetative cell during cellular response to phosphate starvation" EXACT [PomBase:mah]
 synonym: "viable elongated vegetative cell during phosphate starvation during mitotic cell cycle" RELATED [PomBase:mah]
 is_a: FYPO:0001492 ! viable elongated vegetative cell
-relationship: has_part FYPO:0000017 ! elongated cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001491 ! viable vegetative cell
 created_by: midori
 creation_date: 2015-10-20T16:24:48Z
@@ -60367,8 +60378,8 @@ def: "A cell phenotype in which a cell contains one septum and is longer than no
 synonym: "elongated monoseptate cell during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "elongated monoseptate cell during vegetative growth" EXACT [PomBase:mah]
 synonym: "long monoseptate cell" EXACT [PomBase:vw]
-is_a: FYPO:0000002 ! cell phenotype
-relationship: has_part FYPO:0000017 ! elongated cell
+is_a: FYPO:0004750 ! elongated septated vegetative cell
+relationship: has_part FYPO:0001122 ! elongated vegetative cell
 relationship: has_part FYPO:0001225 ! monoseptate
 created_by: midori
 creation_date: 2015-10-21T13:30:13Z
@@ -60652,7 +60663,7 @@ creation_date: 2015-10-28T14:32:16Z
 [Term]
 id: FYPO:0005004
 name: decreased protein level in anaphase-promoting complex
-def: "A cell phenotype in which the amount of a protein measured in the anaphase-promoting complex is lower than normal when the cell is in the vegetative growth phase of the life cycle." [PMID:22906049, PomBase:mah]
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of a protein measured in the anaphase-promoting complex is lower than normal." [PMID:22906049, PomBase:mah]
 comment: Use this term for cases where the relative abundance of one or more specific proteins in the anaphase-promoting complex is decreased, altering the anaphase-promoting complex stoichiometry. We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased anaphase-promoting complex protein level during vegetative growth" EXACT [PomBase:mah]
 synonym: "decreased protein level in anaphase-promoting complex during mitotic cell cycle" RELATED [PomBase:mah]
@@ -60814,13 +60825,15 @@ creation_date: 2015-10-28T16:28:41Z
 
 [Term]
 id: FYPO:0005016
-name: abolished 18S rRNA acetylation at C1297 and C1815
-def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the posttranscriptional addition of acetyl groups to the C1297 and C1815 residues in an 18S rRNA molecule is abolished." [PMID:25402480, PomBase:mah]
-synonym: "18S rRNA acetylation at C1297 and C1815 abolished" EXACT [PomBase:mah]
-synonym: "abolished 18S rRNA acetylation at C1297 and C1815 during mitotic cell cycle" RELATED [PomBase:mah]
-synonym: "abolished 18S rRNA acetylation at C1297 and C1815 during vegetative growth" EXACT [PomBase:mah]
+name: abolished 18S rRNA acetylation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the posttranscriptional addition of acetyl groups to residues in an 18S rRNA molecule is abolished." [PMID:25402480, PomBase:mah]
+comment: At present, the C1297 and C1815 residues are known to be acetylated.
+synonym: "18S rRNA acetylation abolished" EXACT [PomBase:mah]
+synonym: "abolished 18S rRNA acetylation at C1297 and C1815" NARROW [PomBase:mah]
+synonym: "abolished 18S rRNA acetylation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "abolished 18S rRNA acetylation during vegetative growth" EXACT [PomBase:mah]
 synonym: "abolished 18S rRNA acetylation on C1297 and C1815" EXACT [PomBase:mah]
-synonym: "abolished 18s rRNA cytidine (1297 and 1815) acetylation" EXACT [PomBase:al]
+synonym: "abolished 18s rRNA cytidine (1297 and 1815) acetylation" NARROW [PomBase:al]
 is_a: FYPO:0001766 ! abnormal tRNA methylation
 is_a: FYPO:0005015 ! abnormal rRNA modification
 created_by: midori
@@ -60922,7 +60935,10 @@ synonym: "inviable elongated septated mononucleate vegetative cell during mitoti
 synonym: "inviable elongated septated mononucleate vegetative cell with mislocalized nucleus" EXACT [PomBase:mah]
 synonym: "inviable septated mononucleate elongated vegetative cell" EXACT [PomBase:vw]
 is_a: FYPO:0002000 ! inviable septated mononucleate vegetative cell
+is_a: FYPO:0002273 ! inviable vegetative cell with abnormal cell morphology
 is_a: FYPO:0002337 ! inviable elongated mononucleate vegetative cell with mislocalized nucleus
+is_a: FYPO:0002452 ! inviable septated vegetative cell with abnormal cell morphology
+is_a: FYPO:0004750 ! elongated septated vegetative cell
 relationship: has_part FYPO:0000060 ! mononucleate vegetative cell
 relationship: has_part FYPO:0001490 ! inviable elongated vegetative cell
 relationship: has_part FYPO:0002069 ! mislocalized nucleus
@@ -61103,7 +61119,6 @@ creation_date: 2015-11-10T11:24:50Z
 id: FYPO:0005037
 name: normal phosphorylation of RNA polymerase II C-terminal domain serine 5 residues during nitrogen starvation
 def: "A cellular process phenotype in which the phosphorylation of the serine residue at position 5 within one or more copies of the heptapeptide repeat (YSPTSPS) of the C-terminal domain of RNA polymerase II normal (i.e. indistinguishable from wild type) when the cell is subject to nitrogen starvation." [GO:0071620, PMID:22144909, PomBase:mah]
-comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 synonym: "decreased phosphorylation of RNA polymerase II C-terminal domain serine 5 residues during nitrogen deprivation" EXACT [PomBase:mah]
 synonym: "decreased phosphorylation of RNA polymerase II CTD serine 5 residues during nitrogen depletion" EXACT [PomBase:mah]
 synonym: "reduced phosphorylation of RNA polymerase II C-terminal domain serine 5 residues during nitrogen starvation" EXACT [PomBase:mah]
@@ -61306,6 +61321,7 @@ def: "A cellular process phenotype observed in the vegetative growth phase of th
 synonym: "abnormal RITS complex assembly during mitotic cell cycle" RELATED [PomBase:mah]
 synonym: "abnormal RITS complex assembly during vegetative growth" EXACT [PomBase:mah]
 is_a: FYPO:0000447 ! abnormal protein complex assembly
+is_a: FYPO:0003628 ! abnormal ribonucleoprotein complex assembly
 created_by: midori
 creation_date: 2015-11-10T13:42:36Z
 
@@ -61321,6 +61337,247 @@ synonym: "normal mitotic cell cycle regulation during cellular response to latru
 is_a: FYPO:0001928 ! normal regulation of mitotic cell cycle
 created_by: midori
 creation_date: 2015-11-10T14:00:53Z
+
+[Term]
+id: FYPO:0005055
+name: binucleate multiseptate cell, septa grouped
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell has two and more than one septum, and the septa are grouped together between the two compartments, one or more of which may contain multiple nuclei." [PomBase:mah]
+synonym: "binucleate multiseptate cell, septa grouped during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "binucleate multiseptate cell, septa grouped during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0001223 ! binucleate multiseptate vegetative cell
+is_a: FYPO:0001254 ! multinucleate multiseptate cell, septa grouped
+created_by: midori
+creation_date: 2015-11-18T13:52:17Z
+
+[Term]
+id: FYPO:0005056
+name: elongated multiseptate vegetative cell, with three or more nuclei and single septa between nuclei
+def: "A cell morphology phenotype observed in the vegetative growth phase of the life cycle in which a cell is longer than normal, has three or more nuclei and more than one septum, and the septa not grouped together, but are located so as to form separate compartments with a single nucleus in each." [PomBase:mah, PomBase:vw]
+synonym: "elongated multiseptate cell, with three or more nuclei and single septa between nuclei during vegetative growth" EXACT [PomBase:mah]
+synonym: "elongated multiseptate vegetative cell, with three or more nuclei and single septa between nuclei" EXACT [PomBase:mah]
+synonym: "elongated multiseptate vegetative cell, with three or more nuclei and single septa between nuclei during mitotic cell cycle" RELATED [PomBase:mah]
+is_a: FYPO:0001253 ! elongated multinucleate multiseptate vegetative cell, single septa between nuclei
+created_by: midori
+creation_date: 2015-11-18T13:54:25Z
+
+[Term]
+id: FYPO:0005057
+name: abolished meiotic DNA double-strand break clipping
+def: "A cellular process phenotype in which meiotic DNA double-strand break clipping does not occur. Meiotic DNA double-strand break clipping is the process by which SPO11/Rec12-oligonucleotide complexes are removed from 5' DNA double-strand breaks induced during meiosis." [GO:1990898, PMID:26130711, PomBase:mah]
+synonym: "meiotic DNA double-strand break clipping abolished" EXACT [PomBase:mah]
+is_a: FYPO:0000008 ! abnormal meiotic recombination
+created_by: midori
+creation_date: 2015-11-18T14:12:20Z
+
+[Term]
+id: FYPO:0005058
+name: decreased meiotic DNA double-strand break clipping
+def: "A cellular process phenotype in which meiotic DNA double-strand break clipping is decreased. Meiotic DNA double-strand break clipping is the process by which SPO11/Rec12-oligonucleotide complexes are removed from 5' DNA double-strand breaks induced during meiosis." [GO:1990898, PMID:26130711, PomBase:mah]
+synonym: "reduced meiotic DNA double-strand break clipping" EXACT [PomBase:mah]
+is_a: FYPO:0000008 ! abnormal meiotic recombination
+created_by: midori
+creation_date: 2015-11-18T14:13:45Z
+
+[Term]
+id: FYPO:0005059
+name: decreased meiotic DNA double-strand break resectioning
+def: "A cellular process phenotype in which meiotic DNA double-strand break resectioning is decreased. Meiotic DNA double-strand break resectioning is the process by which long-tract single-stranded 3'-end DNA is generated by removal of bases from a 5' end from which SPO11/Rec12-oligonucleotide complexes have been removed." [GO:1990899, PMID:26130711, PomBase:mah]
+synonym: "reduced meiotic DNA double-strand break resectioning" EXACT [PomBase:mah]
+is_a: FYPO:0000008 ! abnormal meiotic recombination
+created_by: midori
+creation_date: 2015-11-18T14:22:37Z
+
+[Term]
+id: FYPO:0005060
+name: normal meiotic DNA double-strand break resectioning
+def: "A cellular process phenotype in which meiotic DNA double-strand break resectioning is normal (i.e. indistinguishable from wild type). Meiotic DNA double-strand break resectioning is the process by which long-tract single-stranded 3'-end DNA is generated by removal of bases from a 5' end from which SPO11/Rec12-oligonucleotide complexes have been removed." [GO:1990899, PMID:26130711, PomBase:mah]
+is_a: FYPO:0002496 ! normal metabolic process
+created_by: midori
+creation_date: 2015-11-18T14:25:37Z
+
+[Term]
+id: FYPO:0005061
+name: normal phosphorylation of RNA polymerase II C-terminal domain serine 5 residues during vegetative growth
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of the serine residue at position 5 within one or more copies of the heptapeptide repeat (YSPTSPS) of the C-terminal domain of RNA polymerase II normal (i.e. indistinguishable from wild type)." [GO:0071620, PMID:17502918, PomBase:mah]
+synonym: "decreased phosphorylation of RNA polymerase II C-terminal domain serine 5 residues during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "reduced phosphorylation of RNA polymerase II C-terminal domain serine 5 residues during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000776 ! normal protein phosphorylation during vegetative growth
+created_by: midori
+creation_date: 2015-11-18T14:33:49Z
+
+[Term]
+id: FYPO:0005062
+name: increased histone H3-K4 methylation at telomere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the methylation of lysine at position 4 of histone H3 in telomeric regions occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased histone H3 K4 methylation at telomere" EXACT [GO:0051568, PomBase:mah]
+synonym: "increased histone H3-K4 methylation at telomere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone H3-K4 methylation at telomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased histone H3-K4 methylation at telomeric region" EXACT [PomBase:vw]
+synonym: "increased histone H3K4 methylation at telomere" EXACT [PomBase:vw]
+synonym: "increased histone H3K4me at telomere" EXACT [PomBase:mah]
+synonym: "increased histone lysine H3 K4 methylation at telomere" EXACT [GO:0051568, PomBase:mah]
+is_a: FYPO:0000869 ! increased histone methylation
+is_a: FYPO:0002330 ! abnormal histone H3-K4 methylation
+created_by: midori
+creation_date: 2015-11-18T15:04:48Z
+
+[Term]
+id: FYPO:0005063
+name: increased histone H3-K4 methylation at mating type locus
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the methylation of lysine at position 4 of histone H3 at the mating type locus occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased histone H3 K4 methylation at mating type locus" EXACT [GO:0051568, PomBase:mah]
+synonym: "increased histone H3-K4 methylation at mating type locus during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone H3-K4 methylation at mating type locus during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased histone H3K4 methylation at mating type locus" EXACT [PomBase:vw]
+synonym: "increased histone H3K4me at mating type locus" EXACT [PomBase:mah]
+synonym: "increased histone lysine H3 K4 methylation at mating type locus" EXACT [GO:0051568, PomBase:mah]
+is_a: FYPO:0000869 ! increased histone methylation
+is_a: FYPO:0002330 ! abnormal histone H3-K4 methylation
+created_by: midori
+creation_date: 2015-11-18T15:10:19Z
+
+[Term]
+id: FYPO:0005064
+name: increased histone H3-K9 methylation at telomere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which methylation of lysine at position 9 of histone H3 in telomeric regions occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased histone H3 K9 methylation at telomere" EXACT [GO:0051567, PomBase:mah]
+synonym: "increased histone H3-K9 methylation at telomere" EXACT [PomBase:mah]
+synonym: "increased histone H3-K9 methylation at telomere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone H3-K9 methylation at telomere during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased histone H3-K9 methylation at telomeric region" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me at telomere" EXACT [GO:0051567, PomBase:mah]
+synonym: "increased histone lysine H3 K9 methylation at telomere" EXACT [GO:0051567, PomBase:mah]
+is_a: FYPO:0000871 ! increased histone H3-K9 methylation
+created_by: midori
+creation_date: 2015-11-18T15:11:46Z
+
+[Term]
+id: FYPO:0005065
+name: increased histone H3-K9 methylation at mating type locus
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which methylation of lysine at position 9 of histone H3 at the mating type locus occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased histone H3 K9 methylation at mating type locus" EXACT [GO:0051567, PomBase:mah]
+synonym: "increased histone H3-K9 methylation at mating type locus" EXACT [PomBase:mah]
+synonym: "increased histone H3-K9 methylation at mating type locus during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone H3-K9 methylation at mating type locus during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased histone H3K9me at mating type locus" EXACT [GO:0051567, PomBase:mah]
+synonym: "increased histone lysine H3 K9 methylation at mating type locus" EXACT [GO:0051567, PomBase:mah]
+is_a: FYPO:0000871 ! increased histone H3-K9 methylation
+created_by: midori
+creation_date: 2015-11-18T15:13:54Z
+
+[Term]
+id: FYPO:0005066
+name: increased histone H3-K9 methylation at centromere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which methylation of lysine at position 9 of histone H3 in centromeric regions occurs to a greater extent than normal." [PomBase:mah]
+synonym: "increased histone H3 K9 methylation at centromere" EXACT [GO:0051567, PomBase:mah]
+synonym: "increased histone H3-K9 methylation at centromere" EXACT [PomBase:mah]
+synonym: "increased histone H3-K9 methylation at centromere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased histone H3-K9 methylation at centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased histone H3-K9 methylation at centromeric region" EXACT [PomBase:vw]
+synonym: "increased histone H3K9me at centromere" EXACT [GO:0051567, PomBase:mah]
+synonym: "increased histone lysine H3 K9 methylation at centromere" EXACT [GO:0051567, PomBase:mah]
+is_a: FYPO:0000871 ! increased histone H3-K9 methylation
+created_by: midori
+creation_date: 2015-11-18T15:14:38Z
+
+[Term]
+id: FYPO:0005067
+name: sensitive to 1,1-bis(2-aminoethyl)-2-hydroxy-3-oxotriazane
+def: "A phenotype observed in the vegetative growth phase of the life cycle in which cells show increased sensitivity to 1,1-bis(2-aminoethyl)-2-hydroxy-3-oxotriazane (DETA NONOate). Cells stop growing (and may die) at a concentration of 1,1-bis(2-aminoethyl)-2-hydroxy-3-oxotriazane that allows wild type cells to grow." [PomBase:mah]
+synonym: "hypersensitive to 1,1-bis(2-aminoethyl)-2-hydroxy-3-oxotriazane" EXACT [PomBase:mah]
+synonym: "sensitive to 1,1-bis(2-aminoethyl)-2-hydroxy-3-oxotriazane during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "sensitive to 1,1-bis(2-aminoethyl)-2-hydroxy-3-oxotriazane during vegetative growth" EXACT [PomBase:mah]
+synonym: "sensitive to DETA NONOate" EXACT [CHEBI:50154]
+synonym: "sensitive to diethylenetriamine NONOate " EXACT [CHEBI:50154]
+is_a: FYPO:0000127 ! increased sensitivity to chemical during vegetative growth
+created_by: midori
+creation_date: 2015-11-18T15:27:49Z
+
+[Term]
+id: FYPO:0005068
+name: increased number of double-strand break sites during mitotic S phase
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the number of sites of double-strand breaks in DNA is greater than normal during S phase of the mitotic cell cycle." [PMID:18180284, PomBase:mah]
+comment: Because Rad22 often accumulates at double-strand breaks, consider also annotating to 'increased number of Rad22 foci' (FYPO:0000972).
+synonym: "accumulation of DNA damage foci during mitotic S phase" RELATED [PomBase:mah]
+synonym: "accumulation of double-strand break sites during mitotic S phase" EXACT [PomBase:mah]
+synonym: "increased number of DNA damage foci during mitotic S phase" RELATED [PomBase:mah]
+synonym: "increased number of double-strand break sites during S phase during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased number of double-strand break sites during S phase of mitotic cell cycle" EXACT [PomBase:mah]
+is_a: FYPO:0000455< ! increased number of double-strand break sites during vegetative growth
+created_by: midori
+creation_date: 2015-11-18T15:44:28Z
+
+[Term]
+id: FYPO:0005069
+name: unequal mitotic sister chromatid segregation following normal mitosis
+def: "A cellular process phenotype in which mitotic sister chromatid segregation fails to separate chromosomes into two equal masses after the cell has undergone a normal mitotic nuclear division and passed through the subsequent mitotic interphase. Unequal mitotic sister chromatid separation may be complete, with two distinct unequal DNA masses located at or near the ends of an elongated mitotic spindle, or incomplete." [PMID:18180284, PomBase:mah]
+comment: This phenotype affects the second round of mitosis to take place after a mutation exerts its effect. For example, if a conditional mutant is shifted to restrictive conditions in G1 or S phase and the first mitosis thereafter is normal, but the second is not (even if cells are returned to permissive conditions in the second G1 or S phase), this term is applicable.
+synonym: "mitotic chromosome nondisjunction following normal mitosis" EXACT [PomBase:mah]
+synonym: "unequal mitotic chromosome segregation following normal mitosis" EXACT [PomBase:mah]
+synonym: "unequal mitotic sister chromatid segregation during vegetative growth following normal mitosis" EXACT [PomBase:mah]
+synonym: "unequal mitotic sister chromatid separation following normal mitosis" RELATED [PomBase:mah]
+is_a: FYPO:0003241 ! unequal mitotic sister chromatid segregation
+is_a: FYPO:0004588 ! abnormal mitosis following normal mitosis
+created_by: midori
+creation_date: 2015-11-18T15:53:46Z
+
+[Term]
+id: FYPO:0005070
+name: septation following abolished mitotic sister chromatid separation, with mononucleate and anucleate cell formation
+def: "An inviable phenotype observed in the vegetative growth phase of the life cycle in which a cell undergoes septation despite abolished mitotic sister chromatid separation, producing inviable daughter cells, and in which the septum forms in a position that partitions the nucleus into one daughter cell." [PomBase:mah, PomBase:vw]
+comment: In cells with this phenotype, septation has proceeded despite chromosome segregation failing to complete normally. Chromosome separation is entirely abolished. Consider also annotating to 'cut' (FYPO:0003155) or its descendants, because these phenotypes often co-occur.
+synonym: "monoseptate vegetative cell with mononucleate and anucleate compartments following abolished mitotic sister chromatid separation" EXACT [PomBase:mah]
+synonym: "septation following abolished mitotic sister chromatid separation, with anucleate cell formation" EXACT [PomBase:mah]
+synonym: "septation following abolished mitotic sister chromatid separation, with mononucleate and anucleate cell formation during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "septation following abolished mitotic sister chromatid separation, with mononucleate and anucleate cell formation during vegetative growth" EXACT [PomBase:mah]
+is_a: FYPO:0000229 ! septation following abnormal mitotic chromosome segregation
+created_by: midori
+creation_date: 2015-11-18T16:08:59Z
+
+[Term]
+id: FYPO:0005071
+name: increased chromatin silencing at centromere
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the occurrence of chromatin silencing at centromeric regions is increased." [PomBase:mah]
+synonym: "increased chromatin silencing at centromere during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "increased chromatin silencing at centromere during vegetative growth" EXACT [PomBase:mah]
+synonym: "increased heterochromatin silencing at centromere" RELATED [PomBase:mah]
+is_a: FYPO:0004540 ! increased chromatin silencing
+created_by: midori
+creation_date: 2015-11-18T16:17:12Z
+
+[Term]
+id: FYPO:0005072
+name: normal protein localization to centromeric chromatin
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein to centromeric chromatin is normal (i.e. indistinguishable from wild type." [PomBase:mah]
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+synonym: "normal protein localisation to centromeric chromatin during vegetative growth" EXACT [PomBase:mah]
+synonym: "normal protein localization to centromeric chromatin during mitotic cell cycle" RELATED [PomBase:mah]
+synonym: "normal protein localization to chromatin at centromere" EXACT [PomBase:mah]
+is_a: FYPO:0001509 ! normal protein localization to chromatin
+is_a: FYPO:0002574 ! normal protein localization to centromere
+creation_date: 2015-11-18T16:44:29Z
+
+[Term]
+id: FYPO:0005073
+name: decreased mitotic chromosome arm condensation
+def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which mitotic chromosome condensation occurs to a lower extent than normal along the chromosome arms." [GO:1990982, PMID:21633354, PomBase:mah]
+synonym: "decreased mitotic chromosome arm chromatin condensation" EXACT [GO:1990982]
+synonym: "decreased mitotic chromosome arm condensation during vegetative growth" EXACT [PomBase:mah]
+synonym: "decreased mitotic chromosome condensation along chromosome arms" EXACT [PomBase:vw]
+synonym: "reduced mitotic chromosome arm condensation" EXACT [PomBase:mah]
+is_a: FYPO:0003286 ! decreased mitotic chromosome condensation
+created_by: midori
+creation_date: 2015-11-18T16:46:24Z
+
+[Term]
+id: FYPO:0005074
+name: normal protein level in anaphase-promoting complex
+def: "A cell phenotype observed in the vegetative growth phase of the life cycle in which the amount of a protein measured in the anaphase-promoting complex is normal (i.e. indistinguishable from wild type)." [PMID:9264466, PomBase:mah]
+synonym: "normal protein level in APC" EXACT [PomBase:mah]
+is_a: FYPO:0000833 ! normal protein level during vegetative growth
+is_a: FYPO:0001313 ! normal subcellular component during vegetative growth
+created_by: midori
+creation_date: 2015-11-18T16:54:49Z
 
 [Typedef]
 id: adjacent_to
