@@ -1,0 +1,108 @@
+format-version: 1.2
+data-version: fypo/releases/2019-09-13/fypo-simple.owl
+date: 04:09:2019 11:49
+saved-by: midori
+auto-generated-by: OBO-Edit 2.3.1
+subsetdef: qc_do_not_annotate "Term not to be used for direct annotation"
+subsetdef: qc_do_not_manually_annotate "Term not to be used for direct manual annotation"
+default-namespace: fission_yeast_phenotype
+remark: svn version: $Revision: 303 $
+ontology: fypo/fypo-simple
+
+[Typedef]
+id: during
+name: during
+xref: GOREL:0000002
+property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype is observed or relevant." xsd:string
+
+[Typedef]
+id: exists_during
+name: exists_during
+xref: GOREL:0000032
+property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype that affects a continuant, such as a cellular component or the level of a substance, is observed or relevant." xsd:string
+
+[Typedef]
+id: happens_during
+xref: GOREL:0000001
+property_value: usage "Identifies a process, cell cycle stage or life stage during which a phenotype that affects an occurrent, i.e. a biological process or molecular function, is observed or relevant." xsd:string
+
+[Typedef]
+id: has_output
+name: has_output
+def: "p has output c if either: p has direct output c or p has output input c. Implies that if p happens, c always ensues." [GOC:curators]
+xref: RO:0002234
+property_value: usage "Def comes from gorel file. Used in FYPO where one phenotype (p) always results in an additional phenotype (c) as a consequence. There may be other ways to get phenotype (c)." xsd:string
+
+[Typedef]
+id: has_part
+name: has_part
+xref: BFO:0000051
+property_value: usage "Used in FYPO to link phenotypes that are collections of features to phenotypes representing the features." xsd:string
+is_transitive: true
+
+[Typedef]
+id: inheres_in
+name: inheres_in
+xref: RO:0000052
+property_value: usage "Used in FYPO as described in PATO best practices; identifies an entity that displays a quality in an entity-quality logical definition. Used only in logical definitions (aka xps)." xsd:string
+
+[Typedef]
+id: inheres_in_part_of
+name: inheres in part of
+xref: RO:0002314
+property_value: usage "Used in FYPO as described in MP/HP logical definition best practices for processes, and in an analogous manner for cell/cell part structure; identifies an entity that displays a quality in an entity-quality logical definition. Used only in logical definitions (aka xps)." xsd:string
+
+[Typedef]
+id: located_in
+name: located in
+xref: RO:0001025
+property_value: usage "Used in FYPO to indicate where a physical quality phenotype is observed." xsd:string
+
+[Typedef]
+id: occurs_at
+name: occurs_at
+xref: GOREL:0000501
+property_value: usage "This relation is not constrained with respect to whether the place where an event occurs completely surrounds, or is adjacent to, the location indicated. Example: chromatin silencing at centromere unfolds_around centromere : Repression of transcription of centromeric DNA by the formation of heterochromatin. Used in FYPO to identify a position where a phenotype is observed or relevant, usually a DNA or RNA sequence feature specified by a SO ID." xsd:string
+
+[Typedef]
+id: occurs_in
+name: occurs in
+xref: BFO:0000066
+property_value: usage "Used in FYPO to identify a location, usually a cellular component or cell type, within which a phenotype is observed or relevant." xsd:string
+
+[Typedef]
+id: output_of
+name: output_of
+synonym: "formation results from" EXACT [PomBase:mah]
+xref: RO:0002353
+property_value: usage "Inverse of has_output. Relation between a structure and a process that forms it, or between one process and a preceding process; A output_of B used where B has_output A isn't always true. Implies that process B is the only way to get output. Used in FYPO where one phenotype (c) always results when another phenotype (p) is present. Phenotype (p) may have other consequences in addition to phenotype (c)." xsd:string
+
+[Typedef]
+id: part_of
+name: part_of
+xref: BFO:0000050
+property_value: usage "Used in FYPO to identify phenotypes that are always observed in the context of another, usually larger-scale, phenotype." xsd:string
+
+[Typedef]
+id: preceded_by
+name: preceded_by
+xref: BFO:0000062
+property_value: usage "Used in FYPO when a phenotype is observed after another event, usually a GO biological process, has ended, and where there isn't a suitable process to use with a during relation." xsd:string
+
+[Typedef]
+id: precedes
+name: precedes
+xref: BFO:0000063
+property_value: usage "Used in FYPO when a phenotype is observed before another event, usually a GO biological process, begins, and where there isn't a suitable process to use with a during relation." xsd:string
+
+[Typedef]
+id: qualifier
+name: qualifier
+property_value: usage "Used in FYPO as described in PATO best practices; placeholder relation to indicate normality/abnormality." xsd:string
+
+[Typedef]
+id: towards
+name: towards
+xref: RO:0002503
+property_value: usage "Relation binding a relational quality or disposition to the relevant type of entity. Used in FYPO as described in PATO best practices; identifies abolished GO processes; identifies substances affected by phenotypes." xsd:string
+

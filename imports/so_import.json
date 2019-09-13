@@ -1,0 +1,154 @@
+{
+  "graphs" : [ {
+    "nodes" : [ {
+      "id" : "http://purl.obolibrary.org/obo/SO_0000110",
+      "meta" : {
+        "definition" : {
+          "val" : "Any extent of continuous biological sequence.",
+          "xrefs" : [ "LAMHDI:mb", "SO:ke" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/so#SOFA" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "INSDC_note:sequence_feature",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "INSDC_note:other",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "located_sequence_feature",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "located sequence feature",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "sequence feature",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "INSDC_feature:misc_feature",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "sequence"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "sequence_feature"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/SO_0000000",
+      "meta" : {
+        "subsets" : [ "http://purl.obolibrary.org/obo/so#SOFA" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "sequence"
+        }, {
+          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
+          "val" : "true"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Sequence_Ontology"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/SO_0000002",
+      "meta" : {
+        "definition" : {
+          "val" : "A folded sequence.",
+          "xrefs" : [ "SO:ke" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "sequence secondary structure",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "INSDC_feature:misc_structure",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "sequence"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "sequence_secondary_structure"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/SO_0000001",
+      "meta" : {
+        "definition" : {
+          "val" : "A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids.",
+          "xrefs" : [ "SO:ke" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/so#SOFA" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "sequence",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "sequence"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "region"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/SO_0001411",
+      "meta" : {
+        "definition" : {
+          "val" : "A region defined by its disposition to be involved in a biological process.",
+          "xrefs" : [ "SO:cb" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/so#SOFA" ],
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "INSDC_misc_feature",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "INSDC_note:biological_region",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "biological region",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "sequence"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "biological_region"
+    } ],
+    "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/SO_0000002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001411"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/SO_0000001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/SO_0000110"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/SO_0001411",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/SO_0000001"
+    } ],
+    "id" : "http://purl.obolibrary.org/obo/fypo/imports/so_import.owl",
+    "meta" : {
+      "subsets" : [ ],
+      "xrefs" : [ ],
+      "basicPropertyValues" : [ ],
+      "version" : "http://purl.obolibrary.org/obo/fypo/releases/2019-09-13/imports/so_import.owl"
+    },
+    "equivalentNodesSets" : [ ],
+    "logicalDefinitionAxioms" : [ ],
+    "domainRangeAxioms" : [ ],
+    "propertyChainAxioms" : [ ]
+  } ]
+}
