@@ -215,7 +215,7 @@ $(ONT)-base.owl: $(SRC) $(OTHER_SRC)
 
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
-	$(ROBOT) merge --input $< \
+	$(ROBOT) merge --input $(SRC) \
 		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
 		relax \
 		reduce -r ELK \
