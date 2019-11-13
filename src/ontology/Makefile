@@ -43,7 +43,7 @@ RELEASE_ARTEFACTS = $(sort  base simple non-classified full base full)
 .PHONY: .FORCE
 all: odkversion all_imports all_main all_subsets sparql_test all_reports all_assets
 test: odkversion sparql_test all_reports
-	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
 
 odkversion:
 	echo "ODK Makefile version: $(ODK_VERSION) (this is the version of the ODK with which this Makefile was generated, not the version of the ODK you are running)" &&\
@@ -67,7 +67,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  ro iao chebi go cl pato so
+IMPORTS =  ro iao chebi go cl pato so bto
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
@@ -191,7 +191,7 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC =  
+OTHER_SRC =   components/fypo-eqs.owl
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
@@ -216,7 +216,7 @@ $(ONT)-base.owl: $(SRC) $(OTHER_SRC)
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) merge --input $< \
-		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
+		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
 		relax \
 		reduce -r ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
@@ -243,7 +243,7 @@ $(SIMPLESEED): $(SRCMERGED) $(ONTOLOGYTERMS)
 
 $(ONT)-simple.owl: $(SRC) $(OTHER_SRC) $(SIMPLESEED)
 	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) \
-		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
+		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
 		relax \
 		remove --axioms equivalent \
 		relax \
@@ -285,6 +285,21 @@ imports/%_import.obo: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f obo -o $@.tmp.obo && mv $@.tmp.obo $@; fi
 imports/%_import.json: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f json -o $@.tmp.json && mv $@.tmp.json $@; fi
+
+# ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+components/%: .FORCE
+	touch $@
+.PRECIOUS: components/%
+
+
+
+
+
+
 
 
 # ----------------------------------------
@@ -366,6 +381,16 @@ mirror/so.owl: mirror/so.trigger
 .PRECIOUS: mirror/%.owl
 
 
+## ONTOLOGY: bto
+## Copy of bto is re-downloaded whenever source changes
+mirror/bto.trigger: $(SRC)
+
+mirror/bto.owl: mirror/bto.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I https://raw.githubusercontent.com/BRENDA-Enzymes/BTO/master/BrendaTissueOWL -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
 
 # ----------------------------------------
 # Subsets
@@ -426,5 +451,8 @@ build-docker:
 
 
 
+
+update_repo:
+	sh ../scripts/update_repo.sh
 
 include fypo.Makefile
