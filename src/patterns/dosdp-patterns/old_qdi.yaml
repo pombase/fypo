@@ -1,0 +1,24 @@
+pattern_name: old_qdi
+pattern_iri: http://purl.obolibrary.org/obo/upheno/old_qdi.yaml
+
+classes:
+  quality: owl:Thing
+  phase: owl:Thing
+  bearer: owl:Thing
+
+relations: 
+  inheres_in: RO:0000052
+  has_modifier: RO:0002573
+  gorel1: obo:GOREL_0000001
+
+vars:
+  quality: "'quality'"
+  bearer: "'bearer'"
+  phase: "'phase'"
+
+equivalentTo:
+  text: "%s and ('gorel1' some %s) and ('inheres_in' some %s)"
+  vars:
+   - quality
+   - phase
+   - bearer

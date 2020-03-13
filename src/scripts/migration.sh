@@ -21,7 +21,7 @@ sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolib
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/ro_import.owl!g' fypo-edit.obo
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/iao_import.owl!g' fypo-edit.obo
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/go_import.owl!g' fypo-edit.obo
-sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/cl_import.owl!g' fypo-edit.obo
+sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/bto_import.owl!g' fypo-edit.obo
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/pato_import.owl!g' fypo-edit.obo
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/so_import.owl!g' fypo-edit.obo
 
@@ -38,11 +38,11 @@ sh run.sh make IMP=false prepare_release
 #sh run.sh robot diff --left fypo.owl --right-iri http://purl.obolibrary.org/obo/fypo.owl -o fypo_diff.txt
 
 
-- id: ro
-- id: iao
-- id: chebi
-- id: go
-- id: cl
-- id: pato
-- id: so
-- id: bto
+#- id: ro
+#- id: iao
+#- id: chebi
+#- id: go
+#- id: cl
+#- id: pato
+#- id: so
+#- id: bto
