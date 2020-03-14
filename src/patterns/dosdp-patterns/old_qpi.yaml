@@ -1,0 +1,30 @@
+pattern_name: old_qpi
+pattern_iri: http://purl.obolibrary.org/obo/upheno/old_qpi.yaml
+
+classes:
+  quality: owl:Thing
+  phase: owl:Thing
+  bearer: owl:Thing
+  bearer_super: owl:Thing
+  modifier: owl:Thing
+
+relations: 
+  inheres_in: RO:0000052
+  has_modifier: RO:0002573
+  gorel1: obo:GOREL_0000001
+  occurs_in: BFO:0000066
+  has_modifier: RO:0002573
+  part_of: BFO:0000050
+
+
+vars:
+  quality: "'quality'"
+  bearer: "'bearer'"
+  bearer_super: "'bearer_super'"
+
+equivalentTo:
+  text: "%s and ('part_of' some %s) and ('inheres_in' some %s)"
+  vars:
+   - quality
+   - bearer_super
+   - bearer
