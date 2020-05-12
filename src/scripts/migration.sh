@@ -36,7 +36,6 @@ echo "Fixing patterns"
 
 sh run.sh make fix_patterns
 
-
 echo "Running release"
 sh run.sh make IMP=false prepare_release
 
