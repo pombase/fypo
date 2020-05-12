@@ -1,5 +1,6 @@
 format-version: 1.2
-data-version: fypo/releases/2019-10-07/imports/so_import.owl
+data-version: fypo/releases/2020-05-12/imports/so_import.owl
+subsetdef: Alliance_of_Genome_Resources ""
 subsetdef: biosapiens ""
 subsetdef: SOFA ""
 ontology: fypo/imports/so_import
@@ -48,6 +49,7 @@ is_a: SO:0000002 ! sequence_secondary_structure
 id: SO:0000010
 name: protein_coding
 namespace: sequence
+def: "A gene which, when transcribed, can be translated into a protein." []
 synonym: "protein-coding" EXACT []
 is_a: SO:0000401 ! gene_attribute
 
@@ -55,6 +57,7 @@ is_a: SO:0000401 ! gene_attribute
 id: SO:0000011
 name: non_protein_coding
 namespace: sequence
+def: "A gene which can be transcribed, but will not be translated into a protein." []
 synonym: "non protein-coding" EXACT []
 is_a: SO:0000401 ! gene_attribute
 
@@ -269,6 +272,7 @@ is_a: SO:0001679 ! transcription_regulatory_region
 id: SO:0000237
 name: transcript_attribute
 namespace: sequence
+def: "An attribute describing a transcript." []
 synonym: "transcript attribute" EXACT []
 is_a: SO:0000733 ! feature_attribute
 
@@ -374,6 +378,7 @@ relationship: part_of SO:0001235 ! replicon
 id: SO:0000298
 name: recombination_feature
 namespace: sequence
+def: "A feature where there has been exchange of genetic material in the event of mitosis or meiosis" []
 synonym: "INSDC_feature:misc_recomb" BROAD []
 synonym: "INSDC_qualifier:other" EXACT []
 synonym: "recombination feature" EXACT []
@@ -453,6 +458,7 @@ synonym: "sequence attribute" EXACT []
 id: SO:0000401
 name: gene_attribute
 namespace: sequence
+def: "An attribute describing a gene." []
 synonym: "gene attribute" EXACT []
 is_a: SO:0000733 ! feature_attribute
 
@@ -519,6 +525,7 @@ is_a: SO:0000628 ! chromosomal_structural_element
 id: SO:0000578
 name: snoRNA_encoding
 namespace: sequence
+def: "A region that can be transcribed into a small nucleolar RNA (snoRNA)." []
 synonym: "snoRNA encoding" EXACT []
 is_a: SO:0000011 ! non_protein_coding
 
@@ -559,6 +566,7 @@ is_a: SO:0000628 ! chromosomal_structural_element
 id: SO:0000628
 name: chromosomal_structural_element
 namespace: sequence
+def: "Regions of the chromosome that are important for structural elements." []
 subset: SOFA
 synonym: "chromosomal structural element" EXACT []
 is_a: SO:0000830 ! chromosome_part
@@ -677,6 +685,7 @@ relationship: has_part SO:0000726 ! repeat_unit
 id: SO:0000663
 name: tRNA_encoding
 namespace: sequence
+def: "A region that can be transcribed into a  transfer RNA (tRNA)." []
 synonym: "tRNA encoding" EXACT []
 is_a: SO:0000011 ! non_protein_coding
 
@@ -836,6 +845,7 @@ relationship: has_quality SO:0000246 ! polyadenylated
 id: SO:0000951
 name: eukaryotic_terminator
 namespace: sequence
+def: "A signal for RNA polymerase to terminate transcription." []
 synonym: "eukaryotic terminator" EXACT []
 is_a: SO:0000141 ! terminator
 
@@ -918,6 +928,8 @@ is_a: SO:0000167 ! promoter
 id: SO:0001217
 name: protein_coding_gene
 namespace: sequence
+def: "A gene that codes for an RNA that can be translated into a protein." []
+subset: Alliance_of_Genome_Resources
 synonym: "protein coding gene" EXACT []
 is_a: SO:0000704 ! gene
 intersection_of: SO:0000704 ! gene
@@ -946,6 +958,7 @@ id: SO:0001263
 name: ncRNA_gene
 namespace: sequence
 def: "A gene that encodes a non-coding RNA." []
+subset: Alliance_of_Genome_Resources
 synonym: "ncRNA gene" EXACT []
 synonym: "non-coding RNA gene" EXACT []
 is_a: SO:0000704 ! gene
@@ -954,6 +967,7 @@ is_a: SO:0000704 ! gene
 id: SO:0001267
 name: snoRNA_gene
 namespace: sequence
+def: "A small noncoding RNA that guides chemical modification of other RNAs." []
 synonym: "snoRNA gene" EXACT []
 is_a: SO:0001263 ! ncRNA_gene
 intersection_of: SO:0001263 ! ncRNA_gene
@@ -973,6 +987,7 @@ is_a: SO:0001263 ! ncRNA_gene
 id: SO:0001272
 name: tRNA_gene
 namespace: sequence
+def: "A noncoding RNA that binds to a specific amino acid to allow that amino acid to be used by the ribosome during translation of RNA." []
 synonym: "tRNA gene" EXACT []
 is_a: SO:0001263 ! ncRNA_gene
 intersection_of: SO:0001263 ! ncRNA_gene
@@ -1144,7 +1159,9 @@ name: CRE
 namespace: sequence
 alt_id: SO:0001900
 def: "MERGED DEFINITION:\nTARGET DEFINITION: A promoter element with consensus sequence TGACGTCA; bound by the ATF/CREB family of transcription factors.\n--------------------\nSOURCE DEFINITION: A promoter element that contains a core sequence TGACGT, bound by a protein complex that regulates transcription of genes encoding PKA pathway components." [PMID:11483355, PMID:11483993, PMID:15448137]
+comment: New synonym Atf1/Pcr1 recognition motif added in response to Antonia Lock GitHub Issue Request #437, PMID:15716492
 synonym: "ATF/CRE site" EXACT [PMID:11483993]
+synonym: "Atf1/Pcr1 recognition motif" EXACT []
 synonym: "cyclic AMP response element" EXACT []
 synonym: "M26 binding site" EXACT []
 synonym: "m26 site" EXACT []
@@ -1341,6 +1358,31 @@ synonym: "sequence comparison" EXACT []
 is_a: SO:0000110 ! sequence_feature
 created_by: kareneilbeck
 creation_date: 2015-11-23T14:14:32Z
+
+[Term]
+id: SO:0002127
+name: lncRNA_gene
+namespace: sequence
+def: "A gene that encodes a long non-coding RNA." [GENCODE:http\://www.gencodegenes.org/gencode_biotypes.html]
+comment: These terms have been requested by Adam Frankish to support Gencode and Vega biotypes.
+synonym: "lnc RNA gene" EXACT []
+synonym: "lnc_RNA_gene" EXACT []
+synonym: "long_non_coding_RNA_gene" EXACT []
+is_a: SO:0001263 ! ncRNA_gene
+created_by: nicole
+creation_date: 2016-08-23T16:03:33Z
+
+[Term]
+id: SO:0002140
+name: early_origin_of_replication
+namespace: sequence
+def: "An origin of replication that initiates early in S phase." [PMID:23348837, PMID:9115207]
+synonym: "early origin" EXACT []
+synonym: "early origin of replication" EXACT []
+synonym: "early replication origin" EXACT []
+is_a: SO:0000296 ! origin_of_replication
+created_by: nicole
+creation_date: 2016-09-15T15:53:36Z
 
 [Term]
 id: SO:0002141

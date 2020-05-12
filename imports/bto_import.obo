@@ -1,0 +1,65 @@
+format-version: 1.2
+data-version: fypo/releases/2020-05-12/imports/bto_import.owl
+ontology: fypo/imports/bto_import
+
+[Term]
+id: BTO:0000000
+name: tissues, cell types and enzyme sources
+namespace: BrendaTissueOBO
+def: "A structured controlled vocabulary for the source of an enzyme. It comprises terms of tissues, cell lines, cell types and cell cultures from uni- and multicellular organisms." [curators:mgr]
+
+[Term]
+id: BTO:0000001
+name: culture condition:-induced cell
+namespace: BrendaTissueOBO
+is_a: BTO:0000216 ! culture condition
+
+[Term]
+id: BTO:0000002
+name: culture condition:1,4-dichlorobenzene-grown cell
+namespace: BrendaTissueOBO
+is_a: BTO:0001479 ! culture condition:-grown cell
+
+[Term]
+id: BTO:0000214
+name: cell culture
+namespace: BrendaTissueOBO
+def: "Cells taken from a living organism and grown under controlled conditions (in culture). Methods used to maintain cell lines or strains." [Glossary_of_Fermentation_&_Cell_Culture_Terms:http\://www.nbsc.com/files/papers/bp0600_gloss_36-44.pdf]
+is_a: BTO:0001490 ! other source
+
+[Term]
+id: BTO:0000216
+name: culture condition
+namespace: BrendaTissueOBO
+relationship: part_of BTO:0000214 ! cell culture
+
+[Term]
+id: BTO:0000316
+name: culture medium
+namespace: BrendaTissueOBO
+def: "A substance, either solid or liquid, used for the cultivation, isolation, identification, or storage of microorganisms." [Biology-Online_Dictionary:http\://www.biology-online.org/dictionary/]
+comment: Added as synonym to culture fluid.
+synonym: "growth medium" RELATED []
+synonym: "medium" RELATED []
+synonym: "nutrient medium" RELATED []
+is_obsolete: true
+
+[Term]
+id: BTO:0001479
+name: culture condition:-grown cell
+namespace: BrendaTissueOBO
+is_a: BTO:0000216 ! culture condition
+
+[Term]
+id: BTO:0001490
+name: other source
+namespace: BrendaTissueOBO
+def: "Other sources of an enzyme as cell culture or commercial preparation, not related to a specific tissue." [curators:mgr]
+is_a: BTO:0000000 ! tissues, cell types and enzyme sources
+
+[Typedef]
+id: part_of
+name: part of
+namespace: BrendaTissueOBO
+xref: BFO:0000050
+

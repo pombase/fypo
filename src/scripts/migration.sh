@@ -37,7 +37,7 @@ echo "Fixing patterns"
 sh run.sh make fix_patterns
 
 echo "Running release"
-sh run.sh make IMP=false prepare_release
+sh run.sh make MIR=false prepare_release -B
 
 #sh run.sh robot diff --left fypo.owl --right-iri http://purl.obolibrary.org/obo/fypo.owl -o fypo_diff.txt
 
