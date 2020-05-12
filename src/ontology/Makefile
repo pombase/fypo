@@ -372,7 +372,7 @@ mirror/so.owl: mirror/so.trigger
 mirror/bto.trigger: $(SRC)
 
 mirror/bto.owl: mirror/bto.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I https://raw.githubusercontent.com/BRENDA-Enzymes/BTO/master/BrendaTissueOWL -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/bto.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
