@@ -31,4 +31,6 @@ fix_patterns: $(fix_patterns)
 	#echo "REMOVING AUXOTROPHY"
 	#$(ROBOT) remove -i components/fypo-eqs.owl --term FYPO:0000128 --axioms equivalent --preserve-structure false -o tmp/fypo-eqs.ofn
 	#mv tmp/fypo-eqs.ofn components/fypo-eqs.owl
-	
+
+merge_eqs:
+	$(ROBOT) -vvv merge -i $(SRC) -i components/has_part_fypo-eqs.owl --collapse-import-closure false convert --check false -f obo -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
