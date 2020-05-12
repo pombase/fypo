@@ -27,7 +27,7 @@ fixpattern_%: tmp/fixpattern_%.owl tmp/remove_%.txt
 	$(ROBOT) merge -i tmp/fypo-eqs.ofn -i $< -o components/fypo-eqs.ofn && mv components/fypo-eqs.ofn components/fypo-eqs.owl
 
 fix_patterns: $(fix_patterns)
-	echo "REMOVING AUXOTROPHY"
-	$(ROBOT) remove -i components/fypo-eqs.owl --term FYPO:0000128 --axioms equivalent --preserve-structure false -o tmp/fypo-eqs.ofn
-	mv tmp/fypo-eqs.ofn components/fypo-eqs.owl
+	#echo "REMOVING AUXOTROPHY"
+	#$(ROBOT) remove -i components/fypo-eqs.owl --term FYPO:0000128 --axioms equivalent --preserve-structure false -o tmp/fypo-eqs.ofn
+	#mv tmp/fypo-eqs.ofn components/fypo-eqs.owl
 	
