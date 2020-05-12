@@ -22,6 +22,7 @@ sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolib
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/iao_import.owl!g' fypo-edit.obo
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/go_import.owl!g' fypo-edit.obo
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/bto_import.owl!g' fypo-edit.obo
+sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/chebi_import.owl!g' fypo-edit.obo
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/pato_import.owl!g' fypo-edit.obo
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/imports/so_import.owl!g' fypo-edit.obo
 
@@ -30,6 +31,10 @@ sh run.sh robot filter -i ../ontology/fypo-edit.obo --axioms "EquivalentClasses"
 mv ../ontology/components/fypo-eqs.ofn ../ontology/components/fypo-eqs.owl
 sed -i '' '/^intersection_of[:]/d' fypo-edit.obo
 sh run.sh sed -i 's!^ontology[:] fypo!ontology: fypo\nimport: http://purl.obolibrary.org/obo/fypo/components/fypo-eqs.owl!g' fypo-edit.obo
+
+echo "Fixing patterns"
+
+sh run.sh make fix_patterns
 
 
 echo "Running release"
