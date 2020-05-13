@@ -33,4 +33,27 @@ fix_patterns: $(fix_patterns)
 	#mv tmp/fypo-eqs.ofn components/fypo-eqs.owl
 
 merge_eqs:
-	$(ROBOT) -vvv merge -i $(SRC) -i components/has_part_fypo-eqs.owl --collapse-import-closure false convert --check false -f obo -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
+	$(ROBOT) merge -i $(SRC) -i components/has_part_fypo-eqs.owl --collapse-import-closure false convert --check false -f obo -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
+	
+diff:
+	$(ROBOT) diff --right-iri $(URIBASE)/fypo.owl --left ../../fypo.owl -o diff.txt
+	
+obo:
+	$(ROBOT) -vvv merge -i $(SRC) --collapse-import-closure false convert -f obo -o "merged_"$(SRC)
+
+pombase: $(ONT)-simple-pombase.obo
+
+$(ONT)-simple-pombase.obo:
+	$(ROBOT) merge -i $(ONT)-simple.owl -i components/lost-inferred-subsumptions-pre-odk.owl \
+		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
+		relax \
+		reduce -r ELK \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
+		convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
+
+prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES) $(ONT)-simple-pombase.obo
+	rsync -R $(ASSETS) $(RELEASEDIR) &&\
+  rm -f $(MAIN_FILES) $(SRCMERGED) &&\
+  mv $(ONT)-simple-pombase.obo $(RELEASEDIR) &&\
+  echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
+
