@@ -191,3 +191,25 @@ Note: if you have only just created this project you will need to authorize trav
  3. Click the tick symbol next to fypo
 
 Travis builds should now be activated
+
+# FYPO synonyms pipeline
+
+The goal of the synonym pipeline is to bulk add a lot of synonyms rapidly using a spreadsheet. The steps are as follows:
+
+1. Edit the *throw away* template in `src/templates/bulk_synonyms.tsv`. Note that this tsv really is single use only - after the pipeline is run and you are happy with the results, you should remove all the synonyms in it (you can keep the tsv of course for future use.)
+   * You will notice: synonyms are separated by the pipe `|` character. 
+   * xrefs can be added, again `|` separated, in the column immediately to the right of the synonym
+   * I have added columns for exact, narrow, broad and related synonyms. Any column can be left blank!
+2. If you are unsure, you can run `sh run.sh make ../templates/bulk_synonyms.owl -B` to simply compile the template to look at it (`../templates/bulk_synonyms.owl`) in a text editor. Not necessary.
+3. If you are ready with the template, run `sh run.sh make synonyms -B`. This will first turn the tsv into OWL, then merge it into `fypo-edit.obo`.
+4. To review what you did, run `git diff fypo-edit.obo | grep -v '[+-]owl' > diff.txt` and review diff.txt. If it all looks as expected, delete diff.txt (dont accidentally commit!), you can commit.
+   * Note the `| grep -v '[+-]owl'` in the `git diff` command. The point of this to exclude the huge diff that this stupid EQ blop in the beginning of the OBO file always gives - just noise.
+
+Example bulk_synonyms.tsv file:
+
+```
+Term import ID	Synonym	S xref	Narrow synonym	NS xref	Broad synonym	BS xref	Related synonym	RS xref
+ID	A oboInOwl:hasExactSynonym SPLIT=|	>A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:hasNarrowSynonym SPLIT=|	>A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:hasBroadSynonym SPLIT=|	>A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:hasRelatedSynonym SPLIT=|	>A oboInOwl:hasDbXref SPLIT=|
+FYPO:0001431	syn1|syn2	xref1|xref2	syn1|syn2	xref1|xref2	syn1|syn2	xref1|xref2	syn1|syn2	xref1|xref2
+FYPO:0001432			syn3|syn4	xref3|xref4	syn3|syn4	xref3|xref4	syn3|syn4	xref3|xref4
+```
