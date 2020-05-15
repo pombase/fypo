@@ -57,3 +57,10 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES) $(ONT)-simple-pombase.obo
   mv $(ONT)-simple-pombase.obo $(RELEASEDIR) &&\
   echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
+synonyms: $(SRC) ../templates/bulk_synonyms.owl
+	$(ROBOT) merge -i $(SRC) -i ../templates/bulk_synonyms.owl --collapse-import-closure false \
+		convert --check false -f obo -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
+
+../templates/bulk_synonyms.owl: ../templates/bulk_synonyms.tsv $(SRC)
+	$(ROBOT) merge -i $(SRC) template --template $< --output $@
+
