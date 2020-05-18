@@ -1,0 +1,32 @@
+pattern_name: old_qoiq
+pattern_iri: http://purl.obolibrary.org/obo/upheno/old_qoiq.yaml
+
+classes:
+  quality: owl:Thing
+  phase: owl:Thing
+  bearer: owl:Thing
+  bearer_super: owl:Thing
+  modifier: owl:Thing
+
+relations: 
+  inheres_in: RO:0000052
+  has_modifier: RO:0002573
+  part_of: BFO:0000050
+  has_modifier: RO:0002573
+  occurs_in: BFO:0000066
+  gorel1: obo:GOREL_0000001
+
+
+vars:
+  quality: "'quality'"
+  bearer: "'bearer'"
+  bearer_super: "'bearer_super'"
+  modifier: "'modifier'"
+
+equivalentTo:
+  text: "%s and ('occurs_in' some %s) and ('inheres_in' some %s) and ('has_modifier' some %s)"
+  vars:
+   - quality
+   - bearer_super
+   - bearer
+   - modifier
