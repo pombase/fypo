@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pombase/fypo.svg?branch=master)](https://travis-ci.org/pombase/fypo)
+
 ## Fission Yeast Phenotype Ontology (FYPO)
 
 ### Summary
