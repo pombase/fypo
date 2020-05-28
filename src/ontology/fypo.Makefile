@@ -64,3 +64,12 @@ synonyms: $(SRC) ../templates/bulk_synonyms.owl
 ../templates/bulk_synonyms.owl: ../templates/bulk_synonyms.tsv $(SRC)
 	$(ROBOT) merge -i $(SRC) template --template $< --output $@
 
+tmp/fypo-merge-test.owl: $(SRC)
+	$(ROBOT) merge -i $< convert -f owl -o $@
+
+fypotest_sparql: tmp/fypo-merge-test.owl
+	$(ROBOT) verify  --catalog catalog-v001.xml -i $< --queries $(SPARQL_VALIDATION_QUERIES) -O reports/
+
+fypotest: tmp/fypo-merge-test.owl fypotest_sparql
+	$(ROBOT) reason --input $< --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+
