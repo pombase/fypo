@@ -70,6 +70,9 @@ tmp/fypo-merge-test.owl: $(SRC)
 fypotest_sparql: tmp/fypo-merge-test.owl
 	$(ROBOT) verify  --catalog catalog-v001.xml -i $< --queries $(SPARQL_VALIDATION_QUERIES) -O reports/
 
-fypotest: tmp/fypo-merge-test.owl fypotest_sparql
+tmp/fypotest_report.txt: $(SRC)
+	$(ROBOT) report -i $< --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
+
+fypotest: tmp/fypo-merge-test.owl tmp/fypotest_report.txt
 	$(ROBOT) reason --input $< --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
 
