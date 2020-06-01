@@ -1,0 +1,45 @@
+c,p,x
+http://purl.obolibrary.org/obo/IAO_0000115,http://purl.obolibrary.org/obo/IAO_0000116,"2012-04-05: 
+Barry Smith
+
+The official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.
+
+Can you fix to something like:
+
+A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
+
+Alan Ruttenberg
+
+Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. 
+
+On the specifics of the proposed definition:
+
+We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
+
+Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
+
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  "
+http://purl.obolibrary.org/obo/BFO_0000004,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] 
+http://purl.obolibrary.org/obo/BFO_0000004,http://purl.obolibrary.org/obo/IAO_0000602,(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] 
+http://purl.obolibrary.org/obo/BFO_0000004,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] 
+http://purl.obolibrary.org/obo/RO_0002215,http://purl.obolibrary.org/obo/IAO_0000115,"A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. "
+http://purl.obolibrary.org/obo/BFO_0000002,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] 
+http://purl.obolibrary.org/obo/BFO_0000002,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] 
+http://purl.obolibrary.org/obo/BFO_0000002,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] 
+http://purl.obolibrary.org/obo/BFO_0000002,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] 
+http://purl.obolibrary.org/obo/BFO_0000019,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] 
+http://purl.obolibrary.org/obo/BFO_0000019,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] 
+http://purl.obolibrary.org/obo/BFO_0000020,http://purl.obolibrary.org/obo/IAO_0000602,(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] 
+http://purl.obolibrary.org/obo/BFO_0000003,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001] 
+http://purl.obolibrary.org/obo/BFO_0000003,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001] 
+http://purl.obolibrary.org/obo/IAO_0000578,http://purl.obolibrary.org/obo/IAO_0000116,"Alan, IAO call 20101124: potentially the CRID denotes the instance it was associated with during creation. 
+"
+http://purl.obolibrary.org/obo/IAO_0000579,http://purl.obolibrary.org/obo/IAO_0000112,PubMed is a CRID registry. It has a dataset of PubMed identifiers associated with journal articles. 
+http://purl.obolibrary.org/obo/RO_0002093,http://www.w3.org/2000/01/rdf-schema#comment,X ends_during Y iff: ((start(Y) before_or_simultaneous_with end(X)) AND end(X) before_or_simultaneous_with end(Y). 
+http://purl.obolibrary.org/obo/BFO_0000031,http://purl.obolibrary.org/obo/IAO_0000602,(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] 
+http://purl.obolibrary.org/obo/RO_0001018,http://purl.obolibrary.org/obo/IAO_0000116,"Intended meaning:
+domain: material entity
+range: spatial region or site (immaterial continuant)
+        "
+http://purl.obolibrary.org/obo/BFO_0000006,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] 
+http://purl.obolibrary.org/obo/BFO_0000006,http://purl.obolibrary.org/obo/IAO_0000602,(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] 
