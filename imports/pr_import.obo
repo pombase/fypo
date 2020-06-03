@@ -1,0 +1,475 @@
+format-version: 1.2
+data-version: fypo/releases/2020-06-03/imports/pr_import.owl
+ontology: fypo/imports/pr_import
+
+[Term]
+id: BFO:0000015
+name: process
+namespace: bfo
+
+[Term]
+id: BFO:0000019
+name: quality
+namespace: bfo
+
+[Term]
+id: BFO:0000030
+name: object
+namespace: bfo
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: BFO:0000040
+name: material entity
+namespace: bfo
+
+[Term]
+id: CHEBI:18348
+name: 1-phosphatidyl-1D-myo-inositol 4,5-bisphosphate
+namespace: chebi_ontology
+def: "A phosphatidylinositol bisphosphate in which the two phosphate groups are at C-4 and C-5 of the inositol moiety which has the 1D-myo configuration." []
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:23367
+name: molecular entity
+namespace: chebi_ontology
+def: "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." [fake:2]
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:24431
+name: chemical entity
+namespace: chebi_ontology
+def: "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." []
+is_a: BFO:0000030 ! object
+
+[Term]
+id: CHEBI:29108
+name: calcium(2+)
+namespace: chebi_ontology
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:33247
+name: organic group
+namespace: chebi_ontology
+def: "Any substituent group or skeleton containing carbon." []
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:33708
+name: amino-acid residue
+namespace: chebi_ontology
+def: "When two or more amino acids combine to form a peptide, the elements of water are removed, and what remains of each amino acid is called an amino-acid residue." [Dummy:dummy]
+synonym: "amino acid residue" EXACT []
+synonym: "protein residue" NARROW [PRO:DAN]
+is_a: CHEBI:33247 ! organic group
+
+[Term]
+id: CHEBI:50047
+name: organic amino compound
+namespace: chebi_ontology
+def: "A compound formally derived from ammonia by replacing one, two or three hydrogen atoms by organyl groups." []
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: GO:0000307
+name: cyclin-dependent protein kinase holoenzyme complex
+namespace: cellular_component
+def: "Cyclin-dependent protein kinases (CDKs) are enzyme complexes that contain a kinase catalytic subunit associated with a regulatory cyclin partner." [GOC:krc, PMID:11602261]
+synonym: "CDK holoenzyme" EXACT []
+is_a: GO:0032991 ! protein-containing complex
+
+[Term]
+id: GO:0000502
+name: proteasome complex
+namespace: cellular_component
+def: "A large multisubunit complex which catalyzes protein degradation, found in eukaryotes, archaea and some bacteria. In eukaryotes, this complex consists of the barrel shaped proteasome core complex and one or two associated proteins or complexes that act in regulating entry into or exit from the core." [GOC:rb, http://en.wikipedia.org/wiki/Proteasome]
+synonym: "26S proteasome" NARROW []
+is_a: GO:0032991 ! protein-containing complex
+
+[Term]
+id: GO:0002180
+name: 5-lipoxygenase complex
+namespace: cellular_component
+def: "An nuclear membrane protein complex having arachidonate 5-lipoxygenase activity." [PMID:19075240]
+is_a: GO:0032991 ! protein-containing complex
+
+[Term]
+id: GO:0004364
+name: glutathione transferase activity
+namespace: molecular_function
+def: "Catalysis of the reaction: R-X + glutathione = H-X + R-S-glutathione. R may be an aliphatic, aromatic or heterocyclic group; X may be a sulfate, nitrile or halide group." [EC:2.5.1.18]
+synonym: "glutathione conjugation reaction" EXACT []
+
+[Term]
+id: GO:0005575
+name: cellular_component
+namespace: cellular_component
+def: "The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together." [GOC:go_curators]
+comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. Note that when this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this.
+is_a: BFO:0000030 ! object
+
+[Term]
+id: GO:0005680
+name: anaphase-promoting complex
+namespace: cellular_component
+def: "A ubiquitin ligase complex that degrades mitotic cyclins and anaphase inhibitory protein, thereby triggering sister chromatid separation and exit from mitosis. Substrate recognition by APC occurs through degradation signals, the most common of which is termed the Dbox degradation motif, originally discovered in cyclin B." [GOC:jh, GOC:vw, PMID:10465783, PMID:10611969]
+comment: Note that the synonym 'APC' should not be confused with the abbreviation for the adenomatous polyposis coli gene and protein.
+synonym: "anaphase promoting complex" EXACT []
+is_a: GO:0031461 ! cullin-RING ubiquitin ligase complex
+
+[Term]
+id: GO:0005751
+name: mitochondrial respiratory chain complex IV
+namespace: cellular_component
+def: "A protein complex located in the mitochondrial inner membrane that forms part of the mitochondrial respiratory chain. Contains the 13 polypeptide subunits of cytochrome c oxidase, including cytochrome a and cytochrome a3. Catalyzes the oxidation of reduced cytochrome c by dioxygen (O2)." [GOC:mtg_sensu, ISBN:0198547684]
+is_a: GO:0045277 ! respiratory chain complex IV
+
+[Term]
+id: GO:0005886
+name: plasma membrane
+namespace: cellular_component
+def: "The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins." [ISBN:0716731363]
+synonym: "bacterial inner membrane" NARROW []
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0006412
+name: translation
+namespace: biological_process
+def: "The cellular metabolic process in which a protein is formed, using the sequence of a mature mRNA or circRNA molecule to specify the sequence of amino acids in a polypeptide chain. Translation is mediated by the ribosome, and begins with the formation of a ternary complex between aminoacylated initiator methionine tRNA, GTP, and initiation factor 2, which subsequently associates with the small subunit of the ribosome and an mRNA or circRNA. Translation ends with the release of a polypeptide chain from the ribosome." [GOC:go_curators]
+synonym: "protein anabolism" EXACT []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0008150
+name: biological_process
+namespace: biological_process
+is_a: BFO:0000015 ! process
+
+[Term]
+id: GO:0016485
+name: protein processing
+namespace: biological_process
+def: "Any protein maturation process achieved by the cleavage of a peptide bond or bonds within a protein. Protein maturation is the process leading to the attainment of the full functional capacity of a protein." [GOC:curators, GOC:jl, GOC:jsg]
+synonym: "peptidolysis during protein maturation" RELATED [GOC:mah]
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0031461
+name: cullin-RING ubiquitin ligase complex
+namespace: cellular_component
+def: "Any ubiquitin ligase complex in which the catalytic core consists of a member of the cullin family and a RING domain protein; the core is associated with one or more additional proteins that confer substrate specificity." [PMID:15571813, PMID:15688063]
+synonym: "CRL complex" EXACT []
+is_a: GO:0032991 ! protein-containing complex
+
+[Term]
+id: GO:0032991
+name: protein-containing complex
+namespace: cellular_component
+def: "Any macromolecular complex composed of two or more polypeptide subunits, which may or may not be identical. Protein complexes may have other associated non-protein prosthetic groups, such as nucleotides, metal ions or carbohydrate groups." [GOC:go_curators]
+comment: Note that although at some level almost all cellular components can be thought of as protein complexes, this term is intended to exclude structures composed of the same repeating subunit or subunits, for example microtubules. Protein complexes encompassed by this term are generally not structural, and usually have a defined set of subunits.
+synonym: "protein-protein complex" EXACT []
+
+[Term]
+id: GO:0033597
+name: mitotic checkpoint complex
+namespace: cellular_component
+def: "A multiprotein complex that functions as a mitotic checkpoint inhibitor of the anaphase-promoting complex/cyclosome (APC/C). In budding yeast this complex consists of Mad2p, Mad3p, Bub3p and Cdc20p, and in mammalian cells it consists of MAD2, BUBR1, BUB3, and CDC20." [PMID:10704439, PMID:11535616, PMID:11726501, PMID:17650307]
+synonym: "MCC" EXACT []
+is_a: GO:0032991 ! protein-containing complex
+
+[Term]
+id: GO:0042555
+name: MCM complex
+namespace: cellular_component
+def: "A hexameric protein complex required for the initiation and regulation of DNA replication." [GOC:jl, PMID:11282021]
+synonym: "mini-chromosome maintenance complex" EXACT []
+is_a: GO:0032991 ! protein-containing complex
+
+[Term]
+id: GO:0045277
+name: respiratory chain complex IV
+namespace: cellular_component
+def: "A part of the respiratory chain, containing the 13 polypeptide subunits of cytochrome c oxidase, including cytochrome a and cytochrome a3. Catalyzes the oxidation of reduced cytochrome c by dioxygen (O2)." [ISBN:0198547684]
+synonym: "cytochrome c oxidase complex" EXACT []
+is_a: GO:0032991 ! protein-containing complex
+
+[Term]
+id: MOD:00693
+name: glycosylated residue
+namespace: PSI-MOD
+synonym: "GlycoRes" EXACT PSI-MOD-label []
+is_a: MOD:00764 ! glycoconjugated residue
+
+[Term]
+id: MOD:00764
+name: glycoconjugated residue
+namespace: PSI-MOD
+is_a: PR:000025513 ! modified amino-acid residue
+
+[Term]
+id: MOD:01148
+name: ubiquitinylated lysine
+namespace: PSI-MOD
+synonym: "UbiqLys" EXACT PSI-MOD-label [PRO:DAN]
+is_a: PR:000025513 ! modified amino-acid residue
+
+[Term]
+id: MOD:01149
+name: sumoylated lysine
+namespace: PSI-MOD
+synonym: "SumoLys" EXACT PSI-MOD-label [PRO:DAN]
+is_a: PR:000025513 ! modified amino-acid residue
+
+[Term]
+id: PR:000000001
+name: protein
+namespace: protein
+def: "An amino acid chain that is produced de novo by ribosome-mediated translation of a genetically-encoded mRNA, and any derivatives thereof." [PRO:DAN, PRO:WCB]
+comment: The definition above excludes protein complexes, which some also consider a protein. Those who wish to refer to a class representing both senses of the word are directed to CHEBI:36080. Proteins (in the sense defined here) that descended from a common ancestor can be classified into families and superfamilies composed of products of evolutionarily-related genes. The domain architecture of a protein is described by the order of its constituent domains. Proteins with the same domains in the same order are defined as homeomorphic [PRO:WCB].
+is_a: PR:000018263 ! amino acid chain
+intersection_of: PR:000018263 ! amino acid chain
+intersection_of: output_of GO:0006412 ! translation
+relationship: output_of GO:0006412 ! translation
+
+[Term]
+id: PR:000008603
+name: histone H4
+namespace: protein
+def: "A core histone that is a translation product of the human HIST4H4 genes, 1:1 orthologs thereof, or a semi-ortholog thereof." [PRO:DAN]
+comment: Category=gene. Note: The human HIST4H4 genes encode identical proteins. See PR:P62805.
+synonym: "H4" EXACT PRO-short-label [PRO:DNx]
+synonym: "H4/A" RELATED Gene-based []
+synonym: "H4/B" RELATED Gene-based []
+synonym: "H4/C" RELATED Gene-based []
+synonym: "H4/D" RELATED Gene-based []
+synonym: "H4/E" RELATED Gene-based []
+synonym: "H4/G" RELATED Gene-based []
+synonym: "H4/H" RELATED Gene-based []
+synonym: "H4/I" RELATED Gene-based []
+synonym: "H4/J" RELATED Gene-based []
+synonym: "H4/K" RELATED Gene-based []
+synonym: "H4/M" RELATED Gene-based []
+synonym: "H4/N" RELATED Gene-based []
+synonym: "H4/O" RELATED Gene-based []
+synonym: "H4F2" RELATED Gene-based []
+synonym: "H4FA" RELATED Gene-based []
+synonym: "H4FB" RELATED Gene-based []
+synonym: "H4FC" RELATED Gene-based []
+synonym: "H4FD" RELATED Gene-based []
+synonym: "H4FE" RELATED Gene-based []
+synonym: "H4FG" RELATED Gene-based []
+synonym: "H4FH" RELATED Gene-based []
+synonym: "H4FI" RELATED Gene-based []
+synonym: "H4FJ" RELATED Gene-based []
+synonym: "H4FK" RELATED Gene-based []
+synonym: "H4FM" RELATED Gene-based []
+synonym: "H4FN" RELATED Gene-based []
+synonym: "H4FO" RELATED Gene-based []
+synonym: "HIST1H4A" RELATED Gene-based []
+synonym: "HIST1H4B" RELATED Gene-based []
+synonym: "HIST1H4C" RELATED Gene-based []
+synonym: "HIST1H4D" RELATED Gene-based []
+synonym: "HIST1H4E" RELATED Gene-based []
+synonym: "HIST1H4F" RELATED Gene-based []
+synonym: "HIST1H4H" RELATED Gene-based []
+synonym: "HIST1H4I" RELATED Gene-based []
+synonym: "HIST1H4J" RELATED Gene-based []
+synonym: "HIST1H4K" RELATED Gene-based []
+synonym: "HIST1H4L" RELATED Gene-based []
+synonym: "HIST2H4" RELATED Gene-based []
+synonym: "HIST2H4A" RELATED Gene-based []
+synonym: "HIST2H4B" RELATED Gene-based []
+synonym: "HIST4H4" RELATED Gene-based []
+is_a: PR:000043452 ! core histone
+
+[Term]
+id: PR:000018263
+name: amino acid chain
+namespace: protein
+def: "An organic amino compound that consists of amino acid residues (unmodified amino-acid residues and/or modified amino-acid residues) linked by peptide bonds or derivatives of such bonds." [PRO:DAN, PRO:JSG]
+comment: Category=external.
+synonym: "peptide" NARROW [PRO:DAN]
+synonym: "polypeptide" NARROW [PRO:DAN]
+is_a: CHEBI:50047 ! organic amino compound
+relationship: has_part CHEBI:33708 ! amino-acid residue
+
+[Term]
+id: PR:000018264
+name: proteolytic cleavage product
+namespace: protein
+def: "A protein that is produced as the result of proteolytic processing of a longer protein." [PRO:DAN]
+synonym: "ClvPrd" EXACT PRO-short-label [PRO:DAN]
+synonym: "peptide" NARROW [PRO:DAN]
+synonym: "polypeptide" NARROW [PRO:DAN]
+is_a: PR:000000001 ! protein
+intersection_of: PR:000000001 ! protein
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
+id: PR:000025513
+name: modified amino-acid residue
+namespace: protein
+def: "An organic group that results from covalent modification or chemical alteration to the side chain or backbone atoms of an amino acid residue or derivative thereof, where such alteration maintains the integrity of the amino acid chain containing the residue." [PRO:DAN, PRO:JSG]
+comment: Category=external. Note: This entity is distinct from MOD:00000 "protein modification" in that the latter includes proteolytic cleavages. [PRO:DAN, PRO:JSG]
+synonym: "modified amino acid chain residue" EXACT [PRO:DAN]
+synonym: "modified protein residue" NARROW [PRO:DAN]
+is_a: CHEBI:33708 ! amino-acid residue
+
+[Term]
+id: PR:000027547
+name: histone H2A
+namespace: protein
+def: "A core histone that is a translation product of one of the H2A gene variants. It is a core histone and contains a copy of the Histone (Pfam:PF00125) domain." [PMID:18443735, PMID:19234519, PRO:CNA]
+comment: Category=family. Requested by=PomBase.
+xref: PIRSF:PIRSF002048
+is_a: PR:000043452 ! core histone
+
+[Term]
+id: PR:000027594
+name: histone H3
+namespace: protein
+def: "A core histone that is a translation product of one of the H3 gene variants. It is a core histone and contains a copy of the Histone (Pfam:PF00125) domain at its C-terminus." [PMID:18443735, PMID:19234519, PRO:CNA]
+comment: Category=family.
+synonym: "H3(any)" EXACT PRO-short-label [PRO:DAN]
+xref: PIRSF:PIRSF002051
+is_a: PR:000043452 ! core histone
+
+[Term]
+id: PR:000037069
+name: glycoprotein
+namespace: protein
+def: "A protein that includes at least one glycosylated residue." [PRO:DAN]
+comment: Category=modification.
+synonym: "glycated protein" EXACT [PRO:DAN]
+synonym: "glycosylated protein" EXACT [PRO:DAN]
+synonym: "Prot/GlycoRes+" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000000001 ! protein
+intersection_of: PR:000000001 ! protein
+intersection_of: has_part MOD:00693 ! glycosylated residue
+relationship: has_part MOD:00693 ! glycosylated residue
+
+[Term]
+id: PR:000037077
+name: ubiquitinated protein
+namespace: protein
+def: "A protein that includes at least one ubiquitinylated lysine." [PRO:DAN]
+comment: Category=modification.
+synonym: "Prot/UbiqLys+" EXACT PRO-short-label [PRO:DAN]
+synonym: "ubiquitinylated protein" EXACT [PRO:DAN]
+is_a: PR:000000001 ! protein
+intersection_of: PR:000000001 ! protein
+intersection_of: has_part MOD:01148 ! ubiquitinylated lysine
+relationship: has_part MOD:01148 ! ubiquitinylated lysine
+
+[Term]
+id: PR:000037078
+name: sumoylated protein
+namespace: protein
+def: "A protein that includes at least one sumoylated lysine." [PRO:DAN]
+comment: Category=modification.
+synonym: "Prot/SumoLys+" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000000001 ! protein
+intersection_of: PR:000000001 ! protein
+intersection_of: has_part MOD:01149 ! sumoylated lysine
+relationship: has_part MOD:01149 ! sumoylated lysine
+
+[Term]
+id: PR:000041244
+name: histone
+namespace: protein
+def: "A protein that functions as a component of the nucleosome." [PRO:DAN]
+comment: Category=union.
+synonym: "histone" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000000001 ! protein
+union_of: PR:000043452 ! core histone
+union_of: PR:000043453 ! linker histone
+
+[Term]
+id: PR:000043452
+name: core histone
+namespace: protein
+def: "A protein that contains a single copy of the Histone (Pfam:PF00125) domain, optionally followed by a C-terminus of histone H2A (Pfam:PF16211) domain (for histone H2A) with or without a Macro domain (Pfam:PF01661)." [PRO:DAN]
+comment: Category=family.
+synonym: "fam:coreHistone" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000043453
+name: linker histone
+namespace: protein
+def: "A protein that contains a single copy of the Linker histone (Pfam:PF00538) domain followed by a long low-complexity region at its C terminus." [PRO:DAN]
+comment: Category=family.
+synonym: "fam:linkerHistone" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: SO:0000010
+name: protein_coding
+namespace: sequence
+synonym: "protein-coding" EXACT []
+is_a: BFO:0000019 ! quality
+
+[Term]
+id: SO:0000110
+name: sequence_feature
+namespace: sequence
+def: "An extent of biological sequence." [SO:ke]
+synonym: "located sequence feature" RELATED []
+synonym: "located_sequence_feature" EXACT []
+synonym: "sequence feature" EXACT []
+
+[Term]
+id: SO:0000704
+name: gene
+namespace: sequence
+def: "A region (or regions) that includes all of the sequence elements necessary to encode a functional transcript. A gene may include regulatory regions, transcribed regions and/or other functional sequence regions." [SO:immuno_workshop]
+is_a: SO:0000110 ! sequence_feature
+
+[Term]
+id: SO:0001217
+name: protein_coding_gene
+namespace: sequence
+synonym: "protein coding gene" EXACT []
+is_a: SO:0000704 ! gene
+relationship: has_quality SO:0000010 ! protein_coding
+
+[Typedef]
+id: has_part
+name: has_part
+namespace: protein
+xref: BFO:0000051
+is_transitive: true
+
+[Typedef]
+id: has_quality
+name: has_quality
+namespace: protein
+xref: RO:0000086
+is_transitive: false
+
+[Typedef]
+id: located_in
+name: located_in
+namespace: protein
+xref: RO:0001025
+is_transitive: true
+
+[Typedef]
+id: output_of
+name: output_of
+namespace: protein
+xref: RO:0002353
+is_transitive: false
+
+[Typedef]
+id: part_of
+name: part_of
+namespace: protein
+xref: BFO:0000050
+is_transitive: true
+
