@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fypo/releases/2020-06-11/imports/go_import.owl
+data-version: fypo/releases/2020-06-15/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -24226,6 +24226,23 @@ intersection_of: GO:0061640 ! cytoskeleton-dependent cytokinesis
 intersection_of: part_of GO:0051321 ! meiotic cell cycle
 
 [Term]
+id: GO:0033212
+name: iron import into cell
+namespace: biological_process
+alt_id: GO:0070627
+def: "The directed movement of iron ions from outside of a cell into the cytoplasmic compartment. This may occur via transport across the plasma membrane or via endocytosis." [PMID:18622392, PMID:23192658, Wikipedia:Human_iron_metabolism]
+synonym: "ferrous ion import" NARROW []
+synonym: "ferrous iron import" NARROW []
+synonym: "ferrous iron uptake" NARROW []
+synonym: "iron assimilation" RELATED []
+is_a: GO:0006826 ! iron ion transport
+is_a: GO:0006879 ! cellular iron ion homeostasis
+is_a: GO:0051649 ! establishment of localization in cell
+is_a: GO:0098657 ! import into cell
+created_by: mah
+creation_date: 2009-05-01T04:19:14Z
+
+[Term]
 id: GO:0033218
 name: amide binding
 namespace: molecular_function
@@ -47132,6 +47149,18 @@ created_by: pg
 creation_date: 2019-12-10T09:13:47Z
 
 [Term]
+id: GO:0140420
+name: heme import into cell
+namespace: biological_process
+def: "The directed movement of a heme from outside of a cell into a cell. This may occur via transport across the plasma membrane or via endocytosis." [PMID:28193844]
+synonym: "heme assimilation" BROAD []
+is_a: GO:0015886 ! heme transport
+is_a: GO:0033212 ! iron import into cell
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/18671 xsd:anyURI
+created_by: pg
+creation_date: 2020-01-30T13:10:07Z
+
+[Term]
 id: GO:0140429
 name: positive regulation of mitotic sister chromatid biorientation
 namespace: biological_process
@@ -48769,6 +48798,25 @@ intersection_of: positively_regulates GO:0006221 ! pyrimidine nucleotide biosynt
 relationship: positively_regulates GO:0006221 ! pyrimidine nucleotide biosynthetic process
 created_by: jh
 creation_date: 2012-04-19T01:05:50Z
+
+[Term]
+id: GO:1900400
+name: regulation of iron ion import into cell by regulation of transcription from RNA polymerase II promoter
+namespace: biological_process
+alt_id: GO:1900393
+def: "A regulation of transcription from RNA polymerase II promoter that results in regulation of iron ion import." [GOC:mah, GOC:TermGenie, PMID:18622392]
+synonym: "regulation of iron import by regulation of transcription from RNA polymerase II promoter" RELATED [GOC:TermGenie]
+synonym: "regulation of iron ion import by regulation of transcription from RNA polymerase II promoter" RELATED []
+synonym: "regulation of iron ion transport by regulation of transcription from RNA polymerase II promoter" BROAD []
+is_a: GO:0006357 ! regulation of transcription by RNA polymerase II
+is_a: GO:0034756 ! regulation of iron ion transport
+is_a: GO:0060341 ! regulation of cellular localization
+is_a: GO:0065008 ! regulation of biological quality
+intersection_of: GO:0050789 ! regulation of biological process
+intersection_of: regulates GO:0006366 ! transcription by RNA polymerase II
+intersection_of: regulates GO:0033212 ! iron import into cell
+relationship: regulates GO:0033212 ! iron import into cell
+creation_date: 2012-04-20T02:34:12Z
 
 [Term]
 id: GO:1900404
