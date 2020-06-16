@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fypo/releases/2020-06-15/imports/go_import.owl
+data-version: fypo/releases/2020-06-16/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -11532,6 +11532,16 @@ xref: Reactome:R-HSA-170706 "Phosphorylation of  NEFL by the P-TEFb(Cyclin T1:Cd
 is_a: GO:0004674 ! protein serine/threonine kinase activity
 
 [Term]
+id: GO:0008360
+name: regulation of cell shape
+namespace: biological_process
+alt_id: GO:0045788
+alt_id: GO:0045789
+def: "Any process that modulates the surface configuration of a cell." [GOC:dph, GOC:go_curators, GOC:tb]
+is_a: GO:0022604 ! regulation of cell morphogenesis
+is_a: GO:0065008 ! regulation of biological quality
+
+[Term]
 id: GO:0008361
 name: regulation of cell size
 namespace: biological_process
@@ -18881,6 +18891,17 @@ namespace: biological_process
 def: "Any process involved in the maintenance of an internal steady state of cations at the level of a cell." [GOC:ceb, GOC:mah]
 is_a: GO:0006873 ! cellular ion homeostasis
 is_a: GO:0055080 ! cation homeostasis
+
+[Term]
+id: GO:0030010
+name: establishment of cell polarity
+namespace: biological_process
+alt_id: GO:0000283
+alt_id: GO:0030468
+def: "The specification and formation of anisotropic intracellular organization or cell growth patterns." [GOC:mah]
+synonym: "bud site selection/establishment of cell polarity" NARROW []
+synonym: "cell polarization" EXACT []
+is_a: GO:0007163 ! establishment or maintenance of cell polarity
 
 [Term]
 id: GO:0030014
@@ -27976,17 +27997,6 @@ synonym: "polar cell elongation" NARROW []
 is_a: GO:0009826 ! unidimensional cell growth
 
 [Term]
-id: GO:0042815
-name: bipolar cell growth
-namespace: biological_process
-def: "The process in which a cell irreversibly increases in size along one axis through simultaneous polarized growth from opposite ends of a cell, resulting in morphogenesis of the cell." [GOC:vw]
-comment: Bipolar cell growth refers to a change in both cell size and cell shape. For shape changes where cell size is not affected, consider instead the term 'establishment or maintenance of bipolar cell polarity resulting in cell shape ; GO:0061246' and its children.
-synonym: "bipolar cell elongation" NARROW []
-synonym: "bipolar growth" BROAD []
-synonym: "polar cell elongation" RELATED []
-is_a: GO:0009826 ! unidimensional cell growth
-
-[Term]
 id: GO:0042816
 name: vitamin B6 metabolic process
 namespace: biological_process
@@ -35807,58 +35817,21 @@ intersection_of: positively_regulates GO:0042814 ! monopolar cell growth
 relationship: positively_regulates GO:0042814 ! monopolar cell growth
 
 [Term]
-id: GO:0051516
-name: regulation of bipolar cell growth
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of bipolar cell growth, polarized growth from both ends of a cell." [GOC:ai]
-is_a: GO:0051510 ! regulation of unidimensional cell growth
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0042815 ! bipolar cell growth
-relationship: regulates GO:0042815 ! bipolar cell growth
-
-[Term]
-id: GO:0051517
-name: negative regulation of bipolar cell growth
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of bipolar cell growth, polarized growth from both ends of a cell." [GOC:ai]
-synonym: "down regulation of bipolar cell growth" EXACT []
-synonym: "down-regulation of bipolar cell growth" EXACT []
-synonym: "downregulation of bipolar cell growth" EXACT []
-synonym: "inhibition of bipolar cell growth" NARROW []
-is_a: GO:0051511 ! negative regulation of unidimensional cell growth
-is_a: GO:0051516 ! regulation of bipolar cell growth
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0042815 ! bipolar cell growth
-relationship: negatively_regulates GO:0042815 ! bipolar cell growth
-
-[Term]
-id: GO:0051518
-name: positive regulation of bipolar cell growth
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of bipolar cell growth, polarized growth from both ends of a cell." [GOC:ai]
-synonym: "stimulation of bipolar cell growth" NARROW []
-synonym: "up regulation of bipolar cell growth" EXACT []
-synonym: "up-regulation of bipolar cell growth" EXACT []
-synonym: "upregulation of bipolar cell growth" EXACT []
-is_a: GO:0051512 ! positive regulation of unidimensional cell growth
-is_a: GO:0051516 ! regulation of bipolar cell growth
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0042815 ! bipolar cell growth
-relationship: positively_regulates GO:0042815 ! bipolar cell growth
-
-[Term]
-id: GO:0051519
-name: activation of bipolar cell growth
-namespace: biological_process
-def: "Any process that initiates the inactive process of bipolar cell growth, polarized growth from both ends of a cell." [GOC:ai]
-is_a: GO:0051518 ! positive regulation of bipolar cell growth
-
-[Term]
 id: GO:0051522
 name: activation of monopolar cell growth
 namespace: biological_process
 def: "Any process that initiates the inactive process of monopolar cell growth, polarized growth from one end of a cell." [GOC:ai]
 is_a: GO:0051515 ! positive regulation of monopolar cell growth
+
+[Term]
+id: GO:0051523
+name: cell growth mode switching, monopolar to bipolar
+namespace: biological_process
+def: "The process in which a cell switches from monopolar cell growth to bipolar cell growth." [GOC:ai]
+synonym: "NETO" NARROW [GOC:vw]
+synonym: "new end take off" NARROW [GOC:vw]
+is_a: GO:0061171 ! establishment of bipolar cell polarity
+is_a: GO:0061389 ! regulation of direction of cell growth
 
 [Term]
 id: GO:0051536
@@ -37661,6 +37634,52 @@ created_by: dph
 creation_date: 2010-05-17T01:33:20Z
 
 [Term]
+id: GO:0061159
+name: establishment of bipolar cell polarity involved in cell morphogenesis
+namespace: biological_process
+def: "The specification and formation of bipolar intracellular organization or cell growth patterns that contribute to cell morphogenesis. Bipolar organization is the organization that is a mirror image along an axis from a plane." [GOC:dph, GOC:vw]
+is_a: GO:0061171 ! establishment of bipolar cell polarity
+intersection_of: GO:0061171 ! establishment of bipolar cell polarity
+intersection_of: part_of GO:0000902 ! cell morphogenesis
+relationship: part_of GO:0000902 ! cell morphogenesis
+created_by: dph
+creation_date: 2010-06-23T09:14:39Z
+
+[Term]
+id: GO:0061171
+name: establishment of bipolar cell polarity
+namespace: biological_process
+def: "The specification and formation of bipolar intracellular organization or cell growth patterns. Bipolar organization is the organization that is a mirror image along an axis from a plane." [GOC:dph, GOC:vw]
+is_a: GO:0030010 ! establishment of cell polarity
+created_by: dph
+creation_date: 2010-06-30T08:49:38Z
+
+[Term]
+id: GO:0061172
+name: regulation of establishment of bipolar cell polarity
+namespace: biological_process
+def: "Any process that modulates the rate, frequency or extent of the establishment of bipolar cell polarity. Bipolar organization is the organization that is a mirror image along an axis from a plane." [GOC:dph, GOC:vw]
+is_a: GO:2000114 ! regulation of establishment of cell polarity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0061171 ! establishment of bipolar cell polarity
+relationship: regulates GO:0061171 ! establishment of bipolar cell polarity
+created_by: dph
+creation_date: 2010-06-30T08:51:27Z
+
+[Term]
+id: GO:0061173
+name: positive regulation of establishment of bipolar cell polarity
+namespace: biological_process
+def: "Any process that increases the rate, frequency or extent of the establishment of bipolar cell polarity." [GOC:dph, GOC:vw]
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0061172 ! regulation of establishment of bipolar cell polarity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0061171 ! establishment of bipolar cell polarity
+relationship: positively_regulates GO:0061171 ! establishment of bipolar cell polarity
+created_by: dph
+creation_date: 2010-06-30T08:59:20Z
+
+[Term]
 id: GO:0061191
 name: positive regulation of vacuole fusion, non-autophagic
 namespace: biological_process
@@ -37685,6 +37704,16 @@ intersection_of: negatively_regulates GO:0042144 ! vacuole fusion, non-autophagi
 relationship: negatively_regulates GO:0042144 ! vacuole fusion, non-autophagic
 created_by: dph
 creation_date: 2010-07-14T09:35:18Z
+
+[Term]
+id: GO:0061389
+name: regulation of direction of cell growth
+namespace: biological_process
+def: "Any process that modulates the direction of cell growth." [GOC:mah, GOC:vw]
+is_a: GO:0001558 ! regulation of cell growth
+is_a: GO:0008360 ! regulation of cell shape
+created_by: dph
+creation_date: 2011-07-14T10:19:46Z
 
 [Term]
 id: GO:0061423
@@ -65296,6 +65325,23 @@ created_by: rph
 creation_date: 2015-11-24T15:30:26Z
 
 [Term]
+id: GO:1904846
+name: negative regulation of establishment of bipolar cell polarity
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of establishment of bipolar cell polarity." [GO_REF:0000058, GOC:TermGenie, PMID:26525038]
+synonym: "down regulation of establishment of bipolar cell polarity" EXACT [GOC:TermGenie]
+synonym: "down-regulation of establishment of bipolar cell polarity" EXACT [GOC:TermGenie]
+synonym: "downregulation of establishment of bipolar cell polarity" EXACT [GOC:TermGenie]
+synonym: "inhibition of establishment of bipolar cell polarity" NARROW [GOC:TermGenie]
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:0061172 ! regulation of establishment of bipolar cell polarity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0061171 ! establishment of bipolar cell polarity
+relationship: negatively_regulates GO:0061171 ! establishment of bipolar cell polarity
+created_by: al
+creation_date: 2015-12-08T15:06:30Z
+
+[Term]
 id: GO:1904853
 name: protein localization to ascospore wall
 namespace: biological_process
@@ -70713,6 +70759,20 @@ intersection_of: negatively_regulates GO:0034645 ! cellular macromolecule biosyn
 relationship: negatively_regulates GO:0034645 ! cellular macromolecule biosynthetic process
 created_by: tb
 creation_date: 2010-09-15T08:55:48Z
+
+[Term]
+id: GO:2000114
+name: regulation of establishment of cell polarity
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of establishment of cell polarity." [GOC:dph]
+synonym: "regulation of bud site selection/establishment of cell polarity" RELATED [GOC:obol]
+synonym: "regulation of cell polarization" EXACT [GOC:obol]
+is_a: GO:0032878 ! regulation of establishment or maintenance of cell polarity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0030010 ! establishment of cell polarity
+relationship: regulates GO:0030010 ! establishment of cell polarity
+created_by: dph
+creation_date: 2010-09-16T01:22:36Z
 
 [Term]
 id: GO:2000116
