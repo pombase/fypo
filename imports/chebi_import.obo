@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fypo/releases/2020-06-16/imports/chebi_import.owl
+data-version: fypo/releases/2020-06-23/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
@@ -1634,6 +1634,28 @@ property_value: http://purl.obolibrary.org/obo/chebi/formula "NOSR" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "62.072" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "61.97006" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "*SN=O" xsd:string
+
+[Term]
+id: CHEBI:145555
+name: macropolylide
+namespace: chebi_ontology
+def: "Macrolides (macrocyclic lactones) in which the macrocyclic ring contains more than one ester linkage. Macropolylides include macrodiolides, macrotriolides, macrotetrolides and macropentolides, each containing di-, tri-, tetra-, and penta- ester linkages, respectively, in one macrocyclic ring. Macrocyclic lactones containing nitrogen in their skeletons (azamacrolides and macrolide lactams) and also containing oxazole or thiazole in their skeletons are known in nature." []
+subset: 3_STAR
+synonym: "macropolylides" RELATED [ChEBI]
+is_a: CHEBI:25106 ! macrolide
+
+[Term]
+id: CHEBI:145556
+name: macrodiolide
+namespace: chebi_ontology
+def: "A macropolylide which contains two ester linkages in one macrocyclic ring." []
+subset: 3_STAR
+synonym: "macrodiolides" RELATED [ChEBI]
+xref: PMID:17446696 {source="Europe PMC"}
+xref: PMID:29624065 {source="Europe PMC"}
+xref: PMID:29671776 {source="Europe PMC"}
+xref: PMID:31247219 {source="Europe PMC"}
+is_a: CHEBI:145555 ! macropolylide
 
 [Term]
 id: CHEBI:145565
@@ -14757,6 +14779,16 @@ is_a: CHEBI:24834 ! inorganic anion
 is_a: CHEBI:35776 ! arsenic oxoanion
 
 [Term]
+id: CHEBI:22645
+name: arenecarboxamide
+namespace: chebi_ontology
+def: "A monocarboxylic acid amide in which the amide linkage is bonded directly to an arene ring system." []
+subset: 3_STAR
+synonym: "arenecarboxamides" RELATED [ChEBI]
+is_a: CHEBI:29347 ! monocarboxylic acid amide
+is_a: CHEBI:62733 ! aromatic amide
+
+[Term]
 id: CHEBI:22653
 name: asparagine
 namespace: chebi_ontology
@@ -14920,6 +14952,13 @@ synonym: "bases" RELATED [ChEBI]
 synonym: "Nucleobase" RELATED [KEGG_COMPOUND]
 xref: KEGG:C00701
 is_a: CHEBI:51086 ! chemical role
+
+[Term]
+id: CHEBI:22702
+name: benzamides
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:22645 ! arenecarboxamide
 
 [Term]
 id: CHEBI:22712
@@ -21291,7 +21330,39 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@@]1(C[C@H](C)
 
 [Term]
 id: CHEBI:2762
+name: antimycin A
+namespace: chebi_ontology
 alt_id: CHEBI:22584
+alt_id: CHEBI:40908
+def: "A nine-membered bis-lactone having methyl substituents at the 2- and 6-positions, an n-hexyl substituent at the 8-position, an acyloxy substituent at the 7-position and an aroylamido substituent at the 3-position. It is produced by Streptomyces bacteria and has found commercial use as a fish poison." []
+subset: 3_STAR
+synonym: "(2R,3S,6S,7R,8R)-3-[(3-formamido-2-hydroxybenzoyl)amino]-8-hexyl-2,6-dimethyl-4,9-dioxo-1,5-dioxonan-7-yl 3-methylbutanoate" EXACT IUPAC_NAME [IUPAC]
+synonym: "Antimycin A1" RELATED [KEGG_COMPOUND]
+synonym: "antimycin A1b" RELATED [ChEBI]
+synonym: "Antipiricullin" RELATED [ChemIDplus]
+synonym: "Fintrol" RELATED [ChemIDplus]
+synonym: "Virosin" RELATED [ChemIDplus]
+xref: Beilstein:72665 {source="Beilstein"}
+xref: CAS:1397-94-0 {source="ChemIDplus"}
+xref: CAS:642-15-9 {source="ChemIDplus"}
+xref: CAS:642-15-9 {source="KEGG COMPOUND"}
+xref: KEGG:C11339
+xref: MetaCyc:CPD-5744
+xref: PDBeChem:AY1
+xref: PMID:16819166 {source="Europe PMC"}
+is_a: CHEBI:145556 ! macrodiolide
+is_a: CHEBI:22702 ! benzamides
+is_a: CHEBI:24079 ! formamides
+is_a: CHEBI:33853 ! phenols
+relationship: has_role CHEBI:25355 ! mitochondrial respiratory-chain inhibitor
+relationship: has_role CHEBI:35718 ! antifungal agent
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C28H40N2O9" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C28H40N2O9/c1-6-7-8-9-11-20-25(39-22(32)14-16(2)3)18(5)38-28(36)23(17(4)37-27(20)35)30-26(34)19-12-10-13-21(24(19)33)29-15-31/h10,12-13,15-18,20,23,25,33H,6-9,11,14H2,1-5H3,(H,29,31)(H,30,34)/t17-,18+,20-,23+,25+/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UIFFUZWRFRDZJC-SBOOETFBSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "548.633" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "548.27338" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C1([C@H]([C@H](OC([C@@H]([C@H]([C@@H](O1)C)OC(CC(C)C)=O)CCCCCC)=O)C)NC(C2=C(C(=CC=C2)NC(=O)[H])O)=O)=O" xsd:string
 
 [Term]
 id: CHEBI:27641
