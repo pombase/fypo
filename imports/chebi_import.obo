@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fypo/releases/2020-06-30/imports/chebi_import.owl
+data-version: fypo/releases/2020-07-01/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
@@ -2794,6 +2794,25 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "QNAYBMKLOCPYGJ-UW
 property_value: http://purl.obolibrary.org/obo/chebi/mass "89.09322" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "89.04768" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@@H](N)C(O)=O" xsd:string
+
+[Term]
+id: CHEBI:155837
+name: tripeptide zwitterion
+namespace: chebi_ontology
+def: "A peptide zwitterion obtained from the tranfer of a proton from the carboxy group to the amino group of any tripeptide. It contains an equal number of positively-charged and negatively-charged functional groups. Major structure at pH 7.3." []
+subset: 3_STAR
+synonym: "amino acid tripeptide zwitterion" RELATED [ChEBI]
+synonym: "amino acid tripeptide zwitterions" RELATED [ChEBI]
+synonym: "an L-amino acid tripeptide" RELATED [UniProt]
+synonym: "L-amino acid tripeptide zwitterion" RELATED [ChEBI]
+synonym: "L-amino acid tripeptide zwitterions" RELATED [ChEBI]
+is_a: CHEBI:60466 ! peptide zwitterion
+relationship: is_tautomer_of CHEBI:47923 ! tripeptide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H8N3O4R3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "186.146" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "186.05148" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C(=O)([C@@H]([NH3+])*)N[C@H](C(=O)N[C@H](C(=O)[O-])*)*" xsd:string
 
 [Term]
 id: CHEBI:15603
@@ -42961,6 +42980,7 @@ synonym: "Tripeptide" EXACT [KEGG_COMPOUND]
 synonym: "tripeptides" RELATED [ChEBI]
 xref: KEGG:C00316
 is_a: CHEBI:25676 ! oligopeptide
+relationship: is_tautomer_of CHEBI:155837 ! tripeptide zwitterion
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H8N3O4R3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "186.146" xsd:string
