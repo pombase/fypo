@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fypo/releases/2020-07-27/imports/chebi_import.owl
+data-version: fypo/releases/2020-08-03/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
@@ -2425,6 +2425,7 @@ relationship: has_role CHEBI:50733 ! nutraceutical
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: is_conjugate_acid_of CHEBI:67040 ! S-adenosyl-L-methioninate
+relationship: is_enantiomer_of CHEBI:156255 ! S-adenosyl-D-methionine
 relationship: is_tautomer_of CHEBI:59789 ! S-adenosyl-L-methionine zwitterion
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H23N6O5S" xsd:string
@@ -2884,6 +2885,41 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "ROHFNLRQFUQHCH-YF
 property_value: http://purl.obolibrary.org/obo/chebi/mass "131.17296" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "131.09463" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC(C)C[C@H](N)C(O)=O" xsd:string
+
+[Term]
+id: CHEBI:156132
+name: L-thialysinium
+namespace: chebi_ontology
+def: "Major microspecies at pH 7.3." []
+subset: 2_STAR
+synonym: "S-(2-aminoethyl)-L-cysteine" RELATED [UniProt]
+synonym: "S-(beta-aminoethyl)-L-cysteine" RELATED [SUBMITTER]
+xref: MetaCyc:S-2-AMINOETHYL-L-CYSTEINE {source="SUBMITTER"}
+xref: PMID:14766574 {source="SUBMITTER"}
+is_a: CHEBI:47910 ! S-substituted L-cysteine
+relationship: is_conjugate_acid_of CHEBI:497734 ! L-thialysine
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H13N2O2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C5H12N2O2S/c6-1-2-10-3-4(7)5(8)9/h4H,1-3,6-7H2,(H,8,9)/p+1/t4-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "GHSJKUNUIHUPDF-BYPYZUCNSA-O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "165.230" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "165.06923" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[O-]C([C@H](CSCC[NH3+])[NH3+])=O" xsd:string
+
+[Term]
+id: CHEBI:156255
+name: S-adenosyl-D-methionine
+namespace: chebi_ontology
+subset: 2_STAR
+is_a: CHEBI:26830 ! sulfonium compound
+relationship: is_enantiomer_of CHEBI:15414 ! S-adenosyl-L-methionine
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H23N6O5S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C15H22N6O5S/c1-27(3-2-7(16)15(24)25)4-8-10(22)11(23)14(26-8)21-6-20-9-12(17)18-5-19-13(9)21/h5-8,10-11,14,22-23H,2-4,16H2,1H3,(H2-,17,18,19,24,25)/p+1/t7-,8-,10-,11-,14-,27?/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MEFKEPWMEQBLKI-XCPQSEKJSA-O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "399.450" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "399.14452" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[S+](C[C@H]1O[C@@H](N2C3=NC=NC(N)=C3N=C2)[C@H](O)[C@@H]1O)(CC[C@@H](N)C(O)=O)C" xsd:string
 
 [Term]
 id: CHEBI:15693
@@ -24513,8 +24549,8 @@ alt_id: CHEBI:24029
 def: "A monocarboxylic acid anion obtained by the deprotonation of the carboxy group of ferulic acid." []
 subset: 3_STAR
 synonym: "(2E)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enoate" EXACT IUPAC_NAME [IUPAC]
+synonym: "(E)-ferulate" RELATED [UniProt]
 synonym: "3-methoxy-4-hydroxy-trans-cinnamate" RELATED [ChEBI]
-synonym: "trans-ferulate" RELATED [UniProt]
 xref: MetaCyc:FERULIC-ACID
 is_a: CHEBI:35757 ! monocarboxylic acid anion
 relationship: is_conjugate_base_of CHEBI:17620 ! ferulic acid
@@ -44455,6 +44491,7 @@ is_a: CHEBI:83822 ! non-proteinogenic L-alpha-amino acid
 relationship: has_role CHEBI:25212 ! metabolite
 relationship: has_role CHEBI:48001 ! protein synthesis inhibitor
 relationship: has_role CHEBI:75190 ! EC 5.4.3.2 (lysine 2,3-aminomutase) inhibitor
+relationship: is_conjugate_base_of CHEBI:156132 ! L-thialysinium
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H12N2O2S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C5H12N2O2S/c6-1-2-10-3-4(7)5(8)9/h4H,1-3,6-7H2,(H,8,9)/t4-/m0/s1" xsd:string
