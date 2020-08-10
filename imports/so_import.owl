@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fypo/imports/so_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fypo/releases/2020-08-03/imports/so_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fypo/releases/2020-08-10/imports/so_import.owl"/>
     </owl:Ontology>
     
 
@@ -951,18 +951,19 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000235">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001654"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001679"/>
-        <obo:IAO_0000115>A region of a nucleotide molecule that binds a Transcription Factor or Transcription Factor complex [GO:0005667].</obo:IAO_0000115>
+        <obo:IAO_0000115>A DNA site where a transcription factor binds</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>TF binding site</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>transcription factor binding site</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000235</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>Definition updated along with definitions in Mejia-Almonte et.al PMID:32665585</rdfs:comment>
         <rdfs:label>TF_binding_site</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000235"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A region of a nucleotide molecule that binds a Transcription Factor or Transcription Factor complex [GO:0005667].</owl:annotatedTarget>
+        <owl:annotatedTarget>A DNA site where a transcription factor binds</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:ke</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2025,12 +2026,19 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000673">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000831"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/so#overlaps"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0002300"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>An RNA synthesized on a DNA or RNA template by an RNA polymerase.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>INSDC_feature:misc_RNA</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/RNA</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000673</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>Added relationship overlaps SO:0002300 unit_of_gene_expression with Mejia-Almonte et.al PMID:32665585 Aug 5, 2020.</rdfs:comment>
         <rdfs:label>transcript</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3658,6 +3666,29 @@ SOURCE DEFINITION: A promoter element that contains a core sequence TGACGT, boun
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A non-coding RNA less than 200 nucleotides in length.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:30069443</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0002300 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002300">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001411"/>
+        <obo:IAO_0000115>Transcription units or transcribed coding sequences.</obo:IAO_0000115>
+        <oboInOwl:created_by>david</oboInOwl:created_by>
+        <oboInOwl:creation_date>2020-08-05T11:49:30Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>unit of gene expression</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0002300</oboInOwl:id>
+        <rdfs:comment>Added as per Mejia-Almonte et.al PMID:32665585</rdfs:comment>
+        <rdfs:label>unit_of_gene_expression</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0002300"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Transcription units or transcribed coding sequences.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bacterial_regulation_working_group:CMA</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID: 32665585</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
