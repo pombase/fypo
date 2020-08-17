@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fypo/imports/so_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fypo/releases/2020-08-10/imports/so_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fypo/releases/2020-08-17/imports/so_import.owl"/>
     </owl:Ontology>
     
 
@@ -642,7 +642,7 @@
     <!-- http://purl.obolibrary.org/obo/SO_0000167 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000167">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001055"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000727"/>
         <obo:IAO_0000115>A regulatory_region composed of the TSS(s) and binding sites for TF_complexes of the basal transcription machinery.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>INSDC_feature:regulatory</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Promoter</oboInOwl:hasDbXref>
@@ -651,7 +651,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000167</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
-        <rdfs:comment>This term is mapped to MGED. Do not obsolete without consulting MGED ontology. The region on a DNA molecule involved in RNA polymerase binding to initiate transcription.</rdfs:comment>
+        <rdfs:comment>This term is mapped to MGED. Do not obsolete without consulting MGED ontology. The region on a DNA molecule involved in RNA polymerase binding to initiate transcription. Moved from is_a: SO:0001055 transcriptional_cis_regulatory_region as per request from GREEKC initiative in August 2020.</rdfs:comment>
         <rdfs:label>promoter</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -951,13 +951,19 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000235">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001654"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001679"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/so#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0000727"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A DNA site where a transcription factor binds</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>TF binding site</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>transcription factor binding site</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000235</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
-        <rdfs:comment>Definition updated along with definitions in Mejia-Almonte et.al PMID:32665585</rdfs:comment>
+        <rdfs:comment>Definition updated along with definitions in Mejia-Almonte et.al PMID:32665585. Added relationship part_of SO:0000727 CRM in place of previous CRM relationship has_part TF_binding_site August 2020 in response to requsts from GREEKC initiative.</rdfs:comment>
         <rdfs:label>TF_binding_site</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1788,6 +1794,12 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000650"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>SSU rRNA</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000650"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Ribosomal RNA transcript that structures the small subunit of the ribosome.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:ke</oboInOwl:hasDbXref>
@@ -1796,12 +1808,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000650"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>SSU RNA</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000650"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>SSU rRNA</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2162,24 +2168,7 @@
     <!-- http://purl.obolibrary.org/obo/SO_0000727 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000727">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0001055"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/so#has_part"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0000235"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001055"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/so#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0000235"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A regulatory region where transcription factor binding sites clustered to regulate various aspects of transcription activities. (CRMs can be located a few kb to hundred kb upstream of the basal promoter, in the coding sequence, within introns, or in the downstream 3&apos;UTR sequences, as well as on different chromosome). A single gene can be regulated by multiple CRMs to give precise control of its spatial and temporal expression. CRMs function as nodes in large, intertwined regulatory network.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>TF module</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cis regulatory module</oboInOwl:hasExactSynonym>
@@ -2187,7 +2176,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000727</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
-        <rdfs:comment>Requested by Stephen Grossmann Dec 2004.</rdfs:comment>
+        <rdfs:comment>Requested by Stephen Grossmann Dec 2004. Changed relationship from has_part SO:0000235 TF_binding site to TF_binding_site is part_of SO:0000727 CRM in response to requests from GREEKC initiative in Aug 2020.</rdfs:comment>
         <rdfs:label>CRM</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2230,6 +2219,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A region of a chromosome.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>chromosomal region</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>chromosomal_region</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>chromosome part</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000830</oboInOwl:id>
@@ -2864,12 +2855,19 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0000235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/so#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0000167"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>An element that can exist within the promoter region of a gene.</obo:IAO_0000115>
         <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-01T11:48:32Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>promoter element</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001659</oboInOwl:id>
+        <rdfs:comment>Mmoved from is_a: SO:0001055 transcriptional_cis_regulatory_region as per request from GREEKC initiative in August 2020.</rdfs:comment>
         <rdfs:label>promoter_element</rdfs:label>
     </owl:Class>
     

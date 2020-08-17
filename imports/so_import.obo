@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fypo/releases/2020-08-10/imports/so_import.owl
+data-version: fypo/releases/2020-08-17/imports/so_import.owl
 subsetdef: Alliance_of_Genome_Resources ""
 subsetdef: biosapiens ""
 subsetdef: SOFA ""
@@ -134,13 +134,13 @@ id: SO:0000167
 name: promoter
 namespace: sequence
 def: "A regulatory_region composed of the TSS(s) and binding sites for TF_complexes of the basal transcription machinery." [SO:regcreative]
-comment: This term is mapped to MGED. Do not obsolete without consulting MGED ontology. The region on a DNA molecule involved in RNA polymerase binding to initiate transcription.
+comment: This term is mapped to MGED. Do not obsolete without consulting MGED ontology. The region on a DNA molecule involved in RNA polymerase binding to initiate transcription. Moved from is_a: SO:0001055 transcriptional_cis_regulatory_region as per request from GREEKC initiative in August 2020.
 subset: SOFA
 synonym: "INSDC_feature:regulatory" BROAD []
 synonym: "INSDC_qualifier:promoter" EXACT []
 synonym: "promoter sequence" EXACT []
 xref: http://en.wikipedia.org/wiki/Promoter "wiki"
-is_a: SO:0001055 ! transcriptional_cis_regulatory_region
+is_a: SO:0000727 ! CRM
 
 [Term]
 id: SO:0000170
@@ -262,12 +262,13 @@ id: SO:0000235
 name: TF_binding_site
 namespace: sequence
 def: "A DNA site where a transcription factor binds" [SO:ke]
-comment: Definition updated along with definitions in Mejia-Almonte et.al PMID:32665585
+comment: Definition updated along with definitions in Mejia-Almonte et.al PMID:32665585. Added relationship part_of SO:0000727 CRM in place of previous CRM relationship has_part TF_binding_site August 2020 in response to requsts from GREEKC initiative.
 subset: SOFA
 synonym: "TF binding site" EXACT []
 synonym: "transcription factor binding site" EXACT []
 is_a: SO:0001654 ! nucleotide_to_protein_binding_site
 is_a: SO:0001679 ! transcription_regulatory_region
+relationship: part_of SO:0000727 ! CRM
 
 [Term]
 id: SO:0000237
@@ -761,15 +762,12 @@ id: SO:0000727
 name: CRM
 namespace: sequence
 def: "A regulatory region where transcription factor binding sites clustered to regulate various aspects of transcription activities. (CRMs can be located a few kb to hundred kb upstream of the basal promoter, in the coding sequence, within introns, or in the downstream 3'UTR sequences, as well as on different chromosome). A single gene can be regulated by multiple CRMs to give precise control of its spatial and temporal expression. CRMs function as nodes in large, intertwined regulatory network." [PMID:19660565, SO:SG]
-comment: Requested by Stephen Grossmann Dec 2004.
+comment: Requested by Stephen Grossmann Dec 2004. Changed relationship from has_part SO:0000235 TF_binding site to TF_binding_site is part_of SO:0000727 CRM in response to requests from GREEKC initiative in Aug 2020.
 subset: SOFA
 synonym: "cis regulatory module" EXACT []
 synonym: "TF module" EXACT []
 synonym: "transcription factor module" EXACT []
 is_a: SO:0001055 ! transcriptional_cis_regulatory_region
-intersection_of: SO:0001055 ! transcriptional_cis_regulatory_region
-intersection_of: has_part SO:0000235 ! TF_binding_site
-relationship: has_part SO:0000235 ! TF_binding_site
 
 [Term]
 id: SO:0000733
@@ -786,6 +784,8 @@ namespace: sequence
 def: "A region of a chromosome." [SO:ke]
 comment: This is a manufactured term, that serves the purpose of allow the parts of a chromosome to have an is_a path to the root.
 subset: SOFA
+synonym: "chromosomal region" EXACT []
+synonym: "chromosomal_region" EXACT []
 synonym: "chromosome part" EXACT []
 is_a: SO:0001411 ! biological_region
 relationship: part_of SO:0000340 ! chromosome
@@ -1057,9 +1057,11 @@ id: SO:0001659
 name: promoter_element
 namespace: sequence
 def: "An element that can exist within the promoter region of a gene." []
+comment: Mmoved from is_a: SO:0001055 transcriptional_cis_regulatory_region as per request from GREEKC initiative in August 2020.
 synonym: "promoter element" EXACT []
 is_a: SO:0000713 ! DNA_motif
 relationship: overlaps SO:0000235 ! TF_binding_site
+relationship: part_of SO:0000167 ! promoter
 created_by: kareneilbeck
 creation_date: 2010-10-01T11:48:32Z
 
