@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fypo/releases/2020-08-17/imports/so_import.owl
+data-version: fypo/releases/2020-09-02/imports/so_import.owl
 subsetdef: Alliance_of_Genome_Resources ""
 subsetdef: biosapiens ""
 subsetdef: SOFA ""
@@ -133,8 +133,8 @@ is_a: SO:0000835 ! primary_transcript_region
 id: SO:0000167
 name: promoter
 namespace: sequence
-def: "A regulatory_region composed of the TSS(s) and binding sites for TF_complexes of the basal transcription machinery." [SO:regcreative]
-comment: This term is mapped to MGED. Do not obsolete without consulting MGED ontology. The region on a DNA molecule involved in RNA polymerase binding to initiate transcription. Moved from is_a: SO:0001055 transcriptional_cis_regulatory_region as per request from GREEKC initiative in August 2020.
+def: "A regulatory_region composed of the TSS(s) and binding sites for TF_complexes of the basal transcription machinery. A region (DNA) to which RNA polymerase binds, to begin transcription." [SO:regcreative]
+comment: This term is mapped to MGED. Do not obsolete without consulting MGED ontology. The region on a DNA molecule involved in RNA polymerase binding to initiate transcription. Moved from is_a: SO:0001055 transcriptional_cis_regulatory_region as per request from GREEKC initiative in August 2020. Merged with RNA_polymerase_promoter (SO:0001203) Aug 2020.
 subset: SOFA
 synonym: "INSDC_feature:regulatory" BROAD []
 synonym: "INSDC_qualifier:promoter" EXACT []
@@ -147,11 +147,12 @@ id: SO:0000170
 name: RNApol_II_promoter
 namespace: sequence
 def: "A DNA sequence in eukaryotic DNA to which RNA polymerase II binds, to begin transcription." [SO:ke]
+comment: parent term RNA_polymerase_promoter SO:0001203 was obsoleted in Aug 2020, so term has been moved to eukaryotic_promoter SO:0002221.
 synonym: "pol II promoter" RELATED []
 synonym: "polymerase II promoter" EXACT []
 synonym: "RNA polymerase B promoter" EXACT []
 synonym: "RNApol II promoter" EXACT []
-is_a: SO:0001203 ! RNA_polymerase_promoter
+is_a: SO:0002221 ! eukaryotic_promoter
 
 [Term]
 id: SO:0000180
@@ -261,7 +262,7 @@ is_a: SO:0000233 ! mature_transcript
 id: SO:0000235
 name: TF_binding_site
 namespace: sequence
-def: "A DNA site where a transcription factor binds" [SO:ke]
+def: "A DNA site where a transcription factor binds." [SO:ke]
 comment: Definition updated along with definitions in Mejia-Almonte et.al PMID:32665585. Added relationship part_of SO:0000727 CRM in place of previous CRM relationship has_part TF_binding_site August 2020 in response to requsts from GREEKC initiative.
 subset: SOFA
 synonym: "TF binding site" EXACT []
@@ -920,14 +921,6 @@ synonym: "uncharacterised_change_in_nucleotide_sequence" NARROW []
 is_a: SO:0002072 ! sequence_comparison
 
 [Term]
-id: SO:0001203
-name: RNA_polymerase_promoter
-namespace: sequence
-def: "A region (DNA) to which RNA polymerase binds, to begin transcription." [xenbase:jb]
-synonym: "RNA polymerase promoter" EXACT []
-is_a: SO:0000167 ! promoter
-
-[Term]
 id: SO:0001217
 name: protein_coding_gene
 namespace: sequence
@@ -1426,6 +1419,16 @@ synonym: "UGUAA/G motif" EXACT []
 is_a: SO:0000951 ! eukaryotic_terminator
 created_by: nicole
 creation_date: 2018-05-18T17:10:14Z
+
+[Term]
+id: SO:0002221
+name: eukaryotic_promoter
+namespace: sequence
+def: "A regulatory_region including the Transcription Start Site (TSS) of a gene and serving as a platform for Pre-Initiation Complex (PIC) assembly, enabling transcription of a gene under certain conditions." []
+synonym: "Eukaryotic promoter" EXACT []
+is_a: SO:0000167 ! promoter
+created_by: david
+creation_date: 2019-07-31T14:01:20Z
 
 [Term]
 id: SO:0002247

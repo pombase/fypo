@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fypo/imports/pr_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fypo/releases/2020-08-17/imports/pr_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fypo/releases/2020-09-02/imports/pr_import.owl"/>
     </owl:Ontology>
     
 
@@ -795,17 +795,6 @@
     <!-- http://purl.obolibrary.org/obo/PR_000000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PR_000000001">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PR_000018263"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006412"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PR_000018263"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -814,9 +803,11 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>An amino acid chain that is produced de novo by ribosome-mediated translation of a genetically-encoded mRNA, and any derivatives thereof.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>natural protein</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>native protein</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>protein</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PR:000000001</oboInOwl:id>
-        <rdfs:comment>The definition above excludes protein complexes, which some also consider a protein. Those who wish to refer to a class representing both senses of the word are directed to CHEBI:36080. Proteins (in the sense defined here) that descended from a common ancestor can be classified into families and superfamilies composed of products of evolutionarily-related genes. The domain architecture of a protein is described by the order of its constituent domains. Proteins with the same domains in the same order are defined as homeomorphic [PRO:WCB].</rdfs:comment>
+        <rdfs:comment>The definition above excludes protein complexes, which some also consider a protein. Those who wish to refer to a class representing both senses of the word are directed to CHEBI:36080. Note that the definition allows for experimentally-manipulated genes, and allows for artifically-produced derivatives that mimic those found naturally. Proteins (in the sense defined here) that descended from a common ancestor can be classified into families and superfamilies composed of products of evolutionarily-related genes. The domain architecture of a protein is described by the order of its constituent domains. Proteins with the same domains in the same order are defined as homeomorphic [PRO:WCB].</rdfs:comment>
         <rdfs:label>protein</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -825,6 +816,18 @@
         <owl:annotatedTarget>An amino acid chain that is produced de novo by ribosome-mediated translation of a genetically-encoded mRNA, and any derivatives thereof.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRO:DAN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRO:WCB</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PR_000000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>natural protein</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRO:DAN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PR_000000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>native protein</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>IEDB:BP</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1365,12 +1368,6 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PR_000037069"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>glycosylated protein</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRO:DAN</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PR_000037069"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A protein that includes at least one glycosylated residue.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRO:DAN</oboInOwl:hasDbXref>
@@ -1386,6 +1383,12 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PR_000037069"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>glycated protein</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRO:DAN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PR_000037069"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>glycosylated protein</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRO:DAN</oboInOwl:hasDbXref>
     </owl:Axiom>
     
