@@ -1957,6 +1957,9 @@ id: PECO:0000216
 name: growth <24 hrs
 def: "Cells were grown for up to 24 hours." []
 is_a: PECO:0000122 ! grouping growth timing
+synonym: "growth <24 hours" EXACT [PomBase:vw]
+synonym: "overnight culture" RELATED [PomBase:mah]
+is_a: PECO:0000122 ! grouping growth timing
 created_by: antonialock
 creation_date: 2013-06-07T13:12:40Z
 
@@ -1964,6 +1967,7 @@ creation_date: 2013-06-07T13:12:40Z
 id: PECO:0000217
 name: growth >24 hrs
 def: "Cells were grown for more than 24 hours." []
+synonym: "growth >24 hours" EXACT [PomBase:vw]
 is_a: PECO:0000122 ! grouping growth timing
 created_by: antonialock
 creation_date: 2013-06-07T13:15:54Z
@@ -2136,6 +2140,7 @@ id: PECO:0000237
 name: growth >48 hrs
 def: "Cells were grown for more than 48 hours." []
 is_a: PECO:0000122 ! grouping growth timing
+synonym: "growth >48 hours" EXACT [PomBase:vw]
 created_by: antonialock
 creation_date: 2013-11-26T14:29:10Z
 
@@ -2378,6 +2383,7 @@ id: PECO:0000265
 name: >6 hrs in nitrogen starvation
 def: "Cells were kept in nitrogen starvation for more than 6 hours." []
 is_a: PECO:0000122 ! grouping growth timing
+synonym: ">6 hours in nitrogen starvation" EXACT [PomBase:vw]
 created_by: antonialock
 creation_date: 2014-08-01T13:48:41Z
 
@@ -3174,9 +3180,9 @@ creation_date: 2019-12-13T14:13:14Z
 [Term]
 id: PECO:0000358
 name: YES + galactose
-def: "Experiments were performed in rich medium containing yeast extract, galactose, glucose, and other components. The concentrations of galactose and glucose are typically around 2-3% each." []
+def: "Experiments were performed in rich medium containing yeast extract, galactose, glucose, and other components. The concentrations of galactose and glucose are typically around 2-3% each." [PomBase:mah]
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. \nIf certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, for instance 'caffeine added' or 'nitrogen excluded'.\n If a chemical was added in a much lower quantity than normal, please use the 'limited chemical added' conditions, for instance 'limited adenine added'.
-synonym: "rich medium with glucose and galactose" RELATED []
+synonym: "rich medium with glucose and galactose" RELATED [PomBase:mah]
 is_a: PECO:0000080 ! grouping rich medium
 created_by: midori
 creation_date: 2020-02-12T14:16:32Z
@@ -3184,7 +3190,7 @@ creation_date: 2020-02-12T14:16:32Z
 [Term]
 id: PECO:0000359
 name: + clotrimazole
-def: "An experimental condition in which clotrimazole was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
+def: "An experimental condition in which clotrimazole was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:mah]
 is_a: PECO:0000109 ! grouping excess
 created_by: midori
 creation_date: 2020-04-02T10:17:34Z
@@ -3192,7 +3198,7 @@ creation_date: 2020-04-02T10:17:34Z
 [Term]
 id: PECO:0000360
 name: + terbinafine
-def: "An experimental condition in which terbinafine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
+def: "An experimental condition in which terbinafine was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:mah]
 is_a: PECO:0000109 ! grouping excess
 created_by: midori
 creation_date: 2020-04-02T10:19:16Z
@@ -3200,7 +3206,7 @@ creation_date: 2020-04-02T10:19:16Z
 [Term]
 id: PECO:0000361
 name: + acetaldehyde
-def: "An experimental condition in which acetaldehyde was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
+def: "An experimental condition in which acetaldehyde was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:mah]
 is_a: PECO:0000109 ! grouping excess
 created_by: midori
 creation_date: 2020-04-17T16:23:15Z
@@ -3208,7 +3214,7 @@ creation_date: 2020-04-17T16:23:15Z
 [Term]
 id: PECO:0000362
 name: + formaldehyde
-def: "An experimental condition in which formaldehyde was added to the medium or assay buffer in excess compared to standard medium or assay buffers." []
+def: "An experimental condition in which formaldehyde was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:mah]
 is_a: PECO:0000109 ! grouping excess
 created_by: midori
 creation_date: 2020-04-17T16:25:48Z
@@ -3216,7 +3222,7 @@ creation_date: 2020-04-17T16:25:48Z
 [Term]
 id: PECO:0000363
 name: two-step temperature shift, standard to high, high to standard
-def: "A sequential growth condition in which cells are first grown at standard temperature, transferred to high, and then back to standard temperature." []
+def: "A sequential growth condition in which cells are first grown at standard temperature, transferred to high, and then back to standard temperature." [PomBase:mah]
 is_a: PECO:0000094 ! grouping sequential growth conditions
 created_by: midori
 creation_date: 2020-05-04T12:26:18Z
@@ -3233,10 +3239,42 @@ creation_date: 2020-05-04T14:58:43Z
 [Term]
 id: PECO:0000365
 name: MBC block and release
-def: "Cells were blocked using carbendazim (MBC) and subsequently released from the block." []
+def: "Cells were blocked using carbendazim (MBC) and subsequently released from the block." [PomBase:mah]
 is_a: PECO:0000238 ! grouping condition combinations
 created_by: midori
-creation_date: 2020-06-022T11:12:58Z
+creation_date: 2020-06-22T11:12:58Z
+
+[Term]
+id: PECO:0000366
+name: single passage culture
+def: "A growth condition in which cells are grown in a medium that is not refreshed over the time before cells are assayed." [PomBase:mah]
+is_a: PECO:0000132 ! grouping experimental environment
+created_by: midori
+creation_date: 2020-09-02T09:02:40Z
+
+[Term]
+id: PECO:0000367
+name: multiple passage culture
+def: "A growth condition in which cells are grown in a medium that is refreshed at least once over the time before cells are assayed. For example, an aliquot of a liquid culture may be transferred to fresh medium at specified time intervals." [PomBase:mah]
+is_a: PECO:0000132 ! grouping experimental environment
+created_by: midori
+creation_date: 2020-09-02T09:05:28Z
+
+[Term]
+id: PECO:0000368
+name: + tamoxifen
+def: "An experimental condition in which tamoxifen was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:mah]
+is_a: PECO:0000109 ! grouping excess
+created_by: midori
+creation_date: 2020-09-02T09:10:24Z
+
+[Term]
+id: PECO:0000369
+name: + beta-glucanase
+def: "An experimental condition in which beta-glucanase was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:mah]
+is_a: PECO:0000109 ! grouping excess
+created_by: midori
+creation_date: 2020-09-02T09:12:18Z
 
 [Typedef]
 id: part_of
