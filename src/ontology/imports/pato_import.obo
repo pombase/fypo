@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fypo/releases/2020-09-23/imports/pato_import.owl
+data-version: fypo/releases/2020-09-29/imports/pato_import.owl
 subsetdef: abnormal_slim ""
 subsetdef: absent_slim ""
 subsetdef: attribute_slim ""
@@ -2265,6 +2265,16 @@ created_by: wasila.dahdul
 creation_date: 2014-09-25T15:12:35Z
 
 [Term]
+id: PATO:0010005
+name: spatial distribution of a process
+namespace: quality
+def: "A physical quality of a process that is its spatial distribution.  For example, bone mineralization follows stereotypical spatial distribution patterns during development, which may be altered in some phenotypes." [orcid:0000-0002-7073-9172]
+subset: attribute_slim
+is_a: PATO:0002062 ! physical quality of a process
+created_by: dos
+creation_date: 2019-07-18T18:49:08Z
+
+[Term]
 id: PATO:0015019
 name: C-shaped
 namespace: quality
@@ -2286,6 +2296,30 @@ name: rate of occurence
 namespace: quality
 def: "The number of repeated events per unit time, occurring in a repeating series. (e.g. the number of heart beats occurring over 1 minute)" [https://orcid.org/0000-0002-9943-9018]
 is_a: PATO:0000161 ! rate
+
+[Term]
+id: PATO:0055001
+name: decreased spatial extent of a process
+namespace: quality
+def: "A spatial distribution of a process in which the process occupies a smaller length, area, or volume than the reference process. For example, heterochromatin may form over a shorter length of a chromosome in a mutant than in wild type." [orcid:0000-0003-4148-4606]
+is_a: PATO:0002302 ! decreased process quality
+is_a: PATO:0010005 ! spatial distribution of a process
+intersection_of: PATO:0010005 ! spatial distribution of a process
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: midori
+creation_date: 2019-07-29T14:22:24Z
+
+[Term]
+id: PATO:0055002
+name: increased spatial extent of a process
+namespace: quality
+def: "A spatial distribution of a process in which the process occupies a greater length, area, or volume than the reference process. For example, heterochromatin may form over a shorter length of a chromosome in a mutant than in wild type." [https://orcid.org/0000-0003-4148-4606]
+is_a: PATO:0002304 ! increased process quality
+is_a: PATO:0010005 ! spatial distribution of a process
+intersection_of: PATO:0010005 ! spatial distribution of a process
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: midori
+creation_date: 2019-07-29T14:23:31Z
 
 [Typedef]
 id: BFO:0000062
