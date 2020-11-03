@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fypo/releases/2020-10-20/imports/chebi_import.owl
+data-version: fypo/releases/2020-11-03/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
@@ -319,7 +319,7 @@ is_a: CHEBI:76969 ! bacterial metabolite
 id: CHEBI:131605
 name: dicarboxylic acid monoester(1-)
 namespace: chebi_ontology
-def: "A carboxylic acid anion resultig from the deprotonation of the carboxy group of a dicarboxylic acid monoester." []
+def: "A carboxylic acid anion resulting from the deprotonation of the carboxy group of a dicarboxylic acid monoester." []
 subset: 3_STAR
 is_a: CHEBI:29067 ! carboxylic acid anion
 relationship: is_conjugate_base_of CHEBI:36244 ! dicarboxylic acid monoester
@@ -4932,7 +4932,7 @@ alt_id: CHEBI:15292
 alt_id: CHEBI:27218
 alt_id: CHEBI:46379
 alt_id: CHEBI:9888
-def: "A carbonyl group with two C-bound amine groups." []
+def: "A carbonyl group with two C-bound amine groups. The commercially available fertilizer has an analysis of 46-0-0 (N-P2O5-K2O)." []
 subset: 3_STAR
 synonym: "1728" RELATED [PPDB]
 synonym: "Carbamide" RELATED [KEGG_COMPOUND]
@@ -12708,6 +12708,8 @@ def: "Any six-carbon monosaccharide which in its linear form contains either an 
 subset: 3_STAR
 synonym: "Hexose" EXACT [KEGG_COMPOUND]
 synonym: "hexoses" RELATED [ChEBI]
+synonym: "WURCS=2.0/1,1,0/[axxxxh-1x_1-5_2*NCC/3=O]/1/" RELATED [GlyTouCan]
+xref: GlyTouCan:G70994MS
 xref: KEGG:C00738
 is_a: CHEBI:35381 ! monosaccharide
 
@@ -15932,6 +15934,7 @@ name: dodecyl sulfate
 namespace: chebi_ontology
 subset: 3_STAR
 synonym: "dodecyl sulfate" EXACT IUPAC_NAME [IUPAC]
+synonym: "dodecyl sulfate" EXACT [UniProt]
 xref: Beilstein:1820003 {source="Beilstein"}
 xref: DrugBank:DB03967
 xref: Gmelin:336103 {source="Gmelin"}
@@ -24561,6 +24564,7 @@ xref: Gmelin:1241774 {source="Gmelin"}
 is_a: CHEBI:79389 ! monovalent inorganic anion
 relationship: has_parent_hydride CHEBI:29337 ! azanide
 relationship: is_conjugate_base_of CHEBI:15429 ! hydroxylamine
+relationship: is_tautomer_of CHEBI:29773 ! aminooxidanide
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "H2NO" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/H2NO/c1-2/h1-2H/q-1" xsd:string
@@ -24580,6 +24584,7 @@ synonym: "azanolate" EXACT IUPAC_NAME [IUPAC]
 synonym: "dihydridooxidonitrate(1-)" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:33458 ! nitrogen oxoanion
 relationship: is_conjugate_base_of CHEBI:15429 ! hydroxylamine
+relationship: is_tautomer_of CHEBI:29772 ! hydroxyazanide
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "H2NO" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/H2NO/c1-2/h1H2/q-1" xsd:string
@@ -32901,6 +32906,11 @@ synonym: "Oxalaldehyde" RELATED [ChemIDplus]
 xref: Beilstein:1732463 {source="ChemIDplus"}
 xref: CAS:107-22-2 {source="NIST Chemistry WebBook"}
 xref: CAS:107-22-2 {source="ChemIDplus"}
+xref: CAS:107-22-2 {source="KEGG COMPOUND"}
+xref: FooDB:FDB007802
+xref: KEGG:C14448
+xref: MetaCyc:CPD-8887
+xref: PDBeChem:GXT
 xref: PMID:11833298 {source="Europe PMC"}
 xref: PMID:15899002 {source="Europe PMC"}
 xref: PMID:18343213 {source="Europe PMC"}
@@ -32910,17 +32920,19 @@ xref: PMID:23531876 {source="Europe PMC"}
 xref: PMID:23543734 {source="Europe PMC"}
 xref: PMID:23990306 {source="Europe PMC"}
 xref: PMID:9506998 {source="Europe PMC"}
+xref: PPDB:272
 xref: Reaxys:1732463 {source="Reaxys"}
 xref: Wikipedia:Glyoxal
 is_a: CHEBI:38124 ! dialdehyde
 relationship: has_role CHEBI:25944 ! pesticide
+relationship: has_role CHEBI:26155 ! plant growth regulator
 relationship: has_role CHEBI:33286 ! agrochemical
 relationship: has_role CHEBI:50904 ! allergen
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H2O2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C2H2O2/c3-1-2-4/h1-2H" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "LEQAOMBKQFMDFZ-UHFFFAOYSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "58.03610" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "58.036" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "58.00548" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]C(=O)C([H])=O" xsd:string
 
@@ -52839,7 +52851,7 @@ namespace: chebi_ontology
 def: "A cationic sphingoid that is the conjugate acid of phytosphingosine, obtained by protonation of the primary amino function; major species at pH 7.3." []
 subset: 3_STAR
 synonym: "(2S,3S,4R)-1,3,4-trihydroxyoctadecan-2-aminium" EXACT IUPAC_NAME [IUPAC]
-synonym: "4-hydroxysphinganine" RELATED [UniProt]
+synonym: "(4R)-hydroxysphinganine" RELATED [UniProt]
 synonym: "4-hydroxysphinganine(1+)" RELATED [SUBMITTER]
 synonym: "4-hydroxysphinganinium(1+)" RELATED [ChEBI]
 synonym: "phytosphingosinium(1+)" RELATED [ChEBI]
@@ -53606,10 +53618,10 @@ namespace: chebi_ontology
 alt_id: CHEBI:64923
 def: "An anionic phospholipid obtained by deprotonation of the free phosphate OH group of any inositol phosphoceramide; major species at pH 7.3." []
 subset: 3_STAR
+synonym: "an inositol-1-phosphoceramide" RELATED [UniProt]
 synonym: "ceramide phosphoinositol" RELATED [ChEBI]
 synonym: "ceramide phosphoinositol(1-)" RELATED [ChEBI]
 synonym: "inositol phosphoceramide" RELATED [ChEBI]
-synonym: "inositol phosphoceramide" RELATED [UniProt]
 is_a: CHEBI:62643 ! anionic phospholipid
 relationship: is_conjugate_base_of CHEBI:60245 ! inositol phosphoceramide
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
