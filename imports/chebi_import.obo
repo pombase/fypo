@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: fypo/releases/2020-11-30/imports/chebi_import.owl
+data-version: fypo/releases/2020-12-09/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 ontology: fypo/imports/chebi_import
-property_value: owl:versionInfo "2020-11-30" xsd:string
+property_value: owl:versionInfo "2020-12-09" xsd:string
 
 [Term]
 id: CHEBI:100147
@@ -1604,6 +1604,25 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "WHUUTDBJXJRKMK-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "146.12136" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "146.04588" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+]C(CCC([O-])=O)C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:143593
+name: beta-galactosylceramide
+namespace: chebi_ontology
+subset: 2_STAR
+synonym: "beta-D-Gal-(1<->1')-Cer" RELATED [UniProt]
+synonym: "beta-D-galactosyl-N-acyl sphingoid base" RELATED [SUBMITTER]
+synonym: "beta-D-GalCer" RELATED [SUBMITTER]
+synonym: "beta-galactocerebroside" RELATED [SUBMITTER]
+xref: PMID:10748143 {source="SUBMITTER"}
+xref: PMID:3921539 {source="SUBMITTER"}
+is_a: CHEBI:36498 ! galactosylceramide
+is_a: CHEBI:50860 ! organic molecular entity
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C10H17NO8R2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "279.244" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "279.09542" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@H]([C@@H](*)O)(NC(=O)*)CO[C@@H]1O[C@@H]([C@@H]([C@@H]([C@H]1O)O)O)CO" xsd:string
 
 [Term]
 id: CHEBI:143813
@@ -3292,6 +3311,34 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "KDYFGRWQOYBRFD-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "118.08800" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "118.02661" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC(=O)CCC(O)=O" xsd:string
+
+[Term]
+id: CHEBI:157763
+name: polyprenol phosphate anion
+namespace: chebi_ontology
+def: "A polyprenol phosphate in which the hydroxyl hydrogen is replaced by a phospho group, major species at pH 7.3." []
+subset: 2_STAR
+synonym: "a polyprenol phosphate" RELATED [UniProt]
+is_a: CHEBI:26244 ! prenols
+relationship: is_conjugate_base_of CHEBI:16460 ! polyprenol phosphate
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "(C5H8)n.C5H9O4P" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "0.0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "0.0" xsd:string
+
+[Term]
+id: CHEBI:157775
+name: N-acyl-beta-D-galactosylphytosphingosine
+namespace: chebi_ontology
+subset: 2_STAR
+synonym: "a beta-D-galactosyl-(1<->1')-N-acyl-(4R)-hydroxysphinganine" RELATED [UniProt]
+synonym: "beta-D-GalCer(t18:0)" RELATED [SUBMITTER]
+is_a: CHEBI:143593 ! beta-galactosylceramide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C25H48NO9R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "506.651" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "506.33291" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@@H](CCCCCCCCCCCCCC)([C@@H](O)[C@@H](NC(=O)*)CO[C@H]1[C@@H]([C@H]([C@H]([C@H](O1)CO)O)O)O)O" xsd:string
 
 [Term]
 id: CHEBI:15778
@@ -6319,6 +6366,7 @@ xref: KEGG:C01048
 is_a: CHEBI:26250 ! prenol phosphate
 is_a: CHEBI:26875 ! terpenyl phosphate
 relationship: has_functional_parent CHEBI:26199 ! polyprenol
+relationship: is_conjugate_acid_of CHEBI:157763 ! polyprenol phosphate anion
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "(C5H8)n.C5H11O4P" xsd:string
 
@@ -15465,6 +15513,18 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "27.99491"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "O=C(*)*" xsd:string
 
 [Term]
+id: CHEBI:23079
+name: cerebroside
+namespace: chebi_ontology
+def: "Any member of a group of glycosphingolipids, also known as monoglycosylceramides, which are important components in animal muscle and nerve cell membranes." []
+subset: 3_STAR
+synonym: "cerebrosides" RELATED [ChEBI]
+synonym: "monoglycosylceramide" RELATED [ChEBI]
+synonym: "monoglycosylceramides" RELATED [ChEBI]
+is_a: CHEBI:17761 ! ceramide
+is_a: CHEBI:25513 ! neutral glycosphingolipid
+
+[Term]
 id: CHEBI:23089
 name: chelate-forming peptide
 namespace: chebi_ontology
@@ -18155,6 +18215,16 @@ xref: Wikipedia:Neurotransmitter
 is_a: CHEBI:33280 ! molecular messenger
 
 [Term]
+id: CHEBI:25513
+name: neutral glycosphingolipid
+namespace: chebi_ontology
+alt_id: CHEBI:7543
+def: "Any glycosphingolipid containing unsubstituted glycosyl moieties." []
+subset: 3_STAR
+synonym: "neutral glycosphingolipids" RELATED [ChEBI]
+is_a: CHEBI:24402 ! glycosphingolipid
+
+[Term]
 id: CHEBI:25516
 name: nickel cation
 namespace: chebi_ontology
@@ -20438,6 +20508,7 @@ name: tetrapyrrole
 namespace: chebi_ontology
 def: "A natural pigment containing four pyrrole rings joined by one-carbon units linking position 2 of one pyrrole ring to position 5 of the next." []
 subset: 3_STAR
+synonym: "a tetrapyrrole" RELATED [UniProt]
 synonym: "tetrapyrrole" EXACT IUPAC_NAME [IUPAC]
 synonym: "tetrapyrroles" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:33833 ! heteroarene
@@ -36345,6 +36416,42 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "318.09575
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc12" xsd:string
 
 [Term]
+id: CHEBI:36498
+name: galactosylceramide
+namespace: chebi_ontology
+alt_id: CHEBI:13641
+def: "Any of the cerebrosides in which the monosaccharide head group is galactose." []
+subset: 3_STAR
+synonym: "a D-galactosylceramide" RELATED [UniProt]
+synonym: "Cerebroside" RELATED [KEGG_COMPOUND]
+synonym: "D-Galactosyl-N-acylsphingosine" RELATED [KEGG_COMPOUND]
+synonym: "D-Galactosylceramide" RELATED [KEGG_COMPOUND]
+synonym: "Galactocerebroside" RELATED [KEGG_COMPOUND]
+synonym: "galactocerebroside" RELATED [ChEBI]
+synonym: "galactocerebrosides" RELATED [ChEBI]
+synonym: "galactosylceramides" RELATED [ChEBI]
+xref: KEGG:C02686
+xref: KEGG:G11121
+xref: PMID:16758576 {source="Europe PMC"}
+xref: PMID:17855742 {source="Europe PMC"}
+xref: PMID:2088646 {source="Europe PMC"}
+xref: PMID:23065187 {source="Europe PMC"}
+xref: PMID:23446636 {source="Europe PMC"}
+xref: PMID:23650721 {source="Europe PMC"}
+xref: PMID:25947378 {source="Europe PMC"}
+xref: PMID:26058499 {source="Europe PMC"}
+xref: PMID:26907993 {source="Europe PMC"}
+xref: PMID:27786470 {source="Europe PMC"}
+is_a: CHEBI:23079 ! cerebroside
+is_a: CHEBI:5254 ! galactolipid
+is_a: CHEBI:62941 ! glycosylceramide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C10H17NO8R2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "279.244" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "279.09542" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@H]([C@@H](*)O)(NC(=O)*)COC1O[C@@H]([C@@H]([C@@H]([C@H]1O)O)O)CO" xsd:string
+
+[Term]
 id: CHEBI:36526
 name: acidic glycosphingolipid
 namespace: chebi_ontology
@@ -42485,6 +42592,7 @@ xref: LIPID_MAPS_instance:LMSP01030001 {source="LIPID MAPS"}
 is_a: CHEBI:22478 ! amino alcohol
 is_a: CHEBI:27136 ! triol
 is_a: CHEBI:35785 ! sphingoid
+relationship: has_functional_parent CHEBI:157775 ! N-acyl-beta-D-galactosylphytosphingosine
 relationship: has_functional_parent CHEBI:16566 ! sphinganine
 relationship: has_role CHEBI:75771 ! mouse metabolite
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
@@ -47124,6 +47232,14 @@ def: "An oxyketone with the general formula R2C(=O) (R=/=H) where one or more of
 subset: 3_STAR
 synonym: "alpha-oxyketones" RELATED [ChEBI]
 is_a: CHEBI:52395 ! oxyketone
+
+[Term]
+id: CHEBI:5254
+name: galactolipid
+namespace: chebi_ontology
+def: "A glycolipid and which the glyco component is specified as galactosyl." []
+subset: 3_STAR
+is_a: CHEBI:33563 ! glycolipid
 
 [Term]
 id: CHEBI:52565
@@ -52022,6 +52138,16 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "319.11871
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "COc1c(C)c2COC(=O)c2c(O)c1C\\C=C(/C)CCC([O-])=O" xsd:string
 
 [Term]
+id: CHEBI:62941
+name: glycosylceramide
+namespace: chebi_ontology
+def: "A ceramide compound formed by the replacement of the glycosidic hydroxy group of a cyclic form of a monosaccharide (or derivative) by a ceramide group." []
+subset: 3_STAR
+synonym: "glycosylceramides" RELATED [ChEBI]
+is_a: CHEBI:17761 ! ceramide
+is_a: CHEBI:24402 ! glycosphingolipid
+
+[Term]
 id: CHEBI:62980
 name: homoserinate
 namespace: chebi_ontology
@@ -54000,7 +54126,7 @@ namespace: chebi_ontology
 def: "An acyl-CoA(4-) oxoanion arising from deprotonation of the phosphate and diphosphate OH groups of any 3-hydroxy fatty acyl-CoA; major species at pH 7.3." []
 subset: 3_STAR
 synonym: "3-hydroxy fatty acyl-coenzyme A(4-)" RELATED [ChEBI]
-synonym: "a 3-hydroxyacyl-CoA" RELATED [UniProt]
+synonym: "a 3-hydroxy-fatty acyl-CoA" RELATED [UniProt]
 xref: PMID:17719544 {source="SUBMITTER"}
 is_a: CHEBI:77636 ! fatty acyl-CoA(4-)
 relationship: is_conjugate_base_of CHEBI:20060 ! 3-hydroxy fatty acyl-CoA
