@@ -1,12 +1,7 @@
 format-version: 1.2
-data-version: fypo/releases/2020-12-11/imports/pr_import.owl
+data-version: fypo/releases/2020-12-15/imports/pr_import.owl
 ontology: fypo/imports/pr_import
-property_value: owl:versionInfo "2020-12-11" xsd:string
-
-[Term]
-id: BFO:0000015
-name: process
-namespace: bfo
+property_value: owl:versionInfo "2020-12-15" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -98,11 +93,20 @@ def: "An nuclear membrane protein complex having arachidonate 5-lipoxygenase act
 is_a: GO:0032991 ! protein-containing complex
 
 [Term]
+id: GO:0003674
+name: molecular_function
+namespace: molecular_function
+def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
+comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
+synonym: "molecular function" EXACT []
+
+[Term]
 id: GO:0004364
 name: glutathione transferase activity
 namespace: molecular_function
 def: "Catalysis of the reaction: R-X + glutathione = H-X + R-S-glutathione. R may be an aliphatic, aromatic or heterocyclic group; X may be a sulfate, nitrile or halide group." [EC:2.5.1.18]
 synonym: "glutathione conjugation reaction" EXACT []
+is_a: GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0005575
@@ -110,7 +114,7 @@ name: cellular_component
 namespace: cellular_component
 def: "The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together." [GOC:go_curators]
 comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. Note that when this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this.
-is_a: BFO:0000030 ! object
+synonym: "cell or subcellular entity" EXACT []
 
 [Term]
 id: GO:0005680
@@ -148,7 +152,9 @@ is_a: GO:0008150 ! biological_process
 id: GO:0008150
 name: biological_process
 namespace: biological_process
-is_a: BFO:0000015 ! process
+def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+synonym: "biological process" EXACT []
 
 [Term]
 id: GO:0008278
@@ -251,6 +257,7 @@ namespace: protein
 def: "A core histone that is a translation product of the human HIST4H4 genes, 1:1 orthologs thereof, or a semi-ortholog thereof." [PRO:DAN]
 comment: Category=gene. Note: The human HIST4H4 genes encode identical proteins. See PR:P62805.
 synonym: "H4" EXACT PRO-short-label [PRO:DNx]
+synonym: "H4-16" RELATED Gene-based []
 synonym: "H4/A" RELATED Gene-based []
 synonym: "H4/B" RELATED Gene-based []
 synonym: "H4/C" RELATED Gene-based []
@@ -264,6 +271,19 @@ synonym: "H4/K" RELATED Gene-based []
 synonym: "H4/M" RELATED Gene-based []
 synonym: "H4/N" RELATED Gene-based []
 synonym: "H4/O" RELATED Gene-based []
+synonym: "H4C1" RELATED Gene-based []
+synonym: "H4C11" RELATED Gene-based []
+synonym: "H4C12" RELATED Gene-based []
+synonym: "H4C13" RELATED Gene-based []
+synonym: "H4C14" RELATED Gene-based []
+synonym: "H4C15" RELATED Gene-based []
+synonym: "H4C2" RELATED Gene-based []
+synonym: "H4C3" RELATED Gene-based []
+synonym: "H4C4" RELATED Gene-based []
+synonym: "H4C5" RELATED Gene-based []
+synonym: "H4C6" RELATED Gene-based []
+synonym: "H4C8" RELATED Gene-based []
+synonym: "H4C9" RELATED Gene-based []
 synonym: "H4F2" RELATED Gene-based []
 synonym: "H4FA" RELATED Gene-based []
 synonym: "H4FB" RELATED Gene-based []
@@ -393,7 +413,6 @@ name: histone
 namespace: protein
 def: "A protein that functions as a component of the nucleosome." [PRO:DAN]
 comment: Category=union.
-synonym: "histone" EXACT PRO-short-label [PRO:DAN]
 is_a: PR:000000001 ! protein
 union_of: PR:000043452 ! core histone
 union_of: PR:000043453 ! linker histone
