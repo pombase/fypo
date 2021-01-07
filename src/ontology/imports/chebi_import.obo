@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: fypo/releases/2020-12-17/imports/chebi_import.owl
+data-version: fypo/releases/2021-01-07/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 ontology: fypo/imports/chebi_import
-property_value: owl:versionInfo "2020-12-17" xsd:string
+property_value: owl:versionInfo "2021-01-07" xsd:string
 
 [Term]
 id: CHEBI:100147
@@ -7414,6 +7414,21 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "324.03587
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "O[C@@H]1[C@@H](COP(O)(O)=O)O[C@H]([C@@H]1O)n1ccc(=O)[nH]c1=O" xsd:string
 
 [Term]
+id: CHEBI:166988
+name: glycerophosphoglycerophosphoglycerol
+namespace: chebi_ontology
+def: "A glycerophospholipid composed of two molecules of glycerol phosphate covalently linked to a molecule of glycerol, and in which each of the glycerol phosphate moieties may be esterified to one or two fatty acids." []
+subset: 2_STAR
+synonym: "GPGPG" RELATED [SUBMITTER]
+is_a: CHEBI:37739 ! glycerophospholipid
+relationship: is_conjugate_acid_of CHEBI:76529 ! glycerophosphoglycerophosphoglycerol(2-)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C9H18O13P2R4" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "396.179" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "396.02226" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "*O[C@@H](COP(OCC(COP(OC[C@H](O*)CO*)(O)=O)O)(O)=O)CO*" xsd:string
+
+[Term]
 id: CHEBI:16701
 name: nucleoside 5'-phosphate
 namespace: chebi_ontology
@@ -12105,6 +12120,7 @@ xref: KEGG:C00422
 xref: LIPID_MAPS_class:LMGL0301 {source="LIPID MAPS"}
 xref: PMID:2474544 {source="Europe PMC"}
 is_a: CHEBI:47778 ! glyceride
+is_a: CHEBI:76579 ! triradylglycerol
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H5O6R3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "173.10030" xsd:string
@@ -22974,6 +22990,7 @@ xref: PMID:2413066 {source="Europe PMC"}
 xref: PMID:28458255 {source="Europe PMC"}
 xref: PMID:3196084 {source="Europe PMC"}
 xref: Wikipedia:Cardiolipin
+is_a: CHEBI:166988 ! glycerophosphoglycerophosphoglycerol
 is_a: CHEBI:17517 ! phosphatidylglycerol
 relationship: has_role CHEBI:75771 ! mouse metabolite
 relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
@@ -32961,7 +32978,8 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "COC(=O)Nc1nc2ccccc2
 id: CHEBI:33937
 name: macronutrient
 namespace: chebi_ontology
-subset: 1_STAR
+subset: 3_STAR
+synonym: "macronutrients" RELATED [ChEBI]
 is_a: CHEBI:33284 ! nutrient
 
 [Term]
@@ -57053,6 +57071,7 @@ subset: 3_STAR
 synonym: "Glycerophosphoglycerophosphoglycerol" RELATED [UniProt]
 xref: LIPID_MAPS_class:LMGP12 {source="SUBMITTER"}
 is_a: CHEBI:62643 ! anionic phospholipid
+relationship: is_conjugate_base_of CHEBI:166988 ! glycerophosphoglycerophosphoglycerol
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C9H16O13P2R4" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "394.163" xsd:string
@@ -57079,6 +57098,16 @@ subset: 3_STAR
 synonym: "diorganylglycerol" RELATED [ChEBI]
 synonym: "disubstituted glycerol" RELATED [ChEBI]
 xref: LIPID_MAPS_class:LMGL0201 {source="SUBMITTER"}
+is_a: CHEBI:35741 ! glycerolipid
+
+[Term]
+id: CHEBI:76579
+name: triradylglycerol
+namespace: chebi_ontology
+def: "A glycerol compound having one of three possible substituent groups - either acyl, alkyl, or alk-1-enyl - at each of the three possible positions sn-1, sn-2 or sn-3. has functional parent glycerol (CHEBI:17754), children: triglyceride (CHEBI:17855). Parent: is_a glycerolipid (CHEBI:35741)" []
+subset: 2_STAR
+synonym: "triradylglycerols" RELATED [ChEBI]
+xref: LIPID_MAPS_class:LMGL0301 {source="SUBMITTER"}
 is_a: CHEBI:35741 ! glycerolipid
 
 [Term]
