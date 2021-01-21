@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 04:09:2020 12:46
+date: 21:01:2021 15:22
 saved-by: midori
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: Grouping_terms "High level terms not used for direct annotation, but for organizing more specific terms in the ontology."
@@ -1120,6 +1120,7 @@ alt_id: PECO:0000014
 def: "Experiments were performed in medium containing glucose (typically <2% w/v), salts, and water, and may be supplemented with additional amino acids." [PomBase:al]
 comment: Use the medium terms to specify the general type of growth medium and its carbon source. If certain chemicals not normally found in the medium were added, please also use the 'chemical added/excluded' terms, such as 'caffeine added' or 'nitrogen excluded'. If a chemical was added in a much lower quantity than normal, please use the 'limited chemical added' conditions, for instance 'limited adenine added'.
 synonym: "EMM" NARROW [PomBase:al]
+synonym: "EMMC" NARROW [PomBase:mah]
 synonym: "glucose minimal medium" EXACT [PomBase:al]
 synonym: "normal glucose minimal medium" EXACT [PomBase:al]
 synonym: "normal glucose MM" EXACT [PomBase:al]
@@ -1306,6 +1307,7 @@ id: PECO:0000143
 name: + antimycin A
 def: "An experimental condition in which antimycin A was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:al]
 comment: Note that this term includes both when the chemical is not normally present in the buffer, or when the buffer normally contains much lower quantities of the chemical so that the chemical is added 'in excess'.
+synonym: "respiratory chain inhibitor" RELATED [PomBase:mah]
 is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
 creation_date: 2012-06-19T15:23:58Z
@@ -1868,7 +1870,7 @@ creation_date: 2012-11-26T16:28:39Z
 id: PECO:0000206
 name: + CsCl
 def: "An experimental condition in which caesium chloride was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:al]
-synonym: "caesium chlorideadded" EXACT [PomBase:al]
+synonym: "caesium chloride added" EXACT [PomBase:al]
 synonym: "cesium chloride added" EXACT [PomBase:al]
 is_a: PECO:0000109 ! grouping excess
 created_by: antonialock
@@ -3336,9 +3338,51 @@ is_a: PECO:0000013 ! grouping defined medium
 created_by: midori
 creation_date: 2021-01-20T10:05:49Z
 
+[Term]
+id: PECO:0000377
+name: + 5-FU
+def: "An experimental condition in which 5-fluorouracil (5-FU) was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:mah]
+synonym: "+ 5-fluorouracil" EXACT [PomBase:mah]
+is_a: PECO:0000109 ! grouping excess
+created_by: midori
+creation_date: 2021-01-21T15:04:35Z
+
+[Term]
+id: PECO:0000378
+name: + respiratory chain inhibitor
+def: "An experimental condition in which a substance that inhibits one or more respiratory electron transport chain complexes was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:mah]
+synonym: "+ electron transport chain inhibitor" EXACT [PomBase:mah]
+synonym: "+ mitochondrial complex III/IV inhibitor" RELATED [PMID:33400299]
+synonym: "+ respiratory complex III inhibitor" RELATED [PomBase:vw]
+is_a: PECO:0000109 ! grouping excess
+created_by: midori
+creation_date: 2021-01-21T15:11:02Z
+
+[Term]
+id: PECO:0000379
+name: + diuron
+def: "An experimental condition in which diuron was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:mah]
+synonym: "+ 3-(3,4-dichlorophenyl)-1,1-dimethylurea" EXACT [CHEBI:116509]
+synonym: "+ DCMU" EXACT [CHEBI:116509]
+synonym: "+ respiratory chain inhibitor" RELATED [PomBase:mah]
+is_a: PECO:0000109 ! grouping excess
+created_by: midori
+creation_date: 2021-01-21T15:14:29Z
+
+[Term]
+id: PECO:0000380
+name: + NaN3
+def: "An experimental condition in which sodium azide was added to the medium or assay buffer in excess compared to standard medium or assay buffers." [PomBase:mah]
+synonym: "+ respiratory chain inhibitor" RELATED [PomBase:mah]
+synonym: "+ sodium azide" EXACT [PomBase:mah]
+is_a: PECO:0000109 ! grouping excess
+created_by: midori
+creation_date: 2021-01-21T15:20:45Z
+
 [Typedef]
 id: part_of
 name: part_of
 xref: OBO_REL:part_of
 created_by: antonialock
 creation_date: 2012-02-07T11:57:34Z
+
