@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: fypo/releases/2021-01-20/imports/so_import.owl
+data-version: fypo/releases/2021-01-27/imports/so_import.owl
 subsetdef: Alliance_of_Genome_Resources ""
 subsetdef: biosapiens ""
 subsetdef: SOFA ""
 ontology: fypo/imports/so_import
-property_value: owl:versionInfo "2021-01-20" xsd:string
+property_value: owl:versionInfo "2021-01-27" xsd:string
 
 [Term]
 id: SO:0000000
@@ -134,14 +134,14 @@ is_a: SO:0000835 ! primary_transcript_region
 id: SO:0000167
 name: promoter
 namespace: sequence
-def: "A regulatory_region composed of the TSS(s) and binding sites for TF_complexes of the basal transcription machinery. A region (DNA) to which RNA polymerase binds, to begin transcription." [SO:regcreative]
-comment: This term is mapped to MGED. Do not obsolete without consulting MGED ontology. The region on a DNA molecule involved in RNA polymerase binding to initiate transcription. Moved from is_a: SO:0001055 transcriptional_cis_regulatory_region as per request from GREEKC initiative in August 2020. Merged with RNA_polymerase_promoter (SO:0001203) Aug 2020.
+def: "A regulatory_region composed of the TSS(s) and binding sites for TF_complexes of the core transcription machinery. A region (DNA) to which RNA polymerase binds, to begin transcription." [SO:regcreative]
+comment: This term is mapped to MGED. Do not obsolete without consulting MGED ontology. The region on a DNA molecule involved in RNA polymerase binding to initiate transcription. Moved from is_a: SO:0001055 transcriptional_cis_regulatory_region as per request from GREEKC initiative in August 2020. Merged with RNA_polymerase_promoter (SO:0001203) Aug 2020. Moved up one level from is_a CRM (SO:0000727) to is_a transcriptional_cis_regulatory_region (SO:0001055) as part of the GREEKC work January 2021. Pascale Gaudet from Gene Ontology pointed out that CRM can be located upstream of the promoter and therefore cannot include the promoter.
 subset: SOFA
 synonym: "INSDC_feature:regulatory" BROAD []
 synonym: "INSDC_qualifier:promoter" EXACT []
 synonym: "promoter sequence" EXACT []
 xref: http://en.wikipedia.org/wiki/Promoter "wiki"
-is_a: SO:0000727 ! CRM
+is_a: SO:0001055 ! transcriptional_cis_regulatory_region
 
 [Term]
 id: SO:0000170
@@ -229,7 +229,8 @@ is_a: SO:0000483 ! nc_primary_transcript
 id: SO:0000232
 name: snoRNA_primary_transcript
 namespace: sequence
-def: "A primary transcript encoding a small nucleolar mRNA (SO:0000275)." [SO:ke]
+def: "A primary transcript encoding one or more small nucleolar RNAs (SO:0000275)." [SO:ke]
+comment: This definition was broadened 26 Jan 2021 to reflect that a single transcript can encode one or more snoRNAs. Brought to our attention by FlyBase. GitHub Issue #520 (https://github.com/The-Sequence-Ontology/SO-Ontologies/issues/520).
 synonym: "snoRNA primary transcript" EXACT []
 is_a: SO:0000483 ! nc_primary_transcript
 
@@ -763,7 +764,7 @@ is_a: SO:0001411 ! biological_region
 id: SO:0000727
 name: CRM
 namespace: sequence
-def: "A regulatory region where transcription factor binding sites are clustered to regulate various aspects of transcription activities. (CRMs can be located a few kb to hundreds of kb upstream of the basal promoter, in the coding sequence, within introns, or in the untranslated regions (UTR) sequences, and even on a different chromosome). A single gene can be regulated by multiple CRMs to give precise control of its spatial and temporal expression. CRMs function as nodes in large, intertwined regulatory network." [PMID:19660565, SO:SG]
+def: "A regulatory region where transcription factor binding sites are clustered to regulate various aspects of transcription activities. (CRMs can be located a few kb to hundreds of kb upstream of the core promoter, in the coding sequence, within introns, or in the untranslated regions (UTR) sequences, and even on a different chromosome). A single gene can be regulated by multiple CRMs to give precise control of its spatial and temporal expression. CRMs function as nodes in large, intertwined regulatory network." [PMID:19660565, SO:SG]
 comment: Requested by Stephen Grossmann Dec 2004. Changed relationship from has_part SO:0000235 TF_binding site to TF_binding_site is part_of SO:0000727 CRM in response to requests from GREEKC initiative in Aug 2020. Removed 3' from definition because 5' UTRs are included as well, notified by Colin Logie of GREEKC. Nov 9 2020.
 subset: SOFA
 synonym: "cis regulatory module" EXACT []
