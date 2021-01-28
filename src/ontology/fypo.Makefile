@@ -76,3 +76,6 @@ tmp/fypotest_report.txt: $(SRC)
 fypotest: tmp/fypo-merge-test.owl tmp/fypotest_report.txt
 	$(ROBOT) reason --input $< --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
 
+
+fix_quality_issue:
+	sed -i 's;ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000019>;ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000001>;g' $(SRC)
