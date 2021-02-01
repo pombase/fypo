@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: fypo/releases/2021-01-27/imports/chebi_import.owl
+data-version: fypo/releases/2021-02-01/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 ontology: fypo/imports/chebi_import
-property_value: owl:versionInfo "2021-01-27" xsd:string
+property_value: owl:versionInfo "2021-02-01" xsd:string
 
 [Term]
 id: CHEBI:100147
@@ -115,6 +115,7 @@ subset: 3_STAR
 synonym: "2-hydroxynaphthalene" RELATED [HMDB]
 synonym: "2-naphthalenol" RELATED [NIST_Chemistry_WebBook]
 synonym: "2-Naphthol" EXACT [KEGG_COMPOUND]
+synonym: "2-naphthol" EXACT [UniProt]
 synonym: "beta-hydroxynaphthalene" RELATED [NIST_Chemistry_WebBook]
 synonym: "beta-Naphthol" RELATED [KEGG_COMPOUND]
 synonym: "beta-naphthol" RELATED [NIST_Chemistry_WebBook]
@@ -285,12 +286,14 @@ xref: PMID:10866370 {source="ChEMBL"}
 xref: PMID:17142046 {source="ChEMBL"}
 xref: PMID:17449247 {source="ChEMBL"}
 xref: PMID:23081760 {source="Europe PMC"}
+xref: PMID:33400299 {source="Europe PMC"}
 xref: PPDB:260
 xref: Reaxys:2215168 {source="Reaxys"}
 xref: Wikipedia:Diuron
 is_a: CHEBI:157693 ! 3-(3,4-substituted-phenyl)-1,1-dimethylurea
 is_a: CHEBI:23697 ! dichlorobenzene
 relationship: has_role CHEBI:24527 ! herbicide
+relationship: has_role CHEBI:25355 ! mitochondrial respiratory-chain inhibitor
 relationship: has_role CHEBI:26089 ! photosystem-II inhibitor
 relationship: has_role CHEBI:35703 ! xenobiotic
 relationship: has_role CHEBI:78298 ! environmental contaminant
@@ -6652,7 +6655,6 @@ xref: MolBase:943
 xref: PDBeChem:NO
 xref: Reaxys:3587257 {source="Reaxys"}
 xref: Wikipedia:Nitric_oxide
-is_a: CHEBI:26523 ! reactive oxygen species
 is_a: CHEBI:35196 ! nitrogen oxide
 is_a: CHEBI:36871 ! inorganic radical
 is_a: CHEBI:62764 ! reactive nitrogen species
@@ -7702,6 +7704,16 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UHOVQNZJYSORNB-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "78.11184" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "78.04695" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "c1ccccc1" xsd:string
+
+[Term]
+id: CHEBI:167183
+name: piscicide
+namespace: chebi_ontology
+def: "A substance which is poisonous to fish and is primarily used to eliminate dominant species of fish in water." []
+subset: 3_STAR
+synonym: "piscicides" RELATED [ChEBI]
+xref: Wikipedia:Piscicide
+is_a: CHEBI:25944 ! pesticide
 
 [Term]
 id: CHEBI:16728
@@ -16712,6 +16724,7 @@ name: glycophospholipid
 namespace: chebi_ontology
 def: "Any phospholipid that contain both phosphate and carbohydrate as integral structural components." []
 subset: 3_STAR
+synonym: "a glycophospholipid" RELATED [UniProt]
 synonym: "glycophospholipid" EXACT [ChEBI]
 synonym: "glycophospholipids" RELATED [ChEBI]
 synonym: "phosphoglycolipids" RELATED [ChEBI]
@@ -20364,6 +20377,7 @@ xref: Gmelin:16221 {source="Gmelin"}
 xref: KEGG:C01330
 xref: WebElements:Na
 is_a: CHEBI:22314 ! alkali metal atom
+relationship: has_role CHEBI:33937 ! macronutrient
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "Na" xsd:string
@@ -21797,10 +21811,15 @@ xref: KEGG:C11339
 xref: MetaCyc:CPD-5744
 xref: PDBeChem:AY1
 xref: PMID:16819166 {source="Europe PMC"}
+xref: PMID:29790043 {source="Europe PMC"}
+xref: PMID:30914247 {source="Europe PMC"}
+xref: PMID:31079230 {source="Europe PMC"}
+xref: PMID:32662599 {source="Europe PMC"}
 is_a: CHEBI:145556 ! macrodiolide
 is_a: CHEBI:22702 ! benzamides
 is_a: CHEBI:24079 ! formamides
 is_a: CHEBI:33853 ! phenols
+relationship: has_role CHEBI:167183 ! piscicide
 relationship: has_role CHEBI:25355 ! mitochondrial respiratory-chain inhibitor
 relationship: has_role CHEBI:35718 ! antifungal agent
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -22240,12 +22259,28 @@ namespace: chebi_ontology
 def: "The sodium salt of hydrogen azide (hydrazoic acid)." []
 subset: 3_STAR
 synonym: "Azoture de sodium" RELATED [ChemIDplus]
+synonym: "hydrazoic acid sodium salt" RELATED [ChEBI]
 synonym: "Hydrazoic acid, sodium salt" RELATED [ChemIDplus]
+synonym: "NaN3" RELATED [ChEBI]
 synonym: "Natriumazid" RELATED [ChemIDplus]
 xref: CAS:26628-22-8 {source="ChemIDplus"}
+xref: CAS:26628-22-8 {source="NIST Chemistry WebBook"}
+xref: MetaCyc:CPD-23697
+xref: Pesticides:sodium_azide {source="Alan Wood's Pesticides"}
+xref: PMID:25916484 {source="Europe PMC"}
+xref: PMID:28712037 {source="Europe PMC"}
+xref: PMID:28849152 {source="Europe PMC"}
+xref: PMID:29947902 {source="Europe PMC"}
+xref: PMID:30664159 {source="Europe PMC"}
+xref: PMID:31088611 {source="Europe PMC"}
+xref: PMID:31821925 {source="Europe PMC"}
+xref: PMID:32437849 {source="Europe PMC"}
+xref: PMID:32844280 {source="Europe PMC"}
+xref: PMID:33400299 {source="Europe PMC"}
 xref: Wikipedia:Sodium_azide
 is_a: CHEBI:38702 ! inorganic sodium salt
 relationship: has_part CHEBI:40910 ! azide anion
+relationship: has_role CHEBI:25355 ! mitochondrial respiratory-chain inhibitor
 relationship: has_role CHEBI:25435 ! mutagen
 relationship: has_role CHEBI:33282 ! antibacterial agent
 relationship: has_role CHEBI:63490 ! explosive
@@ -22855,6 +22890,7 @@ xref: VSDB:587
 xref: Wikipedia:Rotenone
 is_a: CHEBI:38164 ! organic heteropentacyclic compound
 is_a: CHEBI:72581 ! rotenones
+relationship: has_role CHEBI:167183 ! piscicide
 relationship: has_role CHEBI:22917 ! phytogenic insecticide
 relationship: has_role CHEBI:25212 ! metabolite
 relationship: has_role CHEBI:27026 ! toxin
@@ -30462,6 +30498,7 @@ xref: DrugBank:DB06973
 xref: HMDB:HMDB0032133
 xref: KEGG:C13624
 xref: LINCS:LSM-37080
+xref: PDBeChem:2OH
 xref: PMID:10593191 {source="Europe PMC"}
 xref: PMID:11361040 {source="Europe PMC"}
 xref: PMID:12860292 {source="Europe PMC"}
@@ -30486,9 +30523,9 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H16O2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C15H16O2/c1-15(2,11-3-7-13(16)8-4-11)12-5-9-14(17)10-6-12/h3-10,16-17H,1-2H3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "IISBACLAFKSPIT-UHFFFAOYSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "228.28634" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "228.291" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "228.11503" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC(C)(c1ccc(O)cc1)c1ccc(O)cc1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC(C)(C1=CC=C(O)C=C1)C1=CC=C(O)C=C1" xsd:string
 
 [Term]
 id: CHEBI:33229
@@ -33173,6 +33210,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "COC(=O)Nc1nc2ccccc2
 id: CHEBI:33937
 name: macronutrient
 namespace: chebi_ontology
+def: "Any nutrient required in large quantities by organisms throughout their life in order to orchestrate a range of physiological functions. Macronutrients are usually chemical elements (carbon, hydrogen, nitrogen, oxygen, phosphorus and sulfur) that humans consume in the largest quantities. Calcium, sodium, magnesium and potassium are sometimes included as macronutrients because they are required in relatively large quantities compared with other vitamins and minerals." []
 subset: 3_STAR
 synonym: "macronutrients" RELATED [ChEBI]
 is_a: CHEBI:33284 ! nutrient
@@ -35986,6 +36024,7 @@ synonym: "hydroxy acid" RELATED [ChEBI]
 synonym: "hydroxy monocarboxylic acids" RELATED [ChEBI]
 is_a: CHEBI:24669 ! hydroxy carboxylic acid
 is_a: CHEBI:25384 ! monocarboxylic acid
+relationship: is_conjugate_acid_of CHEBI:36059 ! hydroxy monocarboxylic acid anion
 
 [Term]
 id: CHEBI:35871
@@ -36282,6 +36321,7 @@ synonym: "hydroxy monocarboxylic acid anions" RELATED [ChEBI]
 synonym: "hydroxymonocarboxylic acid anion" RELATED [ChEBI]
 synonym: "hydroxymonocarboxylic acid anions" RELATED [ChEBI]
 is_a: CHEBI:35757 ! monocarboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:35868 ! hydroxy monocarboxylic acid
 
 [Term]
 id: CHEBI:36080
