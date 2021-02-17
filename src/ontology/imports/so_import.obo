@@ -1,11 +1,11 @@
 format-version: 1.2
-data-version: fypo/releases/2021-02-11/imports/so_import.owl
+data-version: fypo/releases/2021-02-17/imports/so_import.owl
 subsetdef: Alliance_of_Genome_Resources ""
 subsetdef: biosapiens ""
 subsetdef: SOFA ""
 ontology: fypo/imports/so_import
-property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/so/2021-02-08/so.owl
-property_value: owl:versionInfo "2021-02-11" xsd:string
+property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/so/2021-02-16/so.owl
+property_value: owl:versionInfo "2021-02-17" xsd:string
 
 [Term]
 id: SO:0000000
@@ -112,12 +112,13 @@ id: SO:0000141
 name: terminator
 namespace: sequence
 def: "The sequence of DNA located either at the end of the transcript that causes RNA polymerase to terminate transcription." [http://www.insdc.org/files/feature_table.html]
+comment: Moved from transcription_regulatory_region (SO:0001679) to transcriptional_cis_regulatory_region (SO:0001055) by Dave Sant on Feb 11, 2021 when transcription_regulatory_region was merged into transcriptional_cis_regulatory_region to be consistent with GO and reduce redundancy as part of the GREEKC consortium. See GitHub Issue #527.
 subset: SOFA
 synonym: "INSDC_feature:regulatory" BROAD []
 synonym: "INSDC_qualifier:terminator" EXACT []
 synonym: "terminator sequence" EXACT []
 xref: http://en.wikipedia.org/wiki/Terminator_(genetics) "wiki"
-is_a: SO:0001679 ! transcription_regulatory_region
+is_a: SO:0001055 ! transcriptional_cis_regulatory_region
 relationship: part_of SO:0000673 ! transcript
 
 [Term]
@@ -142,6 +143,7 @@ synonym: "INSDC_feature:regulatory" BROAD []
 synonym: "INSDC_qualifier:promoter" EXACT []
 synonym: "promoter sequence" EXACT []
 xref: http://en.wikipedia.org/wiki/Promoter "wiki"
+is_a: SO:0000842 ! gene_component_region
 is_a: SO:0001055 ! transcriptional_cis_regulatory_region
 
 [Term]
@@ -266,12 +268,12 @@ id: SO:0000235
 name: TF_binding_site
 namespace: sequence
 def: "A DNA site where a transcription factor binds." [SO:ke]
-comment: Definition updated along with definitions in Mejia-Almonte et.al PMID:32665585. Added relationship part_of SO:0000727 CRM in place of previous CRM relationship has_part TF_binding_site August 2020 in response to requsts from GREEKC initiative.
+comment: Definition updated along with definitions in Mejia-Almonte et.al PMID:32665585. Added relationship part_of SO:0000727 CRM in place of previous CRM relationship has_part TF_binding_site August 2020 in response to requests from GREEKC initiative. Moved from transcription_regulatory_region (SO:0001679) to transcriptional_cis_regulatory_region (SO:0001055) by Dave Sant on Feb 11, 2021 when transcription_regulatory_region was merged into transcriptional_cis_regulatory_region to be consistent with GO and reduce redundancy as part of the GREEKC consortium. See GitHub Issue #527.
 subset: SOFA
 synonym: "TF binding site" EXACT []
 synonym: "transcription factor binding site" EXACT []
+is_a: SO:0001055 ! transcriptional_cis_regulatory_region
 is_a: SO:0001654 ! nucleotide_to_protein_binding_site
-is_a: SO:0001679 ! transcription_regulatory_region
 relationship: part_of SO:0000727 ! cis_regulatory_module
 
 [Term]
@@ -766,8 +768,8 @@ is_a: SO:0001411 ! biological_region
 id: SO:0000727
 name: cis_regulatory_module
 namespace: sequence
-def: "A regulatory region where transcription factor binding sites are clustered to regulate various aspects of transcription activities. (CRMs can be located a few kb to hundreds of kb upstream of the core promoter, in the coding sequence, within introns, or in the untranslated regions (UTR) sequences, and even on a different chromosome). A single gene can be regulated by multiple CRMs to give precise control of its spatial and temporal expression. CRMs function as nodes in large, intertwined regulatory network." [PMID:19660565, SO:SG]
-comment: Requested by Stephen Grossmann Dec 2004. Changed relationship from has_part SO:0000235 TF_binding site to TF_binding_site is part_of SO:0000727 CRM in response to requests from GREEKC initiative in Aug 2020. Removed 3' from definition because 5' UTRs are included as well, notified by Colin Logie of GREEKC. Nov 9 2020. DS Updated name from 'CRM' to 'cis_regulatory_module' on 08 Feb 2021. See GitHub Issue #526
+def: "A regulatory region where transcription factor binding sites are clustered to regulate various aspects of transcription activities. (CRMs can be located a few kb to hundreds of kb upstream of the core promoter, in the coding sequence, within introns, or in the untranslated regions (UTR) sequences, and even on a different chromosome). A single gene can be regulated by multiple CRMs to give precise control of its spatial and temporal expression. CRMs function as nodes in large, intertwined regulatory network. CRM DNA accessibility is subject to regulation by dbTFs and transcription co-TFs." [PMID:19660565, SO:SG]
+comment: Requested by Stephen Grossmann Dec 2004. Changed relationship from has_part SO:0000235 TF_binding site to TF_binding_site is part_of SO:0000727 CRM in response to requests from GREEKC initiative in Aug 2020. Removed 3' from definition because 5' UTRs are included as well, notified by Colin Logie of GREEKC. Nov 9 2020. DS Updated name from 'CRM' to 'cis_regulatory_module' on 08 Feb 2021. See GitHub Issue #526. DS Added final sentence to definition as part of GREEKC Feb 16, 2021. See GitHub Issue #534.
 subset: SOFA
 synonym: "cis regulatory module" EXACT []
 synonym: "CRM" EXACT []
@@ -828,6 +830,16 @@ subset: SOFA
 synonym: "primary transcript region" EXACT []
 is_a: SO:0000833 ! transcript_region
 relationship: part_of SO:0000185 ! primary_transcript
+
+[Term]
+id: SO:0000842
+name: gene_component_region
+namespace: sequence
+def: "A region of a gene that has a specific function." []
+subset: SOFA
+synonym: "gene component region" EXACT []
+is_a: SO:0001411 ! biological_region
+relationship: part_of SO:0000704 ! gene
 
 [Term]
 id: SO:0000863
@@ -899,12 +911,13 @@ id: SO:0001055
 name: transcriptional_cis_regulatory_region
 namespace: sequence
 def: "A regulatory_region that modulates the transcription of a gene or genes." [PMID:9679020, SO:regcreative]
+comment: Previous parent term transcription_regulatory_region (SO:0001067) has been merged with this term on 11 Feb 2021 as part of the GREEKC consortium. See GitHub Issue #527.
 subset: SOFA
 synonym: "INSDC_feature:regulatory" BROAD []
 synonym: "INSDC_qualifier:transcriptional_cis_regulatory_region" EXACT []
 synonym: "transcription-control region" EXACT []
 synonym: "transcriptional cis regulatory region" EXACT []
-is_a: SO:0001679 ! transcription_regulatory_region
+is_a: SO:0005836 ! regulatory_region
 
 [Term]
 id: SO:0001059
@@ -1062,17 +1075,6 @@ relationship: overlaps SO:0000235 ! TF_binding_site
 relationship: part_of SO:0000167 ! promoter
 created_by: kareneilbeck
 creation_date: 2010-10-01T11:48:32Z
-
-[Term]
-id: SO:0001679
-name: transcription_regulatory_region
-namespace: sequence
-def: "A regulatory region that is involved in the control of the process of transcription." [SO:ke]
-subset: SOFA
-synonym: "transcription regulatory region" EXACT []
-is_a: SO:0005836 ! regulatory_region
-created_by: kareneilbeck
-creation_date: 2010-10-12T03:49:35Z
 
 [Term]
 id: SO:0001683
@@ -1450,7 +1452,7 @@ creation_date: 2020-05-13T11:07:30Z
 id: SO:0002300
 name: unit_of_gene_expression
 namespace: sequence
-def: "Transcription units or transcribed coding sequences." [Bacterial_regulation_working_group:CMA, PMID: 32665585]
+def: "Transcription units or transcribed coding sequences." [Bacterial_regulation_working_group:CMA, PMID:32665585]
 comment: Added as per Mejia-Almonte et.al PMID:32665585
 synonym: "unit of gene expression" EXACT []
 is_a: SO:0001411 ! biological_region
