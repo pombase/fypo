@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: fypo/releases/2021-02-23/imports/chebi_import.owl
+data-version: fypo/releases/2021-03-02/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 ontology: fypo/imports/chebi_import
-property_value: owl:versionInfo "2021-02-23" xsd:string
+property_value: owl:versionInfo "2021-03-02" xsd:string
 
 [Term]
 id: CHEBI:100147
@@ -7808,6 +7808,15 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "388.04068
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@@H]1([C@@H]([C@@H]([C@@H]([C@H]([C@@H]1O)O)O)O)OP(OC[C@@H](COC(*)=O)OC(=O)*)(=O)O)O" xsd:string
 
 [Term]
+id: CHEBI:167559
+name: glycan
+namespace: chebi_ontology
+def: "Any oligosaccharide, polysaccharide or their derivatives consisting of monosaccharides or monosaccharide derivatives linked by glycosidic bonds. See also http://www.ontobee.org/ontology/GNO?iri=http://purl.obolibrary.org/obo/GNO_00000001." []
+subset: 3_STAR
+synonym: "glycans" RELATED [ChEBI]
+is_a: CHEBI:78616 ! carbohydrates and carbohydrate derivatives
+
+[Term]
 id: CHEBI:16761
 name: ADP
 namespace: chebi_ontology
@@ -13069,6 +13078,7 @@ synonym: "Polysaccharide" EXACT [KEGG_COMPOUND]
 synonym: "polysaccharides" EXACT IUPAC_NAME [IUPAC]
 xref: KEGG:C00420
 is_a: CHEBI:16646 ! carbohydrate
+is_a: CHEBI:167559 ! glycan
 is_a: CHEBI:33694 ! biomacromolecule
 
 [Term]
@@ -19102,7 +19112,11 @@ is_a: CHEBI:35381 ! monosaccharide
 id: CHEBI:25903
 name: peptide antibiotic
 namespace: chebi_ontology
-subset: 1_STAR
+def: "A chemically diverse class of peptides that exhibit antimicrobial properties." []
+subset: 3_STAR
+synonym: "peptide antibiotics" RELATED [ChEBI]
+xref: MetaCyc:Peptide-Antibiotics
+xref: PMID:33398258 {source="Europe PMC"}
 is_a: CHEBI:16670 ! peptide
 relationship: has_role CHEBI:33281 ! antimicrobial agent
 
@@ -20480,7 +20494,6 @@ xref: Beilstein:1904445 {source="ChemIDplus"}
 xref: CAS:588-59-0 {source="NIST Chemistry WebBook"}
 xref: CAS:588-59-0 {source="ChemIDplus"}
 xref: Gmelin:67845 {source="Gmelin"}
-is_a: CHEBI:26776 ! stilbenoid
 is_a: CHEBI:33645 ! acyclic olefin
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C14H12" xsd:string
@@ -26408,7 +26421,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H8O7" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C6H8O7/c7-3(8)1-6(13,5(11)12)2-4(9)10/h13H,1-2H2,(H,7,8)(H,9,10)(H,11,12)" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "KRKNYBCHXYNGOX-UHFFFAOYSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "192.12350" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "192.123" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "192.02700" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC(=O)CC(O)(CC(O)=O)C(O)=O" xsd:string
 
@@ -46572,6 +46585,7 @@ synonym: "Oligosaccharide" EXACT [KEGG_COMPOUND]
 synonym: "oligosaccharides" EXACT IUPAC_NAME [IUPAC]
 xref: KEGG:C00930
 is_a: CHEBI:16646 ! carbohydrate
+is_a: CHEBI:167559 ! glycan
 
 [Term]
 id: CHEBI:50733
@@ -53220,6 +53234,7 @@ subset: 3_STAR
 synonym: "O-glycosylglycoside derivative" RELATED [ChEBI]
 synonym: "O-glycosylglycoside derivatives" RELATED [ChEBI]
 synonym: "oligosaccharide derivatives" RELATED [ChEBI]
+is_a: CHEBI:167559 ! glycan
 is_a: CHEBI:63299 ! carbohydrate derivative
 relationship: has_functional_parent CHEBI:50699 ! oligosaccharide
 
@@ -54804,6 +54819,7 @@ namespace: chebi_ontology
 def: "A carbohydrate derivative that is any derivative of a polysaccharide." []
 subset: 3_STAR
 synonym: "polysaccharide derivatives" RELATED [ChEBI]
+is_a: CHEBI:167559 ! glycan
 is_a: CHEBI:33694 ! biomacromolecule
 is_a: CHEBI:63299 ! carbohydrate derivative
 relationship: has_functional_parent CHEBI:18154 ! polysaccharide
