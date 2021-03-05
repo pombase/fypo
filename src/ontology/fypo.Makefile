@@ -79,3 +79,10 @@ fypotest: tmp/fypo-merge-test.owl tmp/fypotest_report.txt
 
 fix_quality_issue:
 	sed -i 's;ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000019>;ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000001>;g' $(SRC)
+
+tmp/obsolete-terms.txt: $(SRC)
+	$(ROBOT) query -f csv -i $< --query ../sparql/obsolete-terms.sparql $@
+
+clear_obsoletes: tmp/obsolete-terms.txt
+	$(ROBOT) remove --input components/lost-inferred-subsumptions-pre-odk.owl -T $< -o tmp/$@.ofn && mv tmp/$@.ofn components/lost-inferred-subsumptions-pre-odk.owl
+	
