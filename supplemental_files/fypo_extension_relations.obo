@@ -43,7 +43,7 @@ property_value: local_domain FYPO:0000300 ! biological process phenotype
 [Typedef]
 id: assayed_enzyme
 name: assayed_enzyme
-def: "Relation between a catalytic activity phenotype and an enzyme, such as a gene product, with which the phenotype was assayed." [PomBase:mah]
+def: "Relation between a catalytic activity phenotype and an enzyme, usually a gene product, with which the phenotype was assayed." [PomBase:mah]
 comment: normal or abnormal protein kinase activity assayed_enzyme PomBase:SPBC11B10.09
 property_value: local_domain FYPO:0000654 ! catalytic activity phenotype
 is_a: assayed_using
@@ -54,4 +54,28 @@ name: assayed_substrate
 def: "Relation between a catalytic activity phenotype and a substrate, such as a gene product, with which the phenotype was assayed." [PomBase:mah]
 comment: normal or abnormal protein kinase activity assayed_substrate PomBase:SPBC11B10.09
 property_value: local_domain FYPO:0000654 ! catalytic activity phenotype
+is_a: assayed_using
+
+[Typedef]
+id: assayed_protein
+name: assayed_protein
+def: "Relation between a phenotype and a protein gene product with which the phenotype was assayed." [PomBase:mah]
+comment: normal or abnormal protein localization assayed_protein PomBase:SPBC11B10.09
+property_value: local_domain FYPO:0000001 ! phenotype
+is_a: assayed_using
+
+[Typedef]
+id: assayed_transcript
+name: assayed_transcript
+def: "Relation between a phenotype and a transcript, such as a gene product or transcript type in SO, with which the phenotype was assayed." [PomBase:mah]
+comment: normal or abnormal RNA level assayed_substrate PomBase:SPBC11B10.09
+property_value: local_domain FYPO:0000001 ! phenotype
+is_a: assayed_using
+
+[Typedef]
+id: assayed_region
+name: assayed_region
+def: "Relation between a phenotype and the region of the genome in which the phenotype was assayed." [PomBase:mah]
+comment: normal or abnormal protein localization to chromatin assayed_substrate PomBase:SPBC11B10.09
+property_value: local_domain FYPO:0000001 ! phenotype
 is_a: assayed_using
