@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: fypo/releases/2021-05-11/imports/pr_import.owl
+data-version: fypo/releases/2021-05-13/imports/pr_import.owl
 ontology: fypo/imports/pr_import
-property_value: owl:versionInfo "2021-05-11" xsd:string
+property_value: owl:versionInfo "2021-05-13" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -81,7 +81,7 @@ is_a: GO:0032991 ! protein-containing complex
 id: GO:0000502
 name: proteasome complex
 namespace: cellular_component
-def: "A large multisubunit complex which catalyzes protein degradation, found in eukaryotes, archaea and some bacteria. In eukaryotes, this complex consists of the barrel shaped proteasome core complex and one or two associated proteins or complexes that act in regulating entry into or exit from the core." [GOC:rb, http://en.wikipedia.org/wiki/Proteasome]
+def: "A large multisubunit complex which catalyzes protein degradation, found in eukaryotes, archaea and some bacteria. In eukaryotes, this complex consists of the barrel shaped proteasome core complex and one or two associated proteins or complexes that act in regulating entry into or exit from the core." [GOC:rb, Wikipedia:Proteasome]
 synonym: "26S proteasome" NARROW []
 is_a: GO:0032991 ! protein-containing complex
 
@@ -97,7 +97,7 @@ id: GO:0003674
 name: molecular_function
 namespace: molecular_function
 def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
-comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
+comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
 synonym: "molecular function" EXACT []
 
 [Term]
@@ -115,6 +115,13 @@ namespace: cellular_component
 def: "The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together." [GOC:go_curators]
 comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. Note that when this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this.
 synonym: "cell or subcellular entity" EXACT []
+
+[Term]
+id: GO:0005634
+name: nucleus
+namespace: cellular_component
+def: "A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell's chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent." [GOC:go_curators]
+is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0005680
@@ -153,7 +160,7 @@ id: GO:0008150
 name: biological_process
 namespace: biological_process
 def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
-comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 synonym: "biological process" EXACT []
 
 [Term]
@@ -187,6 +194,7 @@ namespace: cellular_component
 def: "Any macromolecular complex composed of two or more polypeptide subunits, which may or may not be identical. Protein complexes may have other associated non-protein prosthetic groups, such as nucleotides, metal ions or carbohydrate groups." [GOC:go_curators]
 comment: Note that although at some level almost all cellular components can be thought of as protein complexes, this term is intended to exclude structures composed of the same repeating subunit or subunits, for example microtubules. Protein complexes encompassed by this term are generally not structural, and usually have a defined set of subunits.
 synonym: "protein-protein complex" EXACT []
+is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0033597
@@ -439,6 +447,7 @@ is_a: PR:000000001 ! protein
 id: SO:0000010
 name: protein_coding
 namespace: sequence
+comment: Category=external.
 synonym: "protein-coding" EXACT []
 is_a: BFO:0000019 ! quality
 
