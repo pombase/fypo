@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: fypo/releases/2021-06-17/imports/chebi_import.owl
+data-version: fypo/releases/2021-06-29/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 ontology: fypo/imports/chebi_import
-property_value: owl:versionInfo "2021-06-17" xsd:string
+property_value: owl:versionInfo "2021-06-29" xsd:string
 
 [Term]
 id: CHEBI:100147
@@ -16621,6 +16621,16 @@ subset: 3_STAR
 synonym: "fungicides" RELATED [ChEBI]
 is_a: CHEBI:25944 ! pesticide
 is_a: CHEBI:35718 ! antifungal agent
+
+[Term]
+id: CHEBI:24129
+name: furans
+namespace: chebi_ontology
+def: "Compounds containing at least one furan ring." []
+subset: 3_STAR
+synonym: "oxacyclopenta-2,4-dienes" RELATED [ChEBI]
+is_a: CHEBI:25693 ! organic heteromonocyclic compound
+is_a: CHEBI:38104 ! oxacycle
 
 [Term]
 id: CHEBI:24265
@@ -47615,6 +47625,15 @@ is_a: CHEBI:38297 ! thiabicycloalkane
 is_a: CHEBI:47857 ! ureas
 
 [Term]
+id: CHEBI:51659
+name: dihydrofuran
+namespace: chebi_ontology
+def: "Compounds containing a mono-unsaturated furan ring skeleton." []
+subset: 3_STAR
+synonym: "dihydrofurans" RELATED [ChEBI]
+is_a: CHEBI:24129 ! furans
+
+[Term]
 id: CHEBI:51683
 name: methoxybenzenes
 namespace: chebi_ontology
@@ -53420,6 +53439,50 @@ xref: PMID:10470363 {source="Europe PMC"}
 is_a: CHEBI:26390 ! purine 2'-deoxyribonucleotide
 is_a: CHEBI:61292 ! guanyl nucleotide
 relationship: is_conjugate_acid_of CHEBI:63529 ! guanyl deoxyribonucleotide oxoanion
+
+[Term]
+id: CHEBI:63581
+name: stavudine
+namespace: chebi_ontology
+alt_id: CHEBI:9253
+def: "A nucleoside analogue obtained by formal dehydration across positions 2 and 3 of thymidine. An inhibitor of HIV-1 reverse transcriptase" []
+subset: 3_STAR
+synonym: "1-(2,3-Dideoxy-beta-D-glycero-pent-2-enofuranosyl)thymine" RELATED [ChemIDplus]
+synonym: "1-[(2R,5S)-5-(hydroxymethyl)-2,5-dihydrofuran-2-yl]-5-methylpyrimidine-2,4(1H,3H)-dione" EXACT IUPAC_NAME [IUPAC]
+synonym: "2',3'-Didehydro-3'-deoxythimidine" RELATED [KEGG_COMPOUND]
+synonym: "3'-Deoxy-2'-thymidinene" RELATED [DrugBank]
+synonym: "d4T" RELATED [KEGG_COMPOUND]
+synonym: "estavudina" RELATED INN [DrugBank]
+synonym: "Sanilvudine" RELATED [KEGG_COMPOUND]
+synonym: "Stavudine" EXACT [KEGG_COMPOUND]
+synonym: "stavudine" RELATED INN [KEGG_DRUG]
+synonym: "stavudinum" RELATED INN [DrugBank]
+synonym: "STV" RELATED [DrugBank]
+xref: CAS:3056-17-5 {source="KEGG COMPOUND"}
+xref: CAS:3056-17-5 {source="ChemIDplus"}
+xref: Drug_Central:2478 {source="DrugCentral"}
+xref: DrugBank:DB00649
+xref: KEGG:C07312
+xref: KEGG:D00445
+xref: LINCS:LSM-5983
+xref: Patent:EP334368
+xref: Patent:US5130421
+xref: Reaxys:618327 {source="Reaxys"}
+xref: Wikipedia:Stavudine
+is_a: CHEBI:50860 ! organic molecular entity
+is_a: CHEBI:51659 ! dihydrofuran
+is_a: CHEBI:60783 ! nucleoside analogue
+relationship: has_functional_parent CHEBI:17821 ! thymine
+relationship: has_role CHEBI:22587 ! antiviral agent
+relationship: has_role CHEBI:35221 ! antimetabolite
+relationship: has_role CHEBI:59897 ! EC 2.7.7.49 (RNA-directed DNA polymerase) inhibitor
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C10H12N2O4" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C10H12N2O4/c1-6-4-12(10(15)11-9(6)14)8-3-2-7(5-13)16-8/h2-4,7-8,13H,5H2,1H3,(H,11,14,15)/t7-,8+/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XNKLLVCARDGLGL-JGVFFNPUSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "224.21330" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "224.07971" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "Cc1cn([C@@H]2O[C@H](CO)C=C2)c(=O)[nH]c1=O" xsd:string
 
 [Term]
 id: CHEBI:63618
