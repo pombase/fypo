@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: fypo/releases/2021-10-05/imports/chebi_import.owl
+data-version: fypo/releases/2021-11-03/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 ontology: fypo/imports/chebi_import
-property_value: owl:versionInfo "2021-10-05" xsd:string
+property_value: owl:versionInfo "2021-11-03" xsd:string
 
 [Term]
 id: CHEBI:100147
@@ -1934,6 +1934,22 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "101.06080
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[O-]C([C@H](CC)C)=O" xsd:string
 
 [Term]
+id: CHEBI:145947
+name: antiatherosclerotic agent
+namespace: chebi_ontology
+def: "A cardiovascular drug that prevents atherosclerosis (a disease in which the inside of an artery narrows due to the build up of plaque). Compare with antiatherogenic agent." []
+subset: 3_STAR
+synonym: "anti-atherosclerotic agent" RELATED [ChEBI]
+synonym: "anti-atherosclerotic agents" RELATED [ChEBI]
+synonym: "anti-atherosclerotic drug" RELATED [ChEBI]
+synonym: "anti-atherosclerotic drugs" RELATED [ChEBI]
+synonym: "antiatherosclerotic agent" EXACT [ChEBI]
+synonym: "antiatherosclerotic agents" RELATED [ChEBI]
+synonym: "antiatherosclerotic drug" RELATED [ChEBI]
+synonym: "antiatherosclerotic drugs" RELATED [ChEBI]
+is_a: CHEBI:35554 ! cardiovascular drug
+
+[Term]
 id: CHEBI:147285
 name: EC 3.4.22.69 (SARS coronavirus main proteinase) inhibitor
 namespace: chebi_ontology
@@ -3420,6 +3436,8 @@ alt_id: CHEBI:9252
 subset: 3_STAR
 synonym: "(+)-Staurosporine" RELATED [ChemIDplus]
 synonym: "(5S,6R,7R,9R)-6-methoxy-5-methyl-7-methylamino-6,7,8,9,15,16-hexahydro-5H,14H-5,9-epoxy-4b,9a,15-triazadibenzo[b,h]cyclonona[1,2,3,4-jkl]cyclopenta[e]-as-indacen-14-one" EXACT IUPAC_NAME [IUPAC]
+synonym: "AM-2282" RELATED [ChemIDplus]
+synonym: "antibiotic AM 2282" RELATED [ChemIDplus]
 synonym: "Staurosporin" RELATED [ChemIDplus]
 synonym: "Staurosporine" EXACT [KEGG_COMPOUND]
 synonym: "STS" RELATED [KEGG_COMPOUND]
@@ -3429,17 +3447,28 @@ xref: DrugBank:DB02010
 xref: KEGG:C02079
 xref: KNApSAcK:C00018127
 xref: LINCS:LSM-1103
+xref: PDBeChem:STU
+xref: PMID:15613975 {source="Europe PMC"}
+xref: PMID:15682296 {source="Europe PMC"}
+xref: PMID:18478334 {source="Europe PMC"}
+xref: PMID:22363408 {source="Europe PMC"}
+xref: PMID:32800439 {source="Europe PMC"}
+xref: PMID:34428735 {source="Europe PMC"}
+xref: Wikipedia:Staurosporine
 is_a: CHEBI:37697 ! indolocarbazole alkaloid
 is_a: CHEBI:38165 ! organic heterooctacyclic compound
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:37700 ! EC 2.7.11.13 (protein kinase C) inhibitor
+relationship: has_role CHEBI:68495 ! apoptosis inducer
+relationship: has_role CHEBI:76969 ! bacterial metabolite
 relationship: is_conjugate_base_of CHEBI:57491 ! staurosporinium
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C28H26N4O3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C28H26N4O3/c1-28-26(34-3)17(29-2)12-20(35-28)31-18-10-6-4-8-14(18)22-23-16(13-30-27(23)33)21-15-9-5-7-11-19(15)32(28)25(21)24(22)31/h4-11,17,20,26,29H,12-13H2,1-3H3,(H,30,33)/t17-,20-,26-,28+/m1/s1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "HKSZLNNOFSGOKW-FYTWVXJKSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "466.53120" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "466.541" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "466.20049" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4CNC(=O)c4c4c5ccccc5n2c4c13" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)N1C3=C(C=CC=C3)C3=C1C1=C(C4=C(C=CC=C4)N21)C1=C3CNC1=O" xsd:string
 
 [Term]
 id: CHEBI:15740
@@ -3528,6 +3557,7 @@ xref: PMID:17439666 {source="Europe PMC"}
 xref: Reaxys:1754069 {source="Reaxys"}
 xref: Wikipedia:Succinic_acid
 xref: YMDB:YMDB00338
+is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:28383 ! alpha,omega-dicarboxylic acid
 is_a: CHEBI:66873 ! C4-dicarboxylic acid
 relationship: has_role CHEBI:27027 ! micronutrient
@@ -3842,10 +3872,12 @@ synonym: "Deoxyglucose" RELATED [ChemIDplus]
 xref: CAS:154-17-6 {source="KEGG COMPOUND"}
 xref: KEGG:C00586
 xref: MetaCyc:2-DEOXY-D-GLUCOSE
+xref: PMID:17908557 {source="Europe PMC"}
 xref: Wikipedia:2-Deoxy-D-glucose
 is_a: CHEBI:23623 ! deoxyglucose
 relationship: has_functional_parent CHEBI:17634 ! D-glucose
 relationship: has_functional_parent CHEBI:4167 ! D-glucopyranose
+relationship: has_role CHEBI:176497 ! geroprotector
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H12O5" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "164.15650" xsd:string
@@ -7080,9 +7112,9 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C30H50O" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C30H50O/c1-20(2)10-9-11-21(3)22-14-18-30(8)24-12-13-25-27(4,5)26(31)16-17-28(25,6)23(24)15-19-29(22,30)7/h10,21-22,25-26,31H,9,11-19H2,1-8H3/t21-,22-,25+,26+,28-,29-,30+/m1/s1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "CAHGCLMLTWQZNJ-BQNIITSRSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "426.71740" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "426.729" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "426.38617" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@H](CCC=C(C)C)[C@H]1CC[C@@]2(C)C3=C(CC[C@]12C)[C@@]1(C)CC[C@H](O)C(C)(C)[C@@H]1CC3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@@]1(CC[C@@]2(C)C3=C(CC[C@]12C)[C@@]1(C)CC[C@H](O)C(C)(C)[C@]1([H])CC3)[C@H](C)CCC=C(C)C" xsd:string
 
 [Term]
 id: CHEBI:16523
@@ -7203,9 +7235,11 @@ xref: LINCS:LSM-37121
 xref: MetaCyc:TREHALOSE
 xref: PDBeChem:TRE
 xref: PMID:17439666 {source="Europe PMC"}
+xref: PMID:20477758 {source="Europe PMC"}
 xref: Reaxys:1292766 {source="Reaxys"}
 xref: Wikipedia:Trehalose
 is_a: CHEBI:27082 ! trehalose
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:75771 ! mouse metabolite
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
@@ -7344,11 +7378,19 @@ xref: KNApSAcK:C00001431
 xref: LINCS:LSM-37075
 xref: MetaCyc:SPERMIDINE
 xref: PDBeChem:SPD
+xref: PMID:1176793 {source="Europe PMC"}
+xref: PMID:19801973 {source="Europe PMC"}
 xref: PMID:22770225 {source="Europe PMC"}
+xref: PMID:30306826 {source="Europe PMC"}
+xref: PMID:516181 {source="Europe PMC"}
+xref: PMID:6156039 {source="Europe PMC"}
+xref: PMID:7350997 {source="Europe PMC"}
 xref: Reaxys:1698591 {source="Reaxys"}
 xref: Wikipedia:Spermidine
 is_a: CHEBI:38751 ! triamine
 is_a: CHEBI:39474 ! polyazaalkane
+relationship: has_role CHEBI:138880 ! autophagy inducer
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:78675 ! fundamental metabolite
 relationship: is_conjugate_base_of CHEBI:57834 ! spermidine(3+)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -8193,9 +8235,11 @@ xref: PMID:19376872 {source="Europe PMC"}
 xref: PMID:21184277 {source="Europe PMC"}
 xref: PMID:21196226 {source="Europe PMC"}
 xref: PMID:21791173 {source="Europe PMC"}
+xref: PMID:24828042 {source="Europe PMC"}
 xref: Reaxys:3664503 {source="Reaxys"}
 is_a: CHEBI:36147 ! oxo dicarboxylate
 relationship: has_functional_parent CHEBI:30921 ! glutarate(2-)
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: has_role CHEBI:84735 ! algal metabolite
@@ -8705,22 +8749,38 @@ synonym: "N-(N-gamma-L-Glutamyl-L-cysteinyl)glycine" RELATED [KEGG_COMPOUND]
 synonym: "Reduced glutathione" RELATED [KEGG_COMPOUND]
 xref: CAS:70-18-8 {source="ChemIDplus"}
 xref: CAS:70-18-8 {source="KEGG COMPOUND"}
+xref: Chemspider:111188
 xref: Drug_Central:1312 {source="DrugCentral"}
 xref: DrugBank:DB00143
+xref: FooDB:FDB001498
 xref: HMDB:HMDB0000125
 xref: KEGG:C00051
 xref: KEGG:D00014
 xref: KNApSAcK:C00001518
 xref: MetaCyc:GLUTATHIONE
 xref: PDBeChem:GSH
+xref: PMID:10577998 {source="Europe PMC"}
+xref: PMID:1362956 {source="Europe PMC"}
+xref: PMID:14988435 {source="Europe PMC"}
+xref: PMID:16112416 {source="Europe PMC"}
+xref: PMID:16316931 {source="Europe PMC"}
+xref: PMID:16391576 {source="Europe PMC"}
+xref: PMID:16404476 {source="Europe PMC"}
+xref: PMID:16621738 {source="Europe PMC"}
+xref: PMID:16650398 {source="Europe PMC"}
+xref: PMID:16780237 {source="Europe PMC"}
+xref: PMID:16877380 {source="Europe PMC"}
 xref: PMID:17439666 {source="Europe PMC"}
+xref: PMID:19580823 {source="Europe PMC"}
 xref: PMID:4200890 {source="Europe PMC"}
 xref: PMID:4745654 {source="Europe PMC"}
+xref: PMID:8207209 {source="Europe PMC"}
 xref: Reaxys:1729812 {source="Reaxys"}
 xref: Wikipedia:Glutathione
 is_a: CHEBI:29256 ! thiol
 is_a: CHEBI:47923 ! tripeptide
 is_a: CHEBI:83824 ! L-cysteine derivative
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:22586 ! antioxidant
 relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:75771 ! mouse metabolite
@@ -9862,6 +9922,7 @@ xref: PMID:23028781 {source="Europe PMC"}
 xref: PMID:23043891 {source="Europe PMC"}
 xref: PMID:23047329 {source="Europe PMC"}
 xref: PMID:24027187 {source="Europe PMC"}
+xref: PMID:24077178 {source="Europe PMC"}
 xref: PMID:24559077 {source="Europe PMC"}
 xref: PMID:24635573 {source="Europe PMC"}
 xref: PMID:25504347 {source="Europe PMC"}
@@ -9879,6 +9940,7 @@ is_a: CHEBI:176839 ! vitamin B3
 is_a: CHEBI:25529 ! pyridinecarboxamide
 is_a: CHEBI:26416 ! pyridine alkaloid
 relationship: has_functional_parent CHEBI:15940 ! nicotinic acid
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:22586 ! antioxidant
 relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:25212 ! metabolite
@@ -12010,6 +12072,7 @@ xref: PMID:28580190 {source="Europe PMC"}
 xref: PMID:30885572 {source="Europe PMC"}
 xref: PMID:33144142 {source="Europe PMC"}
 xref: PMID:33973253 {source="Europe PMC"}
+xref: PMID:34606237 {source="Europe PMC"}
 xref: Wikipedia:Geroprotector
 is_a: CHEBI:50267 ! protective agent
 
@@ -12141,21 +12204,23 @@ alt_id: CHEBI:3603
 alt_id: CHEBI:47327
 def: "An organochlorine compound that is dichloro-substituted acetamide containing a nitrobenzene ring, an amide bond and two alcohol functions." []
 subset: 3_STAR
+synonym: "(-)-chloramphenicol" RELATED [ChEBI]
 synonym: "2,2-dichloro-N-[(1R,2R)-2-hydroxy-1-(hydroxymethyl)-2-(4-nitrophenyl)ethyl]acetamide" EXACT IUPAC_NAME [IUPAC]
+synonym: "Amphicol" RELATED BRAND_NAME [KEGG_DRUG]
 synonym: "Chloramex" RELATED BRAND_NAME [ChemIDplus]
 synonym: "CHLORAMPHENICOL" EXACT [PDBeChem]
 synonym: "Chloramphenicol" EXACT [KEGG_COMPOUND]
 synonym: "chloramphenicol" EXACT [UniProt]
-synonym: "chloramphenicol" RELATED INN [ChemIDplus]
-synonym: "chloramphenicol" RELATED INN [ChEBI]
-synonym: "chloramphenicolum" RELATED INN [ChemIDplus]
+synonym: "chloramphenicol" RELATED INN [WHO_MedNet]
+synonym: "chloramphenicolum" RELATED INN [WHO_MedNet]
 synonym: "chlornitromycin" RELATED [ChEBI]
 synonym: "Chlorocid" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Chlorocol" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Chloromycetin" RELATED BRAND_NAME [ChemIDplus]
-synonym: "cloramfenicol" RELATED INN [ChemIDplus]
+synonym: "cloramfenicol" RELATED INN [WHO_MedNet]
 synonym: "D-(-)-2,2-dichloro-N-(beta-hydroxy-alpha-(hydroxymethyl)-p-nitrophenylethyl)acetamide" RELATED [ChemIDplus]
 synonym: "D-(-)-threo-1-p-nitrophenyl-2-dichloroacetylamino-1,3-propanediol" RELATED [ChemIDplus]
+synonym: "Econochlor" RELATED BRAND_NAME [KEGG_DRUG]
 synonym: "Fenicol" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Globenicol" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Halomycetin" RELATED BRAND_NAME [ChemIDplus]
@@ -12165,13 +12230,16 @@ synonym: "levomycetin" RELATED [ChemIDplus]
 synonym: "Oleomycetin" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Sificetina" RELATED BRAND_NAME [ChemIDplus]
 xref: Beilstein:2225532 {source="Beilstein"}
-xref: CAS:56-75-7 {source="KEGG COMPOUND"}
+xref: CAS:56-75-7 {source="NIST Chemistry WebBook"}
 xref: CAS:56-75-7 {source="ChemIDplus"}
+xref: Chemspider:5744
 xref: Drug_Central:589 {source="DrugCentral"}
 xref: DrugBank:DB00446
+xref: HMDB:HMDB0014589
 xref: KEGG:C00918
 xref: KEGG:D00104
 xref: LINCS:LSM-5256
+xref: MetaCyc:CHLORAMPHENICOL
 xref: Patent:GB795131
 xref: Patent:GB796901
 xref: Patent:US2483871
@@ -12179,12 +12247,14 @@ xref: Patent:US2483884
 xref: Patent:US2483892
 xref: Patent:US2839577
 xref: PDBeChem:CLM
+xref: Pesticides:chloramphenicol {source="Alan Wood's Pesticides"}
 xref: PMID:11468347 {source="Europe PMC"}
 xref: PMID:12217690 {source="Europe PMC"}
 xref: PMID:16659995 {source="Europe PMC"}
 xref: PMID:16897441 {source="Europe PMC"}
 xref: PMID:17217404 {source="Europe PMC"}
 xref: PMID:17692887 {source="Europe PMC"}
+xref: PMID:17963326 {source="Europe PMC"}
 xref: PMID:18559535 {source="Europe PMC"}
 xref: PMID:18657290 {source="Europe PMC"}
 xref: PMID:18794387 {source="Europe PMC"}
@@ -12193,8 +12263,10 @@ xref: PMID:23317719 {source="Europe PMC"}
 xref: PMID:23395526 {source="Europe PMC"}
 xref: PMID:23494278 {source="Europe PMC"}
 xref: PMID:23512826 {source="Europe PMC"}
+xref: PMID:23698443 {source="Europe PMC"}
 xref: PMID:657786 {source="Europe PMC"}
 xref: PMID:6653106 {source="Europe PMC"}
+xref: PMID:7040026 {source="Europe PMC"}
 xref: VSDB:1835
 xref: Wikipedia:Chloramphenicol
 is_a: CHEBI:23824 ! diol
@@ -12202,6 +12274,7 @@ is_a: CHEBI:35716 ! C-nitro compound
 is_a: CHEBI:36683 ! organochlorine compound
 is_a: CHEBI:37622 ! carboxamide
 relationship: has_role CHEBI:131604 ! Mycoplasma genitalium metabolite
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:33281 ! antimicrobial agent
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: has_role CHEBI:48001 ! protein synthesis inhibitor
@@ -12383,9 +12456,11 @@ xref: Beilstein:635685 {source="Beilstein"}
 xref: CAS:56-81-5 {source="KEGG COMPOUND"}
 xref: CAS:56-81-5 {source="NIST Chemistry WebBook"}
 xref: CAS:56-81-5 {source="ChemIDplus"}
+xref: Chemspider:733
 xref: Drug_Central:1316 {source="DrugCentral"}
 xref: DrugBank:DB04077
 xref: ECMDB:ECMDB00131
+xref: FooDB:FDB000756
 xref: Gmelin:26279 {source="Gmelin"}
 xref: HMDB:HMDB0000131
 xref: KEGG:C00116
@@ -12396,17 +12471,24 @@ xref: MetaCyc:GLYCEROL
 xref: PDB:2AJS
 xref: PDB:2D03
 xref: PDBeChem:GOL
+xref: PMID:11302662 {source="Europe PMC"}
 xref: PMID:11958517 {source="Europe PMC"}
+xref: PMID:11994365 {source="Europe PMC"}
 xref: PMID:12672239 {source="ChEMBL"}
+xref: PMID:12687625 {source="Europe PMC"}
 xref: PMID:12689633 {source="Europe PMC"}
+xref: PMID:12713573 {source="Europe PMC"}
 xref: PMID:14559393 {source="Europe PMC"}
 xref: PMID:14563847 {source="Europe PMC"}
+xref: PMID:15026783 {source="Europe PMC"}
 xref: PMID:15342117 {source="Europe PMC"}
 xref: PMID:15786693 {source="Europe PMC"}
+xref: PMID:15983192 {source="Europe PMC"}
 xref: PMID:16244855 {source="Europe PMC"}
 xref: PMID:16258193 {source="Europe PMC"}
 xref: PMID:16319039 {source="Europe PMC"}
 xref: PMID:16349488 {source="Europe PMC"}
+xref: PMID:16475911 {source="Europe PMC"}
 xref: PMID:16651733 {source="Europe PMC"}
 xref: PMID:16664750 {source="Europe PMC"}
 xref: PMID:16901854 {source="Europe PMC"}
@@ -12423,7 +12505,10 @@ xref: PMID:22705534 {source="Europe PMC"}
 xref: PMID:23562176 {source="Europe PMC"}
 xref: PMID:23747440 {source="Europe PMC"}
 xref: PMID:24643482 {source="Europe PMC"}
+xref: PMID:24835191 {source="Europe PMC"}
 xref: PMID:25108762 {source="Europe PMC"}
+xref: PMID:558160 {source="Europe PMC"}
+xref: PMID:6299616 {source="Europe PMC"}
 xref: PMID:7031247 {source="ChEMBL"}
 xref: PMID:7392035 {source="ChEMBL"}
 xref: PPDB:1317
@@ -12433,6 +12518,7 @@ xref: Wikipedia:Glycerol
 xref: YMDB:YMDB00283
 is_a: CHEBI:17522 ! alditol
 is_a: CHEBI:27136 ! triol
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:25728 ! osmolyte
 relationship: has_role CHEBI:27780 ! detergent
 relationship: has_role CHEBI:46787 ! solvent
@@ -12791,6 +12877,7 @@ xref: PMID:24587932 {source="Europe PMC"}
 xref: PMID:24900967 {source="Europe PMC"}
 xref: Reaxys:1209725 {source="Reaxys"}
 xref: Wikipedia:Glutaric_acid
+is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:28383 ! alpha,omega-dicarboxylic acid
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: has_role CHEBI:83056 ! Daphnia magna metabolite
@@ -14719,9 +14806,11 @@ xref: CAS:22537-22-0 {source="NIST Chemistry WebBook"}
 xref: Gmelin:6857 {source="Gmelin"}
 xref: KEGG:C00305
 xref: PDBeChem:MG
+xref: PMID:24259558 {source="Europe PMC"}
 is_a: CHEBI:30412 ! monoatomic dication
 is_a: CHEBI:39127 ! magnesium cation
 is_a: CHEBI:60240 ! divalent metal cation
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:23357 ! cofactor
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "Mg" xsd:string
@@ -19016,28 +19105,50 @@ relationship: is_conjugate_acid_of CHEBI:84139 ! myo-inositol phosphate(2-)
 id: CHEBI:25461
 name: myxothiazol
 namespace: chebi_ontology
+alt_id: CHEBI:44129
 def: "A 2,4'-bi-1,3-thiazole substituted at the 4-position with a (1E,3S,4R,5E)-7-amino-3,5-dimethoxy-4-methyl-7-oxohepta-1,5-dien-1-yl] group and at the 2'-position with a (2S,3E,5E)-7-methylocta-3,5-dien-2-yl group. It is an inhibitor of coenzyme Q - cytochrome c reductase." []
 subset: 3_STAR
 synonym: "(+)-myxothiazol" RELATED [ChEBI]
-synonym: "(2E,4R,5S,6E)-3,5-dimethoxy-4-methyl-7-{2'-[(2S,3E,5E)-7-methylocta-3,5-dien-2-yl]-2,4'-bi-1,3-thiazol-4-yl}hepta-2,6-dienamide" EXACT IUPAC_NAME [IUPAC]
+synonym: "(+)-myxothiazol A" RELATED [ChEBI]
+synonym: "(2E,4R,5S,6E)-3,5-dimethoxy-4-methyl-7-{2'-[(2S,3E,5E)-7-methylocta-3,5-dien-2-yl][2,4'-bi-1,3-thiazol]-4-yl}hepta-2,6-dienamide" EXACT IUPAC_NAME [IUPAC]
 synonym: "Myxothiazol A" RELATED [KEGG_COMPOUND]
 xref: CAS:76706-55-3 {source="ChemIDplus"}
 xref: CAS:76706-55-3 {source="KEGG COMPOUND"}
 xref: DrugBank:DB04741
 xref: KEGG:C15674
 xref: KNApSAcK:C00018319
+xref: MetaCyc:CPD0-1244
 xref: PDBeChem:MYX
+xref: PMID:10853768 {source="Europe PMC"}
+xref: PMID:11134965 {source="Europe PMC"}
+xref: PMID:11237706 {source="Europe PMC"}
+xref: PMID:12176058 {source="Europe PMC"}
+xref: PMID:15312779 {source="Europe PMC"}
+xref: PMID:16081299 {source="Europe PMC"}
+xref: PMID:18221415 {source="Europe PMC"}
+xref: PMID:24414973 {source="Europe PMC"}
+xref: PMID:24661880 {source="Europe PMC"}
+xref: PMID:2753821 {source="Europe PMC"}
+xref: PMID:2846049 {source="Europe PMC"}
+xref: PMID:29402945 {source="Europe PMC"}
+xref: PMID:31079230 {source="Europe PMC"}
+xref: PMID:6274398 {source="Europe PMC"}
+xref: PMID:6752659 {source="Europe PMC"}
+xref: PMID:7247372 {source="Europe PMC"}
+xref: PMID:7271921 {source="Europe PMC"}
+xref: Wikipedia:Myxothiazol
 is_a: CHEBI:29347 ! monocarboxylic acid amide
 is_a: CHEBI:38418 ! 1,3-thiazoles
-relationship: has_role CHEBI:25212 ! metabolite
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:25355 ! mitochondrial respiratory-chain inhibitor
+relationship: has_role CHEBI:76969 ! bacterial metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C25H33N3O3S2" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C25H33N3O3S2/c1-16(2)9-7-8-10-17(3)24-28-20(15-33-24)25-27-19(14-32-25)11-12-21(30-5)18(4)22(31-6)13-23(26)29/h7-18,21H,1-6H3,(H2,26,29)/b9-7+,10-8+,12-11+,22-13+/t17?,18-,21+/m1/s1" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XKTFQMCPGMTBMD-YCSHSZEBSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "487.67800" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C25H33N3O3S2/c1-16(2)9-7-8-10-17(3)24-28-20(15-33-24)25-27-19(14-32-25)11-12-21(30-5)18(4)22(31-6)13-23(26)29/h7-18,21H,1-6H3,(H2,26,29)/b9-7+,10-8+,12-11+,22-13+/t17-,18+,21-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XKTFQMCPGMTBMD-FYHMSGCOSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "487.680" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "487.19633" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "CO[C@@H](\\C=C\\c1csc(n1)-c1csc(n1)C(C)\\C=C\\C=C\\C(C)C)[C@@H](C)C(\\OC)=C/C(N)=O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "CO[C@@H](\\C=C\\C1=CSC(=N1)C1=CSC(=N1)[C@@H](C)\\C=C\\C=C\\C(C)C)[C@@H](C)C(\\OC)=C/C(N)=O" xsd:string
 
 [Term]
 id: CHEBI:25471
@@ -22778,6 +22889,7 @@ xref: PMID:17957400 {source="Europe PMC"}
 xref: PMID:18068204 {source="Europe PMC"}
 xref: PMID:18258404 {source="Europe PMC"}
 xref: PMID:18421070 {source="Europe PMC"}
+xref: PMID:18513215 {source="Europe PMC"}
 xref: PMID:18625110 {source="Europe PMC"}
 xref: PMID:18647558 {source="Europe PMC"}
 xref: PMID:19007524 {source="Europe PMC"}
@@ -22788,7 +22900,10 @@ xref: PMID:19418355 {source="Europe PMC"}
 xref: PMID:19879252 {source="Europe PMC"}
 xref: PMID:20164568 {source="Europe PMC"}
 xref: PMID:20470411 {source="Europe PMC"}
+xref: PMID:22114686 {source="Europe PMC"}
 xref: PMID:22770225 {source="Europe PMC"}
+xref: PMID:23551936 {source="Europe PMC"}
+xref: PMID:24039592 {source="Europe PMC"}
 xref: PMID:7441110 {source="Europe PMC"}
 xref: PMID:7689104 {source="Europe PMC"}
 xref: PMID:8332255 {source="Europe PMC"}
@@ -22802,6 +22917,7 @@ xref: Reaxys:17705 {source="Reaxys"}
 xref: Wikipedia:Caffeine
 is_a: CHEBI:26385 ! purine alkaloid
 is_a: CHEBI:27134 ! trimethylxanthine
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:25435 ! mutagen
 relationship: has_role CHEBI:35337 ! central nervous system stimulant
 relationship: has_role CHEBI:35471 ! psychotropic drug
@@ -23364,6 +23480,7 @@ subset: 3_STAR
 synonym: "1,7,7-trimethylbicyclo[2.2.1]heptan-2-ol" EXACT IUPAC_NAME [IUPAC]
 synonym: "Borneo camphor" RELATED [NIST_Chemistry_WebBook]
 synonym: "Borneol" EXACT [KEGG_COMPOUND]
+synonym: "borneol" EXACT [UniProt]
 synonym: "bornyl alcohol" RELATED [NIST_Chemistry_WebBook]
 synonym: "endo-1,7,7-trimethylbicyclo[2.2.1]heptan-2-ol" RELATED [NIST_Chemistry_WebBook]
 synonym: "endo-2-bornanol" RELATED [NIST_Chemistry_WebBook]
@@ -23669,12 +23786,14 @@ xref: PMID:16522014 {source="Europe PMC"}
 xref: PMID:19096138 {source="Europe PMC"}
 xref: PMID:19382398 {source="Europe PMC"}
 xref: PMID:19443933 {source="Europe PMC"}
+xref: PMID:20828537 {source="Europe PMC"}
 xref: PMID:21426213 {source="Europe PMC"}
 xref: PMID:22030943 {source="Europe PMC"}
 xref: PMID:22722716 {source="Europe PMC"}
 xref: PMID:22768202 {source="Europe PMC"}
 xref: PMID:22814967 {source="Europe PMC"}
 xref: PMID:23050031 {source="Europe PMC"}
+xref: PMID:23313473 {source="Europe PMC"}
 xref: PMID:28220525 {source="Europe PMC"}
 xref: PMID:29938311 {source="Europe PMC"}
 xref: PMID:31489176 {source="Europe PMC"}
@@ -23691,6 +23810,7 @@ xref: UM-BBD_compID:c0236 {source="UM-BBD"}
 xref: Wikipedia:Dimethyl_sulfoxide
 is_a: CHEBI:134179 ! volatile organic compound
 is_a: CHEBI:22063 ! sulfoxide
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:22333 ! alkylating agent
 relationship: has_role CHEBI:35481 ! non-narcotic analgesic
 relationship: has_role CHEBI:37335 ! MRI contrast agent
@@ -25555,32 +25675,6 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "41.99799"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[*]N([*])C([*])=O" xsd:string
 
 [Term]
-id: CHEBI:29348
-name: fatty amide
-namespace: chebi_ontology
-alt_id: CHEBI:13247
-alt_id: CHEBI:22310
-alt_id: CHEBI:22330
-alt_id: CHEBI:2572
-alt_id: CHEBI:35749
-alt_id: CHEBI:38838
-def: "A monocarboxylic acid amide derived from a fatty acid." []
-subset: 3_STAR
-synonym: "Aliphatic amide" RELATED [KEGG_COMPOUND]
-synonym: "fatty amide" EXACT [ChEBI]
-synonym: "fatty amides" RELATED [LIPID_MAPS]
-xref: KEGG:C02244
-xref: LIPID_MAPS_class:LMFA08 {source="LIPID MAPS"}
-is_a: CHEBI:18059 ! lipid
-is_a: CHEBI:29347 ! monocarboxylic acid amide
-is_a: CHEBI:61697 ! fatty acid derivative
-relationship: has_functional_parent CHEBI:35366 ! fatty acid
-property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/formula "CHNOR2" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "43.025" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "43.00581" xsd:string
-
-[Term]
 id: CHEBI:29369
 name: peroxy group
 namespace: chebi_ontology
@@ -25698,21 +25792,71 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@@]12C[C@@](O)
 
 [Term]
 id: CHEBI:29623
-name: Manumycin A
+name: manumycin A
 namespace: chebi_ontology
-subset: 2_STAR
-synonym: "Manumycin" RELATED [KEGG_COMPOUND]
-synonym: "Manumycin A" EXACT [KEGG_COMPOUND]
-xref: CAS:52665-74-4 {source="KEGG COMPOUND"}
+def: "A polyketide with formula C31H38N2O7 initially isolated from Streptomyces parvulus as a result of a random screening program for farnesyl transferase (FTase) inhibitors. It is a natural product that exhibits anticancer and antibiotic properties." []
+subset: 3_STAR
+synonym: "(-)-manumycin A" RELATED [ChEBI]
+synonym: "(2E,4E,6R)-N-[(1S,5S,6R)-5-Hydroxy-5-[(1E,3E,5E)-7-[(2-hydroxy-5-oxo-1-cyclopenten-1-yl)amino]-7-oxo-1,3,5-heptatrien-1-yl]-2-oxo-7-oxabicyclo[4.1.0]hept-3-en-3-yl]-2,4,6-trimethyl-2,4-decadienamide" RELATED [ChEBI]
+synonym: "(2E,4E,6R)-N-[(1S,5S,6R)-5-hydroxy-5-{(1E,3E,5E)-7-[(2-hydroxy-5-oxocyclopent-1-en-1-yl)amino]-7-oxohepta-1,3,5-trien-1-yl}-2-oxo-7-oxabicyclo[4.1.0]hept-3-en-3-yl]-2,4,6-trimethyldeca-2,4-dienamide" EXACT IUPAC_NAME [IUPAC]
+synonym: "manumycin" RELATED [KEGG_COMPOUND]
+synonym: "manumycin A" EXACT [KEGG_COMPOUND]
+synonym: "NSC 622141" RELATED [ChEBI]
+synonym: "UCF 1C" RELATED [ChEBI]
+synonym: "UCF1-C" RELATED [ChEBI]
+xref: CAS:52665-74-4 {source="ChemIDplus"}
+xref: Chemspider:4942813
+xref: HMDB:HMDB0242678
 xref: KEGG:C12111
-is_a: CHEBI:29348 ! fatty amide
+xref: LIPID_MAPS_instance:LMFA08020185 {source="LIPID MAPS"}
+xref: MetaCyc:CPD-18768
+xref: PMCID:PMC3513075 {source="Europe PMC"}
+xref: PMID:12699746 {source="Europe PMC"}
+xref: PMID:15787434 {source="Europe PMC"}
+xref: PMID:17363690 {source="Europe PMC"}
+xref: PMID:21349982 {source="Europe PMC"}
+xref: PMID:22272079 {source="Europe PMC"}
+xref: PMID:23328664 {source="Europe PMC"}
+xref: PMID:23730936 {source="Europe PMC"}
+xref: PMID:23828222 {source="Europe PMC"}
+xref: PMID:24899815 {source="Europe PMC"}
+xref: PMID:25556058 {source="Europe PMC"}
+xref: PMID:26602157 {source="Europe PMC"}
+xref: PMID:26962870 {source="Europe PMC"}
+xref: PMID:27176604 {source="Europe PMC"}
+xref: PMID:27307747 {source="Europe PMC"}
+xref: PMID:27878284 {source="Europe PMC"}
+xref: PMID:28844715 {source="Europe PMC"}
+xref: PMID:29670693 {source="Europe PMC"}
+xref: PMID:30476593 {source="Europe PMC"}
+xref: PMID:30785834 {source="Europe PMC"}
+xref: PMID:32298799 {source="Europe PMC"}
+xref: PMID:32344935 {source="Europe PMC"}
+xref: PMID:33719954 {source="Europe PMC"}
+xref: PMID:34200371 {source="Europe PMC"}
+xref: PMID:3693123 {source="Europe PMC"}
+xref: PMID:8460134 {source="Europe PMC"}
+is_a: CHEBI:140325 ! secondary carboxamide
+is_a: CHEBI:26188 ! polyketide
+is_a: CHEBI:26878 ! tertiary alcohol
+is_a: CHEBI:27171 ! organic heterobicyclic compound
+is_a: CHEBI:32955 ! epoxide
+is_a: CHEBI:51751 ! enamide
+relationship: has_role CHEBI:145947 ! antiatherosclerotic agent
+relationship: has_role CHEBI:33281 ! antimicrobial agent
+relationship: has_role CHEBI:35610 ! antineoplastic agent
+relationship: has_role CHEBI:64133 ! EC 2.5.1.58 (protein farnesyltransferase) inhibitor
+relationship: has_role CHEBI:64670 ! EC 1.8.1.9 (thioredoxin reductase) inhibitor
+relationship: has_role CHEBI:68495 ! apoptosis inducer
+relationship: has_role CHEBI:76507 ! marine metabolite
+relationship: has_role CHEBI:76969 ! bacterial metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C31H38N2O7" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C31H38N2O7/c1-5-6-11-19(2)16-20(3)17-21(4)30(38)32-22-18-31(39,29-28(40-29)27(22)37)15-10-8-7-9-12-25(36)33-26-23(34)13-14-24(26)35/h7-10,12,15-19,28-29,34,39H,5-6,11,13-14H2,1-4H3,(H,32,38)(H,33,36)/b8-7+,12-9+,15-10+,20-16+,21-17+/t19-,28-,29-,31+/m1/s1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "TWWQHCKLTXDWBD-MVTGTTCWSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "550.644" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "550.652" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "550.26790" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCCC[C@@H](C)\\C=C(C)\\C=C(/C)C(=O)NC1=C[C@@](O)(\\C=C\\C=C\\C=C\\C(=O)NC2=C(O)CCC2=O)[C@@H]2O[C@@H]2C1=O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCCC[C@@H](C)\\C=C(/C)\\C=C(/C)C(=O)NC1=C[C@@](O)(\\C=C\\C=C\\C=C\\C(=O)NC2=C(O)CCC2=O)[C@@H]2O[C@@H]2C1=O" xsd:string
 
 [Term]
 id: CHEBI:29678
@@ -26298,7 +26442,6 @@ xref: MetaCyc:SUC
 xref: PMID:17190852 {source="Europe PMC"}
 xref: Reaxys:1863859 {source="Reaxys"}
 xref: UM-BBD_compID:c0312 {source="UM-BBD"}
-is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:26806 ! succinate
 is_a: CHEBI:28965 ! dicarboxylic acid dianion
 is_a: CHEBI:61336 ! C4-dicarboxylate
@@ -27561,7 +27704,6 @@ synonym: "pentanedioate" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:3904695 {source="Beilstein"}
 xref: Gmelin:240388 {source="Gmelin"}
 xref: Reaxys:3904695 {source="Reaxys"}
-is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:24329 ! glutarate
 is_a: CHEBI:28965 ! dicarboxylic acid dianion
 relationship: has_role CHEBI:77746 ! human metabolite
@@ -28963,6 +29105,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Cl-].[K+]" xsd:str
 id: CHEBI:3259
 name: CCCP
 namespace: chebi_ontology
+def: "A member of the class of monochlorobenzenes that is benzene substituted by 2-(1,3-dinitrilopropan-2-ylidene)hydrazinyl and chloro groups at positions 1 and 3, respectively. It is a mitochondrial depolarizing agent that induces reactive oxygen species mediated cell death." []
 subset: 3_STAR
 synonym: "(3-chlorophenyl)hydrazonomalononitrile" RELATED [ChemIDplus]
 synonym: "[(3-chlorophenyl)hydrazono]malononitrile" RELATED [ChemIDplus]
@@ -28972,14 +29115,33 @@ synonym: "carbonylcyanide-3-chlorophenylhydrazone" RELATED [ChemIDplus]
 synonym: "CCCP" EXACT [KEGG_COMPOUND]
 synonym: "N'-(3-chlorophenyl)carbonohydrazonoyl dicyanide" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:1842102 {source="ChemIDplus"}
-xref: CAS:555-60-2 {source="KEGG COMPOUND"}
 xref: CAS:555-60-2 {source="ChemIDplus"}
+xref: CAS:555-60-2 {source="KEGG COMPOUND"}
+xref: Chemspider:2504
 xref: KEGG:C11164
 xref: LINCS:LSM-2341
+xref: PMID:19442682 {source="Europe PMC"}
+xref: PMID:25557480 {source="Europe PMC"}
+xref: PMID:26208452 {source="Europe PMC"}
+xref: PMID:26351918 {source="Europe PMC"}
+xref: PMID:29241732 {source="Europe PMC"}
+xref: PMID:29277693 {source="Europe PMC"}
+xref: PMID:29734380 {source="Europe PMC"}
+xref: PMID:30123191 {source="Europe PMC"}
+xref: PMID:31346323 {source="Europe PMC"}
+xref: PMID:31956228 {source="Europe PMC"}
+xref: PMID:32936131 {source="Europe PMC"}
+xref: PMID:33096791 {source="Europe PMC"}
+xref: PMID:33790590 {source="Europe PMC"}
+xref: PMID:33837631 {source="Europe PMC"}
+xref: Wikipedia:Carbonyl_cyanide_m-chlorophenyl_hydrazone
 is_a: CHEBI:18379 ! nitrile
 is_a: CHEBI:38532 ! hydrazone
 is_a: CHEBI:83403 ! monochlorobenzenes
 relationship: has_functional_parent CHEBI:33189 ! hydrazonomalononitrile
+relationship: has_role CHEBI:176497 ! geroprotector
+relationship: has_role CHEBI:24869 ! ionophore
+relationship: has_role CHEBI:33282 ! antibacterial agent
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C9H5ClN4" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C9H5ClN4/c10-7-2-1-3-8(4-7)13-14-9(5-11)6-12/h1-4,13H" xsd:string
@@ -34045,28 +34207,55 @@ name: 2,6-di-tert-butyl-4-methylphenol
 namespace: chebi_ontology
 def: "A member of the class of  phenols that is 4-methylphenol substituted by tert-butyl groups at positions 2 and 6." []
 subset: 3_STAR
-synonym: "2,6-Bis(1,1-dimethylethyl)-4-methylphenol" RELATED [KEGG_COMPOUND]
-synonym: "2,6-Di-t-butyl-4-methylphenol" RELATED [KEGG_COMPOUND]
-synonym: "2,6-Di-tert-butyl-1-hydroxy-4-methylbenzene" RELATED [ChemIDplus]
-synonym: "2,6-Di-tert-butyl-4-cresol" RELATED [ChemIDplus]
-synonym: "2,6-Di-tert-butyl-p-cresol" RELATED [KEGG_COMPOUND]
+synonym: "1-hydroxy-4-methyl-2,6-di-tert-butylbenzene" RELATED [ChemIDplus]
+synonym: "2,6-bis(1,1-dimethylethyl)-4-methylphenol" RELATED [KEGG_COMPOUND]
+synonym: "2,6-di-t-butyl-4-methylphenol" RELATED [KEGG_COMPOUND]
+synonym: "2,6-di-t-butyl-p-cresol" RELATED [ChemIDplus]
+synonym: "2,6-di-tert-butyl-1-hydroxy-4-methylbenzene" RELATED [ChemIDplus]
+synonym: "2,6-di-tert-butyl-4-cresol" RELATED [ChemIDplus]
+synonym: "2,6-di-tert-butyl-4-hydroxytoluene" RELATED [ChemIDplus]
+synonym: "2,6-di-tert-butyl-4-methylhydroxybenzene" RELATED [ChemIDplus]
+synonym: "2,6-di-tert-butyl-4-methylphenol" EXACT IUPAC_NAME [IUPAC]
+synonym: "2,6-di-tert-butyl-p-cresol" RELATED [KEGG_COMPOUND]
 synonym: "BHT" RELATED [KEGG_COMPOUND]
-synonym: "Butylated hydroxytoluene" RELATED [KEGG_COMPOUND]
-synonym: "Butylhydroxytoluene" RELATED [KEGG_COMPOUND]
+synonym: "butylated hydroxytoluene" RELATED [KEGG_COMPOUND]
+synonym: "butylhydroxytoluene" RELATED [KEGG_COMPOUND]
+synonym: "FEMA 2184" RELATED [HMDB]
+synonym: "o-di-tert-butyl-p-methylphenol" RELATED [ChemIDplus]
 xref: Beilstein:1911640 {source="Beilstein"}
+xref: CAS:128-37-0 {source="NIST Chemistry WebBook"}
 xref: CAS:128-37-0 {source="ChemIDplus"}
-xref: CAS:128-37-0 {source="KEGG COMPOUND"}
+xref: Chemspider:13835296
+xref: FooDB:FDB011992
+xref: HMDB:HMDB0033826
 xref: KEGG:C14693
 xref: KEGG:D02413
 xref: LINCS:LSM-19020
 xref: PMID:11837686 {source="Europe PMC"}
 xref: PMID:24612426 {source="Europe PMC"}
 xref: PMID:24617543 {source="Europe PMC"}
+xref: PMID:29864697 {source="Europe PMC"}
+xref: PMID:31029976 {source="Europe PMC"}
+xref: PMID:31780362 {source="Europe PMC"}
+xref: PMID:32304926 {source="Europe PMC"}
+xref: PMID:32322261 {source="Europe PMC"}
+xref: PMID:32387881 {source="Europe PMC"}
+xref: PMID:32397407 {source="Europe PMC"}
+xref: PMID:32963880 {source="Europe PMC"}
+xref: PMID:33039371 {source="Europe PMC"}
+xref: PMID:33091556 {source="Europe PMC"}
+xref: PMID:33519739 {source="Europe PMC"}
+xref: PMID:33792845 {source="Europe PMC"}
+xref: PMID:34013795 {source="Europe PMC"}
+xref: PMID:34041400 {source="Europe PMC"}
+xref: PMID:34443068 {source="Europe PMC"}
+xref: PMID:448040 {source="Europe PMC"}
 xref: Reaxys:1911640 {source="Reaxys"}
 xref: Wikipedia:Butylated_hydroxytoluene
 is_a: CHEBI:33853 ! phenols
 relationship: has_functional_parent CHEBI:15882 ! phenol
 relationship: has_role CHEBI:173084 ! ferroptosis inhibitor
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:22586 ! antioxidant
 relationship: has_role CHEBI:64047 ! food additive
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -34383,12 +34572,16 @@ xref: Beilstein:3590305 {source="Beilstein"}
 xref: CAS:4685-14-7 {source="ChemIDplus"}
 xref: CAS:4685-14-7 {source="NIST Chemistry WebBook"}
 xref: CAS:4685-14-7 {source="KEGG COMPOUND"}
+xref: Chemspider:15147
+xref: FooDB:FDB011120
 xref: Gmelin:51125 {source="Gmelin"}
 xref: KEGG:C14701
+xref: Pesticides:paraquat {source="Alan Wood's Pesticides"}
 xref: PMID:11349957 {source="Europe PMC"}
 xref: PMID:18620719 {source="Europe PMC"}
 xref: PMID:20377249 {source="Europe PMC"}
 xref: PMID:20582739 {source="Europe PMC"}
+xref: PMID:21151885 {source="Europe PMC"}
 xref: PMID:21236547 {source="Europe PMC"}
 xref: PMID:21300143 {source="Europe PMC"}
 xref: PMID:21318114 {source="Europe PMC"}
@@ -34406,6 +34599,7 @@ xref: PPDB:505
 xref: Reaxys:3590305 {source="Reaxys"}
 is_a: CHEBI:25697 ! organic cation
 relationship: has_parent_hydride CHEBI:30985 ! 4,4'-bipyridine
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:24527 ! herbicide
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C12H14N2" xsd:string
@@ -35135,7 +35329,7 @@ namespace: chebi_ontology
 alt_id: CHEBI:13633
 alt_id: CHEBI:24024
 alt_id: CHEBI:4984
-def: "Any aliphatic monocarboxylic acid derived from or contained in esterified form in an animal or vegetable fat, oil or wax." []
+def: "Any aliphatic monocarboxylic acid derived from or contained in esterified form in an animal or vegetable fat, oil or wax. Natural fatty acids commonly have a chain of 4 to 28 carbons (usually unbranched and even-numbered), which may be saturated or unsaturated. By extension, the term is sometimes used to embrace all acyclic aliphatic carboxylic acids." []
 subset: 3_STAR
 synonym: "acide gras" RELATED [ChEBI]
 synonym: "acides gras" RELATED [ChemIDplus]
@@ -37172,7 +37366,6 @@ alt_id: CHEBI:22957
 subset: 3_STAR
 synonym: "but-2-enedioate" EXACT IUPAC_NAME [IUPAC]
 xref: Gmelin:874013 {source="Gmelin"}
-is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:28965 ! dicarboxylic acid dianion
 is_a: CHEBI:61336 ! C4-dicarboxylate
 relationship: is_conjugate_base_of CHEBI:37155 ! hydrogen butenedioate
@@ -37895,6 +38088,7 @@ synonym: "2-camphanone" RELATED [NIST_Chemistry_WebBook]
 synonym: "2-keto-1,7,7-trimethylnorcamphane" RELATED [ChemIDplus]
 synonym: "bornan-2-one" EXACT IUPAC_NAME [IUPAC]
 synonym: "Camphor" EXACT [KEGG_COMPOUND]
+synonym: "camphor" EXACT [UniProt]
 synonym: "camphor" EXACT [ChemIDplus]
 synonym: "Formosa camphor" RELATED [NIST_Chemistry_WebBook]
 synonym: "gum camphor" RELATED [ChemIDplus]
@@ -41235,14 +41429,19 @@ synonym: "Natural yellow 3" RELATED [ChemIDplus]
 synonym: "Turmeric yellow" RELATED [ChemIDplus]
 xref: CAS:458-37-7 {source="ChemIDplus"}
 xref: CAS:458-37-7 {source="KEGG COMPOUND"}
+xref: Chemspider:839564
+xref: DrugBank:DB11672
 xref: HMDB:HMDB0002269
 xref: KEGG:C10443
 xref: KNApSAcK:C00002731
+xref: LINCS:LSM-43083
 xref: MetaCyc:CPD-6602
 xref: Patent:DE859145
 xref: Patent:KR20130050834
+xref: PDBeChem:CC9
 xref: PMID:10923784 {source="Europe PMC"}
 xref: PMID:12083767 {source="Europe PMC"}
+xref: PMID:12450549 {source="Europe PMC"}
 xref: PMID:12826232 {source="Europe PMC"}
 xref: PMID:14561543 {source="Europe PMC"}
 xref: PMID:14634121 {source="Europe PMC"}
@@ -41254,6 +41453,8 @@ xref: PMID:15842781 {source="Europe PMC"}
 xref: PMID:15879598 {source="Europe PMC"}
 xref: PMID:16276182 {source="Europe PMC"}
 xref: PMID:16292655 {source="Europe PMC"}
+xref: PMID:16413584 {source="Europe PMC"}
+xref: PMID:16712454 {source="Europe PMC"}
 xref: PMID:16972983 {source="Europe PMC"}
 xref: PMID:17182546 {source="Europe PMC"}
 xref: PMID:18815282 {source="Europe PMC"}
@@ -41261,6 +41462,7 @@ xref: PMID:19038979 {source="Europe PMC"}
 xref: PMID:19204190 {source="Europe PMC"}
 xref: PMID:19234767 {source="Europe PMC"}
 xref: PMID:20057137 {source="Europe PMC"}
+xref: PMID:20645870 {source="Europe PMC"}
 xref: PMID:21466422 {source="Europe PMC"}
 xref: PMID:21642934 {source="Europe PMC"}
 xref: PMID:22044005 {source="Europe PMC"}
@@ -41272,6 +41474,10 @@ xref: PMID:22318308 {source="Europe PMC"}
 xref: PMID:22753715 {source="Europe PMC"}
 xref: PMID:23386263 {source="Europe PMC"}
 xref: PMID:23574161 {source="Europe PMC"}
+xref: PMID:34299604 {source="Europe PMC"}
+xref: PMID:34473340 {source="Europe PMC"}
+xref: PMID:34572272 {source="Europe PMC"}
+xref: PMID:34572491 {source="Europe PMC"}
 xref: PMID:9698073 {source="Europe PMC"}
 xref: Reaxys:2306965 {source="Reaxys"}
 xref: Wikipedia:Curcumin
@@ -41281,6 +41487,7 @@ is_a: CHEBI:51689 ! enone
 is_a: CHEBI:67265 ! beta-diketone
 is_a: CHEBI:78802 ! diarylheptanoid
 relationship: has_functional_parent CHEBI:17620 ! ferulic acid
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:25212 ! metabolite
 relationship: has_role CHEBI:26130 ! biological pigment
 relationship: has_role CHEBI:35610 ! antineoplastic agent
@@ -41309,9 +41516,9 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C21H20O6" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C21H20O6/c1-26-20-11-14(5-9-18(20)24)3-7-16(22)13-17(23)8-4-15-6-10-19(25)21(12-15)27-2/h3-12,24-25H,13H2,1-2H3/b7-3+,8-4+" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "VFLDPWHFBUODDF-FCXRPNKRSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "368.381" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "368.385" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "368.12599" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "C1(=CC(=C(O)C=C1)OC)/C=C/C(CC(/C=C/C2=CC(=C(O)C=C2)OC)=O)=O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "COC1=C(O)C=CC(\\C=C\\C(=O)CC(=O)\\C=C\\C2=CC(OC)=C(O)C=C2)=C1" xsd:string
 
 [Term]
 id: CHEBI:39745
@@ -41603,12 +41810,16 @@ synonym: "Sandimmune" RELATED BRAND_NAME [DrugBank]
 xref: Beilstein:3647785 {source="Beilstein"}
 xref: CAS:59865-13-3 {source="ChemIDplus"}
 xref: CAS:59865-13-3 {source="KEGG COMPOUND"}
+xref: Chemspider:4447449
 xref: Drug_Central:760 {source="DrugCentral"}
 xref: DrugBank:DB00091
+xref: HMDB:HMDB0250682
 xref: KEGG:C05086
 xref: KEGG:D00184
 xref: KNApSAcK:C00001517
 xref: LINCS:LSM-1703
+xref: LIPID_MAPS_instance:LMPK14000003 {source="LIPID MAPS"}
+xref: MetaCyc:CPD-20532
 xref: Patent:US4117118
 xref: PMID:11058832 {source="Europe PMC"}
 xref: PMID:11069928 {source="Europe PMC"}
@@ -41685,11 +41896,16 @@ xref: PMID:19282398 {source="Europe PMC"}
 xref: PMID:19589783 {source="Europe PMC"}
 xref: PMID:21752960 {source="Europe PMC"}
 xref: PMID:23620378 {source="Europe PMC"}
+xref: PMID:24134630 {source="Europe PMC"}
+xref: PMID:31144214 {source="Europe PMC"}
+xref: PMID:34561200 {source="Europe PMC"}
+xref: PMID:34561814 {source="Europe PMC"}
 xref: Reaxys:3647785 {source="Reaxys"}
 xref: VSDB:1765
 xref: Wikipedia:Ciclosporin
 is_a: CHEBI:24613 ! homodetic cyclic peptide
 relationship: has_role CHEBI:149553 ! anticoronaviral agent
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:25212 ! metabolite
 relationship: has_role CHEBI:35705 ! immunosuppressive agent
 relationship: has_role CHEBI:35718 ! antifungal agent
@@ -41774,8 +41990,10 @@ xref: DrugBank:DB03345
 xref: Gmelin:1368 {source="Gmelin"}
 xref: KEGG:C00928
 xref: PDBeChem:BME
+xref: PMID:6334792 {source="Europe PMC"}
 is_a: CHEBI:15734 ! primary alcohol
 is_a: CHEBI:47908 ! alkanethiol
+relationship: has_role CHEBI:176497 ! geroprotector
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H6OS" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C2H6OS/c3-1-2-4/h3-4H,1-2H2" xsd:string
@@ -43248,10 +43466,30 @@ synonym: "TRICHOSTATIN A" EXACT [PDBeChem]
 synonym: "TSA" RELATED [ChemIDplus]
 xref: Beilstein:5291761 {source="Beilstein"}
 xref: CAS:58880-19-6 {source="ChemIDplus"}
+xref: DrugBank:DB04297
+xref: HMDB:HMDB0259177
+xref: KNApSAcK:C00016002
 xref: PDBeChem:TSN
+xref: PMID:10490031 {source="Europe PMC"}
+xref: PMID:15346199 {source="Europe PMC"}
+xref: PMID:16010430 {source="Europe PMC"}
+xref: PMID:18285338 {source="Europe PMC"}
+xref: PMID:19038231 {source="Europe PMC"}
+xref: PMID:21504214 {source="Europe PMC"}
+xref: PMID:25075551 {source="Europe PMC"}
+xref: PMID:27454931 {source="Europe PMC"}
+xref: PMID:30395713 {source="Europe PMC"}
+xref: PMID:31755702 {source="Europe PMC"}
+xref: PMID:32880591 {source="Europe PMC"}
+xref: PMID:33983895 {source="Europe PMC"}
+xref: PMID:34086940 {source="Europe PMC"}
+xref: Wikipedia:Trichostatin_A
 is_a: CHEBI:24650 ! hydroxamic acid
 is_a: CHEBI:39146 ! trichostatin
+is_a: CHEBI:86478 ! antibiotic antifungal agent
 relationship: has_functional_parent CHEBI:39158 ! (R)-trichostatic acid
+relationship: has_role CHEBI:176497 ! geroprotector
+relationship: has_role CHEBI:61115 ! EC 3.5.1.98 (histone deacetylase) inhibitor
 relationship: has_role CHEBI:76969 ! bacterial metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C17H22N2O3" xsd:string
@@ -43801,6 +44039,7 @@ xref: KNApSAcK:C00001550
 xref: MetaCyc:PANTOTHENATE
 xref: PDBeChem:PAU
 xref: PMID:12664639 {source="Europe PMC"}
+xref: PMID:13614445 {source="Europe PMC"}
 xref: PMID:14675432 {source="Europe PMC"}
 xref: PMID:15065769 {source="Europe PMC"}
 xref: PMID:15136582 {source="Europe PMC"}
@@ -43825,6 +44064,7 @@ xref: Reaxys:1727064 {source="Reaxys"}
 xref: Wikipedia:Pantothenic_Acid
 is_a: CHEBI:176840 ! vitamin B5
 is_a: CHEBI:7916 ! pantothenic acid
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:74530 ! antidote to curare poisoning
 relationship: has_role CHEBI:85234 ! human blood serum metabolite
 relationship: is_conjugate_acid_of CHEBI:29032 ! (R)-pantothenate
@@ -45387,6 +45627,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Co++]" xsd:string
 id: CHEBI:4883
 name: ethidium bromide
 namespace: chebi_ontology
+def: "The organic bromide salt of ethidium." []
 subset: 3_STAR
 synonym: "2,7-diamino-10-ethyl-9-phenylphenanthridinium bromide" RELATED [ChemIDplus]
 synonym: "2,7-diamino-9-phenyl-10-ethylphenanthridinium bromide" RELATED [ChemIDplus]
@@ -45396,11 +45637,28 @@ synonym: "EtBr" RELATED [ChEBI]
 synonym: "Ethidium bromide" EXACT [KEGG_COMPOUND]
 synonym: "Homidium bromide" RELATED [KEGG_COMPOUND]
 xref: Beilstein:3642536 {source="Beilstein"}
-xref: CAS:1239-45-8 {source="KEGG COMPOUND"}
 xref: CAS:1239-45-8 {source="ChemIDplus"}
+xref: CAS:1239-45-8 {source="NIST Chemistry WebBook"}
+xref: Chemspider:14034
 xref: KEGG:C11161
+xref: MetaCyc:CPD-22916
+xref: PMID:12485345 {source="Europe PMC"}
+xref: PMID:14744029 {source="Europe PMC"}
+xref: PMID:17824384 {source="Europe PMC"}
+xref: PMID:17905818 {source="Europe PMC"}
+xref: PMID:23698443 {source="Europe PMC"}
+xref: PMID:29645293 {source="Europe PMC"}
+xref: PMID:30156921 {source="Europe PMC"}
+xref: PMID:31586911 {source="Europe PMC"}
+xref: PMID:33713300 {source="Europe PMC"}
+xref: PMID:33764383 {source="Europe PMC"}
+xref: PMID:33855442 {source="Europe PMC"}
+xref: PMID:8037572 {source="Europe PMC"}
+xref: Wikipedia:Ethidium_bromide
 is_a: CHEBI:48369 ! organic bromide salt
 relationship: has_part CHEBI:42478 ! ethidium
+relationship: has_role CHEBI:176497 ! geroprotector
+relationship: has_role CHEBI:24853 ! intercalator
 relationship: has_role CHEBI:36335 ! trypanocidal drug
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C21H20BrN3" xsd:string
@@ -47612,6 +47870,16 @@ synonym: "hepatoxicant" RELATED [ChEBI]
 is_a: CHEBI:52209 ! aetiopathogenetic role
 
 [Term]
+id: CHEBI:50909
+name: nephrotoxic agent
+namespace: chebi_ontology
+def: "A role played by a chemical compound exihibiting itself through the ability to induce damage to the kidney in animals." []
+subset: 3_STAR
+synonym: "agente nefrotoxico" RELATED [ChEBI]
+synonym: "nephrotoxicant" RELATED [ChEBI]
+is_a: CHEBI:52209 ! aetiopathogenetic role
+
+[Term]
 id: CHEBI:50910
 name: neurotoxin
 namespace: chebi_ontology
@@ -48606,33 +48874,54 @@ is_a: CHEBI:33232 ! application
 id: CHEBI:52289
 name: wortmannin
 namespace: chebi_ontology
+alt_id: CHEBI:43674
 subset: 3_STAR
 synonym: "(1S,6bR,9aS,11R,11bR)-9a,11b-dimethyl-1-[(methyloxy)methyl]-3,6,9-trioxo-1,6,6b,7,8,9,9a,10,11,11b-decahydro-3H-furo[4,3,2-de]indeno[4,5-h]isochromen-11-yl acetate" EXACT IUPAC_NAME [IUPAC]
 synonym: "Wartmannin" RELATED [ChemIDplus]
 xref: Beilstein:67676 {source="Beilstein"}
-xref: CAS:19545-26-7 {source="KEGG COMPOUND"}
 xref: CAS:19545-26-7 {source="ChemIDplus"}
+xref: CAS:19545-26-7 {source="KEGG COMPOUND"}
+xref: DrugBank:DB08059
+xref: HMDB:HMDB0259902
 xref: KEGG:C15181
 xref: KNApSAcK:C00023672
 xref: LINCS:LSM-3947
+xref: MetaCyc:CPD-11924
 xref: PDBeChem:KWT
+xref: PMID:11090628 {source="Europe PMC"}
+xref: PMID:18703838 {source="Europe PMC"}
+xref: PMID:19805105 {source="Europe PMC"}
+xref: PMID:20017609 {source="Europe PMC"}
 xref: PMID:22003059 {source="Europe PMC"}
 xref: PMID:22056625 {source="Europe PMC"}
 xref: PMID:22524784 {source="Europe PMC"}
+xref: PMID:25449276 {source="Europe PMC"}
+xref: PMID:27375631 {source="Europe PMC"}
+xref: PMID:28000865 {source="Europe PMC"}
+xref: PMID:28474885 {source="Europe PMC"}
+xref: PMID:30036994 {source="Europe PMC"}
+xref: PMID:32052028 {source="Europe PMC"}
+xref: PMID:34306363 {source="Europe PMC"}
 xref: Reaxys:67676 {source="Reaxys"}
+xref: Wikipedia:Wortmannin
 is_a: CHEBI:18946 ! delta-lactone
 is_a: CHEBI:38164 ! organic heteropentacyclic compound
 is_a: CHEBI:3992 ! cyclic ketone
 is_a: CHEBI:47622 ! acetate ester
+relationship: has_role CHEBI:132992 ! radiosensitizing agent
 relationship: has_role CHEBI:149553 ! anticoronaviral agent
+relationship: has_role CHEBI:176497 ! geroprotector
+relationship: has_role CHEBI:35610 ! antineoplastic agent
 relationship: has_role CHEBI:50914 ! EC 2.7.1.137 (phosphatidylinositol 3-kinase) inhibitor
+relationship: has_role CHEBI:76964 ! Penicillium metabolite
+relationship: has_role CHEBI:88230 ! autophagy inhibitor
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C23H24O8" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C23H24O8/c1-10(24)30-13-7-22(2)12(5-6-14(22)25)16-18(13)23(3)15(9-28-4)31-21(27)11-8-29-20(17(11)23)19(16)26/h8,12-13,15H,5-7,9H2,1-4H3/t12-,13+,15+,22-,23-/m0/s1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "QDLHCMPXEPAAMD-QAIWCSMKSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "428.43190" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "428.437" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "428.14712" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@@]12CCC(=O)[C@@]1(C)C[C@@H](OC(C)=O)C1=C2C(=O)c2occ3C(=O)O[C@H](COC)[C@@]1(C)c23" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@@]12CCC(=O)[C@@]1(C)C[C@@H](OC(C)=O)C1=C2C(=O)C2=C3C(=CO2)C(=O)O[C@H](COC)[C@]13C" xsd:string
 
 [Term]
 id: CHEBI:52310
@@ -49448,6 +49737,7 @@ synonym: "(5S,6R,7R,9R)-6-methoxy-5-methyl-7-methylazaniumyl-6,7,8,9,15,16-hexah
 synonym: "(5S,6R,7R,9R)-6-methoxy-N,5-dimethyl-14-oxo-6,7,8,9,15,16-hexahydro-5H,14H-5,9-epoxy-4b,9a,15-triazadibenzo[b,h]cyclonona[1,2,3,4-jkl]cyclopenta[e]-as-indacen-7-aminium" EXACT IUPAC_NAME [IUPAC]
 synonym: "staurosporine" RELATED [UniProt]
 synonym: "staurosporinium cation" RELATED [ChEBI]
+xref: MetaCyc:STAUROSPORINE
 is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:15738 ! staurosporine
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
@@ -52448,6 +52738,7 @@ namespace: chebi_ontology
 def: "A poison that interferes with the function of the kidneys." []
 subset: 3_STAR
 synonym: "nephrotoxins" RELATED [ChEBI]
+is_a: CHEBI:50909 ! nephrotoxic agent
 is_a: CHEBI:64909 ! poison
 
 [Term]
@@ -52885,7 +53176,7 @@ subset: 3_STAR
 synonym: "FA derivative" RELATED [ChEBI]
 synonym: "FA derivatives" RELATED [ChEBI]
 synonym: "fatty acid derivatives" RELATED [ChEBI]
-is_a: CHEBI:50860 ! organic molecular entity
+is_a: CHEBI:18059 ! lipid
 relationship: has_functional_parent CHEBI:35366 ! fatty acid
 
 [Term]
@@ -54561,6 +54852,8 @@ synonym: "Sodium n-butyrate" RELATED [ChemIDplus]
 synonym: "Sodium propanecarboxylate" RELATED [ChemIDplus]
 xref: CAS:156-54-7 {source="NIST Chemistry WebBook"}
 xref: CAS:156-54-7 {source="ChemIDplus"}
+xref: DrugBank:DBSALT002877
+xref: KEGG:D08998
 xref: PMID:12840228 {source="Europe PMC"}
 xref: PMID:21593570 {source="Europe PMC"}
 xref: PMID:21699495 {source="Europe PMC"}
@@ -54578,10 +54871,12 @@ xref: PMID:22293191 {source="Europe PMC"}
 xref: PMID:22338096 {source="Europe PMC"}
 xref: PMID:22353286 {source="Europe PMC"}
 xref: PMID:22381755 {source="Europe PMC"}
+xref: PMID:24003736 {source="Europe PMC"}
 xref: Reaxys:3629439 {source="Reaxys"}
 xref: Wikipedia:Sodium_butyrate
 is_a: CHEBI:38700 ! organic sodium salt
 relationship: has_part CHEBI:17968 ! butyrate
+relationship: has_role CHEBI:176497 ! geroprotector
 relationship: has_role CHEBI:61115 ! EC 3.5.1.98 (histone deacetylase) inhibitor
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C4H7NaO2" xsd:string
@@ -54688,6 +54983,30 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "318.30027
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCCCCCCCCCCCCC[C@@H](O)[C@@H](O)[C@@H]([NH3+])CO" xsd:string
 
 [Term]
+id: CHEBI:64133
+name: EC 2.5.1.58 (protein farnesyltransferase) inhibitor
+namespace: chebi_ontology
+def: "An EC 2.5.1.* (non-methyl-alkyl or aryl transferase) inhibitor that interferes with the action of protein farnesyltransferase (EC 2.5.1.58), one of the three enzymes in the prenyltransferase group." []
+subset: 3_STAR
+synonym: "EC 2.5.1.58 (protein farnesyltransferase) inhibitors" RELATED [ChEBI]
+synonym: "EC 2.5.1.58 inhibitor" RELATED [ChEBI]
+synonym: "EC 2.5.1.58 inhibitors" RELATED [ChEBI]
+synonym: "farnesyl transferase inhibitor" RELATED [ChEBI]
+synonym: "farnesyl transferase inhibitors" RELATED [ChEBI]
+synonym: "farnesyl-diphosphate:protein-cysteine farnesyltransferase inhibitor" RELATED [ChEBI]
+synonym: "farnesyl-diphosphate:protein-cysteine farnesyltransferase inhibitors" RELATED [ChEBI]
+synonym: "farnesyltransferase inhibitor" RELATED [ChEBI]
+synonym: "farnesyltransferase inhibitors" RELATED [ChEBI]
+synonym: "FTase inhibitor" RELATED [ChEBI]
+synonym: "FTase inhibitors" RELATED [ChEBI]
+synonym: "protein farnesyltransferase (EC 2.5.1.58) inhibitor" RELATED [ChEBI]
+synonym: "protein farnesyltransferase (EC 2.5.1.58) inhibitors" RELATED [ChEBI]
+synonym: "protein farnesyltransferase inhibitor" RELATED [ChEBI]
+synonym: "protein farnesyltransferase inhibitors" RELATED [ChEBI]
+xref: Wikipedia:Farnesyltransferase
+is_a: CHEBI:76663 ! EC 2.5.1.* (non-methyl-alkyl or aryl transferase) inhibitor
+
+[Term]
 id: CHEBI:64228
 name: tunicamycin A0
 namespace: chebi_ontology
@@ -54754,6 +55073,7 @@ def: "A nucleoside that is one of the homologues in the mixture that is tunicamy
 subset: 3_STAR
 synonym: "(2E)-N-[(2S,3R,4R,5R,6R)-2-{[(2R,3R,4R,5S,6R)-3-acetamido-4,5-dihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl]oxy}-6-{(2R)-2-[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]-2-hydroxyethyl}-4,5-dihydroxytetrahydro-2H-pyran-3-yl]-12-methyltridec-2-enamide" EXACT IUPAC_NAME [IUPAC]
 synonym: "(5'R)-5'-[2-acetamido-2-deoxy-alpha-D-glucopyranosyl-(1<->1)-2,6-dideoxy-2-(12-methyltridec-2-enamido)-beta-D-galactopyranos-6-yl]uridine" EXACT IUPAC_NAME [IUPAC]
+synonym: "tunicamycin A1" EXACT [UniProt]
 synonym: "tunicamycin C" RELATED [ChEBI]
 synonym: "tunicamycin II" RELATED [ChEBI]
 xref: PMID:7061468 {source="Europe PMC"}
@@ -56233,23 +56553,51 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@@](CO[*])(COP
 
 [Term]
 id: CHEBI:67606
-name: Sampangine
+name: sampangine
 namespace: chebi_ontology
-subset: 2_STAR
-synonym: "1,6-Diaza-benzo(de)anthracen-7-one" RELATED [ChEBI]
-synonym: "7H-naphtho[1,2,3-ij][2,7]naphthyridin-7-one" RELATED [ChEBI]
+def: "A copyrine alkaloid with formula C15H8N2O, extracted from several plants including the stem bark of Cananga odorata. It is a heme biosynthesis inhibitor and exhibits antifungal and anticancer properties." []
+subset: 3_STAR
+synonym: "1,6-diaza-benzo[de]anthracen-7-one" RELATED [ChEBI]
+synonym: "7H-naphtho[1,2,3-ij][2,7]naphthyridin-7-one" EXACT IUPAC_NAME [IUPAC]
+synonym: "sampangin" RELATED [ChEBI]
 xref: CAS:116664-93-8 {source="ChemIDplus"}
+xref: Chemspider:343168
+xref: FooDB:FDB012630
 xref: HMDB:HMDB0034291
+xref: KNApSAcK:C00046373
+xref: PMID:10425122 {source="Europe PMC"}
+xref: PMID:10843589 {source="Europe PMC"}
+xref: PMID:11374943 {source="Europe PMC"}
+xref: PMID:1433213 {source="Europe PMC"}
+xref: PMID:15033745 {source="Europe PMC"}
+xref: PMID:16289142 {source="Europe PMC"}
+xref: PMID:17628034 {source="Europe PMC"}
+xref: PMID:18156292 {source="Europe PMC"}
 xref: PMID:21504145 {source="Europe PMC"}
+xref: PMID:21860364 {source="Europe PMC"}
+xref: PMID:21908598 {source="Europe PMC"}
+xref: PMID:23850570 {source="Europe PMC"}
+xref: PMID:25115626 {source="Europe PMC"}
+xref: PMID:26289663 {source="Europe PMC"}
+xref: PMID:26637046 {source="Europe PMC"}
+xref: PMID:27174814 {source="Europe PMC"}
+xref: PMID:28893786 {source="Europe PMC"}
+xref: PMID:29126739 {source="Europe PMC"}
+xref: PMID:30711309 {source="Europe PMC"}
+xref: PMID:31070884 {source="Europe PMC"}
+xref: PMID:32650027 {source="Europe PMC"}
+xref: PMID:33476619 {source="Europe PMC"}
 is_a: CHEBI:22315 ! alkaloid
-relationship: has_role CHEBI:25212 ! metabolite
+is_a: CHEBI:38163 ! organic heterotetracyclic compound
+relationship: has_role CHEBI:35718 ! antifungal agent
+relationship: has_role CHEBI:76924 ! plant metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H8N2O" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C15H8N2O/c18-15-11-4-2-1-3-10(11)13-12-9(5-7-16-13)6-8-17-14(12)15/h1-8H" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "BWQKHOMAOVUASZ-UHFFFAOYSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "232.23680" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "232.242" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "232.06366" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "O=C1c2ccccc2-c2nccc3ccnc1c23" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "O=C1C2=C(C=CC=C2)C2=C3C(C=CN=C13)=CC=N2" xsd:string
 
 [Term]
 id: CHEBI:68452
@@ -56767,6 +57115,7 @@ name: mannooligosaccharide derivative
 namespace: chebi_ontology
 def: "An oligosaccharide derivative that is derived from a mannooligosaccharide." []
 subset: 3_STAR
+synonym: "a mannooligosaccharide derivative" RELATED [UniProt]
 synonym: "mannooligosaccharide derivatives" RELATED [ChEBI]
 is_a: CHEBI:63563 ! oligosaccharide derivative
 relationship: has_functional_parent CHEBI:25174 ! mannooligosaccharide
@@ -58110,7 +58459,6 @@ xref: MetaCyc:CPD0-1264
 xref: Reaxys:3905392 {source="Reaxys"}
 is_a: CHEBI:132953 ! suberate
 is_a: CHEBI:133291 ! saturated dicarboxylic acid dianion(2-)
-is_a: CHEBI:18059 ! lipid
 relationship: is_conjugate_base_of CHEBI:9300 ! suberic acid
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C8H12O4" xsd:string
@@ -60066,7 +60414,6 @@ def: "An acyl-CoA(4-) arising from deprotonation of the phosphate and diphosphat
 subset: 3_STAR
 synonym: "a fatty acyl-CoA" RELATED [UniProt]
 synonym: "fatty acyl-coenzyme A(4-)" RELATED [ChEBI]
-is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:58342 ! acyl-CoA(4-)
 relationship: is_conjugate_base_of CHEBI:37554 ! fatty acyl-CoA
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-4" xsd:string
@@ -63980,9 +64327,12 @@ xref: KEGG:D00753
 xref: KNApSAcK:C00018055
 xref: LIPID_MAPS_instance:LMPK06000003 {source="LIPID MAPS"}
 xref: PDBeChem:RAP
+xref: PMID:19587680 {source="Europe PMC"}
 xref: PMID:22960739 {source="Europe PMC"}
 xref: PMID:22981852 {source="Europe PMC"}
 xref: PMID:22984623 {source="Europe PMC"}
+xref: PMID:24341993 {source="Europe PMC"}
+xref: PMID:24409289 {source="Europe PMC"}
 xref: Reaxys:5848501 {source="Reaxys"}
 xref: Wikipedia:Rapamycin
 is_a: CHEBI:145565 ! macrolide lactam
@@ -64038,6 +64388,7 @@ xref: PDBeChem:OCE
 xref: PMID:22770225 {source="Europe PMC"}
 xref: Reaxys:1210161 {source="Reaxys"}
 xref: Wikipedia:Suberic_acid
+is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:28383 ! alpha,omega-dicarboxylic acid
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: is_conjugate_acid_of CHEBI:132953 ! suberate
