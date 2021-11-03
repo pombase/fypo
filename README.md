@@ -14,7 +14,7 @@ Some documentation of FYPO's content and structure is available on a [PomBase wi
 
 ### License
 
-FYPO is released under the [CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/) license
+FYPO is released under the [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license
 
 ### Citing FYPO
 
