@@ -21,16 +21,24 @@ rm -rf $OORT_TMP
 OORT_LOG_FILE=$CURRENT_DIR/ontology-release-runner.log
 
 FYPO_OBO=`pwd`/fypo_edit.obo
-CHEBI_OBO=http://build.berkeleybop.org/job/build-chebi/lastSuccessfulBuild/artifact/main/chebi-simple.obo # special non-purl location for super-simplified chebi file (is_a only)
+# various past locations of a chebi OBO file - prefer purl if one for chebi-simple ever returns (2017-03-10)
+##CHEBI_OBO=http://build.berkeleybop.org/job/build-chebi/lastSuccessfulBuild/artifact/main/chebi-simple.obo # special non-purl location for super-simplified chebi file (is_a only)
+##CHEBI_OBO=http://purl.obolibrary.org/obo/chebi/chebi-simple.obo
+##using while purl (preceding line)broken
+## CHEBI_OBO=http://www.berkeleybop.org/ontologies/chebi/chebi-simple.obo
 BRENDA_TISSUE_OBO=/data/pombase/sources/BTO_is-a_only.obo # special location for locally massaged file (is_a only)
+CHEBI_OBO=/data/pombase/sources/chebi-simple_edited.obo # special location for locally massaged file (is_a only; chebi-simple.obo from 2016-10 with is_a: CHEBI:50902 links manually added)
 GO_OBO=http://purl.obolibrary.org/obo/go.obo
-#CELL_TYPE_OBO=http://purl.obolibrary.org/obo/cl-basic.owl
-CELL_TYPE_OBO=/home/mah79/cl-svn/cl-basic.obo
-PATO_OBO=http://purl.obolibrary.org/obo/pato.owl
-SO_OBO=/home/mah79/song-svn/so-xp.owl
+CELL_TYPE_OBO=http://purl.obolibrary.org/obo/cl-basic.owl
+#CELL_TYPE_OBO=/home/mah79/cl-svn/cl-basic.obo
+#PATO_OBO=http://purl.obolibrary.org/obo/pato.owl
+## switch back to purl if it starts working for the new "base" file
+PATO_OBO=https://raw.githubusercontent.com/pato-ontology/pato/master/pato-base.owl
+#SO_OBO=/home/mah79/SO-Ontologies.git/trunk/releases/so-xp.owl/so-xp.owl
+SO_OBO=http://purl.obolibrary.org/obo/so.owl
 
 echo running ontology-release-runner
-/usr/local/owltools-v0.2.1-117-g363edbd/OWLTools-Oort/bin/ontology-release-runner -outdir $OORT_TMP \
+/usr/local/owltools-v0.2.1-367-g447e415/OWLTools-Oort/bin/ontology-release-runner -outdir $OORT_TMP \
     --no-subsets -reasoner elk --simple \
     $FYPO_OBO $GO_OBO $PATO_OBO $CHEBI_OBO $CELL_TYPE_OBO $BRENDA_TISSUE_OBO $SO_OBO \
     > $OORT_LOG_FILE 2>&1
