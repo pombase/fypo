@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: fypo/releases/2021-11-18/imports/chebi_import.owl
+data-version: fypo/releases/2021-12-02/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 ontology: fypo/imports/chebi_import
-property_value: owl:versionInfo "2021-11-18" xsd:string
+property_value: owl:versionInfo "2021-12-02" xsd:string
 
 [Term]
 id: CHEBI:100147
@@ -1840,11 +1840,16 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "C12=C(C=C(C(=C1C(C=
 id: CHEBI:145544
 name: S-nitrosoglutathione(1-)
 namespace: chebi_ontology
-subset: 2_STAR
+def: "A peptide anion obtained by deprotonation of both carboxy groups and protonation of the glutamyl amino group of S-nitrosoglutathione; major species at pH 7.3." []
+subset: 3_STAR
 synonym: "(2S)-2-ammonio-5-{[(2S)-1-[(carboxylatomethyl)amino]-3-(nitrosothio)-1-oxopropan-2-yl]amino}-5-oxopentanoate" EXACT IUPAC_NAME [IUPAC]
+synonym: "(2S)-2-azaniumyl-5-{[(2R)-1-[(carboxylatomethyl)amino]-3-(nitrososulfanyl)-1-oxopropan-2-yl]amino}-5-oxopentanoate" RELATED [IUPAC]
+synonym: "GSNO(1-)" RELATED [ChEBI]
+synonym: "L-gamma-glutamyl-S-nitroso-L-cysteinylglycine(1-)" RELATED [ChEBI]
 synonym: "S-nitrosoglutathione" RELATED [UniProt]
-is_a: CHEBI:24337 ! glutathione derivative
-relationship: is_conjugate_base_of CHEBI:50091 ! S-nitrosoglutathione
+xref: MetaCyc:S-NITROSOGLUTATHIONE
+is_a: CHEBI:60334 ! peptide anion
+relationship: is_conjugate_acid_of CHEBI:43056 ! S-nitrosoglutathione(2-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C10H15N4O7S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C10H16N4O7S/c11-5(10(19)20)1-2-7(15)13-6(4-22-14-21)9(18)12-3-8(16)17/h5-6H,1-4,11H2,(H,12,18)(H,13,15)(H,16,17)(H,19,20)/p-1/t5-,6-/m0/s1" xsd:string
@@ -32787,6 +32792,7 @@ synonym: "Glycolipid" EXACT [KEGG_COMPOUND]
 synonym: "glycolipids" EXACT IUPAC_NAME [IUPAC]
 xref: KEGG:C05005
 xref: Wikipedia:Glycolipids
+is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:35740 ! liposaccharide
 
 [Term]
@@ -42663,11 +42669,24 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "NC(N)=N" xsd:string
 
 [Term]
 id: CHEBI:43056
-name: L-gamma-glutamyl-S-nitroso-D-cysteinylglycine(2-)
+name: S-nitrosoglutathione(2-)
 namespace: chebi_ontology
-subset: 1_STAR
-is_a: CHEBI:24337 ! glutathione derivative
+def: "A peptide anion obtained by deprotonation of both carboxy groups of S-nitrosoglutathione." []
+subset: 3_STAR
+synonym: "(2S)-2-amino-5-{[(2R)-1-[(carboxylatomethyl)amino]-3-(nitrososulfanyl)-1-oxopropan-2-yl]amino}-5-oxopentanoate" EXACT IUPAC_NAME [IUPAC]
+synonym: "L-gamma-glutamyl-S-nitroso-L-cysteinylglycine(2-)" RELATED [ChEBI]
+xref: PDBeChem:GSN
+xref: PMID:16597834 {source="Europe PMC"}
+is_a: CHEBI:60334 ! peptide anion
+relationship: is_conjugate_base_of CHEBI:145544 ! S-nitrosoglutathione(1-)
 relationship: is_conjugate_base_of CHEBI:50091 ! S-nitrosoglutathione
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C10H14N4O7S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C10H16N4O7S/c11-5(10(19)20)1-2-7(15)13-6(4-22-14-21)9(18)12-3-8(16)17/h5-6H,1-4,11H2,(H,12,18)(H,13,15)(H,16,17)(H,19,20)/p-2/t5-,6-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "HYHSBSXUHZOYLX-WDSKDSINSA-L" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "334.300" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "334.05942" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@@H](CCC(=O)N[C@@H](CSN=O)C(=O)NCC([O-])=O)C([O-])=O" xsd:string
 
 [Term]
 id: CHEBI:43176
@@ -46489,7 +46508,7 @@ relationship: has_role CHEBI:39142 ! Bronsted base
 id: CHEBI:50091
 name: S-nitrosoglutathione
 namespace: chebi_ontology
-def: "A glutathione derivative that is glutathione in which the hydrogen attached to the sulfur has been replaced by sulfur has been replaced by a nitroso group." []
+def: "A glutathione derivative that is glutathione in which the hydrogen attached to the sulfur has been replaced by a nitroso group." []
 subset: 3_STAR
 synonym: "glutathione thionitrite" RELATED [ChemIDplus]
 synonym: "GSNO" RELATED [ChemIDplus]
@@ -46497,29 +46516,50 @@ synonym: "L-gamma-glutamyl-S-nitroso-L-cysteinylglycine" EXACT IUPAC_NAME [IUPAC
 synonym: "N-(N-L-gamma-glutamyl-S-nitroso-L-cysteinyl)glycine" RELATED [ChemIDplus]
 synonym: "nitrosoglutathione" RELATED [ChemIDplus]
 synonym: "SNOG" RELATED [ChemIDplus]
+xref: AGR:IND607176621 {source="Europe PMC"}
 xref: Beilstein:3566211 {source="ChemIDplus"}
 xref: CAS:57564-91-7 {source="ChemIDplus"}
+xref: Chemspider:94647
+xref: FooDB:FDB023390
+xref: HMDB:HMDB0004645
+xref: PMCID:PMC8533914 {source="Europe PMC"}
 xref: PMID:10070107 {source="Europe PMC"}
+xref: PMID:11152625 {source="Europe PMC"}
 xref: PMID:11406512 {source="Europe PMC"}
+xref: PMID:11749666 {source="Europe PMC"}
 xref: PMID:11914258 {source="Europe PMC"}
+xref: PMID:12500091 {source="Europe PMC"}
+xref: PMID:14766015 {source="Europe PMC"}
 xref: PMID:16857740 {source="Europe PMC"}
 xref: PMID:17022806 {source="Europe PMC"}
 xref: PMID:17403694 {source="Europe PMC"}
+xref: PMID:17593005 {source="Europe PMC"}
 xref: PMID:18171019 {source="Europe PMC"}
 xref: PMID:19395503 {source="Europe PMC"}
+xref: PMID:20091246 {source="Europe PMC"}
 xref: PMID:29868937 {source="Europe PMC"}
+xref: PMID:30449192 {source="Europe PMC"}
 xref: PMID:31374192 {source="Europe PMC"}
 xref: PMID:31680031 {source="Europe PMC"}
+xref: PMID:31766125 {source="Europe PMC"}
 xref: PMID:31846803 {source="Europe PMC"}
+xref: PMID:32523344 {source="Europe PMC"}
+xref: PMID:32942712 {source="Europe PMC"}
+xref: PMID:32952953 {source="Europe PMC"}
+xref: PMID:33021079 {source="Europe PMC"}
+xref: PMID:33458941 {source="Europe PMC"}
+xref: PMID:33772588 {source="Europe PMC"}
+xref: PMID:33918310 {source="Europe PMC"}
+xref: PMID:34175668 {source="Europe PMC"}
 xref: PMID:9278333 {source="Europe PMC"}
+xref: Wikipedia:S-Nitrosoglutathione
 is_a: CHEBI:145545 ! nitrosothio compound
 is_a: CHEBI:24337 ! glutathione derivative
 relationship: has_role CHEBI:35523 ! bronchodilator agent
 relationship: has_role CHEBI:50427 ! platelet aggregation inhibitor
 relationship: has_role CHEBI:50566 ! nitric oxide donor
 relationship: has_role CHEBI:62488 ! signalling molecule
-relationship: is_conjugate_acid_of CHEBI:145544 ! S-nitrosoglutathione(1-)
-relationship: is_conjugate_acid_of CHEBI:43056 ! L-gamma-glutamyl-S-nitroso-D-cysteinylglycine(2-)
+relationship: is_conjugate_acid_of CHEBI:43056 ! S-nitrosoglutathione(2-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C10H16N4O7S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C10H16N4O7S/c11-5(10(19)20)1-2-7(15)13-6(4-22-14-21)9(18)12-3-8(16)17/h5-6H,1-4,11H2,(H,12,18)(H,13,15)(H,16,17)(H,19,20)/t5-,6-/m0/s1" xsd:string
@@ -50867,12 +50907,23 @@ name: myriocin
 namespace: chebi_ontology
 def: "An amino acid-based antibiotic derived from certain thermophilic fungi; acts as a potent inhibitor of serine palmitoyltransferase, the first step in sphingosine biosynthesis. Myriocin also possesses immunosuppressant activity." []
 subset: 3_STAR
+synonym: "(2S,3R,4R)-(E)-2-amino-3,4-dihydroxy-2-hydroxymethyl-14-oxoeicos-6-enoic acid" RELATED [ChEBI]
+synonym: "(2S,3R,4R,6E)-2-amino-3,4-dihydroxy-2-(hydroxymethyl)-14-oxo-6-eicosenoic acid" RELATED [ChEBI]
 synonym: "(2S,3R,4R,6E)-2-amino-3,4-dihydroxy-2-(hydroxymethyl)-14-oxoicos-6-enoic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "antibiotic ISP-1" RELATED [ChEBI]
 synonym: "antibiotic ISP-I" RELATED [ChEBI]
-synonym: "Thermozymocidin" RELATED [ChemIDplus]
+synonym: "ISP-1" RELATED [KEGG_COMPOUND]
+synonym: "ISP-I" RELATED [ChEBI]
+synonym: "thermozymocidin" RELATED [ChemIDplus]
+xref: AGR:IND607305181 {source="Europe PMC"}
 xref: Beilstein:5113331 {source="Beilstein"}
 xref: CAS:35891-70-4 {source="ChemIDplus"}
+xref: KEGG:C19914
+xref: KNApSAcK:C00016936
+xref: LIPID_MAPS_instance:LMFA01060203 {source="LIPID MAPS"}
+xref: PDBeChem:VRP
 xref: PMID:15679316 {source="ChEMBL"}
+xref: PMID:21456524 {source="Europe PMC"}
 xref: PMID:23178537 {source="Europe PMC"}
 xref: PMID:23659342 {source="Europe PMC"}
 xref: PMID:23802886 {source="Europe PMC"}
@@ -50880,9 +50931,30 @@ xref: PMID:23957439 {source="Europe PMC"}
 xref: PMID:24141140 {source="Europe PMC"}
 xref: PMID:24395529 {source="Europe PMC"}
 xref: PMID:24456332 {source="Europe PMC"}
+xref: PMID:27621809 {source="Europe PMC"}
+xref: PMID:28621883 {source="Europe PMC"}
+xref: PMID:30123648 {source="Europe PMC"}
+xref: PMID:30883241 {source="Europe PMC"}
+xref: PMID:31447688 {source="Europe PMC"}
+xref: PMID:31639005 {source="Europe PMC"}
+xref: PMID:31701696 {source="Europe PMC"}
+xref: PMID:32091078 {source="Europe PMC"}
+xref: PMID:32212314 {source="Europe PMC"}
+xref: PMID:32435178 {source="Europe PMC"}
+xref: PMID:32954686 {source="Europe PMC"}
+xref: PMID:33378044 {source="Europe PMC"}
+xref: PMID:33441497 {source="Europe PMC"}
+xref: PMID:33482299 {source="Europe PMC"}
+xref: PMID:33558761 {source="Europe PMC"}
+xref: PMID:33731109 {source="Europe PMC"}
+xref: PMID:34324668 {source="Europe PMC"}
+xref: PMID:4694226 {source="Europe PMC"}
+xref: PMID:5076310 {source="Europe PMC"}
+xref: PMID:8020136 {source="Europe PMC"}
 xref: Reaxys:5113331 {source="Reaxys"}
 xref: Wikipedia:Myriocin
 is_a: CHEBI:35785 ! sphingoid
+is_a: CHEBI:35868 ! hydroxy monocarboxylic acid
 is_a: CHEBI:59755 ! alpha-amino fatty acid
 is_a: CHEBI:83925 ! non-proteinogenic alpha-amino acid
 relationship: has_role CHEBI:33281 ! antimicrobial agent
@@ -50896,7 +50968,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C21H39NO6" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C21H39NO6/c1-2-3-4-10-13-17(24)14-11-8-6-5-7-9-12-15-18(25)19(26)21(22,16-23)20(27)28/h9,12,18-19,23,25-26H,2-8,10-11,13-16,22H2,1H3,(H,27,28)/b12-9+/t18-,19+,21+/m1/s1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "ZZIKIHCNFWXKDY-GNTQXERDSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "401.53750" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "401.544" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "401.27774" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCCCCCC(=O)CCCCCC\\C=C\\C[C@@H](O)[C@H](O)[C@@](N)(CO)C(O)=O" xsd:string
 
