@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: fypo/releases/2021-12-07/imports/pr_import.owl
+data-version: fypo/releases/2022-01-18/imports/pr_import.owl
 ontology: fypo/imports/pr_import
-property_value: owl:versionInfo "2021-12-07" xsd:string
+property_value: owl:versionInfo "2022-01-18" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -256,6 +256,11 @@ comment: The definition above excludes protein complexes, which some also consid
 synonym: "native protein" NARROW [IEDB:BP]
 synonym: "natural protein" EXACT [PRO:DAN]
 is_a: PR:000018263 ! amino acid chain
+intersection_of: PR:000018263 ! amino acid chain
+intersection_of: has_gene_template SO:0000704 ! gene
+intersection_of: output_of GO:0006412 ! translation
+relationship: has_gene_template SO:0000704 ! gene
+relationship: has_part PR:000000001 ! protein
 relationship: output_of GO:0006412 ! translation
 
 [Term]
@@ -263,7 +268,7 @@ id: PR:000008603
 name: histone H4
 namespace: protein
 def: "A core histone that is a translation product of the human HIST4H4 genes, 1:1 orthologs thereof, or a semi-ortholog thereof." [PRO:DAN]
-comment: Category=gene. Note: The human HIST4H4 genes encode identical proteins. See PR:P62805.
+comment: Category=gene. Note: The human The HIST1H4A, HIST1H4B, HIST1H4C, HIST1H4D, HIST1H4E, HIST1H4F, HIST1H4H, HIST1H4I, HIST1H4J, HIST1H4K, HIST1H4L, HIST2H4A, HIST2H4B, and HIST4H4 genes encode identical proteins.
 synonym: "H4" EXACT PRO-short-label [PRO:DNx]
 synonym: "H4-16" RELATED Gene-based []
 synonym: "H4/A" RELATED Gene-based []
@@ -474,6 +479,12 @@ namespace: sequence
 synonym: "protein coding gene" EXACT []
 is_a: SO:0000704 ! gene
 relationship: has_quality SO:0000010 ! protein_coding
+
+[Typedef]
+id: has_gene_template
+name: has_gene_template
+namespace: protein
+is_transitive: false
 
 [Typedef]
 id: has_part
