@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: fypo/releases/2022-01-27/imports/chebi_import.owl
+data-version: fypo/releases/2022-04-22/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 ontology: fypo/imports/chebi_import
-property_value: owl:versionInfo "2022-01-27" xsd:string
+property_value: owl:versionInfo "2022-04-22" xsd:string
 
 [Term]
 id: CHEBI:100147
@@ -7262,6 +7262,7 @@ namespace: chebi_ontology
 alt_id: CHEBI:8526
 def: "A naturally occurring polypeptide synthesized at the ribosome." []
 subset: 3_STAR
+synonym: "a protein" RELATED [UniProt]
 synonym: "polypeptide chain" RELATED [ChEBI]
 synonym: "Protein" RELATED [KEGG_COMPOUND]
 synonym: "protein polypeptide chains" RELATED [ChEBI]
@@ -7663,6 +7664,7 @@ alt_id: CHEBI:23008
 alt_id: CHEBI:9318
 def: "Any member of the class of organooxygen compounds that is a polyhydroxy-aldehyde or -ketone or a lactol resulting from their intramolecular condensation (monosaccharides); substances derived from these by reduction of the carbonyl group (alditols), by oxidation of one or more hydroxy groups to afford the corresponding aldehydes, ketones, or carboxylic acids, or by replacement of one or more hydroxy group(s) by a hydrogen atom; and polymeric products arising by intermolecular acetal formation between two or more such molecules (disaccharides, polysaccharides and oligosaccharides). Carbohydrates contain only carbon, hydrogen and oxygen atoms; prior to any oxidation or reduction, most have the empirical formula Cm(H2O)n. Compounds obtained from carbohydrates by substitution, etc., are known as carbohydrate derivatives and may contain other elements. Cyclitols are generally not regarded as carbohydrates." []
 subset: 3_STAR
+synonym: "a carbohydrate" RELATED [UniProt]
 synonym: "carbohidrato" RELATED [IUPAC]
 synonym: "carbohidratos" RELATED [IUPAC]
 synonym: "carbohydrate" EXACT IUPAC_NAME [IUPAC]
@@ -8112,6 +8114,20 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UHOVQNZJYSORNB-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "78.11184" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "78.04695" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "c1ccccc1" xsd:string
+
+[Term]
+id: CHEBI:167164
+name: mineral nutrient
+namespace: chebi_ontology
+def: "A mineral that is an inorganic nutrient which must be ingested and absorbed in adequate amounts to satisfy a wide range of essential metabolic and/or structural functions in the human body." []
+subset: 3_STAR
+synonym: "mineral nutrient" EXACT [ChEBI]
+synonym: "mineral nutrients" RELATED [ChEBI]
+synonym: "nutrient mineral" RELATED [ChEBI]
+synonym: "nutrient minerals" RELATED [ChEBI]
+xref: Wikipedia:Mineral_(nutrient)
+is_a: CHEBI:46662 ! mineral
+relationship: has_role CHEBI:33284 ! nutrient
 
 [Term]
 id: CHEBI:167183
@@ -9048,6 +9064,8 @@ alt_id: CHEBI:9222
 def: "A sphingoid 1-phosphate that is the monophosphorylated derivative of  sphinganine." []
 subset: 3_STAR
 synonym: "(2S,3R)-2-amino-3-hydroxyoctadecyl dihydrogen phosphate" RELATED [IUPAC]
+synonym: "DHS-1P" RELATED [ChEBI]
+synonym: "DHS1P" RELATED [ChEBI]
 synonym: "Dihydrosphingosine 1-phosphate" RELATED [KEGG_COMPOUND]
 synonym: "dihydrosphingosine-1-phosphate" RELATED [ChemIDplus]
 synonym: "sphinganine 1-(dihydrogen phosphate)" EXACT IUPAC_NAME [IUPAC]
@@ -9055,9 +9073,27 @@ synonym: "Sphinganine 1-phosphate" EXACT [KEGG_COMPOUND]
 xref: Beilstein:6780476 {source="Beilstein"}
 xref: CAS:19794-97-9 {source="KEGG COMPOUND"}
 xref: CAS:19794-97-9 {source="ChemIDplus"}
+xref: FooDB:FDB022594
+xref: HMDB:HMDB0001383
 xref: KEGG:C01120
 xref: KNApSAcK:C00007541
 xref: LIPID_MAPS_instance:LMSP01050002 {source="LIPID MAPS"}
+xref: PMID:16278291 {source="Europe PMC"}
+xref: PMID:16529909 {source="Europe PMC"}
+xref: PMID:17060094 {source="Europe PMC"}
+xref: PMID:18482992 {source="Europe PMC"}
+xref: PMID:19119142 {source="Europe PMC"}
+xref: PMID:20309867 {source="Europe PMC"}
+xref: PMID:22016110 {source="Europe PMC"}
+xref: PMID:23373542 {source="Europe PMC"}
+xref: PMID:2754341 {source="Europe PMC"}
+xref: PMID:27585475 {source="Europe PMC"}
+xref: PMID:30557628 {source="Europe PMC"}
+xref: PMID:32278008 {source="Europe PMC"}
+xref: PMID:33535437 {source="Europe PMC"}
+xref: PMID:7897327 {source="Europe PMC"}
+xref: PMID:8192648 {source="Europe PMC"}
+xref: PMID:9353337 {source="Europe PMC"}
 xref: Reaxys:6780476 {source="Reaxys"}
 is_a: CHEBI:77068 ! sphingoid 1-phosphate
 relationship: has_functional_parent CHEBI:16566 ! sphinganine
@@ -9438,6 +9474,7 @@ synonym: "deoxyribonucleic acids" EXACT IUPAC_NAME [IUPAC]
 synonym: "deoxyribonucleic acids" RELATED [ChEBI]
 synonym: "Desoxyribonukleinsaeure" RELATED [ChEBI]
 synonym: "desoxyribose nucleic acid" RELATED [ChemIDplus]
+synonym: "DNA" RELATED [UniProt]
 synonym: "DNA" RELATED [KEGG_COMPOUND]
 synonym: "DNA" RELATED [IUPAC]
 synonym: "DNAn" RELATED [KEGG_COMPOUND]
@@ -13040,7 +13077,7 @@ xref: PMID:24587932 {source="Europe PMC"}
 xref: PMID:24900967 {source="Europe PMC"}
 xref: Reaxys:1209725 {source="Reaxys"}
 xref: Wikipedia:Glutaric_acid
-is_a: CHEBI:18059 ! lipid
+is_a: CHEBI:189840 ! dicarboxylic fatty acid
 is_a: CHEBI:28383 ! alpha,omega-dicarboxylic acid
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: has_role CHEBI:83056 ! Daphnia magna metabolite
@@ -14113,6 +14150,7 @@ def: "An iron group element atom that has atomic number 26." []
 subset: 3_STAR
 synonym: "26Fe" RELATED [IUPAC]
 synonym: "Eisen" RELATED [ChEBI]
+synonym: "Fe" RELATED [UniProt]
 synonym: "Fe" RELATED [IUPAC]
 synonym: "fer" RELATED [ChEBI]
 synonym: "ferrum" RELATED [IUPAC]
@@ -14320,6 +14358,7 @@ synonym: "manganese" RELATED [ChEBI]
 synonym: "manganeso" RELATED [ChEBI]
 synonym: "manganum" RELATED [ChEBI]
 synonym: "Mn" RELATED [IUPAC]
+synonym: "Mn" RELATED [UniProt]
 xref: CAS:7439-96-5 {source="KEGG COMPOUND"}
 xref: CAS:7439-96-5 {source="ChemIDplus"}
 xref: KEGG:C00034
@@ -14992,9 +15031,11 @@ alt_id: CHEBI:26839
 alt_id: CHEBI:7710
 subset: 3_STAR
 synonym: "(O2)(.-)" RELATED [IUPAC]
+synonym: "Dioxid(1-)" RELATED [ChEBI]
 synonym: "dioxidanidyl" EXACT IUPAC_NAME [IUPAC]
 synonym: "dioxide(.1-)" EXACT IUPAC_NAME [IUPAC]
 synonym: "dioxide(1-)" RELATED [IUPAC]
+synonym: "hiperoxido" RELATED [ChEBI]
 synonym: "Hyperoxid" RELATED [ChEBI]
 synonym: "hyperoxide" RELATED [IUPAC]
 synonym: "O2(-)" RELATED [IUPAC]
@@ -15007,11 +15048,101 @@ synonym: "Superoxide anion" RELATED [KEGG_COMPOUND]
 synonym: "superoxide anion radical" RELATED [ChemIDplus]
 synonym: "superoxide radical" RELATED [ChEBI]
 synonym: "superoxide radical anion" RELATED [ChEBI]
+synonym: "superoxido" RELATED [ChEBI]
 synonym: "superoxyde" RELATED [ChEBI]
 xref: CAS:11062-77-4 {source="ChemIDplus"}
 xref: CAS:11062-77-4 {source="NIST Chemistry WebBook"}
+xref: FooDB:FDB022880
 xref: Gmelin:487 {source="Gmelin"}
+xref: HMDB:HMDB0002168
 xref: KEGG:C00704
+xref: MetaCyc:SUPER-OXIDE
+xref: PDBeChem:2FK
+xref: PMID:10440226 {source="Europe PMC"}
+xref: PMID:10523323 {source="Europe PMC"}
+xref: PMID:10588368 {source="Europe PMC"}
+xref: PMID:11008114 {source="Europe PMC"}
+xref: PMID:11333112 {source="Europe PMC"}
+xref: PMID:11485972 {source="Europe PMC"}
+xref: PMID:12097818 {source="Europe PMC"}
+xref: PMID:12137408 {source="Europe PMC"}
+xref: PMID:12598407 {source="Europe PMC"}
+xref: PMID:14529453 {source="Europe PMC"}
+xref: PMID:14703794 {source="Europe PMC"}
+xref: PMID:14726604 {source="Europe PMC"}
+xref: PMID:15586010 {source="Europe PMC"}
+xref: PMID:15807660 {source="Europe PMC"}
+xref: PMID:15952898 {source="Europe PMC"}
+xref: PMID:1671684 {source="Europe PMC"}
+xref: PMID:16771675 {source="Europe PMC"}
+xref: PMID:16814528 {source="Europe PMC"}
+xref: PMID:17052238 {source="Europe PMC"}
+xref: PMID:17303648 {source="Europe PMC"}
+xref: PMID:17531522 {source="Europe PMC"}
+xref: PMID:18519744 {source="Europe PMC"}
+xref: PMID:18827931 {source="Europe PMC"}
+xref: PMID:19273321 {source="Europe PMC"}
+xref: PMID:19482633 {source="Europe PMC"}
+xref: PMID:19628033 {source="Europe PMC"}
+xref: PMID:19857607 {source="Europe PMC"}
+xref: PMID:19914407 {source="Europe PMC"}
+xref: PMID:20868230 {source="Europe PMC"}
+xref: PMID:21297912 {source="Europe PMC"}
+xref: PMID:21434856 {source="Europe PMC"}
+xref: PMID:21473702 {source="Europe PMC"}
+xref: PMID:2160451 {source="Europe PMC"}
+xref: PMID:217531 {source="Europe PMC"}
+xref: PMID:22198225 {source="Europe PMC"}
+xref: PMID:22247596 {source="Europe PMC"}
+xref: PMID:22521482 {source="Europe PMC"}
+xref: PMID:22729857 {source="Europe PMC"}
+xref: PMID:22759590 {source="Europe PMC"}
+xref: PMID:23542447 {source="Europe PMC"}
+xref: PMID:23660153 {source="Europe PMC"}
+xref: PMID:23668959 {source="Europe PMC"}
+xref: PMID:24567847 {source="Europe PMC"}
+xref: PMID:24862271 {source="Europe PMC"}
+xref: PMID:2552230 {source="Europe PMC"}
+xref: PMID:26047895 {source="Europe PMC"}
+xref: PMID:26475962 {source="Europe PMC"}
+xref: PMID:26875845 {source="Europe PMC"}
+xref: PMID:27066025 {source="Europe PMC"}
+xref: PMID:27066179 {source="Europe PMC"}
+xref: PMID:27085844 {source="Europe PMC"}
+xref: PMID:27357008 {source="Europe PMC"}
+xref: PMID:27590268 {source="Europe PMC"}
+xref: PMID:27965593 {source="Europe PMC"}
+xref: PMID:28341974 {source="Europe PMC"}
+xref: PMID:28599858 {source="Europe PMC"}
+xref: PMID:28825637 {source="Europe PMC"}
+xref: PMID:28842347 {source="Europe PMC"}
+xref: PMID:28842493 {source="Europe PMC"}
+xref: PMID:29259135 {source="Europe PMC"}
+xref: PMID:29385710 {source="Europe PMC"}
+xref: PMID:29669742 {source="Europe PMC"}
+xref: PMID:29896077 {source="Europe PMC"}
+xref: PMID:30307099 {source="Europe PMC"}
+xref: PMID:30500433 {source="Europe PMC"}
+xref: PMID:30573187 {source="Europe PMC"}
+xref: PMID:30886134 {source="Europe PMC"}
+xref: PMID:31254369 {source="Europe PMC"}
+xref: PMID:31484901 {source="Europe PMC"}
+xref: PMID:32144830 {source="Europe PMC"}
+xref: PMID:32220789 {source="Europe PMC"}
+xref: PMID:32478084 {source="Europe PMC"}
+xref: PMID:32667121 {source="Europe PMC"}
+xref: PMID:32760286 {source="Europe PMC"}
+xref: PMID:32927603 {source="Europe PMC"}
+xref: PMID:33248264 {source="Europe PMC"}
+xref: PMID:33716500 {source="Europe PMC"}
+xref: PMID:33805942 {source="Europe PMC"}
+xref: PMID:34635271 {source="Europe PMC"}
+xref: PMID:7998676 {source="Europe PMC"}
+xref: PMID:8577306 {source="Europe PMC"}
+xref: PMID:8720916 {source="Europe PMC"}
+xref: PMID:8959373 {source="Europe PMC"}
+xref: PMID:9337481 {source="Europe PMC"}
+xref: Wikipedia:Superoxide
 is_a: CHEBI:26523 ! reactive oxygen species
 is_a: CHEBI:33263 ! diatomic oxygen
 is_a: CHEBI:36876 ! inorganic radical anion
@@ -15058,6 +15189,44 @@ synonym: "delta-lactonas" RELATED [ChEBI]
 synonym: "delta-lactone" EXACT [ChEBI]
 synonym: "delta-lactones" RELATED [ChEBI]
 is_a: CHEBI:25000 ! lactone
+
+[Term]
+id: CHEBI:189840
+name: dicarboxylic fatty acid
+namespace: chebi_ontology
+def: "Any fatty acid containing two carboxy groups." []
+subset: 2_STAR
+is_a: CHEBI:35692 ! dicarboxylic acid
+is_a: CHEBI:61697 ! fatty acid derivative
+relationship: is_conjugate_acid_of CHEBI:189846 ! dicarboxylic fatty acid dianion
+
+[Term]
+id: CHEBI:189846
+name: dicarboxylic fatty acid dianion
+namespace: chebi_ontology
+def: "Any fatty acid that contains 2 carboxylic groups. Major microspecies at pH 7.3" []
+subset: 2_STAR
+synonym: "a dicarboxylic fatty acid" RELATED [UniProt]
+is_a: CHEBI:28965 ! dicarboxylic acid dianion
+is_a: CHEBI:61697 ! fatty acid derivative
+relationship: is_conjugate_base_of CHEBI:189840 ! dicarboxylic fatty acid
+
+[Term]
+id: CHEBI:190297
+name: inorganic magnesium salt
+namespace: chebi_ontology
+def: "A magnesium salt that lacks C-H bonds" []
+subset: 2_STAR
+xref: PMID:16548135 {source="SUBMITTER"}
+is_a: CHEBI:167164 ! mineral nutrient
+
+[Term]
+id: CHEBI:190303
+name: inorganic potassium salt
+namespace: chebi_ontology
+def: "A potassium salt that lacks C-H bonds" []
+subset: 2_STAR
+is_a: CHEBI:167164 ! mineral nutrient
 
 [Term]
 id: CHEBI:19203
@@ -16509,6 +16678,7 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: "20Ca" RELATED [IUPAC]
 synonym: "Ca" RELATED [IUPAC]
+synonym: "Ca" RELATED [UniProt]
 synonym: "calcio" RELATED [ChEBI]
 synonym: "Calcium" RELATED [KEGG_COMPOUND]
 synonym: "calcium" EXACT IUPAC_NAME [IUPAC]
@@ -18737,6 +18907,7 @@ synonym: "Magnesium" RELATED [ChEBI]
 synonym: "magnesium" EXACT IUPAC_NAME [IUPAC]
 synonym: "magnesium" RELATED [ChEBI]
 synonym: "Mg" RELATED [IUPAC]
+synonym: "Mg" RELATED [UniProt]
 xref: CAS:7439-95-4 {source="ChemIDplus"}
 xref: DrugBank:DB01378
 xref: Gmelin:16207 {source="Gmelin"}
@@ -24568,6 +24739,7 @@ alt_id: CHEBI:6968
 subset: 3_STAR
 synonym: "42Mo" RELATED [IUPAC]
 synonym: "Mo" RELATED [IUPAC]
+synonym: "Mo" RELATED [UniProt]
 synonym: "molibdeno" RELATED [ChEBI]
 synonym: "Molybdaen" RELATED [ChEBI]
 synonym: "molybdene" RELATED [ChEBI]
@@ -26637,6 +26809,7 @@ synonym: "L-aspartic acid monoanion" RELATED [JCBN]
 xref: Gmelin:327374 {source="Gmelin"}
 xref: Reaxys:15801578 {source="Reaxys"}
 is_a: CHEBI:35391 ! aspartate(1-)
+is_a: CHEBI:59869 ! L-alpha-amino acid zwitterion
 is_a: CHEBI:62031 ! polar amino acid zwitterion
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: has_role CHEBI:78675 ! fundamental metabolite
@@ -29491,6 +29664,7 @@ xref: MetaCyc:KCL
 xref: MolBase:881
 xref: Reaxys:3534978 {source="Reaxys"}
 xref: Wikipedia:Potassium_Chloride
+is_a: CHEBI:190303 ! inorganic potassium salt
 is_a: CHEBI:26218 ! potassium salt
 is_a: CHEBI:36093 ! inorganic chloride
 relationship: has_role CHEBI:33287 ! fertilizer
@@ -33188,7 +33362,6 @@ synonym: "Glycolipid" EXACT [KEGG_COMPOUND]
 synonym: "glycolipids" EXACT IUPAC_NAME [IUPAC]
 xref: KEGG:C05005
 xref: Wikipedia:Glycolipids
-is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:35740 ! liposaccharide
 
 [Term]
@@ -33694,6 +33867,7 @@ synonym: "ribonucleic acids" EXACT IUPAC_NAME [IUPAC]
 synonym: "ribonucleic acids" RELATED [ChEBI]
 synonym: "Ribonukleinsaeure" RELATED [ChEBI]
 synonym: "ribose nucleic acid" RELATED [ChEBI]
+synonym: "RNA" RELATED [UniProt]
 synonym: "RNA" RELATED [IUPAC]
 synonym: "RNS" RELATED [ChEBI]
 synonym: "yeast nucleic acid" RELATED [ChEBI]
@@ -36543,6 +36717,7 @@ def: "An inorganic sodium salt of formula Na3VO4 containing the tetrahedral VO4(
 subset: 3_STAR
 synonym: "Na3VO4" RELATED [IUPAC]
 synonym: "sodium o-vanadate" RELATED [ChemIDplus]
+synonym: "sodium orthovanadate" RELATED [ChemIDplus]
 synonym: "sodium pervanadate" RELATED [ChemIDplus]
 synonym: "sodium tetraoxidovanadate(3-)" EXACT IUPAC_NAME [IUPAC]
 synonym: "sodium tetraoxidovanadate(V)" EXACT IUPAC_NAME [IUPAC]
@@ -36564,12 +36739,25 @@ xref: Gmelin:1600790 {source="Gmelin"}
 xref: Gmelin:2388949 {source="Gmelin"}
 xref: Gmelin:2389118 {source="Gmelin"}
 xref: Gmelin:38128 {source="Gmelin"}
+xref: PMID:16180085 {source="Europe PMC"}
 xref: PMID:21909513 {source="Europe PMC"}
+xref: PMID:25044526 {source="Europe PMC"}
+xref: PMID:26647781 {source="Europe PMC"}
+xref: PMID:28320298 {source="Europe PMC"}
+xref: PMID:30179137 {source="Europe PMC"}
+xref: PMID:30368869 {source="Europe PMC"}
+xref: PMID:30927246 {source="Europe PMC"}
+xref: PMID:30944619 {source="Europe PMC"}
+xref: PMID:32940655 {source="Europe PMC"}
+xref: PMID:34125648 {source="Europe PMC"}
 xref: Reaxys:14555683 {source="Reaxys"}
 xref: Wikipedia:Sodium_orthovanadate
 is_a: CHEBI:38702 ! inorganic sodium salt
 relationship: has_part CHEBI:46442 ! vanadate(3-)
 relationship: has_role CHEBI:35608 ! EC 3.1.3.48 (protein-tyrosine-phosphatase) inhibitor
+relationship: has_role CHEBI:35610 ! antineoplastic agent
+relationship: has_role CHEBI:66987 ! radiation protective agent
+relationship: has_role CHEBI:68495 ! apoptosis inducer
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "Na3O4V" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/3Na.4O.V/q3*+1;;3*-1;" xsd:string
@@ -37030,8 +37218,8 @@ subset: 3_STAR
 synonym: "a fatty acid ester" RELATED [UniProt]
 synonym: "FAEE" RELATED [SUBMITTER]
 synonym: "fatty acid esters" RELATED [ChEBI]
-is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:33308 ! carboxylic ester
+is_a: CHEBI:61697 ! fatty acid derivative
 relationship: has_functional_parent CHEBI:35366 ! fatty acid
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO2R2" xsd:string
@@ -44471,6 +44659,20 @@ xref: Wikipedia:Diketone
 is_a: CHEBI:17087 ! ketone
 
 [Term]
+id: CHEBI:46662
+name: mineral
+namespace: chebi_ontology
+def: "In general, a mineral is a chemical substance that is normally crystalline formed and has been formed as a result of geological processes. The term also includes metamict substances (naturally occurring, formerly crystalline substances whose crystallinity has been destroyed by ionising radiation) and can include naturally occurring amorphous substances that have never been crystalline ('mineraloids') such as georgite and calciouranoite as well as substances formed by the action of geological processes on bigenic compounds ('biogenic minerals')." []
+subset: 3_STAR
+synonym: "mineral" EXACT [ChEBI]
+synonym: "Minerale" RELATED [ChEBI]
+synonym: "minerales" RELATED [ChEBI]
+synonym: "minerals" RELATED [ChEBI]
+synonym: "mineraux" RELATED [ChEBI]
+xref: Wikipedia:Mineral
+is_a: CHEBI:59999 ! chemical substance
+
+[Term]
 id: CHEBI:46668
 name: amino acid ester
 namespace: chebi_ontology
@@ -51229,6 +51431,7 @@ synonym: "(2S,3R)-2-ammonio-3-hydroxyoctadecyl phosphate" RELATED [ChEBI]
 synonym: "(2S,3R)-2-azaniumyl-3-hydroxyoctadecyl phosphate" EXACT IUPAC_NAME [IUPAC]
 synonym: "(2S,3R)-3-hydroxy-1-(phosphonatooxy)octadecan-2-aminium" RELATED [ChEBI]
 synonym: "sphinganine 1-phosphate" RELATED [UniProt]
+xref: MetaCyc:CPD-649
 is_a: CHEBI:76941 ! sphingoid 1-phosphate(1-)
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: has_role CHEBI:77746 ! human metabolite
@@ -51815,7 +52018,6 @@ def: "A 2'-deoxyribonucleoside triphosphate oxoanion obtained from thymidine 5'-
 subset: 3_STAR
 synonym: "5'-O-[({[(hydroxyphosphinato)oxy]phosphinato}oxy)phosphinato]thymidine" EXACT IUPAC_NAME [IUPAC]
 synonym: "dTTP trianion" RELATED [ChEBI]
-synonym: "dTTP(3-)" EXACT [UniProt]
 xref: Beilstein:4284328 {source="Beilstein"}
 is_a: CHEBI:61662 ! 2'-deoxyribonucleoside triphosphate oxoanion
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
@@ -53157,6 +53359,7 @@ name: peptide zwitterion
 namespace: chebi_ontology
 def: "Zwitterionic form of any peptide where, in general, the amino terminus is positively charged and the carboxy terminus is negatively charged." []
 subset: 3_STAR
+synonym: "a peptide" RELATED [UniProt]
 synonym: "peptide zwitterions" RELATED [ChEBI]
 is_a: CHEBI:27369 ! zwitterion
 relationship: is_tautomer_of CHEBI:16670 ! peptide
@@ -57021,6 +57224,7 @@ xref: Gmelin:9305 {source="Gmelin"}
 xref: KEGG:C07755
 xref: MolBase:1868
 xref: Reaxys:8128169 {source="Reaxys"}
+is_a: CHEBI:190297 ! inorganic magnesium salt
 is_a: CHEBI:33975 ! magnesium salt
 is_a: CHEBI:36093 ! inorganic chloride
 is_a: CHEBI:51234 ! magnesium halide
@@ -65110,7 +65314,13 @@ name: Phenylglyoxal
 namespace: chebi_ontology
 subset: 2_STAR
 synonym: "2-oxo-2-phenylacetaldehyde" RELATED [HMDB]
+synonym: "alpha-oxobenzeneacetaldehyde" RELATED [ChEBI]
+synonym: "benzoylcarboxaldehyde" RELATED [ChEBI]
+synonym: "benzoylformaldehyde" RELATED [ChEBI]
+synonym: "phenylethanedione" RELATED [ChEBI]
+synonym: "phenylglyoxal" EXACT [UniProt]
 xref: HMDB:HMDB0061916
+xref: MetaCyc:PHENYLGLYOXAL
 xref: PMID:19167006 {source="Europe PMC"}
 is_a: CHEBI:25973 ! phenylacetaldehydes
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -65361,7 +65571,7 @@ xref: PDBeChem:OCE
 xref: PMID:22770225 {source="Europe PMC"}
 xref: Reaxys:1210161 {source="Reaxys"}
 xref: Wikipedia:Suberic_acid
-is_a: CHEBI:18059 ! lipid
+is_a: CHEBI:189840 ! dicarboxylic fatty acid
 is_a: CHEBI:28383 ! alpha,omega-dicarboxylic acid
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: is_conjugate_acid_of CHEBI:132953 ! suberate
