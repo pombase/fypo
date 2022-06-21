@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: fypo/releases/2022-05-16/imports/chebi_import.owl
+data-version: fypo/releases/2022-06-20/imports/chebi_import.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 ontology: fypo/imports/chebi_import
-property_value: owl:versionInfo "2022-05-16" xsd:string
+property_value: owl:versionInfo "2022-06-20" xsd:string
 
 [Term]
 id: CHEBI:100147
@@ -1842,7 +1842,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@@H]1([C@@H]([C@@
 
 [Term]
 id: CHEBI:144644
-name: a tetracycline zwittterion
+name: a tetracycline zwitterion
 namespace: chebi_ontology
 subset: 2_STAR
 synonym: "a tetracycline" RELATED [UniProt]
@@ -7127,7 +7127,7 @@ subset: 3_STAR
 synonym: "2'-Deoxyribonucleoside triphosphate" EXACT [KEGG_COMPOUND]
 synonym: "2'-deoxyribonucleoside triphosphates" RELATED [ChEBI]
 xref: KEGG:C04283
-is_a: CHEBI:17326 ! nucleoside triphosphate
+is_a: CHEBI:17326 ! nucleoside 5'-triphoshate
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H12O12P3R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "357.063" xsd:string
@@ -7516,7 +7516,7 @@ def: "A methoxybenzoate that is the conjugate base of vanillic acid." []
 subset: 3_STAR
 synonym: "4-HYDROXY-3-METHOXYBENZOATE" RELATED [PDBeChem]
 synonym: "4-hydroxy-3-methoxybenzoate" EXACT IUPAC_NAME [IUPAC]
-synonym: "4-hydroxy-3-methoxybenzoate" RELATED [UniProt]
+synonym: "vanillate" EXACT [UniProt]
 xref: Beilstein:6504377 {source="Beilstein"}
 xref: DrugBank:DB08711
 xref: KEGG:C06672
@@ -8978,7 +8978,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@@H](O)[C@H](N)C
 
 [Term]
 id: CHEBI:16862
-name: nucleoside diphosphate
+name: nucleoside 5'-diphosphate
 namespace: chebi_ontology
 alt_id: CHEBI:13401
 alt_id: CHEBI:13662
@@ -8988,7 +8988,7 @@ alt_id: CHEBI:7428
 alt_id: CHEBI:7652
 subset: 3_STAR
 synonym: "NDP" RELATED [KEGG_COMPOUND]
-synonym: "Nucleoside diphosphate" EXACT [KEGG_COMPOUND]
+synonym: "Nucleoside diphosphate" RELATED [KEGG_COMPOUND]
 synonym: "nucleoside diphosphates" RELATED [ChEBI]
 xref: KEGG:C00454
 is_a: CHEBI:25608 ! nucleoside phosphate
@@ -11175,7 +11175,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC(O)(CC([O-])=O)CC
 
 [Term]
 id: CHEBI:17326
-name: nucleoside triphosphate
+name: nucleoside 5'-triphoshate
 namespace: chebi_ontology
 alt_id: CHEBI:13411
 alt_id: CHEBI:14677
@@ -11184,12 +11184,12 @@ alt_id: CHEBI:7442
 alt_id: CHEBI:7655
 subset: 3_STAR
 synonym: "NTP" RELATED [KEGG_COMPOUND]
-synonym: "Nucleoside triphosphate" EXACT [KEGG_COMPOUND]
+synonym: "Nucleoside triphosphate" RELATED [KEGG_COMPOUND]
 synonym: "nucleoside triphosphates" RELATED [ChEBI]
 xref: KEGG:C00201
 is_a: CHEBI:25608 ! nucleoside phosphate
 relationship: has_role CHEBI:75771 ! mouse metabolite
-relationship: is_conjugate_acid_of CHEBI:58104 ! nucleoside triphosphate(3-)
+relationship: is_conjugate_acid_of CHEBI:58104 ! nucleoside 5'-triphoshate(3-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H12O13P3R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "373.063" xsd:string
@@ -12336,7 +12336,7 @@ subset: 3_STAR
 synonym: "Ribonucleoside diphosphate" EXACT [KEGG_COMPOUND]
 synonym: "ribonucleoside diphosphates" RELATED [ChEBI]
 xref: KEGG:C03723
-is_a: CHEBI:16862 ! nucleoside diphosphate
+is_a: CHEBI:16862 ! nucleoside 5'-diphosphate
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H11O10P2R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "293.083" xsd:string
@@ -12770,7 +12770,7 @@ def: "An acyl-CoA oxoanion obtained by deprotonation of the phosphate, diphospha
 subset: 2_STAR
 synonym: "an omega-carboxy-(fatty acyl)-CoA" RELATED [UniProt]
 is_a: CHEBI:133241 ! omega-carboxyacyl-CoA(5-)
-is_a: CHEBI:18059 ! lipid
+is_a: CHEBI:61697 ! fatty acid derivative
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-5" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C23H31N7O19P3SR" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "834.516" xsd:string
@@ -13260,7 +13260,7 @@ subset: 3_STAR
 synonym: "2'-Deoxyribonucleoside diphosphate" EXACT [KEGG_COMPOUND]
 synonym: "2'-deoxyribonucleoside diphosphates" RELATED [ChEBI]
 xref: KEGG:C04232
-is_a: CHEBI:16862 ! nucleoside diphosphate
+is_a: CHEBI:16862 ! nucleoside 5'-diphosphate
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H11O9P2R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "277.083" xsd:string
@@ -15052,6 +15052,7 @@ synonym: "superoxido" RELATED [ChEBI]
 synonym: "superoxyde" RELATED [ChEBI]
 xref: CAS:11062-77-4 {source="ChemIDplus"}
 xref: CAS:11062-77-4 {source="NIST Chemistry WebBook"}
+xref: Chemspider:4514331
 xref: FooDB:FDB022880
 xref: Gmelin:487 {source="Gmelin"}
 xref: HMDB:HMDB0002168
@@ -15154,7 +15155,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "O2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/HO2/c1-2/h1H/p-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "OUUQCZGPVNCOIJ-UHFFFAOYSA-M" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "31.99880" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "31.999" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "31.98983" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[O][O-]" xsd:string
 
@@ -15219,6 +15220,7 @@ def: "A magnesium salt that lacks C-H bonds" []
 subset: 2_STAR
 xref: PMID:16548135 {source="SUBMITTER"}
 is_a: CHEBI:167164 ! mineral nutrient
+is_a: CHEBI:24839 ! inorganic salt
 
 [Term]
 id: CHEBI:190303
@@ -15227,6 +15229,8 @@ namespace: chebi_ontology
 def: "A potassium salt that lacks C-H bonds" []
 subset: 2_STAR
 is_a: CHEBI:167164 ! mineral nutrient
+is_a: CHEBI:24839 ! inorganic salt
+is_a: CHEBI:26218 ! potassium salt
 
 [Term]
 id: CHEBI:19203
@@ -16383,6 +16387,7 @@ def: "A monocarboxylic acid anion obtained by deprotonation of the carboxy group
 subset: 3_STAR
 synonym: "benzoate anion" RELATED [ChEBI]
 is_a: CHEBI:35757 ! monocarboxylic acid anion
+is_a: CHEBI:91007 ! aromatic carboxylate
 
 [Term]
 id: CHEBI:22723
@@ -19374,6 +19379,7 @@ def: "A hydroxybenzoate carrying a single hydroxy substituent at unspecified pos
 subset: 3_STAR
 synonym: "monohydroxybenzoates" RELATED [ChEBI]
 is_a: CHEBI:24675 ! hydroxybenzoate
+relationship: is_conjugate_base_of CHEBI:25389 ! monohydroxybenzoic acid
 
 [Term]
 id: CHEBI:25389
@@ -19383,6 +19389,7 @@ def: "Any hydroxybenzoic acid having a single phenolic hydroxy substituent on th
 subset: 3_STAR
 synonym: "monohydroxybenzoic acids" RELATED [ChEBI]
 is_a: CHEBI:24676 ! hydroxybenzoic acid
+relationship: is_conjugate_acid_of CHEBI:25388 ! monohydroxybenzoate
 
 [Term]
 id: CHEBI:25392
@@ -20085,6 +20092,7 @@ synonym: "oxo acids" RELATED [IUPAC]
 synonym: "oxo carboxylic acids" EXACT IUPAC_NAME [IUPAC]
 synonym: "oxo carboxylic acids" RELATED [ChEBI]
 is_a: CHEBI:33575 ! carboxylic acid
+relationship: is_conjugate_acid_of CHEBI:35903 ! oxo carboxylic acid anion
 
 [Term]
 id: CHEBI:2580
@@ -20872,7 +20880,7 @@ name: purine nucleoside diphosphate
 namespace: chebi_ontology
 subset: 3_STAR
 synonym: "purine nucleoside diphosphates" RELATED [ChEBI]
-is_a: CHEBI:16862 ! nucleoside diphosphate
+is_a: CHEBI:16862 ! nucleoside 5'-diphosphate
 
 [Term]
 id: CHEBI:26393
@@ -20880,7 +20888,7 @@ name: purine nucleoside triphosphate
 namespace: chebi_ontology
 subset: 3_STAR
 synonym: "purine nucleoside triphosphates" RELATED [ChEBI]
-is_a: CHEBI:17326 ! nucleoside triphosphate
+is_a: CHEBI:17326 ! nucleoside 5'-triphoshate
 
 [Term]
 id: CHEBI:26394
@@ -21027,7 +21035,6 @@ name: pyrimidine deoxyribonucleoside triphosphate
 namespace: chebi_ontology
 subset: 3_STAR
 synonym: "pyrimidine deoxyribonucleoside triphosphates" RELATED [ChEBI]
-is_a: CHEBI:16516 ! 2'-deoxyribonucleoside triphosphate
 is_a: CHEBI:26439 ! pyrimidine nucleoside triphosphate
 
 [Term]
@@ -21045,7 +21052,7 @@ name: pyrimidine nucleoside diphosphate
 namespace: chebi_ontology
 subset: 3_STAR
 synonym: "pyrimidine nucleoside diphosphates" RELATED [ChEBI]
-is_a: CHEBI:16862 ! nucleoside diphosphate
+is_a: CHEBI:16862 ! nucleoside 5'-diphosphate
 
 [Term]
 id: CHEBI:26438
@@ -21061,7 +21068,7 @@ name: pyrimidine nucleoside triphosphate
 namespace: chebi_ontology
 subset: 3_STAR
 synonym: "pyrimidine nucleoside triphosphates" RELATED [ChEBI]
-is_a: CHEBI:17326 ! nucleoside triphosphate
+is_a: CHEBI:17326 ! nucleoside 5'-triphoshate
 
 [Term]
 id: CHEBI:26440
@@ -26407,6 +26414,10 @@ xref: PMID:160437 {source="Europe PMC"}
 xref: PMID:1624425 {source="Europe PMC"}
 xref: PMID:3018444 {source="Europe PMC"}
 xref: PMID:315774 {source="Europe PMC"}
+xref: PMID:34700340 {source="Europe PMC"}
+xref: PMID:34979291 {source="Europe PMC"}
+xref: PMID:35233582 {source="Europe PMC"}
+xref: PMID:35370192 {source="Europe PMC"}
 xref: PMID:4624615 {source="Europe PMC"}
 xref: PMID:4630978 {source="Europe PMC"}
 xref: PMID:5103138 {source="Europe PMC"}
@@ -31005,6 +31016,7 @@ xref: PMID:19666480 {source="Europe PMC"}
 xref: PMID:20174687 {source="Europe PMC"}
 xref: PMID:20630753 {source="Europe PMC"}
 xref: PMID:21879714 {source="Europe PMC"}
+xref: PMID:25537370 {source="Europe PMC"}
 xref: PMID:4399350 {source="Europe PMC"}
 xref: PMID:5311576 {source="Europe PMC"}
 xref: Reaxys:2211027 {source="Reaxys"}
@@ -31012,6 +31024,8 @@ xref: Wikipedia:Orsellinic_acid
 is_a: CHEBI:23778 ! dihydroxybenzoic acid
 is_a: CHEBI:33572 ! resorcinols
 relationship: has_role CHEBI:25212 ! metabolite
+relationship: has_role CHEBI:76507 ! marine metabolite
+relationship: has_role CHEBI:76946 ! fungal metabolite
 relationship: is_conjugate_acid_of CHEBI:16162 ! o-orsellinate
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C8H8O4" xsd:string
@@ -37661,6 +37675,7 @@ def: "Any carboxylic acid anion containing at least one oxo group." []
 subset: 3_STAR
 synonym: "oxo carboxylic acid anions" RELATED [ChEBI]
 is_a: CHEBI:29067 ! carboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:25754 ! oxo carboxylic acid
 
 [Term]
 id: CHEBI:35907
@@ -49109,7 +49124,8 @@ is_a: CHEBI:24868 ! organic salt
 id: CHEBI:51082
 name: nitrate salt
 namespace: chebi_ontology
-subset: 1_STAR
+subset: 3_STAR
+synonym: "nitrate salts" RELATED [ChEBI]
 is_a: CHEBI:24866 ! salt
 relationship: has_part CHEBI:17632 ! nitrate
 
@@ -49120,7 +49136,7 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: "inorganic nitrate salts" RELATED [ChEBI]
 synonym: "inorganic nitrates" RELATED [ChEBI]
-is_a: CHEBI:24835 ! inorganic molecular entity
+is_a: CHEBI:24839 ! inorganic salt
 is_a: CHEBI:51082 ! nitrate salt
 
 [Term]
@@ -51385,7 +51401,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@@H](O)[C@H]([NH
 id: CHEBI:57930
 name: nucleoside 5'-diphosphate(3-)
 namespace: chebi_ontology
-def: "Trianion of nucleoside diiphosphate arising from deprotonation of all three free OH groups of the diphosphate; major species at pH 7.3." []
+def: "Trianion of nucleoside diphosphate arising from deprotonation of all three free OH groups of the diphosphate; major species at pH 7.3." []
 subset: 3_STAR
 synonym: "a ribonucleoside 5'-diphosphate" RELATED [UniProt]
 synonym: "NDP trianion" RELATED [ChEBI]
@@ -51394,7 +51410,7 @@ synonym: "nucleoside diphosphate trianion" RELATED [ChEBI]
 synonym: "ribonucleoside diphosphate trianion" RELATED [ChEBI]
 synonym: "ribonucleoside diphosphate(3-)" RELATED [ChEBI]
 is_a: CHEBI:58945 ! organophosphate oxoanion
-relationship: is_conjugate_base_of CHEBI:16862 ! nucleoside diphosphate
+relationship: is_conjugate_base_of CHEBI:16862 ! nucleoside 5'-diphosphate
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H8O10P2R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "290.059" xsd:string
@@ -51720,7 +51736,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+][C@@H](Cc1ccc
 
 [Term]
 id: CHEBI:58104
-name: nucleoside triphosphate(3-)
+name: nucleoside 5'-triphoshate(3-)
 namespace: chebi_ontology
 def: "Trianion of nucleoside triphosphate arising from deprotonation of three of the four free triphosphate OH groups." []
 subset: 3_STAR
@@ -51730,8 +51746,8 @@ synonym: "nucleoside triphosphate trianion" RELATED [ChEBI]
 synonym: "ribonucleoside triphosphate trianion" RELATED [ChEBI]
 synonym: "ribonucleoside triphosphate(3-)" RELATED [ChEBI]
 is_a: CHEBI:59724 ! ribonucleoside triphosphate oxoanion
-relationship: is_conjugate_acid_of CHEBI:61557 ! nucleoside triphosphate(4-)
-relationship: is_conjugate_base_of CHEBI:17326 ! nucleoside triphosphate
+relationship: is_conjugate_acid_of CHEBI:61557 ! nucleoside 5'-triphoshate(4-)
+relationship: is_conjugate_base_of CHEBI:17326 ! nucleoside 5'-triphoshate
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H9O13P3R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "370.039" xsd:string
@@ -52781,6 +52797,7 @@ xref: PMID:8454196 {source="Europe PMC"}
 xref: PMID:8638935 {source="Europe PMC"}
 is_a: CHEBI:25754 ! oxo carboxylic acid
 is_a: CHEBI:35366 ! fatty acid
+relationship: is_conjugate_acid_of CHEBI:59836 ! oxo fatty acid anion
 
 [Term]
 id: CHEBI:59647
@@ -53022,6 +53039,19 @@ synonym: "OH-fatty acid anions" RELATED [ChEBI]
 is_a: CHEBI:28868 ! fatty acid anion
 is_a: CHEBI:36059 ! hydroxy monocarboxylic acid anion
 relationship: is_conjugate_base_of CHEBI:24654 ! hydroxy fatty acid
+
+[Term]
+id: CHEBI:59836
+name: oxo fatty acid anion
+namespace: chebi_ontology
+def: "A fatty acid anion carrying one or more oxo substituents" []
+subset: 3_STAR
+synonym: "oxo fatty acid anions" RELATED [ChEBI]
+synonym: "oxo-FA anion" RELATED [ChEBI]
+synonym: "oxo-FA anions" RELATED [ChEBI]
+is_a: CHEBI:28868 ! fatty acid anion
+is_a: CHEBI:35903 ! oxo carboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:59644 ! oxo fatty acid
 
 [Term]
 id: CHEBI:59869
@@ -54093,7 +54123,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC(=O)N[C@@H](CCCC[
 
 [Term]
 id: CHEBI:61557
-name: nucleoside triphosphate(4-)
+name: nucleoside 5'-triphoshate(4-)
 namespace: chebi_ontology
 def: "A ribonucleoside triphosphate oxoanion arising from global deprotonation of the  triphosphate groups of any nucleoside triphosphate; major species at pH 7.3." []
 subset: 3_STAR
@@ -54101,9 +54131,9 @@ synonym: "a ribonucleoside 5'-triphosphate" RELATED [UniProt]
 synonym: "NTP tetraanion" RELATED [ChEBI]
 synonym: "NTP(4-)" RELATED [SUBMITTER]
 synonym: "nucleoside 5'-triphosphate tetraanion" RELATED [ChEBI]
-synonym: "nucleoside triphosphate(4-)" EXACT [ChEBI]
+synonym: "nucleoside triphosphate(4-)" RELATED [ChEBI]
 is_a: CHEBI:59724 ! ribonucleoside triphosphate oxoanion
-relationship: is_conjugate_base_of CHEBI:58104 ! nucleoside triphosphate(3-)
+relationship: is_conjugate_base_of CHEBI:58104 ! nucleoside 5'-triphoshate(3-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-4" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H8O13P3R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "369.031" xsd:string
@@ -54750,7 +54780,6 @@ subset: 3_STAR
 synonym: "anionic phospholipids" RELATED [ChEBI]
 synonym: "phospholipid anion" RELATED [ChEBI]
 synonym: "phospholipid anions" RELATED [ChEBI]
-is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:58945 ! organophosphate oxoanion
 relationship: is_conjugate_base_of CHEBI:16247 ! phospholipid
 
@@ -55362,7 +55391,7 @@ relationship: is_conjugate_base_of CHEBI:26834 ! sulfur-containing amino acid
 id: CHEBI:63471
 name: branched-chain amino-acid anion
 namespace: chebi_ontology
-def: "A branched-chain amino acid whose alpha-carboxylic acid group is ionized (not protonated)." []
+def: "A branched-chain amino acid whose alpha-carboxylic acid group is ionized." []
 subset: 3_STAR
 synonym: "branched-chain amino-acid anions" RELATED [ChEBI]
 is_a: CHEBI:37022 ! amino-acid anion
@@ -56185,11 +56214,21 @@ def: "A nucleoside that is one of the homologues in the mixture that is tunicamy
 subset: 3_STAR
 synonym: "(2E)-N-[(2S,3R,4R,5R,6R)-2-{[(2R,3R,4R,5S,6R)-3-acetamido-4,5-dihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl]oxy}-6-{(2R)-2-[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]-2-hydroxyethyl}-4,5-dihydroxytetrahydro-2H-pyran-3-yl]-14-methylpentadec-2-enamide" EXACT IUPAC_NAME [IUPAC]
 synonym: "(5'R)-5'-[2-acetamido-2-deoxy-alpha-D-glucopyranosyl-(1<->1)-2,6-dideoxy-2-(14-methylpentadec-2-enamido)-beta-D-galactopyranos-6-yl]uridine" EXACT IUPAC_NAME [IUPAC]
+synonym: "corynetoxin U-16I" RELATED [ChemIDplus]
 synonym: "tunicamycin B" RELATED [ChEBI]
 synonym: "tunicamycin VII" RELATED [ChEBI]
+xref: CAS:66081-36-5 {source="ChemIDplus"}
+xref: Chemspider:27471426
+xref: MetaCyc:CPD-19373
+xref: PMID:29844049 {source="Europe PMC"}
+xref: PMID:29973921 {source="Europe PMC"}
+xref: PMID:30445836 {source="Europe PMC"}
+xref: PMID:33636028 {source="Europe PMC"}
 xref: PMID:7061468 {source="Europe PMC"}
 is_a: CHEBI:33838 ! nucleoside
 relationship: has_role CHEBI:33281 ! antimicrobial agent
+relationship: has_role CHEBI:76507 ! marine metabolite
+relationship: has_role CHEBI:76969 ! bacterial metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C39H64N4O16" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C39H64N4O16/c1-20(2)14-12-10-8-6-4-5-7-9-11-13-15-25(47)41-28-32(52)29(49)23(56-38(28)59-37-27(40-21(3)45)31(51)30(50)24(19-44)57-37)18-22(46)35-33(53)34(54)36(58-35)43-17-16-26(48)42-39(43)55/h13,15-17,20,22-24,27-38,44,46,49-54H,4-12,14,18-19H2,1-3H3,(H,40,45)(H,41,47)(H,42,48,55)/b15-13+/t22-,23-,24-,27-,28-,29+,30-,31-,32-,33+,34-,35-,36-,37-,38+/m1/s1" xsd:string
@@ -61665,7 +61704,7 @@ def: "A zwitterion obtained by transfer of a proton from the 2-hydroxy group to 
 subset: 3_STAR
 synonym: "(1S,4aS,11S,11aS,12aS)-3-carbamoyl-1-(dimethylazaniumyl)-4a,5,7,11-tetrahydroxy-11-methyl-4,6-dioxo-1,4,4a,6,11,11a,12,12a-octahydrotetracen-2-olate" EXACT IUPAC_NAME [IUPAC]
 synonym: "tetracycline" RELATED [UniProt]
-is_a: CHEBI:144644 ! a tetracycline zwittterion
+is_a: CHEBI:144644 ! a tetracycline zwitterion
 is_a: CHEBI:27369 ! zwitterion
 relationship: has_role CHEBI:33281 ! antimicrobial agent
 relationship: has_role CHEBI:35820 ! antiprotozoal drug
