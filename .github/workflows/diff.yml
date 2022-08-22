@@ -13,15 +13,20 @@ jobs:
     runs-on: ubuntu-latest
     container: obolibrary/odklite:v1.3.0
     steps:
-      # Checks-out the branch being merged into master in the root directory
+      # Copy the relevant files from master branch (checking out whole branch takes very long)
       # The ontology obo file path will be: src/ontology/fypo-edit.owl
-      - uses: actions/checkout@v2
-      # Checks-out the master branch in a subfolder called master
-      # The ontology obo file path will be: master/src/ontology/fypo-edit.owl
-      - uses: actions/checkout@v2
+      - uses: Bhacaz/checkout-files@v2
         with:
-          ref: master
-          path: master
+          files: src/ontology/fypo-edit.yml fypo.owl
+      - name: Move master files to master folder
+        run: mkdir master; mv src/ontology/fypo-edit.yml fypo.owl master
+      # Copy the relevant files from this branch
+      - uses: Bhacaz/checkout-files@v2
+        with:
+          files: src/ontology/fypo-edit.yml fypo.owl
+          branch: ${{ github.head_ref}}
+      - name: Move branch files to branch folder
+        run: mkdir branch; mv src/ontology/fypo-edit.yml fypo.owl branch
       - name: Run robot diff
         # -Xmx6G extension is to set 6gb of memory for java virtual machine
         # The second line produces the difference in the edit files only
@@ -31,19 +36,19 @@ jobs:
         # See https://github.com/obophenotype/cell-ontology/blob/master/.github/workflows/diff.yml
         run: >
           export ROBOT_JAVA_ARGS=-Xmx6G;
-          robot diff --labels True --left master/src/ontology/fypo-edit.owl --right src/ontology/fypo-edit.owl -f markdown -o edit-diff.md;
-          robot diff --labels True --left master/fypo.owl --right fypo.owl -f markdown -o reasoned-diff.md;
+          robot diff --labels True --left master/fypo-edit.owl --right branch/fypo-edit.owl -f markdown -o edit-diff.md;
+          robot diff --labels True --left master/fypo.owl --right branch/fypo.owl -f markdown -o reasoned-diff.md;
       - name: Format comment
         # Create a comment where the diffs can be folded, so it does not take so much space
         run: >
             printf "# Changes added to the edit file this PR\n" > comment.md;
-            printf "<details>\n<summary>Click to expand</summary>" >> comment.md;
+            printf "<details>\n<summary>Click to expand</summary>\n\n" >> comment.md;
             cat edit-diff.md >> comment.md;
-            printf "\n</details>" >> comment.md;
+            printf "\n</details\n\n>" >> comment.md;
             printf "# Changes to ontology after reasoner runs in this PR\n" >> comment.md;
-            printf "<details>\n<summary>Click to expand</summary>" >> comment.md;
+            printf "<details>\n<summary>Click to expand</summary>\n\n" >> comment.md;
             cat reasoned-diff.md >> comment.md;
-            printf "\n</details>" >> comment.md;
+            printf "\n</details>\n\n" >> comment.md;
       - name: Post comment in the PR
         # Note how the path to comment.md needs ../../ in the path.
         env:
