@@ -13,20 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     container: obolibrary/odklite:v1.3.0
     steps:
-      # Copy the relevant files from master branch (checking out whole branch takes very long)
+      # Checks-out the branch being merged into master in the root directory
       # The ontology obo file path will be: src/ontology/fypo-edit.owl
-      - uses: Bhacaz/checkout-files@v2
+      - uses: actions/checkout@v2
+      # Checks-out the master branch in a subfolder called master
+      # The ontology obo file path will be: master/src/ontology/fypo-edit.owl
+      - uses: actions/checkout@v2
         with:
-          files: src/ontology/fypo-edit.owl fypo.owl
-      - name: Move master files to master folder
-        run: mkdir master; mv src/ontology/fypo-edit.owl fypo.owl master
-      # Copy the relevant files from this branch
-      - uses: Bhacaz/checkout-files@v2
-        with:
-          files: src/ontology/fypo-edit.owl fypo.owl
-          branch: ${{ github.head_ref}}
-      - name: Move branch files to branch folder
-        run: mkdir branch; mv src/ontology/fypo-edit.owl fypo.owl branch
+          ref: master
+          path: master
       - name: Run robot diff
         # -Xmx6G extension is to set 6gb of memory for java virtual machine
         # The second line produces the difference in the edit files only
@@ -36,8 +31,8 @@ jobs:
         # See https://github.com/obophenotype/cell-ontology/blob/master/.github/workflows/diff.yml
         run: >
           export ROBOT_JAVA_ARGS=-Xmx6G;
-          robot diff --labels True --left master/fypo-edit.owl --right branch/fypo-edit.owl -f markdown -o edit-diff.md;
-          robot diff --labels True --left master/fypo.owl --right branch/fypo.owl -f markdown -o reasoned-diff.md;
+          robot diff --labels True --left master/src/ontology/fypo-edit.owl --right src/ontology/fypo-edit.owl -f markdown -o edit-diff.md;
+          robot diff --labels True --left master/fypo.owl --right fypo.owl -f markdown -o reasoned-diff.md;
       - name: Format comment
         # Create a comment where the diffs can be folded, so it does not take so much space
         run: >
@@ -51,9 +46,12 @@ jobs:
             printf "\n</details>\n\n" >> comment.md;
       - name: Post comment in the PR
         # Note how the path to comment.md needs ../../ in the path.
+        # Because we provide an identifier, the comment will be overwritten every time the action
+        # is run. I guess one could have an identifier that contains the commit_id so that a new
+        # comment is posted every time a change is made in the branch that is being merged.
         env:
             GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         uses: NejcZdovc/comment-pr@v1.1.1
         with:
           file: "../../comment.md"
-          identifier: "HELLO"
+          identifier: "DIFF_COMMENT"
