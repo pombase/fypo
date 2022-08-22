@@ -17,16 +17,16 @@ jobs:
       # The ontology obo file path will be: src/ontology/fypo-edit.owl
       - uses: Bhacaz/checkout-files@v2
         with:
-          files: src/ontology/fypo-edit.yml fypo.owl
+          files: src/ontology/fypo-edit.owl fypo.owl
       - name: Move master files to master folder
-        run: mkdir master; mv src/ontology/fypo-edit.yml fypo.owl master
+        run: mkdir master; mv src/ontology/fypo-edit.owl fypo.owl master
       # Copy the relevant files from this branch
       - uses: Bhacaz/checkout-files@v2
         with:
-          files: src/ontology/fypo-edit.yml fypo.owl
+          files: src/ontology/fypo-edit.owl fypo.owl
           branch: ${{ github.head_ref}}
       - name: Move branch files to branch folder
-        run: mkdir branch; mv src/ontology/fypo-edit.yml fypo.owl branch
+        run: mkdir branch; mv src/ontology/fypo-edit.owl fypo.owl branch
       - name: Run robot diff
         # -Xmx6G extension is to set 6gb of memory for java virtual machine
         # The second line produces the difference in the edit files only
