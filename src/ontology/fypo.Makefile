@@ -59,7 +59,7 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES) $(ONT)-simple-pombase.obo
 
 synonyms: $(SRC) ../templates/bulk_synonyms.owl
 	$(ROBOT) merge -i $(SRC) -i ../templates/bulk_synonyms.owl --collapse-import-closure false \
-		convert --check false -f obo -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
+		convert -f ofn -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
 
 ../templates/bulk_synonyms.owl: ../templates/bulk_synonyms.tsv $(SRC)
 	$(ROBOT) merge -i $(SRC) template --template $< --output $@
