@@ -33,13 +33,10 @@ fix_patterns: $(fix_patterns)
 	#mv tmp/fypo-eqs.ofn components/fypo-eqs.owl
 
 merge_eqs:
-	$(ROBOT) merge -i $(SRC) -i components/has_part_fypo-eqs.owl --collapse-import-closure false convert --check false -f obo -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
+	$(ROBOT) merge -i $(SRC) -i components/has_part_fypo-eqs.owl --collapse-import-closure false convert --check false -f ofn -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
 	
 diff:
 	$(ROBOT) diff --right-iri $(URIBASE)/fypo.owl --left ../../fypo.owl -o diff.txt
-	
-obo:
-	$(ROBOT) -vvv merge -i $(SRC) --collapse-import-closure false convert -f obo -o "merged_"$(SRC)
 
 pombase: $(ONT)-simple-pombase.obo
 
