@@ -33,13 +33,10 @@ fix_patterns: $(fix_patterns)
 	#mv tmp/fypo-eqs.ofn components/fypo-eqs.owl
 
 merge_eqs:
-	$(ROBOT) merge -i $(SRC) -i components/has_part_fypo-eqs.owl --collapse-import-closure false convert --check false -f obo -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
+	$(ROBOT) merge -i $(SRC) -i components/has_part_fypo-eqs.owl --collapse-import-closure false convert --check false -f ofn -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
 	
 diff:
 	$(ROBOT) diff --right-iri $(URIBASE)/fypo.owl --left ../../fypo.owl -o diff.txt
-	
-obo:
-	$(ROBOT) -vvv merge -i $(SRC) --collapse-import-closure false convert -f obo -o "merged_"$(SRC)
 
 pombase: $(ONT)-simple-pombase.obo
 
@@ -59,7 +56,7 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES) $(ONT)-simple-pombase.obo
 
 synonyms: $(SRC) ../templates/bulk_synonyms.owl
 	$(ROBOT) merge -i $(SRC) -i ../templates/bulk_synonyms.owl --collapse-import-closure false \
-		convert --check false -f obo -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
+		convert -f ofn -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
 
 ../templates/bulk_synonyms.owl: ../templates/bulk_synonyms.tsv $(SRC)
 	$(ROBOT) merge -i $(SRC) template --template $< --output $@
