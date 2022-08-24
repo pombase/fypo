@@ -25,16 +25,17 @@ jobs:
       - name: Run robot diff
         # -Xmx6G extension is to set 6gb of memory for java virtual machine
         # The second line produces the difference in the edit files only
-        # The third line produces the difference after reasoner
+        # The third line produces the difference after reasoner. I still have to figure what the best file for this is.
+        # robot diff --labels True --left master/fypo.owl --right fypo.owl -f markdown -o reasoned-diff.md;
         # To edit the second and third line for another ontology, test the robot code locally, and edit accordingly.
         # For example, FYPO does not need an extra --right-catalog but other ontologies may need it
         # See https://github.com/obophenotype/cell-ontology/blob/master/.github/workflows/diff.yml
         run: >
           export ROBOT_JAVA_ARGS=-Xmx6G;
           robot diff --labels True --left master/src/ontology/fypo-edit.owl --right src/ontology/fypo-edit.owl -f markdown -o edit-diff.md;
-          robot diff --labels True --left master/fypo.obo --right fypo.obo -f markdown -o reasoned-diff.md;
       - name: Format comment
         # Create a comment where the diffs can be folded, so it does not take so much space
+        # add this eventually: cat reasoned-diff.md >> comment.md;
         run: >
             printf "# Changes added to the edit file this PR\n" > comment.md;
             printf "<details>\n<summary>Click to expand</summary>\n\n" >> comment.md;
@@ -42,7 +43,7 @@ jobs:
             printf "\n</details\n\n>" >> comment.md;
             printf "# Changes to ontology after reasoner runs\n" >> comment.md;
             printf "<details>\n<summary>Click to expand</summary>\n\n" >> comment.md;
-            cat reasoned-diff.md >> comment.md;
+            printf "\nComing soon\n>" >> comment.md;
             printf "\n</details>\n\n" >> comment.md;
       - name: Post comment in the PR
         # Note how the path to comment.md needs ../../ in the path.
