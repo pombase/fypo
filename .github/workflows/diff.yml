@@ -32,7 +32,7 @@ jobs:
         run: >
           export ROBOT_JAVA_ARGS=-Xmx6G;
           robot diff --labels True --left master/src/ontology/fypo-edit.owl --right src/ontology/fypo-edit.owl -f markdown -o edit-diff.md;
-          robot diff --labels True --left master/fypo.owl --right fypo.owl -f markdown -o reasoned-diff.md;
+          robot diff --labels True --left master/fypo.obo --right fypo.obo -f markdown -o reasoned-diff.md;
       - name: Format comment
         # Create a comment where the diffs can be folded, so it does not take so much space
         run: >
