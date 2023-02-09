@@ -47,9 +47,9 @@ jobs:
             printf "\nComing soon\n>" >> comment.md;
             printf "\n</details>\n\n" >> comment.md;
             printf "# Errors reported\n\n" >> comment.md;
-            printf "```\n" >> comment.md;
+            printf "\`\`\`\n" >> comment.md;
             cat errors.tsv >> comment.md;
-            printf "\n```\n" >> comment.md;
+            printf "\n\`\`\`\n" >> comment.md;
       - name: Post comment in the PR
         # Note how the path to comment.md needs ../../ in the path.
         # Because we provide an identifier, the comment will be overwritten every time the action
