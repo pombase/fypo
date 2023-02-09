@@ -33,6 +33,7 @@ jobs:
         run: >
           export ROBOT_JAVA_ARGS=-Xmx6G;
           robot diff --labels True --left master/src/ontology/fypo-edit.owl --right src/ontology/fypo-edit.owl -f markdown -o edit-diff.md;
+          robot --catalog src/ontology/catalog-v001.xml report -i src/ontology/fypo-edit.owl -l true  --fail-on None --base-iri http://purl.obolibrary.org/obo/FYPO_ --base-iri http://purl.obolibrary.org/obo/fypo --print 5 -o errors.tsv;
       - name: Format comment
         # Create a comment where the diffs can be folded, so it does not take so much space
         # add this eventually: cat reasoned-diff.md >> comment.md;
@@ -45,6 +46,10 @@ jobs:
             printf "<details>\n<summary>Click to expand</summary>\n\n" >> comment.md;
             printf "\nComing soon\n>" >> comment.md;
             printf "\n</details>\n\n" >> comment.md;
+            printf "# Errors reported\n\n" >> comment.md;
+            printf "\`\`\`\n" >> comment.md;
+            cat errors.tsv >> comment.md;
+            printf "\n\`\`\`\n" >> comment.md;
       - name: Post comment in the PR
         # Note how the path to comment.md needs ../../ in the path.
         # Because we provide an identifier, the comment will be overwritten every time the action
