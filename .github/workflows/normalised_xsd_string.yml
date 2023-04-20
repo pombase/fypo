@@ -16,6 +16,8 @@ jobs:
       # Checks-out the branch being merged into master in the root directory
       # The ontology obo file path will be: src/ontology/fypo-edit.owl
       - uses: actions/checkout@v3
+      - name: work around permission issue
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: Ensure normalised_xsd_string is ran
         run: |
             cd src/ontology;
