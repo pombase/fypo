@@ -1,0 +1,43 @@
+name: 'Ensure normalised_xsd_string is ran'
+
+on:
+  # Triggers the workflow on pull request events for the master branch
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    container: obolibrary/odklite:v1.4
+    steps:
+      # Checks-out the branch being merged into master in the root directory
+      # The ontology obo file path will be: src/ontology/fypo-edit.owl
+      - uses: actions/checkout@v3
+      - name: work around permission issue
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - name: Ensure normalised_xsd_string is ran
+        run: |
+            cd src/ontology;
+            sed -i -E "s/Annotation[(](oboInOwl[:]hasDbXref [\"][^\"]*[\"])[)]/Annotation(\1^^xsd:string)/g" fypo-edit.owl;
+      - name: Verify Changed files
+        uses: tj-actions/verify-changed-files@v14
+        id: verify-changed-files
+        with:
+            files: |
+                src/ontology/fypo-edit.owl
+      - name: Run step only when any of the above files change.
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+            commit_message: fixed normalised_xsd_string
+            file_pattern: "src/ontology/fypo-edit.owl"
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
+      - name: Write a comment in the PR indicating that the normalised_xsd_string has been fixed
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+            issue-number: ${{ github.event.pull_request.number }}
+            body: |
+                Hi @${{ github.event.pull_request.user.login }}! I have fixed the normalised_xsd_string in your PR. Please review the changes and merge the PR if you are happy with them.
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
