@@ -15,6 +15,9 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  call-normalised_xsd_string:
+    uses: ./.github/workflows/normalised_xsd_string.yml
+    secrets: inherit
   # This workflow contains a single job called "ontology_qc"
   ontology_qc:
     # The type of runner that the job will run on
@@ -30,4 +33,7 @@ jobs:
         env:
           DEFAULT_BRANCH: main
         run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' test IMP=false PAT=false
+  call-diff:
+    uses: ./.github/workflows/diff.yml
+    secrets: inherit
 

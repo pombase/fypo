@@ -2,14 +2,13 @@ name: 'Ensure normalised_xsd_string is ran'
 
 on:
   # Triggers the workflow on pull request events for the master branch
-  pull_request:
-    branches: [ master ]
+  workflow_call:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  main:
+  run_normalised_xsd_string:
     runs-on: ubuntu-latest
     container: obolibrary/odklite:v1.4
     steps:
