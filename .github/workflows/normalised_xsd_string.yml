@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: work around permission issue
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
-      - name: Ensure normalised_xsd_string is ran
+      - name: Check if normalised_xsd_string was ran
         run: |
             cd src/ontology;
             sed -i -E "s/Annotation[(](oboInOwl[:]hasDbXref [\"][^\"]*[\"])[)]/Annotation(\1^^xsd:string)/g" fypo-edit.owl;
@@ -28,16 +28,10 @@ jobs:
         with:
             files: |
                 src/ontology/fypo-edit.owl
-      - name: Run step only when any of the above files change.
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-            commit_message: fixed normalised_xsd_string
-            file_pattern: "src/ontology/fypo-edit.owl"
-        if: steps.verify-changed-files.outputs.files_changed == 'true'
-      - name: Write a comment in the PR indicating that the normalised_xsd_string has been fixed
+      - name: Write a comment in the PR indicating that the normalised_xsd_string needs to be ran
         uses: peter-evans/create-or-update-comment@v1
         with:
             issue-number: ${{ github.event.pull_request.number }}
             body: |
-                Hi @${{ github.event.pull_request.user.login }}! I have fixed the normalised_xsd_string in your PR. Please review the changes and merge the PR if you are happy with them.
+                Hi @${{ github.event.pull_request.user.login }}! It seems you forgot to run normalised_xsd_string on your PR. Please run it and commit the changes.
         if: steps.verify-changed-files.outputs.files_changed == 'true'
