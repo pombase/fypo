@@ -16,16 +16,33 @@ release_artefacts:
   - full
 primary_release: full
 import_group:
+  use_base_merging: True
+  exclude_iri_patterns:
+    - <http://purl.obolibrary.org/obo/UBERON_*>
+    - <http://purl.obolibrary.org/obo/CARO_*>
+    - <http://purl.obolibrary.org/obo/NCBITaxon_*>
+    - <http://purl.obolibrary.org/obo/OBI_*>
   products:
+    - id: go
+      make_base: True
+      base_iris:
+        - http://purl.obolibrary.org/obo/GOCHE_
+        - http://purl.obolibrary.org/obo/GO_
+        - http://purl.obolibrary.org/obo/GOREL_
     - id: ro
+      use_base: True
     - id: iao
+      make_base: True
     - id: chebi
       mirror_from: https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/main/chebi_slim.owl
-    - id: go
     - id: cl
+      use_base: True
     - id: pato
+      use_base: True
     - id: so
+      make_base: True
     - id: bto
+      use_base: True
     - id: pr
       mirror_from: https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl
 robot_java_args: '-Xmx16G'

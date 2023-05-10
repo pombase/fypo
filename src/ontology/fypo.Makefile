@@ -3,9 +3,6 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
-pre_release:
-	$(ROBOT) merge -i $(SRC) -i import-statements.owl -o fypo-edit-release.owl
-
 fix=qdi qodiipoq qpiipoq qodiq qodi qpi qoiq qoi qoiipoq
 fix_patterns=$(sort $(foreach r,$(fix), fixpattern_$(r)))
 
