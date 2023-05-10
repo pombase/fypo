@@ -21,7 +21,7 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Update release files
-        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' GITHUB_ACTION=true synonyms fix_quality_issue clear_obsoletes prepare_release_fast normalise_xsd_string
+        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' GITHUB_ACTION=true synonyms fix_quality_issue clear_obsoletes prepare_release_fast normalise_xsd_string && cd ../../
       - name: Run release
         uses: softprops/action-gh-release@v1
         with:
