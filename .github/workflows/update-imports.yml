@@ -22,10 +22,10 @@ jobs:
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
       - name: Refreshing imports
-        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx10G' -e JAVA_OPTS='-Xmx10G' --rm obolibrary/odklite make GITHUB_ACTION=true refresh-imports
+        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx6500m' -e JAVA_OPTS='-Xmx6500m' --rm obolibrary/odklite make GITHUB_ACTION=true refresh-imports
 
       - name: Refreshing components
-        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx10G' -e JAVA_OPTS='-Xmx10G' --rm obolibrary/odklite make IMP=false IMP_LARGE=false GITHUB_ACTION=true ../patterns/definitions.owl
+        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx6500m' -e JAVA_OPTS='-Xmx6500m' --rm obolibrary/odklite make IMP=false IMP_LARGE=false GITHUB_ACTION=true ../patterns/definitions.owl
 
       # - name: Remove patternized classes
       #   run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx10G' -e JAVA_OPTS='-Xmx10G' --rm obolibrary/odklite make GITHUB_ACTION=true remove_patternised_classes
