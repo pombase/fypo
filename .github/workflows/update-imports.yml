@@ -13,10 +13,13 @@ jobs:
           docker version
       - name: Install ODK
         run: docker pull obolibrary/odklite
-      # Checks-out current branch
 
+      # Checks-out current branch - fetch-depth 0 so that create-pull-request
+      # is faster
       - name: Checkout main branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: work around permission issue
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
