@@ -5,30 +5,22 @@ on:
 jobs:
   imports:
     runs-on: ubuntu-latest
-    steps:
-      - uses: docker-practice/actions-setup-docker@master
-        timeout-minutes: 20
-      - run: |
-          set -x
-          docker version
-      - name: Install ODK
-        run: docker pull obolibrary/odklite
+    container: obolibrary/odklite:v1.5.4
 
+    steps:
       # Checks-out current branch - fetch-depth 0 so that create-pull-request
       # is faster
       - name: Checkout main branch
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: work around permission issue
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
       - name: Refreshing imports
-        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx6500m' -e JAVA_OPTS='-Xmx6500m' --rm obolibrary/odklite make GITHUB_ACTION=true refresh-imports
+        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx10G' GITHUB_ACTION=true refresh-imports
 
       - name: Refreshing components
-        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx6500m' -e JAVA_OPTS='-Xmx6500m' --rm obolibrary/odklite make IMP=false IMP_LARGE=false GITHUB_ACTION=true ../patterns/definitions.owl
+        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx10G' GITHUB_ACTION=true ../patterns/definitions.owl
 
       # - name: Remove patternized classes
       #   run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx10G' -e JAVA_OPTS='-Xmx10G' --rm obolibrary/odklite make GITHUB_ACTION=true remove_patternised_classes
