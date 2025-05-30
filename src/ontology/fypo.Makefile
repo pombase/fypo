@@ -82,4 +82,7 @@ tmp/obsolete-terms.txt: $(SRC)
 
 clear_obsoletes: tmp/obsolete-terms.txt
 	$(ROBOT) remove --input components/lost-inferred-subsumptions-pre-odk.owl -T $< -o tmp/$@.ofn && mv tmp/$@.ofn components/lost-inferred-subsumptions-pre-odk.owl
-	
+
+tmp/fypo-preprocess.owl: fypo-edit.owl
+	$(ROBOT) query -i $< --update $(SPARQLDIR)/insert-fypo-namespace.ru --add-prefix 'oboInOwl: http://www.geneontology.org/formats/oboInOwl#' --format ofn -o $<.tmp
+	$(ROBOT) convert --input $<.tmp --format ofn --output $@
