@@ -25,13 +25,13 @@ fixpattern_%: tmp/fixpattern_%.owl tmp/remove_%.txt
 
 fix_patterns: $(fix_patterns)
 	java -jar ../scripts/add-haspart-buffer.jar components/fypo-eqs.owl
-	#echo "REMOVING AUXOTROPHY"
-	#$(ROBOT) remove -i components/fypo-eqs.owl --term FYPO:0000128 --axioms equivalent --preserve-structure false -o tmp/fypo-eqs.ofn
-	#mv tmp/fypo-eqs.ofn components/fypo-eqs.owl
+#echo "REMOVING AUXOTROPHY"
+#$(ROBOT) remove -i components/fypo-eqs.owl --term FYPO:0000128 --axioms equivalent --preserve-structure false -o tmp/fypo-eqs.ofn
+#mv tmp/fypo-eqs.ofn components/fypo-eqs.owl
 
 merge_eqs:
 	$(ROBOT) merge -i $(SRC) -i components/has_part_fypo-eqs.owl --collapse-import-closure false convert --check false -f ofn -o "merged_"$(SRC) && mv "merged_"$(SRC) $(SRC)
-	
+
 diff:
 	$(ROBOT) diff --right-iri $(URIBASE)/fypo.owl --left ../../fypo.owl -o diff.txt
 
