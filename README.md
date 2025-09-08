@@ -7,6 +7,7 @@
 The Fission Yeast Phenotype Ontology (FYPO) is a formal ontology of phenotypes
 observed in fission yeast.
 
+
 FYPO is being developed to support the comprehensive and detailed
 representation of phenotypes in [PomBase](https://www.pombase.org/),
 the online fission yeast resource.
