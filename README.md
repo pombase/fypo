@@ -14,7 +14,8 @@ the online fission yeast resource.
 
 ### Content and structure
 
-Some documentation of FYPO's content and structure is available on a [PomBase wiki page](https://curation.pombase.org/pombase-trac/wiki/FYPOContentStructure) (work in progress!).
+Some documentation of FYPO's content and structure is available on [the wiki](https://github.com/pombase/fypo/wiki/Fission-Yeast-Phenotype-Ontology-(FYPO))
+and in the FYPO publication (see below).
 
 ### License
 
