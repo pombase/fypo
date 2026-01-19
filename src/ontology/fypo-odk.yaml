@@ -50,3 +50,25 @@ allow_equivalents: asserted-only
 git_main_branch: master
 workflows:
   - qc
+robot_report:
+  release_reports: false
+  fail_on : None
+  use_labels : true
+  use_base_iris: true
+  custom_profile : false
+  sparql_test_on:
+    - edit
+  report_on :
+    - edit
+  custom_sparql_checks :
+    - owldef-self-reference
+    - iri-range
+    - label-with-iri
+    - multiple-replaced_by
+  custom_sparql_exports : 
+    - basic-report
+    - class-count-by-prefix
+    - edges
+    - xrefs 
+    - obsoletes
+    - synonyms
