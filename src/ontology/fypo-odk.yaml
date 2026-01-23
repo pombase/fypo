@@ -34,7 +34,7 @@ import_group:
     - id: iao
       make_base: True
     - id: chebi
-      mirror_from: https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/main/chebi_slim.owl
+      mirror_from: http://purl.obolibrary.org/obo/upheno/chebi_slim.owl
     - id: cl
       use_base: True
     - id: pato
@@ -47,3 +47,28 @@ import_group:
       mirror_from: https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl
 robot_java_args: '-Xmx16G'
 allow_equivalents: asserted-only
+git_main_branch: master
+workflows:
+  - qc
+robot_report:
+  release_reports: false
+  fail_on : None
+  use_labels : true
+  use_base_iris: true
+  custom_profile : false
+  sparql_test_on:
+    - edit
+  report_on :
+    - edit
+  custom_sparql_checks :
+    - owldef-self-reference
+    - iri-range
+    - label-with-iri
+    - multiple-replaced_by
+  custom_sparql_exports : 
+    - basic-report
+    - class-count-by-prefix
+    - edges
+    - xrefs 
+    - obsoletes
+    - synonyms
